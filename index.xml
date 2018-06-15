@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>guoby blog</title>
-    <link>http://example.org/</link>
+    <link>https://guobingyi.github.io/</link>
     <description>Recent content on guoby blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Jun 2018 23:45:20 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Good</title>
-      <link>http://example.org/post/good/</link>
+      <link>https://guobingyi.github.io/post/good/</link>
       <pubDate>Fri, 15 Jun 2018 23:45:20 +0800</pubDate>
       
-      <guid>http://example.org/post/good/</guid>
+      <guid>https://guobingyi.github.io/post/good/</guid>
       <description> 测试一下中文是否支持 </description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>http://example.org/post/test/</link>
+      <link>https://guobingyi.github.io/post/test/</link>
       <pubDate>Fri, 15 Jun 2018 23:31:47 +0800</pubDate>
       
-      <guid>http://example.org/post/test/</guid>
+      <guid>https://guobingyi.github.io/post/test/</guid>
       <description> Test my blog  new day will come,wzry go away!
  </description>
     </item>
     
     <item>
       <title>Newday</title>
-      <link>http://example.org/post/newday/</link>
+      <link>https://guobingyi.github.io/post/newday/</link>
       <pubDate>Fri, 15 Jun 2018 23:30:41 +0800</pubDate>
       
-      <guid>http://example.org/post/newday/</guid>
+      <guid>https://guobingyi.github.io/post/newday/</guid>
       <description> Hello,Hugo! </description>
     </item>
     

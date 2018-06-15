@@ -3,38 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/post/good/</loc>
+    <loc>https://guobingyi.github.io/post/good/</loc>
     <lastmod>2018-06-15T23:45:20+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/test/</loc>
+    <loc>https://guobingyi.github.io/post/test/</loc>
     <lastmod>2018-06-15T23:31:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/newday/</loc>
+    <loc>https://guobingyi.github.io/post/newday/</loc>
     <lastmod>2018-06-15T23:30:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://guobingyi.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://guobingyi.github.io/post/</loc>
     <lastmod>2018-06-15T23:45:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://guobingyi.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://guobingyi.github.io/</loc>
     <lastmod>2018-06-15T23:45:20+08:00</lastmod>
     <priority>0</priority>
   </url>
