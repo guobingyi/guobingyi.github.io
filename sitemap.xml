@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/post/one/</loc>
+    <lastmod>2018-06-15T23:50:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/post/good/</loc>
     <lastmod>2018-06-15T23:45:20+08:00</lastmod>
   </url>
@@ -24,7 +29,7 @@
   
   <url>
     <loc>https://guobingyi.github.io/post/</loc>
-    <lastmod>2018-06-15T23:45:20+08:00</lastmod>
+    <lastmod>2018-06-15T23:50:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -35,7 +40,7 @@
   
   <url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2018-06-15T23:45:20+08:00</lastmod>
+    <lastmod>2018-06-15T23:50:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
