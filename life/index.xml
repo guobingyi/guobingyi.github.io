@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lives on guoby blog</title>
+    <link>https://guobingyi.github.io/life/</link>
+    <description>Recent content in Lives on guoby blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jun 2018 22:25:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://guobingyi.github.io/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wzry</title>
+      <link>https://guobingyi.github.io/life/wzry/</link>
+      <pubDate>Sat, 16 Jun 2018 22:25:51 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/life/wzry/</guid>
+      <description>我也谈一下王者荣耀  你要找它，缘起；你要离开它，缘灭。
+ 0x00 前言 说起王者荣耀，那可以是前几年的国民游戏了。可笑的是，我是后面才加入的。有点晚。那个时候，我鄙视一切手机上的游戏。 因为《魔兽世界》和《暗黑3》给我的冲击很大，我觉得，要玩游戏只能在电脑上玩，那个才叫过瘾，也才能算的上玩游戏。可是， 《王者荣耀》慢慢的改变了我的想法，从游戏的可玩性，在到玩游戏不需要在固定的时间点上，必须要电脑才能运行。当然，还需要 准备太多的时间，而《王者荣耀》却不需要，只要有一点零碎的时间，随时随地都可以玩一把。
+0x01 入坑 2017年1月份，公司让我们几个核心骨干参与了一次大理之游。
+0x02 着迷 每天都要玩，
+0x03 思考 开始思考，如何可以玩的更好！
+0x04 进步 通过看直播，不停的磨练自己的技能。
+0x05 顿悟 一直以为玩游戏的我，却突然发现被游戏玩了。
+0x06 大结局 一般的结局都是好人打败坏人，很多人都不愿意看到的是坏人打败好人。</description>
+    </item>
+    
+  </channel>
+</rss>

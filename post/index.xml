@@ -18,7 +18,8 @@
       
       <guid>https://guobingyi.github.io/post/config/</guid>
       <description>看一下hugo的配置  当初觉得为什么hugo可以比beego那么多star,现在可以理解了。
- 因为用go开发web的人，没有使用hugo创建自己博客的多。</description>
+ 因为用go开发web的人，没有使用hugo创建自己博客的多。
+来一个图片的例子：</description>
     </item>
     
     <item>
@@ -28,7 +29,8 @@
       
       <guid>https://guobingyi.github.io/post/one/</guid>
       <description>测试为什么图像没有  原来都有的，现在没有？
- 我觉得就是哪里配置的问题。</description>
+ 我觉得就是哪里配置的问题。
+** 粗体 **</description>
     </item>
     
     <item>
