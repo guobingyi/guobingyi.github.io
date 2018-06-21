@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>从迷失中寻找自我 on guoby blog</title>
+    <title>Just Do it on myblog</title>
     <link>https://guobingyi.github.io/</link>
-    <description>Recent content in 从迷失中寻找自我 on guoby blog</description>
+    <description>Recent content in Just Do it on myblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Jun 2018 22:25:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jun 2018 18:52:37 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Wzry</title>
-      <link>https://guobingyi.github.io/life/wzry/</link>
-      <pubDate>Sat, 16 Jun 2018 22:25:51 +0800</pubDate>
+      <title>Think</title>
+      <link>https://guobingyi.github.io/post/think/</link>
+      <pubDate>Thu, 21 Jun 2018 18:52:37 +0800</pubDate>
       
-      <guid>https://guobingyi.github.io/life/wzry/</guid>
-      <description>我也谈一下王者荣耀  你要找它，缘起；你要离开它，缘灭。
- 0x00 前言 说起王者荣耀，那可以是前几年的国民游戏了。可笑的是，我是后面才加入的。有点晚。那个时候，我鄙视一切手机上的游戏。 因为《魔兽世界》和《暗黑3》给我的冲击很大，我觉得，要玩游戏只能在电脑上玩，那个才叫过瘾，也才能算的上玩游戏。可是， 《王者荣耀》慢慢的改变了我的想法，从游戏的可玩性，在到玩游戏不需要在固定的时间点上，必须要电脑才能运行。当然，还需要 准备太多的时间，而《王者荣耀》却不需要，只要有一点零碎的时间，随时随地都可以玩一把。
-0x01 入坑 2017年1月份，公司让我们几个核心骨干参与了一次大理之游。
-0x02 着迷 每天都要玩，
-0x03 思考 开始思考，如何可以玩的更好！
-0x04 进步 通过看直播，不停的磨练自己的技能。
-0x05 顿悟 一直以为玩游戏的我，却突然发现被游戏玩了。
-0x06 大结局 一般的结局都是好人打败坏人，很多人都不愿意看到的是坏人打败好人。</description>
+      <guid>https://guobingyi.github.io/post/think/</guid>
+      <description> 想法很多  自从没有在游戏上花费太多的时间，现在想法也很多。
+ 1.用hugo搭建自己的博客 现在已经使用了，但是感觉样式不怎么好看，慢慢在来改了。
+不管怎么说，一切的开始，虽然难，但是都在前进就好！
+2.用docker中的centos来搭建开发环境 因为自己的系统是macos，所以很多代码不一定能跑起来，比如dbdk。所以就想用docker的方式来搭建一个开放平台，这样即使换了电脑或则系统，都可以使用docker把镜像导入进来。思路而已，还要考虑的问题如下：
+ 如何将镜像进行备份和同步；   初步的想法是docker将镜像导出，然后git到github上进行存储。但是这些都是需要压缩和加密的。
+ 如何将实体机的开发环境弱化；   目前的开发环境都在本机的实体机上，所以想要弱化就必须考虑到一些开发ide，比如java的eclipse。想到用eclipse che来替代，就看docker是否能支持的好了。
+3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
+先学着写吧。
+4.科技改变生活 我觉得先从自己的生活改变开始，让自己的工作效率更高。为了达到这边目标，先从以下几点做起：
+ 使用shell脚本，将自己常用的命令进行一个封装； 将一些程序中经常使用的工具进行汇总，供shell脚本使用； 自己编写代码，提供没有的工具。  </description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://guobingyi.github.io/about/</link>
+      <pubDate>Tue, 19 Jun 2018 22:28:42 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/about/</guid>
+      <description> 别人笑我太疯癫，我笑他人看不穿。
+ 喜欢程序设计，致力于将终身奉献给程序设计。
+ talk is cheap,show me the code!  </description>
     </item>
     
     <item>
