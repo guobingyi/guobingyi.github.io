@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/blog/think/</loc>
+    <lastmod>2018-06-22T09:41:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/about/</loc>
+    <lastmod>2018-06-22T09:36:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/contact/</loc>
+    <lastmod>2018-06-22T09:23:35+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/post/think/</loc>
     <lastmod>2018-06-21T18:52:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://guobingyi.github.io/about/</loc>
+    <loc>https://guobingyi.github.io/about_old/</loc>
     <lastmod>2018-06-19T22:28:42+08:00</lastmod>
   </url>
   
@@ -38,13 +53,19 @@
   </url>
   
   <url>
+    <loc>https://guobingyi.github.io/blog/</loc>
+    <lastmod>2018-06-22T09:41:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2018-06-21T18:52:37+08:00</lastmod>
+    <lastmod>2018-06-22T09:41:18+08:00</lastmod>
   </url>
   
   <url>
