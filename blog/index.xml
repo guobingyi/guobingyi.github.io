@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on guoby</title>
+    <title>Blog on guobingyi</title>
     <link>https://guobingyi.github.io/blog/</link>
-    <description>Recent content in Blogs on guoby</description>
+    <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jun 2018 22:11:31 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 04 Jul 2018 19:54:52 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>初探Shell</title>
+      <link>https://guobingyi.github.io/blog/%E5%88%9D%E6%8E%A2shell/</link>
+      <pubDate>Wed, 04 Jul 2018 19:54:52 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/%E5%88%9D%E6%8E%A2shell/</guid>
+      <description>You got to put the past behind you before you can move on.
+ 由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，再深入的思考了。
+0x00为什么用shell 原来学习一门语言的时候都会这样问自己？但是大多数的答案都是：项目上需要。没有思考的余地，也就没有深入的思考。
+现在开始用到，也学习了python,ruby,swift,javascript后发现，shell有她自身更好的发挥余地。比如我们经常会使用的命令cd,hugo server,git add -A等。别小看这些命令，一个一个来，还是要输入一会的。程序员不就图个安逸，一个shell脚本搞定的事情，为什么要多来输入几次呢？在举个例子，如果终端只有一个，那么要看tomcat的日志，还要更新类，那么就会来回的路径下切换，如果不用文本记录下来，光敲路径就花费很长的时间，so，用个shell脚本就可以解决了。当然，这个例子也不能说明shell的强大之处，那么这个例子就是shell的重要用途了。在零部署的时候，需要安装一些组件，数据库，初始化数据库脚本，注册服务，启动服务，关机。整个流程可以说一气呵成，但是如果是人工的话，那么想想工作量也是吓人的，这还不包括部署多台服务器呢。
+如果是安装系统，会非常喜欢ghost版本，安装就step by step。而shell就提供了这样功能。当然有人会说python也一样搞定。是的，不可否认，但是如果python自身也需要安装库呢？所以，shell独天得厚的优势在于系统自带的同时，还可以自动安装所需的命令。
+结论就是：如果你需要将命令step by step执行，那么就选择shell吧。
+0x01 Hello,World! 每个学习程序设计的开始都会是这个，也因为这个才从此入坑。
+创建文件hello.sh,输入一下内容：
+#!/bin/bash echo &#39;Hello.World!&#39;  在终端中使用sh hello.sh,将输出以下结果：
+Hello,World!  恭喜你，入门了。
+思考：
+ 为什么第一行会有个#!/bin/bash echo 可以用单引号，也可以用双引号，区别是什么？ 如果要让shell脚步可以直接运行，怎么做？ 如何文件后缀是php,那么有该如何做呢？  0x02 变量 shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。
+那么如何定义一个变量呢？ someone=&amp;quot;Lee&amp;quot; some_two=&amp;quot;http://10.10.10.222&amp;quot;  看似简单的定义变量，如果写多了程序，就会有个问题，如下：
+someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
+变量名和等号之间不能有空格。
+变量名和等号之间不能有空格。
+变量名和等号之间不能有空格。
+重要的事情说三遍，你要知道调试shell，就像java里System.out.println(&amp;ldquo;ok&amp;rdquo;)一样麻烦，更何况shell木有断点功能。目前我还不知道shell的ide，或者打断点，如果你知道，请告诉我，让我试试。
+使用变量 $someone $(some_two)  只读变量 readonly someone  删除变量 unset someone  0x03 字符串 单引号 someone=&#39;Lee&#39;   单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；</description>
+    </item>
+    
+    <item>
       <title>倚天屠龙记读后感</title>
-      <link>https://guobingyi.github.io/blog/yttlj/</link>
+      <link>https://guobingyi.github.io/blog/%E5%80%9A%E5%A4%A9%E5%B1%A0%E9%BE%99%E8%AE%B0%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
       <pubDate>Sun, 24 Jun 2018 22:11:31 +0800</pubDate>
       
-      <guid>https://guobingyi.github.io/blog/yttlj/</guid>
+      <guid>https://guobingyi.github.io/blog/%E5%80%9A%E5%A4%A9%E5%B1%A0%E9%BE%99%E8%AE%B0%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
       <description>个性，决定了一个人未来能走多远。
  金庸的小说一直都是自己喜欢的。从高中开始，读的第一本书是《鹿鼎记》，那个时候是老师要求读的，原来都不知道有金庸这个人。从此一发不可收拾，开始追读金庸的小说。到大学的时候，由于金庸的小说有限，所以一直省着读。工作后，读了《笑傲江湖》，近期读了《倚天屠龙记》。
 张无忌这个人的角色，开始就是一个悲情的角色。让人从开始就非常心疼他，关心他。正所谓，天无绝人之路，掉进山洞，学到了九阳真经。治好了自己体内的玄冰之毒，而且也学到了上乘武功。从这里开始，大家都觉得应该是登山人生巅峰。可是，如果这样小说就没有太多意义了。人性贯穿到金庸的小说中，都是宣扬着“正气”，而要突出这些“正气”，就要从多个方面来说明。真善美，假恶臭。在小说中，这几个人被刻画的非常形象生动。
@@ -25,7 +52,7 @@
  小昭  如果说要和张无忌比惨的话，小昭算一个。能这样忍辱负重，并最后实现人生目标的人，真的，厉害。
  周芷若  我竟然自己想到了周芷若的剧情，想她应该是前朝皇帝的女儿才这样希望张无忌能掌管大权的。其实，我真的想多了。
  赵敏  手段不是一般的厉害，和张无忌的妈妈有得一拼。因为电影了，演员是同一个赵敏，所以这两个角色真是难分，同时也感慨张敏的演的真好。
-在小说中，每个人物都刻画的非常深刻。</description>
+在小说中，每个人物都刻画的非常深刻。或许也只有金庸才能将这些人物写的那么鲜活。</description>
     </item>
     
     <item>
