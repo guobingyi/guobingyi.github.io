@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="学习kafka  学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。
+ 0x00 开始 kafka的官网 http://kafka.apache.org/  什么是kafka Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。
+0x01 kafka常用命令 注意 - &amp;保证在关闭shell窗口后能继续运行 - 在windows下将.sh改为.bat,“/”改为“\”
+开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server.">
+
+<meta property="og:title" content="Kafka" />
+<meta property="og:description" content="学习kafka  学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。
+ 0x00 开始 kafka的官网 http://kafka.apache.org/  什么是kafka Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。
+0x01 kafka常用命令 注意 - &amp;保证在关闭shell窗口后能继续运行 - 在windows下将.sh改为.bat,“/”改为“\”
+开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/kafka/" />
+
+
+
+<meta property="article:published_time" content="2018-07-13T19:46:58&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-07-13T19:46:58&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Kafka 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/blog/kafka/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Kafka
+
+</div>
+
+                    <div class="initials"><a href="https://guobingyi.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Fri Jul 13 2018 19:46:58 CST'>Jul 13, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h2 id="学习kafka">学习kafka</h2>
+
+<blockquote>
+<p>学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。</p>
+</blockquote>
+
+<h3 id="0x00-开始">0x00 开始</h3>
+
+<h4 id="kafka的官网">kafka的官网</h4>
+
+<pre><code>http://kafka.apache.org/
+</code></pre>
+
+<h4 id="什么是kafka">什么是kafka</h4>
+
+<p>Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。
+Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。</p>
+
+<h3 id="0x01-kafka常用命令">0x01 kafka常用命令</h3>
+
+<p><strong>注意</strong>
+- &amp;保证在关闭shell窗口后能继续运行
+- 在windows下将.sh改为.bat,“/”改为“\”</p>
+
+<h4 id="开启zookeeper">开启ZooKeeper</h4>
+
+<pre><code>bin/zookeeper-server-start.sh config/zookeeper.properties &amp;
+</code></pre>
+
+<h4 id="开启kafka服务">开启kafka服务</h4>
+
+<pre><code>bin/kafka-server-start.sh config/server.properties &amp;
+</code></pre>
+
+<h4 id="创建一个主题">创建一个主题</h4>
+
+<pre><code>bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+</code></pre>
+
+<h4 id="列举主题">列举主题</h4>
+
+<pre><code>bin/kafka-topics.sh --list --zookeeper localhost:2181
+</code></pre>
+
+<h4 id="发送消息">发送消息</h4>
+
+<ul>
+<li>向主题为test的发送消息，输入字符后回车。
+<code>
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+</code></li>
+</ul>
+
+<h4 id="启动消费者">启动消费者</h4>
+
+<ul>
+<li>&ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。</li>
+</ul>
+
+<pre><code>bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+</code></pre>
+
+<h4 id="启动kafka时需要配置的信息">启动kafka时需要配置的信息</h4>
+
+<ul>
+<li>在server.properties中进行配置</li>
+</ul>
+
+<pre><code>listeners=PLAINTEXT://192.168.100.181:9092
+</code></pre>
+
+<pre><code>log.dirs=/opt/kafka_data
+</code></pre>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
