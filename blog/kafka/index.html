@@ -11,14 +11,18 @@
 <meta name="author" content="Arthur Dent">
 <meta name="description" content="学习kafka  学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。
  0x00 开始 kafka的官网 http://kafka.apache.org/  什么是kafka Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。
-0x01 kafka常用命令 注意 - &amp;保证在关闭shell窗口后能继续运行 - 在windows下将.sh改为.bat,“/”改为“\”
-开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server.">
+0x01 kafka常用命令 注意
+ &amp;保证在关闭shell窗口后能继续运行
+ 在windows下将.sh改为.bat,“/”改为“\”
+  开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server.">
 
 <meta property="og:title" content="Kafka" />
 <meta property="og:description" content="学习kafka  学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。
  0x00 开始 kafka的官网 http://kafka.apache.org/  什么是kafka Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。
-0x01 kafka常用命令 注意 - &amp;保证在关闭shell窗口后能继续运行 - 在windows下将.sh改为.bat,“/”改为“\”
-开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server." />
+0x01 kafka常用命令 注意
+ &amp;保证在关闭shell窗口后能继续运行
+ 在windows下将.sh改为.bat,“/”改为“\”
+  开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/blog/kafka/" />
 
@@ -63,11 +67,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-07-20%2009%3a12%3a30.808495657%20%2b0800%20CST%20m%3d%2b0.182367862">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-07-20%2009%3a12%3a30.808495657%20%2b0800%20CST%20m%3d%2b0.182367862">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-07-20%2009%3a12%3a30.808495657%20%2b0800%20CST%20m%3d%2b0.182367862">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-07-20%2009%3a09%3a05.265336201%20%2b0800%20CST%20m%3d%2b0.210985958">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-07-20%2009%3a12%3a30.808495657%20%2b0800%20CST%20m%3d%2b0.182367862">
     
 
 
@@ -218,9 +222,13 @@ Kafka是一个分布式的、分区的、多复本的日志提交服务。它通
 
 <h3 id="0x01-kafka常用命令">0x01 kafka常用命令</h3>
 
-<p><strong>注意</strong>
-- &amp;保证在关闭shell窗口后能继续运行
-- 在windows下将.sh改为.bat,“/”改为“\”</p>
+<p><strong>注意</strong></p>
+
+<ul>
+<li><p>&amp;保证在关闭shell窗口后能继续运行</p></li>
+
+<li><p>在windows下将.sh改为.bat,“/”改为“\”</p></li>
+</ul>
 
 <h4 id="开启zookeeper">开启ZooKeeper</h4>
 
