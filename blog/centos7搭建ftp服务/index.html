@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
+ 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么结，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
+0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
+yum install vsftpd  如果安装了，那么就直接卸载了。
+yum remove vsftpd  卸载后需要注意以下问题：
+ 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
+0x01 配置信息 ftp服务的配置信息路径为：
+/etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问">
+
+<meta property="og:title" content="Centos7搭建ftp服务" />
+<meta property="og:description" content="Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
+ 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么结，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
+0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
+yum install vsftpd  如果安装了，那么就直接卸载了。
+yum remove vsftpd  卸载后需要注意以下问题：
+ 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
+0x01 配置信息 ftp服务的配置信息路径为：
+/etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/" />
+
+
+
+<meta property="article:published_time" content="2018-07-27T09:42:51&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-07-27T09:42:51&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Centos7搭建ftp服务 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-07-27%2022%3a00%3a13.606096432%20%2b0800%20CST%20m%3d%2b0.137222655">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-07-27%2022%3a00%3a13.606096432%20%2b0800%20CST%20m%3d%2b0.137222655">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-07-27%2022%3a00%3a13.606096432%20%2b0800%20CST%20m%3d%2b0.137222655">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-07-27%2022%3a00%3a13.606096432%20%2b0800%20CST%20m%3d%2b0.137222655">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Centos7搭建ftp服务
+
+</div>
+
+                    <div class="initials"><a href="https://guobingyi.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Fri Jul 27 2018 09:42:51 CST'>Jul 27, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h1 id="centos7-搭建ftp服务">Centos7 搭建ftp服务</h1>
+
+<blockquote>
+<p>其实，我需求的很简单，你别讲的那么复杂。</p>
+</blockquote>
+
+<p>第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么结，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。</p>
+
+<h2 id="0x00-安装vsftpd">0x00 安装vsftpd</h2>
+
+<p>如果centos下没有安装vsftpd，那么就你就直接安装:</p>
+
+<pre><code>yum install vsftpd
+</code></pre>
+
+<p>如果安装了，那么就直接卸载了。</p>
+
+<pre><code>yum remove vsftpd
+</code></pre>
+
+<p>卸载后需要注意以下问题：</p>
+
+<ul>
+<li>查看线程是否存在</li>
+</ul>
+
+<pre><code>ps auxf | grep vsftpd
+</code></pre>
+
+<p>如果线程存在则直接 kill -9 .</p>
+
+<ul>
+<li>如果/etc/vsftpd文件夹存在，先删除在重新安装。</li>
+</ul>
+
+<p>即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。</p>
+
+<h2 id="0x01-配置信息">0x01 配置信息</h2>
+
+<p>ftp服务的配置信息路径为：</p>
+
+<pre><code>/etc/vsftpd/vsftpd.conf
+</code></pre>
+
+<p>一般对照配置修改以下内容：</p>
+
+<pre><code>#禁用匿名用户登录
+anonymous_enable=NO
+#是否允许本地用户登录
+chroot_local_user=YES
+#ftp根目录
+local_root=/ftpserver/flowdata
+</code></pre>
+
+<h2 id="0-x02-创建本地用户">0x02 创建本地用户</h2>
+
+<ol>
+<li>创建ftp用户</li>
+</ol>
+
+<pre><code>useradd jack
+</code></pre>
+
+<ol>
+<li>设置用户密码</li>
+</ol>
+
+<pre><code>echo &quot;jack_pass_word&quot; | passwd jack --stdin
+</code></pre>
+
+<p>3.限制该用户仅能通过 FTP 访问</p>
+
+<pre><code>usermod -s /sbin/nologin jack
+</code></pre>
+
+<h2 id="0x03-启动ftp服务">0x03 启动ftp服务</h2>
+
+<pre><code>systemctl start vsftpd
+</code></pre>
+
+<h2 id="0x04-验证ftp服务">0x04 验证ftp服务</h2>
+
+<p>在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。</p>
+
+<pre><code> FTP://jack:jack_pass_word@192.168.100.175:21/
+</code></pre>
+
+<ul>
+<li>192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。</li>
+</ul>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

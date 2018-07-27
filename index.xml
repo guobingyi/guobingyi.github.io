@@ -6,10 +6,28 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Jul 2018 16:46:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jul 2018 09:42:51 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Centos7搭建ftp服务</title>
+      <link>https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Fri, 27 Jul 2018 09:42:51 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/</guid>
+      <description>Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
+ 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么结，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
+0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
+yum install vsftpd  如果安装了，那么就直接卸载了。
+yum remove vsftpd  卸载后需要注意以下问题：
+ 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
+0x01 配置信息 ftp服务的配置信息路径为：
+/etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问</description>
+    </item>
     
     <item>
       <title>Anon</title>
