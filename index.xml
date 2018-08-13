@@ -6,10 +6,50 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Aug 2018 09:00:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Aug 2018 11:39:34 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Others</title>
+      <link>https://guobingyi.github.io/code/others/</link>
+      <pubDate>Thu, 09 Aug 2018 11:39:34 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/others/</guid>
+      <description>Don&amp;rsquo;t be evil
+记录一些奇怪的错误  0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
+bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance.  很长时间没有解决，在使用了google后，最终找到了解决方案。
+If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;quot;python@2&amp;quot; appears in that list, and Python 2.</description>
+    </item>
+    
+    <item>
+      <title>Test-driven development with Go</title>
+      <link>https://guobingyi.github.io/code/test-drivendevelopmentwithgo/</link>
+      <pubDate>Tue, 07 Aug 2018 17:48:14 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/test-drivendevelopmentwithgo/</guid>
+      <description>介绍 使用Go语言进行驱动开发。
+讲什么 本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。
+二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：
+二维码例子
+在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。
+预期读者 本书的读者需要有一定的编程基础，如果没有学习过Go,请点击此处进行学习。
+要求 在阅读本书前，你需要准备以下工具：
+Go Go语言环境是本书中的唯一要求。你可以从其官网进行下载安装。如果你的操作系统是OS X，可以使用Homebrew进行安装。 大多数的Linux都已经在包管理器中加入了Go。
+一个终端 使用Go语言的最佳途径就是使用终端。大多数的Linux系统使用其自动的终端shell，苹果用户可以使用Terminal.app；而 windows用户可以使用Cygwin或Git Bash。
+一个编辑器 最终，你将使用一个编辑器来进行编码。编辑器有非常多的选择，然而Sublime Text看起来非常流行。默认的 Go配置插件，Emasc和Vim都有提供。
+翻译者：推荐Visual Studio Code，好用，免费。
+代码实例 Go代码 本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。
+fragment.go
+17 func (r *Receiver) MyFunc() err { 18 print(&amp;quot;Anything&amp;quot;) 19 print(&amp;quot;Even more&amp;quot;) 20 }  17
+关于第17行的一些有趣信息。
+17 - 20
+关于从第17行到第20行的整个代码块的一些有趣信息。
+有时代码样本缺少行号 - 在这种情况下，代码实际上并不包含在源代码中，而是意味着要点。
+go fmt 高亮显示运算符优先级
+func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
+    </item>
     
     <item>
       <title>健康</title>
