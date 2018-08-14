@@ -63,11 +63,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-08-13%2014%3a59%3a04.002956779%20%2b0800%20CST%20m%3d%2b0.438566754">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-08-13%2014%3a59%3a04.002956779%20%2b0800%20CST%20m%3d%2b0.438566754">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-08-13%2014%3a59%3a04.002956779%20%2b0800%20CST%20m%3d%2b0.438566754">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-08-14%2010%3a55%3a04.637068026%20%2b0800%20CST%20m%3d%2b0.173102624">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-08-14%2010%3a55%3a04.637068026%20%2b0800%20CST%20m%3d%2b0.173102624">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-08-14%2010%3a55%3a04.637068026%20%2b0800%20CST%20m%3d%2b0.173102624">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-08-13%2014%3a59%3a04.002956779%20%2b0800%20CST%20m%3d%2b0.438566754">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-08-14%2010%3a55%3a04.637068026%20%2b0800%20CST%20m%3d%2b0.173102624">
     
 
 
@@ -292,6 +292,14 @@ Error: Could not generate Xcode project: error: terminated(72): xcrun --sdk maco
 <li>先Clear Auth Cache清理缓存</li>
 <li>把Enbale interactive mode选上。</li>
 </ol>
+
+<h3 id="0x03-mac-安装应用后launchpad不显示">0x03 mac 安装应用后Launchpad不显示</h3>
+
+<p>在终端下执行以下命令：</p>
+
+<pre><code class="language-shell">rm ~/Library/Application\ Support/Dock/*.db  
+killall Dock 
+</code></pre>
 
             </div>
         </div>
