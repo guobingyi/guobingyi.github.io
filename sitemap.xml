@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/blog/upgrade/</loc>
+    <lastmod>2018-08-27T20:52:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/code/vscode/</loc>
     <lastmod>2018-08-24T16:10:52+08:00</lastmod>
   </url>
@@ -119,7 +124,7 @@
   
   <url>
     <loc>https://guobingyi.github.io/blog/</loc>
-    <lastmod>2018-08-04T15:20:33+08:00</lastmod>
+    <lastmod>2018-08-27T20:52:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -136,7 +141,7 @@
   
   <url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2018-08-24T16:10:52+08:00</lastmod>
+    <lastmod>2018-08-27T20:52:12+08:00</lastmod>
   </url>
   
   <url>
