@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/blog/%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%89%80%E9%9C%80%E7%9A%84jar/</loc>
+    <lastmod>2018-11-06T10:06:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/opensource/dbeaver/</loc>
+    <lastmod>2018-10-23T10:52:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/life/12year/</loc>
+    <lastmod>2018-10-05T16:05:26+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/blog/upgrade/</loc>
     <lastmod>2018-08-27T20:52:12+08:00</lastmod>
   </url>
@@ -124,7 +139,7 @@
   
   <url>
     <loc>https://guobingyi.github.io/blog/</loc>
-    <lastmod>2018-08-27T20:52:12+08:00</lastmod>
+    <lastmod>2018-11-06T10:06:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -141,12 +156,18 @@
   
   <url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2018-08-27T20:52:12+08:00</lastmod>
+    <lastmod>2018-11-06T10:06:02+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://guobingyi.github.io/life/</loc>
-    <lastmod>2018-08-07T09:00:19+08:00</lastmod>
+    <lastmod>2018-10-05T16:05:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/opensource/</loc>
+    <lastmod>2018-10-23T10:52:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
