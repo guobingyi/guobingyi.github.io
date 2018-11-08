@@ -6,10 +6,25 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Nov 2018 10:06:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Nov 2018 11:22:28 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Brew</title>
+      <link>https://guobingyi.github.io/blog/brew/</link>
+      <pubDate>Thu, 08 Nov 2018 11:22:28 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/brew/</guid>
+      <description>brew 使用指南  自从用了brew，就在也不想离开mac系统了。
+0x00安装brew 访问brew官网https://brew.sh，根据提示进行安装。
+ /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;  0x01使用brew安装软件 brew install wget  0x02使用brew更新软件 brew update  更新使用brew安装的软件
+0x03使用brew执行更新 brew upgrade  所以，一般都使用组合命令进行执行
+brew update &amp;amp;&amp;amp; brew upgrade  0x04 使用cleanup执行删除老更新包 brew cleanup  0x05 cask下的安装与删除 安装
+brew cask install name  卸载
+brew cask uninstall name  0x06 总结常用命令 1. 安装源码 brew install wget  2. 显示软件的各种信息（包括版本、源码地址、依赖等） brew info svn  3. 卸载软件 $brew uninstall mpv  4.</description>
+    </item>
     
     <item>
       <title>快速下载所需的Jar</title>
