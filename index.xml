@@ -6,10 +6,24 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 08 Nov 2018 11:22:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 10:45:23 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Centos Service</title>
+      <link>https://guobingyi.github.io/blog/centos-service/</link>
+      <pubDate>Mon, 10 Dec 2018 10:45:23 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/centos-service/</guid>
+      <description>Centos7 创建服务  用多了Windows后，才发现其实还是有很多选择的。
+ 在Centos下使用服务，还是因为公司有几个项目每次都需要手动去启动，麻烦。所以充分发挥程序员的懒惰。 原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便， 好用。
+0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户  服务定义可以参考：
+systemd.service — Service unit configuration
+0x01 编写运行命令 start.sh #!/bin/sh #start web sh /opt/apache-tomcat-8.0.32/bin/startup.sh  ps. 千万要写 &amp;ldquo;#!/bin/sh&amp;rdquo;，不写有可能执行不了sh脚本。
+0x02 编写运行命令 stop.sh #!/bin/sh killPid=`ps -ef|grep start.jar|grep -v &amp;quot;grep&amp;quot;|awk &#39;{print $2}&#39;` if [ &amp;quot;$killPid&amp;quot; != &amp;quot;&amp;quot; ]; then echo killing start.</description>
+    </item>
     
     <item>
       <title>brew 使用指南</title>

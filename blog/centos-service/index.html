@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Centos7 创建服务  用多了Windows后，才发现其实还是有很多选择的。
+ 在Centos下使用服务，还是因为公司有几个项目每次都需要手动去启动，麻烦。所以充分发挥程序员的懒惰。 原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便， 好用。
+0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户  服务定义可以参考：
+systemd.service — Service unit configuration
+0x01 编写运行命令 start.sh #!/bin/sh #start web sh /opt/apache-tomcat-8.0.32/bin/startup.sh  ps. 千万要写 &ldquo;#!/bin/sh&rdquo;，不写有可能执行不了sh脚本。
+0x02 编写运行命令 stop.sh #!/bin/sh killPid=`ps -ef|grep start.jar|grep -v &quot;grep&quot;|awk &#39;{print $2}&#39;` if [ &quot;$killPid&quot; != &quot;&quot; ]; then echo killing start.">
+
+<meta property="og:title" content="Centos Service" />
+<meta property="og:description" content="Centos7 创建服务  用多了Windows后，才发现其实还是有很多选择的。
+ 在Centos下使用服务，还是因为公司有几个项目每次都需要手动去启动，麻烦。所以充分发挥程序员的懒惰。 原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便， 好用。
+0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户  服务定义可以参考：
+systemd.service — Service unit configuration
+0x01 编写运行命令 start.sh #!/bin/sh #start web sh /opt/apache-tomcat-8.0.32/bin/startup.sh  ps. 千万要写 &ldquo;#!/bin/sh&rdquo;，不写有可能执行不了sh脚本。
+0x02 编写运行命令 stop.sh #!/bin/sh killPid=`ps -ef|grep start.jar|grep -v &quot;grep&quot;|awk &#39;{print $2}&#39;` if [ &quot;$killPid&quot; != &quot;&quot; ]; then echo killing start." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/centos-service/" /><meta property="article:published_time" content="2018-12-10T10:45:23&#43;08:00"/>
+<meta property="article:modified_time" content="2018-12-10T10:45:23&#43;08:00"/>
+
+
+<title>
+
+
+     Centos Service 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/blog/centos-service/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-12-10%2011%3a19%3a10.816644%20%2b0800%20CST%20m%3d%2b0.216007858">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-12-10%2011%3a19%3a10.816644%20%2b0800%20CST%20m%3d%2b0.216007858">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-12-10%2011%3a19%3a10.816644%20%2b0800%20CST%20m%3d%2b0.216007858">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-12-10%2011%3a19%3a10.816644%20%2b0800%20CST%20m%3d%2b0.216007858">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Centos Service
+
+</div>
+
+                    <div class="initials"><a href="https://guobingyi.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Dec 10 2018 10:45:23 CST'>Dec 10, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h1 id="centos7-创建服务">Centos7 创建服务</h1>
+
+<blockquote>
+<p>用多了Windows后，才发现其实还是有很多选择的。</p>
+</blockquote>
+
+<p>在Centos下使用服务，还是因为公司有几个项目每次都需要手动去启动，麻烦。所以充分发挥程序员的懒惰。
+原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便，
+好用。</p>
+
+<h2 id="0x00-编写服务-myservice-service">0x00 编写服务 myservice.service</h2>
+
+<pre><code># auto start
+[Unit]
+Description=Start MyService  #服务描述
+After=mysql.service          #字面翻译就是等mysql服务器启动后，再启动
+
+[Service]
+Type=forking                 #后台运行
+TimeoutSec=0                 #设置永不超时
+
+ExecStart=/opt/server-shell/start.sh  #服务运行命令
+ExecStop=/opt/server-shell/stop.sh    #服务停止命令
+PrivateTmp=true                        #分配临时空间
+
+[Install] 
+WantedBy=multi-user.target             #多用户
+</code></pre>
+
+<p>服务定义可以参考：</p>
+
+<p><a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">systemd.service — Service unit configuration</a></p>
+
+<h2 id="0x01-编写运行命令-start-sh">0x01 编写运行命令 start.sh</h2>
+
+<pre><code>#!/bin/sh
+#start web
+sh /opt/apache-tomcat-8.0.32/bin/startup.sh
+</code></pre>
+
+<p>ps. 千万要写 &ldquo;#!/bin/sh&rdquo;，不写有可能执行不了sh脚本。</p>
+
+<h2 id="0x02-编写运行命令-stop-sh">0x02 编写运行命令 stop.sh</h2>
+
+<pre><code>#!/bin/sh
+killPid=`ps -ef|grep start.jar|grep -v &quot;grep&quot;|awk '{print $2}'`
+
+if [ &quot;$killPid&quot; != &quot;&quot; ]; then
+    echo killing start.jar process.
+    kill -9 $killPid
+    echo killing start.jar file end.
+fi
+
+echo kill tomcat process.
+sh /opt/apache-tomcat-8.0.32/bin/shutdown.sh
+echo kill tomcat process end. 
+</code></pre>
+
+<h2 id="0x03-部署服务">0x03 部署服务</h2>
+
+<pre><code>cp myservice.service /etc/systemd/system
+</code></pre>
+
+<h2 id="0x04-设置服务为开机启动">0x04 设置服务为开机启动</h2>
+
+<pre><code>systemctl enable myservice.service
+</code></pre>
+
+<h2 id="0x05-启动服务">0x05 启动服务</h2>
+
+<pre><code>systemctl start myservice
+</code></pre>
+
+<h2 id="0x06停止服务">0x06停止服务</h2>
+
+<pre><code>systemctl stop myservice
+</code></pre>
+
+<h2 id="0x07-查看服务状态">0x07 查看服务状态</h2>
+
+<pre><code>systemctl status myservice
+</code></pre>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
