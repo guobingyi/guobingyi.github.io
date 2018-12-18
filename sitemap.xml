@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/blog/eclipse-che-%E5%9C%A8mac%E4%B8%8B%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-12-18T16:19:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/code/go-beego/</loc>
+    <lastmod>2018-12-14T10:16:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/code/go-tutorial/</loc>
+    <lastmod>2018-12-13T14:28:45+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/blog/centos-service/</loc>
     <lastmod>2018-12-10T10:45:23+08:00</lastmod>
   </url>
@@ -149,7 +164,7 @@
   
   <url>
     <loc>https://guobingyi.github.io/blog/</loc>
-    <lastmod>2018-12-10T10:45:23+08:00</lastmod>
+    <lastmod>2018-12-18T16:19:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -160,13 +175,13 @@
   
   <url>
     <loc>https://guobingyi.github.io/code/</loc>
-    <lastmod>2018-08-24T16:10:52+08:00</lastmod>
+    <lastmod>2018-12-14T10:16:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2018-12-10T10:45:23+08:00</lastmod>
+    <lastmod>2018-12-18T16:19:23+08:00</lastmod>
   </url>
   
   <url>

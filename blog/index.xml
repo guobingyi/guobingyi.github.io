@@ -6,10 +6,28 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Dec 2018 10:45:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 Dec 2018 16:19:23 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Eclipse che 在Mac下安装</title>
+      <link>https://guobingyi.github.io/blog/eclipse-che-%E5%9C%A8mac%E4%B8%8B%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Tue, 18 Dec 2018 16:19:23 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/eclipse-che-%E5%9C%A8mac%E4%B8%8B%E5%AE%89%E8%A3%85/</guid>
+      <description>Eclipse Che 在Mac下安装  折腾，不断的折腾。
+ 0x00 安装 在Mac下安装Eclipse Che，推荐使用Docker的方式，避免了很多的问题。
+参考官方文档，单用户安装。
+1. 添加IP别名 IP=$(docker run --rm --net host eclipse/che-ip:nightly) &amp;amp;&amp;amp; sudo ifconfig en0 alias $IP  注：在国外的网站上用的是lo0,而我的电脑是en0。如果不能启动使用ifconfig命令查看自己的网卡信息。
+2. 安装 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v /Users/guoby/mywork/code/che-data:/data eclipse/che start  正常启动后，显示以下内容：
+INFO: (che start): Use: http://localhost:8080 INFO: (che start): API: http://localhost:8080/swagger  在浏览器上输入：http://localhost:8080 就可以使用Eclipse Che了。
+3.疑难杂症 遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。
+Don&amp;rsquo;t worry,it will be solved.
+常见问题：
+Failed to start workspace with Server &amp;lsquo;wsagent/http&amp;rsquo; in machine &amp;lsquo;dev-machine&amp;rsquo; not available.</description>
+    </item>
     
     <item>
       <title>Centos Service</title>
