@@ -48,11 +48,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-12-18%2020%3a48%3a32.826466%20%2b0800%20CST%20m%3d%2b0.218473851">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-12-18%2020%3a48%3a32.826466%20%2b0800%20CST%20m%3d%2b0.218473851">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-12-18%2020%3a48%3a32.826466%20%2b0800%20CST%20m%3d%2b0.218473851">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2018-12-26%2010%3a49%3a37.207787%20%2b0800%20CST%20m%3d%2b0.293582143">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2018-12-26%2010%3a49%3a37.207787%20%2b0800%20CST%20m%3d%2b0.293582143">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2018-12-26%2010%3a49%3a37.207787%20%2b0800%20CST%20m%3d%2b0.293582143">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-12-18%2020%3a48%3a32.826466%20%2b0800%20CST%20m%3d%2b0.218473851">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2018-12-26%2010%3a49%3a37.207787%20%2b0800%20CST%20m%3d%2b0.293582143">
     
 
 
@@ -337,6 +337,18 @@ KEY_FILE = key.pem
 <h3 id="0x05-svn-带用户进行迁入">0x05 SVN 带用户进行迁入</h3>
 
 <pre><code>svn co https://mysvnserver/someproject --username
+</code></pre>
+
+<h3 id="0x06-mac下安装tac命令">0x06 Mac下安装tac命令</h3>
+
+<h4 id="1-安装coreutils软件包">1.安装coreutils软件包。</h4>
+
+<pre><code>brew install coreutils
+</code></pre>
+
+<h4 id="2-使用软链接改变命令名称">2.使用软链接改变命令名称</h4>
+
+<pre><code>ln -s /usr/local/bin/gtac /usr/local/bin/tac
 </code></pre>
 
             </div>
