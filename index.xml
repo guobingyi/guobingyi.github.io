@@ -6,10 +6,38 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 18 Dec 2018 16:19:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jan 2019 14:37:49 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac 按键标识</title>
+      <link>https://guobingyi.github.io/blog/mac-%E6%8C%89%E9%94%AE%E6%A0%87%E8%AF%86/</link>
+      <pubDate>Wed, 09 Jan 2019 14:37:49 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/mac-%E6%8C%89%E9%94%AE%E6%A0%87%E8%AF%86/</guid>
+      <description>Mac按键标示  一直都以为在电脑的世界里就只有Windows。
+  ⌘ Command
+ ⇧ Shift
+ ⌥ Option
+ ⌃ Control
+ ↩︎ Return/Enter
+ ⌫ Delete
+ ⌦ 向前删除键（Fn+Delete）
+ ↑ 上箭头
+ ↓ 下箭头
+ ← 左箭头
+ → 右箭头
+ ⇞ Page Up（Fn+↑）
+ ⇟ Page Down（Fn+↓）
+ Home Fn + ←
+ End Fn + →
+ ⇥ 右制表符（Tab键）
+ ⇤ 左制表符（Shift+Tab）
+ ⎋ Escape (Esc)
+  Edit  ⌃Space 基本的代码补全（补全任何类、方法、变量）</description>
+    </item>
     
     <item>
       <title>Eclipse che 在Mac下安装</title>
