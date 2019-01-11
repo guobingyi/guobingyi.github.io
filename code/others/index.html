@@ -48,11 +48,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-01-09%2014%3a57%3a41.782346%20%2b0800%20CST%20m%3d%2b0.279053826">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-01-09%2014%3a57%3a41.782346%20%2b0800%20CST%20m%3d%2b0.279053826">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-01-09%2014%3a57%3a41.782346%20%2b0800%20CST%20m%3d%2b0.279053826">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-01-11%2009%3a51%3a11.158154%20%2b0800%20CST%20m%3d%2b0.259882070">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-01-11%2009%3a51%3a11.158154%20%2b0800%20CST%20m%3d%2b0.259882070">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-01-11%2009%3a51%3a11.158154%20%2b0800%20CST%20m%3d%2b0.259882070">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-01-09%2014%3a57%3a41.782346%20%2b0800%20CST%20m%3d%2b0.279053826">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-01-11%2009%3a51%3a11.158154%20%2b0800%20CST%20m%3d%2b0.259882070">
     
 
 
@@ -349,6 +349,23 @@ KEY_FILE = key.pem
 <h4 id="2-使用软链接改变命令名称">2.使用软链接改变命令名称</h4>
 
 <pre><code>ln -s /usr/local/bin/gtac /usr/local/bin/tac
+</code></pre>
+
+<h3 id="0x07-mac下隐藏和显示文件">0x07 Mac下隐藏和显示文件</h3>
+
+<h4 id="显示隐藏文件">显示隐藏文件</h4>
+
+<pre><code>defaults write com.apple.Finder AppleShowAllFiles YES;KillAll Finder
+</code></pre>
+
+<h4 id="不显示隐藏文件">不显示隐藏文件</h4>
+
+<pre><code>defaults write com.apple.Finder AppleShowAllFiles NO;KillAll Finder
+</code></pre>
+
+<h4 id="快捷方式">快捷方式</h4>
+
+<pre><code>command+shift+.
 </code></pre>
 
             </div>
