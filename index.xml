@@ -6,10 +6,38 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Jan 2019 14:37:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 14:37:52 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac Tools</title>
+      <link>https://guobingyi.github.io/mac/tools/</link>
+      <pubDate>Tue, 15 Jan 2019 14:37:52 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/mac/tools/</guid>
+      <description>Mac下好用的工具推荐  自从升级到Mac下后，就没有回去的勇气。
+ 0x00 brew 推荐指数：🌟🌟🌟🌟🌟
+开发必备。安装其它工具也变的越来越简单了。
+进入官网，直接按照操作进行下载。
+0x01 NIGHTOWL 推荐指数：🌟🌟
+主题由浅色和深色的转变，如果你是一个和我一样有这样需求的人，白天浅色，晚上深色，那个这个app就不要错过。 进入官网直接下载安装即可。</description>
+    </item>
+    
+    <item>
+      <title>Learn Emacs</title>
+      <link>https://guobingyi.github.io/emacs/learn/</link>
+      <pubDate>Sun, 13 Jan 2019 10:49:09 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/emacs/learn/</guid>
+      <description>Emasc 学习  如果说一个IDE可以用一辈子的话，那么就是Emasc。
+ 0x00 安装 目前Emacs安装提供多中方式安装，可以参考官网进行安装。
+0x00 入门 入门其实就是看Emacs的帮助手册，C-h t调用出帮助手册，使用大约30分钟的时间看完整个文档。那么基本可以对键有一个大概的认识，还是 需要从实战中不断加深认识。
+0x01 看书或者视频 对于看书，我觉得有时候会有点枯燥，没事时间的同学可以看一下zilongshanren的Spacemacs Rocks 第二季的文章，最好 配合着视频看，会提高很多。
+0x02 学以致用 用学的目的不就是为了用嘛，怎么用，就是自己用着顺手，每次打开电脑的一件事就是启动Emasc。
+0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。</description>
+    </item>
     
     <item>
       <title>Mac 按键标识</title>

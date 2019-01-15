@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on guobingyi</title>
+    <link>https://guobingyi.github.io/mac/</link>
+    <description>Recent content in Mac on guobingyi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 15 Jan 2019 14:37:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://guobingyi.github.io/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac Tools</title>
+      <link>https://guobingyi.github.io/mac/tools/</link>
+      <pubDate>Tue, 15 Jan 2019 14:37:52 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/mac/tools/</guid>
+      <description>Mac下好用的工具推荐  自从升级到Mac下后，就没有回去的勇气。
+ 0x00 brew 推荐指数：🌟🌟🌟🌟🌟
+开发必备。安装其它工具也变的越来越简单了。
+进入官网，直接按照操作进行下载。
+0x01 NIGHTOWL 推荐指数：🌟🌟
+主题由浅色和深色的转变，如果你是一个和我一样有这样需求的人，白天浅色，晚上深色，那个这个app就不要错过。 进入官网直接下载安装即可。</description>
+    </item>
+    
+  </channel>
+</rss>
