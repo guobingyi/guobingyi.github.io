@@ -48,11 +48,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-01-16%2010%3a03%3a23.605667%20%2b0800%20CST%20m%3d%2b0.243430950">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-01-16%2010%3a03%3a23.605667%20%2b0800%20CST%20m%3d%2b0.243430950">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-01-16%2010%3a03%3a23.605667%20%2b0800%20CST%20m%3d%2b0.243430950">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-02-01%2011%3a05%3a05.599131%20%2b0800%20CST%20m%3d%2b0.300414822">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-02-01%2011%3a05%3a05.599131%20%2b0800%20CST%20m%3d%2b0.300414822">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-02-01%2011%3a05%3a05.599131%20%2b0800%20CST%20m%3d%2b0.300414822">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-01-16%2010%3a03%3a23.605667%20%2b0800%20CST%20m%3d%2b0.243430950">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-02-01%2011%3a05%3a05.599131%20%2b0800%20CST%20m%3d%2b0.300414822">
     
 
 
@@ -378,6 +378,29 @@ KEY_FILE = key.pem
 非常不爽啊，以来用的时候没有出现过这样的问题，是系统升级后，一直都会出现这个问题。
 在网上看了一个解决方案，就是去创见的官网下一个运用，JetDrive Toolbox，将Power Save Mode打开。
 看看能不能解决这个问题，试一段时间来结论吧。</p>
+
+<p>用了一段时间后发现，该应用已经起到了正常使用的效果。仅仅出现的问题是，每次盒盖后，重新开启后，会有一段时间，
+存储卡是不显示的，过一会就自动加载出来。</p>
+
+<p>我理解的是，在盒盖后，要求睡眠的时候，Toolbox将创见卡推出；当开启的时候，Toolbox将创见卡加载。从而避免了直接
+推出的方式。</p>
+
+<h3 id="0x08-ruby应用的错误">0x08 ruby应用的错误</h3>
+
+<p>错误方式：</p>
+
+<pre><code>/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/lib/ruby/2.3.0/universal-darwin18/rbconfig.rb:215: warning: Insecure world writable dir /Users/guoby/OneDrive/mywork/code/gocode/bin in PATH, mode 040777
+</code></pre>
+
+<p>解决办法：</p>
+
+<pre><code>sudo chmod 775 /Users/guoby/OneDrive/mywork/code/gocode
+sudo chmod go-w /Users/guoby/OneDrive/mywork/code/gocode/bin
+</code></pre>
+
+<p>疑问？？？</p>
+
+<p>现在只要在不同的路径下，都会报这样的错误，这样就郁闷了，是不是所有的目录都要去执行这个命令吗？</p>
 
             </div>
         </div>
