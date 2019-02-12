@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>guobingyi  | Go Tutorial</title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
 
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.54.0" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
+ 0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
+Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
+0x01 Hello,world! package main import ( &quot;fmt&quot; ) // Print Hello,world! func main() { fmt.Printf(&quot;Hello,World!&quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install   如何编写go语言  http://localhost:6060/doc/code.html   如何高效的编写go语言  http://localhost:6060/doc/code.html   熟悉go语言的api  http://localhost:6060/pkg/  0x03 深入  已beego框架学习如何编写web项目  https://beego.me   关注go语言的Top项目  https://github.">
 
-    
-    
-      <link href="https://guobingyi.github.io/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
-
-    <meta property="og:title" content="Go Tutorial" />
+<meta property="og:title" content="Go Tutorial" />
 <meta property="og:description" content="Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
  0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
 Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
@@ -38,91 +24,46 @@ Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式�
 <meta property="article:published_time" content="2018-12-13T14:28:45&#43;08:00"/>
 <meta property="article:modified_time" content="2018-12-13T14:28:45&#43;08:00"/>
 
-<meta itemprop="name" content="Go Tutorial">
-<meta itemprop="description" content="Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
- 0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
-Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &quot;fmt&quot; ) // Print Hello,world! func main() { fmt.Printf(&quot;Hello,World!&quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install   如何编写go语言  http://localhost:6060/doc/code.html   如何高效的编写go语言  http://localhost:6060/doc/code.html   熟悉go语言的api  http://localhost:6060/pkg/  0x03 深入  已beego框架学习如何编写web项目  https://beego.me   关注go语言的Top项目  https://github.">
+
+<title>
 
 
-<meta itemprop="datePublished" content="2018-12-13T14:28:45&#43;08:00" />
-<meta itemprop="dateModified" content="2018-12-13T14:28:45&#43;08:00" />
-<meta itemprop="wordCount" content="51">
+     Go Tutorial 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/go-tutorial/">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Go Tutorial"/>
-<meta name="twitter:description" content="Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
- 0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
-Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &quot;fmt&quot; ) // Print Hello,world! func main() { fmt.Printf(&quot;Hello,World!&quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install   如何编写go语言  http://localhost:6060/doc/code.html   如何高效的编写go语言  http://localhost:6060/doc/code.html   熟悉go语言的api  http://localhost:6060/pkg/  0x03 深入  已beego框架学习如何编写web项目  https://beego.me   关注go语言的Top项目  https://github."/>
 
-  </head>
 
-  <body class="ma0 avenir bg-near-white">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
 
     
-   
-  
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-02-12%2018%3a21%3a59.902852%20%2b0800%20CST%20m%3d%2b0.211729067">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-02-12%2018%3a21%3a59.902852%20%2b0800%20CST%20m%3d%2b0.211729067">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-02-12%2018%3a21%3a59.902852%20%2b0800%20CST%20m%3d%2b0.211729067">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-02-12%2018%3a21%3a59.902852%20%2b0800%20CST%20m%3d%2b0.211729067">
+    
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="https://guobingyi.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
-      guobingyi
-    </a>
-    <div class="flex-l items-center">
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/blog/" title="Blog page">
-              Blog
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/about/" title="About page">
-              About
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/code/" title="Code page">
-              Code
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/life/" title="Life page">
-              Life
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/opensource/" title="OpenSource page">
-              OpenSource
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/emacs/" title="Emacs page">
-              Emacs
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/mac/" title="Mac page">
-              Mac
-            </a>
-          </li>
-          
-        </ul>
-      
-      
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
 
 
 
@@ -130,38 +71,140 @@ Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式�
 
 
 
-  <a href="//github.com/guobingyi" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
-    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
-</svg>
 
-  </a>
+</head>
 
 
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
     </div>
-  </div>
-</nav>
+</section>
 
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
     </div>
-  </header>
+</section>
 
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
 
+    Go Tutorial
 
-    <main class="pb7" role="main">
-      
-  <article class="flex-l flex-wrap justify-between mw8 center">
+</div>
 
-    <header class="mt4 w-100">
-      <p class="f6 b helvetica tracked">
-          
-        CODE
-      </p>
-      <h1 class="f1 athelas mb1">Go Tutorial</h1>
-      
-      <time class="f6 mv4 dib tracked" datetime="2018-12-13T14:28:45&#43;08:00">December 13, 2018</time>
-    </header>
-
-    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+            <div class="markdown">
+                
 
 <h2 id="go-tutorial">Go Tutorial</h2>
 
@@ -253,71 +296,37 @@ func main() {
 
 <pre><code>https://github.com/avelino/awesome-go
 </code></pre>
-<ul class="pa0">
-  
-</ul>
-<div class="mt6">
-        <div id="disqus_thread"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "cocoaexamplesite" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      </div>
-    </main>
-
-    <aside class="w-30-l mt6-l">
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://guobingyi.github.io/" >
-    &copy; 2019 guobingyi
-  </a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
 
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
 
 
 
 
 
-
-  <a href="//github.com/guobingyi" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
-    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
-</svg>
-
-  </a>
-
-
-  </div>
-</footer>
-
-    
-
-  <script src="https://guobingyi.github.io/dist/js/app.3fc0f988d21662902933.js"></script>
-
-
-  </body>
+</body>
 </html>
+
