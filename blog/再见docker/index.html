@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>guobingyi  | 再见Docker</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="https://guobingyi.github.io/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="再见Docker" />
+<meta property="og:description" content="再见Docker  刚刚开始，却又说再见！
+ 0x00 缘起 第一次遇到docker是由于学习go语言的时候，发现有人居然用go写了一个应用容器引擎，而且docker的使用非常方便。就那句话，“谁用谁知道”。哈哈～～
+今天突然发现，自己被很多东西困扰了。是时候给自己来一个断舍离了，所以就拿电脑中不经常使用的app开刀了。docker在电脑中待了很长时间了，以至于打开的时候，看看目前的版本是否修复了原来Docker.qcow2文件是否只能呆在固定位置的情况，发现已经可以随意调整了，给docker点赞的同时也决定了删除她，毕竟要给自己做断舍离的同时，也想让自己聚焦一下，太发散了，累。
+0x01 docker 常用命令 1. 查看本地可用镜像 docker images  2. 查看运行的容器 docker ps  3. 查看所有的容器 docker ps -a  4. 停止容器 docker stop container  5. 启动容器 docker start container  6. 删除容器 docker rm container  7. 删除镜像 docker rmi image name  8. 从Docker容器内拷贝文件到主机上 docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target  9. 终极命令 docker COMMAND --help  使用docker自带的命令来看命令的使用。
+例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &ndash;help来显示结果，如下所示：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/%E5%86%8D%E8%A7%81docker/" />
+<meta property="article:published_time" content="2019-02-12T10:56:46&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-12T10:56:46&#43;08:00"/>
+
+<meta itemprop="name" content="再见Docker">
+<meta itemprop="description" content="再见Docker  刚刚开始，却又说再见！
+ 0x00 缘起 第一次遇到docker是由于学习go语言的时候，发现有人居然用go写了一个应用容器引擎，而且docker的使用非常方便。就那句话，“谁用谁知道”。哈哈～～
+今天突然发现，自己被很多东西困扰了。是时候给自己来一个断舍离了，所以就拿电脑中不经常使用的app开刀了。docker在电脑中待了很长时间了，以至于打开的时候，看看目前的版本是否修复了原来Docker.qcow2文件是否只能呆在固定位置的情况，发现已经可以随意调整了，给docker点赞的同时也决定了删除她，毕竟要给自己做断舍离的同时，也想让自己聚焦一下，太发散了，累。
+0x01 docker 常用命令 1. 查看本地可用镜像 docker images  2. 查看运行的容器 docker ps  3. 查看所有的容器 docker ps -a  4. 停止容器 docker stop container  5. 启动容器 docker start container  6. 删除容器 docker rm container  7. 删除镜像 docker rmi image name  8. 从Docker容器内拷贝文件到主机上 docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target  9. 终极命令 docker COMMAND --help  使用docker自带的命令来看命令的使用。
+例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &ndash;help来显示结果，如下所示：">
+
+
+<meta itemprop="datePublished" content="2019-02-12T10:56:46&#43;08:00" />
+<meta itemprop="dateModified" content="2019-02-12T10:56:46&#43;08:00" />
+<meta itemprop="wordCount" content="244">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="再见Docker"/>
+<meta name="twitter:description" content="再见Docker  刚刚开始，却又说再见！
+ 0x00 缘起 第一次遇到docker是由于学习go语言的时候，发现有人居然用go写了一个应用容器引擎，而且docker的使用非常方便。就那句话，“谁用谁知道”。哈哈～～
+今天突然发现，自己被很多东西困扰了。是时候给自己来一个断舍离了，所以就拿电脑中不经常使用的app开刀了。docker在电脑中待了很长时间了，以至于打开的时候，看看目前的版本是否修复了原来Docker.qcow2文件是否只能呆在固定位置的情况，发现已经可以随意调整了，给docker点赞的同时也决定了删除她，毕竟要给自己做断舍离的同时，也想让自己聚焦一下，太发散了，累。
+0x01 docker 常用命令 1. 查看本地可用镜像 docker images  2. 查看运行的容器 docker ps  3. 查看所有的容器 docker ps -a  4. 停止容器 docker stop container  5. 启动容器 docker start container  6. 删除容器 docker rm container  7. 删除镜像 docker rmi image name  8. 从Docker容器内拷贝文件到主机上 docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target  9. 终极命令 docker COMMAND --help  使用docker自带的命令来看命令的使用。
+例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &ndash;help来显示结果，如下所示："/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://guobingyi.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      guobingyi
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/blog/" title="Blog page">
+              Blog
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/code/" title="Code page">
+              Code
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/life/" title="Life page">
+              Life
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/opensource/" title="OpenSource page">
+              OpenSource
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/emacs/" title="Emacs page">
+              Emacs
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://guobingyi.github.io/mac/" title="Mac page">
+              Mac
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+  <a href="//github.com/guobingyi" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOG
+      </p>
+      <h1 class="f1 athelas mb1">再见Docker</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-02-12T10:56:46&#43;08:00">February 12, 2019</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="再见docker">再见Docker</h2>
+
+<blockquote>
+<p>刚刚开始，却又说再见！</p>
+</blockquote>
+
+<h3 id="0x00-缘起">0x00 缘起</h3>
+
+<p>第一次遇到docker是由于学习go语言的时候，发现有人居然用go写了一个应用容器引擎，而且docker的使用非常方便。就那句话，“谁用谁知道”。哈哈～～</p>
+
+<p>今天突然发现，自己被很多东西困扰了。是时候给自己来一个断舍离了，所以就拿电脑中不经常使用的app开刀了。docker在电脑中待了很长时间了，以至于打开的时候，看看目前的版本是否修复了原来Docker.qcow2文件是否只能呆在固定位置的情况，发现已经可以随意调整了，给docker点赞的同时也决定了删除她，毕竟要给自己做断舍离的同时，也想让自己聚焦一下，太发散了，累。</p>
+
+<h3 id="0x01-docker-常用命令">0x01 docker 常用命令</h3>
+
+<h4 id="1-查看本地可用镜像">1. 查看本地可用镜像</h4>
+
+<pre><code>docker images 
+</code></pre>
+
+<h4 id="2-查看运行的容器">2. 查看运行的容器</h4>
+
+<pre><code>docker ps
+</code></pre>
+
+<h4 id="3-查看所有的容器">3. 查看所有的容器</h4>
+
+<pre><code>docker ps -a
+</code></pre>
+
+<h4 id="4-停止容器">4. 停止容器</h4>
+
+<pre><code>docker stop container
+</code></pre>
+
+<h4 id="5-启动容器">5. 启动容器</h4>
+
+<pre><code>docker start container
+</code></pre>
+
+<h4 id="6-删除容器">6. 删除容器</h4>
+
+<pre><code>docker rm container
+</code></pre>
+
+<h4 id="7-删除镜像">7. 删除镜像</h4>
+
+<pre><code>docker rmi image name
+</code></pre>
+
+<h4 id="8-从docker容器内拷贝文件到主机上">8. 从Docker容器内拷贝文件到主机上</h4>
+
+<pre><code>docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target
+</code></pre>
+
+<h4 id="9-终极命令">9. 终极命令</h4>
+
+<pre><code>docker COMMAND --help
+</code></pre>
+
+<p>使用docker自带的命令来看命令的使用。</p>
+
+<p>例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &ndash;help来显示结果，如下所示：</p>
+
+<pre><code>bingyideMacBook-Pro:~ guoby$ docker stop --help
+
+Usage:	docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+
+Options:
+  -t, --time int   Seconds to wait for stop before killing it (default 10)
+bingyideMacBook-Pro:~ guoby$ docker pause --help
+
+Usage:	docker pause CONTAINER [CONTAINER...]
+
+Pause all processes within one or more containers
+</code></pre>
+
+<p>怎么样？是不是很爽哦，避免了很多要记忆的东西，同时也知道了docker有那些命令，是用来干什么的。</p>
+
+<h3 id="0x02-docker-实践">0x02 docker 实践</h3>
+
+<p>我的docker环境在mac下使用，windows下也使用过，但是体验不是很好，用了docker就不能用vm，非常尴尬！</p>
+
+<h4 id="1-黄图鉴别">1. 黄图鉴别</h4>
+
+<p>总得找点乐趣来提升一下学习兴趣，比如雅虎开源的这个项目，是用了鉴别是否是黄图的项目。项目地址：<a href="https://github.com/yahoo/open_nsfw">Open nsfw model</a>。</p>
+
+<p>进入项目主页后，按照README.md的说明来安装，如果可以正常使用，那么恭喜你，docker入门了，后续的就自己玩吧。</p>
+
+<h4 id="2-docker下安装kali">2. docker下安装kali</h4>
+
+<p>（1）下载基础镜像</p>
+
+<pre><code>docker pull kalilinux/kali-linux-docker
+</code></pre>
+
+<p>（2）启动镜像</p>
+
+<pre><code>docker run -t -i kalilinux/kali-linux-docker /bin/bash
+</code></pre>
+
+<p>（3）安装metasploit</p>
+
+<pre><code>apt-get install metasploit
+</code></pre>
+
+<p>(4)开始安装 wifite</p>
+
+<pre><code>apt-get install wifite
+</code></pre>
+
+<h4 id="3-空间清理">3. 空间清理</h4>
+
+<p>使用一段时间后，Docker.qcow2文件会增长的很快，而且不会自动缩小，不知道目前的版本是否解决了该问题。我使用的方式是直接删除该文件，重启docker后，会自动重新创建这个文件，当然会比原来小很多。</p>
+
+<p>路径：/Users/yourname/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux</p>
+
+<h4 id="4-端口映射">4. 端口映射</h4>
+
+<h5 id="4-1-单端口映射">4.1 单端口映射</h5>
+
+<pre><code>docker run  -it -p 9090:9090 ubuntu/code-dev /bin/bash
+</code></pre>
+
+<h5 id="4-2-多端口映射">4.2 多端口映射</h5>
+
+<pre><code>docker run -p 9090:9090 -p 3306:3306 ubuntu/code-dev /bin/bash
+</code></pre>
+
+<h4 id="5-文件映射">5. 文件映射</h4>
+
+<pre><code>docker run -it -v /Volumes/Transcend/docker_file:/home/mydev centos /bin/bash
+</code></pre>
+
+<h4 id="6-root权限">6. root权限</h4>
+
+<pre><code>docker run --privileged -d --name centos-dpdk -it -v /Volumes/Transcend/docker_file:/home/mydev centos /sbin/init
+</code></pre>
+
+<h4 id="7-针对root用户创建密码">7. 针对root用户创建密码</h4>
+
+<p>(1) 在基础容器centos中启动</p>
+
+<pre><code>docker run -it 2d194b392dd1 /bin/bash
+</code></pre>
+
+<p>(2)修改root用户名密码</p>
+
+<pre><code>passwd
+</code></pre>
+
+<p>(3)添加一个用户test1982</p>
+
+<pre><code>useradd test1982
+</code></pre>
+
+<p>(4)退出容器</p>
+
+<pre><code>exit
+</code></pre>
+
+<p>(5)提交该容器的修改</p>
+
+<pre><code>docker commit 3c989e98fae6 vk:test
+</code></pre>
+
+<p>(6)使用已经创建的用户进行启动容器</p>
+
+<pre><code>docker run -u test1982 -it 8ef50e485580 /bin/bash
+</code></pre>
+
+<p>(7)去除test1982的用户权限</p>
+
+<pre><code>chmod go-rw hello_test
+</code></pre>
+
+<p>(8)至此容器保护工作完成,使用容器必须使用root用户才能进行访问。</p>
+
+<p>遗憾的是，如果是这个容器的宿主机是安装在客户机子上的，那么客户可以使用以下命令进行无密码登录。</p>
+
+<pre><code>docker exec -it -u 0 ebf62a489d1c /bin/bash
+</code></pre>
+
+<p>最终的结论就是docker容器是不支持设置密码的。
+因为docker exec -it -u 0 就是直接使用了root密码，而且还是侵入式的，无法避免。</p>
+
+<p>或者我的需求有点变态，在客户机的虚拟机上加密，只给客户提供服务，而不让看到其内部python代码吧!</p>
+
+<h3 id="0x03-缘不灭">0x03 缘不灭</h3>
+
+<p>仅仅只是由于自己想做一个断舍离，把注意力集中在一点，以后有机会用的时候还是会安装上的，不能怪自己的电脑硬盘小（128G），只是突然一瞬间感觉到，什么都去弄，到最后来该做的没有做好。时间有限，做好一件事就好，不是么？</p>
+
+<p>程序员就是喜欢倒腾，我是一个程序员，想什么都学，但是选择的同时，还是想让自己专注一点。</p>
+
+<p>在删除的时候，本想直接移到废纸篓，但是发现docker本身就带了删除功能。搞笑的事，最后还得走这一步，docker的删除仅仅是把Docker.qcow2文件删除了，避免自己删除应用后再去找这个文件删除。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cocoaexamplesite" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://guobingyi.github.io/" >
+    &copy; 2019 guobingyi
+  </a>
+  
+
+
+
+
+
+
+
+  <a href="//github.com/guobingyi" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="https://guobingyi.github.io/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
