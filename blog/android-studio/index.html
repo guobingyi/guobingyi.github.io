@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="再见 Android Studio  我们还会再次相见！
+ 0x00 缘起 第一次开始Android开发的时候，是在Eclipse上进行的。那个时候需求安装插件，安装Sdk等等，非常不容易才能搭建起一个开发环境。但是，由于工作的性质，一直没有能好好的学习一下。在不段的学习过程中，发现了Android Studio逐步替换了Eclipse开发Android的地位，并且开发门槛也逐步降低。
+在看Android的Sdk文档的时候，发现了官方也推荐这个IDE进行开发，发现这个工具来头不了，是Google自己的IDE。
+0x01 我的安卓开发之旅 1. 动物的叫声 做这个app的时候，是看到Google可以搜索动物，并且还能发出动物的叫声，而好好刚刚3岁多，可以让她看看有那些动物，并且这些动物的叫声是什么，就着手开始写了，一开始什么都不知道，就只有这样的一个点子，然后看了《第一行代码》这本书开始的，作者郭霖和我同性，但是人家可厉害多了。从写书的方式来说，我就觉得非常不错。原来我是非常鄙视国内作者的，写的东西苦涩难懂，简单的东西非用复杂的方式来表达。
+2. 老人丢失找回 这个app的思路，来源自于我姑爹，他患上了疾病，有时候会自己走丢，大哥让我给他买哥电话手表，但是电话手表的找回功能却做的没有现在那么好，精度范围居然在50m外，而且没有行动轨迹。对于程序员的我说干就干，地图api使用了百度地图，想找一个云服务器来进行GPS信号传输，但是无奈的在于姑爹由于生病走了，所以这个app就搁浅了。
+从这个项目来说，所有的需要都来自于生活，然后让自己的技术服务于生活，那么这个技术就是好的。
+0x02 我的断舍离 虽然自己也认为，多学点技术没有什么坏处，所谓技多不压身。但是这个知识爆炸的时代，关注的过多，也会让自己迷失。所以，在断舍离的时候，想到的是，在自己横行发展差不多的时候，来一次纵向的发展，把关注点聚焦一下。
+当然，还有的原因就是自己的手机已经是iPhone了，没有模拟器。
+我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。">
+
+<meta property="og:title" content="Android Studio" />
+<meta property="og:description" content="再见 Android Studio  我们还会再次相见！
+ 0x00 缘起 第一次开始Android开发的时候，是在Eclipse上进行的。那个时候需求安装插件，安装Sdk等等，非常不容易才能搭建起一个开发环境。但是，由于工作的性质，一直没有能好好的学习一下。在不段的学习过程中，发现了Android Studio逐步替换了Eclipse开发Android的地位，并且开发门槛也逐步降低。
+在看Android的Sdk文档的时候，发现了官方也推荐这个IDE进行开发，发现这个工具来头不了，是Google自己的IDE。
+0x01 我的安卓开发之旅 1. 动物的叫声 做这个app的时候，是看到Google可以搜索动物，并且还能发出动物的叫声，而好好刚刚3岁多，可以让她看看有那些动物，并且这些动物的叫声是什么，就着手开始写了，一开始什么都不知道，就只有这样的一个点子，然后看了《第一行代码》这本书开始的，作者郭霖和我同性，但是人家可厉害多了。从写书的方式来说，我就觉得非常不错。原来我是非常鄙视国内作者的，写的东西苦涩难懂，简单的东西非用复杂的方式来表达。
+2. 老人丢失找回 这个app的思路，来源自于我姑爹，他患上了疾病，有时候会自己走丢，大哥让我给他买哥电话手表，但是电话手表的找回功能却做的没有现在那么好，精度范围居然在50m外，而且没有行动轨迹。对于程序员的我说干就干，地图api使用了百度地图，想找一个云服务器来进行GPS信号传输，但是无奈的在于姑爹由于生病走了，所以这个app就搁浅了。
+从这个项目来说，所有的需要都来自于生活，然后让自己的技术服务于生活，那么这个技术就是好的。
+0x02 我的断舍离 虽然自己也认为，多学点技术没有什么坏处，所谓技多不压身。但是这个知识爆炸的时代，关注的过多，也会让自己迷失。所以，在断舍离的时候，想到的是，在自己横行发展差不多的时候，来一次纵向的发展，把关注点聚焦一下。
+当然，还有的原因就是自己的手机已经是iPhone了，没有模拟器。
+我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/android-studio/" />
+<meta property="article:published_time" content="2019-02-13T10:31:13&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-13T10:31:13&#43;08:00"/>
+
+
+<title>
+
+
+     Android Studio 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/blog/android-studio/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-02-13%2018%3a12%3a40.840462%20%2b0800%20CST%20m%3d%2b0.245856544">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-02-13%2018%3a12%3a40.840462%20%2b0800%20CST%20m%3d%2b0.245856544">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-02-13%2018%3a12%3a40.840462%20%2b0800%20CST%20m%3d%2b0.245856544">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-02-13%2018%3a12%3a40.840462%20%2b0800%20CST%20m%3d%2b0.245856544">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Android Studio
+
+</div>
+
+                    <div class="initials"><a href="https://guobingyi.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Wed Feb 13 2019 10:31:13 CST'>Feb 13, 2019</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h2 id="再见-android-studio">再见 Android Studio</h2>
+
+<blockquote>
+<p>我们还会再次相见！</p>
+</blockquote>
+
+<h3 id="0x00-缘起">0x00 缘起</h3>
+
+<p>第一次开始Android开发的时候，是在Eclipse上进行的。那个时候需求安装插件，安装Sdk等等，非常不容易才能搭建起一个开发环境。但是，由于工作的性质，一直没有能好好的学习一下。在不段的学习过程中，发现了Android Studio逐步替换了Eclipse开发Android的地位，并且开发门槛也逐步降低。</p>
+
+<p>在看Android的Sdk文档的时候，发现了官方也推荐这个IDE进行开发，发现这个工具来头不了，是Google自己的IDE。</p>
+
+<h3 id="0x01-我的安卓开发之旅">0x01 我的安卓开发之旅</h3>
+
+<h4 id="1-动物的叫声">1. 动物的叫声</h4>
+
+<p>做这个app的时候，是看到Google可以搜索动物，并且还能发出动物的叫声，而好好刚刚3岁多，可以让她看看有那些动物，并且这些动物的叫声是什么，就着手开始写了，一开始什么都不知道，就只有这样的一个点子，然后看了《第一行代码》这本书开始的，作者郭霖和我同性，但是人家可厉害多了。从写书的方式来说，我就觉得非常不错。原来我是非常鄙视国内作者的，写的东西苦涩难懂，简单的东西非用复杂的方式来表达。</p>
+
+<h4 id="2-老人丢失找回">2. 老人丢失找回</h4>
+
+<p>这个app的思路，来源自于我姑爹，他患上了疾病，有时候会自己走丢，大哥让我给他买哥电话手表，但是电话手表的找回功能却做的没有现在那么好，精度范围居然在50m外，而且没有行动轨迹。对于程序员的我说干就干，地图api使用了百度地图，想找一个云服务器来进行GPS信号传输，但是无奈的在于姑爹由于生病走了，所以这个app就搁浅了。</p>
+
+<p>从这个项目来说，所有的需要都来自于生活，然后让自己的技术服务于生活，那么这个技术就是好的。</p>
+
+<h3 id="0x02-我的断舍离">0x02 我的断舍离</h3>
+
+<p>虽然自己也认为，多学点技术没有什么坏处，所谓技多不压身。但是这个知识爆炸的时代，关注的过多，也会让自己迷失。所以，在断舍离的时候，想到的是，在自己横行发展差不多的时候，来一次纵向的发展，把关注点聚焦一下。</p>
+
+<p>当然，还有的原因就是自己的手机已经是iPhone了，没有模拟器。</p>
+
+<p>我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。</p>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

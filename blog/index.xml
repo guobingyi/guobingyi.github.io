@@ -6,10 +6,27 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Feb 2019 10:56:46 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 Feb 2019 10:31:13 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android Studio</title>
+      <link>https://guobingyi.github.io/blog/android-studio/</link>
+      <pubDate>Wed, 13 Feb 2019 10:31:13 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/android-studio/</guid>
+      <description>再见 Android Studio  我们还会再次相见！
+ 0x00 缘起 第一次开始Android开发的时候，是在Eclipse上进行的。那个时候需求安装插件，安装Sdk等等，非常不容易才能搭建起一个开发环境。但是，由于工作的性质，一直没有能好好的学习一下。在不段的学习过程中，发现了Android Studio逐步替换了Eclipse开发Android的地位，并且开发门槛也逐步降低。
+在看Android的Sdk文档的时候，发现了官方也推荐这个IDE进行开发，发现这个工具来头不了，是Google自己的IDE。
+0x01 我的安卓开发之旅 1. 动物的叫声 做这个app的时候，是看到Google可以搜索动物，并且还能发出动物的叫声，而好好刚刚3岁多，可以让她看看有那些动物，并且这些动物的叫声是什么，就着手开始写了，一开始什么都不知道，就只有这样的一个点子，然后看了《第一行代码》这本书开始的，作者郭霖和我同性，但是人家可厉害多了。从写书的方式来说，我就觉得非常不错。原来我是非常鄙视国内作者的，写的东西苦涩难懂，简单的东西非用复杂的方式来表达。
+2. 老人丢失找回 这个app的思路，来源自于我姑爹，他患上了疾病，有时候会自己走丢，大哥让我给他买哥电话手表，但是电话手表的找回功能却做的没有现在那么好，精度范围居然在50m外，而且没有行动轨迹。对于程序员的我说干就干，地图api使用了百度地图，想找一个云服务器来进行GPS信号传输，但是无奈的在于姑爹由于生病走了，所以这个app就搁浅了。
+从这个项目来说，所有的需要都来自于生活，然后让自己的技术服务于生活，那么这个技术就是好的。
+0x02 我的断舍离 虽然自己也认为，多学点技术没有什么坏处，所谓技多不压身。但是这个知识爆炸的时代，关注的过多，也会让自己迷失。所以，在断舍离的时候，想到的是，在自己横行发展差不多的时候，来一次纵向的发展，把关注点聚焦一下。
+当然，还有的原因就是自己的手机已经是iPhone了，没有模拟器。
+我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。</description>
+    </item>
     
     <item>
       <title>再见Docker</title>
