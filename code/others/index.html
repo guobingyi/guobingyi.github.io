@@ -49,11 +49,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-03-06%2010%3a53%3a18.709123%20%2b0800%20CST%20m%3d%2b0.137654340">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-03-06%2010%3a53%3a18.709123%20%2b0800%20CST%20m%3d%2b0.137654340">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-03-06%2010%3a53%3a18.709123%20%2b0800%20CST%20m%3d%2b0.137654340">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-03-08%2018%3a08%3a42.991347%20%2b0800%20CST%20m%3d%2b0.224604691">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-03-08%2018%3a08%3a42.991347%20%2b0800%20CST%20m%3d%2b0.224604691">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-03-08%2018%3a08%3a42.991347%20%2b0800%20CST%20m%3d%2b0.224604691">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-03-06%2010%3a53%3a18.709123%20%2b0800%20CST%20m%3d%2b0.137654340">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-03-08%2018%3a08%3a42.991347%20%2b0800%20CST%20m%3d%2b0.224604691">
     
 
 
@@ -418,6 +418,21 @@ sudo chmod go-w /Users/guoby/OneDrive/mywork/code/gocode/bin
 <p>删除这些文件</p>
 
 <pre><code>find folder/ -name &quot;._*&quot; -delete
+</code></pre>
+
+<h3 id="0x10-zip加密解密">0x10 zip加密解密</h3>
+
+<p>(1).加密文件</p>
+
+<pre><code>zip -rP password  demo.zip demo.docx
+</code></pre>
+
+<p>-P 密码
+-r 遍历</p>
+
+<p>(2).解密</p>
+
+<pre><code>unzip -P password demo.zip
 </code></pre>
 
             </div>
