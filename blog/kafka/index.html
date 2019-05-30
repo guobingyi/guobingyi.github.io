@@ -15,7 +15,9 @@
  &amp;保证在关闭shell窗口后能继续运行
  在windows下将.sh改为.bat,“/”改为“\”
   开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。
-创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server.">
+创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning   启动kafka时需要配置的信息  在server.">
 
 <meta property="og:title" content="Kafka" />
 <meta property="og:description" content="学习kafka  学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。
@@ -24,7 +26,9 @@
  &amp;保证在关闭shell窗口后能继续运行
  在windows下将.sh改为.bat,“/”改为“\”
   开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;  ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。
-创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server." />
+创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning   启动kafka时需要配置的信息  在server." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/blog/kafka/" />
 <meta property="article:published_time" content="2018-07-13T19:46:58&#43;08:00"/>
@@ -55,11 +59,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-03-08%2018%3a08%3a42.995971%20%2b0800%20CST%20m%3d%2b0.229228230">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-03-08%2018%3a08%3a42.995971%20%2b0800%20CST%20m%3d%2b0.229228230">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-03-08%2018%3a08%3a42.995971%20%2b0800%20CST%20m%3d%2b0.229228230">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-05-30%2021%3a26%3a21.68846%20%2b0800%20CST%20m%3d%2b0.295661814">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-05-30%2021%3a26%3a21.68846%20%2b0800%20CST%20m%3d%2b0.295661814">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-05-30%2021%3a26%3a21.68846%20%2b0800%20CST%20m%3d%2b0.295661814">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-03-08%2018%3a08%3a42.995971%20%2b0800%20CST%20m%3d%2b0.229228230">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-05-30%2021%3a26%3a21.68846%20%2b0800%20CST%20m%3d%2b0.295661814">
     
 
 
@@ -279,32 +283,32 @@ Kafka是一个分布式的、分区的、多复本的日志提交服务。它通
 <h4 id="发送消息">发送消息</h4>
 
 <ul>
-<li>向主题为test的发送消息，输入字符后回车。
-<code>
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
-</code></li>
+<li><p>向主题为test的发送消息，输入字符后回车。</p>
+
+<pre><code>bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+</code></pre></li>
 </ul>
 
 <h4 id="启动消费者">启动消费者</h4>
 
 <ul>
-<li>&ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。</li>
-</ul>
+<li><p>&ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。</p>
 
 <pre><code>bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
-</code></pre>
+</code></pre></li>
+</ul>
 
 <h4 id="启动kafka时需要配置的信息">启动kafka时需要配置的信息</h4>
 
 <ul>
-<li>在server.properties中进行配置</li>
-</ul>
+<li><p>在server.properties中进行配置</p>
 
 <pre><code>listeners=PLAINTEXT://192.168.100.181:9092
 </code></pre>
 
 <pre><code>log.dirs=/opt/kafka_data
-</code></pre>
+</code></pre></li>
+</ul>
 
                 <br>
                 

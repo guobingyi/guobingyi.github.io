@@ -14,11 +14,14 @@
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd  如果安装了，那么就直接卸载了。
 yum remove vsftpd  卸载后需要注意以下问题：
- 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 查看线程是否存在
+ps auxf | grep vsftpd   如果线程存在则直接 kill -9 .
  如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问">
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户
+useradd jack  设置用户密码
+echo &quot;jack_pass_word&quot; | passwd jack --stdin   3.限制该用户仅能通过 FTP 访问">
 
 <meta property="og:title" content="Centos7搭建ftp服务" />
 <meta property="og:description" content="Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
@@ -26,11 +29,14 @@ yum remove vsftpd  卸载后需要注意以下问题：
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd  如果安装了，那么就直接卸载了。
 yum remove vsftpd  卸载后需要注意以下问题：
- 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 查看线程是否存在
+ps auxf | grep vsftpd   如果线程存在则直接 kill -9 .
  如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问" />
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户
+useradd jack  设置用户密码
+echo &quot;jack_pass_word&quot; | passwd jack --stdin   3.限制该用户仅能通过 FTP 访问" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/" />
 <meta property="article:published_time" content="2018-07-27T09:42:51&#43;08:00"/>
@@ -61,11 +67,11 @@ yum remove vsftpd  卸载后需要注意以下问题：
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-03-08%2018%3a08%3a42.993956%20%2b0800%20CST%20m%3d%2b0.227213437">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-03-08%2018%3a08%3a42.993956%20%2b0800%20CST%20m%3d%2b0.227213437">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-03-08%2018%3a08%3a42.993956%20%2b0800%20CST%20m%3d%2b0.227213437">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-05-30%2021%3a26%3a21.686304%20%2b0800%20CST%20m%3d%2b0.293505783">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-05-30%2021%3a26%3a21.686304%20%2b0800%20CST%20m%3d%2b0.293505783">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-05-30%2021%3a26%3a21.686304%20%2b0800%20CST%20m%3d%2b0.293505783">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-03-08%2018%3a08%3a42.993956%20%2b0800%20CST%20m%3d%2b0.227213437">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-05-30%2021%3a26%3a21.686304%20%2b0800%20CST%20m%3d%2b0.293505783">
     
 
 
@@ -255,11 +261,11 @@ yum remove vsftpd  卸载后需要注意以下问题：
 <p>卸载后需要注意以下问题：</p>
 
 <ul>
-<li>查看线程是否存在</li>
-</ul>
+<li><p>查看线程是否存在</p>
 
 <pre><code>ps auxf | grep vsftpd
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>如果线程存在则直接 kill -9 .</p>
 
@@ -289,18 +295,16 @@ local_root=/ftpserver/flowdata
 <h2 id="0-x02-创建本地用户">0x02 创建本地用户</h2>
 
 <ol>
-<li>创建ftp用户</li>
-</ol>
+<li><p>创建ftp用户</p>
 
 <pre><code>useradd jack
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li>设置用户密码</li>
-</ol>
+<li><p>设置用户密码</p>
 
 <pre><code>echo &quot;jack_pass_word&quot; | passwd jack --stdin
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>3.限制该用户仅能通过 FTP 访问</p>
 

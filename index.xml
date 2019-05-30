@@ -86,7 +86,7 @@
 0x07 github 推荐指数：🌟🌟🌟🌟🌟
 在被微软收购后，微软做的最足的改变就是私有库居然免费了，对于我们这种草根来说，是最好不过的，可以 当云盘使用了，比百度云盘不知好多少了。
 0x08 RocketVPN 推荐指数：🌟🌟🌟🌟🌟
-19元一个月的订购，可以访问google，对于经常查资料的人来说，非常棒的VPN，可以在中国区再也不可以下载了。
+19元一个月的订购，可以访问google，对于经常查资料的人来说，非常棒的VPN，可惜在中国区再也不可以下载了。
 0x09 WPS 推荐指数：🌟🌟🌟🌟🌟
 替代Office的最好软件，不能支持正版Office的情况下，只能用这个了，但是用Mac自带的Pages有诸多不便。这个 时候为金山点赞吧，因为国产的软件的确不容易！
 0x10 Zoom 推荐指数：🌟🌟🌟🌟🌟</description>
@@ -171,10 +171,17 @@ Failed to start workspace with Server &amp;lsquo;wsagent/http&amp;rsquo; in mach
       <pubDate>Thu, 13 Dec 2018 14:28:45 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go-tutorial/</guid>
-      <description>Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
+      <description> Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
  0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
 Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install   如何编写go语言  http://localhost:6060/doc/code.html   如何高效的编写go语言  http://localhost:6060/doc/code.html   熟悉go语言的api  http://localhost:6060/pkg/  0x03 深入  已beego框架学习如何编写web项目  https://beego.me   关注go语言的Top项目  https://github.</description>
+0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装
+http://localhost:6060/doc/install  如何编写go语言
+http://localhost:6060/doc/code.html  如何高效的编写go语言
+http://localhost:6060/doc/code.html  熟悉go语言的api
+http://localhost:6060/pkg/   0x03 深入  已beego框架学习如何编写web项目
+https://beego.me  关注go语言的Top项目
+https://github.com/topics/go  学习go语言框架提供的第三方包
+https://github.com/avelino/awesome-go   </description>
     </item>
     
     <item>
@@ -424,11 +431,14 @@ func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd  如果安装了，那么就直接卸载了。
 yum remove vsftpd  卸载后需要注意以下问题：
- 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 查看线程是否存在
+ps auxf | grep vsftpd   如果线程存在则直接 kill -9 .
  如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问</description>
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户
+useradd jack  设置用户密码
+echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin   3.限制该用户仅能通过 FTP 访问</description>
     </item>
     
     <item>
@@ -460,7 +470,9 @@ yum remove vsftpd  卸载后需要注意以下问题：
  &amp;amp;保证在关闭shell窗口后能继续运行
  在windows下将.sh改为.bat,“/”改为“\”
   开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;amp;  ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。
-创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &amp;ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server.</description>
+创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &amp;ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning   启动kafka时需要配置的信息  在server.</description>
     </item>
     
     <item>

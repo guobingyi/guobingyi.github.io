@@ -184,11 +184,14 @@ brew cask uninstall name  0x06 总结常用命令 1. 安装源码 brew install w
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd  如果安装了，那么就直接卸载了。
 yum remove vsftpd  卸载后需要注意以下问题：
- 查看线程是否存在  ps auxf | grep vsftpd  如果线程存在则直接 kill -9 .
+ 查看线程是否存在
+ps auxf | grep vsftpd   如果线程存在则直接 kill -9 .
  如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户  useradd jack   设置用户密码  echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin  3.限制该用户仅能通过 FTP 访问</description>
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户
+useradd jack  设置用户密码
+echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin   3.限制该用户仅能通过 FTP 访问</description>
     </item>
     
     <item>
@@ -220,7 +223,9 @@ yum remove vsftpd  卸载后需要注意以下问题：
  &amp;amp;保证在关闭shell窗口后能继续运行
  在windows下将.sh改为.bat,“/”改为“\”
   开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;amp;  ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。
-创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &amp;ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning  启动kafka时需要配置的信息  在server.</description>
+创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &amp;ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning   启动kafka时需要配置的信息  在server.</description>
     </item>
     
     <item>
