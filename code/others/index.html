@@ -49,11 +49,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-05-30%2021%3a26%3a21.682214%20%2b0800%20CST%20m%3d%2b0.289415183">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-05-30%2021%3a26%3a21.682214%20%2b0800%20CST%20m%3d%2b0.289415183">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-05-30%2021%3a26%3a21.682214%20%2b0800%20CST%20m%3d%2b0.289415183">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-06-07%2011%3a23%3a13.329957%20%2b0800%20CST%20m%3d%2b0.235266107">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-06-07%2011%3a23%3a13.329957%20%2b0800%20CST%20m%3d%2b0.235266107">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-06-07%2011%3a23%3a13.329957%20%2b0800%20CST%20m%3d%2b0.235266107">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-05-30%2021%3a26%3a21.682214%20%2b0800%20CST%20m%3d%2b0.289415183">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-06-07%2011%3a23%3a13.329957%20%2b0800%20CST%20m%3d%2b0.235266107">
     
 
 
@@ -434,6 +434,18 @@ sudo chmod go-w /Users/guoby/OneDrive/mywork/code/gocode/bin
 
 <pre><code>unzip -P password demo.zip
 </code></pre>
+
+<h3 id="0x11-mac-vscode-更新失败解决方法">0x11 Mac VSCode 更新失败解决方法</h3>
+
+<pre><code>Could not create temporary directory: 权限被拒绝
+</code></pre>
+
+<p>解决办法，在命令行执行以下命令：</p>
+
+<pre><code>sudo chown $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt/  
+</code></pre>
+
+<p>重启之后，即可进行更新。</p>
 
             </div>
         </div>
