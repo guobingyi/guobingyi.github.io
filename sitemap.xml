@@ -3,6 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/</loc>
+    <lastmod>2019-07-18T10:06:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/movie/</loc>
+    <lastmod>2019-07-18T10:06:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/movie/thebalkline/</loc>
+    <lastmod>2019-07-18T10:06:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/blog/</loc>
     <lastmod>2019-03-06T10:29:40+08:00</lastmod>
     <priority>0</priority>
@@ -10,11 +26,6 @@
   
   <url>
     <loc>https://guobingyi.github.io/blog/gitbook/</loc>
-    <lastmod>2019-03-06T10:29:40+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guobingyi.github.io/</loc>
     <lastmod>2019-03-06T10:29:40+08:00</lastmod>
   </url>
   
