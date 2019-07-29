@@ -21,8 +21,8 @@ bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &quot
 If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &quot;python@2&quot; appears in that list, and Python 2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/code/others/" />
-<meta property="article:published_time" content="2018-08-09T11:39:34&#43;08:00"/>
-<meta property="article:modified_time" content="2018-08-09T11:39:34&#43;08:00"/>
+<meta property="article:published_time" content="2018-08-09T11:39:34+08:00" />
+<meta property="article:modified_time" content="2018-08-09T11:39:34+08:00" />
 
 
 <title>
@@ -49,11 +49,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-07-18%2010%3a53%3a14.145052%20%2b0800%20CST%20m%3d%2b0.254224901">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-07-18%2010%3a53%3a14.145052%20%2b0800%20CST%20m%3d%2b0.254224901">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-07-18%2010%3a53%3a14.145052%20%2b0800%20CST%20m%3d%2b0.254224901">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-07-29%2017%3a08%3a57.28576%20%2b0800%20CST%20m%3d%2b0.446364072">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-07-29%2017%3a08%3a57.28576%20%2b0800%20CST%20m%3d%2b0.446364072">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-07-29%2017%3a08%3a57.28576%20%2b0800%20CST%20m%3d%2b0.446364072">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-07-18%2010%3a53%3a14.145052%20%2b0800%20CST%20m%3d%2b0.254224901">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-07-29%2017%3a08%3a57.28576%20%2b0800%20CST%20m%3d%2b0.446364072">
     
 
 
@@ -452,6 +452,15 @@ sudo chmod go-w /Users/guoby/OneDrive/mywork/code/gocode/bin
 </code></pre>
 
 <p>重启之后，即可进行更新。</p>
+
+<h3 id="0x12-mac-app提示已损坏-打不开-您应将它移到废纸篓">0x12 Mac App提示已损坏，打不开。您应将它移到废纸篓</h3>
+
+<pre><code>sudo spctl --master-disable
+</code></pre>
+
+<p>打开电脑的“系统偏好设置”&ndash;“安全与隐私”。在“通用”一览中，会看到“允许从以下位置下载的应用：”设置。这个时候应该已经有了三个可选项：“App Store、App和被认可的开发者、任何来源”。</p>
+
+<p>选中“任何来源”，然后退出，重新打开之前安装的软件App就可以使用了。如果依旧不可以使用，重新安装一次就好。</p>
 
             </div>
         </div>
