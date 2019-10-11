@@ -6,10 +6,42 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 06 Sep 2019 17:33:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 16:40:13 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac Catalina</title>
+      <link>https://guobingyi.github.io/blog/mac-catalina/</link>
+      <pubDate>Fri, 11 Oct 2019 16:40:13 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/mac-catalina/</guid>
+      <description>苹果操作系统 Catalina  折腾，喜欢折腾。
+ 苹果推送了新的操作系统Catalina，乍一看，我想到的Tomcat的日志文件Catalina.log。当然，其实不是，就是苹果的macOS Catalina。我喜欢苹果电脑，自从使用上了就没有想要换其他笔记本的想法。为什么呢？因为原来没有选择，就只能使用Windows操作系统，而且自己的工作必须也得在Windows下面才能完成。后来，变更了工作，可以使用苹果笔记本了，才发现其实还是有选择的。
+苹果笔记本使用下来的最大感受就是速度和反应速度比较快，而且没有让人烦恼的自动默默更新。当然，不得不说的是视网膜屏幕，真的写一天代码都不会累。但是，由于使用频率过高，也导致了苹果电脑出现了一些问题。我一直都非常信赖她，但是也是她教会了我要学会经常备份，没有什么是十全十美的，都会有问题。
+新版本推送后，我非常兴奋的进行了升级，可是给我的答案却是失败。
+macOS 未能安装在您的电脑上 储存系统验证或修复失败。(-69716) 退出安装器以重新确定电脑，然后再次尝试。  按照原来的情况，我会在网上看一下有没有和我遇到同样情况的兄台，然后看看人家的解决方案，这次得出的结论是没有。由于刚刚长假过后，所以不想太累，想等等在弄吧。最搞笑的是，还有个null的标示。
+思前想后，我真不想弄了，想苹果过段时间应该会有相应的解决办法，可惜，我就是等不了呀。我这个有强迫症的人，怎么能有新的东西不能用呢？我想到的是空间问题，所以删除了一些不常用的软件。可是到官网一看，我去，空间只需要18.5GB。而我释放了40GB的空间，可惜还是同样的错误。
+然后，我仔细看了一下错误，“验证失败”，储存系统需要验证的地方是我启动了文件保险箱吗？我决定停用磁盘的文件保险箱。结果，系统无法启动了&amp;hellip;&amp;hellip;我心里无数匹马呀！还好，昨天备份了系统，所以就恢复吧，一看评估时间4小时，心里又出现了马。在无奈的等待中，系统恢复了。决定抱着试试的态度，进行了升级，结果成功了。原本想等着新版本来解决问题的，也有想过人工客服问一下情况，可惜这些都不需要了，成功了。
+说明了什么，我也不想得瑟，只能说明苹果的重心还是在iphone上，为什么？因为我苹果手机升级就没有遇到这些糟心的事情，笔记本上却真实的遇到了。
+看了一下catalina的功能，才发现，原来把磁盘分成2个区了，一个系统，一个数据。我原来文件保险箱是需要解锁的，所以后台更新没有弹出密码框，就报错了。
+ 升级需谨慎，折腾需备份，不然，不就是多了个新空白系统嘛!
+ 对于软件，真的没有说明银弹，自己是知道的，可惜还是那么的相信你。</description>
+    </item>
+    
+    <item>
+      <title>改变我的思路</title>
+      <link>https://guobingyi.github.io/blog/%E6%94%B9%E5%8F%98%E6%88%91%E7%9A%84%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Fri, 13 Sep 2019 22:46:44 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/%E6%94%B9%E5%8F%98%E6%88%91%E7%9A%84%E6%80%9D%E8%B7%AF/</guid>
+      <description>改变我的思路  莫愁前路无知己，天下谁人不识君。
+ 最近又回到了刚刚开始的时候，原因是和老婆不在内耗了。我们终于和平相处了。对于内战的这段时间，我们都没有好好想想自己该做点什么，或者说将来要做点什么。
+老婆推荐我学习摄影，和小朋友的摄影，儿童摄影。
+其实，真正的问题在于我们之间其实也疏远了许多。
+Source Code Pro, Monaco, &amp;lsquo;Courier New&amp;rsquo;, monospace Cascadia Code, Monaco, &amp;lsquo;Courier New&amp;rsquo;, monospace</description>
+    </item>
     
     <item>
       <title>Hospital</title>
