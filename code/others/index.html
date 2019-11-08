@@ -49,11 +49,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-10-22%2016%3a35%3a49.83236%20%2b0800%20CST%20m%3d%2b0.280688417">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-10-22%2016%3a35%3a49.83236%20%2b0800%20CST%20m%3d%2b0.280688417">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-10-22%2016%3a35%3a49.83236%20%2b0800%20CST%20m%3d%2b0.280688417">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-11-08%2011%3a06%3a19.12592%20%2b0800%20CST%20m%3d%2b0.256129784">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-11-08%2011%3a06%3a19.12592%20%2b0800%20CST%20m%3d%2b0.256129784">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-11-08%2011%3a06%3a19.12592%20%2b0800%20CST%20m%3d%2b0.256129784">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-10-22%2016%3a35%3a49.83236%20%2b0800%20CST%20m%3d%2b0.280688417">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-11-08%2011%3a06%3a19.12592%20%2b0800%20CST%20m%3d%2b0.256129784">
     
 
 
@@ -471,6 +471,71 @@ sudo chmod go-w /Users/guoby/OneDrive/mywork/code/gocode/bin
 <p>打开电脑的“系统偏好设置”&ndash;“安全与隐私”。在“通用”一览中，会看到“允许从以下位置下载的应用：”设置。这个时候应该已经有了三个可选项：“App Store、App和被认可的开发者、任何来源”。</p>
 
 <p>选中“任何来源”，然后退出，重新打开之前安装的软件App就可以使用了。如果依旧不可以使用，重新安装一次就好。</p>
+
+<h3 id="0x13-mac-移动硬盘文件灰色-项目-xxx-已被os-x使用-不能打开">0x13 Mac 移动硬盘文件灰色，项目“XXX”已被OS X使用，不能打开.</h3>
+
+<p>进入到文件目录，执行以下命令：</p>
+
+<pre><code>ls -l
+</code></pre>
+
+<p>查看文件权限信息，如果带@为被占用的文件，这个是macOS文件系统的附加属性(extended attributes)。</p>
+
+<p>使用以下命令对文件的附加属性进行清除。</p>
+
+<pre><code>xattr -c xxx.xxx
+</code></pre>
+
+<h3 id="0x14-对比文件是否是同一个文件的方法">0x14 对比文件是否是同一个文件的方法</h3>
+
+<ol>
+<li><p>使用md5sum命令对比输出结果</p>
+
+<pre><code>md5sum 2_bak.jpeg
+</code></pre></li>
+
+<li><p>使用cmp命令对比输出结果</p>
+
+<pre><code>cmp 20191028_102011_C0F17DF73F27.jpeg 2_bak.jpeg
+</code></pre></li>
+</ol>
+
+<h3 id="0x15-exiftool查看图片信息">0x15 exiftool查看图片信息</h3>
+
+<ol>
+<li><p>按照exiftool</p>
+
+<pre><code>brew install exiftool
+</code></pre></li>
+
+<li><p>使用exiftool</p>
+
+<pre><code>exiftool IMG_2397.JPG
+</code></pre></li>
+
+<li><p>使用go读取到map里进行数据使用</p>
+
+<pre><code>fileName := &quot;/Volumes/Transcend/photo/good/IMG_2423.JPG&quot;
+cmd := exec.Command(&quot;exiftool&quot;, fileName)
+	buf, e := cmd.Output() // 错误处理略
+	if e != nil {
+		fmt.Print(&quot;read photo  failed&quot;)
+		return
+	}
+	exifMap := make(map[string]string)
+
+	exifInfo := strings.Split(string(buf), &quot;\n&quot;)
+	for i := 0; i &lt; len(exifInfo)-1; i++ {
+		exifGroup := strings.Split(exifInfo[i], &quot;:&quot;)
+		exifMap[strings.Trim(exifGroup[0], &quot; &quot;)] = strings.Trim(exifGroup[1], &quot; &quot;)
+	}
+
+	for k, v := range exifMap {
+		fmt.Printf(&quot;k:[%v].v:[%v]\n&quot;, k, v) // 输出k,v值
+	}
+
+</code></pre></li>
+</ol>
 
             </div>
         </div>
