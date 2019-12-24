@@ -6,10 +6,35 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 13 Nov 2019 11:22:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Dec 2019 18:33:37 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac电池寿命</title>
+      <link>https://guobingyi.github.io/blog/mac%E7%94%B5%E6%B1%A0%E5%AF%BF%E5%91%BD/</link>
+      <pubDate>Tue, 24 Dec 2019 18:33:37 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/mac%E7%94%B5%E6%B1%A0%E5%AF%BF%E5%91%BD/</guid>
+      <description>Mac电池寿命  我以为你可以继续，其实你已经努力了！
+ 从用笔记本开始，一直都没有用到过需要修理电池，最近的一次是x230的笔记本显示电池需要维修，我没有理她，我觉得不行就当一个台式机用着了，大不了直接用适配器工作好了，可是没有多久我的苹果笔记本也报这样的提示的了。我郁闷了。毕竟mac是主力机，很多工作都需要在上面做，而且我觉得我使用电脑的频率明显减少了，但是为什么还会出现了这个问题？我理解了一下苹果提供的电池方案：
+[电池-充分延长电池使用时间和寿命](https://www.apple.com.cn/cn/batteries/maximizing-performance/) 这样的解决方案并没有解决我的问题，而我理解的是最近成天24小时的插着电池，没有进行了深充深放的操作，我一直错误的任务锂电池或者苹果的电池是没有这样的忌讳的，可是从实际的情况来说，还是需要进行必要的深充深放，并且不要长时间的插电。
+不论怎么说？如果这就是我使用的电池状态，那么意味着每隔3～4年的时间，我得给自己的笔记本换电池，这样成本就增多了。不希望这样&amp;hellip;&amp;hellip;
+今天，开始重新对mac笔记本的电池有了新的认识，也希望重新按照健康的标准来使用，我希望这个就只是一个假象，或者说，我的电池开始维修报警后，我还能用多久！
+也有其他说法是天气问题，但是比起天气问题来说，我更相信的说法是苹果的系统升级后，变着法来升级硬件呀！</description>
+    </item>
+    
+    <item>
+      <title>我与游戏</title>
+      <link>https://guobingyi.github.io/blog/%E6%88%91%E4%B8%8E%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Sat, 21 Dec 2019 10:46:55 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/%E6%88%91%E4%B8%8E%E6%B8%B8%E6%88%8F/</guid>
+      <description>我与游戏  玩物丧志，是很多人说的一句话！
+ 是的，我喜欢玩游戏。但是不是厉害的那种，属于自己沉浸在游戏中的感觉，而更多的是在游戏上体会原来缺失的感觉。
+最近入手了任天堂的Switch游戏机，从体验上来说和电脑上玩差不多，或许也是从换了mac笔记本后，没有在笔记本上玩游戏了，这个体验只能是一般。毕竟，原来早就想拥有一台掌机，现在愿望实现了。</description>
+    </item>
     
     <item>
       <title>运维</title>
@@ -18,14 +43,14 @@
       
       <guid>https://guobingyi.github.io/blog/%E8%BF%90%E7%BB%B4/</guid>
       <description>关于运维的一点意见  2013年写的，后面翻出来感觉那个时候的自己真棒！
-  对于即将离开项目组,对我这段时间的运维工作做一个总结. 首先来到项目组，需要把项目中的一些基础情况了解一下。   谁负责那一块的开发，联系电话。能问人的时候，一定要问，这样比你自己看代码来的要快一些，为了快速反馈客户这种办法是最好的，当然你也可以下来自己在摸索一下，以后遇到这样的问题就OK了。
- 了解客户的基础信息，如这个人在这个部门中是什么样角色，负责系统的哪一部份功能，电话号码。这样有什么问题，可以及时和客户联系。
- 态度。绝对不能和客户说这不关你的事，不关你的事，那么关谁的事。记住，任何问题到你手上，首先不需要很急，慢慢将问题记录下来，找人或者自己将问题解决，这是最基本的。如果能和客户建立起良好的关系，那么客户也会理解你的工作，有些情况下还会为你的领导讲好话。这些都是和客户交换得来的。如果你得罪了客户，那么客户也不会给你面子，什么你解决不了，那么客户就会叫经理换人。在说说这一点，如果你有问题，去打电话询问，一接到电话对方的态度就打动了你，即使他没有能立刻帮你解决问题，我相信你也是可以理解的，如果一接到电话就说这不关你的事，即使问题解决，也会对你留下很不好的影响。
- 业务，还是业务。到了项目组，不要被新奇的架构或者组件所吸引，慢慢静下心来将业务搞懂。这样当客户在那个业务环节出现问题的时候，才不会什么都不知道。所以，熟悉业务很重要，需求说明书，系统帮助手册，和客户沟通，自己从头到尾的使用一遍系统，这些都是很好熟悉业务的方法。
- 在和上一个运维的同事移交的时候尽量多的问一下，目前系统那些地方容易出现问题，是怎么解决的，多问，是没有坏处的。
-   其次，是运维的过程中需要注意的地方。   遇到一个解决的问题，首先要把它记录下来。记录的内容大概有：问题是什么？是怎么解决的？解决这个问题使用了多少时间。人们常说，不要被相同的石头砸到脚。但是，我们很多时间在运维的时候就会出现这样的问题。为什么呢？还是那句老话，好记心不如烂笔头。还有一点好处就是，当移交工作的时候就可以将这些东西一并给下一位同事，送人玫瑰手留余香。
- 有事没事多去系统上看看。为什么呢？原因是当系统出现了问题，你才知道吗？做好每天的履行检查，及时发现问题解决问题。那么客户对你的运维工作将会很满意。
- 又来了业务。业务在系统中是会变的，这个地球人都知道。客户在使用系统的过程中，会存在一些业务的变更，这个时候，如果你连原来的业务都不熟悉将会很痛苦，如果你比客户还熟悉业务变更的趋势，那么兄弟你有业务专家的天赋啊。所以既然来到了这个项目的运维，为什么我们不好好学习一下业务呢？为了以后在这个领域成为业务专家而努力吧！
+  对于即将离开项目组,对我这段时间的运维工作做一个总结. 首先来到项目组，需要把项目中的一些基础情况了解一下。    谁负责那一块的开发，联系电话。能问人的时候，一定要问，这样比你自己看代码来的要快一些，为了快速反馈客户这种办法是最好的，当然你也可以下来自己在摸索一下，以后遇到这样的问题就OK了。
+  了解客户的基础信息，如这个人在这个部门中是什么样角色，负责系统的哪一部份功能，电话号码。这样有什么问题，可以及时和客户联系。
+  态度。绝对不能和客户说这不关你的事，不关你的事，那么关谁的事。记住，任何问题到你手上，首先不需要很急，慢慢将问题记录下来，找人或者自己将问题解决，这是最基本的。如果能和客户建立起良好的关系，那么客户也会理解你的工作，有些情况下还会为你的领导讲好话。这些都是和客户交换得来的。如果你得罪了客户，那么客户也不会给你面子，什么你解决不了，那么客户就会叫经理换人。在说说这一点，如果你有问题，去打电话询问，一接到电话对方的态度就打动了你，即使他没有能立刻帮你解决问题，我相信你也是可以理解的，如果一接到电话就说这不关你的事，即使问题解决，也会对你留下很不好的影响。
+  业务，还是业务。到了项目组，不要被新奇的架构或者组件所吸引，慢慢静下心来将业务搞懂。这样当客户在那个业务环节出现问题的时候，才不会什么都不知道。所以，熟悉业务很重要，需求说明书，系统帮助手册，和客户沟通，自己从头到尾的使用一遍系统，这些都是很好熟悉业务的方法。
+  在和上一个运维的同事移交的时候尽量多的问一下，目前系统那些地方容易出现问题，是怎么解决的，多问，是没有坏处的。
+   其次，是运维的过程中需要注意的地方。    遇到一个解决的问题，首先要把它记录下来。记录的内容大概有：问题是什么？是怎么解决的？解决这个问题使用了多少时间。人们常说，不要被相同的石头砸到脚。但是，我们很多时间在运维的时候就会出现这样的问题。为什么呢？还是那句老话，好记心不如烂笔头。还有一点好处就是，当移交工作的时候就可以将这些东西一并给下一位同事，送人玫瑰手留余香。
+  有事没事多去系统上看看。为什么呢？原因是当系统出现了问题，你才知道吗？做好每天的履行检查，及时发现问题解决问题。那么客户对你的运维工作将会很满意。
+  又来了业务。业务在系统中是会变的，这个地球人都知道。客户在使用系统的过程中，会存在一些业务的变更，这个时候，如果你连原来的业务都不熟悉将会很痛苦，如果你比客户还熟悉业务变更的趋势，那么兄弟你有业务专家的天赋啊。所以既然来到了这个项目的运维，为什么我们不好好学习一下业务呢？为了以后在这个领域成为业务专家而努力吧！
   最后，就做一个总结吧。我从工作到现在一直想做一个优秀的程序员而努力，但是工作却常常和自己开玩笑。每次都是从运维开始的，慢慢才有了写代码的工作。我想说这个的目的是，并不是所有的东西都如你所愿，但是只要你在工作上都认真努力，那么不管是运维还是开发，你都能锻炼自己的一身本领。</description>
     </item>
     
@@ -35,12 +60,12 @@
       <pubDate>Mon, 21 Oct 2019 16:41:44 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/blog/%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E4%B9%8B%E8%B7%AF/</guid>
-      <description> 我的摄影之路  路漫漫其修远兮，吾将上下而求索。
+      <description>我的摄影之路  路漫漫其修远兮，吾将上下而求索。
  没有想到我会走到这条道路上来，还是因为没有了写代码的热情。那天，和老婆说起来，说我原来喜欢的是摄影，因为摄影给我感觉是一种热爱生活的表现。我的编程是因为要养家糊口，才欺骗自己说是喜欢的。
 摄影，对于我来说，也是一个不断摸索的过程，说白了就是一个学习的过程。原来我一直鄙视会photoshop，会美工的，会修改色彩的，我觉得那个就是会用一下软件的人，没有像编程一样改变世界的能力，他们就停留在使用的层面上，鄙视。现在，我才发现，任何一门技术都有其存在的价值，那就是让生活变的更加美好。
 回想起那时的我，就是一心以编程为主，眼里看不到其他的东西。为什么会这样？现在的我时常问自己，我想最主要的原因是由于编程的能力可以让自己获取一份稳定的收入。而其他的，我却没有去关注，因为编程的能力提升，耗费了我的大量时间和精力，我没有时间和精力去关注其他事情了。
 吐槽了一下自己的历程，现在要重新学习一下摄影，使用到的软件是adobe公司的两个软件。
-Adobe Photoshop CC 2019 的确很好用，改变了许多我对图像处理的观点，也培养自己对色彩的敏感。  Adobe Lightroom Classic 借用金叔说的话就是：“单反无后期，不如用手机！” 为什么这样说，现在我也能体会到一些了，比如我发现我单反照出来的，没有华为手机拍摄出来的照片好看，设置背甩几条街。当是，当我用软件进行后期处理一下，我才发现，我又可以甩华为手机拍摄出来的几条街了。毕竟，构好图，拍摄清晰，后期就好处理了。 这里说一些苹果11的手机，真的，从你开始拍摄的时候起，你的单反还真干不过她，因为她的三个镜头很厉害。  两个软件都是用来学习的，没有用做商业用途，即还没有产生收入。说这个话的原因是，我用的盗版的软件，而且我原来还非常鄙视使用盗版软件的，打脸了。后来，我想了一下，为什么我会有这样的转变，是由于，我编程的时候可以使用免费的IDE，可以使用开源的项目，可以使用开源的编程语言，所以在付费层面上避免了一些开支，而且能很好的完成任务。所以，我说我用正版的软件。而现在，当我使用这些付费软件的时候，还没有找到免费的替代品，并且还没有能创造出收入，所以，你懂的。(原来我还是y意向要介绍一下怎么下载，怎么安装，怎么保护自己的数据，最后我觉得，使用盗版本身就是不好的，为什么还要宣传呢？)
+Adobe Photoshop CC 2019 的确很好用，改变了许多我对图像处理的观点，也培养自己对色彩的敏感。 Adobe Lightroom Classic 借用金叔说的话就是：“单反无后期，不如用手机！” 为什么这样说，现在我也能体会到一些了，比如我发现我单反照出来的，没有华为手机拍摄出来的照片好看，设置背甩几条街。当是，当我用软件进行后期处理一下，我才发现，我又可以甩华为手机拍摄出来的几条街了。毕竟，构好图，拍摄清晰，后期就好处理了。 这里说一些苹果11的手机，真的，从你开始拍摄的时候起，你的单反还真干不过她，因为她的三个镜头很厉害。 两个软件都是用来学习的，没有用做商业用途，即还没有产生收入。说这个话的原因是，我用的盗版的软件，而且我原来还非常鄙视使用盗版软件的，打脸了。后来，我想了一下，为什么我会有这样的转变，是由于，我编程的时候可以使用免费的IDE，可以使用开源的项目，可以使用开源的编程语言，所以在付费层面上避免了一些开支，而且能很好的完成任务。所以，我说我用正版的软件。而现在，当我使用这些付费软件的时候，还没有找到免费的替代品，并且还没有能创造出收入，所以，你懂的。(原来我还是y意向要介绍一下怎么下载，怎么安装，怎么保护自己的数据，最后我觉得，使用盗版本身就是不好的，为什么还要宣传呢？)
 不知道是什么时候，对于盗版的软件，我都非常害怕，害怕有有后面，害怕这些好的软件由于盗版的原因而消失，所以我就不提供相应的下载地址了，毕竟，做为一个想要找到下载软件的人，百度，google，搜索一下，就会得到你想要的东西。我这里说的是，我都把现在的软件禁用了网络，避免一些不必要的麻烦。
 现在，开始学习如何使用他们，把一些想法付诸一些实践。当然，从以往学习的经验来说，我都是喜欢看官网的文档，虽然，很多时候没有中文的。
 这里说一点题外话，也督促自己的好好学习，不要在去想器材了。刚刚学习的时候，我觉得应该买一个中端的单反学习一下就可以了，结果不知道为什么买了个Canon EOS 80D,一个APS画幅的，没有是全画幅的感觉到郁闷了好久，一直想换称无敌狮(5d4)，还有想佳能的大三元，红圈镜头。通过学习甚至还想买尼康的D850，说白了就是两个事情困扰我。
@@ -49,6 +74,25 @@ Adobe Photoshop CC 2019 的确很好用，改变了许多我对图像处理的�
 最后，我不在纠结这些了，因为所有的这些都是建立在技术上面的，如果没有技术，那么再好的器材，再好的镜头，也不过是一个装B的物品而已，并不能让你产生出优质的照片，ok,bb到此结束。期待下一个感悟后的我！
  最好的镜头是眼睛，最好的相机是大脑。——某人说。
  </description>
+    </item>
+    
+    <item>
+      <title>我的女孩</title>
+      <link>https://guobingyi.github.io/blog/%E6%88%91%E7%9A%84%E5%A5%B3%E5%AD%A9/</link>
+      <pubDate>Sat, 12 Oct 2019 21:10:21 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/%E6%88%91%E7%9A%84%E5%A5%B3%E5%AD%A9/</guid>
+      <description>我的女孩  如果工作忙，那么就来带娃吧。
+ 没有想到我会一个人带娃一段时间。
+更加没有想到的是，她为了怕被我揍，既然把作业本斯了，还撒谎说和同桌闹撕毁了，在教室的垃圾篓里。我真没有想到的是做为一个爸爸，我是这样的。我应该反省的是我自己，我自己没有做好。
+工作的时候，大多数时间都是老婆在带孩子。我整整的和她相处的时间并不长，她的一些小毛病我都不知道。所以在这段时间里，我和她相处下来，知道了她的一些情况。
+我知道每个孩子都是有玩的天性，我们不应该去磨灭她，我也知道我在成长的过程中，也发生过和她一样的事情，所以我理解她。她今天哭的非常伤心，说不应该说谎的。看着她流泪，我真的很伤心，她甚至还害怕我打她。我才发现，我在孩子心里是一个什么样的爸爸，是一个做错了就要被揍的爸爸。
+我梳理一下。
+老婆要去青岛参加会议，外公外婆参加旅行社去旅游，爸爸妈妈在家照顾三爹，我照顾女儿。所以，按照女儿的话就是我们的二人时光。
+虽然在此之前，老婆曾主动的让我去帮女儿看作业，照顾女儿的一切，让出行前的我不要那么困难，但是我的内心总觉得没有什么大不了的，我程序都能写，就不能带娃了？牛逼就这样吹出来了，结果我也为此付出了相应的代价。
+ 作业检查  二年级的小学生的作业相对上学期少了许多，但是对于我来说，却发现有很大的问题。在孩子她妈没有告诉我之前，我甚至以为就是一般的签名就可以了，结果是，你要帮孩子检查作业，看孩子的书写是否认真，明天带的书和课本是否带齐，红领巾，桌布，水杯，早点，加餐，美术工具，等等，是否已经准备好了。
+语文的预习大人要查百度，进行组词，看是否是多音字，是否是成语，当然就是解释，要解释给孩子词语的意思。听写，要读准音，检查听写的字是否写对，写整齐，拼音是否正确。背诵，检查孩子是否能背诵老师要求的内容。当然，最最最重要的是，孩子在做作业的工程中是否认真，是否配合你完成老师安排的作业。
+数学的检查相对要轻松一些，但是你得认真检查，不然就会出现错误的地方，而孩子也会因为这样</description>
     </item>
     
     <item>
@@ -61,7 +105,7 @@ Adobe Photoshop CC 2019 的确很好用，改变了许多我对图像处理的�
  苹果推送了新的操作系统Catalina，乍一看，我想到的Tomcat的日志文件Catalina.log。当然，其实不是，就是苹果的macOS Catalina。我喜欢苹果电脑，自从使用上了就没有想要换其他笔记本的想法。为什么呢？因为原来没有选择，就只能使用Windows操作系统，而且自己的工作必须也得在Windows下面才能完成。后来，变更了工作，可以使用苹果笔记本了，才发现其实还是有选择的。
 苹果笔记本使用下来的最大感受就是速度和反应速度比较快，而且没有让人烦恼的自动默默更新。当然，不得不说的是视网膜屏幕，真的写一天代码都不会累。但是，由于使用频率过高，也导致了苹果电脑出现了一些问题。我一直都非常信赖她，但是也是她教会了我要学会经常备份，没有什么是十全十美的，都会有问题。
 新版本推送后，我非常兴奋的进行了升级，可是给我的答案却是失败。
-macOS 未能安装在您的电脑上 储存系统验证或修复失败。(-69716) 退出安装器以重新确定电脑，然后再次尝试。  按照原来的情况，我会在网上看一下有没有和我遇到同样情况的兄台，然后看看人家的解决方案，这次得出的结论是没有。由于刚刚长假过后，所以不想太累，想等等在弄吧。最搞笑的是，还有个null的标示。
+macOS 未能安装在您的电脑上 储存系统验证或修复失败。(-69716) 退出安装器以重新确定电脑，然后再次尝试。 按照原来的情况，我会在网上看一下有没有和我遇到同样情况的兄台，然后看看人家的解决方案，这次得出的结论是没有。由于刚刚长假过后，所以不想太累，想等等在弄吧。最搞笑的是，还有个null的标示。
 思前想后，我真不想弄了，想苹果过段时间应该会有相应的解决办法，可惜，我就是等不了呀。我这个有强迫症的人，怎么能有新的东西不能用呢？我想到的是空间问题，所以删除了一些不常用的软件。可是到官网一看，我去，空间只需要18.5GB。而我释放了40GB的空间，可惜还是同样的错误。
 然后，我仔细看了一下错误，“验证失败”，储存系统需要验证的地方是我启动了文件保险箱吗？我决定停用磁盘的文件保险箱。结果，系统无法启动了&amp;hellip;&amp;hellip;我心里无数匹马呀！还好，昨天备份了系统，所以就恢复吧，一看评估时间4小时，心里又出现了马。在无奈的等待中，系统恢复了。决定抱着试试的态度，进行了升级，结果成功了。原本想等着新版本来解决问题的，也有想过人工客服问一下情况，可惜这些都不需要了，成功了。
 说明了什么，我也不想得瑟，只能说明苹果的重心还是在iphone上，为什么？因为我苹果手机升级就没有遇到这些糟心的事情，笔记本上却真实的遇到了。
@@ -115,13 +159,13 @@ Source Code Pro, Monaco, &amp;lsquo;Courier New&amp;rsquo;, monospace Cascadia C
 为什么这样说？比如说我们有三件事情要做，其中有一件事情是无目标的。那么，你会发现这件事情会拖很久，而且没有结果。
 由于最近看到的招聘信息对年龄的限制，导致向我这样37岁的人，无法找到一份自己满意的工作。所以，与其这样无聊的耗下去，不如去追一下自己的梦，做一个自由的开发者。想做自由开发者，要如何做？一直都是我思考的问题，是在外包网上承包吗？我觉得这样的几率很小，而且需要去和客户沟通需求，一想到这样的事情，和我找一份工作有什么区别呢？
  自己控制需求
-自己控制整个软件的生命周期
-无需到处叫卖
+  自己控制整个软件的生命周期
+  无需到处叫卖
  需要满足这样，或许只有苹果平台上的部分App可以做到这样。我想，就目前来说这个选择也是最好的。为了保证这个目标持续下去，所以也回到文中所说的，效率。不要让一件事去打扰另外一件事情，就必须确定一个目标。
 暂时给自己设定以下目标：
- 学习macOS和iOS平台下开发，熟悉开发流程。
- 先用一个实际项目，血糖检测App来熟悉苹果平台上面的开发。
- 发布自己的第一个App。
+  学习macOS和iOS平台下开发，熟悉开发流程。
+  先用一个实际项目，血糖检测App来熟悉苹果平台上面的开发。
+  发布自己的第一个App。
   大的目标是好确定的，现在需要将大目标进行细分。
 1.1 阅读苹果帮助文档；
 1.2 阅读相关苹果开发书籍；
@@ -165,7 +209,7 @@ Source Code Pro, Monaco, &amp;lsquo;Courier New&amp;rsquo;, monospace Cascadia C
  曾经一度痴迷王者荣耀的我，现在一下子降温了。我给自己的目标是打上王者，现在这个目标实现了。我曾经一度以为我会非常兴奋，我会各种吹嘘，我会等等。但是，结果是无尽的空虚。为什么会这样？我原来一直保持的习惯或许因此而改变，我新的追求又是什么呢？
 2017年，我学会了玩王者荣耀，一直到前几天打上王者后，我对王者荣耀的热情开始退减。虽然仅仅只是王者1星，我知道还有110星，难道我会重新设定目标吗？我想我是不会了，我知道这个就是我的最大能力吧！因为从玩这个游戏开始，我已经花了太多的时间在上面，我该把时间分到其他地方了。说说体会吧，我一直都听了官方的说法，5V5公平游戏，我想公平是对于玩家最大的安慰吧，但是，你只要玩到一个时间点，你会发现，这个都是假的，皮肤的隐藏特性和V8效果，让你感受到失望。当然，我也成为了V5玩家，为什么呢？不然就是靠场次堆。不可否认，游戏中说的意识，操作等等一些吹的东西，都不如匹配到神级队友给力。玩多了，你发现，什么能力都是假的，运气非常重要。你玩的在烂，队友都要带飞你；你如何厉害，队友都要把你带沟里。这个就是游戏的理解，说什么意识操作的，你看看有几个主播不是V8的。其实，有很多人早就看破了这个局，但是局里的人怎么都弄不明白为什么？所以，聪明的人早早离开，智慧的人都不会去玩，愚蠢的人却在局里不能自拔。突然，想起看到的一篇文章，说王者荣耀是国人的自娱游戏。把多余的时间用来自娱，而不是思考。细思恐极呀，我们这个层次的人就只能把时间花费在这上面，所以我们被人领导，被人奴役是正常的。思考的时间都去那里了？你想到了什么？为什么我还是这个状态？为什么我不能周游世界？为什么我看不起病？我的天呀，我思考的是如何练好一个英雄，如何多上几个星，结果被圈在里面。我会找借口，大家都娱乐，为什么我不能玩王者荣耀呢？我还和老婆吵过好多次，发现还是自己太年轻了。游戏中的确会给人放松的感觉，但是也何尝被对方锤得不能自理，挂机到麻木不仁，连败到怀疑人生，经常在4g的情况下来个460。这些都是游戏的感觉，特别是我觉得可以堆场次的时候，那种对决中，每次都看的清清楚楚。玩下来，发现这个游戏不需要什么技术，会平A就好了。输了不要难过，赢了不要高兴。心态就这样练起来了，对游戏也就无所谓了。原来玩游戏都会告诉自己遇到情况该怎么处理，该如何打好这一局，该如何上星？现在，想起来好搞笑呀，为什么？聪明的人思考如何让人生更上一个台阶，如何让自己的生活质量更高？我怎么很别人比？所以，有句话说：“可怜之人必有可恨之处！”。在希望别人怜悯的时候，自己是否努力去改变这一切了吗？
  是时候说再见了!
-It is time say goodbye!
+  It is time say goodbye!
  哦，对了，我的皮肤怎么办？我的那些用钱买的皮肤呀？我这个是穷人思维吗？如果，用时间和金钱对比的话，我是否为了打翻了牛奶在继续哭泣呢？哦，明白了。原来，没有经历过痛苦，说什么甜蜜，我就真不知道了？我甚至在原来和自己说：“出家的皇帝才能开破红尘！”，现在我才知道，Great Master为什么是 Creat Master。就是大师不需要经历就能悟出的道理，你个凡人怎么能够理解！
 真香，我是蜕变吗？还是凤凰涅槃，欲火重生？还是打发无聊的时间？曾经听过，最郁闷的事情是，比你优秀的人比你努力。</description>
     </item>
@@ -176,17 +220,10 @@ It is time say goodbye!
       <pubDate>Fri, 30 Aug 2019 07:03:51 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/git/</guid>
-      <description> Git 常用命令 1.初始化仓库信息
- git init   增加文件信息到库
-git add -A  提交代码
-git commit -m &amp;quot;first commit&amp;quot;  同步到远程库
-git push -u origin master  将远程库信息同步到本地
-git clone http://192.168.100.226:3000/guoby/wzry.git  撤销提交操作
-git commit --amend  重新更新git服务器信息
-git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master  删除文件
-  8.1 删除单个文件
-git rm ._ddd.file  8.2 删除多个文件
-find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39;  </description>
+      <description>Git 常用命令 1.初始化仓库信息
+ git init 增加文件信息到库   git add -A 提交代码   git commit -m &amp;quot;first commit&amp;quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
+git rm ._ddd.file 8.2 删除多个文件
+find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39; </description>
     </item>
     
     <item>
@@ -242,7 +279,7 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       <guid>https://guobingyi.github.io/blog/gitbook/</guid>
       <description>GitBook 初探  gitbook 是一个基于Node.js的工具。
  在Mac pro下安装gitbook非常简单，前提是安装了brew。
-0x00 安装node brew install node  0x01 安装gitbook npm install gitbook-cli -g  0x02 简单使用 1.创建项目名称 mkdir goodtime  2.初始化项目 cd goodtime  gitbook init  3. 编译项目 gitbook build  4. 启动项目 gitbook serve  5. 导出pdf/epub/mobi (1).安装插件 gitbook install  (2).安装电子书插件 brew cask install calibre  (3).导出pdf gitbook pdf . goodtime.pdf  (4).导出epub gitbook epub . goodtime.epub  (5).导出mobi gitbook mobi .</description>
+0x00 安装node brew install node 0x01 安装gitbook npm install gitbook-cli -g 0x02 简单使用 1.创建项目名称 mkdir goodtime 2.初始化项目 cd goodtime gitbook init 3. 编译项目 gitbook build 4. 启动项目 gitbook serve 5. 导出pdf/epub/mobi (1).安装插件 gitbook install (2).安装电子书插件 brew cask install calibre (3).导出pdf gitbook pdf . goodtime.pdf (4).导出epub gitbook epub . goodtime.epub (5).导出mobi gitbook mobi . goodtime.mobi 0x03 总结 自从使用了hugo后，对写书的兴趣就下降了。原来也用过gitbook写过点书，哈哈～～，准确的说是想学着写书。感觉非常不错，但是由于工作的原因也是断断续续的。或许，有时间应该深入学习一下，毕竟，写点东西还是蛮有意思的。</description>
     </item>
     
     <item>
@@ -259,7 +296,8 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
 从这个项目来说，所有的需要都来自于生活，然后让自己的技术服务于生活，那么这个技术就是好的。
 0x02 我的断舍离 虽然自己也认为，多学点技术没有什么坏处，所谓技多不压身。但是这个知识爆炸的时代，关注的过多，也会让自己迷失。所以，在断舍离的时候，想到的是，在自己横行发展差不多的时候，来一次纵向的发展，把关注点聚焦一下。
 当然，还有的原因就是自己的手机已经是iPhone了，没有模拟器。
-我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。</description>
+我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。
+0x03 删除 1.卸载Android Studio rm -Rf /Applications/Android\ Studio.app rm -Rf ~/Library/Preferences/AndroidStudio* rm ~/Library/Preferences/com.google.android.studio.plist rm -Rf ~/Library/Application\ Support/AndroidStudio* rm -Rf ~/Library/Logs/AndroidStudio* rm -Rf ~/Library/Caches/AndroidStudio* 2. 删除Projects rm -Rf ~/AndroidStudioProjects 3. 删除gradle rm -Rf ~/.gradle 4. 卸载Android Virtual Devices(AVDs) and *.keystore rm -Rf ~/.android 5. 删除Android SDK Tools rm -Rf ~/Library/Android* </description>
     </item>
     
     <item>
@@ -271,8 +309,9 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       <description>再见Docker  刚刚开始，却又说再见！
  0x00 缘起 第一次遇到docker是由于学习go语言的时候，发现有人居然用go写了一个应用容器引擎，而且docker的使用非常方便。就那句话，“谁用谁知道”。哈哈～～
 今天突然发现，自己被很多东西困扰了。是时候给自己来一个断舍离了，所以就拿电脑中不经常使用的app开刀了。docker在电脑中待了很长时间了，以至于打开的时候，看看目前的版本是否修复了原来Docker.qcow2文件是否只能呆在固定位置的情况，发现已经可以随意调整了，给docker点赞的同时也决定了删除她，毕竟要给自己做断舍离的同时，也想让自己聚焦一下，太发散了，累。
-0x01 docker 常用命令 1. 查看本地可用镜像 docker images  2. 查看运行的容器 docker ps  3. 查看所有的容器 docker ps -a  4. 停止容器 docker stop container  5. 启动容器 docker start container  6. 删除容器 docker rm container  7. 删除镜像 docker rmi image name  8. 从Docker容器内拷贝文件到主机上 docker cp &amp;lt;containerId&amp;gt;:/file/path/within/container /host/path/target  9. 终极命令 docker COMMAND --help  使用docker自带的命令来看命令的使用。
-例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &amp;ndash;help来显示结果，如下所示：</description>
+0x01 docker 常用命令 1. 查看本地可用镜像 docker images 2. 查看运行的容器 docker ps 3. 查看所有的容器 docker ps -a 4. 停止容器 docker stop container 5. 启动容器 docker start container 6. 删除容器 docker rm container 7. 删除镜像 docker rmi image name 8. 从Docker容器内拷贝文件到主机上 docker cp &amp;lt;containerId&amp;gt;:/file/path/within/container /host/path/target 9. 终极命令 docker COMMAND --help 使用docker自带的命令来看命令的使用。
+例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &amp;ndash;help来显示结果，如下所示：
+bingyideMacBook-Pro:~ guoby$ docker stop --help Usage:	docker stop [OPTIONS] CONTAINER [CONTAINER.</description>
     </item>
     
     <item>
@@ -336,25 +375,21 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       
       <guid>https://guobingyi.github.io/blog/mac-%E6%8C%89%E9%94%AE%E6%A0%87%E8%AF%86/</guid>
       <description>Mac按键标示  一直都以为在电脑的世界里就只有Windows。
-  ⌘ Command
- ⇧ Shift
- ⌥ Option
- ⌃ Control
- ↩︎ Return/Enter
- ⌫ Delete
- ⌦ 向前删除键（Fn+Delete）
- ↑ 上箭头
- ↓ 下箭头
- ← 左箭头
- → 右箭头
- ⇞ Page Up（Fn+↑）
- ⇟ Page Down（Fn+↓）
- Home Fn + ←
- End Fn + →
- ⇥ 右制表符（Tab键）
- ⇤ 左制表符（Shift+Tab）
- ⎋ Escape (Esc)
-  Edit  ⌃Space 基本的代码补全（补全任何类、方法、变量）</description>
+   ⌘ Command
+  ⇧ Shift
+  ⌥ Option
+  ⌃ Control
+  ↩︎ Return/Enter
+  ⌫ Delete
+  ⌦ 向前删除键（Fn+Delete）
+  ↑ 上箭头
+  ↓ 下箭头
+  ← 左箭头
+  → 右箭头
+  ⇞ Page Up（Fn+↑）
+  ⇟ Page Down（Fn+↓）
+  Home Fn + ←
+  End Fn + →</description>
     </item>
     
     <item>
@@ -366,11 +401,11 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       <description>Eclipse Che 在Mac下安装  折腾，不断的折腾。
  0x00 安装 在Mac下安装Eclipse Che，推荐使用Docker的方式，避免了很多的问题。
 参考官方文档，单用户安装。
-1. 添加IP别名 IP=$(docker run --rm --net host eclipse/che-ip:nightly) &amp;amp;&amp;amp; sudo ifconfig en0 alias $IP  注：在国外的网站上用的是lo0,而我的电脑是en0。如果不能启动使用ifconfig命令查看自己的网卡信息。
-2. 安装 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v /Users/guoby/mywork/code/che-data:/data eclipse/che start  正常启动后，显示以下内容：
-INFO: (che start): Use: http://localhost:8080 INFO: (che start): API: http://localhost:8080/swagger  在浏览器上输入：http://localhost:8080 就可以使用Eclipse Che了。
+1. 添加IP别名 IP=$(docker run --rm --net host eclipse/che-ip:nightly) &amp;amp;&amp;amp; sudo ifconfig en0 alias $IP 注：在国外的网站上用的是lo0,而我的电脑是en0。如果不能启动使用ifconfig命令查看自己的网卡信息。
+2. 安装 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v /Users/guoby/mywork/code/che-data:/data eclipse/che start 正常启动后，显示以下内容：
+INFO: (che start): Use: http://localhost:8080 INFO: (che start): API: http://localhost:8080/swagger 在浏览器上输入：http://localhost:8080 就可以使用Eclipse Che了。
 3.疑难杂症 遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。
-Don&amp;rsquo;t worry,it will be solved.
+Don&#39;t worry,it will be solved.
 常见问题：
 Failed to start workspace with Server &amp;lsquo;wsagent/http&amp;rsquo; in machine &amp;lsquo;dev-machine&amp;rsquo; not available.</description>
     </item>
@@ -385,7 +420,8 @@ Failed to start workspace with Server &amp;lsquo;wsagent/http&amp;rsquo; in mach
  0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
 2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
 3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。
-4. beego 项目结构 一般的 beego 项目的目录如下所示：</description>
+4. beego 项目结构 一般的 beego 项目的目录如下所示：
+├── conf │ └── app.</description>
     </item>
     
     <item>
@@ -394,17 +430,10 @@ Failed to start workspace with Server &amp;lsquo;wsagent/http&amp;rsquo; in mach
       <pubDate>Thu, 13 Dec 2018 14:28:45 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go-tutorial/</guid>
-      <description> Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
+      <description>Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
  0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
-Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装
-http://localhost:6060/doc/install  如何编写go语言
-http://localhost:6060/doc/code.html  如何高效的编写go语言
-http://localhost:6060/doc/code.html  熟悉go语言的api
-http://localhost:6060/pkg/   0x03 深入  已beego框架学习如何编写web项目
-https://beego.me  关注go语言的Top项目
-https://github.com/topics/go  学习go语言框架提供的第三方包
-https://github.com/avelino/awesome-go   </description>
+Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
+0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install 如何编写go语言  http://localhost:6060/doc/code.html 如何高效的编写go语言  http://localhost:6060/doc/code.html 熟悉go语言的api  http://localhost:6060/pkg/ 0x03 深入  已beego框架学习如何编写web项目  https://beego.me 关注go语言的Top项目  https://github.com/topics/go 学习go语言框架提供的第三方包  https://github.com/avelino/awesome-go </description>
     </item>
     
     <item>
@@ -415,9 +444,9 @@ https://github.com/avelino/awesome-go   </description>
       <guid>https://guobingyi.github.io/blog/centos-service/</guid>
       <description>Centos7 创建服务  用多了Windows后，才发现其实还是有很多选择的。
  在Centos下使用服务，还是因为公司有几个项目每次都需要手动去启动，麻烦。所以充分发挥程序员的懒惰。 原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便， 好用。
-0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户  服务定义可以参考：
+0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户 服务定义可以参考：
 systemd.service — Service unit configuration
-0x01 编写运行命令 start.sh #!/bin/sh #start web sh /opt/apache-tomcat-8.0.32/bin/startup.sh  ps. 千万要写 &amp;ldquo;#!/bin/sh&amp;rdquo;，不写有可能执行不了sh脚本。
+0x01 编写运行命令 start.sh #!/bin/sh #start web sh /opt/apache-tomcat-8.0.32/bin/startup.sh ps. 千万要写 &amp;ldquo;#!/bin/sh&amp;rdquo;，不写有可能执行不了sh脚本。
 0x02 编写运行命令 stop.sh #!/bin/sh killPid=`ps -ef|grep start.jar|grep -v &amp;quot;grep&amp;quot;|awk &#39;{print $2}&#39;` if [ &amp;quot;$killPid&amp;quot; != &amp;quot;&amp;quot; ]; then echo killing start.</description>
     </item>
     
@@ -428,12 +457,12 @@ systemd.service — Service unit configuration
       
       <guid>https://guobingyi.github.io/blog/brew-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
       <description>brew 使用指南  自从用了brew，就在也不想离开mac系统了。
-0x00安装brew 访问brew官网，根据提示进行安装。
- /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;  0x01使用brew安装软件 brew install wget  0x02使用brew更新软件 brew update  更新使用brew安装的软件
-0x03使用brew执行更新 brew upgrade  所以，一般都使用组合命令进行执行
-brew update &amp;amp;&amp;amp; brew upgrade  0x04 使用cleanup执行删除老更新包 brew cleanup  0x05 cask下的安装与删除 安装
-brew cask install name  卸载
-brew cask uninstall name  0x06 总结常用命令 1. 安装源码 brew install wget  2. 显示软件的各种信息（包括版本、源码地址、依赖等） brew info svn  3. 卸载软件 $brew uninstall mpv  4.</description>
+ 0x00安装brew 访问brew官网，根据提示进行安装。
+/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; 0x01使用brew安装软件 brew install wget 0x02使用brew更新软件 brew update 更新使用brew安装的软件
+0x03使用brew执行更新 brew upgrade 所以，一般都使用组合命令进行执行
+brew update &amp;amp;&amp;amp; brew upgrade 0x04 使用cleanup执行删除老更新包 brew cleanup 0x05 cask下的安装与删除 安装
+brew cask install name 卸载
+brew cask uninstall name 0x06 总结常用命令 1. 安装源码 brew install wget 2. 显示软件的各种信息（包括版本、源码地址、依赖等） brew info svn 3. 卸载软件 $brew uninstall mpv 4. 搜索brew 支持的软件（支持模糊搜索） brew search python 5. 列出本机通过brew安装的所有软件 brew list 6.</description>
     </item>
     
     <item>
@@ -443,7 +472,7 @@ brew cask uninstall name  0x06 总结常用命令 1. 安装源码 brew install w
       
       <guid>https://guobingyi.github.io/blog/%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%89%80%E9%9C%80%E7%9A%84jar/</guid>
       <description>使用maven下载jar到本地 原来使用Java进行项目开发的时候，都是使用浏览器一个一个jar进行下载，放到lib目录中使用。 最近，发现使用maven的效率更高，所以，使用该方法。
-1.创建一个pom.xml文件。 &amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.bingyi&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;test&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;central-repos2&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Central Repository 2&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://repo.spring.io/plugins-release&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;maven.net.cn&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;oneof the central mirrors in china&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://maven.net.cn/content/groups/public/&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oschina-repos&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Oschina Releases&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public/&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;central&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Maven Repository Switchboard&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://repo1.maven.org/maven2/&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!-- TODO: add you need jar --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.jasypt&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jasypt&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.8&amp;lt;/version&amp;gt; &amp;lt;exclusions&amp;gt; &amp;lt;exclusion&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;/exclusion&amp;gt; &amp;lt;/exclusions&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt;  2.创建执行脚本 downloadjar.bat call mvn -f pom.</description>
+1.创建一个pom.xml文件。 &amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.bingyi&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;test&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;central-repos2&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Central Repository 2&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://repo.spring.io/plugins-release&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;maven.net.cn&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;oneof the central mirrors in china&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://maven.net.cn/content/groups/public/&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oschina-repos&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Oschina Releases&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public/&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;!-- &amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;central&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Maven Repository Switchboard&amp;lt;/name&amp;gt;&amp;lt;url&amp;gt;http://repo1.maven.org/maven2/&amp;lt;/url&amp;gt;&amp;lt;/repository&amp;gt; --&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!-- TODO: add you need jar --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.jasypt&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jasypt&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.8&amp;lt;/version&amp;gt; &amp;lt;exclusions&amp;gt; &amp;lt;exclusion&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;/exclusion&amp;gt; &amp;lt;/exclusions&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2.创建执行脚本 downloadjar.bat call mvn -f pom.</description>
     </item>
     
     <item>
@@ -452,7 +481,7 @@ brew cask uninstall name  0x06 总结常用命令 1. 安装源码 brew install w
       <pubDate>Tue, 23 Oct 2018 10:52:14 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/opensource/dbeaver/</guid>
-      <description> Dbeaver项目  好项目，如何生存下去？
+      <description>Dbeaver项目  好项目，如何生存下去？
  官方项目地址：https://github.com/dbeaver/dbeaver
 官方项目介绍：https://dbeaver.io/
 开始听到DBeaver的时候，是一位同事在用，没有留意。
@@ -461,15 +490,15 @@ brew cask uninstall name  0x06 总结常用命令 1. 安装源码 brew install w
 当然，在编译DBeaver的时候也有一些小插曲，都已经解决了，并且成功编译，所以过了我自己评定好开源项目的第一关。
 以下是编译的过程中出现的一些问题：
 1.1 编译中下载插件无法下载。
-需要翻墙，找个可以访问外网资源的软件就可以了，mac系统下推荐RocketVPN。  1.2 编译报错。
-[INFO] org.jkiss.utils 2.1.78-SNAPSHOT .................... FAILURE [ 2.394 s]  问题是由于我手贱升级了java到11导致的，这个时候手动设置一下JAVA_HOME路径。
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home  ps. 遇到问题可以到项目中的Issues中查找，80%都能解决问题。
+需要翻墙，找个可以访问外网资源的软件就可以了，mac系统下推荐RocketVPN。 1.2 编译报错。
+[INFO] org.jkiss.utils 2.1.78-SNAPSHOT .................... FAILURE [ 2.394 s] 问题是由于我手贱升级了java到11导致的，这个时候手动设置一下JAVA_HOME路径。
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home ps. 遇到问题可以到项目中的Issues中查找，80%都能解决问题。
 编译成功后会在在dbeaver/product/standalone/target/products/org.jkiss.dbeaver.core.product下产生三个平台的安装文件。
 至此，编译完成。
 从这个开源项目中可以花时间看一下，java语言开发的项目如何生成三个平台（linux,macosx,win32)的安装问题。
 有时间需要弄明白的地方？
- Java如何编译成跨平台的项目？
- 为何来维系这个开源项目，虽然本项目也分为社区版和企业版？
+  Java如何编译成跨平台的项目？
+  为何来维系这个开源项目，虽然本项目也分为社区版和企业版？
   </description>
     </item>
     
@@ -536,11 +565,11 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
       <guid>https://guobingyi.github.io/blog/upgrade/</guid>
       <description>Upgrade 升级 一次偶然的机会在网上看到了一部片子叫《升级》，刚刚看到的时候感觉不到什么，都没有想到要去下载下来看一下。因为最近加班已经没有精力去看电影了，但是听说非常不错，也就下载了，找了一个时间段，将电影看了一下，感觉还真不错。
 首先，看到精彩的地方是几点：
- 一个机械师在家中的地下室陶腾他的那台老车，看是风格迥异，甚至我都感觉是不是在看赛车的节目。但是，可以看到的是，这个男猪脚的手艺不错，经过一番捣腾后，发动机还是响起了。
- 画风一改，老婆做车无人驾驶汽车来，而且还可以在车上进行视频电话，完全可以抛现在的无人驾驶车好几条街。老婆为了和老公早点见面，匆匆挂断电话，导致我一度怀疑是不是，这个通电话的人买凶杀了老婆。
- 超豪华的家，带上人工智能，在茶几上进行查看新闻和手指操作，让这个人工智能家居变得更加高大上。
- 无人机值守，让整个区域都变成了监控范围。但是，也存在很多漏洞，掌控权在高级的用户上手，而所有有权限的，都可以进行篡改。在科技面前所有的东西都可以变的虚拟，所有的东西又都可以伪装。
- 其实，在人工智能获取到最高权限就意味着人类已经被人工智能控制。
+  一个机械师在家中的地下室陶腾他的那台老车，看是风格迥异，甚至我都感觉是不是在看赛车的节目。但是，可以看到的是，这个男猪脚的手艺不错，经过一番捣腾后，发动机还是响起了。
+  画风一改，老婆做车无人驾驶汽车来，而且还可以在车上进行视频电话，完全可以抛现在的无人驾驶车好几条街。老婆为了和老公早点见面，匆匆挂断电话，导致我一度怀疑是不是，这个通电话的人买凶杀了老婆。
+  超豪华的家，带上人工智能，在茶几上进行查看新闻和手指操作，让这个人工智能家居变得更加高大上。
+  无人机值守，让整个区域都变成了监控范围。但是，也存在很多漏洞，掌控权在高级的用户上手，而所有有权限的，都可以进行篡改。在科技面前所有的东西都可以变的虚拟，所有的东西又都可以伪装。
+  其实，在人工智能获取到最高权限就意味着人类已经被人工智能控制。
   在看完后，还是有许多让人思考的地方，比如前段时间看到的匿名者（anon）,都在说人工智能的事情，但是好在anon的人工智能还掌控在人类的手上，而升级却已经完全被人工智能掌握。最讽刺的是，人类总喜欢虚拟世界，这个和我们在玩的游戏有什么不同呢？我们都在现实生活中获取不到乐趣。那么，是否在虚拟世界里就可以活下去。这个又和《黑客帝国》中的人物一样，是否人到最后都是被圈养呢？可以让人进行无限的思考，如果现实社会不能让人感到快乐，那么是否在虚拟世界就让人快乐了。人类追求的到底是什么呢？好像非常矛盾，想让科技带给人类便捷的同时，却又害怕被科技替代。在电影中的科技，看似非常智能化，但是同样也可以让人感受到这种科技离我们越来越近，面临的是我们如何去看待这些科技。做为一个程序员，虽然非常想去实现这些科技，但是同时也为这种后果去思考。人类是否真的要被自己玩坏呢？
 或许写代码也有这种感觉，感觉写一个脚本就可以完成好多自动化工作，甚至感觉所有的控制权都交给了系统。但是，或多或少，都会让我们感觉到，控制权必须掌握在自己手中，才有主动权。而在获取这种感觉的时候，都是通过不断的升级代码来完成的。当代码有自己的思维时候，或许我们也就要下岗了。
 当主角说主动权交给人工智能后，每次结果都主角大吃一惊的时候，我就感觉到这种感觉非常不好，因为已经不可控制了。或许在这个时候，最好的选择就是放弃吧，但是又有多少人可以做到呢？</description>
@@ -576,9 +605,9 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
       <pubDate>Thu, 09 Aug 2018 11:39:34 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/others/</guid>
-      <description>Don&amp;rsquo;t be evil
-记录一些奇怪的错误  0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
-bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance.  很长时间没有解决，在使用了google后，最终找到了解决方案。
+      <description>Don&#39;t be evil
+ 记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
+bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
 If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;quot;python@2&amp;quot; appears in that list, and Python 2.</description>
     </item>
     
@@ -591,7 +620,6 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
       <description>介绍 使用Go语言进行驱动开发。
 讲什么 本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。
 二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：
-二维码例子
 在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。
 预期读者 本书的读者需要有一定的编程基础，如果没有学习过Go,请点击此处进行学习。
 要求 在阅读本书前，你需要准备以下工具：
@@ -601,13 +629,13 @@ Go Go语言环境是本书中的唯一要求。你可以从其官网进行下
 翻译者：推荐Visual Studio Code，好用，免费。
 代码实例 Go代码 本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。
 fragment.go
-17 func (r *Receiver) MyFunc() err { 18 print(&amp;quot;Anything&amp;quot;) 19 print(&amp;quot;Even more&amp;quot;) 20 }  17
+17 func (r *Receiver) MyFunc() err { 18 print(&amp;#34;Anything&amp;#34;) 19 print(&amp;#34;Even more&amp;#34;) 20 } 17
 关于第17行的一些有趣信息。
 17 - 20
 关于从第17行到第20行的整个代码块的一些有趣信息。
 有时代码样本缺少行号 - 在这种情况下，代码实际上并不包含在源代码中，而是意味着要点。
 go fmt 高亮显示运算符优先级
-func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
+func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
     </item>
     
     <item>
@@ -616,7 +644,7 @@ func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软
       <pubDate>Tue, 07 Aug 2018 09:00:19 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/life/health/</guid>
-      <description> 自己的健康问题  如果不是生死问题，所有的问题都是小问题。
+      <description>自己的健康问题  如果不是生死问题，所有的问题都是小问题。
  肾结石 从来都没有想到过自己会得这样的病，但是还是得了。
 下面是医生开的结石药：
  热淋清颗粒  疗效我感觉就是在尿血的时候喝，到底起不起用不知道，反正吃了好多盒，石头依然在。
@@ -652,16 +680,14 @@ func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软
       <description>Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
  第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
-yum install vsftpd  如果安装了，那么就直接卸载了。
-yum remove vsftpd  卸载后需要注意以下问题：
- 查看线程是否存在
-ps auxf | grep vsftpd   如果线程存在则直接 kill -9 .
+yum install vsftpd 如果安装了，那么就直接卸载了。
+yum remove vsftpd 卸载后需要注意以下问题：
+ 查看线程是否存在  ps auxf | grep vsftpd 如果线程存在则直接 kill -9 .
  如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
-/etc/vsftpd/vsftpd.conf  一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata  0x02 创建本地用户  创建ftp用户
-useradd jack  设置用户密码
-echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin   3.限制该用户仅能通过 FTP 访问</description>
+/etc/vsftpd/vsftpd.conf 一般对照配置修改以下内容：
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户  创建ftp用户  useradd jack 设置用户密码  echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
+usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。</description>
     </item>
     
     <item>
@@ -670,7 +696,7 @@ echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin   3.限制该用�
       <pubDate>Sat, 14 Jul 2018 16:46:13 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/blog/anon/</guid>
-      <description>匿名者  What you look for every day of your life.Why you&amp;rsquo;ll never understand.It&amp;rsquo;s not that I have something to hide&amp;hellip; I hava nothing I want you to see.
+      <description>匿名者  What you look for every day of your life.Why you&#39;ll never understand.It&#39;s not that I have something to hide&amp;hellip; I hava nothing I want you to see.
  最近看了一部电影《匿名者》。
 刚刚开始看的时候，还是被影片中的电脑特技给征服了。看到这种通过眼睛来进行扫描人员信息的时候，还是联想到了谷歌的glass。但是唯一的区别在于谷歌glass是可以摘下来的，而电影里的是每个人都被种植到了眼睛了，并且不能被摘除。如果被入侵了，那么人就瞎了。而且所谓的记忆，也会被删除。
 不可否认，这样将主动权都交给了电脑，会提高相对的安全。但是，更多的是不安全。所以，电影里的女主角才启动了隐藏算法。越是绝对的控制，越是不安全。
@@ -688,14 +714,12 @@ echo &amp;quot;jack_pass_word&amp;quot; | passwd jack --stdin   3.限制该用�
       
       <guid>https://guobingyi.github.io/blog/kafka/</guid>
       <description>学习kafka  学习技术的过程中，我慢慢习惯去官网看看，不管学习什么。从什么时候开始，当我听说，别人讲给的听的感觉，就像人吃东西，然后在喂给你的时候。听着非常恶心。从营养角度来说，吃被人吐出来的东西，营养已经被消化了一部分。
- 0x00 开始 kafka的官网 http://kafka.apache.org/  什么是kafka Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。
+ 0x00 开始 kafka的官网 http://kafka.apache.org/ 什么是kafka Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。
 0x01 kafka常用命令 注意
- &amp;amp;保证在关闭shell窗口后能继续运行
- 在windows下将.sh改为.bat,“/”改为“\”
-  开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;amp;  开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;amp;  ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。
-创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test  列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181  发送消息  向主题为test的发送消息，输入字符后回车。
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test   启动消费者  &amp;ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning   启动kafka时需要配置的信息  在server.</description>
+  &amp;amp;保证在关闭shell窗口后能继续运行
+  在windows下将.sh改为.bat,“/”改为“\”
+  开启ZooKeeper bin/zookeeper-server-start.sh config/zookeeper.properties &amp;amp; 开启kafka服务 bin/kafka-server-start.sh config/server.properties &amp;amp; ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。
+创建一个主题 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test 列举主题 bin/kafka-topics.sh --list --zookeeper localhost:2181 发送消息  向主题为test的发送消息，输入字符后回车。  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test 启动消费者  &amp;ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning 启动kafka时需要配置的信息  在server.</description>
     </item>
     
     <item>
@@ -704,7 +728,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
       <pubDate>Mon, 09 Jul 2018 09:18:07 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/blog/begin-start-learn-c-language/</guid>
-      <description> C学习笔记  c语言是大学里的入门语言，时隔十多年后，又开始学习。
+      <description>C学习笔记  c语言是大学里的入门语言，时隔十多年后，又开始学习。
  0x00 工具 工欲善其事必先利其器。
 调试工具 在苹果电脑上直接使用gdb进行调试会存在一定的问题。所以最好的调试环境还是放到了docker上，或者直接使用了vs code 进行调试。因为这种那种的原因，所以最终还是决定使用vs code 进行ide。
  gdb调试
@@ -717,9 +741,9 @@ IDE  Visual studio code
  这个不用说了吧，神器。但是，很难！
 make  用过ant的都知道，ant是学习make写的。
  要想真正的了解make，还是在于读一遍文档吧。
-https://www.gnu.org/software/make/manual/make.pdf  在读一遍陈浩大神的makefile教程。
-https://blog.csdn.net/haoel/article/details/2886  这个地址将陈浩大神的帖子整理了一下。
-https://blog.csdn.net/weixin_38391755/article/details/80380786  </description>
+https://www.gnu.org/software/make/manual/make.pdf 在读一遍陈浩大神的makefile教程。
+https://blog.csdn.net/haoel/article/details/2886 这个地址将陈浩大神的帖子整理了一下。
+https://blog.csdn.net/weixin_38391755/article/details/80380786 </description>
     </item>
     
     <item>
@@ -728,7 +752,7 @@ https://blog.csdn.net/weixin_38391755/article/details/80380786  </description>
       <pubDate>Wed, 04 Jul 2018 23:21:56 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/ruby/</guid>
-      <description> Ruby 学习笔记 </description>
+      <description>Ruby 学习笔记 </description>
     </item>
     
     <item>
@@ -737,7 +761,7 @@ https://blog.csdn.net/weixin_38391755/article/details/80380786  </description>
       <pubDate>Wed, 04 Jul 2018 23:21:20 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go/</guid>
-      <description> go语言学习笔记 </description>
+      <description>go语言学习笔记 </description>
     </item>
     
     <item>
@@ -754,17 +778,17 @@ https://blog.csdn.net/weixin_38391755/article/details/80380786  </description>
 结论就是：如果你需要将命令step by step执行，那么就选择shell吧。
 0x01 Hello,World! 每个学习程序设计的开始都会是这个，也因为这个才从此入坑。
 创建文件hello.sh,输入一下内容：
-#!/bin/bash echo &#39;Hello.World!&#39;  在终端中使用sh hello.sh,将输出以下结果：
-Hello,World!  恭喜你，入门了。
+#!/bin/bash echo &#39;Hello.World!&#39; 在终端中使用sh hello.sh,将输出以下结果：
+Hello,World! 恭喜你，入门了。
 思考：
  为什么第一行会有个#!/bin/bash echo 可以用单引号，也可以用双引号，区别是什么？ 如果要让shell脚步可以直接运行，怎么做？ 如何文件后缀是php,那么有该如何做呢？  0x02 变量 shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。
-那么如何定义一个变量呢？ someone=&amp;quot;Lee&amp;quot; some_two=&amp;quot;http://10.10.10.222&amp;quot;  看似简单的定义变量，如果写多了程序，就会有个问题，如下：
-someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
+那么如何定义一个变量呢？ someone=&amp;quot;Lee&amp;quot; some_two=&amp;quot;http://10.10.10.222&amp;quot; 看似简单的定义变量，如果写多了程序，就会有个问题，如下：
+someone = &amp;quot;Lee&amp;quot; #Eroor 为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 重要的事情说三遍，你要知道调试shell，就像java里System.out.println(&amp;ldquo;ok&amp;rdquo;)一样麻烦，更何况shell木有断点功能。目前我还不知道shell的ide，或者打断点，如果你知道，请告诉我，让我试试。
-使用变量 $someone $(some_two)  只读变量 readonly someone  删除变量 unset someone  0x03 字符串 单引号 someone=&#39;Lee&#39;   单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；</description>
+使用变量 $someone $(some_two) 只读变量 readonly someone 删除变量 unset someone 0x03 字符串 单引号 someone=&#39;Lee&#39;   单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；</description>
     </item>
     
     <item>
@@ -790,13 +814,15 @@ someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为�
       <pubDate>Fri, 22 Jun 2018 09:41:18 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/blog/think/</guid>
-      <description> 想法很多  自从没有在游戏上花费太多的时间，现在想法也很多。
+      <description>想法很多  自从没有在游戏上花费太多的时间，现在想法也很多。
  1.用hugo搭建自己的博客 现在已经使用了，但是感觉样式不怎么好看，慢慢在来改了。
 不管怎么说，一切的开始，虽然难，但是都在前进就好！
 2.用docker中的centos来搭建开发环境 因为自己的系统是macos，所以很多代码不一定能跑起来，比如dbdk。所以就想用docker的方式来搭建一个开放平台，这样即使换了电脑或则系统，都可以使用docker把镜像导入进来。思路而已，还要考虑的问题如下：
- 如何将镜像进行备份和同步；   初步的想法是docker将镜像导出，然后git到github上进行存储。但是这些都是需要压缩和加密的。
- 如何将实体机的开发环境弱化；   目前的开发环境都在本机的实体机上，所以想要弱化就必须考虑到一些开发ide，比如java的eclipse。想到用eclipse che来替代，就看docker是否能支持的好了。
-3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
+  如何将镜像进行备份和同步；
+初步的想法是docker将镜像导出，然后git到github上进行存储。但是这些都是需要压缩和加密的。
+  如何将实体机的开发环境弱化；
+目前的开发环境都在本机的实体机上，所以想要弱化就必须考虑到一些开发ide，比如java的eclipse。想到用eclipse che来替代，就看docker是否能支持的好了。
+  3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
 先学着写吧。
 4.科技改变生活 我觉得先从自己的生活改变开始，让自己的工作效率更高。为了达到这边目标，先从以下几点做起：
  使用shell脚本，将自己常用的命令进行一个封装； 将一些程序中经常使用的工具进行汇总，供shell脚本使用； 自己编写代码，提供没有的工具。  </description>
@@ -829,13 +855,15 @@ someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为�
       <pubDate>Thu, 21 Jun 2018 18:52:37 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/think/</guid>
-      <description> 想法很多  自从没有在游戏上花费太多的时间，现在想法也很多。
+      <description>想法很多  自从没有在游戏上花费太多的时间，现在想法也很多。
  1.用hugo搭建自己的博客 现在已经使用了，但是感觉样式不怎么好看，慢慢在来改了。
 不管怎么说，一切的开始，虽然难，但是都在前进就好！
 2.用docker中的centos来搭建开发环境 因为自己的系统是macos，所以很多代码不一定能跑起来，比如dbdk。所以就想用docker的方式来搭建一个开放平台，这样即使换了电脑或则系统，都可以使用docker把镜像导入进来。思路而已，还要考虑的问题如下：
- 如何将镜像进行备份和同步；   初步的想法是docker将镜像导出，然后git到github上进行存储。但是这些都是需要压缩和加密的。
- 如何将实体机的开发环境弱化；   目前的开发环境都在本机的实体机上，所以想要弱化就必须考虑到一些开发ide，比如java的eclipse。想到用eclipse che来替代，就看docker是否能支持的好了。
-3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
+  如何将镜像进行备份和同步；
+初步的想法是docker将镜像导出，然后git到github上进行存储。但是这些都是需要压缩和加密的。
+  如何将实体机的开发环境弱化；
+目前的开发环境都在本机的实体机上，所以想要弱化就必须考虑到一些开发ide，比如java的eclipse。想到用eclipse che来替代，就看docker是否能支持的好了。
+  3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
 先学着写吧。
 4.科技改变生活 我觉得先从自己的生活改变开始，让自己的工作效率更高。为了达到这边目标，先从以下几点做起：
  使用shell脚本，将自己常用的命令进行一个封装； 将一些程序中经常使用的工具进行汇总，供shell脚本使用； 自己编写代码，提供没有的工具。  </description>
@@ -849,7 +877,7 @@ someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为�
       <guid>https://guobingyi.github.io/about_old/</guid>
       <description> 别人笑我太疯癫，我笑他人看不穿。
  喜欢程序设计，致力于将终身奉献给程序设计。
- talk is cheap,show me the code!  </description>
+ talk is cheap,show me the code! </description>
     </item>
     
     <item>
@@ -880,7 +908,7 @@ someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为�
       <pubDate>Fri, 15 Jun 2018 23:45:20 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/good/</guid>
-      <description> 测试一下中文是否支持 </description>
+      <description>测试一下中文是否支持 </description>
     </item>
     
     <item>
@@ -889,7 +917,7 @@ someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为�
       <pubDate>Fri, 15 Jun 2018 23:31:47 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/test/</guid>
-      <description> Test my blog  new day will come,wzry go away!
+      <description>Test my blog  new day will come,wzry go away!
  </description>
     </item>
     
@@ -899,7 +927,7 @@ someone = &amp;quot;Lee&amp;quot; #Eroor  为什么会有这个错误，因为�
       <pubDate>Fri, 15 Jun 2018 23:30:41 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/newday/</guid>
-      <description> Hello,Hugo! </description>
+      <description>Hello,Hugo! </description>
     </item>
     
   </channel>

@@ -17,7 +17,7 @@
       <pubDate>Tue, 23 Oct 2018 10:52:14 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/opensource/dbeaver/</guid>
-      <description> Dbeaver项目  好项目，如何生存下去？
+      <description>Dbeaver项目  好项目，如何生存下去？
  官方项目地址：https://github.com/dbeaver/dbeaver
 官方项目介绍：https://dbeaver.io/
 开始听到DBeaver的时候，是一位同事在用，没有留意。
@@ -26,15 +26,15 @@
 当然，在编译DBeaver的时候也有一些小插曲，都已经解决了，并且成功编译，所以过了我自己评定好开源项目的第一关。
 以下是编译的过程中出现的一些问题：
 1.1 编译中下载插件无法下载。
-需要翻墙，找个可以访问外网资源的软件就可以了，mac系统下推荐RocketVPN。  1.2 编译报错。
-[INFO] org.jkiss.utils 2.1.78-SNAPSHOT .................... FAILURE [ 2.394 s]  问题是由于我手贱升级了java到11导致的，这个时候手动设置一下JAVA_HOME路径。
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home  ps. 遇到问题可以到项目中的Issues中查找，80%都能解决问题。
+需要翻墙，找个可以访问外网资源的软件就可以了，mac系统下推荐RocketVPN。 1.2 编译报错。
+[INFO] org.jkiss.utils 2.1.78-SNAPSHOT .................... FAILURE [ 2.394 s] 问题是由于我手贱升级了java到11导致的，这个时候手动设置一下JAVA_HOME路径。
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home ps. 遇到问题可以到项目中的Issues中查找，80%都能解决问题。
 编译成功后会在在dbeaver/product/standalone/target/products/org.jkiss.dbeaver.core.product下产生三个平台的安装文件。
 至此，编译完成。
 从这个开源项目中可以花时间看一下，java语言开发的项目如何生成三个平台（linux,macosx,win32)的安装问题。
 有时间需要弄明白的地方？
- Java如何编译成跨平台的项目？
- 为何来维系这个开源项目，虽然本项目也分为社区版和企业版？
+  Java如何编译成跨平台的项目？
+  为何来维系这个开源项目，虽然本项目也分为社区版和企业版？
   </description>
     </item>
     

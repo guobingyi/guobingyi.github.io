@@ -17,17 +17,10 @@
       <pubDate>Fri, 30 Aug 2019 07:03:51 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/git/</guid>
-      <description> Git 常用命令 1.初始化仓库信息
- git init   增加文件信息到库
-git add -A  提交代码
-git commit -m &amp;quot;first commit&amp;quot;  同步到远程库
-git push -u origin master  将远程库信息同步到本地
-git clone http://192.168.100.226:3000/guoby/wzry.git  撤销提交操作
-git commit --amend  重新更新git服务器信息
-git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master  删除文件
-  8.1 删除单个文件
-git rm ._ddd.file  8.2 删除多个文件
-find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39;  </description>
+      <description>Git 常用命令 1.初始化仓库信息
+ git init 增加文件信息到库   git add -A 提交代码   git commit -m &amp;quot;first commit&amp;quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
+git rm ._ddd.file 8.2 删除多个文件
+find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39; </description>
     </item>
     
     <item>
@@ -40,7 +33,8 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
  0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
 2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
 3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。
-4. beego 项目结构 一般的 beego 项目的目录如下所示：</description>
+4. beego 项目结构 一般的 beego 项目的目录如下所示：
+├── conf │ └── app.</description>
     </item>
     
     <item>
@@ -49,17 +43,10 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       <pubDate>Thu, 13 Dec 2018 14:28:45 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go-tutorial/</guid>
-      <description> Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
+      <description>Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
  0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
-Mac下安装 brew install go  Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) }  0x01 文档查阅 godoc -http=:6060  0x02 入门  文档介绍如何安装
-http://localhost:6060/doc/install  如何编写go语言
-http://localhost:6060/doc/code.html  如何高效的编写go语言
-http://localhost:6060/doc/code.html  熟悉go语言的api
-http://localhost:6060/pkg/   0x03 深入  已beego框架学习如何编写web项目
-https://beego.me  关注go语言的Top项目
-https://github.com/topics/go  学习go语言框架提供的第三方包
-https://github.com/avelino/awesome-go   </description>
+Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
+0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install 如何编写go语言  http://localhost:6060/doc/code.html 如何高效的编写go语言  http://localhost:6060/doc/code.html 熟悉go语言的api  http://localhost:6060/pkg/ 0x03 深入  已beego框架学习如何编写web项目  https://beego.me 关注go语言的Top项目  https://github.com/topics/go 学习go语言框架提供的第三方包  https://github.com/avelino/awesome-go </description>
     </item>
     
     <item>
@@ -92,9 +79,9 @@ https://github.com/avelino/awesome-go   </description>
       <pubDate>Thu, 09 Aug 2018 11:39:34 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/others/</guid>
-      <description>Don&amp;rsquo;t be evil
-记录一些奇怪的错误  0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
-bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance.  很长时间没有解决，在使用了google后，最终找到了解决方案。
+      <description>Don&#39;t be evil
+ 记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
+bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
 If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;quot;python@2&amp;quot; appears in that list, and Python 2.</description>
     </item>
     
@@ -107,7 +94,6 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
       <description>介绍 使用Go语言进行驱动开发。
 讲什么 本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。
 二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：
-二维码例子
 在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。
 预期读者 本书的读者需要有一定的编程基础，如果没有学习过Go,请点击此处进行学习。
 要求 在阅读本书前，你需要准备以下工具：
@@ -117,13 +103,13 @@ Go Go语言环境是本书中的唯一要求。你可以从其官网进行下
 翻译者：推荐Visual Studio Code，好用，免费。
 代码实例 Go代码 本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。
 fragment.go
-17 func (r *Receiver) MyFunc() err { 18 print(&amp;quot;Anything&amp;quot;) 19 print(&amp;quot;Even more&amp;quot;) 20 }  17
+17 func (r *Receiver) MyFunc() err { 18 print(&amp;#34;Anything&amp;#34;) 19 print(&amp;#34;Even more&amp;#34;) 20 } 17
 关于第17行的一些有趣信息。
 17 - 20
 关于从第17行到第20行的整个代码块的一些有趣信息。
 有时代码样本缺少行号 - 在这种情况下，代码实际上并不包含在源代码中，而是意味着要点。
 go fmt 高亮显示运算符优先级
-func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
+func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
     </item>
     
     <item>
@@ -132,7 +118,7 @@ func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软
       <pubDate>Wed, 04 Jul 2018 23:21:56 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/ruby/</guid>
-      <description> Ruby 学习笔记 </description>
+      <description>Ruby 学习笔记 </description>
     </item>
     
     <item>
@@ -141,7 +127,7 @@ func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 }  命令行会话 软
       <pubDate>Wed, 04 Jul 2018 23:21:20 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go/</guid>
-      <description> go语言学习笔记 </description>
+      <description>go语言学习笔记 </description>
     </item>
     
   </channel>

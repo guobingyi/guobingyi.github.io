@@ -9,30 +9,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content=" Git 常用命令 1.初始化仓库信息
- git init   增加文件信息到库
-git add -A  提交代码
-git commit -m &quot;first commit&quot;  同步到远程库
-git push -u origin master  将远程库信息同步到本地
-git clone http://192.168.100.226:3000/guoby/wzry.git  撤销提交操作
-git commit --amend  重新更新git服务器信息
-git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master  删除文件
-  8.1 删除单个文件
-git rm ._ddd.file  8.2 删除多个文件
-find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39;  ">
+<meta name="description" content="Git 常用命令 1.初始化仓库信息
+ git init 增加文件信息到库   git add -A 提交代码   git commit -m &quot;first commit&quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
+git rm ._ddd.file 8.2 删除多个文件
+find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39; ">
 
 <meta property="og:title" content="Git" />
-<meta property="og:description" content=" Git 常用命令 1.初始化仓库信息
- git init   增加文件信息到库
-git add -A  提交代码
-git commit -m &quot;first commit&quot;  同步到远程库
-git push -u origin master  将远程库信息同步到本地
-git clone http://192.168.100.226:3000/guoby/wzry.git  撤销提交操作
-git commit --amend  重新更新git服务器信息
-git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master  删除文件
-  8.1 删除单个文件
-git rm ._ddd.file  8.2 删除多个文件
-find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39;  " />
+<meta property="og:description" content="Git 常用命令 1.初始化仓库信息
+ git init 增加文件信息到库   git add -A 提交代码   git commit -m &quot;first commit&quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
+git rm ._ddd.file 8.2 删除多个文件
+find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39; " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/code/git/" />
 <meta property="article:published_time" content="2019-08-30T07:03:51+08:00" />
@@ -63,11 +49,11 @@ find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-11-13%2011%3a45%3a39.885859%20%2b0800%20CST%20m%3d%2b0.255004552">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-11-13%2011%3a45%3a39.885859%20%2b0800%20CST%20m%3d%2b0.255004552">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-11-13%2011%3a45%3a39.885859%20%2b0800%20CST%20m%3d%2b0.255004552">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-12-24%2019%3a35%3a22.297717%20%2b0800%20CST%20m%3d%2b0.385031918">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-12-24%2019%3a35%3a22.297717%20%2b0800%20CST%20m%3d%2b0.385031918">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-12-24%2019%3a35%3a22.297717%20%2b0800%20CST%20m%3d%2b0.385031918">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-11-13%2011%3a45%3a39.885859%20%2b0800%20CST%20m%3d%2b0.255004552">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-12-24%2019%3a35%3a22.297717%20%2b0800%20CST%20m%3d%2b0.385031918">
     
 
 
@@ -230,63 +216,45 @@ find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others
 </div>
 
             <div class="markdown">
-                
-
-<h3 id="git-常用命令">Git 常用命令</h3>
-
+                <h3 id="git-">Git 常用命令</h3>
 <p>1.初始化仓库信息</p>
-
 <pre><code> git init
-</code></pre>
-
-<ol>
-<li><p>增加文件信息到库</p>
-
-<pre><code>git add -A
-</code></pre></li>
-
-<li><p>提交代码</p>
-
-<pre><code>git commit -m &quot;first commit&quot;
-</code></pre></li>
-
-<li><p>同步到远程库</p>
-
-<pre><code>git push -u origin master
-</code></pre></li>
-
-<li><p>将远程库信息同步到本地</p>
-
-<pre><code>git clone http://192.168.100.226:3000/guoby/wzry.git
-</code></pre></li>
-
-<li><p>撤销提交操作</p>
-
+</code></pre><ol start="2">
+<li>增加文件信息到库</li>
+</ol>
+<pre><code> git add -A
+</code></pre><ol start="3">
+<li>提交代码</li>
+</ol>
+<pre><code> git commit -m &quot;first commit&quot;
+</code></pre><ol start="4">
+<li>同步到远程库</li>
+</ol>
+<pre><code> git push -u origin master
+</code></pre><ol start="5">
+<li>将远程库信息同步到本地</li>
+</ol>
+<pre><code> git clone http://192.168.100.226:3000/guoby/wzry.git
+</code></pre><ol start="6">
+<li>撤销提交操作</li>
+</ol>
 <pre><code>git commit --amend
-</code></pre></li>
-
-<li><p>重新更新git服务器信息</p>
-
+</code></pre><ol start="7">
+<li>重新更新git服务器信息</li>
+</ol>
 <pre><code>git remote rm origin
 git remote add origin http://192.168.100.201:3000/guoby/wzry.git
 git push -u origin master
-</code></pre></li>
-
-<li><p>删除文件</p></li>
+</code></pre><ol start="8">
+<li>删除文件</li>
 </ol>
-
 <p>8.1 删除单个文件</p>
-
 <pre><code>git rm ._ddd.file
-</code></pre>
-
-<p>8.2 删除多个文件</p>
-
+</code></pre><p>8.2 删除多个文件</p>
 <pre><code>find . -name &quot;._*&quot; -delete
 git add -A
 git commit -m 'delete others file'
 </code></pre>
-
             </div>
         </div>
     </div>
