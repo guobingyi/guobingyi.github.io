@@ -79,11 +79,11 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-12-26%2017%3a53%3a36.19295%20%2b0800%20CST%20m%3d%2b0.412824397">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-12-26%2017%3a53%3a36.19295%20%2b0800%20CST%20m%3d%2b0.412824397">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-12-26%2017%3a53%3a36.19295%20%2b0800%20CST%20m%3d%2b0.412824397">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-01-06%2011%3a27%3a22.975532%20%2b0800%20CST%20m%3d%2b0.162859815">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-01-06%2011%3a27%3a22.975532%20%2b0800%20CST%20m%3d%2b0.162859815">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-01-06%2011%3a27%3a22.975532%20%2b0800%20CST%20m%3d%2b0.162859815">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-12-26%2017%3a53%3a36.19295%20%2b0800%20CST%20m%3d%2b0.412824397">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-01-06%2011%3a27%3a22.975532%20%2b0800%20CST%20m%3d%2b0.162859815">
     
 
 
@@ -266,7 +266,7 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 <p>You got to put the past behind you before you can move on.</p>
 </blockquote>
 <p>由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，深入的思考了。</p>
-<h2 id="0x00-shell">0x00 为什么用shell?</h2>
+<h2 id="0x00-为什么用shell">0x00 为什么用shell?</h2>
 <p>原来学习一门语言的时候都会这样问自己？但是大多数的答案都是：项目上需要。没有思考的余地，也就没有深入的思考。</p>
 <p>现在开始用到，也学习了python,ruby,swift,javascript后发现，shell有她自身更好的发挥余地。比如我们经常会使用的命令cd,hugo server,git add -A等。别小看这些命令，一个一个来，还是要输入一会的。程序员不就图个安逸，一个shell脚本搞定的事情，为什么要多来输入几次呢？在举个例子，如果终端只有一个，那么要看tomcat的日志，还要更新类，那么就会来回的路径下切换，如果不用文本记录下来，光敲路径就花费很长的时间，so，用个shell脚本就可以解决了。当然，这个例子也不能说明shell的强大之处，那么这个例子就是shell的重要用途了。在零部署的时候，需要安装一些组件，数据库，初始化数据库脚本，注册服务，启动服务，关机。整个流程可以说一气呵成，但是如果是人工的话，那么想想工作量也是吓人的，这还不包括部署多台服务器呢。</p>
 <p>如果是安装系统，会非常喜欢ghost版本，安装就step by step。而shell就提供了这样功能。当然有人会说python也一样搞定。是的，不可否认，但是如果python自身也需要安装库呢？所以，shell独天得厚的优势在于系统自带的同时，还可以自动安装所需的命令。</p>
@@ -286,9 +286,9 @@ echo 'Hello.World!'
 <li>如果要让shell脚步可以直接运行，怎么做？</li>
 <li>如何文件后缀是php,那么有该如何做呢？</li>
 </ol>
-<h2 id="0x02-">0x02 变量</h2>
+<h2 id="0x02-变量">0x02 变量</h2>
 <p>shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。</p>
-<h3 id="heading">那么如何定义一个变量呢？</h3>
+<h3 id="那么如何定义一个变量呢">那么如何定义一个变量呢？</h3>
 <pre><code>someone=&quot;Lee&quot;
 some_two=&quot;http://10.10.10.222&quot;
 </code></pre><p>看似简单的定义变量，如果写多了程序，就会有个问题，如下：</p>
@@ -298,15 +298,15 @@ some_two=&quot;http://10.10.10.222&quot;
 <p>变量名和等号之间不能有空格。</p>
 <p>变量名和等号之间不能有空格。</p>
 <p>重要的事情说三遍，你要知道调试shell，就像java里System.out.println(&ldquo;ok&rdquo;)一样麻烦，更何况shell木有断点功能。目前我还不知道shell的ide，或者打断点，如果你知道，请告诉我，让我试试。</p>
-<h3 id="heading-1">使用变量</h3>
+<h3 id="使用变量">使用变量</h3>
 <pre><code>$someone
 $(some_two)
-</code></pre><h3 id="heading-2">只读变量</h3>
+</code></pre><h3 id="只读变量">只读变量</h3>
 <pre><code>readonly someone
-</code></pre><h3 id="heading-3">删除变量</h3>
+</code></pre><h3 id="删除变量">删除变量</h3>
 <pre><code>unset someone
-</code></pre><h2 id="0x03-">0x03 字符串</h2>
-<h3 id="heading-4">单引号</h3>
+</code></pre><h2 id="0x03-字符串">0x03 字符串</h2>
+<h3 id="单引号">单引号</h3>
 <pre><code>someone='Lee'
 </code></pre><ul>
 <li>
@@ -316,25 +316,25 @@ $(some_two)
 <p>单引号字串中不能出现单引号（对单引号使用转义符后也不行）。</p>
 </li>
 </ul>
-<h3 id="heading-5">双引号</h3>
+<h3 id="双引号">双引号</h3>
 <pre><code>someone=&quot;Lee,$some_two&quot;
-</code></pre><h3 id="heading-6">拼接字符串</h3>
+</code></pre><h3 id="拼接字符串">拼接字符串</h3>
 <pre><code>someone=&quot;World&quot;
 sometwo=&quot;hello,&quot;$someone&quot;!&quot;
 somethree=&quot;hello,${someone}!&quot;
 echo sometwo somethree
-</code></pre><h3 id="heading-7">获取字符串长度</h3>
+</code></pre><h3 id="获取字符串长度">获取字符串长度</h3>
 <pre><code>someone=&quot;hello&quot;
 echo ${#someone} #输出5
-</code></pre><h3 id="heading-8">提取子字符串</h3>
+</code></pre><h3 id="提取子字符串">提取子字符串</h3>
 <pre><code>someone=&quot;some one like you!&quot;
 echo ${someone:1:3} #输出ome,所以字符串的长度也是从0开始
-</code></pre><h3 id="heading-9">查找字符串</h3>
+</code></pre><h3 id="查找字符串">查找字符串</h3>
 <pre><code>someone=&quot;some one like you!&quot;
 echo `expr index &quot;$someone&quot; is` #output 2
-</code></pre><h2 id="0x04-shell">0x04 Shell数组</h2>
+</code></pre><h2 id="0x04-shell数组">0x04 Shell数组</h2>
 <p>shell支持数组，但是不支持多维数组。</p>
-<h3 id="heading-10">定义数组</h3>
+<h3 id="定义数组">定义数组</h3>
 <pre><code># one
 someone=(val1 val2 val3)
 #two
@@ -348,19 +348,19 @@ arr[0]=key1
 arr[1]=key2
 arr[2]=key3
 
-</code></pre><h3 id="heading-11">获取数组值</h3>
+</code></pre><h3 id="获取数组值">获取数组值</h3>
 <pre><code>#one value
 temp=${arr[0]}
 #all
 echo ${arr[@]} #@ mean all
-</code></pre><h3 id="heading-12">数组长度</h3>
+</code></pre><h3 id="数组长度">数组长度</h3>
 <pre><code>#count
 length=${#arr[@]}
 #or
 length=${#arr[*]}
 #one array length
 length=${#arr[0]}
-</code></pre><h2 id="0x05-shell">0x05 shell注释</h2>
+</code></pre><h2 id="0x05-shell注释">0x05 shell注释</h2>
 <p>shell里只能进行单行注释，已#开头的语句将会被注释掉。</p>
 <pre><code># This is Comment!
 
@@ -399,7 +399,7 @@ comment~~
 comment~~
 comment~~
 !
-</code></pre><h2 id="0x06-shell">0x06 shell参数传递</h2>
+</code></pre><h2 id="0x06-shell参数传递">0x06 shell参数传递</h2>
 <blockquote>
 <p>参数使用#n来进行获取</p>
 </blockquote>
@@ -455,11 +455,11 @@ comment~~
 </tr>
 </tbody>
 </table>
-<h2 id="0x07-shell">0x07 shell基本运算符</h2>
+<h2 id="0x07-shell基本运算符">0x07 shell基本运算符</h2>
 <blockquote>
 <p>shell和其他语言一样，支持多运算符。</p>
 </blockquote>
-<h3 id="heading-13">算术运算符</h3>
+<h3 id="算术运算符">算术运算符</h3>
 <p>shell中使用expr来进行算术运算</p>
 <pre><code>add=`expr $((3+4))` #7
 </code></pre><table>
@@ -513,7 +513,7 @@ comment~~
 </tr>
 </tbody>
 </table>
-<h3 id="heading-14">关系运算符</h3>
+<h3 id="关系运算符">关系运算符</h3>
 <pre><code>a=1
 b=2
 </code></pre><table>
@@ -557,7 +557,7 @@ b=2
 </tr>
 </tbody>
 </table>
-<h3 id="heading-15">布尔运算符</h3>
+<h3 id="布尔运算符">布尔运算符</h3>
 <table>
 <thead>
 <tr>
@@ -584,7 +584,7 @@ b=2
 </tr>
 </tbody>
 </table>
-<h3 id="heading-16">逻辑运算符</h3>
+<h3 id="逻辑运算符">逻辑运算符</h3>
 <table>
 <thead>
 <tr>
@@ -606,7 +606,7 @@ b=2
 </tr>
 </tbody>
 </table>
-<h3 id="heading-17">字符串运算符</h3>
+<h3 id="字符串运算符">字符串运算符</h3>
 <table>
 <thead>
 <tr>
@@ -643,7 +643,7 @@ b=2
 </tr>
 </tbody>
 </table>
-<h3 id="heading-18">文件测试运算符</h3>
+<h3 id="文件测试运算符">文件测试运算符</h3>
 <blockquote>
 <p>文件运算符用于检测Unix文件的各种属性。</p>
 </blockquote>
@@ -725,32 +725,32 @@ b=2
 </tbody>
 </table>
 <h2 id="0x08-shell-echo-command">0x08 shell echo command</h2>
-<h3 id="heading-19">显示普通字符串</h3>
+<h3 id="显示普通字符串">显示普通字符串</h3>
 <pre><code>echo &quot;Just fun!&quot;
-</code></pre><h3 id="heading-20">显示转义字符</h3>
+</code></pre><h3 id="显示转义字符">显示转义字符</h3>
 <pre><code>echo &quot;\&quot;This is demo!\&quot;&quot;
 #output &quot;This is demo!&quot;
-</code></pre><h3 id="heading-21">显示变量</h3>
+</code></pre><h3 id="显示变量">显示变量</h3>
 <pre><code>yourname=&quot;Lee&quot;
 echo &quot;you name is $yourname&quot;
 #output you name is Lee
-</code></pre><h3 id="heading-22">显示换行</h3>
+</code></pre><h3 id="显示换行">显示换行</h3>
 <pre><code>echo -e &quot;Now,Let's talk about you life!\n&quot; # -e 开启转义
 echo &quot;It sample.&quot;
 </code></pre><pre><code>#output
 Now,Let's talk about you life!
 
 It sample.
-</code></pre><h3 id="heading-23">显示不换行</h3>
+</code></pre><h3 id="显示不换行">显示不换行</h3>
 <pre><code>echo -e &quot;you work is \c&quot;
 echo &quot;good!&quot;
 #output you work is good!
-</code></pre><h3 id="heading-24">将结果输出到文件</h3>
+</code></pre><h3 id="将结果输出到文件">将结果输出到文件</h3>
 <pre><code>echo &quot;This comment in file.&quot; &gt; log.txt
-</code></pre><h3 id="heading-25">输出变量信息</h3>
+</code></pre><h3 id="输出变量信息">输出变量信息</h3>
 <pre><code>echo `$yourname\&quot;`
 #output $yourname\&quot;
-</code></pre><h3 id="heading-26">显示命令执行结果</h3>
+</code></pre><h3 id="显示命令执行结果">显示命令执行结果</h3>
 <pre><code>echo `whoami`
 #output root
 </code></pre><h2 id="0x09-shell-printf-command">0x09 shell printf command</h2>
@@ -766,7 +766,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 杨玉环 女 48.872
 张三   男       54.33
 李四   男       66.23
 杨玉环 女       48.88
-</code></pre><h3 id="heading-27">转义序列</h3>
+</code></pre><h3 id="转义序列">转义序列</h3>
 <table>
 <thead>
 <tr>
@@ -825,7 +825,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 杨玉环 女 48.872
 <blockquote>
 <p>shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。</p>
 </blockquote>
-<h3 id="heading-28">数值测试</h3>
+<h3 id="数值测试">数值测试</h3>
 <table>
 <thead>
 <tr>
@@ -870,7 +870,7 @@ else
 	echo 'zs age no equal ls'
 fi 
 
-</code></pre><h3 id="heading-29">字符串测试</h3>
+</code></pre><h3 id="字符串测试">字符串测试</h3>
 <table>
 <thead>
 <tr>
@@ -906,7 +906,7 @@ then
 else
 	echo &quot;两个名字不一致&quot;
 fi 
-</code></pre><h3 id="heading-30">文件测试</h3>
+</code></pre><h3 id="文件测试">文件测试</h3>
 <table>
 <thead>
 <tr>
@@ -953,7 +953,7 @@ fi
 </tr>
 </tbody>
 </table>
-<h2 id="0x11-shell-">0x11 shell 控制流量</h2>
+<h2 id="0x11-shell-控制流量">0x11 shell 控制流量</h2>
 <h3 id="if-else">if else</h3>
 <pre><code>if condition
 then 
@@ -974,7 +974,7 @@ then
 else
 	commandn
 fi
-</code></pre><h3 id="for-">for 循环</h3>
+</code></pre><h3 id="for-循环">for 循环</h3>
 <pre><code>for var in var1 var2 ... varn
 do
 	cmd1
@@ -982,12 +982,12 @@ do
 	cmd3
 	cmdn
 done
-</code></pre><h3 id="while-">while 语句</h3>
+</code></pre><h3 id="while-语句">while 语句</h3>
 <pre><code>while condition
 do
 	cmd
 done
-</code></pre><h3 id="until-">until 循环</h3>
+</code></pre><h3 id="until-循环">until 循环</h3>
 <pre><code>until condition
 do 
 	cmd 
@@ -1016,7 +1016,7 @@ esac
 <blockquote>
 <p>inux shell 可以用户定义函数。</p>
 </blockquote>
-<h3 id="heading-31">函数定义</h3>
+<h3 id="函数定义">函数定义</h3>
 <pre><code>[ function ] funname [()]
 
 {
@@ -1035,9 +1035,9 @@ esac
 <p>参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255)。</p>
 </li>
 </ol>
-<h3 id="heading-32">行数参数</h3>
+<h3 id="行数参数">行数参数</h3>
 <p>在Shell中，调用函数时可以向其传递参数。在函数体内部，通过 $n 的形式来获取参数的值，例如，$1表示第一个参数，$2表示第二个参数，依次类推。</p>
-<h2 id="0x13-">0x13 输入输出重定向</h2>
+<h2 id="0x13-输入输出重定向">0x13 输入输出重定向</h2>
 <p>重定向命令列表如下：</p>
 <table>
 <thead>
@@ -1084,13 +1084,13 @@ esac
 <blockquote>
 <p>需要注意的是文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。</p>
 </blockquote>
-<h3 id="devnull-">/dev/null 文件</h3>
+<h3 id="devnull-文件">/dev/null 文件</h3>
 <p>如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null</p>
 <pre><code>$ command &gt; /dev/null
 </code></pre><p>/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到&quot;禁止输出&quot;的效果。</p>
 <p>如果希望屏蔽 stdout 和 stderr，可以这样写：</p>
 <pre><code>$ command &gt; /dev/null 2&gt;&amp;1
-</code></pre><h2 id="0x14-">0x14 引用文件</h2>
+</code></pre><h2 id="0x14-引用文件">0x14 引用文件</h2>
 <p>和其他语言一样，Shell 也可以包含外部脚本。这样可以很方便的封装一些公用的代码作为一个独立的文件。</p>
 <p>Shell 文件包含的语法格式如下：</p>
 <pre><code>. filename   # 注意点号(.)和文件名中间有一空格
@@ -1106,7 +1106,7 @@ name=&quot;guoby&quot;
 #使用 . 号来引用sh_test1.sh 文件
 . ./sh_test2.sh
 echo &quot;you name is $name&quot;
-</code></pre><h1 id="heading-33">结论</h1>
+</code></pre><h1 id="结论">结论</h1>
 <p>shell适用于在<em><strong>命令集合</strong></em>的情况下完成任务，并不适合于复杂的程序任务。</p>
 <p>最实用的实用场景：发布部署应用。</p>
 

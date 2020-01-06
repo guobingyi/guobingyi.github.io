@@ -53,11 +53,11 @@ bingyideMacBook-Pro:~ guoby$ docker stop --help Usage:	docker stop [OPTIONS] CON
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-12-26%2017%3a53%3a36.048157%20%2b0800%20CST%20m%3d%2b0.268037441">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-12-26%2017%3a53%3a36.048157%20%2b0800%20CST%20m%3d%2b0.268037441">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-12-26%2017%3a53%3a36.048157%20%2b0800%20CST%20m%3d%2b0.268037441">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-01-06%2011%3a27%3a22.936076%20%2b0800%20CST%20m%3d%2b0.123405567">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-01-06%2011%3a27%3a22.936076%20%2b0800%20CST%20m%3d%2b0.123405567">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-01-06%2011%3a27%3a22.936076%20%2b0800%20CST%20m%3d%2b0.123405567">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-12-26%2017%3a53%3a36.048157%20%2b0800%20CST%20m%3d%2b0.268037441">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-01-06%2011%3a27%3a22.936076%20%2b0800%20CST%20m%3d%2b0.123405567">
     
 
 
@@ -236,31 +236,31 @@ bingyideMacBook-Pro:~ guoby$ docker stop --help Usage:	docker stop [OPTIONS] CON
                 </div>
             </div>
             <div class="markdown">
-                <h2 id="docker">再见Docker</h2>
+                <h2 id="再见docker">再见Docker</h2>
 <blockquote>
 <p>刚刚开始，却又说再见！</p>
 </blockquote>
-<h3 id="0x00-">0x00 缘起</h3>
+<h3 id="0x00-缘起">0x00 缘起</h3>
 <p>第一次遇到docker是由于学习go语言的时候，发现有人居然用go写了一个应用容器引擎，而且docker的使用非常方便。就那句话，“谁用谁知道”。哈哈～～</p>
 <p>今天突然发现，自己被很多东西困扰了。是时候给自己来一个断舍离了，所以就拿电脑中不经常使用的app开刀了。docker在电脑中待了很长时间了，以至于打开的时候，看看目前的版本是否修复了原来Docker.qcow2文件是否只能呆在固定位置的情况，发现已经可以随意调整了，给docker点赞的同时也决定了删除她，毕竟要给自己做断舍离的同时，也想让自己聚焦一下，太发散了，累。</p>
-<h3 id="0x01-docker-">0x01 docker 常用命令</h3>
-<h4 id="1-">1. 查看本地可用镜像</h4>
+<h3 id="0x01-docker-常用命令">0x01 docker 常用命令</h3>
+<h4 id="1-查看本地可用镜像">1. 查看本地可用镜像</h4>
 <pre><code>docker images 
-</code></pre><h4 id="2-">2. 查看运行的容器</h4>
+</code></pre><h4 id="2-查看运行的容器">2. 查看运行的容器</h4>
 <pre><code>docker ps
-</code></pre><h4 id="3-">3. 查看所有的容器</h4>
+</code></pre><h4 id="3-查看所有的容器">3. 查看所有的容器</h4>
 <pre><code>docker ps -a
-</code></pre><h4 id="4-">4. 停止容器</h4>
+</code></pre><h4 id="4-停止容器">4. 停止容器</h4>
 <pre><code>docker stop container
-</code></pre><h4 id="5-">5. 启动容器</h4>
+</code></pre><h4 id="5-启动容器">5. 启动容器</h4>
 <pre><code>docker start container
-</code></pre><h4 id="6-">6. 删除容器</h4>
+</code></pre><h4 id="6-删除容器">6. 删除容器</h4>
 <pre><code>docker rm container
-</code></pre><h4 id="7-">7. 删除镜像</h4>
+</code></pre><h4 id="7-删除镜像">7. 删除镜像</h4>
 <pre><code>docker rmi image name
-</code></pre><h4 id="8-docker">8. 从Docker容器内拷贝文件到主机上</h4>
+</code></pre><h4 id="8-从docker容器内拷贝文件到主机上">8. 从Docker容器内拷贝文件到主机上</h4>
 <pre><code>docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target
-</code></pre><h4 id="9-">9. 终极命令</h4>
+</code></pre><h4 id="9-终极命令">9. 终极命令</h4>
 <pre><code>docker COMMAND --help
 </code></pre><p>使用docker自带的命令来看命令的使用。</p>
 <p>例如，我不知道docker pause 怎么使用，用来干什么，那么我就输入docker pause &ndash;help来显示结果，如下所示：</p>
@@ -278,12 +278,12 @@ Usage:	docker pause CONTAINER [CONTAINER...]
 
 Pause all processes within one or more containers
 </code></pre><p>怎么样？是不是很爽哦，避免了很多要记忆的东西，同时也知道了docker有那些命令，是用来干什么的。</p>
-<h3 id="0x02-docker-">0x02 docker 实践</h3>
+<h3 id="0x02-docker-实践">0x02 docker 实践</h3>
 <p>我的docker环境在mac下使用，windows下也使用过，但是体验不是很好，用了docker就不能用vm，非常尴尬！</p>
-<h4 id="1--1">1. 黄图鉴别</h4>
+<h4 id="1-黄图鉴别">1. 黄图鉴别</h4>
 <p>总得找点乐趣来提升一下学习兴趣，比如雅虎开源的这个项目，是用了鉴别是否是黄图的项目。项目地址：<a href="https://github.com/yahoo/open_nsfw">Open nsfw model</a>。</p>
 <p>进入项目主页后，按照README.md的说明来安装，如果可以正常使用，那么恭喜你，docker入门了，后续的就自己玩吧。</p>
-<h4 id="2-dockerkali">2. docker下安装kali</h4>
+<h4 id="2-docker下安装kali">2. docker下安装kali</h4>
 <p>（1）下载基础镜像</p>
 <pre><code>docker pull kalilinux/kali-linux-docker
 </code></pre><p>（2）启动镜像</p>
@@ -292,19 +292,19 @@ Pause all processes within one or more containers
 <pre><code>apt-get install metasploit
 </code></pre><p>(4)开始安装 wifite</p>
 <pre><code>apt-get install wifite
-</code></pre><h4 id="3--1">3. 空间清理</h4>
+</code></pre><h4 id="3-空间清理">3. 空间清理</h4>
 <p>使用一段时间后，Docker.qcow2文件会增长的很快，而且不会自动缩小，不知道目前的版本是否解决了该问题。我使用的方式是直接删除该文件，重启docker后，会自动重新创建这个文件，当然会比原来小很多。</p>
 <p>路径：/Users/yourname/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux</p>
-<h4 id="4--1">4. 端口映射</h4>
-<h5 id="41-">4.1 单端口映射</h5>
+<h4 id="4-端口映射">4. 端口映射</h4>
+<h5 id="41-单端口映射">4.1 单端口映射</h5>
 <pre><code>docker run  -it -p 9090:9090 ubuntu/code-dev /bin/bash
-</code></pre><h5 id="42-">4.2 多端口映射</h5>
+</code></pre><h5 id="42-多端口映射">4.2 多端口映射</h5>
 <pre><code>docker run -p 9090:9090 -p 3306:3306 ubuntu/code-dev /bin/bash
-</code></pre><h4 id="5--1">5. 文件映射</h4>
+</code></pre><h4 id="5-文件映射">5. 文件映射</h4>
 <pre><code>docker run -it -v /Volumes/Transcend/docker_file:/home/mydev centos /bin/bash
-</code></pre><h4 id="6-root">6. root权限</h4>
+</code></pre><h4 id="6-root权限">6. root权限</h4>
 <pre><code>docker run --privileged -d --name centos-dpdk -it -v /Volumes/Transcend/docker_file:/home/mydev centos /sbin/init
-</code></pre><h4 id="7-root">7. 针对root用户创建密码</h4>
+</code></pre><h4 id="7-针对root用户创建密码">7. 针对root用户创建密码</h4>
 <p>(1) 在基础容器centos中启动</p>
 <pre><code>docker run -it 2d194b392dd1 /bin/bash
 </code></pre><p>(2)修改root用户名密码</p>
@@ -325,7 +325,7 @@ Pause all processes within one or more containers
 </code></pre><p>最终的结论就是docker容器是不支持设置密码的。
 因为docker exec -it -u 0 就是直接使用了root密码，而且还是侵入式的，无法避免。</p>
 <p>或者我的需求有点变态，在客户机的虚拟机上加密，只给客户提供服务，而不让看到其内部python代码吧!</p>
-<h3 id="0x03-">0x03 缘不灭</h3>
+<h3 id="0x03-缘不灭">0x03 缘不灭</h3>
 <p>仅仅只是由于自己想做一个断舍离，把注意力集中在一点，以后有机会用的时候还是会安装上的，不能怪自己的电脑硬盘小（128G），只是突然一瞬间感觉到，什么都去弄，到最后来该做的没有做好。时间有限，做好一件事就好，不是么？</p>
 <p>程序员就是喜欢倒腾，我是一个程序员，想什么都学，但是选择的同时，还是想让自己专注一点。</p>
 <p>在删除的时候，本想直接移到废纸篓，但是发现docker本身就带了删除功能。搞笑的事，最后还得走这一步，docker的删除仅仅是把Docker.qcow2文件删除了，避免自己删除应用后再去找这个文件删除。</p>

@@ -79,11 +79,11 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2019-12-26%2017%3a53%3a36.243683%20%2b0800%20CST%20m%3d%2b0.463555508">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2019-12-26%2017%3a53%3a36.243683%20%2b0800%20CST%20m%3d%2b0.463555508">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2019-12-26%2017%3a53%3a36.243683%20%2b0800%20CST%20m%3d%2b0.463555508">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-01-06%2011%3a27%3a23.036234%20%2b0800%20CST%20m%3d%2b0.223560513">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-01-06%2011%3a27%3a23.036234%20%2b0800%20CST%20m%3d%2b0.223560513">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-01-06%2011%3a27%3a23.036234%20%2b0800%20CST%20m%3d%2b0.223560513">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2019-12-26%2017%3a53%3a36.243683%20%2b0800%20CST%20m%3d%2b0.463555508">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-01-06%2011%3a27%3a23.036234%20%2b0800%20CST%20m%3d%2b0.223560513">
     
 
 
@@ -248,30 +248,30 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 </div>
 
             <div class="markdown">
-                <h2 id="heading">介绍</h2>
+                <h2 id="介绍">介绍</h2>
 <p>使用Go语言进行驱动开发。</p>
-<h3 id="heading-1">讲什么</h3>
+<h3 id="讲什么">讲什么</h3>
 <p>本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。</p>
 <p>二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：</p>
 <p><img src="https://guobingyi.github.io/img/qrcode.png" alt="qrcode"></p>
 <!-- raw HTML omitted -->
 <p>在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。</p>
-<h3 id="heading-2">预期读者</h3>
+<h3 id="预期读者">预期读者</h3>
 <p>本书的读者需要有一定的编程基础，如果没有学习过Go,请点击<a href="http://tour.golang.org/">此处</a>进行学习。</p>
-<h3 id="heading-3">要求</h3>
+<h3 id="要求">要求</h3>
 <p>在阅读本书前，你需要准备以下工具：</p>
 <h4 id="go">Go</h4>
 <p>Go语言环境是本书中的唯一要求。你可以从其官网进行下载安装。如果你的操作系统是OS X，可以使用Homebrew进行安装。
 大多数的Linux都已经在包管理器中加入了Go。</p>
-<h4 id="heading-4">一个终端</h4>
+<h4 id="一个终端">一个终端</h4>
 <p>使用Go语言的最佳途径就是使用终端。大多数的Linux系统使用其自动的终端shell，苹果用户可以使用Terminal.app；而
 windows用户可以使用Cygwin或Git Bash。</p>
-<h4 id="heading-5">一个编辑器</h4>
+<h4 id="一个编辑器">一个编辑器</h4>
 <p>最终，你将使用一个编辑器来进行编码。编辑器有非常多的选择，然而Sublime Text看起来非常流行。默认的
 Go配置插件，Emasc和Vim都有提供。</p>
 <p>翻译者：推荐Visual Studio Code，好用，免费。</p>
-<h3 id="heading-6">代码实例</h3>
-<h4 id="go-1">Go代码</h4>
+<h3 id="代码实例">代码实例</h3>
+<h4 id="go代码">Go代码</h4>
 <p>本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。</p>
 <p>fragment.go</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">17</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">Receiver</span><span class="p">)</span> <span class="nf">MyFunc</span><span class="p">(</span><span class="p">)</span> <span class="nx">err</span> <span class="p">{</span>
@@ -287,7 +287,7 @@ Go配置插件，Emasc和Vim都有提供。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">Hypothetical</span><span class="p">(</span><span class="nx">a</span> <span class="nx">b</span> <span class="nx">c</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="nx">a</span><span class="o">*</span><span class="nx">a</span> <span class="o">+</span> <span class="p">(</span><span class="nx">b</span><span class="o">*</span><span class="nx">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
 <span class="p">}</span>
-</code></pre></div><h4 id="heading-7">命令行会话</h4>
+</code></pre></div><h4 id="命令行会话">命令行会话</h4>
 <p>软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</p>
 <p>交互式命令行会话</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">echo</span> <span class="s2">&#34;Hello world&#34;</span>
@@ -296,7 +296,7 @@ Hello world
 $ cat HelloWorld.txt
 cat: HelloWorld.txt: No such file or directory
 </code></pre></div><p>命令行会话没有行号，并始终使用$来指示提示。</p>
-<h4 id="heading-8">目录列表</h4>
+<h4 id="目录列表">目录列表</h4>
 <p>在少数情况下，我必须参考目录列表。 它们始终以工作空间为根，即存储源代码的目录的通用名称。</p>
 <p><strong>目录结构</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">workspace</span><span class="o">/</span>
@@ -307,11 +307,11 @@ cat: HelloWorld.txt: No such file or directory
         <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">publysher</span><span class="o">/</span>
             <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">qrcoded</span><span class="o">/</span>
                 <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">qrcoded</span><span class="p">.</span><span class="k">go</span>
-</code></pre></div><h4 id="heading-9">获取代码</h4>
+</code></pre></div><h4 id="获取代码">获取代码</h4>
 <p>本书中的所有源代码都发布在http://github.com/publysher/golang-tdd; master分支包含最终结果，每个章节都有一个单独的分支。 源代码为开源许许可。</p>
-<h3 id="heading-10">你好，世界</h3>
+<h3 id="你好世界">你好，世界</h3>
 <p>在计算机编程的传统中，我将从一个简单的“Hello World”程序开始。使用这个程序，我将向您介绍GO语言工具。</p>
-<h4 id="heading-11">你的第一个程序</h4>
+<h4 id="你的第一个程序">你的第一个程序</h4>
 <p>编写Go从创建新工作区开始，该工作区将存储所有Go代码。 启动编辑器，在工作区中创建一个名为qrcoded.go的新文件，并确保它看起来像这样：</p>
 <p><strong>qrcoded.go</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">1</span> <span class="kn">package</span> <span class="nx">main</span>
@@ -322,7 +322,7 @@ cat: HelloWorld.txt: No such file or directory
 <span class="mi">6</span> 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello QR Code&#34;</span><span class="p">)</span>
 <span class="mi">7</span> <span class="p">}</span>
 </code></pre></div><p>如果你已经完成了GO2的在线旅行，这个程序不会对你造成任何神秘感。然而，在GO之旅使用交互式GO Playground时，本书将使用命令行编译、测试和运行程序。</p>
-<h4 id="heading-12">编译程序</h4>
+<h4 id="编译程序">编译程序</h4>
 <p>GO是一种编译语言，运行该程序需要首先编译它。这是使用GO构建命令完成的，它将程序编译成一个可执行文件。可执行文件的名称与包含主函数的GO源文件的名称相同。在这种情况下，得到的二进制被称为qrcoded。</p>
 <p>使用 <strong>go build</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go build qrcoded.go
@@ -347,14 +347,14 @@ qrcoded.go
 <p>使用 <strong>go run</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go run qrcoded.go
 Hello QR Code
-</code></pre></div><h4 id="gogo-fmt">go语言样式和go fmt命令</h4>
+</code></pre></div><h4 id="go语言样式和go-fmt命令">go语言样式和go fmt命令</h4>
 <p>大多数语言在风格问题上一直争论不休，比如空间与标签的优点、花括号的最佳位置以及进口的排序。虽然这样的辩论有时会很有趣，但却没有效果。</p>
 <p>GO设计人员对首选代码风格采取了坚定的立场，定义了一种为版本控制系统和代码审查优化的样式。但不是把它写在一个尘土飞扬的互联网角落，而是为我们提供了go fmt工具：</p>
 <p>固定格式化问题</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go fmt qrcoded.go
 qrcoded.go
 </code></pre></div><p>你可能对Go做出的选择,有理论上的、美学上的甚至宗教上的反对，但是最好还是去fmt代码。如果只是为了防止无用的辩论。</p>
-<h4 id="qr">QR代码雏形</h4>
+<h4 id="qr代码雏形">QR代码雏形</h4>
 <p>“Hello World”是一个很好的开始方法，但它仍然有很长的路要走，最终的目标：生成QR码。让我们来看看下一步，看看QR码产生的程序是什么样子：</p>
 <p>qrcoded.go</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"> <span class="mi">1</span> <span class="kn">package</span> <span class="nx">main</span>
@@ -399,7 +399,7 @@ qrcode.png: empty
 </code></pre></div><p>成功！ 我们的代码距离生成QR码更近了一步。</p>
 <p>从这里开始，您可以慢慢充实GenerateQRCode函数; 在每次迭代中，您可以运行程序并检查生成的文件，方法是使用file命令或在图像编辑器中打开它，并直观地验证是否生成了正确的QR代码。</p>
 <p>这是一种非常有效的方法，但我相信有更好的方法。 它被称为测试驱动开发，它是整本书的主题。 继续下一章，看看它的实际效果。</p>
-<h4 id="heading-13">本章总结</h4>
+<h4 id="本章总结">本章总结</h4>
 <p>在本章中，我介绍了go命令及其中一些最重要的子命令：</p>
 <p><strong>go build</strong></p>
 <p>将程序编译为可执行文件。</p>
@@ -408,7 +408,7 @@ qrcode.png: empty
 <p><strong>go run</strong></p>
 <p>编译程序，执行它，并清理生成的可执行文件。</p>
 <p>我还扩展了基础程序，提供了一个生成条形码的最小结构，为本书的核心部分铺平道路：Go中的测试驱动开发。</p>
-<h3 id="heading-14">测试驱动开发</h3>
+<h3 id="测试驱动开发">测试驱动开发</h3>
 <p>测试驱动开发是创建模块化、设计良好、可测试代码而不做任何预先设计的严格规则。它通过使您在非常短的周期中工作来实现这一目标：创建自动化测试，编写最小代码量以满足该测试，并重构代码以提高质量。这种方法确保了所得到的代码的几个优良特性：</p>
 <ol>
 <li>从测试开始,迫使你思考预期的行为；</li>
@@ -416,7 +416,7 @@ qrcode.png: empty
 <li>立即重构结果会迫使你思考代码，以及如何在更大的范围内适应代码。</li>
 </ol>
 <p>在本章中，我将介绍如何用Go创建自动化测试套件，我将提供两个示例，展示测试、编写代码、重构周期。</p>
-<h4 id="go-2">使用go编写测试用例</h4>
+<h4 id="使用go编写测试用例">使用go编写测试用例</h4>
 <p>编写测试完全集成在Go测试工具中。这个命令搜索匹配*_test.go的文件，并执行与特定模式匹配的所有函数。让我们看一下Go测试：</p>
 <p>运行go test</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span>
@@ -425,7 +425,7 @@ qrcode.png: empty
 <p>qrcoded_test.go</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">1</span> <span class="kn">package</span> <span class="nx">main</span>
 </code></pre></div><p>当再次运行go test时，输出略有不同：</p>
-<h5 id="-go-test">使用空测试文件运行测试 <strong>go test</strong></h5>
+<h5 id="使用空测试文件运行测试-go-test">使用空测试文件运行测试 <strong>go test</strong></h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span>
 testing: warning: no tests to run
 PASS
@@ -433,7 +433,7 @@ ok  	_/workspace/golang-tdd	0.018s
 </code></pre></div><p>该工具不再抱怨缺少测试文件，但它确实没有测试函数。 当然，这是正确的，因为我们没有编写任何测试函数。</p>
 <p>在Go中编写单元测试是一个简单的事情，即创建一个看起来像func TestXxx（t * testing.T）的函数，其中Xxx是您选择的名称。 运行<strong>go test</strong>时，匹配此模式的每个函数都是独立执行的。 使用testing.T中定义的方法，你可以告知测试运行器有关测试失败的信息。</p>
 <p>让我们通过第一个测试扩展qrcoded_test.go：验证GenerateQRCode返回一个有用的值。</p>
-<h5 id="qrcoded-testgo">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"> <span class="mi">1</span> <span class="kn">package</span> <span class="nx">main</span>
  <span class="mi">2</span> 
  <span class="mi">3</span> <span class="kn">import</span> <span class="p">(</span>
@@ -458,7 +458,7 @@ ok  	_/workspace/golang-tdd	0.018s
 <p>10-15</p>
 <p>这些行包含测试的断言。 检查结果，如果结果未定义或为空，则通过调用t.Errorf通知测试工具失败。</p>
 <p>那么让我们看看如果我们再次运行测试 <strong>go test</strong>会发生什么：</p>
-<h5 id="-go-test-1">使用失败的单元测试运行测试 <strong>go test</strong></h5>
+<h5 id="使用失败的单元测试运行测试-go-test">使用失败的单元测试运行测试 <strong>go test</strong></h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span> 
 --- FAIL: TestGenerateQRCodeReturnsValue <span class="o">(</span>0.00 seconds<span class="o">)</span>
 	qrcoded_test.go:11: QRCode is nil
@@ -473,25 +473,25 @@ FAIL	_/workspace/golang-tdd	0.018s
 <span class="mi">16</span> 	<span class="k">return</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">{</span><span class="mh">0xFF</span><span class="p">}</span>
 <span class="mi">17</span> <span class="p">}</span>
 </code></pre></div><p>GenerateQRCode的新实现仍然非常无趣，但它足以满足测试用例：</p>
-<h5 id="heading-15">通过所有测试</h5>
+<h5 id="通过所有测试">通过所有测试</h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span> 
 PASS
 ok  	_/Users/yigalduppen/src/golang-tdd	0.018s
 </code></pre></div><p>这次测试通过了。 这本身并不意味着什么 - GenerateQRCode的实现仍然不会产生任何QR码。 但是我们现在有了坚实的基础来实践一些真正的测试驱动开发，并慢慢测试我们的方式到一个正常运行的实现。</p>
-<h4 id="redgreenrefactor">红(Red)，绿(Green)，重构(Refactor)</h4>
+<h4 id="红red绿green重构refactor">红(Red)，绿(Green)，重构(Refactor)</h4>
 <p>在上一节中，我为之前未测试的代码创建了一个测试。 这非常有用，但它与测试驱动开发不同。 在本章开头，我解释了测试驱动开发如何以明确定义的循环为特征，通常称为Red/Green/Refactor循环：</p>
-<h5 id="-red">红 Red</h5>
+<h5 id="红-red">红 Red</h5>
 <p>循环开始于编写捕获新要求的测试，预计此测试将失败。许多工具以红色显示测试失败，因此得名。</p>
-<h4 id="-green">绿 Green</h4>
+<h4 id="绿-green">绿 Green</h4>
 <p>通过编写满足测试所需的最少量代码来继续循环。 这个名称也源于许多工具以绿色显示测试成功的事实。 当您开始练习测试驱动的开发时，编写超过最少量的代码是一个常见的陷阱。 请注意这一点，并不断问自己是否所做的工作超过了最低要求。</p>
-<h4 id="-refactor">重构 Refactor</h4>
+<h4 id="重构-refactor">重构 Refactor</h4>
 <p>循环中的最新步骤是使测试驱动开发成为可行的过程：它迫使您退后一步，查看代码，并在不添加任何功能的情况下改进其结构。重构步骤不是可选步骤，如果没有这一步骤，你的代码将迅速退化为，经过良好测试，但难以理解的混乱。</p>
 <p>让我们通过提出一个新的要求来看看，现实世界中的红/绿/重构循环，GenerateQRCode函数返回的字节切片，应该代表一个有效的PNG图像。</p>
-<h3 id="-red-1">红 Red</h3>
+<h3 id="红-red-1">红 Red</h3>
 <p>第一步是创建一个捕获此要求的新测试。从广义上讲，有两种方法可以解决这个问题：你可以检查前八个字节是否与PNG的头匹配，或者你可以继续解码图像，如果在解码过程中发生错误，你就知道该字节切片并不代表PNG。</p>
 <p>如果你是一个偏执的读者，你可能已经在这个推理中发现了一个缺陷：如果解码算法包含一个错误会导致完全有效的PNG错误怎么办？这是一个有效的问题，它表明了为什么测试驱动的开发不是错误的神奇解决方案。测试驱动开发是一种开发软件的技术;你将不得不假设范围之外的依赖项（例如Go标准库）按照广告的方式工作。</p>
 <p>这个假设在本书中进行，这就是为什么下一个测试使用解码，看看它是否正在工作的原因：</p>
-<h5 id="qrcoded-testgo-1">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-1">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">13</span> <span class="kd">func</span> <span class="nf">TestGenerateQRCodeGeneratesPNG</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">14</span> 	<span class="nx">result</span> <span class="o">:=</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
 <span class="mi">15</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nx">bytes</span><span class="p">.</span><span class="nf">NewBuffer</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
@@ -508,7 +508,7 @@ ok  	_/Users/yigalduppen/src/golang-tdd	0.018s
 <p>16</p>
 <p>这行包含解码逻辑：我解码字节数组，放弃任何积极的结果，并重点放在错误。接下来的三行验证此错误没有发生。注意PNG。解码在字节切片上不工作，但满足io.Reader接口的类型。这就是为什么行15将字节块封装在字节表缓冲区中的原因。</p>
 <p>了解GenerateQRCode函数的当前状态，可以认为这会使测试失败。然而，在你确定之前不要做任何事情：</p>
-<h5 id="heading-16">开始红测试</h5>
+<h5 id="开始红测试">开始红测试</h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span> 
 --- FAIL: TestGenerateQRCodeGeneratesPNG <span class="o">(</span>0.00 seconds<span class="o">)</span>
 	qrcoded_test.go:26: Generated QRCode is not a PNG: unexpected EOF
@@ -516,7 +516,7 @@ FAIL
 <span class="nb">exit</span> status <span class="m">1</span>
 FAIL	_/workspace/golang-tdd		0.020s
 </code></pre></div><p>这是预期的结果,现在是时候用最少量的代码扩展GenerateQRCode函数来满足这个测试。</p>
-<h3 id="-green-1">绿 Green</h3>
+<h3 id="绿-green-1">绿 Green</h3>
 <p>实现此新功能遵循与我们的测试相同的模式：创建图像并使用png.Encode对其进行编码。 再一次，我假设png.Encode的工作方式与宣传的一样。 切勿在单元测试中测试外部依赖项。</p>
 <h5 id="qrcodedgo-1">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">18</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span> <span class="p">{</span>
@@ -529,11 +529,11 @@ FAIL	_/workspace/golang-tdd		0.020s
 </code></pre></div><p>如果您是测试驱动开发的新手，那么这种实现可能会让人感到作弊。 毕竟，我们只是在运行Go标准库，假设它正常工作，而不是做任何实际工作。 但是，在几周内，当GenerateQRCode的内部变得无法识别时，即使实现完全改变，测试仍将是有效的测试。</p>
 <p>你练习测试驱动的开发越多，你就越能摆脱这种欺骗的感觉。 因为测试驱动的开发需要你做小步骤，所以每一个实现都会感觉微不足道。 真正的价值不在于步骤本身，而在于最终产品。</p>
 <p>即使我做了一个微不足道的改变，这肯定会起作用，你应该总是检查结果：</p>
-<h5 id="heading-17">开始绿测试</h5>
+<h5 id="开始绿测试">开始绿测试</h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span> 
 PASS
 ok  	_/workspace/golang-tdd		0.021s
-</code></pre></div><h3 id="heading-18">重构</h3>
+</code></pre></div><h3 id="重构">重构</h3>
 <p>循环中的最后一步是重构步骤。我之前已经说过了，我会再说一遍：在测试驱动开发中，重构步骤不是可选的。没有它，你正在练习测试第一次开发，这需要一个良好的前期设计。如果你如此倾向，可以将重构步骤看作是测试驱动开发的主要指示。</p>
 <p>每个重构步骤从一个问题开始：在不改变功能的情况下，如何使代码更好地表达它的意图？</p>
 <p>在这种情况下，即使代码量仍然非常有限，也有两个痛点。 首先是缺乏适当的错误处理。 但是，正确的错误处理可以被视为非功能性需求，因此我将在下一节使用测试驱动开发来解决这个问题。</p>
@@ -562,7 +562,7 @@ ok  	_/workspace/golang-tdd		0.021s
 <p>其中，io.File满足io.Writer接口。 这意味着在这一行上我可以直接将文件传递给GenerateQRCode函数。 这完全消除了程序中字节切片和缓冲区的概念。</p>
 <p>此示例显示了一点重构可以如何显着提高代码的可读性（和可理解性）。 正如您将在下一节中看到的，此更改还提高了代码的可测试性。 并且需要重复的是，这只是测试驱动开发的承诺：清晰，模块化，可测试的代码。</p>
 <p>但是我们还没有庆祝。 就目前而言，这一变化打破了测试，他们甚至不再编译：</p>
-<h5 id="heading-19">我重构后的影响</h5>
+<h5 id="我重构后的影响">我重构后的影响</h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span>
 <span class="c1"># _/workspace/golang-tdd</span>
 ./qrcoded_test.go:10: cannot use <span class="s2">&#34;555-2368&#34;</span> <span class="o">(</span><span class="nb">type</span> string<span class="o">)</span> as <span class="nb">type</span> io.Writer in fu<span class="se">\
@@ -577,7 +577,7 @@ ok  	_/workspace/golang-tdd		0.021s
 ./qrcoded_test.go:21: GenerateQRCode<span class="o">(</span><span class="s2">&#34;555-2368&#34;</span><span class="o">)</span> used as value
 FAIL	_/workspace/golang-tdd <span class="o">[</span>build failed<span class="o">]</span>
 </code></pre></div><p>测试仍然假设GenerateQRCode接受一个参数并返回一个字节缓冲区。 幸运的是，测试驱动的开发再一次迫使我们采取小步骤，所以解决这个问题是微不足道的。</p>
-<h5 id="qrcoded-testgo-2">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-2">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">10</span> <span class="kd">func</span> <span class="nf">TestGenerateQRCodeReturnsValue</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">11</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
 <span class="mi">12</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
@@ -599,7 +599,7 @@ FAIL	_/workspace/golang-tdd <span class="o">[</span>build failed<span class="o">
 </code></pre></div><p>在此之后，测试又回到绿色。 注意第一次测试如何变得更简单; 因为缓冲区不可能变为零，所以不再需要检查它。 尽管如此，即使测试发生了变化，它们仍然会测试完全相同的功能。</p>
 <p>此示例还显示了测试驱动开发中的一个真正问题：过度使用。 许多重构不仅触及测试中的代码，还触及测试本身。 这意味着如果您有太多测试，那么您将花费更多时间来修复测试而不是实际改进代码。</p>
 <p>事实上，如果你看一下当前的代码，你会看到有两个测试用于同一个路径。 因此，在测试相同数量的功能时，让我们减少测试量：</p>
-<h5 id="qrcoded-testgo-3">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-3">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">10</span> <span class="kd">func</span> <span class="nf">TestGenerateQRCodeGeneratesPNG</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">11</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
 <span class="mi">12</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
@@ -617,13 +617,13 @@ FAIL	_/workspace/golang-tdd <span class="o">[</span>build failed<span class="o">
 </code></pre></div><p>此测试与前两个测试略有不同 - 它涵盖了完全相同的要求，但GenerateQRCode函数签名中的更改现在只需要更改一个测试。</p>
 <p>作为一般规则，你应该尝试对每个流程进行一次单元测试。 如果您的受测单元提供多个流程，则值得考虑将你的单元拆分为多个单元。</p>
 <p>当然，如果不运行go测试，测试驱动开发中的任何步骤都不会完成：</p>
-<h5 id="-go-test-2">永远不要忘记进行测试 <strong>go test</strong></h5>
+<h5 id="永远不要忘记进行测试-go-test">永远不要忘记进行测试 <strong>go test</strong></h5>
 <pre><code>$ go test 
 PASS
 ok  	_/workspace/golang-tdd		0.021s
 </code></pre><p>这结束了本书中第一个真正的测试驱动开发周期。 我用了多个页面来解释我一直在做什么，但在现实生活中，这个循环最多需要5到10分钟，包括至少5次测试。</p>
 <p>当然，只有运行单元测试足够快，这样的工作流程才可行。 我个人对“足够快”的定义大概是五秒钟。 go测试工具在合理的系统上有大约一秒的开销; 这给了我足够的空间来运行一百到两百个单元测试。 在本书中，我将展示几种技术，以尽可能缩短测试的运行时间。</p>
-<h4 id="heading-20">测试错误处理</h4>
+<h4 id="测试错误处理">测试错误处理</h4>
 <p>正如我在上一节所说，是时候提出新的要求了,实际上是一个非功能性的要求，那就是要有适当的错误处理。 对png.Decode的调用可能会导致错误，但GenerateQRCode不会对此做任何事情。</p>
 <p>非测试驱动的方法是改变这样的函数：</p>
 <h5 id="qrcodedgo-3">qrcoded.go</h5>
@@ -632,7 +632,7 @@ ok  	_/workspace/golang-tdd		0.021s
 <span class="mi">22</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">23</span> <span class="p">}</span>
 </code></pre></div><p>事实上，这正是我要做的，但是在我做出这个改变之前，测试驱动的开发需要一个失败的测试。 这并不像听起来那么微不足道。</p>
-<h3 id="heading-21">红</h3>
+<h3 id="红">红</h3>
 <p>每当png.Encode返回错误时，GenerateQRCode函数都应该返回错误。 换句话说，测试应该强制png.Encode返回错误，然后测试GenerateQRCode会导致错误。 让我们从查看png.Encode的文档开始：</p>
 <blockquote>
 <pre><code>  func Encode(w io.Writer, m image.Image) error  
@@ -653,19 +653,19 @@ ok  	_/workspace/golang-tdd		0.021s
 </ol>
 <p>因此，为了测试GenerateQRCode的错误流，我们需要一些实现io.Writer的东西，并且会在Write上导致错误。 一种选择是使用只读临时文件，但有一种更好的方法：使用测试替身（test double）。</p>
 <p>测试替身是一种类型的简化实现，它表现出特定的行为以帮助测试。 传统上，有五种类型的测试替身：</p>
-<h4 id="dummies">傻瓜模式(Dummies)</h4>
+<h4 id="傻瓜模式dummies">傻瓜模式(Dummies)</h4>
 <p>完全没有任何行为的类型，只是因为被测单元的签名需要它们。</p>
-<h4 id="stubs">存根(Stubs)</h4>
+<h4 id="存根stubs">存根(Stubs)</h4>
 <p>实现最少行为以满足测试的类型。</p>
-<h4 id="mocks">嘲弄(Mocks)</h4>
+<h4 id="嘲弄mocks">嘲弄(Mocks)</h4>
 <p>部分实现，你可以定义对其方法的调用方式的期望。</p>
-<h4 id="spies">间谍（Spies）</h4>
+<h4 id="间谍spies">间谍（Spies）</h4>
 <p>部分实现，你可以断言已调用特定方法。</p>
-<h4 id="fakes">假货（Fakes）</h4>
+<h4 id="假货fakes">假货（Fakes）</h4>
 <p>完整，轻量级的实现，例如内存数据库。</p>
 <p>许多语言都有库，允许你在运行时创建存根，模拟和间谍。 但是，Go只允许您在编译时定义新类型，因此在Go中使用测试替身需要更多工作。 幸运的是，Go中接口的概念使它只是一点额外的工作。</p>
 <p>如前所述，测试需要io.Writer的实现，它会在Write上生成错误。现在，定义一个简单的存根就足够了：</p>
-<h5 id="qrcoded-testgo-4">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-4">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">29</span> <span class="kd">type</span> <span class="nx">ErrorWriter</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span>
 <span class="mi">30</span> 
 <span class="mi">31</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">ErrorWriter</span><span class="p">)</span> <span class="nf">Write</span><span class="p">(</span><span class="nx">b</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
@@ -688,7 +688,7 @@ ok  	_/workspace/golang-tdd		0.021s
 <p>35 - 42</p>
 <p>这些行定义了新的测试;,检查GenerateQRCode的结果并将其断言为预期的错误。</p>
 <p>再次执行测试<strong>go test</strong>将再次失败。不是因为缺少功能，而是因为代码不再编译：</p>
-<h5 id="-go-test-3">执行** go test**测试再次失败</h5>
+<h5 id="执行-go-test测试再次失败">执行** go test**测试再次失败</h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span>
 <span class="c1"># _/workspace/golang-tdd</span>
 ./qrcoded_test.go:37: GenerateQRCode<span class="o">(</span>w, <span class="s2">&#34;555-2368&#34;</span><span class="o">)</span> used as value
@@ -701,14 +701,14 @@ FAIL	_/Users/yigalduppen/src/golang-tdd <span class="o">[</span>build failed<spa
 <span class="mi">23</span> 	<span class="k">return</span> <span class="kc">nil</span>
 <span class="mi">24</span> <span class="p">}</span>
 </code></pre></div><p>此更改足以使测试成功失败。</p>
-<h5 id="heading-22">成功失败</h5>
+<h5 id="成功失败">成功失败</h5>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span>
 --- FAIL: TestGenerateQRCodePropagatesErrors <span class="o">(</span>0.00 seconds<span class="o">)</span>
 	qrcoded_test.go:36: Error not propagated correctly, got &lt;nil&gt;
 FAIL
 <span class="nb">exit</span> status <span class="m">1</span>
 FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
-</code></pre></div><h3 id="green">绿（Green）</h3>
+</code></pre></div><h3 id="绿green">绿（Green）</h3>
 <p>在本节的介绍中，我已经放弃了解决方案：</p>
 <h5 id="qrcodedgo-5">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">20</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
@@ -720,7 +720,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>原因是Red步骤必须始终导致测试失败。 这不仅仅是因为教条，而它保证了你的新测试能够测试成功。</p>
 <p>尽管测试驱动的开发需要很小的步骤，但仍然很容易出错。
 如果在测试中出现这样的错误，你最终可能会在最不期望的情况下突然失败，完全没有明显的原因。这就是测试驱动开发决定测试失败的原因。</p>
-<h3 id="refactor">重构（Refactor）</h3>
+<h3 id="重构refactor">重构（Refactor）</h3>
 <p>正如我之前所说，重构不是可选的。但是，此时测试的代码量非常小，看起来结构合理。 所以在这种情况下我决定改进main中的错误处理。</p>
 <h5 id="qrcodedgo-6">qrcoded.go</h5>
 <pre><code>11 func main() {
@@ -739,15 +739,15 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 24 }
 </code></pre><p>现在使用日志包而不是fmt处理所有正常和错误输出。早期退出由log.Fatal处理，它自动调用os.Exit（1）。主要功能仍然没有单元测试，因此运行测试保持绿色。</p>
 <p>是的，这真的是在欺骗：我只重构了未经测试的代码。相信我，当我说我只是出于教学目的而这样做时。</p>
-<h3 id="heading-23">总结</h3>
+<h3 id="总结">总结</h3>
 <p>在本章中，我介绍了go测试单元测试框架，并展示了如何使用它来实现测试驱动开发。</p>
 <p>我已经解释过，重构是成功的测试驱动开发的先决条件，我已经展示了它如何确实可以改进你的代码。</p>
 <p>此外，我已经展示了如何明智地使用小接口作为参数可以使您的Go代码更加可测试。</p>
 <p>在下一章中，我将提供更多关于Red/Green/Refactor循环的示例，并提供一些关于如何创建干净，惯用且可测试的Go代码的示例。</p>
-<h3 id="qr-1">创建QR码</h3>
+<h3 id="创建qr码">创建QR码</h3>
 <p>测试驱动的开发就是一次只采取一小步。尽管如此，在采取下一步措施之前，仍然要有一个普遍的方向感。
 在本章中，我将对QR代码进行高级概述，并使用测试驱动开发来概述总体方向。</p>
-<h4 id="qr-2">究竟是什么QR码？</h4>
+<h4 id="究竟是什么qr码">究竟是什么QR码？</h4>
 <p>在前面的章节中，我已经展示了QR码的一些示例，你可能已经认识到它们。
 基于这些示例，我可以向您显示任何可能的QR码，你仍然会将它们识别为QR码。 不幸的是，这并没有告诉我们如何生成QR码。</p>
 <p>QR码是官方标准化的二维条码类型，ISO的优秀人员在一份名为“ISO / IEC 18004：2006（E）- QR码2005条码符号规范”的文件中解释了QR码的所有细节。”。
@@ -756,7 +756,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 模型1已被弃用，所以本书不会打扰这些。 Model 2 QR码是QR Code 2005的严格子集，不需要任何特殊处理。
 微代码非常有趣，但为了缩小范围，本书将重点介绍如何生成QR代码2005。</p>
 <p>因此，要回答本节标题中的问题：QR码是由ISO/IEC 18002：2006（E）规定的暗方和浅方的二维条形码图案。</p>
-<h4 id="heading-24">二维码术语</h4>
+<h4 id="二维码术语">二维码术语</h4>
 <p>QR码是传送一些输入数据的一种方式：程序将输入数据编码为暗方形和亮方形的图案。
 然后可以将该图案转换为图像并打印。 随后可以扫描打印的图像以获得原始输入数据。</p>
 <p>黑暗和浅色方块称为模块
@@ -766,7 +766,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>QR码的模式是三个不同子模式的组合：功能模式，对于每个版本总是相同的，并且用于校准扫描仪;
 编码模式，包含您要传达的实际数据; 和数据屏蔽模式，它与编码模式相结合，以防止扫描仪混淆。</p>
 <p>规范定义了更多的术语，但现在这已经足够了。</p>
-<h3 id="qr-3">创建QR码</h3>
+<h3 id="创建qr码-1">创建QR码</h3>
 <p>创建QR码遵循简单的8步程序。
 期望最终用户指定输入数据，所需的纠错能力水平，然后程序执行以下操作：</p>
 <ol>
@@ -796,12 +796,12 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 </li>
 </ol>
 <p>这些步骤中的每一步都有其自身的挑战，但这就是你简要创建QR码的方法。</p>
-<h4 id="heading-25">介绍版本</h4>
+<h4 id="介绍版本">介绍版本</h4>
 <p>目前的实施距离实施8步计划还有很长的路要走。
 但是测试驱动的开发完全取决于基础步骤，所以让我们从第一步开始：版本。 此时，版本的概念不存在。 因此，让我们创建一个包含这个概念的测试。</p>
-<h4 id="red">红（Red）</h4>
+<h4 id="红red">红（Red）</h4>
 <p>版本首先表明的是模式的大小。例如，版本1 QR码具有21x21模块的模式。为此创建测试听起来并不难：</p>
-<h5 id="qrcoded-testgo-5">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-5">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">31</span> <span class="kd">func</span> <span class="nf">TestVersionDeterminesSize</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">32</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
 <span class="mi">33</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">,</span> <span class="nf">Version</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="p">)</span>
@@ -838,7 +838,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 但是有一种更好的方法，通常用于Go测试：它被称为表驱动测试。</p>
 <p>表驱动测试都遵循相同的模式：首先，它们定义一个“表”，其中每一行描述特定情况的输入和预期输出。
 然后测试迭代这些行，在输入上应用被测单元并将结果与预期输出进行比较：</p>
-<h5 id="qrcoded-testgo-6">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-6">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">40</span> <span class="kd">func</span> <span class="nf">TestVersionDeterminesSize</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">41</span> 	<span class="nx">table</span> <span class="o">:=</span> <span class="p">[</span><span class="p">]</span><span class="kd">struct</span> <span class="p">{</span>
 <span class="mi">42</span> 		<span class="nx">version</span>  <span class="kt">int</span>
@@ -871,7 +871,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>58-59</p>
 <p>表驱动测试可以涵盖很多情况，因此如果您的错误消息尽可能具体，则可以让你的生活更轻松。</p>
 <p>这次去测试终于失败了。</p>
-<h3 id="green-1">绿(Green)</h3>
+<h3 id="绿green-1">绿(Green)</h3>
 <p>表驱动测试的一个好处是它们允许您在输入和输出上看到aditional结构。
 在这种情况下，很明显模块的数量可以由函数f（x）= 4x + 17给出。这使得初始解决方案非常简单：</p>
 <h5 id="qrcodedgo-8">qrcoded.go</h5>
@@ -881,11 +881,11 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <span class="mi">29</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">30</span> <span class="p">}</span>
 </code></pre></div><p>这足以使测试运行，但并不完全令人满意&hellip;&hellip;</p>
-<h3 id="refactor-1">重构(Refactor)</h3>
+<h3 id="重构refactor-1">重构(Refactor)</h3>
 <p>TestVersionDeterminesSize测试函数涵盖整个GenerateQRCode函数;
 但是，顾名思义它只是实际检查尺寸计算。感觉好像测试太多了，这通常表明被测单元也做得太多了。</p>
 <p>为了集中测试，第一步是将大小计算提取到一个单独的函数中：</p>
-<h5 id="heading-26">提取大小计算</h5>
+<h5 id="提取大小计算">提取大小计算</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">DeriveSizeFromVersion</span><span class="p">(</span><span class="nx">version</span> <span class="nx">Version</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span> <span class="o">+</span> <span class="mi">17</span>
 <span class="p">}</span>
@@ -910,7 +910,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>这是一个使用go测试来验证一切仍然可以正常工作的好时机。
 注意代码如何变得更好：GenerateQRCode函数不再需要知道Version可以转换为int - 它只是询问版本的大小。</p>
 <p>现在我已经从GenerateQRCode函数中提取了大小计算，因此可以集中测试：</p>
-<h5 id="qrcoded-testgo-7">qrcoded_test.go</h5>
+<h5 id="qrcoded_testgo-7">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">53</span> <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">test</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">table</span> <span class="p">{</span>
 <span class="mi">54</span> 	<span class="nx">size</span> <span class="o">:=</span> <span class="nf">Version</span><span class="p">(</span><span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">)</span><span class="p">.</span><span class="nf">PatternSize</span><span class="p">(</span><span class="p">)</span>
 <span class="mi">55</span> 	<span class="k">if</span> <span class="nx">size</span> <span class="o">!=</span> <span class="nx">test</span><span class="p">.</span><span class="nx">expected</span> <span class="p">{</span>
@@ -926,7 +926,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 测试驱动开发的每个支持者都不同意这种观点，因此您应该自己决定自己喜欢什么。</p>
 <p>如果我要测试这种交互，我就是这样做的。 首先，我将把Version变成一个接口，所以我可以在我的测试中创建一个MockVersion。
 然后，此MockVersion将包含其他方法来检查是否实际调用了Size方法。 总而言之，很多代码都是为了进行简单的交互。</p>
-<h3 id="heading-27">总结</h3>
+<h3 id="总结-1">总结</h3>
 <p>在本章中，我向您展示了QR码世界的高级概述。
 我已经使用这个概述来介绍版本的领域概念，我已经向您介绍了表驱动测试，这是Go中常见的习惯用法。</p>
 <p>我已经展示了测试驱动开发如何帮助您识别过多的代码，以及重构步骤如何帮助您分离关注点。</p>
