@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Mac下代理设置  采菊东篱下，悠然见南山。
+ 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
+在终端下访问系统代理 scutil命令管理系统配置参数，通过 &ndash;proxy参数来显示系统代理信息。
+未配置代理情况：
+$ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
+$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：">
+
+<meta property="og:title" content="ProxySet" />
+<meta property="og:description" content="Mac下代理设置  采菊东篱下，悠然见南山。
+ 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
+在终端下访问系统代理 scutil命令管理系统配置参数，通过 &ndash;proxy参数来显示系统代理信息。
+未配置代理情况：
+$ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
+$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/proxyset/" />
+<meta property="article:published_time" content="2020-01-30T11:05:10+08:00" />
+<meta property="article:modified_time" content="2020-01-30T11:05:10+08:00" />
+
+
+<title>
+
+
+     ProxySet 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/proxyset/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-01-30%2011%3a56%3a50.066095%20%2b0800%20CST%20m%3d%2b0.209509780">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-01-30%2011%3a56%3a50.066095%20%2b0800%20CST%20m%3d%2b0.209509780">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-01-30%2011%3a56%3a50.066095%20%2b0800%20CST%20m%3d%2b0.209509780">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-01-30%2011%3a56%3a50.066095%20%2b0800%20CST%20m%3d%2b0.209509780">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    ProxySet
+
+</div>
+
+            <div class="markdown">
+                <h2 id="mac下代理设置">Mac下代理设置</h2>
+<blockquote>
+<p>采菊东篱下，悠然见南山。</p>
+</blockquote>
+<p>一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了<a href="https://dmorgan.info/posts/mac-network-proxy-terminal/">这篇文章</a>，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。</p>
+<h3 id="在终端下访问系统代理">在终端下访问系统代理</h3>
+<p><strong>scutil</strong>命令管理系统配置参数，通过 <strong>&ndash;proxy</strong>参数来显示系统代理信息。</p>
+<p>未配置代理情况：</p>
+<pre><code>$ scutil --proxy
+&lt;dictionary&gt; {
+  FTPPassive : 1
+  HTTPEnable : 0
+  HTTPSEnable : 0
+}
+</code></pre><p>配置代理的情况：</p>
+<pre><code>$ scutil --proxy
+&lt;dictionary&gt; {
+  ExcludeSimpleHostnames : 1
+  FTPEnable : 0
+  FTPPassive : 1
+  GopherEnable : 0
+  HTTPEnable : 1
+  HTTPPort : 49199
+  HTTPProxy : localhost
+  HTTPSEnable : 1
+  HTTPSPort : 49199
+  HTTPSProxy : localhost
+  ProxyAutoConfigEnable : 0
+  ProxyAutoDiscoveryEnable : 0
+  RTSPEnable : 0
+  SOCKSEnable : 0
+}
+</code></pre><h3 id="解析scutil输出">解析scutil输出</h3>
+<p>我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：</p>
+<pre><code>$ export http_proxy=`scutil --proxy | awk '\
+  /HTTPEnable/ { enabled = $3; } \
+  /HTTPProxy/ { server = $3; } \
+  /HTTPPort/ { port = $3; } \
+  END { if (enabled == &quot;1&quot;) { print &quot;http://&quot; server &quot;:&quot; port; } }'`
+$ export HTTP_PROXY=&quot;${http_proxy}&quot;
+</code></pre><p>该脚本在scutil的输出中查找HTTPEnable，HTTPProxy和HTTPPort。 如果启用了代理，则脚本将打印出代理URL，并将其设置为http_proxy环境变量。 如果未启用代理，则脚本会将http_proxy设置为空字符串。 最后一行还设置了HTTP_PROXY环境变量，因为某些命令行应用程序使用了它。</p>
+<p>将此片段放在.bash_profile中可确保在有线和无线网络之间切换时，代理将自动保持配置状态。</p>
+<p>以上就是该文章的主要内容，我也根据上面的内容自己写了一个脚本<strong>setproxy.sh</strong>，因为我使用的VPN是动态的。</p>
+<pre><code>echo 'display proxy info'
+scutil --proxy
+echo 'set proxy http'
+export http_proxy=`scutil --proxy | awk '\
+  /HTTPEnable/ { enabled = $3; } \
+  /HTTPProxy/ { server = $3; } \
+  /HTTPPort/ { port = $3; } \
+  END { if (enabled == &quot;1&quot;) { print &quot;http://&quot; server &quot;:&quot; port; } }'`
+
+echo &quot;httpproxy is ${http_proxy}&quot;
+echo 'set http_proxy'
+
+export HTTP_PROXY=&quot;${http_proxy}&quot;
+
+echo &quot;HTTP_PROXY is ${HTTP_PROXY}&quot;
+
+echo 'done,have a good time!'
+</code></pre><p><strong>使用的时候使用source，而不是sh。</strong></p>
+<pre><code>source setproxy.sh
+</code></pre><p>这样，控制端就能使用了。</p>
+<h2 id="vs-code下的代理">VS Code下的代理</h2>
+<p>在控制端下使用了代理，而使用VS Code的时候也需要进行go的插件升级，所以，我们在VS Code的代理中使用了控制端中获取的代理信息，进行配置。</p>
+<h3 id="在控制中获取代理信息">在控制中获取代理信息</h3>
+<pre><code>httpproxy is http://localhost:50927
+</code></pre><h3 id="将代理信息设置到vs-code中的配置信息">将代理信息设置到VS Code中的配置信息</h3>
+<p>在settings.json中添加一下配置</p>
+<pre><code>&quot;http.proxy&quot;: &quot;http://localhost:50927&quot;
+</code></pre><p>完成后，重启VS Code。终于看到了以下的信息：</p>
+<pre><code>go.toolsGopath setting is not set. Using GOPATH /Users/guoby/OneDrive/mywork/code/gocode
+Installing 17 tools at /Users/guoby/OneDrive/mywork/code/gocode/bin in module mode.
+  gocode
+  gopkgs
+  go-outline
+  go-symbols
+  guru
+  gorename
+  gotests
+  gomodifytags
+  impl
+  fillstruct
+  goplay
+  dlv
+  gocode-gomod
+  godef
+  goreturns
+  golint
+  gopls
+
+Installing github.com/mdempsky/gocode SUCCEEDED
+Installing github.com/uudashr/gopkgs/cmd/gopkgs SUCCEEDED
+Installing github.com/ramya-rao-a/go-outline SUCCEEDED
+Installing github.com/acroca/go-symbols SUCCEEDED
+Installing golang.org/x/tools/cmd/guru SUCCEEDED
+Installing golang.org/x/tools/cmd/gorename SUCCEEDED
+Installing github.com/cweill/gotests/... SUCCEEDED
+Installing github.com/fatih/gomodifytags SUCCEEDED
+Installing github.com/josharian/impl SUCCEEDED
+Installing github.com/davidrjenni/reftools/cmd/fillstruct SUCCEEDED
+Installing github.com/haya14busa/goplay/cmd/goplay SUCCEEDED
+Installing github.com/go-delve/delve/cmd/dlv SUCCEEDED
+Installing github.com/stamblerre/gocode SUCCEEDED
+Installing github.com/rogpeppe/godef SUCCEEDED
+Installing github.com/sqs/goreturns SUCCEEDED
+Installing golang.org/x/lint/golint SUCCEEDED
+Installing golang.org/x/tools/gopls SUCCEEDED
+
+Reload VS Code window to use the Go language server
+All tools successfully installed. You're ready to Go :).
+</code></pre><p>为了，看到这个信息，我甚至想到了如何学习计算机网络了，大头书都找到了，准备深入学习了，毕竟这个问题困扰自己太久了。而最让人兴奋的是，使用google解决了。所以，是不是有一个思路，就是关注问题，持续关注，使用google，最终解决问题。如果看完大头书我感觉已经好几个月了，而自己的问题却没有能及时解决。而自己也从未放弃过学习。</p>
+<p>如果说自己的理论基础薄弱的话，那么在使用google的过程中也锻炼了自己的英文能力。同样，也验证了多学科之间的相互作用。如果没有使用英文进行正确的搜索，或许这个问题需要好久才能解决；如果自己没有实际的动手能力，及时找到了正确的文章也不能解决。或许，这就是相辅相成，所学的知识都有用。学以致用！</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

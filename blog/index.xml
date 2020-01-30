@@ -52,7 +52,8 @@
 今天，开始重新对mac笔记本的电池有了新的认识，也希望重新按照健康的标准来使用，我希望这个就只是一个假象，或者说，我的电池开始维修报警后，我还能用多久！
 也有其他说法是天气问题，但是比起天气问题来说，我更相信的说法是苹果的系统升级后，变着法来升级硬件呀！
 以下是网友提供的保养电池的方法，我觉得还是毕竟靠谱的，如果从淘宝上买了新电池后，就这样保养了。
-第一种方法：保持离子的活性，提升电池健康度。 1、首先我们使用电源适配器把电池充满电； 2、拔掉电源适配器，重置smc； Shift - Control - Option - Power； 3、然后使用电池运行macbook，直到电量用到10%后再插入电源适配器； 4、提示：连续多天充放电，用到10%或者自动关机再冲，连续几次后就不提示修理电池了，过了几个月又提示，用的第二种方法解决！第二种方法：最新系统解决电池校准。 最新雪豹系统目前已经免费升级了，官方在系统中对电源管理计划进行了优化，macbook air就是升级最新系统后解决了第二次提示修理电池的问题。 友情提示：macbook电池采用的是锂电池，如果长时间使用电源适配器的话会导致电池离子的活性度降低，从而电池健康度会越来越差。建议每个月进行一次完全冲放电。 第三种方法：更换电池。 一般来说macbook锂电池充电循环次数只能用400-600次，电池基本上就不耐用，要出现问题了。 </description>
+第一种方法：保持离子的活性，提升电池健康度。 1、首先我们使用电源适配器把电池充满电； 2、拔掉电源适配器，重置smc； Shift - Control - Option - Power； 3、然后使用电池运行macbook，直到电量用到10%后再插入电源适配器； 4、提示：连续多天充放电，用到10%或者自动关机再冲，连续几次后就不提示修理电池了，过了几个月又提示，用的第二种方法解决！第二种方法：最新系统解决电池校准。 最新雪豹系统目前已经免费升级了，官方在系统中对电源管理计划进行了优化，macbook air就是升级最新系统后解决了第二次提示修理电池的问题。 友情提示：macbook电池采用的是锂电池，如果长时间使用电源适配器的话会导致电池离子的活性度降低，从而电池健康度会越来越差。建议每个月进行一次完全冲放电。 第三种方法：更换电池。 一般来说macbook锂电池充电循环次数只能用400-600次，电池基本上就不耐用，要出现问题了。  ps. 2020-1-29 补充
+ 不知道为什么？真的，如果说没有能耐得住的话，我想我已经换了电池，我忍住了，我想看看我的电池什么时候真的就报废了，或者说充不了电了。今天在电脑升级到10.15.3的时候，电池需要维护的报警没有了，看了一下电池状态居然是正常的，我不知道我还能说什么？或许这个套路让多少像我这样有强迫症的人换电池呢？ 居然好了，不知道该开心还是郁闷？</description>
     </item>
     
     <item>
@@ -334,7 +335,7 @@ bingyideMacBook-Pro:~ guoby$ docker stop --help Usage:	docker stop [OPTIONS] CON
 2. 安装 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v /Users/guoby/mywork/code/che-data:/data eclipse/che start 正常启动后，显示以下内容：
 INFO: (che start): Use: http://localhost:8080 INFO: (che start): API: http://localhost:8080/swagger 在浏览器上输入：http://localhost:8080 就可以使用Eclipse Che了。
 3.疑难杂症 遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。
-Don&#39;t worry,it will be solved.
+Don&amp;rsquo;t worry,it will be solved.
 常见问题：
 Failed to start workspace with Server &amp;lsquo;wsagent/http&amp;rsquo; in machine &amp;lsquo;dev-machine&amp;rsquo; not available.</description>
     </item>
@@ -439,7 +440,7 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
       <pubDate>Sat, 14 Jul 2018 16:46:13 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/blog/anon/</guid>
-      <description>匿名者  What you look for every day of your life.Why you&#39;ll never understand.It&#39;s not that I have something to hide&amp;hellip; I hava nothing I want you to see.
+      <description>匿名者  What you look for every day of your life.Why you&amp;rsquo;ll never understand.It&amp;rsquo;s not that I have something to hide&amp;hellip; I hava nothing I want you to see.
  最近看了一部电影《匿名者》。
 刚刚开始看的时候，还是被影片中的电脑特技给征服了。看到这种通过眼睛来进行扫描人员信息的时候，还是联想到了谷歌的glass。但是唯一的区别在于谷歌glass是可以摘下来的，而电影里的是每个人都被种植到了眼睛了，并且不能被摘除。如果被入侵了，那么人就瞎了。而且所谓的记忆，也会被删除。
 不可否认，这样将主动权都交给了电脑，会提高相对的安全。但是，更多的是不安全。所以，电影里的女主角才启动了隐藏算法。越是绝对的控制，越是不安全。

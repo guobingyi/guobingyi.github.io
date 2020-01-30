@@ -6,10 +6,24 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Aug 2019 07:03:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 11:05:10 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ProxySet</title>
+      <link>https://guobingyi.github.io/code/proxyset/</link>
+      <pubDate>Thu, 30 Jan 2020 11:05:10 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/proxyset/</guid>
+      <description>Mac下代理设置  采菊东篱下，悠然见南山。
+ 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
+在终端下访问系统代理 scutil命令管理系统配置参数，通过 &amp;ndash;proxy参数来显示系统代理信息。
+未配置代理情况：
+$ scutil --proxy &amp;lt;dictionary&amp;gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
+$ scutil --proxy &amp;lt;dictionary&amp;gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：</description>
+    </item>
     
     <item>
       <title>Git</title>
@@ -79,7 +93,7 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
       <pubDate>Thu, 09 Aug 2018 11:39:34 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/others/</guid>
-      <description>Don&#39;t be evil
+      <description>Don&amp;rsquo;t be evil
  记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
 bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
 If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;quot;python@2&amp;quot; appears in that list, and Python 2.</description>
