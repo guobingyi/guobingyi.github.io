@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="C#  C#的学习有太多的情怀，比如pascal。
+ 一直都在不断的换语言来学习，来弥补学习上的懒惰。
+不知道是什么原因，我突然对每种语言都热衷起来，对我原来写的那篇博客打脸，或者说也不能算是打脸，而是不同时期的不同思考罢了。 😊
+第一份工作是冲着Java的Sun认证去的，发现是vb和Delphi开发的项目。而在此之前，大学毕业的时候看到老九用C#写代码，老高就让我好好学习一下，而我的那台老电脑还存着第一本书是介绍C#的。说明在最早的时候，我认识到的是C#，而不是Java。
+刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。
+学习语言的目的是什么？我想就是用该语言快速的完成任务。更好听的是实现自己的思想。生活在这个时代太幸福了，不需要一来就学习汇编语言，有非常多的高级语言供我们选择。现阶段我比较喜欢的go，打动我的是真正的跨平台。python，ruby吧，你要装运行环境，Java呢，虚拟机要装，C#要安装dotnet-sdk。Rust准备看一下。扯远了，学习的目的还是有所需求。比如，公司的项目就是该语言开发的，你要继续开发；公司的项目需要重新搭建，你需要进行评估。总之，学习带着目的来和不带目的来，学习的效果是不一样的。
+最近，突发奇想，把所学的语言都重新认真的看一遍，因为咋不是有时间嘛，把时间浪费在有意义的事情上，多好。而最先被看到的是C#，那种熟悉的感觉依稀记得。所以直接安装了。
+brew cask install dotnet-sdk 安装完看了一下版本，都3.1.101了，发展速度，好快。
+快速的搭建了一个hello world项目。
+dotnet new console --name Hello ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。
+执行项目。
+ cd Hello dotnet run 这样一个hello,world就打印在终端了，嗯，是非常速度的。
+接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。
+code -r Hello 最小的完整代码片段：
+using System; namespace Hello { class Program { static void Main(string[] args) { Console.WriteLine(&quot;Hello World!&quot;); } } } 怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。
+ 在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是时间和实践。
+ 在看完了将近2000多页的C#文档，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。
+下面是一些非常重要的部分：
+C# 教程  官方的例子，手把手教你。">
+
+<meta property="og:title" content="Csharp" />
+<meta property="og:description" content="C#  C#的学习有太多的情怀，比如pascal。
+ 一直都在不断的换语言来学习，来弥补学习上的懒惰。
+不知道是什么原因，我突然对每种语言都热衷起来，对我原来写的那篇博客打脸，或者说也不能算是打脸，而是不同时期的不同思考罢了。 😊
+第一份工作是冲着Java的Sun认证去的，发现是vb和Delphi开发的项目。而在此之前，大学毕业的时候看到老九用C#写代码，老高就让我好好学习一下，而我的那台老电脑还存着第一本书是介绍C#的。说明在最早的时候，我认识到的是C#，而不是Java。
+刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。
+学习语言的目的是什么？我想就是用该语言快速的完成任务。更好听的是实现自己的思想。生活在这个时代太幸福了，不需要一来就学习汇编语言，有非常多的高级语言供我们选择。现阶段我比较喜欢的go，打动我的是真正的跨平台。python，ruby吧，你要装运行环境，Java呢，虚拟机要装，C#要安装dotnet-sdk。Rust准备看一下。扯远了，学习的目的还是有所需求。比如，公司的项目就是该语言开发的，你要继续开发；公司的项目需要重新搭建，你需要进行评估。总之，学习带着目的来和不带目的来，学习的效果是不一样的。
+最近，突发奇想，把所学的语言都重新认真的看一遍，因为咋不是有时间嘛，把时间浪费在有意义的事情上，多好。而最先被看到的是C#，那种熟悉的感觉依稀记得。所以直接安装了。
+brew cask install dotnet-sdk 安装完看了一下版本，都3.1.101了，发展速度，好快。
+快速的搭建了一个hello world项目。
+dotnet new console --name Hello ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。
+执行项目。
+ cd Hello dotnet run 这样一个hello,world就打印在终端了，嗯，是非常速度的。
+接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。
+code -r Hello 最小的完整代码片段：
+using System; namespace Hello { class Program { static void Main(string[] args) { Console.WriteLine(&quot;Hello World!&quot;); } } } 怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。
+ 在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是时间和实践。
+ 在看完了将近2000多页的C#文档，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。
+下面是一些非常重要的部分：
+C# 教程  官方的例子，手把手教你。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/csharp/" />
+<meta property="article:published_time" content="2020-02-06T19:37:59+08:00" />
+<meta property="article:modified_time" content="2020-02-06T19:37:59+08:00" />
+
+
+<title>
+
+
+     Csharp 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/csharp/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-02-12%2017%3a46%3a37.460035%20%2b0800%20CST%20m%3d%2b0.103734697">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-02-12%2017%3a46%3a37.460035%20%2b0800%20CST%20m%3d%2b0.103734697">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-02-12%2017%3a46%3a37.460035%20%2b0800%20CST%20m%3d%2b0.103734697">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-02-12%2017%3a46%3a37.460035%20%2b0800%20CST%20m%3d%2b0.103734697">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Csharp
+
+</div>
+
+            <div class="markdown">
+                <h2 id="c">C#</h2>
+<blockquote>
+<p>C#的学习有太多的情怀，比如pascal。</p>
+</blockquote>
+<p>一直都在不断的换语言来学习，来弥补学习上的懒惰。</p>
+<p>不知道是什么原因，我突然对每种语言都热衷起来，对我原来写的那篇博客打脸，或者说也不能算是打脸，而是不同时期的不同思考罢了。 😊</p>
+<p>第一份工作是冲着Java的Sun认证去的，发现是vb和Delphi开发的项目。而在此之前，大学毕业的时候看到老九用C#写代码，老高就让我好好学习一下，而我的那台老电脑还存着第一本书是介绍C#的。说明在最早的时候，我认识到的是C#，而不是Java。</p>
+<p>刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。</p>
+<p>学习语言的目的是什么？我想就是用该语言快速的完成任务。更好听的是实现自己的思想。生活在这个时代太幸福了，不需要一来就学习汇编语言，有非常多的高级语言供我们选择。现阶段我比较喜欢的go，打动我的是真正的跨平台。python，ruby吧，你要装运行环境，Java呢，虚拟机要装，C#要安装dotnet-sdk。Rust准备看一下。扯远了，学习的目的还是有所需求。比如，公司的项目就是该语言开发的，你要继续开发；公司的项目需要重新搭建，你需要进行评估。总之，学习带着目的来和不带目的来，学习的效果是不一样的。</p>
+<p>最近，突发奇想，把所学的语言都重新认真的看一遍，因为咋不是有时间嘛，把时间浪费在有意义的事情上，多好。而最先被看到的是C#，那种熟悉的感觉依稀记得。所以直接安装了。</p>
+<pre><code>brew cask install dotnet-sdk 
+</code></pre><p>安装完看了一下版本，都3.1.101了，发展速度，好快。</p>
+<p>快速的搭建了一个hello world项目。</p>
+<pre><code>dotnet new console --name Hello
+</code></pre><p>ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。</p>
+<p>执行项目。</p>
+<pre><code> cd Hello
+ dotnet run
+</code></pre><p>这样一个hello,world就打印在终端了，嗯，是非常速度的。</p>
+<p>接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。</p>
+<pre><code>code -r Hello
+</code></pre><p>最小的完整代码片段：</p>
+<pre><code>using System;
+
+namespace Hello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(&quot;Hello World!&quot;);
+        }
+    }
+}
+</code></pre><p>怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。</p>
+<blockquote>
+<p>在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是<strong>时间</strong>和<strong>实践</strong>。</p>
+</blockquote>
+<p>在看完了将近2000多页的<a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/">C#文档</a>，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。</p>
+<p>下面是一些非常重要的部分：</p>
+<h3 id="c-教程">C# 教程</h3>
+<blockquote>
+<p>官方的例子，手把手教你。</p>
+</blockquote>
+<h3 id="c-编码约定">C# 编码约定</h3>
+<blockquote>
+<p>这部分内容可以说是精华部分，一门语言最应该熟读的部分。展示C# 最佳做法。</p>
+</blockquote>
+<h3 id="c-编程指南">C# 编程指南</h3>
+<blockquote>
+<p>我严重怀疑原来的大头书都是抄这些内容，现在可以免费读了，好。</p>
+</blockquote>
+<h3 id="c-参考">C# 参考</h3>
+<blockquote>
+<p>C#语言中的边边角角都可以在这些地方找到。</p>
+</blockquote>
+<p>看完后就可以写代码了，如果不看文档就写就是下面的样子。</p>
+<p><img src="https://guobingyi.github.io/img/code/lang_doc.jpeg" alt="文档的重要性"></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
