@@ -14,7 +14,17 @@
 0x00 入门 入门其实就是看Emacs的帮助手册，C-h t调用出帮助手册，使用大约30分钟的时间看完整个文档。那么基本可以对键有一个大概的认识，还是 需要从实战中不断加深认识。
 0x01 看书或者视频 对于看书，我觉得有时候会有点枯燥，没事时间的同学可以看一下zilongshanren的Spacemacs Rocks 第二季的文章，最好 配合着视频看，会提高很多。
 0x02 学以致用 用学的目的不就是为了用嘛，怎么用，就是自己用着顺手，每次打开电脑的一件事就是启动Emasc。
-0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。">
+0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。
+0x04 OrgMode 对于我想一直留下来的原因，我想Orgmode占了一定的比例，毕竟在文本中能有这样强大的功能不多，而已经厌倦了word的我，这个功能让我非常迷恋。
+一些比较常用的功能：
+  对于进度使用情况在[]填入%为百分比，/为完成情况
+  C-c C-c 改变复选框选中和取消状态
+  C-c C-t 改变todo的状态为done或者取消
+  在todo列表中C-c C-s 插入开始时间
+  在todo列表中C-c C-d 插入结束时间
+  学习使用[-]复选框模式
+  继续学习如何使用
+  今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装MacTeX，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？">
 
 <meta property="og:title" content="Learn Emacs" />
 <meta property="og:description" content="Emasc 学习  如果说一个IDE可以用一辈子的话，那么就是Emasc。
@@ -22,7 +32,17 @@
 0x00 入门 入门其实就是看Emacs的帮助手册，C-h t调用出帮助手册，使用大约30分钟的时间看完整个文档。那么基本可以对键有一个大概的认识，还是 需要从实战中不断加深认识。
 0x01 看书或者视频 对于看书，我觉得有时候会有点枯燥，没事时间的同学可以看一下zilongshanren的Spacemacs Rocks 第二季的文章，最好 配合着视频看，会提高很多。
 0x02 学以致用 用学的目的不就是为了用嘛，怎么用，就是自己用着顺手，每次打开电脑的一件事就是启动Emasc。
-0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。" />
+0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。
+0x04 OrgMode 对于我想一直留下来的原因，我想Orgmode占了一定的比例，毕竟在文本中能有这样强大的功能不多，而已经厌倦了word的我，这个功能让我非常迷恋。
+一些比较常用的功能：
+  对于进度使用情况在[]填入%为百分比，/为完成情况
+  C-c C-c 改变复选框选中和取消状态
+  C-c C-t 改变todo的状态为done或者取消
+  在todo列表中C-c C-s 插入开始时间
+  在todo列表中C-c C-d 插入结束时间
+  学习使用[-]复选框模式
+  继续学习如何使用
+  今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装MacTeX，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/emacs/learn/" />
 <meta property="article:published_time" content="2019-01-13T10:49:09+08:00" />
@@ -53,11 +73,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-02-12%2017%3a56%3a49.966323%20%2b0800%20CST%20m%3d%2b0.163258991">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-02-12%2017%3a56%3a49.966323%20%2b0800%20CST%20m%3d%2b0.163258991">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-02-12%2017%3a56%3a49.966323%20%2b0800%20CST%20m%3d%2b0.163258991">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-02-18%2017%3a11%3a12.336834%20%2b0800%20CST%20m%3d%2b0.270241549">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-02-18%2017%3a11%3a12.336834%20%2b0800%20CST%20m%3d%2b0.270241549">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-02-18%2017%3a11%3a12.336834%20%2b0800%20CST%20m%3d%2b0.270241549">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-02-12%2017%3a56%3a49.966323%20%2b0800%20CST%20m%3d%2b0.163258991">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-02-18%2017%3a11%3a12.336834%20%2b0800%20CST%20m%3d%2b0.270241549">
     
 
 
@@ -240,6 +260,33 @@
 <p>用学的目的不就是为了用嘛，怎么用，就是自己用着顺手，每次打开电脑的一件事就是启动Emasc。</p>
 <h3 id="0x03-安心种田">0x03 安心种田</h3>
 <p>将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。</p>
+<h3 id="0x04-orgmode">0x04 OrgMode</h3>
+<p>对于我想一直留下来的原因，我想Orgmode占了一定的比例，毕竟在文本中能有这样强大的功能不多，而已经厌倦了word的我，这个功能让我非常迷恋。</p>
+<p>一些比较常用的功能：</p>
+<ul>
+<li>
+<p><input checked="" disabled="" type="checkbox">对于进度使用情况在[]填入%为百分比，/为完成情况</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox">C-c C-c 改变复选框选中和取消状态</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox">C-c C-t 改变todo的状态为done或者取消</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox">在todo列表中C-c C-s 插入开始时间</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox">在todo列表中C-c C-d 插入结束时间</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox">学习使用[-]复选框模式</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox">继续学习如何使用</p>
+</li>
+</ul>
+<p>今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装<a href="http://tug.org/mactex/mactex-download.html">MacTeX</a>，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？</p>
 
             </div>
         </div>
