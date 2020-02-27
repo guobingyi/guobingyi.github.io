@@ -79,11 +79,11 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-02-18%2017%3a11%3a12.455562%20%2b0800%20CST%20m%3d%2b0.388966664">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-02-18%2017%3a11%3a12.455562%20%2b0800%20CST%20m%3d%2b0.388966664">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-02-18%2017%3a11%3a12.455562%20%2b0800%20CST%20m%3d%2b0.388966664">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-02-27%2017%3a20%3a19.779818%20%2b0800%20CST%20m%3d%2b1.564212717">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-02-27%2017%3a20%3a19.779818%20%2b0800%20CST%20m%3d%2b1.564212717">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-02-27%2017%3a20%3a19.779818%20%2b0800%20CST%20m%3d%2b1.564212717">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-02-18%2017%3a11%3a12.455562%20%2b0800%20CST%20m%3d%2b0.388966664">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-02-27%2017%3a20%3a19.779818%20%2b0800%20CST%20m%3d%2b1.564212717">
     
 
 
@@ -115,8 +115,6 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
                 
                 
                 
-                
-                    
                 
                     
                 
@@ -276,7 +274,7 @@ Go配置插件，Emasc和Vim都有提供。</p>
 <h4 id="go代码">Go代码</h4>
 <p>本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。</p>
 <p>fragment.go</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">17</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">Receiver</span><span class="p">)</span> <span class="nf">MyFunc</span><span class="p">(</span><span class="p">)</span> <span class="nx">err</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">17</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">Receiver</span><span class="p">)</span> <span class="nf">MyFunc</span><span class="p">()</span> <span class="nx">err</span> <span class="p">{</span>
 <span class="mi">18</span> 	<span class="nb">print</span><span class="p">(</span><span class="s">&#34;Anything&#34;</span><span class="p">)</span>
 <span class="mi">19</span> 	<span class="nb">print</span><span class="p">(</span><span class="s">&#34;Even more&#34;</span><span class="p">)</span>
 <span class="mi">20</span> <span class="p">}</span>
@@ -302,13 +300,13 @@ cat: HelloWorld.txt: No such file or directory
 <p>在少数情况下，我必须参考目录列表。 它们始终以工作空间为根，即存储源代码的目录的通用名称。</p>
 <p><strong>目录结构</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">workspace</span><span class="o">/</span>
-<span class="err">├</span><span class="err">─</span><span class="err">─</span> <span class="nx">bin</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">qrcoded</span> 
-<span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">src</span><span class="o">/</span>
-    <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span>
-        <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">publysher</span><span class="o">/</span>
-            <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">qrcoded</span><span class="o">/</span>
-                <span class="err">└</span><span class="err">─</span><span class="err">─</span> <span class="nx">qrcoded</span><span class="p">.</span><span class="k">go</span>
+<span class="err">├──</span> <span class="nx">bin</span><span class="o">/</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="nx">qrcoded</span> 
+<span class="err">└──</span> <span class="nx">src</span><span class="o">/</span>
+    <span class="err">└──</span> <span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span>
+        <span class="err">└──</span> <span class="nx">publysher</span><span class="o">/</span>
+            <span class="err">└──</span> <span class="nx">qrcoded</span><span class="o">/</span>
+                <span class="err">└──</span> <span class="nx">qrcoded</span><span class="p">.</span><span class="k">go</span>
 </code></pre></div><h4 id="获取代码">获取代码</h4>
 <p>本书中的所有源代码都发布在http://github.com/publysher/golang-tdd; master分支包含最终结果，每个章节都有一个单独的分支。 源代码为开源许许可。</p>
 <h3 id="你好世界">你好，世界</h3>
@@ -320,7 +318,7 @@ cat: HelloWorld.txt: No such file or directory
 <span class="mi">2</span> 
 <span class="mi">3</span> <span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 <span class="mi">4</span> 
-<span class="mi">5</span> <span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<span class="mi">5</span> <span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 <span class="mi">6</span> 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello QR Code&#34;</span><span class="p">)</span>
 <span class="mi">7</span> <span class="p">}</span>
 </code></pre></div><p>如果你已经完成了GO2的在线旅行，这个程序不会对你造成任何神秘感。然而，在GO之旅使用交互式GO Playground时，本书将使用命令行编译、测试和运行程序。</p>
@@ -366,7 +364,7 @@ qrcoded.go
  <span class="mi">5</span> 	<span class="s">&#34;io/ioutil&#34;</span>
  <span class="mi">6</span> <span class="p">)</span>
  <span class="mi">7</span> 
- <span class="mi">8</span> <span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+ <span class="mi">8</span> <span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
  <span class="mi">9</span> 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello QR Code&#34;</span><span class="p">)</span>
 <span class="mi">10</span> 
 <span class="mi">11</span> 	<span class="nx">qrcode</span> <span class="o">:=</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
@@ -384,7 +382,7 @@ qrcoded.go
 ./qrcoded.go:11: undefined: GenerateQRCode
 </code></pre></div><p>让我们用最少的必要量来扩展代码：一个名为的GenerateQRCode函数，它接受一个字符串并返回一个字节切片。</p>
 <p>qrcoded.go</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">15</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">15</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">byte</span> <span class="p">{</span>
 <span class="mi">16</span> 	<span class="k">return</span> <span class="kc">nil</span>
 <span class="mi">17</span> <span class="p">}</span>
 </code></pre></div><p>这足以让程序再次运行。</p>
@@ -471,8 +469,8 @@ FAIL	_/workspace/golang-tdd	0.018s
 </code></pre></div><p>这次测试清楚地运行了新的单元测试。 正如预期的那样，它失败了。 该框架清楚地显示了失败的函数的名称，确切的行和测试中提供的确切消息。</p>
 <p>此时，是时候编写将使此测试工作的最少量代码：</p>
 <h5 id="qrcodedgo">qrcoded.go</h5>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">15</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span> <span class="p">{</span>
-<span class="mi">16</span> 	<span class="k">return</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">{</span><span class="mh">0xFF</span><span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">15</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">byte</span> <span class="p">{</span>
+<span class="mi">16</span> 	<span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{</span><span class="mh">0xFF</span><span class="p">}</span>
 <span class="mi">17</span> <span class="p">}</span>
 </code></pre></div><p>GenerateQRCode的新实现仍然非常无趣，但它足以满足测试用例：</p>
 <h5 id="通过所有测试">通过所有测试</h5>
@@ -521,12 +519,12 @@ FAIL	_/workspace/golang-tdd		0.020s
 <h3 id="绿-green-1">绿 Green</h3>
 <p>实现此新功能遵循与我们的测试相同的模式：创建图像并使用png.Encode对其进行编码。 再一次，我假设png.Encode的工作方式与宣传的一样。 切勿在单元测试中测试外部依赖项。</p>
 <h5 id="qrcodedgo-1">qrcoded.go</h5>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">18</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span> <span class="p">{</span>
-<span class="mi">19</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">18</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">byte</span> <span class="p">{</span>
+<span class="mi">19</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 <span class="mi">20</span> 	<span class="nx">buf</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
 <span class="mi">21</span> 	<span class="nx">_</span> <span class="p">=</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">buf</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">22</span> 
-<span class="mi">23</span> 	<span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nf">Bytes</span><span class="p">(</span><span class="p">)</span>
+<span class="mi">23</span> 	<span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nf">Bytes</span><span class="p">()</span>
 <span class="mi">24</span> <span class="p">}</span>
 </code></pre></div><p>如果您是测试驱动开发的新手，那么这种实现可能会让人感到作弊。 毕竟，我们只是在运行Go标准库，假设它正常工作，而不是做任何实际工作。 但是，在几周内，当GenerateQRCode的内部变得无法识别时，即使实现完全改变，测试仍将是有效的测试。</p>
 <p>你练习测试驱动的开发越多，你就越能摆脱这种欺骗的感觉。 因为测试驱动的开发需要你做小步骤，所以每一个实现都会感觉微不足道。 真正的价值不在于步骤本身，而在于最终产品。</p>
@@ -542,17 +540,17 @@ ok  	_/workspace/golang-tdd		0.021s
 <p>第二点更微妙。 如果你看看GenerateQRCode，你可以看到我正在使用bytes.Buffer来满足png.Encode函数的签名。 或者，如果从另一个方向看它，我已经引入了这个缓冲区，因为GenerateQRCode想要返回一个字节切片。 该字节切片仅用于将图像写入文件。</p>
 <p>这个重构步骤将摆脱缓冲区。 我将转换代码以使用满足io.Writer接口的任何内容，而不是传递字节切片，就像png.Encode函数一样。 我们来看看我的重构程序：</p>
 <h5 id="qrcodedgo-2">qrcoded.go</h5>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">11</span> <span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">11</span> <span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 <span class="mi">12</span> 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello QR Code&#34;</span><span class="p">)</span>
 <span class="mi">13</span> 
 <span class="mi">14</span> 	<span class="nx">file</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="s">&#34;qrcode.png&#34;</span><span class="p">)</span>
-<span class="mi">15</span> 	<span class="k">defer</span> <span class="nx">file</span><span class="p">.</span><span class="nf">Close</span><span class="p">(</span><span class="p">)</span>
+<span class="mi">15</span> 	<span class="k">defer</span> <span class="nx">file</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
 <span class="mi">16</span> 
 <span class="mi">17</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
 <span class="mi">18</span> <span class="p">}</span>
 <span class="mi">19</span> 
 <span class="mi">20</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
-<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 <span class="mi">22</span> 	<span class="nx">_</span> <span class="p">=</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">23</span> <span class="p">}</span>
 </code></pre></div><p>20 - 23</p>
@@ -584,7 +582,7 @@ FAIL	_/workspace/golang-tdd <span class="o">[</span>build failed<span class="o">
 <span class="mi">11</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
 <span class="mi">12</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
 <span class="mi">13</span> 
-<span class="mi">14</span> 	<span class="k">if</span> <span class="nx">buffer</span><span class="p">.</span><span class="nf">Len</span><span class="p">(</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="mi">14</span> 	<span class="k">if</span> <span class="nx">buffer</span><span class="p">.</span><span class="nf">Len</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
 <span class="mi">15</span> 		<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;No QRCode generated&#34;</span><span class="p">)</span>
 <span class="mi">16</span> 	<span class="p">}</span>
 <span class="mi">17</span> <span class="p">}</span>
@@ -606,7 +604,7 @@ FAIL	_/workspace/golang-tdd <span class="o">[</span>build failed<span class="o">
 <span class="mi">11</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
 <span class="mi">12</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
 <span class="mi">13</span> 
-<span class="mi">14</span> 	<span class="k">if</span> <span class="nx">buffer</span><span class="p">.</span><span class="nf">Len</span><span class="p">(</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="mi">14</span> 	<span class="k">if</span> <span class="nx">buffer</span><span class="p">.</span><span class="nf">Len</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
 <span class="mi">15</span> 		<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;No QRCode generated&#34;</span><span class="p">)</span>
 <span class="mi">16</span> 	<span class="p">}</span>
 <span class="mi">17</span> 
@@ -630,7 +628,7 @@ ok  	_/workspace/golang-tdd		0.021s
 <p>非测试驱动的方法是改变这样的函数：</p>
 <h5 id="qrcodedgo-3">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">20</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 <span class="mi">22</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">23</span> <span class="p">}</span>
 </code></pre></div><p>事实上，这正是我要做的，但是在我做出这个改变之前，测试驱动的开发需要一个失败的测试。 这并不像听起来那么微不足道。</p>
@@ -668,9 +666,9 @@ ok  	_/workspace/golang-tdd		0.021s
 <p>许多语言都有库，允许你在运行时创建存根，模拟和间谍。 但是，Go只允许您在编译时定义新类型，因此在Go中使用测试替身需要更多工作。 幸运的是，Go中接口的概念使它只是一点额外的工作。</p>
 <p>如前所述，测试需要io.Writer的实现，它会在Write上生成错误。现在，定义一个简单的存根就足够了：</p>
 <h5 id="qrcoded_testgo-4">qrcoded_test.go</h5>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">29</span> <span class="kd">type</span> <span class="nx">ErrorWriter</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">29</span> <span class="kd">type</span> <span class="nx">ErrorWriter</span> <span class="kd">struct</span><span class="p">{}</span>
 <span class="mi">30</span> 
-<span class="mi">31</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">ErrorWriter</span><span class="p">)</span> <span class="nf">Write</span><span class="p">(</span><span class="nx">b</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<span class="mi">31</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">ErrorWriter</span><span class="p">)</span> <span class="nf">Write</span><span class="p">(</span><span class="nx">b</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">32</span> 	<span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="s">&#34;Expected error&#34;</span><span class="p">)</span>
 <span class="mi">33</span> <span class="p">}</span>
 <span class="mi">34</span> 
@@ -678,7 +676,7 @@ ok  	_/workspace/golang-tdd		0.021s
 <span class="mi">36</span> 	<span class="nx">w</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">ErrorWriter</span><span class="p">)</span>
 <span class="mi">37</span> 	<span class="nx">err</span> <span class="o">:=</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">)</span>
 <span class="mi">38</span> 
-<span class="mi">39</span> 	<span class="k">if</span> <span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span> <span class="o">||</span> <span class="nx">err</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span><span class="p">)</span> <span class="o">!=</span> <span class="s">&#34;Expected error&#34;</span> <span class="p">{</span>
+<span class="mi">39</span> 	<span class="k">if</span> <span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span> <span class="o">||</span> <span class="nx">err</span><span class="p">.</span><span class="nf">Error</span><span class="p">()</span> <span class="o">!=</span> <span class="s">&#34;Expected error&#34;</span> <span class="p">{</span>
 <span class="mi">40</span> 		<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;Error not propagated correctly, got %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 <span class="mi">41</span> 	<span class="p">}</span>
 <span class="mi">42</span> <span class="p">}</span>
@@ -698,7 +696,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd <span class="o">[</span>build failed<spa
 </code></pre></div><p>现在测试假设GenerateQRCode返回错误，但它没有。所以让我们稍微改变GenerateQRCode函数：</p>
 <h5 id="qrcodedgo-4">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">20</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 <span class="mi">22</span> 	<span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">23</span> 	<span class="k">return</span> <span class="kc">nil</span>
 <span class="mi">24</span> <span class="p">}</span>
@@ -714,7 +712,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>在本节的介绍中，我已经放弃了解决方案：</p>
 <h5 id="qrcodedgo-5">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">20</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">21</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 <span class="mi">22</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">23</span> <span class="p">}</span>
 </code></pre></div><p>这种变化足以打成测试工作。</p>
@@ -806,10 +804,10 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <h5 id="qrcoded_testgo-5">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">31</span> <span class="kd">func</span> <span class="nf">TestVersionDeterminesSize</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 <span class="mi">32</span> 	<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
-<span class="mi">33</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">,</span> <span class="nf">Version</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">33</span> 	<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">,</span> <span class="nf">Version</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <span class="mi">34</span> 
 <span class="mi">35</span> 	<span class="nx">img</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">)</span>
-<span class="mi">36</span> 	<span class="k">if</span> <span class="nx">width</span> <span class="o">:=</span> <span class="nx">img</span><span class="p">.</span><span class="nf">Bounds</span><span class="p">(</span><span class="p">)</span><span class="p">.</span><span class="nf">Dx</span><span class="p">(</span><span class="p">)</span><span class="p">;</span> <span class="nx">width</span> <span class="o">!=</span> <span class="mi">21</span> <span class="p">{</span>
+<span class="mi">36</span> 	<span class="k">if</span> <span class="nx">width</span> <span class="o">:=</span> <span class="nx">img</span><span class="p">.</span><span class="nf">Bounds</span><span class="p">().</span><span class="nf">Dx</span><span class="p">();</span> <span class="nx">width</span> <span class="o">!=</span> <span class="mi">21</span> <span class="p">{</span>
 <span class="mi">37</span> 		<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;Version 1, expected 21 but got %d&#34;</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span>
 <span class="mi">38</span> 	<span class="p">}</span>
 <span class="mi">39</span> <span class="p">}</span>
@@ -822,7 +820,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>将签名结果修复为以下代码：</p>
 <h5 id="qrcodedgo-7">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">26</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">version</span> <span class="nx">Version</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-<span class="mi">27</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">27</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 <span class="mi">28</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">29</span> <span class="p">}</span>
 <span class="mi">30</span> 
@@ -842,23 +840,23 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 然后测试迭代这些行，在输入上应用被测单元并将结果与预期输出进行比较：</p>
 <h5 id="qrcoded_testgo-6">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">40</span> <span class="kd">func</span> <span class="nf">TestVersionDeterminesSize</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-<span class="mi">41</span> 	<span class="nx">table</span> <span class="o">:=</span> <span class="p">[</span><span class="p">]</span><span class="kd">struct</span> <span class="p">{</span>
+<span class="mi">41</span> 	<span class="nx">table</span> <span class="o">:=</span> <span class="p">[]</span><span class="kd">struct</span> <span class="p">{</span>
 <span class="mi">42</span> 		<span class="nx">version</span>  <span class="kt">int</span>
 <span class="mi">43</span> 		<span class="nx">expected</span> <span class="kt">int</span>
-<span class="mi">44</span> 	<span class="p">}</span><span class="p">{</span>
-<span class="mi">45</span> 		<span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">}</span><span class="p">,</span>
-<span class="mi">46</span> 		<span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">}</span><span class="p">,</span>
-<span class="mi">47</span> 		<span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">41</span><span class="p">}</span><span class="p">,</span>
-<span class="mi">48</span> 		<span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">45</span><span class="p">}</span><span class="p">,</span>
-<span class="mi">49</span> 		<span class="p">{</span><span class="mi">14</span><span class="p">,</span> <span class="mi">73</span><span class="p">}</span><span class="p">,</span>
-<span class="mi">50</span> 		<span class="p">{</span><span class="mi">40</span><span class="p">,</span> <span class="mi">177</span><span class="p">}</span><span class="p">,</span>
+<span class="mi">44</span> 	<span class="p">}{</span>
+<span class="mi">45</span> 		<span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">},</span>
+<span class="mi">46</span> 		<span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">},</span>
+<span class="mi">47</span> 		<span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">41</span><span class="p">},</span>
+<span class="mi">48</span> 		<span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">45</span><span class="p">},</span>
+<span class="mi">49</span> 		<span class="p">{</span><span class="mi">14</span><span class="p">,</span> <span class="mi">73</span><span class="p">},</span>
+<span class="mi">50</span> 		<span class="p">{</span><span class="mi">40</span><span class="p">,</span> <span class="mi">177</span><span class="p">},</span>
 <span class="mi">51</span> 	<span class="p">}</span>
 <span class="mi">52</span> 
 <span class="mi">53</span> 	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">test</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">table</span> <span class="p">{</span>
 <span class="mi">54</span> 		<span class="nx">buffer</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="p">)</span>
-<span class="mi">55</span> 		<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">,</span> <span class="nf">Version</span><span class="p">(</span><span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">55</span> 		<span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">,</span> <span class="s">&#34;555-2368&#34;</span><span class="p">,</span> <span class="nf">Version</span><span class="p">(</span><span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">))</span>
 <span class="mi">56</span> 		<span class="nx">img</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">)</span>
-<span class="mi">57</span> 		<span class="k">if</span> <span class="nx">width</span> <span class="o">:=</span> <span class="nx">img</span><span class="p">.</span><span class="nf">Bounds</span><span class="p">(</span><span class="p">)</span><span class="p">.</span><span class="nf">Dx</span><span class="p">(</span><span class="p">)</span><span class="p">;</span> <span class="nx">width</span> <span class="o">!=</span> <span class="nx">test</span><span class="p">.</span><span class="nx">expected</span> <span class="p">{</span>
+<span class="mi">57</span> 		<span class="k">if</span> <span class="nx">width</span> <span class="o">:=</span> <span class="nx">img</span><span class="p">.</span><span class="nf">Bounds</span><span class="p">().</span><span class="nf">Dx</span><span class="p">();</span> <span class="nx">width</span> <span class="o">!=</span> <span class="nx">test</span><span class="p">.</span><span class="nx">expected</span> <span class="p">{</span>
 <span class="mi">58</span> 			<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;Version %2d, expected %3d but got %3d&#34;</span><span class="p">,</span>
 <span class="mi">59</span> 				<span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">,</span> <span class="nx">test</span><span class="p">.</span><span class="nx">expected</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span>
 <span class="mi">60</span> 		<span class="p">}</span>
@@ -879,7 +877,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <h5 id="qrcodedgo-8">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">26</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">version</span> <span class="nx">Version</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
 <span class="mi">27</span> 	<span class="nx">size</span> <span class="o">:=</span> <span class="mi">4</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span> <span class="o">+</span> <span class="mi">17</span>
-<span class="mi">28</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">28</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">size</span><span class="p">))</span>
 <span class="mi">29</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">30</span> <span class="p">}</span>
 </code></pre></div><p>这足以使测试运行，但并不完全令人满意&hellip;&hellip;</p>
@@ -894,14 +892,14 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 </code></pre></div><p>这个函数的名称已经放弃了下一步：为什么不把它作为Version类型的方法呢？</p>
 <h5 id="qrcodedgo-9">qrcoded.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">26</span> <span class="kd">func</span> <span class="nf">GenerateQRCode</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">code</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">version</span> <span class="nx">Version</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-<span class="mi">27</span> 	<span class="nx">size</span> <span class="o">:=</span> <span class="nx">version</span><span class="p">.</span><span class="nf">PatternSize</span><span class="p">(</span><span class="p">)</span>
-<span class="mi">28</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span><span class="p">)</span>
+<span class="mi">27</span> 	<span class="nx">size</span> <span class="o">:=</span> <span class="nx">version</span><span class="p">.</span><span class="nf">PatternSize</span><span class="p">()</span>
+<span class="mi">28</span> 	<span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewNRGBA</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">size</span><span class="p">))</span>
 <span class="mi">29</span> 	<span class="k">return</span> <span class="nx">png</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
 <span class="mi">30</span> <span class="p">}</span>
 <span class="mi">31</span> 
 <span class="mi">32</span> <span class="kd">type</span> <span class="nx">Version</span> <span class="kt">int8</span>
 <span class="mi">33</span> 
-<span class="mi">34</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">v</span> <span class="nx">Version</span><span class="p">)</span> <span class="nf">PatternSize</span><span class="p">(</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+<span class="mi">34</span> <span class="kd">func</span> <span class="p">(</span><span class="nx">v</span> <span class="nx">Version</span><span class="p">)</span> <span class="nf">PatternSize</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
 <span class="mi">35</span> 	<span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="o">+</span> <span class="mi">17</span>
 <span class="mi">36</span> <span class="p">}</span>
 </code></pre></div><p>34</p>
@@ -914,7 +912,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <p>现在我已经从GenerateQRCode函数中提取了大小计算，因此可以集中测试：</p>
 <h5 id="qrcoded_testgo-7">qrcoded_test.go</h5>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">53</span> <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">test</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">table</span> <span class="p">{</span>
-<span class="mi">54</span> 	<span class="nx">size</span> <span class="o">:=</span> <span class="nf">Version</span><span class="p">(</span><span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">)</span><span class="p">.</span><span class="nf">PatternSize</span><span class="p">(</span><span class="p">)</span>
+<span class="mi">54</span> 	<span class="nx">size</span> <span class="o">:=</span> <span class="nf">Version</span><span class="p">(</span><span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">).</span><span class="nf">PatternSize</span><span class="p">()</span>
 <span class="mi">55</span> 	<span class="k">if</span> <span class="nx">size</span> <span class="o">!=</span> <span class="nx">test</span><span class="p">.</span><span class="nx">expected</span> <span class="p">{</span>
 <span class="mi">56</span> 		<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;Version %2d, expected %3d but got %3d&#34;</span><span class="p">,</span>
 <span class="mi">57</span> 			<span class="nx">test</span><span class="p">.</span><span class="nx">version</span><span class="p">,</span> <span class="nx">test</span><span class="p">.</span><span class="nx">expected</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span>

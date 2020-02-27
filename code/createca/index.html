@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="生成CA证书  https的数据传输加密已经正是成为了标准。
+ 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
+ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
+1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.">
+
+<meta property="og:title" content="生成CA证书" />
+<meta property="og:description" content="生成CA证书  https的数据传输加密已经正是成为了标准。
+ 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
+ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
+1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/createca/" />
+<meta property="article:published_time" content="2020-02-27T17:08:12+08:00" />
+<meta property="article:modified_time" content="2020-02-27T17:08:12+08:00" />
+
+
+<title>
+
+
+     生成CA证书 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/createca/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-02-27%2017%3a20%3a19.500779%20%2b0800%20CST%20m%3d%2b1.285181417">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-02-27%2017%3a20%3a19.500779%20%2b0800%20CST%20m%3d%2b1.285181417">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-02-27%2017%3a20%3a19.500779%20%2b0800%20CST%20m%3d%2b1.285181417">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-02-27%2017%3a20%3a19.500779%20%2b0800%20CST%20m%3d%2b1.285181417">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    生成CA证书
+
+</div>
+
+            <div class="markdown">
+                <h2 id="生成ca证书">生成CA证书</h2>
+<blockquote>
+<p>https的数据传输加密已经正是成为了标准。</p>
+</blockquote>
+<p>在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。</p>
+<p>ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？</p>
+<h3 id="1-创建根证书密钥文件rootkey">1. 创建根证书密钥文件root.key</h3>
+<pre><code>openssl genrsa -des3 -out root.key
+</code></pre><h3 id="2-创建根证书的申请文件rootcsr">2. 创建根证书的申请文件root.csr</h3>
+<pre><code>openssl req -new -key root.key -out root.csr
+</code></pre><h3 id="3-创建一个自当前日期起为期十年的根证书rootcrt">3. 创建一个自当前日期起为期十年的根证书root.crt</h3>
+<pre><code>openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt
+</code></pre><h3 id="4-创建服务器证书密钥serverkey">4. 创建服务器证书密钥server.key</h3>
+<pre><code>openssl genrsa –des3 -out server.key 2048
+</code></pre><h3 id="5-创建服务器证书的申请文件servercsr">5. 创建服务器证书的申请文件server.csr</h3>
+<pre><code>openssl req -new -key server.key -out server.csr
+</code></pre><h3 id="6-创建自当前日期起有效期为期两年的服务器证书servercrt">6. 创建自当前日期起有效期为期两年的服务器证书server.crt</h3>
+<pre><code>openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.csr -out server.crt
+</code></pre><h3 id="7-创建客户端证书密钥文件clientkey">7. 创建客户端证书密钥文件client.key</h3>
+<pre><code>openssl genrsa -des3 -out client.key 2048
+</code></pre><h3 id="8-创建客户端证书的申请文件clientcsr">8. 创建客户端证书的申请文件client.csr</h3>
+<pre><code>openssl req -new -key client.key -out client.csr
+</code></pre><h3 id="9-创建一个自当前日期起有效期为两年的客户端证书clientcrt">9. 创建一个自当前日期起有效期为两年的客户端证书client.crt</h3>
+<pre><code>openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in client.csr -out client.crt
+</code></pre><h3 id="10-将客户端证书文件clientcrt和客户端证书密钥文件clientkey合并成客户端证书安装包clientpfx">10. 将客户端证书文件client.crt和客户端证书密钥文件client.key合并成客户端证书安装包client.pfx</h3>
+<pre><code>openssl pkcs12 -export -in client.crt -inkey client.key -out client.pfx
+</code></pre><p><strong>保存生成的文件备用，其中server.crt和server.key是配置单向SSL时需要使用的证书文件，client.crt是配置双向SSL时需要使用的证书文件，client.pfx是配置双向SSL时需要客户端安装的证书文件
+.crt文件和.key可以合到一个文件里面，把2个文件合成了一个.pem文件（直接拷贝过去就行了）</strong></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

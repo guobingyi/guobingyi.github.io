@@ -6,10 +6,22 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 06 Feb 2020 19:37:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 17:08:12 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>生成CA证书</title>
+      <link>https://guobingyi.github.io/code/createca/</link>
+      <pubDate>Thu, 27 Feb 2020 17:08:12 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/createca/</guid>
+      <description>生成CA证书  https的数据传输加密已经正是成为了标准。
+ 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
+ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
+1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.</description>
+    </item>
     
     <item>
       <title>Csharp</title>
