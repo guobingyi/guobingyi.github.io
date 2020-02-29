@@ -6,10 +6,27 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 27 Feb 2020 17:08:12 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 29 Feb 2020 16:10:22 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>程序目录结构</title>
+      <link>https://guobingyi.github.io/code/programdir/</link>
+      <pubDate>Sat, 29 Feb 2020 16:10:22 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/programdir/</guid>
+      <description>软件项目的目录结构和文件结构  孙悟空对师傅说，“我想要学72变！”。
+ graph LR 程序目录结构--&amp;gt;Include 程序目录结构--&amp;gt;Source 程序目录结构--&amp;gt;Resource 程序目录结构--&amp;gt;Shared 程序目录结构--&amp;gt;Debug 程序目录结构--&amp;gt;Release 程序目录结构--&amp;gt;Bin Include Include目录下用于存放应用程序的头文件集合，也就是.h文件集合，在这个目录下面还可以根据需要划分子目录。
+Source Source目录用于存放应用程序的源代码文件集合，也就是.c或者.cpp文件集合，在这个目录下也可以根据需要进行划分子目录。
+Resource Resource目录用于存放应用程序的一些资源文件，比如图片、视频、音频、对话框、图标以及光标等等，同样也可以划分几个子目录，便于管理。
+Shared Shared目录用于存放应用程序的一些共享文件。
+Debug Debug目录用于存放应用程序进行调试时的调试版本产生的中间文件。
+Release Release目录用于存放应用程序进行发布时的发布版本产生的中间文件。
+Bin Bin目录用于存放自己创建的lib文件或dll文件。
+ 注意绝对路径和相对路径的概念以及使用； 注意区分编译时的相对路径和运行时的相对路径的概念。  </description>
+    </item>
     
     <item>
       <title>生成CA证书</title>

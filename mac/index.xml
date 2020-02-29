@@ -6,10 +6,20 @@
     <description>Recent content in Mac on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Jan 2019 14:37:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 29 Feb 2020 15:15:45 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/mac/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iTerm2分屏切换</title>
+      <link>https://guobingyi.github.io/mac/iterm2/</link>
+      <pubDate>Sat, 29 Feb 2020 15:15:45 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/mac/iterm2/</guid>
+      <description>iTerm2分屏切换  积极的蝙蝠心态，活到老，学到老。
+ 1. 新建窗口 command + t 2. 垂直分屏 command + d 3. 水平分屏 command + shift + d 4. 在最近使用的分屏直接切换 command + ] OR command + [ 5. 切换到指定位置的分屏 command + alt + 方向键 6. 切换标签页 command + 数字 7. 按方向切换标签页 command + 方向键 8. 保存当前窗口快照 shift + command + s 9. 快照回放 command + alt + b 如果不能正常使用，请自行查阅文档。</description>
+    </item>
     
     <item>
       <title>Mac Tools</title>
