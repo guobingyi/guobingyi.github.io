@@ -6,10 +6,23 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 29 Feb 2020 16:10:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 29 Feb 2020 17:23:06 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cppdirdemo</title>
+      <link>https://guobingyi.github.io/code/cppdirdemo/</link>
+      <pubDate>Sat, 29 Feb 2020 17:23:06 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/cppdirdemo/</guid>
+      <description>Make构建C++项目  使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C++。
+ 1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
+class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
+#include &amp;lt;iostream&amp;gt; #include &amp;quot;point.h&amp;quot; void point::print(){ std::cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;this-&amp;gt;x&amp;lt;&amp;lt;&amp;quot;,y=&amp;quot;&amp;lt;&amp;lt;this-&amp;gt;y&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;; } 4.创建main文件 vim main.cpp 内容如下：
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;quot;point.h&amp;quot; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&amp;lt;point&amp;gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.</description>
+    </item>
     
     <item>
       <title>程序目录结构</title>
