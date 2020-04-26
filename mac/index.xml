@@ -6,10 +6,25 @@
     <description>Recent content in Mac on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 29 Feb 2020 15:15:45 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 14:38:37 +0800</lastBuildDate>
     
 	<atom:link href="https://guobingyi.github.io/mac/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mymac</title>
+      <link>https://guobingyi.github.io/mac/mymac/</link>
+      <pubDate>Sun, 26 Apr 2020 14:38:37 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/mac/mymac/</guid>
+      <description>我的笔记本  第一句话居然想到的是：“土豪随意！”
+ 因为工作原因，电脑是我的生产力。所以在电脑的使用频率非常高，可以说就是伴随着一天8个多小时都是在使用电脑，目前有所不同，是由于可以不用电脑来吃饭了。
+闲来无事，清理一下笔记本的屏幕发现，掉漆了😫！在悲痛中思考该如何处理，在网上找到帖子说可以免费换屏，抱着对资本主义国家的信任，拨打了400，预约了天才吧的客服。第二天，去了后被告知在保外，不能免费换。原因是由于我的电脑买的实在太早了？说是2015年6月购买的。我记得我买的是8/9月吧。或许，这个代理商已经提前注册了？不应该。算了，一气之下，买了张膜。
+害怕膜把屏幕弄得更花，所以在整个过程中，可以说是小心翼翼。结果，还是出了点小插曲，忘记撕掉摄像头的一块膜，结果，苹果电脑使用摄像头来感应亮度，整个屏幕灰蒙蒙的。又硬着头皮撕下了膜，还好，基本上完成了。
+原来总说贴膜就想穿着袜子洗脚一样，不舒服，在这次的掉漆事件中才发现，如果你认真的保护一下，苹果的东西还是蛮耐用的。就如我现在的iPhone7 Plus一样，除了内存小点，其他真没毛病。如果有毛病也是电池的损耗，这，真的也没有办法。用个充电宝也就搞定了。所以呀，我太大意了，对于苹果产品，总抱有非常大的信心，可是任何物品都有一个寿命，不能说好就什么问题都没有。也是对物品的另外一层思考吧。
+现在的问题是电池问题，屏幕和键盘目前保护的已经好了，电池这个真不好说，那天出现了开不了机，也只能借助网络买块电池自己换了。当然，帮老婆买的手机电池真没有办法换，难度系数有点高，电脑的相对要好一点的是不需要用吸盘把屏幕吸出来。
+总的来说，苹果的产品质量不错！不容置疑，但是加上防护手段，或许能多用一些时日。当然，正如第一句话一样，土豪就直接换新了，何须等到出现这些问题。</description>
+    </item>
     
     <item>
       <title>iTerm2分屏切换</title>

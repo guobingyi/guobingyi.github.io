@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guobingyi.github.io/mac/</loc>
+    <lastmod>2020-04-26T14:38:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guobingyi.github.io/mac/mymac/</loc>
+    <lastmod>2020-04-26T14:38:37+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guobingyi.github.io/blog/backfile/</loc>
     <lastmod>2020-04-03T14:46:31+08:00</lastmod>
   </url>
@@ -39,11 +49,6 @@
   
   <url>
     <loc>https://guobingyi.github.io/mac/iterm2/</loc>
-    <lastmod>2020-02-29T15:15:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guobingyi.github.io/mac/</loc>
     <lastmod>2020-02-29T15:15:45+08:00</lastmod>
   </url>
   
