@@ -79,11 +79,11 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-04-26%2015%3a22%3a39.502463%20%2b0800%20CST%20m%3d%2b2.558606964">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-04-26%2015%3a22%3a39.502463%20%2b0800%20CST%20m%3d%2b2.558606964">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-04-26%2015%3a22%3a39.502463%20%2b0800%20CST%20m%3d%2b2.558606964">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2020-06-18%2018%3a52%3a30.617423%20%2b0800%20CST%20m%3d%2b4.805646890">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2020-06-18%2018%3a52%3a30.617423%20%2b0800%20CST%20m%3d%2b4.805646890">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2020-06-18%2018%3a52%3a30.617423%20%2b0800%20CST%20m%3d%2b4.805646890">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-04-26%2015%3a22%3a39.502463%20%2b0800%20CST%20m%3d%2b2.558606964">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2020-06-18%2018%3a52%3a30.617423%20%2b0800%20CST%20m%3d%2b4.805646890">
     
 
 
@@ -844,7 +844,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 由于这些测试都不依赖于版本，因此可以使用任何评估版本的表达式。 我随意选择了版本（1）。</p>
 <p>在修复所有对GenerateQRCode的调用之后，测试最终运行。通过。</p>
 <p>正如我在前一章中所解释的那样，这是一个问题。 现在你可以明白为什么了。
-我的测试目前涵盖'版本1 QR码是21x21模块大'的情况，但我在第27行生成的图像已经意外地匹配该情况11。
+我的测试目前涵盖&rsquo;版本1 QR码是21x21模块大&rsquo;的情况，但我在第27行生成的图像已经意外地匹配该情况11。
 这表明为什么立即成功的测试实际上没有测试任何东西。</p>
 <p>最简单的答案是创建一个测试另一个版本/大小组合的新测试。
 但是有一种更好的方法，通常用于Go测试：它被称为表驱动测试。</p>
