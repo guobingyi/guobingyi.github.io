@@ -6,7 +6,29 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 13 Jan 2021 16:45:23 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Mar 2021 08:45:40 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Photoshop</title>
+      <link>https://guobingyi.github.io/blog/photoshop/</link>
+      <pubDate>Tue, 09 Mar 2021 08:45:40 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/photoshop/</guid>
+      <description>photoshop 学习记录 1. mac如何禁止adobe creative cloud开机自启? 打开终端，禁止开机自启：
+launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 恢复自启：
+launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 2. 常用快捷键 Command + D 取消选择模块 [ （右括号）用来改变大小，变小，如画笔的大小 ]（左括号）用来改变大小，变大，如画笔的大小 option 键用来改变相对的作用，如放大，缩小等。 F12 图像恢复，所有的更改都变为zero </description>
+    </item>
+    
+    <item>
+      <title>2021start</title>
+      <link>https://guobingyi.github.io/blog/2021start/</link>
+      <pubDate>Mon, 01 Mar 2021 10:09:53 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/2021start/</guid>
+      <description>2021 开始  2020过去了，2021来了。我准备好了。
+ 新的一年，新的开始。
+我或许从未想过自己会接触一个不熟悉的行业，我也从未想过要自己的主业变成了副业。但是，真的就这样发生了。</description>
+    </item>
+    
     <item>
       <title>怀念 Delphi</title>
       <link>https://guobingyi.github.io/blog/%E6%80%80%E5%BF%B5-delphi/</link>
