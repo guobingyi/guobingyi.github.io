@@ -34,9 +34,10 @@ yum remove vsftpd 卸载后需要注意以下问题：
 #禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户  创建ftp用户  useradd jack 设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
 usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/" />
-<meta property="article:published_time" content="2018-07-27T09:42:51+08:00" />
-<meta property="article:modified_time" content="2018-07-27T09:42:51+08:00" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-07-27T09:42:51&#43;08:00" />
+<meta property="article:modified_time" content="2018-07-27T09:42:51&#43;08:00" />
+
 
 
 <title>
@@ -63,11 +64,11 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-03-10%2020%3a40%3a54.74911%20%2b0800%20CST%20m%3d%2b1.979053339">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-03-10%2020%3a40%3a54.74911%20%2b0800%20CST%20m%3d%2b1.979053339">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-03-10%2020%3a40%3a54.74911%20%2b0800%20CST%20m%3d%2b1.979053339">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-05-01%2018%3a44%3a59.146548%20%2b0800%20CST%20m%3d%2b2.231817628">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-05-01%2018%3a44%3a59.146548%20%2b0800%20CST%20m%3d%2b2.231817628">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-05-01%2018%3a44%3a59.146548%20%2b0800%20CST%20m%3d%2b2.231817628">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-03-10%2020%3a40%3a54.74911%20%2b0800%20CST%20m%3d%2b1.979053339">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-05-01%2018%3a44%3a59.146548%20%2b0800%20CST%20m%3d%2b2.231817628">
     
 
 
