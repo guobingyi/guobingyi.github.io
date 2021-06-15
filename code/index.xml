@@ -6,7 +6,33 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 26 Jan 2021 09:34:14 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 17:48:43 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust by Example</title>
+      <link>https://guobingyi.github.io/code/rustbyexample/</link>
+      <pubDate>Tue, 15 Jun 2021 17:48:43 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/rustbyexample/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>LearnRust</title>
+      <link>https://guobingyi.github.io/code/learnrust/</link>
+      <pubDate>Sat, 29 May 2021 11:20:30 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/learnrust/</guid>
+      <description>Rust 学习笔记  自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
+ 前言 系统级别的语言，可以和C/C++抗衡？目标就是为了取代C++。
+介绍 Rust语言能够编写速度更快，更加可靠的软件。
+学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～
+0x01 开始 1.目标  安装 写个输出hello world的程序 使用cargo工具来构建系统  2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
+所以，使用Rust的安装方式，最佳。
+$ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
+Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
+2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.</description>
+    </item>
+    
     <item>
       <title>Learn Asp.net Core</title>
       <link>https://guobingyi.github.io/code/learnasp.net/</link>
