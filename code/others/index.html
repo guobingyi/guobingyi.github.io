@@ -50,11 +50,11 @@ If you&#39;re on OSX and are using homebrew, check your packages installed with 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-07-06%2014%3a57%3a10.838786%20%2b0800%20CST%20m%3d%2b3.969012438">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-07-06%2014%3a57%3a10.838786%20%2b0800%20CST%20m%3d%2b3.969012438">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-07-06%2014%3a57%3a10.838786%20%2b0800%20CST%20m%3d%2b3.969012438">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-05%2011%3a34%3a41.016541%20%2b0800%20CST%20m%3d%2b4.042316733">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-05%2011%3a34%3a41.016541%20%2b0800%20CST%20m%3d%2b4.042316733">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-05%2011%3a34%3a41.016541%20%2b0800%20CST%20m%3d%2b4.042316733">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-07-06%2014%3a57%3a10.838786%20%2b0800%20CST%20m%3d%2b3.969012438">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-05%2011%3a34%3a41.016541%20%2b0800%20CST%20m%3d%2b4.042316733">
     
 
 
@@ -290,7 +290,7 @@ Error: Could not generate Xcode project: error: terminated(72): xcrun --sdk maco
 </ol>
 <h3 id="0x03-mac-安装应用后launchpad不显示">0x03 mac 安装应用后Launchpad不显示</h3>
 <p>在终端下执行以下命令：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">rm ~/Library/Application<span class="se">\ </span>Support/Dock/*.db  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">rm ~/Library/Application<span class="se">\ </span>Support/Dock/*.db  
 killall Dock 
 </code></pre></div><h3 id="0x04-gitea-加入https">0x04 Gitea 加入https</h3>
 <p>在gitea目录下执行命令：</p>
@@ -422,6 +422,30 @@ sudo chmod go-w /Users/guoby/OneDrive/mywork/code/gocode/bin
 </code></pre><h3 id="0x16-debugserver-or-lldb-server-not-found-install-xcodes-command-line-tools-or-lldb-server">0x16 debugserver or lldb-server not found: install XCode&rsquo;s command line tools or lldb-server</h3>
 <p>重新安装xcode-select即可，在命令行输入以下命令：</p>
 <pre><code>xcode-select --install
+</code></pre><h3 id="0x17-ffmpeg的视频转化">0x17 ffmpeg的视频转化</h3>
+<blockquote>
+<p>想准备专门写一节来描述，毕竟最近使用视频的几率相对要多一些</p>
+</blockquote>
+<p>在MacOS上安装ffmpeg，推荐使用brew。</p>
+<pre><code>brew install ffmpeg
+</code></pre><ul>
+<li>webm转mp4</li>
+</ul>
+<p>下面这行命令是将webm转换为mp4最精简的命令：</p>
+<pre><code>ffmpeg -i video.webm video.mp4
+</code></pre><p>只是copy视频数据部分，对音频进行转码的ffmpeg命令如下:</p>
+<pre><code>ffmpeg -i video.webm -c:v copy video.mp4
+</code></pre><p>但是我感觉这个命令是最好用的，精简的感觉速度要慢一些。</p>
+<p>当用H.264编码视频的时候，可以通过「量化器」比例（crf值，crf是「固定码率因子（Constant Rate Factor）」的缩写）来控制视频的质量，取值范围是[0-51]，0代表无损，默认值是23，51是质量最差，所以这个值的设置越低视频质量越好。导出视频的时候可以使用默认值，或者针对码率较小的视频可以适当提高crf的值。通过 「-crf」选项来指定crf值，示例代码：</p>
+<pre><code>ffmpeg -i video.webm -crf 26 video.mp4
+</code></pre><p>ffmpeg同样提供了一系列是质量预设值，可以针对特定的压缩比例和编码速度对视频的质量进行校准。越慢的预设值代表越好的压缩效果，可用的预设值有：</p>
+<p>ultrafast,superfast,veryfast,faster,fast,medium,slow,slower,veryslow. PS：原文里没有把最后的 placebo写出来。根据英文词意大概可以知道，从前往后转换速度从最快到最慢。</p>
+<p>默认的是 medium。当然我们是可以自定义的，通过-preset选项来实现，具体命令如下：</p>
+<pre><code>ffmpeg -i video.webm -preset veryfast video.mp4
+</code></pre><p>所有mp4文件都包含moov原子，moov原子信息包含：视频的长度信息。如果moov放置在文件的开头部分，它会立即启用流式视频播放器来播放和清理MP4文件。ffmpeg默认是把moov原子放置在文件末尾，但也可以通过「-movflags faststart」选项将其放在头部，具体命令如下：</p>
+<pre><code>ffmpeg -i video.webm -movflags faststart video.mp4
+</code></pre><p>为了确保老的iOS和Android设备的兼容性最高，我们需要一些特定的编码Profile和Level。例如视频编码使用High Profile和Level 4.2可以保证iPhone 5s上正常播放，但更老的iOS设备就不行了。具体的命令如下：</p>
+<pre><code>ffmpeg -i video.webm -movflags faststart -profile:v high -level 4.2 video.mp4
 </code></pre>
             </div>
         </div>

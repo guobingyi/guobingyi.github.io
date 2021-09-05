@@ -135,7 +135,7 @@ $ scutil --proxy &amp;lt;dictionary&amp;gt; { ExcludeSimpleHostnames : 1 FTPEnab
       <description>Git 常用命令 1.初始化仓库信息
  git init 增加文件信息到库   git add -A 提交代码   git commit -m &amp;quot;first commit&amp;quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
 git rm ._ddd.file 8.2 删除多个文件
-find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39; </description>
+find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39; 强制覆盖本地文件  git fetch --all git reset --hard origin/master git pull </description>
     </item>
     
     <item>

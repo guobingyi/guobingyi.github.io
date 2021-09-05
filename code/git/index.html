@@ -12,13 +12,13 @@
 <meta name="description" content="Git 常用命令 1.初始化仓库信息
  git init 增加文件信息到库   git add -A 提交代码   git commit -m &quot;first commit&quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
 git rm ._ddd.file 8.2 删除多个文件
-find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39; ">
+find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39; 强制覆盖本地文件  git fetch --all git reset --hard origin/master git pull ">
 
 <meta property="og:title" content="Git" />
 <meta property="og:description" content="Git 常用命令 1.初始化仓库信息
  git init 增加文件信息到库   git add -A 提交代码   git commit -m &quot;first commit&quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
 git rm ._ddd.file 8.2 删除多个文件
-find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39; " />
+find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others file&#39; 强制覆盖本地文件  git fetch --all git reset --hard origin/master git pull " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/code/git/" /><meta property="article:section" content="code" />
 <meta property="article:published_time" content="2019-08-30T07:03:51+08:00" />
@@ -50,11 +50,11 @@ find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-07-06%2014%3a57%3a10.728955%20%2b0800%20CST%20m%3d%2b3.859184391">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-07-06%2014%3a57%3a10.728955%20%2b0800%20CST%20m%3d%2b3.859184391">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-07-06%2014%3a57%3a10.728955%20%2b0800%20CST%20m%3d%2b3.859184391">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-05%2011%3a34%3a40.798617%20%2b0800%20CST%20m%3d%2b3.824398567">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-05%2011%3a34%3a40.798617%20%2b0800%20CST%20m%3d%2b3.824398567">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-05%2011%3a34%3a40.798617%20%2b0800%20CST%20m%3d%2b3.824398567">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-07-06%2014%3a57%3a10.728955%20%2b0800%20CST%20m%3d%2b3.859184391">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-05%2011%3a34%3a40.798617%20%2b0800%20CST%20m%3d%2b3.824398567">
     
 
 
@@ -277,6 +277,12 @@ git push -u origin master
 <pre><code>find . -name &quot;._*&quot; -delete
 git add -A
 git commit -m 'delete others file'
+</code></pre><ol start="9">
+<li>强制覆盖本地文件</li>
+</ol>
+<pre><code>git fetch --all  
+git reset --hard origin/master 
+</code></pre><pre><code>git pull
 </code></pre>
             </div>
         </div>
