@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://guobingyi.github.io/blog/</loc>
-    <lastmod>2021-09-16T20:31:23+08:00</lastmod>
+    <loc>https://guobingyi.github.io/code/arduino/</loc>
+    <lastmod>2021-10-27T16:39:15+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/code/</loc>
+    <lastmod>2021-10-27T16:39:15+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/</loc>
+    <lastmod>2021-10-27T16:39:15+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/blog/</loc>
     <lastmod>2021-09-16T20:31:23+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/otheridea/</loc>
@@ -22,9 +28,6 @@
   </url><url>
     <loc>https://guobingyi.github.io/movie/nuevoorden/</loc>
     <lastmod>2021-06-16T18:50:54+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/code/</loc>
-    <lastmod>2021-06-15T17:48:43+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/code/rustbyexample/</loc>
     <lastmod>2021-06-15T17:48:43+08:00</lastmod>

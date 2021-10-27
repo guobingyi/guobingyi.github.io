@@ -66,11 +66,11 @@ GO111MODULE=&quot;off&quot; 结果问题依旧，所以就怀疑GO插件的配�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a17.648987%20%2b0800%20CST%20m%3d%2b2.969840623">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a17.648987%20%2b0800%20CST%20m%3d%2b2.969840623">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a17.648987%20%2b0800%20CST%20m%3d%2b2.969840623">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a07.542359%20%2b0800%20CST%20m%3d%2b8.407325538">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a07.542359%20%2b0800%20CST%20m%3d%2b8.407325538">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a07.542359%20%2b0800%20CST%20m%3d%2b8.407325538">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a17.648987%20%2b0800%20CST%20m%3d%2b2.969840623">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a07.542359%20%2b0800%20CST%20m%3d%2b8.407325538">
     
 
 
@@ -275,9 +275,9 @@ GO111MODULE=&quot;off&quot; 结果问题依旧，所以就怀疑GO插件的配�
 </blockquote>
 <p>不知道为什么，当要认真的去写点代码的时候，总会被杂七杂八的事情打扰，或许习惯了一种工作模式后，就很难去改变。</p>
 <p>事情的原委是这样的，我开始用go写代码的时候，发现原来在VS Code下使用<a href="https://github.com/Microsoft/vscode-go">GO的插件</a>非常好用，配合使用<a href="https://github.com/codota/tabnine-vscode">TabNine</a>写代码真的会飞。结果，插件告诉我没能更新gopls，需要更新后才能进行代码提示，so，我去更新gopls，这个我知道是必须翻墙才能更新的，而google已经在github上有镜像，目前不能翻墙只能依赖github才能更新，郁闷的是在镜像下使用了mod模式，使用go build命令都会报以下错误：</p>
-<pre><code>go: github.com/sergi/go-diff@v1.0.0: Get &quot;https://proxy.golang.org/github.com/sergi/go-diff/@v/v1.0.0.mod&quot;: dial tcp [2404:6800:4008:802::2011]:443: i/o timeout
+<pre tabindex="0"><code>go: github.com/sergi/go-diff@v1.0.0: Get &quot;https://proxy.golang.org/github.com/sergi/go-diff/@v/v1.0.0.mod&quot;: dial tcp [2404:6800:4008:802::2011]:443: i/o timeout
 </code></pre><p>原来即使使用了镜像，模块的加入还是去找golang.org去了，那怎么办呢？居然有镜像就不怕，不就是用模块的思路去解决好了，修改go.mod文件。</p>
-<pre><code>module golang.org/x/tools
+<pre tabindex="0"><code>module golang.org/x/tools
 
 go 1.11
 
@@ -297,9 +297,9 @@ require (
 <p>编译完成后，打开VS Code后，以为能开始快速编码了，结果提示了这个错误：</p>
 <p><img src="https://guobingyi.github.io/img/vscode-error.png" alt="VS Code错误提示"></p>
 <p>按照原来的经验，就是把错误读一读，错误的提示让我去看如何在项目中设置模块，<a href="https://github.com/golang/go/wiki/Modules">Go Modules</a>。我读了，我发现我的配置没有错误啊，是正确的呀，还将配置文件修改了一下：</p>
-<pre><code>GO111MODULE=&quot;auto&quot;
+<pre tabindex="0"><code>GO111MODULE=&quot;auto&quot;
 </code></pre><p>为了验证问题，我设置将模块设置为了不可用：</p>
-<pre><code>GO111MODULE=&quot;off&quot;
+<pre tabindex="0"><code>GO111MODULE=&quot;off&quot;
 </code></pre><p>结果问题依旧，所以就怀疑GO插件的配置问题，在配置文件中加入了GOPATH后，依然报错，猛的发现，会不会是插件的一个bug呢？因为一直提示，不能关闭，而且对于我这种有洁癖的人来说，一定要把这个问题解决，写代码才会舒服。去github上查阅了一把<a href="https://github.com/microsoft/vscode-go/issues/3055">issues3055</a>，还真的有，我去，甚至也有关闭的<a href="https://github.com/microsoft/vscode-go/issues/3076">issues3076</a>。对此，也给go的官方提出了这个问题<a href="https://github.com/golang/go/issues/37279">issues37279</a>。对此，知道了这个问题的原由，好吧，我今天还真不能解决了。</p>
 <p>突然，发现我今天要写的代码还没写呢？怎么时间就这样过去了。原来我去折腾了一把IDE的问题了，在此中途的时候，我就使用emacs来写代码了，感觉沉浸在代码中，虽然没有那么强的代码提示，但是TabNine的插件也能正常使用。我想，为什么会那么依赖IDE的功能呢？是什么原因？是习惯，还是懒惰？这个来回折腾了一下午，是对还是错？</p>
 <p>写代码真的需要这些功能吗？我不断问自己。这些插件功能的确在效率上有一定的提升，但是过分依赖就是病了，是不是没有这个功能就不能写代码了，这个才是问自己的，所以折腾得建立在一个时间线上，如果不能完成规定的时间任务，那么折腾就是浪费时间。关注点应该在优先级高的任务上，突然也让我想起一个事情，本来想用c++写个hello world，发现去安装各种依赖关系，最后对c++非常郁闷，为什么会那么难？不就入门的代码就要折腾了一天，才发现基础的搭建会那么浪费时间。</p>

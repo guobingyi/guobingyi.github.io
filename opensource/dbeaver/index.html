@@ -80,11 +80,11 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a19.479739%20%2b0800%20CST%20m%3d%2b4.800557991">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a19.479739%20%2b0800%20CST%20m%3d%2b4.800557991">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a19.479739%20%2b0800%20CST%20m%3d%2b4.800557991">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a10.291466%20%2b0800%20CST%20m%3d%2b11.156402004">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a10.291466%20%2b0800%20CST%20m%3d%2b11.156402004">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a10.291466%20%2b0800%20CST%20m%3d%2b11.156402004">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a19.479739%20%2b0800%20CST%20m%3d%2b4.800557991">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a10.291466%20%2b0800%20CST%20m%3d%2b11.156402004">
     
 
 
@@ -281,11 +281,11 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 <p>当然，在编译DBeaver的时候也有一些小插曲，都已经解决了，并且成功编译，所以过了我自己评定好开源项目的第一关。</p>
 <p>以下是编译的过程中出现的一些问题：</p>
 <p>1.1 编译中下载插件无法下载。</p>
-<pre><code>需要翻墙，找个可以访问外网资源的软件就可以了，mac系统下推荐RocketVPN。
+<pre tabindex="0"><code>需要翻墙，找个可以访问外网资源的软件就可以了，mac系统下推荐RocketVPN。
 </code></pre><p>1.2 编译报错。</p>
-<pre><code>[INFO] org.jkiss.utils 2.1.78-SNAPSHOT .................... FAILURE [  2.394 s]
+<pre tabindex="0"><code>[INFO] org.jkiss.utils 2.1.78-SNAPSHOT .................... FAILURE [  2.394 s]
 </code></pre><p>问题是由于我手贱升级了java到11导致的，这个时候手动设置一下JAVA_HOME路径。</p>
-<pre><code>export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
+<pre tabindex="0"><code>export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 </code></pre><p>ps. 遇到问题可以到项目中的Issues中查找，80%都能解决问题。</p>
 <p>编译成功后会在在dbeaver/product/standalone/target/products/org.jkiss.dbeaver.core.product下产生三个平台的安装文件。</p>
 <p>至此，编译完成。</p>

@@ -80,11 +80,11 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.92691%20%2b0800%20CST%20m%3d%2b4.247739579">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.92691%20%2b0800%20CST%20m%3d%2b4.247739579">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.92691%20%2b0800%20CST%20m%3d%2b4.247739579">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a09.817988%20%2b0800%20CST%20m%3d%2b10.682929691">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a09.817988%20%2b0800%20CST%20m%3d%2b10.682929691">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a09.817988%20%2b0800%20CST%20m%3d%2b10.682929691">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.92691%20%2b0800%20CST%20m%3d%2b4.247739579">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a09.817988%20%2b0800%20CST%20m%3d%2b10.682929691">
     
 
 
@@ -639,7 +639,7 @@ FAIL	_/workspace/golang-tdd <span class="o">[</span>build failed<span class="o">
 <p>作为一般规则，你应该尝试对每个流程进行一次单元测试。 如果您的受测单元提供多个流程，则值得考虑将你的单元拆分为多个单元。</p>
 <p>当然，如果不运行go测试，测试驱动开发中的任何步骤都不会完成：</p>
 <h5 id="永远不要忘记进行测试-go-test">永远不要忘记进行测试 <strong>go test</strong></h5>
-<pre><code>$ go test 
+<pre tabindex="0"><code>$ go test 
 PASS
 ok  	_/workspace/golang-tdd		0.021s
 </code></pre><p>这结束了本书中第一个真正的测试驱动开发周期。 我用了多个页面来解释我一直在做什么，但在现实生活中，这个循环最多需要5到10分钟，包括至少5次测试。</p>
@@ -744,7 +744,7 @@ FAIL	_/Users/yigalduppen/src/golang-tdd	0.020s
 <h3 id="重构refactor">重构（Refactor）</h3>
 <p>正如我之前所说，重构不是可选的。但是，此时测试的代码量非常小，看起来结构合理。 所以在这种情况下我决定改进main中的错误处理。</p>
 <h5 id="qrcodedgo-6">qrcoded.go</h5>
-<pre><code>11 func main() {
+<pre tabindex="0"><code>11 func main() {
 12 	log.Println(&quot;Hello QR Code&quot;)
 13 
 14 	file, err := os.Create(&quot;qrcode.png&quot;)

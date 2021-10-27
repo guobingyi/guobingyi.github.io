@@ -54,11 +54,11 @@ systemd.service — Service unit configuration
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a17.27237%20%2b0800%20CST%20m%3d%2b2.593231167">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a17.27237%20%2b0800%20CST%20m%3d%2b2.593231167">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a17.27237%20%2b0800%20CST%20m%3d%2b2.593231167">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839303">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839303">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839303">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a17.27237%20%2b0800%20CST%20m%3d%2b2.593231167">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839303">
     
 
 
@@ -265,7 +265,7 @@ systemd.service — Service unit configuration
 原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便，
 好用。</p>
 <h2 id="0x00-编写服务-myserviceservice">0x00 编写服务 myservice.service</h2>
-<pre><code># auto start
+<pre tabindex="0"><code># auto start
 [Unit]
 Description=Start MyService  #服务描述
 After=mysql.service          #字面翻译就是等mysql服务器启动后，再启动
@@ -283,12 +283,12 @@ WantedBy=multi-user.target             #多用户
 </code></pre><p>服务定义可以参考：</p>
 <p><a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">systemd.service — Service unit configuration</a></p>
 <h2 id="0x01-编写运行命令-startsh">0x01 编写运行命令 start.sh</h2>
-<pre><code>#!/bin/sh
+<pre tabindex="0"><code>#!/bin/sh
 #start web
 sh /opt/apache-tomcat-8.0.32/bin/startup.sh
 </code></pre><p>ps. 千万要写 &ldquo;#!/bin/sh&rdquo;，不写有可能执行不了sh脚本。</p>
 <h2 id="0x02-编写运行命令-stopsh">0x02 编写运行命令 stop.sh</h2>
-<pre><code>#!/bin/sh
+<pre tabindex="0"><code>#!/bin/sh
 killPid=`ps -ef|grep start.jar|grep -v &quot;grep&quot;|awk '{print $2}'`
 
 if [ &quot;$killPid&quot; != &quot;&quot; ]; then
@@ -301,15 +301,15 @@ echo kill tomcat process.
 sh /opt/apache-tomcat-8.0.32/bin/shutdown.sh
 echo kill tomcat process end. 
 </code></pre><h2 id="0x03-部署服务">0x03 部署服务</h2>
-<pre><code>cp myservice.service /etc/systemd/system
+<pre tabindex="0"><code>cp myservice.service /etc/systemd/system
 </code></pre><h2 id="0x04-设置服务为开机启动">0x04 设置服务为开机启动</h2>
-<pre><code>systemctl enable myservice.service
+<pre tabindex="0"><code>systemctl enable myservice.service
 </code></pre><h2 id="0x05-启动服务">0x05 启动服务</h2>
-<pre><code>systemctl start myservice
+<pre tabindex="0"><code>systemctl start myservice
 </code></pre><h2 id="0x06停止服务">0x06停止服务</h2>
-<pre><code>systemctl stop myservice
+<pre tabindex="0"><code>systemctl stop myservice
 </code></pre><h2 id="0x07-查看服务状态">0x07 查看服务状态</h2>
-<pre><code>systemctl status myservice
+<pre tabindex="0"><code>systemctl status myservice
 </code></pre>
                 <br>
                 

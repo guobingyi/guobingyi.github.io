@@ -50,11 +50,11 @@ find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.565713%20%2b0800%20CST%20m%3d%2b3.886549183">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.565713%20%2b0800%20CST%20m%3d%2b3.886549183">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.565713%20%2b0800%20CST%20m%3d%2b3.886549183">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a09.073286%20%2b0800%20CST%20m%3d%2b9.938236142">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a09.073286%20%2b0800%20CST%20m%3d%2b9.938236142">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a09.073286%20%2b0800%20CST%20m%3d%2b9.938236142">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.565713%20%2b0800%20CST%20m%3d%2b3.886549183">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a09.073286%20%2b0800%20CST%20m%3d%2b9.938236142">
     
 
 
@@ -241,48 +241,48 @@ find . -name &quot;._*&quot; -delete git add -A git commit -m &#39;delete others
             <div class="markdown">
                 <h3 id="git-常用命令">Git 常用命令</h3>
 <p>1.初始化仓库信息</p>
-<pre><code> git init
+<pre tabindex="0"><code> git init
 </code></pre><ol start="2">
 <li>增加文件信息到库</li>
 </ol>
-<pre><code> git add -A
+<pre tabindex="0"><code> git add -A
 </code></pre><ol start="3">
 <li>提交代码</li>
 </ol>
-<pre><code> git commit -m &quot;first commit&quot;
+<pre tabindex="0"><code> git commit -m &quot;first commit&quot;
 </code></pre><ol start="4">
 <li>同步到远程库</li>
 </ol>
-<pre><code> git push -u origin master
+<pre tabindex="0"><code> git push -u origin master
 </code></pre><ol start="5">
 <li>将远程库信息同步到本地</li>
 </ol>
-<pre><code> git clone http://192.168.100.226:3000/guoby/wzry.git
+<pre tabindex="0"><code> git clone http://192.168.100.226:3000/guoby/wzry.git
 </code></pre><ol start="6">
 <li>撤销提交操作</li>
 </ol>
-<pre><code>git commit --amend
+<pre tabindex="0"><code>git commit --amend
 </code></pre><ol start="7">
 <li>重新更新git服务器信息</li>
 </ol>
-<pre><code>git remote rm origin
+<pre tabindex="0"><code>git remote rm origin
 git remote add origin http://192.168.100.201:3000/guoby/wzry.git
 git push -u origin master
 </code></pre><ol start="8">
 <li>删除文件</li>
 </ol>
 <p>8.1 删除单个文件</p>
-<pre><code>git rm ._ddd.file
+<pre tabindex="0"><code>git rm ._ddd.file
 </code></pre><p>8.2 删除多个文件</p>
-<pre><code>find . -name &quot;._*&quot; -delete
+<pre tabindex="0"><code>find . -name &quot;._*&quot; -delete
 git add -A
 git commit -m 'delete others file'
 </code></pre><ol start="9">
 <li>强制覆盖本地文件</li>
 </ol>
-<pre><code>git fetch --all  
+<pre tabindex="0"><code>git fetch --all  
 git reset --hard origin/master 
-</code></pre><pre><code>git pull
+</code></pre><pre tabindex="0"><code>git pull
 </code></pre>
             </div>
         </div>

@@ -56,11 +56,11 @@ brew cask uninstall name 0x06 总结常用命令 1. 安装源码 brew install wg
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a17.274181%20%2b0800%20CST%20m%3d%2b2.595042404">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a17.274181%20%2b0800%20CST%20m%3d%2b2.595042404">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a17.274181%20%2b0800%20CST%20m%3d%2b2.595042404">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a07.175818%20%2b0800%20CST%20m%3d%2b8.040788777">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a07.175818%20%2b0800%20CST%20m%3d%2b8.040788777">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a07.175818%20%2b0800%20CST%20m%3d%2b8.040788777">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a17.274181%20%2b0800%20CST%20m%3d%2b2.595042404">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a07.175818%20%2b0800%20CST%20m%3d%2b8.040788777">
     
 
 
@@ -265,78 +265,78 @@ brew cask uninstall name 0x06 总结常用命令 1. 安装源码 brew install wg
 </blockquote>
 <h4 id="0x00安装brew">0x00安装brew</h4>
 <p>访问<a href="https://brew.sh">brew官网</a>，根据提示进行安装。</p>
-<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+<pre tabindex="0"><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 </code></pre><h4 id="0x01使用brew安装软件">0x01使用brew安装软件</h4>
-<pre><code>brew install wget
+<pre tabindex="0"><code>brew install wget
 </code></pre><h4 id="0x02使用brew更新软件">0x02使用brew更新软件</h4>
-<pre><code>brew update
+<pre tabindex="0"><code>brew update
 </code></pre><p>更新使用brew安装的软件</p>
 <h4 id="0x03使用brew执行更新">0x03使用brew执行更新</h4>
-<pre><code>brew upgrade
+<pre tabindex="0"><code>brew upgrade
 </code></pre><p>所以，一般都使用组合命令进行执行</p>
-<pre><code>brew update &amp;&amp; brew upgrade
+<pre tabindex="0"><code>brew update &amp;&amp; brew upgrade
 </code></pre><h4 id="0x04-使用cleanup执行删除老更新包">0x04 使用cleanup执行删除老更新包</h4>
-<pre><code>brew cleanup
+<pre tabindex="0"><code>brew cleanup
 </code></pre><h4 id="0x05-cask下的安装与删除">0x05 cask下的安装与删除</h4>
 <p>安装</p>
-<pre><code>brew cask install name
+<pre tabindex="0"><code>brew cask install name
 </code></pre><p>卸载</p>
-<pre><code>brew cask uninstall name   
+<pre tabindex="0"><code>brew cask uninstall name   
 </code></pre><h4 id="0x06-总结常用命令">0x06 总结常用命令</h4>
 <h5 id="1-安装源码">1. 安装源码</h5>
-<pre><code>brew install wget          
+<pre tabindex="0"><code>brew install wget          
 </code></pre><h5 id="2-显示软件的各种信息包括版本源码地址依赖等">2. 显示软件的各种信息（包括版本、源码地址、依赖等）</h5>
-<pre><code>brew info svn               
+<pre tabindex="0"><code>brew info svn               
 </code></pre><h5 id="3-卸载软件">3. 卸载软件</h5>
-<pre><code>$brew uninstall mpv     
+<pre tabindex="0"><code>$brew uninstall mpv     
 </code></pre><h5 id="4-搜索brew-支持的软件支持模糊搜索">4. 搜索brew 支持的软件（支持模糊搜索）</h5>
-<pre><code>brew search python       
+<pre tabindex="0"><code>brew search python       
 </code></pre><h5 id="5-列出本机通过brew安装的所有软件">5. 列出本机通过brew安装的所有软件</h5>
-<pre><code>brew list                       
+<pre tabindex="0"><code>brew list                       
 </code></pre><h5 id="6-brew自身更新">6. brew自身更新</h5>
-<pre><code>brew update
+<pre tabindex="0"><code>brew update
 </code></pre><h5 id="7-更新安装过的软件如果不加软件名就更新所有可以更新的软件">7. 更新安装过的软件(如果不加软件名，就更新所有可以更新的软件)</h5>
-<pre><code>brew upgrade name    
+<pre tabindex="0"><code>brew upgrade name    
 </code></pre><h5 id="8-清除下载的缓存">8. 清除下载的缓存</h5>
-<pre><code>brew cleanup  
+<pre tabindex="0"><code>brew cleanup  
 </code></pre><h4 id="0x07-brew-cask-常用命令">0x07 brew cask 常用命令</h4>
 <blockquote>
 <p>安装完brew时，brew-cask已经安装好了，无需额外安装.</p>
 </blockquote>
 <h5 id="1-列出所有可以被安装的软件">1. 列出所有可以被安装的软件</h5>
-<pre><code>brew cask search
+<pre tabindex="0"><code>brew cask search
 </code></pre><h5 id="2-查找所有和mpv相关的应用">2. 查找所有和mpv相关的应用</h5>
-<pre><code>brew cask search mpv     
+<pre tabindex="0"><code>brew cask search mpv     
 </code></pre><h5 id="3-下载安装软件mpv">3. 下载安装软件mpv</h5>
-<pre><code>brew cask install name
+<pre tabindex="0"><code>brew cask install name
 </code></pre><h5 id="4-卸载软件mpv">4. 卸载软件mpv</h5>
-<pre><code>brew cask uninstall mpv
+<pre tabindex="0"><code>brew cask uninstall mpv
 </code></pre><h5 id="5-列出应用的信息">5. 列出应用的信息</h5>
-<pre><code>brew cask info mpv
+<pre tabindex="0"><code>brew cask info mpv
 </code></pre><h5 id="6--列出本机安装过的软件列表">6.  列出本机安装过的软件列表</h5>
-<pre><code>brew cask list
+<pre tabindex="0"><code>brew cask list
 </code></pre><h5 id="7--清除下载的缓存以及各种链接信息">7.  清除下载的缓存以及各种链接信息</h5>
-<pre><code>brew  cleanup
+<pre tabindex="0"><code>brew  cleanup
 </code></pre><h5 id="8--删除">8.  删除</h5>
-<pre><code>brew cask uninstall mpv
+<pre tabindex="0"><code>brew cask uninstall mpv
 </code></pre><h5 id="9--安装">9.  安装</h5>
-<pre><code> brew cask install mpv
+<pre tabindex="0"><code> brew cask install mpv
 </code></pre><h5 id="10-更新">10. 更新</h5>
-<pre><code>brew cask upgrade
+<pre tabindex="0"><code>brew cask upgrade
 </code></pre><p>至此，整理后才发现有个最好用的命令：</p>
-<pre><code>man brew
+<pre tabindex="0"><code>man brew
 </code></pre><h5 id="11-如何删除安装软件的依赖项">11. 如何删除安装软件的依赖项</h5>
-<pre><code>brew tap beeftornado/rmtree
-</code></pre><pre><code> brew rmtree gtk-doc
+<pre tabindex="0"><code>brew tap beeftornado/rmtree
+</code></pre><pre tabindex="0"><code> brew rmtree gtk-doc
 </code></pre><h5 id="12-查看安装软件的依赖项">12. 查看安装软件的依赖项</h5>
-<pre><code>brew deps boost
+<pre tabindex="0"><code>brew deps boost
 </code></pre><h5 id="13-查看安装软件的大小并由小按大排序">13. 查看安装软件的大小并由小按大排序</h5>
-<pre><code>brew install coreutils 
-</code></pre><pre><code>du -hs * | gsort -h
+<pre tabindex="0"><code>brew install coreutils 
+</code></pre><pre tabindex="0"><code>du -hs * | gsort -h
 </code></pre><p>happy hacking!</p>
 <h5 id="14-卸载软件及其依赖包">14. 卸载软件及其依赖包</h5>
-<pre><code>brew tap beeftornado/rmtree
-</code></pre><pre><code>brew rmtree node
+<pre tabindex="0"><code>brew tap beeftornado/rmtree
+</code></pre><pre tabindex="0"><code>brew rmtree node
 brew cleanup
 </code></pre>
                 <br>

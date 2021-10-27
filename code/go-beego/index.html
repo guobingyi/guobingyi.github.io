@@ -54,11 +54,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.696789%20%2b0800%20CST%20m%3d%2b4.017623474">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.696789%20%2b0800%20CST%20m%3d%2b4.017623474">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.696789%20%2b0800%20CST%20m%3d%2b4.017623474">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a09.073648%20%2b0800%20CST%20m%3d%2b9.938598127">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a09.073648%20%2b0800%20CST%20m%3d%2b9.938598127">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a09.073648%20%2b0800%20CST%20m%3d%2b9.938598127">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.696789%20%2b0800%20CST%20m%3d%2b4.017623474">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a09.073648%20%2b0800%20CST%20m%3d%2b9.938598127">
     
 
 
@@ -256,7 +256,7 @@
 <p>既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。</p>
 <h4 id="4-beego-项目结构">4. beego 项目结构</h4>
 <p>一般的 beego 项目的目录如下所示：</p>
-<pre><code>├── conf
+<pre tabindex="0"><code>├── conf
 │   └── app.conf
 ├── controllers
 │   ├── admin
@@ -277,22 +277,22 @@
 <h3 id="0x01-安装">0x01 安装</h3>
 <p>在安装完go语言后，直接使用命令进行安装。</p>
 <p>beego 的安装是典型的 Go 安装包的形式：</p>
-<pre><code>go get github.com/astaxie/beego
+<pre tabindex="0"><code>go get github.com/astaxie/beego
 </code></pre><p>常见问题：</p>
 <ul>
 <li>git 没有安装，请自行安装不同平台的 git，如何安装请自行搜索。</li>
 <li>git https 无法获取，请配置本地的 git，关闭 https 验证：</li>
 </ul>
-<pre><code>git config --global http.sslVerify false
+<pre tabindex="0"><code>git config --global http.sslVerify false
 </code></pre><h3 id="0x02-快速入门">0x02 快速入门</h3>
 <h4 id="1-新建项目">1 新建项目</h4>
-<pre><code>bee new myweb 
+<pre tabindex="0"><code>bee new myweb 
 </code></pre><h4 id="2-运行项目">2 运行项目</h4>
-<pre><code>bee run 
+<pre tabindex="0"><code>bee run 
 </code></pre><h3 id="0x03-一个具体项目">0x03 一个具体项目</h3>
 <p>我们通过一个人员信息的管理页面来进行编写。</p>
 <h4 id="1-前端准备">1. 前端准备</h4>
-<pre><code>Bootstrap/JQuery
+<pre tabindex="0"><code>Bootstrap/JQuery
 </code></pre><h4 id="2-后台数据库">2. 后台数据库</h4>
 <p>用户表 TB_User</p>
 <table>
@@ -374,7 +374,7 @@
 </tbody>
 </table>
 <p>执行SQL</p>
-<pre><code>CREATE TABLE TB_User
+<pre tabindex="0"><code>CREATE TABLE TB_User
 (
     id int PRIMARY KEY AUTO_INCREMENT,
     user_name varchar(64),
@@ -387,8 +387,8 @@
 </code></pre><ol start="3">
 <li>安装mysql驱动和ORM</li>
 </ol>
-<pre><code>go get github.com/go-sql-driver/mysql
-</code></pre><pre><code>go get github.com/astaxie/beego/orm
+<pre tabindex="0"><code>go get github.com/go-sql-driver/mysql
+</code></pre><pre tabindex="0"><code>go get github.com/astaxie/beego/orm
 </code></pre><ol start="4">
 <li>编辑main.go</li>
 </ol>

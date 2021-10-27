@@ -56,11 +56,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.06398%20%2b0800%20CST%20m%3d%2b3.384826103">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.06398%20%2b0800%20CST%20m%3d%2b3.384826103">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.06398%20%2b0800%20CST%20m%3d%2b3.384826103">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a07.852927%20%2b0800%20CST%20m%3d%2b8.717890474">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a07.852927%20%2b0800%20CST%20m%3d%2b8.717890474">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a07.852927%20%2b0800%20CST%20m%3d%2b8.717890474">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.06398%20%2b0800%20CST%20m%3d%2b3.384826103">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a07.852927%20%2b0800%20CST%20m%3d%2b8.717890474">
     
 
 
@@ -265,7 +265,7 @@
 </blockquote>
 <h3 id="0x00-开始">0x00 开始</h3>
 <h4 id="kafka的官网">kafka的官网</h4>
-<pre><code>http://kafka.apache.org/
+<pre tabindex="0"><code>http://kafka.apache.org/
 </code></pre><h4 id="什么是kafka">什么是kafka</h4>
 <p>Apache Kafka是由Apache软件基金会开发的一个开源消息系统项目，由Scala写成。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。
 Kafka是一个分布式的、分区的、多复本的日志提交服务。它通过一种独一无二的设计提供了一个消息系统的功能。</p>
@@ -280,30 +280,30 @@ Kafka是一个分布式的、分区的、多复本的日志提交服务。它通
 </li>
 </ul>
 <h4 id="开启zookeeper">开启ZooKeeper</h4>
-<pre><code>bin/zookeeper-server-start.sh config/zookeeper.properties &amp;
+<pre tabindex="0"><code>bin/zookeeper-server-start.sh config/zookeeper.properties &amp;
 </code></pre><h4 id="开启kafka服务">开启kafka服务</h4>
-<pre><code>bin/kafka-server-start.sh config/server.properties &amp;
+<pre tabindex="0"><code>bin/kafka-server-start.sh config/server.properties &amp;
 </code></pre><p>ps.如果通过终端进入，不要直接关闭终端，使用exit命令关闭，不然会出现kafka进程全部关闭的情况。</p>
 <h4 id="创建一个主题">创建一个主题</h4>
-<pre><code>bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+<pre tabindex="0"><code>bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 </code></pre><h4 id="列举主题">列举主题</h4>
-<pre><code>bin/kafka-topics.sh --list --zookeeper localhost:2181
+<pre tabindex="0"><code>bin/kafka-topics.sh --list --zookeeper localhost:2181
 </code></pre><h4 id="发送消息">发送消息</h4>
 <ul>
 <li>向主题为test的发送消息，输入字符后回车。</li>
 </ul>
-<pre><code>bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+<pre tabindex="0"><code>bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 </code></pre><h4 id="启动消费者">启动消费者</h4>
 <ul>
 <li>&ndash;from-beginning 是从开始获取，可以不用该选项，直接从实时消息体获取信息。</li>
 </ul>
-<pre><code>bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+<pre tabindex="0"><code>bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 </code></pre><h4 id="启动kafka时需要配置的信息">启动kafka时需要配置的信息</h4>
 <ul>
 <li>在server.properties中进行配置</li>
 </ul>
-<pre><code>listeners=PLAINTEXT://192.168.100.181:9092
-</code></pre><pre><code>log.dirs=/opt/kafka_data
+<pre tabindex="0"><code>listeners=PLAINTEXT://192.168.100.181:9092
+</code></pre><pre tabindex="0"><code>log.dirs=/opt/kafka_data
 </code></pre>
                 <br>
                 

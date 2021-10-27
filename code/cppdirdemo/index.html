@@ -52,11 +52,11 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.569596%20%2b0800%20CST%20m%3d%2b3.890432749">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.569596%20%2b0800%20CST%20m%3d%2b3.890432749">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.569596%20%2b0800%20CST%20m%3d%2b3.890432749">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a08.529896%20%2b0800%20CST%20m%3d%2b9.394852027">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a08.529896%20%2b0800%20CST%20m%3d%2b9.394852027">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a08.529896%20%2b0800%20CST%20m%3d%2b9.394852027">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.569596%20%2b0800%20CST%20m%3d%2b3.890432749">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a08.529896%20%2b0800%20CST%20m%3d%2b9.394852027">
     
 
 
@@ -246,11 +246,11 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
 <p>使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator.  Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C++。</p>
 </blockquote>
 <h3 id="1创建目录point">1.创建目录Point</h3>
-<pre><code>mkdir Point
+<pre tabindex="0"><code>mkdir Point
 </code></pre><h3 id="2-创建头文件pointh">2. 创建头文件point.h</h3>
-<pre><code>vim point.h
+<pre tabindex="0"><code>vim point.h
 </code></pre><p>内容如下：</p>
-<pre><code>class point{
+<pre tabindex="0"><code>class point{
 private:
         int x;
         int y;
@@ -260,18 +260,18 @@ public:
         ~point(){}
 };
 </code></pre><h3 id="3-创建文件pointcpp">3. 创建文件point.cpp</h3>
-<pre><code>vim point.cpp
+<pre tabindex="0"><code>vim point.cpp
 </code></pre><p>内容如下：</p>
-<pre><code>#include &lt;iostream&gt;
+<pre tabindex="0"><code>#include &lt;iostream&gt;
 #include &quot;point.h&quot;
 
 void point::print(){
         std::cout&lt;&lt;&quot;x=&quot;&lt;&lt;this-&gt;x&lt;&lt;&quot;,y=&quot;&lt;&lt;this-&gt;y&lt;&lt;&quot;\n&quot;;
 }
 </code></pre><h3 id="4创建main文件">4.创建main文件</h3>
-<pre><code>vim main.cpp
+<pre tabindex="0"><code>vim main.cpp
 </code></pre><p>内容如下：</p>
-<pre><code>#include &lt;iostream&gt;
+<pre tabindex="0"><code>#include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &quot;point.h&quot;
 using namespace std;
@@ -295,15 +295,15 @@ int main(){
 }
 
 </code></pre><h3 id="5创建makefile文件">5.创建Makefile文件</h3>
-<pre><code>vim Makefile 
+<pre tabindex="0"><code>vim Makefile 
 </code></pre><p>vim makefile也是可以的，命令make会在当前目录下寻找Makefile或者makefile</p>
 <p>内容如下：</p>
-<pre><code>all:
+<pre tabindex="0"><code>all:
     g++ main.cpp point.cpp -o app -std=c++11
 clean:
     rm app
 </code></pre><p>参数说明：</p>
-<pre><code>g++ main.cpp point.cpp # 使用g++编译器编译当前所有的cpp文件
+<pre tabindex="0"><code>g++ main.cpp point.cpp # 使用g++编译器编译当前所有的cpp文件
 
 main.cpp一定要放在第一个-o app # 参数-o表示最终生成的可执行文件为app
 
@@ -311,7 +311,7 @@ main.cpp一定要放在第一个-o app # 参数-o表示最终生成的可执行�
 
 rm app # 删除app
 </code></pre><h3 id="6编译">6.编译</h3>
-<pre><code>make
+<pre tabindex="0"><code>make
 </code></pre><blockquote>
 <p>这个例子来自于网上，得找时间修改一下，在此记录的同时也方便以后编写的时候作为参考。</p>
 </blockquote>

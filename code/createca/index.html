@@ -50,11 +50,11 @@ ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.566888%20%2b0800%20CST%20m%3d%2b3.887724845">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.566888%20%2b0800%20CST%20m%3d%2b3.887724845">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.566888%20%2b0800%20CST%20m%3d%2b3.887724845">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a08.532892%20%2b0800%20CST%20m%3d%2b9.397847580">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a08.532892%20%2b0800%20CST%20m%3d%2b9.397847580">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a08.532892%20%2b0800%20CST%20m%3d%2b9.397847580">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.566888%20%2b0800%20CST%20m%3d%2b3.887724845">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a08.532892%20%2b0800%20CST%20m%3d%2b9.397847580">
     
 
 
@@ -246,25 +246,25 @@ ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就�
 <p>在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。</p>
 <p>ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？</p>
 <h3 id="1-创建根证书密钥文件rootkey">1. 创建根证书密钥文件root.key</h3>
-<pre><code>openssl genrsa -des3 -out root.key
+<pre tabindex="0"><code>openssl genrsa -des3 -out root.key
 </code></pre><h3 id="2-创建根证书的申请文件rootcsr">2. 创建根证书的申请文件root.csr</h3>
-<pre><code>openssl req -new -key root.key -out root.csr
+<pre tabindex="0"><code>openssl req -new -key root.key -out root.csr
 </code></pre><h3 id="3-创建一个自当前日期起为期十年的根证书rootcrt">3. 创建一个自当前日期起为期十年的根证书root.crt</h3>
-<pre><code>openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt
+<pre tabindex="0"><code>openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt
 </code></pre><h3 id="4-创建服务器证书密钥serverkey">4. 创建服务器证书密钥server.key</h3>
-<pre><code>openssl genrsa –des3 -out server.key 2048
+<pre tabindex="0"><code>openssl genrsa –des3 -out server.key 2048
 </code></pre><h3 id="5-创建服务器证书的申请文件servercsr">5. 创建服务器证书的申请文件server.csr</h3>
-<pre><code>openssl req -new -key server.key -out server.csr
+<pre tabindex="0"><code>openssl req -new -key server.key -out server.csr
 </code></pre><h3 id="6-创建自当前日期起有效期为期两年的服务器证书servercrt">6. 创建自当前日期起有效期为期两年的服务器证书server.crt</h3>
-<pre><code>openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.csr -out server.crt
+<pre tabindex="0"><code>openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.csr -out server.crt
 </code></pre><h3 id="7-创建客户端证书密钥文件clientkey">7. 创建客户端证书密钥文件client.key</h3>
-<pre><code>openssl genrsa -des3 -out client.key 2048
+<pre tabindex="0"><code>openssl genrsa -des3 -out client.key 2048
 </code></pre><h3 id="8-创建客户端证书的申请文件clientcsr">8. 创建客户端证书的申请文件client.csr</h3>
-<pre><code>openssl req -new -key client.key -out client.csr
+<pre tabindex="0"><code>openssl req -new -key client.key -out client.csr
 </code></pre><h3 id="9-创建一个自当前日期起有效期为两年的客户端证书clientcrt">9. 创建一个自当前日期起有效期为两年的客户端证书client.crt</h3>
-<pre><code>openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in client.csr -out client.crt
+<pre tabindex="0"><code>openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in client.csr -out client.crt
 </code></pre><h3 id="10-将客户端证书文件clientcrt和客户端证书密钥文件clientkey合并成客户端证书安装包clientpfx">10. 将客户端证书文件client.crt和客户端证书密钥文件client.key合并成客户端证书安装包client.pfx</h3>
-<pre><code>openssl pkcs12 -export -in client.crt -inkey client.key -out client.pfx
+<pre tabindex="0"><code>openssl pkcs12 -export -in client.crt -inkey client.key -out client.pfx
 </code></pre><p><strong>保存生成的文件备用，其中server.crt和server.key是配置单向SSL时需要使用的证书文件，client.crt是配置双向SSL时需要使用的证书文件，client.pfx是配置双向SSL时需要客户端安装的证书文件
 .crt文件和.key可以合到一个文件里面，把2个文件合成了一个.pem文件（直接拷贝过去就行了）</strong></p>
 

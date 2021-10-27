@@ -64,11 +64,11 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a17.271083%20%2b0800%20CST%20m%3d%2b2.591944578">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a17.271083%20%2b0800%20CST%20m%3d%2b2.591944578">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a17.271083%20%2b0800%20CST%20m%3d%2b2.591944578">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839311">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839311">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839311">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a17.271083%20%2b0800%20CST%20m%3d%2b2.591944578">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a07.174868%20%2b0800%20CST%20m%3d%2b8.039839311">
     
 
 
@@ -274,14 +274,14 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
 <p>第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。</p>
 <h2 id="0x00-安装vsftpd">0x00 安装vsftpd</h2>
 <p>如果centos下没有安装vsftpd，那么就你就直接安装:</p>
-<pre><code>yum install vsftpd
+<pre tabindex="0"><code>yum install vsftpd
 </code></pre><p>如果安装了，那么就直接卸载了。</p>
-<pre><code>yum remove vsftpd
+<pre tabindex="0"><code>yum remove vsftpd
 </code></pre><p>卸载后需要注意以下问题：</p>
 <ul>
 <li>查看线程是否存在</li>
 </ul>
-<pre><code>ps auxf | grep vsftpd
+<pre tabindex="0"><code>ps auxf | grep vsftpd
 </code></pre><p>如果线程存在则直接 kill -9 .</p>
 <ul>
 <li>如果/etc/vsftpd文件夹存在，先删除在重新安装。</li>
@@ -289,9 +289,9 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
 <p>即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。</p>
 <h2 id="0x01-配置信息">0x01 配置信息</h2>
 <p>ftp服务的配置信息路径为：</p>
-<pre><code>/etc/vsftpd/vsftpd.conf
+<pre tabindex="0"><code>/etc/vsftpd/vsftpd.conf
 </code></pre><p>一般对照配置修改以下内容：</p>
-<pre><code>#禁用匿名用户登录
+<pre tabindex="0"><code>#禁用匿名用户登录
 anonymous_enable=NO
 #是否允许本地用户登录
 chroot_local_user=YES
@@ -301,18 +301,18 @@ local_root=/ftpserver/flowdata
 <ol>
 <li>创建ftp用户</li>
 </ol>
-<pre><code>useradd jack
+<pre tabindex="0"><code>useradd jack
 </code></pre><ol start="2">
 <li>设置用户密码</li>
 </ol>
-<pre><code>echo &quot;jack_pass_word&quot; | passwd jack --stdin
+<pre tabindex="0"><code>echo &quot;jack_pass_word&quot; | passwd jack --stdin
 </code></pre><p>3.限制该用户仅能通过 FTP 访问</p>
-<pre><code>usermod -s /sbin/nologin jack
+<pre tabindex="0"><code>usermod -s /sbin/nologin jack
 </code></pre><h2 id="0x03-启动ftp服务">0x03 启动ftp服务</h2>
-<pre><code>systemctl start vsftpd
+<pre tabindex="0"><code>systemctl start vsftpd
 </code></pre><h2 id="0x04-验证ftp服务">0x04 验证ftp服务</h2>
 <p>在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。</p>
-<pre><code> FTP://jack:jack_pass_word@192.168.100.175:21/
+<pre tabindex="0"><code> FTP://jack:jack_pass_word@192.168.100.175:21/
 </code></pre><ul>
 <li>192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。</li>
 </ul>

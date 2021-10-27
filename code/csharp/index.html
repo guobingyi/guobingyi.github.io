@@ -80,11 +80,11 @@ C# 教程  官方的例子，手把手教你。" />
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.56616%20%2b0800%20CST%20m%3d%2b3.886996267">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.56616%20%2b0800%20CST%20m%3d%2b3.886996267">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.56616%20%2b0800%20CST%20m%3d%2b3.886996267">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a09.07333%20%2b0800%20CST%20m%3d%2b9.938280010">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a09.07333%20%2b0800%20CST%20m%3d%2b9.938280010">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a09.07333%20%2b0800%20CST%20m%3d%2b9.938280010">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.56616%20%2b0800%20CST%20m%3d%2b3.886996267">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a09.07333%20%2b0800%20CST%20m%3d%2b9.938280010">
     
 
 
@@ -279,19 +279,19 @@ C# 教程  官方的例子，手把手教你。" />
 <p>刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。</p>
 <p>学习语言的目的是什么？我想就是用该语言快速的完成任务。更好听的是实现自己的思想。生活在这个时代太幸福了，不需要一来就学习汇编语言，有非常多的高级语言供我们选择。现阶段我比较喜欢的go，打动我的是真正的跨平台。python，ruby吧，你要装运行环境，Java呢，虚拟机要装，C#要安装dotnet-sdk。Rust准备看一下。扯远了，学习的目的还是有所需求。比如，公司的项目就是该语言开发的，你要继续开发；公司的项目需要重新搭建，你需要进行评估。总之，学习带着目的来和不带目的来，学习的效果是不一样的。</p>
 <p>最近，突发奇想，把所学的语言都重新认真的看一遍，因为不是有时间嘛，把时间浪费在有意义的事情上，多好。而最先被看到的是C#，那种熟悉的感觉依稀记得。所以直接安装了。</p>
-<pre><code>brew cask install dotnet-sdk 
+<pre tabindex="0"><code>brew cask install dotnet-sdk 
 </code></pre><p>安装完看了一下版本，都3.1.101了，发展速度，好快。</p>
 <p>快速的搭建了一个hello world项目。</p>
-<pre><code>dotnet new console --name Hello
+<pre tabindex="0"><code>dotnet new console --name Hello
 </code></pre><p>ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。</p>
 <p>执行项目。</p>
-<pre><code> cd Hello
+<pre tabindex="0"><code> cd Hello
  dotnet run
 </code></pre><p>这样一个hello,world就打印在终端了，嗯，是非常速度的。</p>
 <p>接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。</p>
-<pre><code>code -r Hello
+<pre tabindex="0"><code>code -r Hello
 </code></pre><p>最小的完整代码片段：</p>
-<pre><code>using System;
+<pre tabindex="0"><code>using System;
 
 namespace Hello
 {

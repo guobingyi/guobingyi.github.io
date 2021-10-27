@@ -80,11 +80,11 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a18.33943%20%2b0800%20CST%20m%3d%2b3.660271260">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a18.33943%20%2b0800%20CST%20m%3d%2b3.660271260">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a18.33943%20%2b0800%20CST%20m%3d%2b3.660271260">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a08.229652%20%2b0800%20CST%20m%3d%2b9.094610881">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a08.229652%20%2b0800%20CST%20m%3d%2b9.094610881">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a08.229652%20%2b0800%20CST%20m%3d%2b9.094610881">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a18.33943%20%2b0800%20CST%20m%3d%2b3.660271260">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a08.229652%20%2b0800%20CST%20m%3d%2b9.094610881">
     
 
 
@@ -295,10 +295,10 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 <h2 id="0x01-helloworld">0x01 Hello,World!</h2>
 <p>每个学习程序设计的开始都会是这个，也因为这个才从此入坑。</p>
 <p>创建文件hello.sh,输入一下内容：</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 echo 'Hello.World!'
 </code></pre><p>在终端中使用sh hello.sh,将输出以下结果：</p>
-<pre><code>Hello,World!
+<pre tabindex="0"><code>Hello,World!
 </code></pre><p>恭喜你，入门了。</p>
 <p>思考：</p>
 <ol>
@@ -310,25 +310,25 @@ echo 'Hello.World!'
 <h2 id="0x02-变量">0x02 变量</h2>
 <p>shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。</p>
 <h3 id="那么如何定义一个变量呢">那么如何定义一个变量呢？</h3>
-<pre><code>someone=&quot;Lee&quot;
+<pre tabindex="0"><code>someone=&quot;Lee&quot;
 some_two=&quot;http://10.10.10.222&quot;
 </code></pre><p>看似简单的定义变量，如果写多了程序，就会有个问题，如下：</p>
-<pre><code>someone = &quot;Lee&quot; #Eroor
+<pre tabindex="0"><code>someone = &quot;Lee&quot; #Eroor
 </code></pre><p>为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。</p>
 <p>变量名和等号之间不能有空格。</p>
 <p>变量名和等号之间不能有空格。</p>
 <p>变量名和等号之间不能有空格。</p>
 <p>重要的事情说三遍，你要知道调试shell，就像java里System.out.println(&ldquo;ok&rdquo;)一样麻烦，更何况shell木有断点功能。目前我还不知道shell的ide，或者打断点，如果你知道，请告诉我，让我试试。</p>
 <h3 id="使用变量">使用变量</h3>
-<pre><code>$someone
+<pre tabindex="0"><code>$someone
 $(some_two)
 </code></pre><h3 id="只读变量">只读变量</h3>
-<pre><code>readonly someone
+<pre tabindex="0"><code>readonly someone
 </code></pre><h3 id="删除变量">删除变量</h3>
-<pre><code>unset someone
+<pre tabindex="0"><code>unset someone
 </code></pre><h2 id="0x03-字符串">0x03 字符串</h2>
 <h3 id="单引号">单引号</h3>
-<pre><code>someone='Lee'
+<pre tabindex="0"><code>someone='Lee'
 </code></pre><ul>
 <li>
 <p>单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；</p>
@@ -338,25 +338,25 @@ $(some_two)
 </li>
 </ul>
 <h3 id="双引号">双引号</h3>
-<pre><code>someone=&quot;Lee,$some_two&quot;
+<pre tabindex="0"><code>someone=&quot;Lee,$some_two&quot;
 </code></pre><h3 id="拼接字符串">拼接字符串</h3>
-<pre><code>someone=&quot;World&quot;
+<pre tabindex="0"><code>someone=&quot;World&quot;
 sometwo=&quot;hello,&quot;$someone&quot;!&quot;
 somethree=&quot;hello,${someone}!&quot;
 echo sometwo somethree
 </code></pre><h3 id="获取字符串长度">获取字符串长度</h3>
-<pre><code>someone=&quot;hello&quot;
+<pre tabindex="0"><code>someone=&quot;hello&quot;
 echo ${#someone} #输出5
 </code></pre><h3 id="提取子字符串">提取子字符串</h3>
-<pre><code>someone=&quot;some one like you!&quot;
+<pre tabindex="0"><code>someone=&quot;some one like you!&quot;
 echo ${someone:1:3} #输出ome,所以字符串的长度也是从0开始
 </code></pre><h3 id="查找字符串">查找字符串</h3>
-<pre><code>someone=&quot;some one like you!&quot;
+<pre tabindex="0"><code>someone=&quot;some one like you!&quot;
 echo `expr index &quot;$someone&quot; is` #output 2
 </code></pre><h2 id="0x04-shell数组">0x04 Shell数组</h2>
 <p>shell支持数组，但是不支持多维数组。</p>
 <h3 id="定义数组">定义数组</h3>
-<pre><code># one
+<pre tabindex="0"><code># one
 someone=(val1 val2 val3)
 #two
 sometwo=(
@@ -370,12 +370,12 @@ arr[1]=key2
 arr[2]=key3
 
 </code></pre><h3 id="获取数组值">获取数组值</h3>
-<pre><code>#one value
+<pre tabindex="0"><code>#one value
 temp=${arr[0]}
 #all
 echo ${arr[@]} #@ mean all
 </code></pre><h3 id="数组长度">数组长度</h3>
-<pre><code>#count
+<pre tabindex="0"><code>#count
 length=${#arr[@]}
 #or
 length=${#arr[*]}
@@ -383,7 +383,7 @@ length=${#arr[*]}
 length=${#arr[0]}
 </code></pre><h2 id="0x05-shell注释">0x05 shell注释</h2>
 <p>shell里只能进行单行注释，已#开头的语句将会被注释掉。</p>
-<pre><code># This is Comment!
+<pre tabindex="0"><code># This is Comment!
 
 # example shell script header 
 #---------------------------------------------------
@@ -399,7 +399,7 @@ length=${#arr[0]}
 <ul>
 <li>one</li>
 </ul>
-<pre><code>:&lt;&lt;EOF
+<pre tabindex="0"><code>:&lt;&lt;EOF
 comment!
 comment!
 comment!
@@ -407,7 +407,7 @@ EOF
 </code></pre><ul>
 <li>two</li>
 </ul>
-<pre><code>:&lt;&lt;'
+<pre tabindex="0"><code>:&lt;&lt;'
 comment
 comment
 comment
@@ -415,7 +415,7 @@ comment
 </code></pre><ul>
 <li>three</li>
 </ul>
-<pre><code>:&lt;&lt;!
+<pre tabindex="0"><code>:&lt;&lt;!
 comment~~
 comment~~
 comment~~
@@ -425,7 +425,7 @@ comment~~
 <p>参数使用#n来进行获取</p>
 </blockquote>
 <p>比如在终端执行:</p>
-<pre><code>sh job.sh testload.sh 20 
+<pre tabindex="0"><code>sh job.sh testload.sh 20 
 </code></pre><ul>
 <li>
 <p>#0=job.sh</p>
@@ -482,7 +482,7 @@ comment~~
 </blockquote>
 <h3 id="算术运算符">算术运算符</h3>
 <p>shell中使用expr来进行算术运算</p>
-<pre><code>add=`expr $((3+4))` #7
+<pre tabindex="0"><code>add=`expr $((3+4))` #7
 </code></pre><table>
 <thead>
 <tr>
@@ -535,7 +535,7 @@ comment~~
 </tbody>
 </table>
 <h3 id="关系运算符">关系运算符</h3>
-<pre><code>a=1
+<pre tabindex="0"><code>a=1
 b=2
 </code></pre><table>
 <thead>
@@ -668,7 +668,7 @@ b=2
 <blockquote>
 <p>文件运算符用于检测Unix文件的各种属性。</p>
 </blockquote>
-<pre><code>file=&quot;~/test.sh&quot;
+<pre tabindex="0"><code>file=&quot;~/test.sh&quot;
 </code></pre><table>
 <thead>
 <tr>
@@ -747,43 +747,43 @@ b=2
 </table>
 <h2 id="0x08-shell-echo-command">0x08 shell echo command</h2>
 <h3 id="显示普通字符串">显示普通字符串</h3>
-<pre><code>echo &quot;Just fun!&quot;
+<pre tabindex="0"><code>echo &quot;Just fun!&quot;
 </code></pre><h3 id="显示转义字符">显示转义字符</h3>
-<pre><code>echo &quot;\&quot;This is demo!\&quot;&quot;
+<pre tabindex="0"><code>echo &quot;\&quot;This is demo!\&quot;&quot;
 #output &quot;This is demo!&quot;
 </code></pre><h3 id="显示变量">显示变量</h3>
-<pre><code>yourname=&quot;Lee&quot;
+<pre tabindex="0"><code>yourname=&quot;Lee&quot;
 echo &quot;you name is $yourname&quot;
 #output you name is Lee
 </code></pre><h3 id="显示换行">显示换行</h3>
-<pre><code>echo -e &quot;Now,Let's talk about you life!\n&quot; # -e 开启转义
+<pre tabindex="0"><code>echo -e &quot;Now,Let's talk about you life!\n&quot; # -e 开启转义
 echo &quot;It sample.&quot;
-</code></pre><pre><code>#output
+</code></pre><pre tabindex="0"><code>#output
 Now,Let's talk about you life!
 
 It sample.
 </code></pre><h3 id="显示不换行">显示不换行</h3>
-<pre><code>echo -e &quot;you work is \c&quot;
+<pre tabindex="0"><code>echo -e &quot;you work is \c&quot;
 echo &quot;good!&quot;
 #output you work is good!
 </code></pre><h3 id="将结果输出到文件">将结果输出到文件</h3>
-<pre><code>echo &quot;This comment in file.&quot; &gt; log.txt
+<pre tabindex="0"><code>echo &quot;This comment in file.&quot; &gt; log.txt
 </code></pre><h3 id="输出变量信息">输出变量信息</h3>
-<pre><code>echo `$yourname\&quot;`
+<pre tabindex="0"><code>echo `$yourname\&quot;`
 #output $yourname\&quot;
 </code></pre><h3 id="显示命令执行结果">显示命令执行结果</h3>
-<pre><code>echo `whoami`
+<pre tabindex="0"><code>echo `whoami`
 #output root
 </code></pre><h2 id="0x09-shell-printf-command">0x09 shell printf command</h2>
 <blockquote>
 <p>printf命令模仿C程序里的printf()函数。</p>
 </blockquote>
-<pre><code>printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重(kg)
+<pre tabindex="0"><code>printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重(kg)
 printf &quot;%-10s %-8s %-4.2f\n&quot; 张三 男 54.333
 printf &quot;%-10s %-8s %-4.2f\n&quot; 李四 男 66.234
 printf &quot;%-10s %-8s %-4.2f\n&quot; 杨玉环 女 48.872
 </code></pre><p>输出</p>
-<pre><code>姓名   性别     体重
+<pre tabindex="0"><code>姓名   性别     体重
 张三   男       54.33
 李四   男       66.23
 杨玉环 女       48.88
@@ -881,7 +881,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 杨玉环 女 48.872
 </tr>
 </tbody>
 </table>
-<pre><code>zs_age=28
+<pre tabindex="0"><code>zs_age=28
 ls_age=29
 
 if test $[zs_age] -eq $[ls_age]
@@ -918,7 +918,7 @@ fi
 </tr>
 </tbody>
 </table>
-<pre><code>zs_name=&quot;张三&quot;
+<pre tabindex="0"><code>zs_name=&quot;张三&quot;
 ls_name=&quot;李四&quot;
 
 if test $zs_name = $ls_name
@@ -976,7 +976,7 @@ fi
 </table>
 <h2 id="0x11-shell-控制流量">0x11 shell 控制流量</h2>
 <h3 id="if-else">if else</h3>
-<pre><code>if condition
+<pre tabindex="0"><code>if condition
 then 
 	command1
 	command2
@@ -985,7 +985,7 @@ then
 else
 	command5
 if
-</code></pre><pre><code>if condition
+</code></pre><pre tabindex="0"><code>if condition
 then
 	command1
 elif 
@@ -996,7 +996,7 @@ else
 	commandn
 fi
 </code></pre><h3 id="for-循环">for 循环</h3>
-<pre><code>for var in var1 var2 ... varn
+<pre tabindex="0"><code>for var in var1 var2 ... varn
 do
 	cmd1
 	cmd2
@@ -1004,17 +1004,17 @@ do
 	cmdn
 done
 </code></pre><h3 id="while-语句">while 语句</h3>
-<pre><code>while condition
+<pre tabindex="0"><code>while condition
 do
 	cmd
 done
 </code></pre><h3 id="until-循环">until 循环</h3>
-<pre><code>until condition
+<pre tabindex="0"><code>until condition
 do 
 	cmd 
 done
 </code></pre><h3 id="case">case</h3>
-<pre><code>case 值 in 
+<pre tabindex="0"><code>case 值 in 
 条件1）
 	cmd1
 	;;
@@ -1038,7 +1038,7 @@ esac
 <p>inux shell 可以用户定义函数。</p>
 </blockquote>
 <h3 id="函数定义">函数定义</h3>
-<pre><code>[ function ] funname [()]
+<pre tabindex="0"><code>[ function ] funname [()]
 
 {
 
@@ -1107,22 +1107,22 @@ esac
 </blockquote>
 <h3 id="devnull-文件">/dev/null 文件</h3>
 <p>如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null</p>
-<pre><code>$ command &gt; /dev/null
+<pre tabindex="0"><code>$ command &gt; /dev/null
 </code></pre><p>/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到&quot;禁止输出&quot;的效果。</p>
 <p>如果希望屏蔽 stdout 和 stderr，可以这样写：</p>
-<pre><code>$ command &gt; /dev/null 2&gt;&amp;1
+<pre tabindex="0"><code>$ command &gt; /dev/null 2&gt;&amp;1
 </code></pre><h2 id="0x14-引用文件">0x14 引用文件</h2>
 <p>和其他语言一样，Shell 也可以包含外部脚本。这样可以很方便的封装一些公用的代码作为一个独立的文件。</p>
 <p>Shell 文件包含的语法格式如下：</p>
-<pre><code>. filename   # 注意点号(.)和文件名中间有一空格
+<pre tabindex="0"><code>. filename   # 注意点号(.)和文件名中间有一空格
 
 或
 
 source filename
 </code></pre><p>实例</p>
-<pre><code>#sh_test1.sh
+<pre tabindex="0"><code>#sh_test1.sh
 name=&quot;guoby&quot;
-</code></pre><pre><code>#sh_test2.sh
+</code></pre><pre tabindex="0"><code>#sh_test2.sh
 
 #使用 . 号来引用sh_test1.sh 文件
 . ./sh_test2.sh

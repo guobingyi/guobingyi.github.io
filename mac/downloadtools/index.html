@@ -64,11 +64,11 @@ aria2c -c --input-file=download.txt 令我震惊的是第三天的速度，他�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-09-17%2017%3a48%3a19.002247%20%2b0800%20CST%20m%3d%2b4.323075127">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-09-17%2017%3a48%3a19.002247%20%2b0800%20CST%20m%3d%2b4.323075127">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-09-17%2017%3a48%3a19.002247%20%2b0800%20CST%20m%3d%2b4.323075127">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2020%3a48%3a09.801316%20%2b0800%20CST%20m%3d%2b10.666257593">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2020%3a48%3a09.801316%20%2b0800%20CST%20m%3d%2b10.666257593">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2020%3a48%3a09.801316%20%2b0800%20CST%20m%3d%2b10.666257593">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-09-17%2017%3a48%3a19.002247%20%2b0800%20CST%20m%3d%2b4.323075127">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2020%3a48%3a09.801316%20%2b0800%20CST%20m%3d%2b10.666257593">
     
 
 
@@ -261,25 +261,25 @@ aria2c -c --input-file=download.txt 令我震惊的是第三天的速度，他�
 <p>我喜欢看电影，特别喜欢下载电影观看，但是问题来了，迅雷的对版权问题的态度（应版权方要求,文件无法下载），我无法搞定，毕竟迅雷是我的首先下载工具，那么怎么办呢？运气好呢，找到了新的资源，没有被迅雷查询到；要不就是等，等到可以下载。</p>
 <p>我曾经在网上查询，如何替代迅雷，尝试了FDM，Aria2。FDM下载一般的速度真的不可直视，不断使用不断放弃，根本没有成功下载过一个资源，所以，再也不用了。Aria2自己编译后，尝试过下载，因为下载一直没有速度，果断放弃了，根本玩不转。</p>
 <p>这次，因为想看一下日本的神剧《半泽直树》，发现迅雷根本下不了，但是种子是有的，看看了网上的各种说法，说什么可以放弃迅雷的文章，其实，你懂的，看看就好，不要当真。迅雷可以下载的时候，速度比任何的工具都强，没有什么好反驳的。这次抱着试一试的态度，用brew安装了aria2,虽然想去编译，但是失败了，就简单点吧，直接安装不香？找了个资源，准备下载，居然可以用了，速度在10kb~30kb左右，回到了十年前。但是，有总比没有好吧，既然可以用，就查阅了下资料，说要配置bt-tracker，这样速度会快些，好吧，我依照网上的文章找到了所谓bt服务的资源地址：</p>
-<pre><code>https://github.com/ngosang/trackerslist
+<pre tabindex="0"><code>https://github.com/ngosang/trackerslist
 </code></pre><p>添加各种资源后，速度依旧，感觉没啥用呀？又添加了以下的配置和dht.dat文件。</p>
-<pre><code>enable-dht=true
+<pre tabindex="0"><code>enable-dht=true
 
 bt-enable-lpd=true
 
 enable-peer-exchange=true
 </code></pre><p>一个小时过后，没有速度，一个700M的速度，居然下了4个小时，并且在98%的时候，我放弃了。虽然我害怕出现各种问题，但是，我依旧关闭了。</p>
-<pre><code>aria2c 下载地址（有特殊符号时，用&quot;&quot;括起来）
+<pre tabindex="0"><code>aria2c 下载地址（有特殊符号时，用&quot;&quot;括起来）
 
 例如：
 
 aria2c &quot;magnet:?xt=urn:btih:F184B4803EC3A5DDE5CFAAEC687B013D4386F206“
 </code></pre><p>第二天，赶了个早，继续下载，发现速度到100kb左右了，耐着性子，重新找了个下载软件 <strong>Folx</strong>。免费版本的，刚刚开始的速度都在20kb左右，但是可以同时下载3个，所以就60kb了。在aria2下载玩第一文件后，我开始用 Flox来下载第二季，aria2来下载第一季，想让两个软件对比以下。aria2也支持多文件下载,把文件到文本中，每个文件一行。例如：</p>
-<pre><code>magnet:?xt=urn:btih:F184B4803EC3A5DDE5CFAAEC687B013D4386F206
+<pre tabindex="0"><code>magnet:?xt=urn:btih:F184B4803EC3A5DDE5CFAAEC687B013D4386F206
 magnet:?xt=urn:btih:F184B4803EC3A5DDE5CFAAEC687B013D4386F207
 magnet:?xt=urn:btih:F184B4803EC3A5DDE5CFAAEC687B013D4386F208
 </code></pre><p>使用以下命令进行下载：</p>
-<pre><code>aria2c -c --input-file=download.txt
+<pre tabindex="0"><code>aria2c -c --input-file=download.txt
 </code></pre><p>令我震惊的是第三天的速度，他们都达到了1M的速度，设置 Folx最快的时候到5M。两个软件在后面的表现让我非常震惊，居然可以和迅雷一样的速度了。</p>
 <p>所以，可以用迅雷就用，不可以还是可以用aria2和Folx来代替的。最终，我留下了它们。</p>
 
