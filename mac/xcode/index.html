@@ -9,20 +9,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Xcode  对于自己不熟悉的东西，永远都不要装的很明白。
- Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode来做一个自由职业者，可惜，都没有勇气去好好学习，因为对苹果的开发，实在无法体会。
+<meta name="description" content="Xcode 对于自己不熟悉的东西，永远都不要装的很明白。
+Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode来做一个自由职业者，可惜，都没有勇气去好好学习，因为对苹果的开发，实在无法体会。
 最近迷恋上了adobe的软件，发现Xcode已经占用了17GB的空间了，对于我这个128G的电脑的确是一个很大的挑战。原来删除过，发现会报错。
-usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1 xcrun: error: active developer path (&quot;/Applications/Xcode.app/Contents/Developer&quot;) does not exist Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools. See `man xcode-select` for more details. 因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
+usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1 xcrun: error: active developer path (&#34;/Applications/Xcode.app/Contents/Developer&#34;) does not exist Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools. See `man xcode-select` for more details. 因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
 (ps.好好对我使用HHKB键盘的声音有很大意见，所以键盘声音也成为了以后的一个考察对象了，静音才行哦。而且，我发现我最近买的鼠标M336，虽然是蓝牙的，说明书上也说静音，可以我感觉还是有声音。)
-sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p OK，完全解决了问题，还是因为对问题的描述没有看清，导致留下了那么长的时间，当然了，如果以后真的要开发，只能删除其他的东西了。">
+sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p OK，完全解决了问题，还是因为对问题的描述没有看清，导致留下了那么长的时间，当然了，如果以后真的要开发，只能删除其他的东西了。
+以后的电脑或手机，最好买个中间位置的，低配对自己要求太高了，随时都要进行清理。">
 
 <meta property="og:title" content="Xcode" />
-<meta property="og:description" content="Xcode  对于自己不熟悉的东西，永远都不要装的很明白。
- Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode来做一个自由职业者，可惜，都没有勇气去好好学习，因为对苹果的开发，实在无法体会。
+<meta property="og:description" content="Xcode 对于自己不熟悉的东西，永远都不要装的很明白。
+Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode来做一个自由职业者，可惜，都没有勇气去好好学习，因为对苹果的开发，实在无法体会。
 最近迷恋上了adobe的软件，发现Xcode已经占用了17GB的空间了，对于我这个128G的电脑的确是一个很大的挑战。原来删除过，发现会报错。
-usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1 xcrun: error: active developer path (&quot;/Applications/Xcode.app/Contents/Developer&quot;) does not exist Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools. See `man xcode-select` for more details. 因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
+usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1 xcrun: error: active developer path (&#34;/Applications/Xcode.app/Contents/Developer&#34;) does not exist Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools. See `man xcode-select` for more details. 因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
 (ps.好好对我使用HHKB键盘的声音有很大意见，所以键盘声音也成为了以后的一个考察对象了，静音才行哦。而且，我发现我最近买的鼠标M336，虽然是蓝牙的，说明书上也说静音，可以我感觉还是有声音。)
-sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p OK，完全解决了问题，还是因为对问题的描述没有看清，导致留下了那么长的时间，当然了，如果以后真的要开发，只能删除其他的东西了。" />
+sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p OK，完全解决了问题，还是因为对问题的描述没有看清，导致留下了那么长的时间，当然了，如果以后真的要开发，只能删除其他的东西了。
+以后的电脑或手机，最好买个中间位置的，低配对自己要求太高了，随时都要进行清理。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/mac/xcode/" /><meta property="article:section" content="mac" />
 <meta property="article:published_time" content="2020-06-18T18:41:19+08:00" />
@@ -44,7 +46,9 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -54,11 +58,11 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a28.272663%20%2b0800%20CST%20m%3d%2b4.484152471">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a28.272663%20%2b0800%20CST%20m%3d%2b4.484152471">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a28.272663%20%2b0800%20CST%20m%3d%2b4.484152471">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a34.131707%20%2b0800%20CST%20m%3d%2b5.366762602">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a34.131707%20%2b0800%20CST%20m%3d%2b5.366762602">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a34.131707%20%2b0800%20CST%20m%3d%2b5.366762602">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a28.272663%20%2b0800%20CST%20m%3d%2b4.484152471">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a34.131707%20%2b0800%20CST%20m%3d%2b5.366762602">
     
 
 
@@ -69,6 +73,8 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -171,22 +177,31 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -223,9 +238,13 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -250,7 +269,7 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
 <p>Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode来做一个自由职业者，可惜，都没有勇气去好好学习，因为对苹果的开发，实在无法体会。</p>
 <p>最近迷恋上了adobe的软件，发现Xcode已经占用了17GB的空间了，对于我这个128G的电脑的确是一个很大的挑战。原来删除过，发现会报错。</p>
 <pre tabindex="0"><code>usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1
-xcrun: error: active developer path (&quot;/Applications/Xcode.app/Contents/Developer&quot;) does not exist
+xcrun: error: active developer path (&#34;/Applications/Xcode.app/Contents/Developer&#34;) does not exist
 Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools.
 See `man xcode-select` for more details.
 </code></pre><p>因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。</p>
@@ -280,9 +299,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

@@ -9,16 +9,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Mac下代理设置  采菊东篱下，悠然见南山。
- 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
+<meta name="description" content="Mac下代理设置 采菊东篱下，悠然见南山。
+一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
 在终端下访问系统代理 scutil命令管理系统配置参数，通过 &ndash;proxy参数来显示系统代理信息。
 未配置代理情况：
 $ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
 $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：">
 
 <meta property="og:title" content="ProxySet" />
-<meta property="og:description" content="Mac下代理设置  采菊东篱下，悠然见南山。
- 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
+<meta property="og:description" content="Mac下代理设置 采菊东篱下，悠然见南山。
+一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
 在终端下访问系统代理 scutil命令管理系统配置参数，通过 &ndash;proxy参数来显示系统代理信息。
 未配置代理情况：
 $ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
@@ -44,7 +44,9 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -54,11 +56,11 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a27.912961%20%2b0800%20CST%20m%3d%2b4.124455693">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a27.912961%20%2b0800%20CST%20m%3d%2b4.124455693">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a27.912961%20%2b0800%20CST%20m%3d%2b4.124455693">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a32.61384%20%2b0800%20CST%20m%3d%2b3.848934890">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a32.61384%20%2b0800%20CST%20m%3d%2b3.848934890">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a32.61384%20%2b0800%20CST%20m%3d%2b3.848934890">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a27.912961%20%2b0800%20CST%20m%3d%2b4.124455693">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a32.61384%20%2b0800%20CST%20m%3d%2b3.848934890">
     
 
 
@@ -69,6 +71,8 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -171,22 +175,31 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -223,9 +236,13 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -277,32 +294,32 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
 }
 </code></pre><h3 id="解析scutil输出">解析scutil输出</h3>
 <p>我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：</p>
-<pre tabindex="0"><code>$ export http_proxy=`scutil --proxy | awk '\
+<pre tabindex="0"><code>$ export http_proxy=`scutil --proxy | awk &#39;\
   /HTTPEnable/ { enabled = $3; } \
   /HTTPProxy/ { server = $3; } \
   /HTTPPort/ { port = $3; } \
-  END { if (enabled == &quot;1&quot;) { print &quot;http://&quot; server &quot;:&quot; port; } }'`
-$ export HTTP_PROXY=&quot;${http_proxy}&quot;
+  END { if (enabled == &#34;1&#34;) { print &#34;http://&#34; server &#34;:&#34; port; } }&#39;`
+$ export HTTP_PROXY=&#34;${http_proxy}&#34;
 </code></pre><p>该脚本在scutil的输出中查找HTTPEnable，HTTPProxy和HTTPPort。 如果启用了代理，则脚本将打印出代理URL，并将其设置为http_proxy环境变量。 如果未启用代理，则脚本会将http_proxy设置为空字符串。 最后一行还设置了HTTP_PROXY环境变量，因为某些命令行应用程序使用了它。</p>
 <p>将此片段放在.bash_profile中可确保在有线和无线网络之间切换时，代理将自动保持配置状态。</p>
 <p>以上就是该文章的主要内容，我也根据上面的内容自己写了一个脚本<strong>setproxy.sh</strong>，因为我使用的VPN是动态的。</p>
-<pre tabindex="0"><code>echo 'display proxy info'
+<pre tabindex="0"><code>echo &#39;display proxy info&#39;
 scutil --proxy
-echo 'set proxy http'
-export http_proxy=`scutil --proxy | awk '\
+echo &#39;set proxy http&#39;
+export http_proxy=`scutil --proxy | awk &#39;\
   /HTTPEnable/ { enabled = $3; } \
   /HTTPProxy/ { server = $3; } \
   /HTTPPort/ { port = $3; } \
-  END { if (enabled == &quot;1&quot;) { print &quot;http://&quot; server &quot;:&quot; port; } }'`
+  END { if (enabled == &#34;1&#34;) { print &#34;http://&#34; server &#34;:&#34; port; } }&#39;`
 
-echo &quot;httpproxy is ${http_proxy}&quot;
-echo 'set http_proxy'
+echo &#34;httpproxy is ${http_proxy}&#34;
+echo &#39;set http_proxy&#39;
 
-export HTTP_PROXY=&quot;${http_proxy}&quot;
+export HTTP_PROXY=&#34;${http_proxy}&#34;
 
-echo &quot;HTTP_PROXY is ${HTTP_PROXY}&quot;
+echo &#34;HTTP_PROXY is ${HTTP_PROXY}&#34;
 
-echo 'done,have a good time!'
+echo &#39;done,have a good time!&#39;
 </code></pre><p><strong>使用的时候使用source，而不是sh。</strong></p>
 <pre tabindex="0"><code>source setproxy.sh
 </code></pre><p>这样，控制端就能使用了。</p>
@@ -312,7 +329,7 @@ echo 'done,have a good time!'
 <pre tabindex="0"><code>httpproxy is http://localhost:50927
 </code></pre><h3 id="将代理信息设置到vs-code中的配置信息">将代理信息设置到VS Code中的配置信息</h3>
 <p>在settings.json中添加一下配置</p>
-<pre tabindex="0"><code>&quot;http.proxy&quot;: &quot;http://localhost:50927&quot;
+<pre tabindex="0"><code>&#34;http.proxy&#34;: &#34;http://localhost:50927&#34;
 </code></pre><p>完成后，重启VS Code。终于看到了以下的信息：</p>
 <pre tabindex="0"><code>go.toolsGopath setting is not set. Using GOPATH /Users/guoby/OneDrive/mywork/code/gocode
 Installing 17 tools at /Users/guoby/OneDrive/mywork/code/gocode/bin in module mode.
@@ -353,11 +370,11 @@ Installing golang.org/x/lint/golint SUCCEEDED
 Installing golang.org/x/tools/gopls SUCCEEDED
 
 Reload VS Code window to use the Go language server
-All tools successfully installed. You're ready to Go :).
+All tools successfully installed. You&#39;re ready to Go :).
 </code></pre><p>为了，看到这个信息，我甚至想到了如何学习计算机网络了，大头书都找到了，准备深入学习了，毕竟这个问题困扰自己太久了。而最让人兴奋的是，使用google解决了。所以，是不是有一个思路，就是关注问题，持续关注，使用google，最终解决问题。如果看完大头书我感觉已经好几个月了，而自己的问题却没有能及时解决。而自己也从未放弃过学习。</p>
 <p>如果说自己的理论基础薄弱的话，那么在使用google的过程中也锻炼了自己的英文能力。同样，也验证了多学科之间的相互作用。如果没有使用英文进行正确的搜索，或许这个问题需要好久才能解决；如果自己没有实际的动手能力，及时找到了正确的文章也不能解决。或许，这就是相辅相成，所学的知识都有用。学以致用！</p>
 <p>在终端发现，最简单的代理方式：</p>
-<pre tabindex="0"><code>export https_proxy=&quot;http://127.0.0.1:2020&quot;
+<pre tabindex="0"><code>export https_proxy=&#34;http://127.0.0.1:2020&#34;
 </code></pre>
             </div>
         </div>
@@ -378,9 +395,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

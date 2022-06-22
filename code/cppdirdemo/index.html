@@ -9,18 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Make构建C&#43;&#43;项目  使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
- 1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
+<meta name="description" content="Make构建C&#43;&#43;项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
+1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
 class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
-#include &lt;iostream&gt; #include &quot;point.h&quot; void point::print(){ std::cout&lt;&lt;&quot;x=&quot;&lt;&lt;this-&gt;x&lt;&lt;&quot;,y=&quot;&lt;&lt;this-&gt;y&lt;&lt;&quot;\n&quot;; } 4.创建main文件 vim main.cpp 内容如下：
-#include &lt;iostream&gt; #include &lt;vector&gt; #include &quot;point.h&quot; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&lt;point&gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.">
+#include &lt;iostream&gt; #include &#34;point.h&#34; void point::print(){ std::cout&lt;&lt;&#34;x=&#34;&lt;&lt;this-&gt;x&lt;&lt;&#34;,y=&#34;&lt;&lt;this-&gt;y&lt;&lt;&#34;\n&#34;; } 4.创建main文件 vim main.cpp 内容如下：
+#include &lt;iostream&gt; #include &lt;vector&gt; #include &#34;point.h&#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&lt;point&gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&lt;v.">
 
 <meta property="og:title" content="Cppdirdemo" />
-<meta property="og:description" content="Make构建C&#43;&#43;项目  使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
- 1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
+<meta property="og:description" content="Make构建C&#43;&#43;项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
+1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
 class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
-#include &lt;iostream&gt; #include &quot;point.h&quot; void point::print(){ std::cout&lt;&lt;&quot;x=&quot;&lt;&lt;this-&gt;x&lt;&lt;&quot;,y=&quot;&lt;&lt;this-&gt;y&lt;&lt;&quot;\n&quot;; } 4.创建main文件 vim main.cpp 内容如下：
-#include &lt;iostream&gt; #include &lt;vector&gt; #include &quot;point.h&quot; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&lt;point&gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v." />
+#include &lt;iostream&gt; #include &#34;point.h&#34; void point::print(){ std::cout&lt;&lt;&#34;x=&#34;&lt;&lt;this-&gt;x&lt;&lt;&#34;,y=&#34;&lt;&lt;this-&gt;y&lt;&lt;&#34;\n&#34;; } 4.创建main文件 vim main.cpp 内容如下：
+#include &lt;iostream&gt; #include &lt;vector&gt; #include &#34;point.h&#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&lt;point&gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&lt;v." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/code/cppdirdemo/" /><meta property="article:section" content="code" />
 <meta property="article:published_time" content="2020-02-29T17:23:06+08:00" />
@@ -42,7 +42,9 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -52,11 +54,11 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a27.668188%20%2b0800%20CST%20m%3d%2b3.879685825">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a27.668188%20%2b0800%20CST%20m%3d%2b3.879685825">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a27.668188%20%2b0800%20CST%20m%3d%2b3.879685825">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a31.591089%20%2b0800%20CST%20m%3d%2b2.826211079">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a31.591089%20%2b0800%20CST%20m%3d%2b2.826211079">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a31.591089%20%2b0800%20CST%20m%3d%2b2.826211079">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a27.668188%20%2b0800%20CST%20m%3d%2b3.879685825">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a31.591089%20%2b0800%20CST%20m%3d%2b2.826211079">
     
 
 
@@ -67,6 +69,8 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -169,22 +173,31 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -221,9 +234,13 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -263,17 +280,17 @@ public:
 <pre tabindex="0"><code>vim point.cpp
 </code></pre><p>内容如下：</p>
 <pre tabindex="0"><code>#include &lt;iostream&gt;
-#include &quot;point.h&quot;
+#include &#34;point.h&#34;
 
 void point::print(){
-        std::cout&lt;&lt;&quot;x=&quot;&lt;&lt;this-&gt;x&lt;&lt;&quot;,y=&quot;&lt;&lt;this-&gt;y&lt;&lt;&quot;\n&quot;;
+        std::cout&lt;&lt;&#34;x=&#34;&lt;&lt;this-&gt;x&lt;&lt;&#34;,y=&#34;&lt;&lt;this-&gt;y&lt;&lt;&#34;\n&#34;;
 }
 </code></pre><h3 id="4创建main文件">4.创建main文件</h3>
 <pre tabindex="0"><code>vim main.cpp
 </code></pre><p>内容如下：</p>
 <pre tabindex="0"><code>#include &lt;iostream&gt;
 #include &lt;vector&gt;
-#include &quot;point.h&quot;
+#include &#34;point.h&#34;
 using namespace std;
 
 int main(){
@@ -293,7 +310,6 @@ int main(){
 
         return 0;
 }
-
 </code></pre><h3 id="5创建makefile文件">5.创建Makefile文件</h3>
 <pre tabindex="0"><code>vim Makefile 
 </code></pre><p>vim makefile也是可以的，命令make会在当前目录下寻找Makefile或者makefile</p>
@@ -335,9 +351,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

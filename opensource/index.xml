@@ -13,8 +13,8 @@
       <pubDate>Tue, 23 Oct 2018 10:52:14 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/opensource/dbeaver/</guid>
-      <description>Dbeaver项目  好项目，如何生存下去？
- 官方项目地址：https://github.com/dbeaver/dbeaver
+      <description>Dbeaver项目 好项目，如何生存下去？
+官方项目地址：https://github.com/dbeaver/dbeaver
 官方项目介绍：https://dbeaver.io/
 开始听到DBeaver的时候，是一位同事在用，没有留意。
 最主要的是想让自己的苹果电脑上少安装一些盗版软件，而做的真正的支持正版软件。
@@ -29,9 +29,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 至此，编译完成。
 从这个开源项目中可以花时间看一下，java语言开发的项目如何生成三个平台（linux,macosx,win32)的安装问题。
 有时间需要弄明白的地方？
-  Java如何编译成跨平台的项目？
-  为何来维系这个开源项目，虽然本项目也分为社区版和企业版？
-  </description>
+Java如何编译成跨平台的项目？
+为何来维系这个开源项目，虽然本项目也分为社区版和企业版？</description>
     </item>
     
   </channel>

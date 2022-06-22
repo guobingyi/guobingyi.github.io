@@ -9,30 +9,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
- 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
+<meta name="description" content="Centos7 搭建ftp服务 其实，我需求的很简单，你别讲的那么复杂。
+第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd 如果安装了，那么就直接卸载了。
 yum remove vsftpd 卸载后需要注意以下问题：
- 查看线程是否存在  ps auxf | grep vsftpd 如果线程存在则直接 kill -9 .
- 如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
+查看线程是否存在 ps auxf | grep vsftpd 如果线程存在则直接 kill -9 .
+如果/etc/vsftpd文件夹存在，先删除在重新安装。 即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf 一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户  创建ftp用户  useradd jack 设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
-usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。">
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户 创建ftp用户 useradd jack 设置用户密码 echo &#34;jack_pass_word&#34; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
+usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。
+FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：">
 
 <meta property="og:title" content="Centos7搭建ftp服务" />
-<meta property="og:description" content="Centos7 搭建ftp服务  其实，我需求的很简单，你别讲的那么复杂。
- 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
+<meta property="og:description" content="Centos7 搭建ftp服务 其实，我需求的很简单，你别讲的那么复杂。
+第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd 如果安装了，那么就直接卸载了。
 yum remove vsftpd 卸载后需要注意以下问题：
- 查看线程是否存在  ps auxf | grep vsftpd 如果线程存在则直接 kill -9 .
- 如果/etc/vsftpd文件夹存在，先删除在重新安装。  即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
+查看线程是否存在 ps auxf | grep vsftpd 如果线程存在则直接 kill -9 .
+如果/etc/vsftpd文件夹存在，先删除在重新安装。 即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf 一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户  创建ftp用户  useradd jack 设置用户密码  echo &quot;jack_pass_word&quot; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
-usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。" />
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户 创建ftp用户 useradd jack 设置用户密码 echo &#34;jack_pass_word&#34; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
+usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。
+FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2018-07-27T09:42:51+08:00" />
@@ -54,7 +56,9 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -64,11 +68,11 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a26.368659%20%2b0800%20CST%20m%3d%2b2.580174730">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a26.368659%20%2b0800%20CST%20m%3d%2b2.580174730">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a26.368659%20%2b0800%20CST%20m%3d%2b2.580174730">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a30.148674%20%2b0800%20CST%20m%3d%2b1.383833271">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a30.148674%20%2b0800%20CST%20m%3d%2b1.383833271">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a30.148674%20%2b0800%20CST%20m%3d%2b1.383833271">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a26.368659%20%2b0800%20CST%20m%3d%2b2.580174730">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a30.148674%20%2b0800%20CST%20m%3d%2b1.383833271">
     
 
 
@@ -79,6 +83,8 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -181,22 +187,31 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -233,9 +248,13 @@ usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 �
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -305,7 +324,7 @@ local_root=/ftpserver/flowdata
 </code></pre><ol start="2">
 <li>设置用户密码</li>
 </ol>
-<pre tabindex="0"><code>echo &quot;jack_pass_word&quot; | passwd jack --stdin
+<pre tabindex="0"><code>echo &#34;jack_pass_word&#34; | passwd jack --stdin
 </code></pre><p>3.限制该用户仅能通过 FTP 访问</p>
 <pre tabindex="0"><code>usermod -s /sbin/nologin jack
 </code></pre><h2 id="0x03-启动ftp服务">0x03 启动ftp服务</h2>
@@ -328,7 +347,28 @@ local_root=/ftpserver/flowdata
                 <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
             </div>
             <br>
-            
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cocoaexamplesite" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
             
         </div>
     </div>
@@ -349,9 +389,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

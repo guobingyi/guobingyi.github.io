@@ -10,7 +10,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
 <meta name="description" content="You got to put the past behind you before you can move on.
- 由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，深入的思考了。
+由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，深入的思考了。
 0x00 为什么用shell? 原来学习一门语言的时候都会这样问自己？但是大多数的答案都是：项目上需要。没有思考的余地，也就没有深入的思考。
 现在开始用到，也学习了python,ruby,swift,javascript后发现，shell有她自身更好的发挥余地。比如我们经常会使用的命令cd,hugo server,git add -A等。别小看这些命令，一个一个来，还是要输入一会的。程序员不就图个安逸，一个shell脚本搞定的事情，为什么要多来输入几次呢？在举个例子，如果终端只有一个，那么要看tomcat的日志，还要更新类，那么就会来回的路径下切换，如果不用文本记录下来，光敲路径就花费很长的时间，so，用个shell脚本就可以解决了。当然，这个例子也不能说明shell的强大之处，那么这个例子就是shell的重要用途了。在零部署的时候，需要安装一些组件，数据库，初始化数据库脚本，注册服务，启动服务，关机。整个流程可以说一气呵成，但是如果是人工的话，那么想想工作量也是吓人的，这还不包括部署多台服务器呢。
 如果是安装系统，会非常喜欢ghost版本，安装就step by step。而shell就提供了这样功能。当然有人会说python也一样搞定。是的，不可否认，但是如果python自身也需要安装库呢？所以，shell独天得厚的优势在于系统自带的同时，还可以自动安装所需的命令。
@@ -20,18 +20,18 @@
 #!/bin/bash echo &#39;Hello.World!&#39; 在终端中使用sh hello.sh,将输出以下结果：
 Hello,World! 恭喜你，入门了。
 思考：
- 为什么第一行会有个#!/bin/bash echo 可以用单引号，也可以用双引号，区别是什么？ 如果要让shell脚步可以直接运行，怎么做？ 如何文件后缀是php,那么有该如何做呢？  0x02 变量 shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。
-那么如何定义一个变量呢？ someone=&quot;Lee&quot; some_two=&quot;http://10.10.10.222&quot; 看似简单的定义变量，如果写多了程序，就会有个问题，如下：
-someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
+为什么第一行会有个#!/bin/bash echo 可以用单引号，也可以用双引号，区别是什么？ 如果要让shell脚步可以直接运行，怎么做？ 如何文件后缀是php,那么有该如何做呢？ 0x02 变量 shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。
+那么如何定义一个变量呢？ someone=&#34;Lee&#34; some_two=&#34;http://10.10.10.222&#34; 看似简单的定义变量，如果写多了程序，就会有个问题，如下：
+someone = &#34;Lee&#34; #Eroor 为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 重要的事情说三遍，你要知道调试shell，就像java里System.out.println(&ldquo;ok&rdquo;)一样麻烦，更何况shell木有断点功能。目前我还不知道shell的ide，或者打断点，如果你知道，请告诉我，让我试试。
-使用变量 $someone $(some_two) 只读变量 readonly someone 删除变量 unset someone 0x03 字符串 单引号 someone=&#39;Lee&#39;   单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；">
+使用变量 $someone $(some_two) 只读变量 readonly someone 删除变量 unset someone 0x03 字符串 单引号 someone=&#39;Lee&#39; 单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；">
 
 <meta property="og:title" content="初探Shell" />
 <meta property="og:description" content="You got to put the past behind you before you can move on.
- 由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，深入的思考了。
+由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，深入的思考了。
 0x00 为什么用shell? 原来学习一门语言的时候都会这样问自己？但是大多数的答案都是：项目上需要。没有思考的余地，也就没有深入的思考。
 现在开始用到，也学习了python,ruby,swift,javascript后发现，shell有她自身更好的发挥余地。比如我们经常会使用的命令cd,hugo server,git add -A等。别小看这些命令，一个一个来，还是要输入一会的。程序员不就图个安逸，一个shell脚本搞定的事情，为什么要多来输入几次呢？在举个例子，如果终端只有一个，那么要看tomcat的日志，还要更新类，那么就会来回的路径下切换，如果不用文本记录下来，光敲路径就花费很长的时间，so，用个shell脚本就可以解决了。当然，这个例子也不能说明shell的强大之处，那么这个例子就是shell的重要用途了。在零部署的时候，需要安装一些组件，数据库，初始化数据库脚本，注册服务，启动服务，关机。整个流程可以说一气呵成，但是如果是人工的话，那么想想工作量也是吓人的，这还不包括部署多台服务器呢。
 如果是安装系统，会非常喜欢ghost版本，安装就step by step。而shell就提供了这样功能。当然有人会说python也一样搞定。是的，不可否认，但是如果python自身也需要安装库呢？所以，shell独天得厚的优势在于系统自带的同时，还可以自动安装所需的命令。
@@ -41,14 +41,14 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 #!/bin/bash echo &#39;Hello.World!&#39; 在终端中使用sh hello.sh,将输出以下结果：
 Hello,World! 恭喜你，入门了。
 思考：
- 为什么第一行会有个#!/bin/bash echo 可以用单引号，也可以用双引号，区别是什么？ 如果要让shell脚步可以直接运行，怎么做？ 如何文件后缀是php,那么有该如何做呢？  0x02 变量 shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。
-那么如何定义一个变量呢？ someone=&quot;Lee&quot; some_two=&quot;http://10.10.10.222&quot; 看似简单的定义变量，如果写多了程序，就会有个问题，如下：
-someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
+为什么第一行会有个#!/bin/bash echo 可以用单引号，也可以用双引号，区别是什么？ 如果要让shell脚步可以直接运行，怎么做？ 如何文件后缀是php,那么有该如何做呢？ 0x02 变量 shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。
+那么如何定义一个变量呢？ someone=&#34;Lee&#34; some_two=&#34;http://10.10.10.222&#34; 看似简单的定义变量，如果写多了程序，就会有个问题，如下：
+someone = &#34;Lee&#34; #Eroor 为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 变量名和等号之间不能有空格。
 重要的事情说三遍，你要知道调试shell，就像java里System.out.println(&ldquo;ok&rdquo;)一样麻烦，更何况shell木有断点功能。目前我还不知道shell的ide，或者打断点，如果你知道，请告诉我，让我试试。
-使用变量 $someone $(some_two) 只读变量 readonly someone 删除变量 unset someone 0x03 字符串 单引号 someone=&#39;Lee&#39;   单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；" />
+使用变量 $someone $(some_two) 只读变量 readonly someone 删除变量 unset someone 0x03 字符串 单引号 someone=&#39;Lee&#39; 单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/blog/%E5%88%9D%E6%8E%A2shell/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2018-07-04T19:54:52+08:00" />
@@ -70,7 +70,9 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -80,11 +82,11 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a27.559916%20%2b0800%20CST%20m%3d%2b3.771415361">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a27.559916%20%2b0800%20CST%20m%3d%2b3.771415361">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a27.559916%20%2b0800%20CST%20m%3d%2b3.771415361">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a31.332853%20%2b0800%20CST%20m%3d%2b2.567981628">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a31.332853%20%2b0800%20CST%20m%3d%2b2.567981628">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a31.332853%20%2b0800%20CST%20m%3d%2b2.567981628">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a27.559916%20%2b0800%20CST%20m%3d%2b3.771415361">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a31.332853%20%2b0800%20CST%20m%3d%2b2.567981628">
     
 
 
@@ -95,6 +97,8 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -197,22 +201,31 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -249,9 +262,13 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -296,7 +313,7 @@ someone = &quot;Lee&quot; #Eroor 为什么会有这个错误，因为写代码�
 <p>每个学习程序设计的开始都会是这个，也因为这个才从此入坑。</p>
 <p>创建文件hello.sh,输入一下内容：</p>
 <pre tabindex="0"><code>#!/bin/bash
-echo 'Hello.World!'
+echo &#39;Hello.World!&#39;
 </code></pre><p>在终端中使用sh hello.sh,将输出以下结果：</p>
 <pre tabindex="0"><code>Hello,World!
 </code></pre><p>恭喜你，入门了。</p>
@@ -310,10 +327,10 @@ echo 'Hello.World!'
 <h2 id="0x02-变量">0x02 变量</h2>
 <p>shell的变量命令基本和常用语言(pythoh/ruby/java/go)基本差不多，目前还没有遇到过坑。</p>
 <h3 id="那么如何定义一个变量呢">那么如何定义一个变量呢？</h3>
-<pre tabindex="0"><code>someone=&quot;Lee&quot;
-some_two=&quot;http://10.10.10.222&quot;
+<pre tabindex="0"><code>someone=&#34;Lee&#34;
+some_two=&#34;http://10.10.10.222&#34;
 </code></pre><p>看似简单的定义变量，如果写多了程序，就会有个问题，如下：</p>
-<pre tabindex="0"><code>someone = &quot;Lee&quot; #Eroor
+<pre tabindex="0"><code>someone = &#34;Lee&#34; #Eroor
 </code></pre><p>为什么会有这个错误，因为写代码的时候都喜欢来个空格，这样看着顺眼些，但是在shell里是错误的。因为变量名和等号之间不能有空格。</p>
 <p>变量名和等号之间不能有空格。</p>
 <p>变量名和等号之间不能有空格。</p>
@@ -328,7 +345,7 @@ $(some_two)
 <pre tabindex="0"><code>unset someone
 </code></pre><h2 id="0x03-字符串">0x03 字符串</h2>
 <h3 id="单引号">单引号</h3>
-<pre tabindex="0"><code>someone='Lee'
+<pre tabindex="0"><code>someone=&#39;Lee&#39;
 </code></pre><ul>
 <li>
 <p>单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；</p>
@@ -338,21 +355,21 @@ $(some_two)
 </li>
 </ul>
 <h3 id="双引号">双引号</h3>
-<pre tabindex="0"><code>someone=&quot;Lee,$some_two&quot;
+<pre tabindex="0"><code>someone=&#34;Lee,$some_two&#34;
 </code></pre><h3 id="拼接字符串">拼接字符串</h3>
-<pre tabindex="0"><code>someone=&quot;World&quot;
-sometwo=&quot;hello,&quot;$someone&quot;!&quot;
-somethree=&quot;hello,${someone}!&quot;
+<pre tabindex="0"><code>someone=&#34;World&#34;
+sometwo=&#34;hello,&#34;$someone&#34;!&#34;
+somethree=&#34;hello,${someone}!&#34;
 echo sometwo somethree
 </code></pre><h3 id="获取字符串长度">获取字符串长度</h3>
-<pre tabindex="0"><code>someone=&quot;hello&quot;
+<pre tabindex="0"><code>someone=&#34;hello&#34;
 echo ${#someone} #输出5
 </code></pre><h3 id="提取子字符串">提取子字符串</h3>
-<pre tabindex="0"><code>someone=&quot;some one like you!&quot;
+<pre tabindex="0"><code>someone=&#34;some one like you!&#34;
 echo ${someone:1:3} #输出ome,所以字符串的长度也是从0开始
 </code></pre><h3 id="查找字符串">查找字符串</h3>
-<pre tabindex="0"><code>someone=&quot;some one like you!&quot;
-echo `expr index &quot;$someone&quot; is` #output 2
+<pre tabindex="0"><code>someone=&#34;some one like you!&#34;
+echo `expr index &#34;$someone&#34; is` #output 2
 </code></pre><h2 id="0x04-shell数组">0x04 Shell数组</h2>
 <p>shell支持数组，但是不支持多维数组。</p>
 <h3 id="定义数组">定义数组</h3>
@@ -368,7 +385,6 @@ v3
 arr[0]=key1
 arr[1]=key2
 arr[2]=key3
-
 </code></pre><h3 id="获取数组值">获取数组值</h3>
 <pre tabindex="0"><code>#one value
 temp=${arr[0]}
@@ -391,7 +407,6 @@ length=${#arr[0]}
 # date       :2018-07-05
 # description: how to write comment in shell script
 #---------------------------------------------------
-
 </code></pre><p>如果没有多行注释不是太麻烦了？结论是有的。</p>
 <blockquote>
 <p>那种好使用那种，我感觉我在mac下要测试一下，感觉two在我电脑上没有问题。</p>
@@ -407,11 +422,11 @@ EOF
 </code></pre><ul>
 <li>two</li>
 </ul>
-<pre tabindex="0"><code>:&lt;&lt;'
+<pre tabindex="0"><code>:&lt;&lt;&#39;
 comment
 comment
 comment
-'
+&#39;
 </code></pre><ul>
 <li>three</li>
 </ul>
@@ -668,7 +683,7 @@ b=2
 <blockquote>
 <p>文件运算符用于检测Unix文件的各种属性。</p>
 </blockquote>
-<pre tabindex="0"><code>file=&quot;~/test.sh&quot;
+<pre tabindex="0"><code>file=&#34;~/test.sh&#34;
 </code></pre><table>
 <thead>
 <tr>
@@ -747,30 +762,30 @@ b=2
 </table>
 <h2 id="0x08-shell-echo-command">0x08 shell echo command</h2>
 <h3 id="显示普通字符串">显示普通字符串</h3>
-<pre tabindex="0"><code>echo &quot;Just fun!&quot;
+<pre tabindex="0"><code>echo &#34;Just fun!&#34;
 </code></pre><h3 id="显示转义字符">显示转义字符</h3>
-<pre tabindex="0"><code>echo &quot;\&quot;This is demo!\&quot;&quot;
-#output &quot;This is demo!&quot;
+<pre tabindex="0"><code>echo &#34;\&#34;This is demo!\&#34;&#34;
+#output &#34;This is demo!&#34;
 </code></pre><h3 id="显示变量">显示变量</h3>
-<pre tabindex="0"><code>yourname=&quot;Lee&quot;
-echo &quot;you name is $yourname&quot;
+<pre tabindex="0"><code>yourname=&#34;Lee&#34;
+echo &#34;you name is $yourname&#34;
 #output you name is Lee
 </code></pre><h3 id="显示换行">显示换行</h3>
-<pre tabindex="0"><code>echo -e &quot;Now,Let's talk about you life!\n&quot; # -e 开启转义
-echo &quot;It sample.&quot;
+<pre tabindex="0"><code>echo -e &#34;Now,Let&#39;s talk about you life!\n&#34; # -e 开启转义
+echo &#34;It sample.&#34;
 </code></pre><pre tabindex="0"><code>#output
-Now,Let's talk about you life!
+Now,Let&#39;s talk about you life!
 
 It sample.
 </code></pre><h3 id="显示不换行">显示不换行</h3>
-<pre tabindex="0"><code>echo -e &quot;you work is \c&quot;
-echo &quot;good!&quot;
+<pre tabindex="0"><code>echo -e &#34;you work is \c&#34;
+echo &#34;good!&#34;
 #output you work is good!
 </code></pre><h3 id="将结果输出到文件">将结果输出到文件</h3>
-<pre tabindex="0"><code>echo &quot;This comment in file.&quot; &gt; log.txt
+<pre tabindex="0"><code>echo &#34;This comment in file.&#34; &gt; log.txt
 </code></pre><h3 id="输出变量信息">输出变量信息</h3>
-<pre tabindex="0"><code>echo `$yourname\&quot;`
-#output $yourname\&quot;
+<pre tabindex="0"><code>echo `$yourname\&#34;`
+#output $yourname\&#34;
 </code></pre><h3 id="显示命令执行结果">显示命令执行结果</h3>
 <pre tabindex="0"><code>echo `whoami`
 #output root
@@ -778,10 +793,10 @@ echo &quot;good!&quot;
 <blockquote>
 <p>printf命令模仿C程序里的printf()函数。</p>
 </blockquote>
-<pre tabindex="0"><code>printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重(kg)
-printf &quot;%-10s %-8s %-4.2f\n&quot; 张三 男 54.333
-printf &quot;%-10s %-8s %-4.2f\n&quot; 李四 男 66.234
-printf &quot;%-10s %-8s %-4.2f\n&quot; 杨玉环 女 48.872
+<pre tabindex="0"><code>printf &#34;%-10s %-8s %-4s\n&#34; 姓名 性别 体重(kg)
+printf &#34;%-10s %-8s %-4.2f\n&#34; 张三 男 54.333
+printf &#34;%-10s %-8s %-4.2f\n&#34; 李四 男 66.234
+printf &#34;%-10s %-8s %-4.2f\n&#34; 杨玉环 女 48.872
 </code></pre><p>输出</p>
 <pre tabindex="0"><code>姓名   性别     体重
 张三   男       54.33
@@ -886,11 +901,10 @@ ls_age=29
 
 if test $[zs_age] -eq $[ls_age]
 then 
-	echo 'zs age equal ls'
+	echo &#39;zs age equal ls&#39;
 else
-	echo 'zs age no equal ls'
+	echo &#39;zs age no equal ls&#39;
 fi 
-
 </code></pre><h3 id="字符串测试">字符串测试</h3>
 <table>
 <thead>
@@ -918,14 +932,14 @@ fi
 </tr>
 </tbody>
 </table>
-<pre tabindex="0"><code>zs_name=&quot;张三&quot;
-ls_name=&quot;李四&quot;
+<pre tabindex="0"><code>zs_name=&#34;张三&#34;
+ls_name=&#34;李四&#34;
 
 if test $zs_name = $ls_name
 then 
-	echo &quot;两个名字一致&quot;
+	echo &#34;两个名字一致&#34;
 else
-	echo &quot;两个名字不一致&quot;
+	echo &#34;两个名字不一致&#34;
 fi 
 </code></pre><h3 id="文件测试">文件测试</h3>
 <table>
@@ -1121,12 +1135,12 @@ esac
 source filename
 </code></pre><p>实例</p>
 <pre tabindex="0"><code>#sh_test1.sh
-name=&quot;guoby&quot;
+name=&#34;guoby&#34;
 </code></pre><pre tabindex="0"><code>#sh_test2.sh
 
 #使用 . 号来引用sh_test1.sh 文件
 . ./sh_test2.sh
-echo &quot;you name is $name&quot;
+echo &#34;you name is $name&#34;
 </code></pre><h1 id="结论">结论</h1>
 <p>shell适用于在<em><strong>命令集合</strong></em>的情况下完成任务，并不适合于复杂的程序任务。</p>
 <p>最实用的实用场景：发布部署应用。</p>
@@ -1136,7 +1150,28 @@ echo &quot;you name is $name&quot;
                 <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
             </div>
             <br>
-            
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cocoaexamplesite" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
             
         </div>
     </div>
@@ -1157,9 +1192,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

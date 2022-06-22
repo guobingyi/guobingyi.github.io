@@ -9,16 +9,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
- 0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
+<meta name="description" content="Go Tutorial 学习一门语言最好的方式，就是熟读其文档。
+0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
 Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &quot;fmt&quot; ) // Print Hello,world! func main() { fmt.Printf(&quot;Hello,World!&quot;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install 如何编写go语言  http://localhost:6060/doc/code.html 如何高效的编写go语言  http://localhost:6060/doc/code.html 熟悉go语言的api  http://localhost:6060/pkg/ 0x03 深入  已beego框架学习如何编写web项目  https://beego.me 关注go语言的Top项目  https://github.com/topics/go 学习go语言框架提供的第三方包  https://github.com/avelino/awesome-go ">
+0x01 Hello,world! package main import ( &#34;fmt&#34; ) // Print Hello,world! func main() { fmt.Printf(&#34;Hello,World!&#34;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门 文档介绍如何安装 http://localhost:6060/doc/install 如何编写go语言 http://localhost:6060/doc/code.html 如何高效的编写go语言 http://localhost:6060/doc/code.html 熟悉go语言的api http://localhost:6060/pkg/ 0x03 深入 已beego框架学习如何编写web项目 https://beego.me 关注go语言的Top项目 https://github.com/topics/go 学习go语言框架提供的第三方包 https://github.com/avelino/awesome-go ">
 
 <meta property="og:title" content="Go Tutorial" />
-<meta property="og:description" content="Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
- 0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
+<meta property="og:description" content="Go Tutorial 学习一门语言最好的方式，就是熟读其文档。
+0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
 Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &quot;fmt&quot; ) // Print Hello,world! func main() { fmt.Printf(&quot;Hello,World!&quot;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install 如何编写go语言  http://localhost:6060/doc/code.html 如何高效的编写go语言  http://localhost:6060/doc/code.html 熟悉go语言的api  http://localhost:6060/pkg/ 0x03 深入  已beego框架学习如何编写web项目  https://beego.me 关注go语言的Top项目  https://github.com/topics/go 学习go语言框架提供的第三方包  https://github.com/avelino/awesome-go " />
+0x01 Hello,world! package main import ( &#34;fmt&#34; ) // Print Hello,world! func main() { fmt.Printf(&#34;Hello,World!&#34;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门 文档介绍如何安装 http://localhost:6060/doc/install 如何编写go语言 http://localhost:6060/doc/code.html 如何高效的编写go语言 http://localhost:6060/doc/code.html 熟悉go语言的api http://localhost:6060/pkg/ 0x03 深入 已beego框架学习如何编写web项目 https://beego.me 关注go语言的Top项目 https://github.com/topics/go 学习go语言框架提供的第三方包 https://github.com/avelino/awesome-go " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/code/go-tutorial/" /><meta property="article:section" content="code" />
 <meta property="article:published_time" content="2018-12-13T14:28:45+08:00" />
@@ -40,7 +40,9 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -50,11 +52,11 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a27.752853%20%2b0800%20CST%20m%3d%2b3.964349250">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a27.752853%20%2b0800%20CST%20m%3d%2b3.964349250">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a27.752853%20%2b0800%20CST%20m%3d%2b3.964349250">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a31.708914%20%2b0800%20CST%20m%3d%2b2.944033073">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a31.708914%20%2b0800%20CST%20m%3d%2b2.944033073">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a31.708914%20%2b0800%20CST%20m%3d%2b2.944033073">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a27.752853%20%2b0800%20CST%20m%3d%2b3.964349250">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a31.708914%20%2b0800%20CST%20m%3d%2b2.944033073">
     
 
 
@@ -65,6 +67,8 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -167,22 +171,31 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -219,9 +232,13 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -253,12 +270,12 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
 <pre tabindex="0"><code>package main
 
 import (
-	&quot;fmt&quot;
+	&#34;fmt&#34;
 )
 
 // Print Hello,world!
 func main() {
-	fmt.Printf(&quot;Hello,World!&quot;)
+	fmt.Printf(&#34;Hello,World!&#34;)
 }
 </code></pre><h3 id="0x01-文档查阅">0x01 文档查阅</h3>
 <pre tabindex="0"><code>godoc -http=:6060
@@ -312,9 +329,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

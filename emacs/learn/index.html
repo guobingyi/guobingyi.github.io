@@ -9,46 +9,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Emasc 学习  如果说一个IDE可以用一辈子的话，那么就是Emasc。
- 0x00 安装 目前Emacs安装提供多中方式安装，可以参考官网进行安装。
+<meta name="description" content="Emasc 学习 如果说一个IDE可以用一辈子的话，那么就是Emasc。
+0x00 安装 目前Emacs安装提供多中方式安装，可以参考官网进行安装。
 0x00 入门 入门其实就是看Emacs的帮助手册，C-h t调用出帮助手册，使用大约30分钟的时间看完整个文档。那么基本可以对键有一个大概的认识，还是 需要从实战中不断加深认识。
 0x01 看书或者视频 对于看书，我觉得有时候会有点枯燥，没事时间的同学可以看一下zilongshanren的Spacemacs Rocks 第二季的文章，最好 配合着视频看，会提高很多。
 0x02 学以致用 用学的目的不就是为了用嘛，怎么用，就是自己用着顺手，每次打开电脑的一件事就是启动Emasc。
 0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。
 0x04 OrgMode 对于我想一直留下来的原因，我想Orgmode占了一定的比例，毕竟在文本中能有这样强大的功能不多，而已经厌倦了word的我，这个功能让我非常迷恋。
 一些比较常用的功能：
-  对于进度使用情况在[]填入%为百分比，/为完成情况
-  C-c C-c 改变复选框选中和取消状态
-  C-c C-t 改变todo的状态为done或者取消
-  在todo列表中C-c C-s 插入开始时间
-  在todo列表中C-c C-d 插入结束时间
-  学习使用[-]复选框模式
-  继续学习如何使用
-  今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装MacTeX，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？
+对于进度使用情况在[]填入%为百分比，/为完成情况
+C-c C-c 改变复选框选中和取消状态
+C-c C-t 改变todo的状态为done或者取消
+在todo列表中C-c C-s 插入开始时间
+在todo列表中C-c C-d 插入结束时间
+学习使用[-]复选框模式
+继续学习如何使用
+今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装MacTeX，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？
 0x05 eww 可以使用emacs浏览网页是个什么样的体验？
 eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总体上来说都非常不错。
-  M-x eww后输入需要访问的地址。">
+M-x eww后输入需要访问的地址。
+C-n C-p 进行逐行选择，和操作文档的方式一致。
+l键 返回上一页
+r键 刷新
+q键 退出
+0x06 window-numbering-mode 多窗口中使用M&#43;numbers来选择窗口。
+最近一段时间来都被两个事情困扰，第一是在emacs下使用终端或者shell，都找不正确go的环境变量，最后在shell中直接执行了.bash_profile，就Ok了。 第二是终端下或则shell下使用C-c o 怎么都不能切换页面，最终找到了window-numbering，解决了这个问题。 oh,yes. 在后续的使用过程中还需要多多使用来找到自己顺手的mode。
+0x07 使用zenburn-theme样式 由于使用原子龙山人推荐的样式，在使用monokai,对于选中一个字符或者一段信息后，显示效果不理想。 所以在melpa上找了个排名高的样式zenburn,好像是vim的配色上转过来的，总体来说还错。先用一段 时间再说，比较解决了我现在选中的痛点。">
 
 <meta property="og:title" content="Learn Emacs" />
-<meta property="og:description" content="Emasc 学习  如果说一个IDE可以用一辈子的话，那么就是Emasc。
- 0x00 安装 目前Emacs安装提供多中方式安装，可以参考官网进行安装。
+<meta property="og:description" content="Emasc 学习 如果说一个IDE可以用一辈子的话，那么就是Emasc。
+0x00 安装 目前Emacs安装提供多中方式安装，可以参考官网进行安装。
 0x00 入门 入门其实就是看Emacs的帮助手册，C-h t调用出帮助手册，使用大约30分钟的时间看完整个文档。那么基本可以对键有一个大概的认识，还是 需要从实战中不断加深认识。
 0x01 看书或者视频 对于看书，我觉得有时候会有点枯燥，没事时间的同学可以看一下zilongshanren的Spacemacs Rocks 第二季的文章，最好 配合着视频看，会提高很多。
 0x02 学以致用 用学的目的不就是为了用嘛，怎么用，就是自己用着顺手，每次打开电脑的一件事就是启动Emasc。
 0x03 安心种田 将自己学到的，应用到的，将Emacs打造成自己唯一的IDE。
 0x04 OrgMode 对于我想一直留下来的原因，我想Orgmode占了一定的比例，毕竟在文本中能有这样强大的功能不多，而已经厌倦了word的我，这个功能让我非常迷恋。
 一些比较常用的功能：
-  对于进度使用情况在[]填入%为百分比，/为完成情况
-  C-c C-c 改变复选框选中和取消状态
-  C-c C-t 改变todo的状态为done或者取消
-  在todo列表中C-c C-s 插入开始时间
-  在todo列表中C-c C-d 插入结束时间
-  学习使用[-]复选框模式
-  继续学习如何使用
-  今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装MacTeX，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？
+对于进度使用情况在[]填入%为百分比，/为完成情况
+C-c C-c 改变复选框选中和取消状态
+C-c C-t 改变todo的状态为done或者取消
+在todo列表中C-c C-s 插入开始时间
+在todo列表中C-c C-d 插入结束时间
+学习使用[-]复选框模式
+继续学习如何使用
+今天想把orgmode的导出pdf功能搞定，发现怎么也搞不定，安装了basictex发现有缺失项，而且在https://ctan.org/ 也没有能把组件安装好，最后决定要安装MacTeX，发现需要6GB的空间后，我忍住了，为什么一个简单的功能需要那么折腾呢？我就用个pdf的效果，最后，我发现了网友的智慧真是大，有我这样需求的人还真不少，有些人直接上MaxTex了，发现问题解决了；而也有人放弃了，将文件先导出到html中，然后用浏览器的功能转换为pdf文件，成功解决了痛点。我这个128的笔记本就不折腾了，同样的解决方案为什么不选择适合自己的呢？
 0x05 eww 可以使用emacs浏览网页是个什么样的体验？
 eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总体上来说都非常不错。
-  M-x eww后输入需要访问的地址。" />
+M-x eww后输入需要访问的地址。
+C-n C-p 进行逐行选择，和操作文档的方式一致。
+l键 返回上一页
+r键 刷新
+q键 退出
+0x06 window-numbering-mode 多窗口中使用M&#43;numbers来选择窗口。
+最近一段时间来都被两个事情困扰，第一是在emacs下使用终端或者shell，都找不正确go的环境变量，最后在shell中直接执行了.bash_profile，就Ok了。 第二是终端下或则shell下使用C-c o 怎么都不能切换页面，最终找到了window-numbering，解决了这个问题。 oh,yes. 在后续的使用过程中还需要多多使用来找到自己顺手的mode。
+0x07 使用zenburn-theme样式 由于使用原子龙山人推荐的样式，在使用monokai,对于选中一个字符或者一段信息后，显示效果不理想。 所以在melpa上找了个排名高的样式zenburn,好像是vim的配色上转过来的，总体来说还错。先用一段 时间再说，比较解决了我现在选中的痛点。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guobingyi.github.io/emacs/learn/" /><meta property="article:section" content="emacs" />
 <meta property="article:published_time" content="2019-01-13T10:49:09+08:00" />
@@ -70,7 +84,9 @@ eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -80,11 +96,11 @@ eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a28.024359%20%2b0800%20CST%20m%3d%2b4.235852352">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a28.024359%20%2b0800%20CST%20m%3d%2b4.235852352">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a28.024359%20%2b0800%20CST%20m%3d%2b4.235852352">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a33.135964%20%2b0800%20CST%20m%3d%2b4.371045576">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a33.135964%20%2b0800%20CST%20m%3d%2b4.371045576">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a33.135964%20%2b0800%20CST%20m%3d%2b4.371045576">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a28.024359%20%2b0800%20CST%20m%3d%2b4.235852352">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a33.135964%20%2b0800%20CST%20m%3d%2b4.371045576">
     
 
 
@@ -95,6 +111,8 @@ eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -197,22 +215,31 @@ eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -249,9 +276,13 @@ eww就是为了在emacs上浏览的，虽然没有了css的样式效果都是总
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -376,9 +407,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>

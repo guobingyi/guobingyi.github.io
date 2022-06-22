@@ -13,8 +13,8 @@
       <pubDate>Wed, 27 Oct 2021 16:39:15 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/arduino/</guid>
-      <description>0x00 初识Arduino  原来的梦想就是能自己DIY做些东西。 原来看的电影里总是老外在地下室捣鼓一下，就发明了各种个样的东西! 后来自己学了计算机，终于可以大展身手的时候，才发现，自己能做的仅仅数据的处理工作，输入，输出，太没劲～～
- 我自己比较喜欢倒腾，但是就是会受限与自己熟悉的方面。比如，我特别喜欢去看一些编程语言，然后用它们来对比，如何快速的完成项目。python,ruby,go,java,dotnet core等等。当然了，我所谓的项目就是自己熟悉的领域，Web编程或者命令行，桌面等等。
+      <description>0x00 初识Arduino 原来的梦想就是能自己DIY做些东西。 原来看的电影里总是老外在地下室捣鼓一下，就发明了各种个样的东西! 后来自己学了计算机，终于可以大展身手的时候，才发现，自己能做的仅仅数据的处理工作，输入，输出，太没劲～～
+我自己比较喜欢倒腾，但是就是会受限与自己熟悉的方面。比如，我特别喜欢去看一些编程语言，然后用它们来对比，如何快速的完成项目。python,ruby,go,java,dotnet core等等。当然了，我所谓的项目就是自己熟悉的领域，Web编程或者命令行，桌面等等。
 由于关注dotnet core的跨平台，所以去了解了一下asp.net的现状，发现这货现在的开发效率是真的高太多了，几个命令行就可以做出一个基本的原型。抱着兴奋的态度想要推荐给周围的人的时候，发现别人说在玩单片机，反而给我搞蒙了，啥，这么牛，推荐来看看～～
 Arduino第一次映入眼帘，是个什么东西呀？幸好有Mac版本的，不然让我用那台Thinkpad x230的话，我还是比较不爽的，速度太慢，Windows的操作感受真不想回去。
 我的想法还是比较保守的，先百度，当然了能google更好。再去B站看看视频，当然了youtube上的资源更全些。刚开始发现，Arduino的IDE还不错，毕竟还是有点样子的。更何况，操作起来也挺方便～～。听了一会，发现需要个什么开发板，我去，还需要点硬件的投资嘛，好，按照视频的推荐，去买了一个。然后，小白告诉我有很多东西的，推荐了许多来看看，发现有个套装，219的价格，我去，忍了，买。（当然了，买了之后，有后悔，但是也有庆幸～～，后面聊）
@@ -59,13 +59,13 @@ void setup() { //定义输出 pinMode(LED_BUILTIN, OUTPUT); } void loop() { digi
       <pubDate>Sat, 29 May 2021 11:20:30 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/learnrust/</guid>
-      <description>Rust 学习笔记  自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
- 前言 系统级别的语言，可以和C/C++抗衡？目标就是为了取代C++。
+      <description>Rust 学习笔记 自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
+前言 系统级别的语言，可以和C/C++抗衡？目标就是为了取代C++。
 介绍 Rust语言能够编写速度更快，更加可靠的软件。
 学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～
-0x01 开始 1.目标  安装 写个输出hello world的程序 使用cargo工具来构建系统  2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
+0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
 所以，使用Rust的安装方式，最佳。
-$ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
+$ curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
 Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
 2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.</description>
     </item>
@@ -76,8 +76,8 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
       <pubDate>Tue, 26 Jan 2021 09:34:14 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/learnasp.net/</guid>
-      <description>学习Asp.net Core  开始了，就不要放弃。
- 每次想去学习一点程序设计的知识，都被老婆叫停，说我已经不需要通过写代码来改变生活了。可惜，我就是喜欢程序代码，骨子里已经埋藏了许久，现在终于可以按照自己的想法来写点东西，或者可以想怎么玩就怎么玩了。工作期间，除了要去完成工作上的事宜，其他的时间还要对新技术进行预演，了解每个语言的特性。每次都是对一门语言有了认识后，就没机会深入了。</description>
+      <description>学习Asp.net Core 开始了，就不要放弃。
+每次想去学习一点程序设计的知识，都被老婆叫停，说我已经不需要通过写代码来改变生活了。可惜，我就是喜欢程序代码，骨子里已经埋藏了许久，现在终于可以按照自己的想法来写点东西，或者可以想怎么玩就怎么玩了。工作期间，除了要去完成工作上的事宜，其他的时间还要对新技术进行预演，了解每个语言的特性。每次都是对一门语言有了认识后，就没机会深入了。</description>
     </item>
     
     <item>
@@ -86,11 +86,11 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
       <pubDate>Sat, 29 Feb 2020 17:23:06 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/cppdirdemo/</guid>
-      <description>Make构建C++项目  使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C++。
- 1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
+      <description>Make构建C++项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C++。
+1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
 class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;quot;point.h&amp;quot; void point::print(){ std::cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;this-&amp;gt;x&amp;lt;&amp;lt;&amp;quot;,y=&amp;quot;&amp;lt;&amp;lt;this-&amp;gt;y&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;; } 4.创建main文件 vim main.cpp 内容如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;quot;point.h&amp;quot; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&amp;lt;point&amp;gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.</description>
+#include &amp;lt;iostream&amp;gt; #include &amp;#34;point.h&amp;#34; void point::print(){ std::cout&amp;lt;&amp;lt;&amp;#34;x=&amp;#34;&amp;lt;&amp;lt;this-&amp;gt;x&amp;lt;&amp;lt;&amp;#34;,y=&amp;#34;&amp;lt;&amp;lt;this-&amp;gt;y&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } 4.创建main文件 vim main.cpp 内容如下：
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;#34;point.h&amp;#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&amp;lt;point&amp;gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&amp;lt;v.</description>
     </item>
     
     <item>
@@ -99,15 +99,15 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
       <pubDate>Sat, 29 Feb 2020 16:10:22 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/programdir/</guid>
-      <description>软件项目的目录结构和文件结构  孙悟空对师傅说，“我想要学72变！”。
- graph LR 程序目录结构--&amp;gt;Include 程序目录结构--&amp;gt;Source 程序目录结构--&amp;gt;Resource 程序目录结构--&amp;gt;Shared 程序目录结构--&amp;gt;Debug 程序目录结构--&amp;gt;Release 程序目录结构--&amp;gt;Bin Include Include目录下用于存放应用程序的头文件集合，也就是.h文件集合，在这个目录下面还可以根据需要划分子目录。
+      <description>软件项目的目录结构和文件结构 孙悟空对师傅说，“我想要学72变！”。
+graph LR 程序目录结构--&amp;gt;Include 程序目录结构--&amp;gt;Source 程序目录结构--&amp;gt;Resource 程序目录结构--&amp;gt;Shared 程序目录结构--&amp;gt;Debug 程序目录结构--&amp;gt;Release 程序目录结构--&amp;gt;Bin Include Include目录下用于存放应用程序的头文件集合，也就是.h文件集合，在这个目录下面还可以根据需要划分子目录。
 Source Source目录用于存放应用程序的源代码文件集合，也就是.c或者.cpp文件集合，在这个目录下也可以根据需要进行划分子目录。
 Resource Resource目录用于存放应用程序的一些资源文件，比如图片、视频、音频、对话框、图标以及光标等等，同样也可以划分几个子目录，便于管理。
 Shared Shared目录用于存放应用程序的一些共享文件。
 Debug Debug目录用于存放应用程序进行调试时的调试版本产生的中间文件。
 Release Release目录用于存放应用程序进行发布时的发布版本产生的中间文件。
 Bin Bin目录用于存放自己创建的lib文件或dll文件。
- 注意绝对路径和相对路径的概念以及使用； 注意区分编译时的相对路径和运行时的相对路径的概念。  </description>
+注意绝对路径和相对路径的概念以及使用； 注意区分编译时的相对路径和运行时的相对路径的概念。 </description>
     </item>
     
     <item>
@@ -116,10 +116,10 @@ Bin Bin目录用于存放自己创建的lib文件或dll文件。
       <pubDate>Thu, 27 Feb 2020 17:08:12 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/createca/</guid>
-      <description>生成CA证书  https的数据传输加密已经正是成为了标准。
- 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
+      <description>生成CA证书 https的数据传输加密已经正是成为了标准。
+在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
 ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
-1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.</description>
+1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.</description>
     </item>
     
     <item>
@@ -128,8 +128,8 @@ ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就�
       <pubDate>Thu, 06 Feb 2020 19:37:59 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/csharp/</guid>
-      <description>C#  C#的学习有太多的情怀，比如pascal。
- 一直都在不断的换语言来学习，来弥补学习上的懒惰。
+      <description>C# C#的学习有太多的情怀，比如pascal。
+一直都在不断的换语言来学习，来弥补学习上的懒惰。
 不知道是什么原因，我突然对每种语言都热衷起来，对我原来写的那篇博客打脸，或者说也不能算是打脸，而是不同时期的不同思考罢了。 😊
 第一份工作是冲着Java的Sun认证去的，发现是vb和Delphi开发的项目。而在此之前，大学毕业的时候看到老九用C#写代码，老高就让我好好学习一下，而我的那台老电脑还存着第一本书是介绍C#的。说明在最早的时候，我认识到的是C#，而不是Java。
 刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。
@@ -139,14 +139,15 @@ brew cask install dotnet-sdk 安装完看了一下版本，都3.1.101了，发�
 快速的搭建了一个hello world项目。
 dotnet new console --name Hello ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。
 执行项目。
- cd Hello dotnet run 这样一个hello,world就打印在终端了，嗯，是非常速度的。
+cd Hello dotnet run 这样一个hello,world就打印在终端了，嗯，是非常速度的。
 接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。
 code -r Hello 最小的完整代码片段：
-using System; namespace Hello { class Program { static void Main(string[] args) { Console.WriteLine(&amp;quot;Hello World!&amp;quot;); } } } 怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。
- 在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是时间和实践。
- 在看完了将近2000多页的C#文档，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。
+using System; namespace Hello { class Program { static void Main(string[] args) { Console.WriteLine(&amp;#34;Hello World!&amp;#34;); } } } 怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。
+在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是时间和实践。
+在看完了将近2000多页的C#文档，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。
 下面是一些非常重要的部分：
-C# 教程  官方的例子，手把手教你。</description>
+C# 教程 官方的例子，手把手教你。
+C# 编码约定 这部分内容可以说是精华部分，一门语言最应该熟读的部分。展示C# 最佳做法。</description>
     </item>
     
     <item>
@@ -155,8 +156,8 @@ C# 教程  官方的例子，手把手教你。</description>
       <pubDate>Thu, 30 Jan 2020 11:05:10 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/proxyset/</guid>
-      <description>Mac下代理设置  采菊东篱下，悠然见南山。
- 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
+      <description>Mac下代理设置 采菊东篱下，悠然见南山。
+一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
 在终端下访问系统代理 scutil命令管理系统配置参数，通过 &amp;ndash;proxy参数来显示系统代理信息。
 未配置代理情况：
 $ scutil --proxy &amp;lt;dictionary&amp;gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
@@ -170,9 +171,9 @@ $ scutil --proxy &amp;lt;dictionary&amp;gt; { ExcludeSimpleHostnames : 1 FTPEnab
       
       <guid>https://guobingyi.github.io/code/git/</guid>
       <description>Git 常用命令 1.初始化仓库信息
- git init 增加文件信息到库   git add -A 提交代码   git commit -m &amp;quot;first commit&amp;quot; 同步到远程库   git push -u origin master 将远程库信息同步到本地   git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作  git commit --amend 重新更新git服务器信息  git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件  8.1 删除单个文件
+git init 增加文件信息到库 git add -A 提交代码 git commit -m &amp;#34;first commit&amp;#34; 同步到远程库 git push -u origin master 将远程库信息同步到本地 git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作 git commit --amend 重新更新git服务器信息 git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件 8.1 删除单个文件
 git rm ._ddd.file 8.2 删除多个文件
-find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delete others file&#39; 强制覆盖本地文件  git fetch --all git reset --hard origin/master git pull </description>
+find . -name &amp;#34;._*&amp;#34; -delete git add -A git commit -m &amp;#39;delete others file&amp;#39; 强制覆盖本地文件 git fetch --all git reset --hard origin/master git pull </description>
     </item>
     
     <item>
@@ -181,8 +182,8 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       <pubDate>Fri, 14 Dec 2018 10:16:03 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go-beego/</guid>
-      <description>beego tutorial  无他， 但手熟尔。
- 0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
+      <description>beego tutorial 无他， 但手熟尔。
+0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
 2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
 3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。
 4. beego 项目结构 一般的 beego 项目的目录如下所示：
@@ -195,10 +196,10 @@ find . -name &amp;quot;._*&amp;quot; -delete git add -A git commit -m &#39;delet
       <pubDate>Thu, 13 Dec 2018 14:28:45 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/go-tutorial/</guid>
-      <description>Go Tutorial  学习一门语言最好的方式，就是熟读其文档。
- 0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
+      <description>Go Tutorial 学习一门语言最好的方式，就是熟读其文档。
+0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
 Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &amp;quot;fmt&amp;quot; ) // Print Hello,world! func main() { fmt.Printf(&amp;quot;Hello,World!&amp;quot;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门  文档介绍如何安装  http://localhost:6060/doc/install 如何编写go语言  http://localhost:6060/doc/code.html 如何高效的编写go语言  http://localhost:6060/doc/code.html 熟悉go语言的api  http://localhost:6060/pkg/ 0x03 深入  已beego框架学习如何编写web项目  https://beego.me 关注go语言的Top项目  https://github.com/topics/go 学习go语言框架提供的第三方包  https://github.com/avelino/awesome-go </description>
+0x01 Hello,world! package main import ( &amp;#34;fmt&amp;#34; ) // Print Hello,world! func main() { fmt.Printf(&amp;#34;Hello,World!&amp;#34;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门 文档介绍如何安装 http://localhost:6060/doc/install 如何编写go语言 http://localhost:6060/doc/code.html 如何高效的编写go语言 http://localhost:6060/doc/code.html 熟悉go语言的api http://localhost:6060/pkg/ 0x03 深入 已beego框架学习如何编写web项目 https://beego.me 关注go语言的Top项目 https://github.com/topics/go 学习go语言框架提供的第三方包 https://github.com/avelino/awesome-go </description>
     </item>
     
     <item>
@@ -207,8 +208,8 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
       <pubDate>Fri, 24 Aug 2018 16:10:52 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/code/vscode/</guid>
-      <description>Visual Studio Code 插件  近来对Visual Studio Code的使用频率越来越高，也同时对微软出的这款免费IDE越来越喜欢。
- 1.Settings Sync 对于使用不同电脑进行开发的人，最喜欢的就是同一个IDE，相同的配置。所以Settings Sync可以解决这个问题。详细的使用还是参考帮助文档，对了，前提是你得注册了一个github账号。
+      <description>Visual Studio Code 插件 近来对Visual Studio Code的使用频率越来越高，也同时对微软出的这款免费IDE越来越喜欢。
+1.Settings Sync 对于使用不同电脑进行开发的人，最喜欢的就是同一个IDE，相同的配置。所以Settings Sync可以解决这个问题。详细的使用还是参考帮助文档，对了，前提是你得注册了一个github账号。
 2. Project Manager 其实这个功能就是为了在不同的项目中快速切换。恩，好用。
 3. REST Client REST 客户端允许你直接发送 HTTP 请求并在 Visual Studio Code 中查看响应。比PostMan简单，但是可以在IDE中直接使用也不错。
 4. Todo Tree 写惯了TODO，用这个就可以由个想eclipse的效果，感觉还不错。
@@ -232,9 +233,9 @@ Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安
       
       <guid>https://guobingyi.github.io/code/others/</guid>
       <description>Don&amp;rsquo;t be evil
- 记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
-bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;quot;&amp;lt;input&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;quot;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;quot;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;quot;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
-If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;quot;python@2&amp;quot; appears in that list, and Python 2.</description>
+记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
+bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;#34;&amp;lt;input&amp;gt;&amp;#34;, line 1, in &amp;lt;module&amp;gt; File &amp;#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;#34;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;#34;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
+If you&amp;#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;#34;python@2&amp;#34; appears in that list, and Python 2.</description>
     </item>
     
     <item>

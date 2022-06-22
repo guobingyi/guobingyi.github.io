@@ -13,18 +13,18 @@
       <pubDate>Thu, 21 Jun 2018 18:52:37 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/think/</guid>
-      <description>想法很多  自从没有在游戏上花费太多的时间，现在想法也很多。
- 1.用hugo搭建自己的博客 现在已经使用了，但是感觉样式不怎么好看，慢慢在来改了。
+      <description>想法很多 自从没有在游戏上花费太多的时间，现在想法也很多。
+1.用hugo搭建自己的博客 现在已经使用了，但是感觉样式不怎么好看，慢慢在来改了。
 不管怎么说，一切的开始，虽然难，但是都在前进就好！
 2.用docker中的centos来搭建开发环境 因为自己的系统是macos，所以很多代码不一定能跑起来，比如dbdk。所以就想用docker的方式来搭建一个开放平台，这样即使换了电脑或则系统，都可以使用docker把镜像导入进来。思路而已，还要考虑的问题如下：
-  如何将镜像进行备份和同步；
+如何将镜像进行备份和同步；
 初步的想法是docker将镜像导出，然后git到github上进行存储。但是这些都是需要压缩和加密的。
-  如何将实体机的开发环境弱化；
+如何将实体机的开发环境弱化；
 目前的开发环境都在本机的实体机上，所以想要弱化就必须考虑到一些开发ide，比如java的eclipse。想到用eclipse che来替代，就看docker是否能支持的好了。
-  3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
+3.尝试着写本书 这个就是一个伏笔了，希望能带来惊喜。当然，这个仅仅是生活的一部分，如果依赖就抱有太大的希望，就太给自己压力了。
 先学着写吧。
 4.科技改变生活 我觉得先从自己的生活改变开始，让自己的工作效率更高。为了达到这边目标，先从以下几点做起：
- 使用shell脚本，将自己常用的命令进行一个封装； 将一些程序中经常使用的工具进行汇总，供shell脚本使用； 自己编写代码，提供没有的工具。  </description>
+使用shell脚本，将自己常用的命令进行一个封装； 将一些程序中经常使用的工具进行汇总，供shell脚本使用； 自己编写代码，提供没有的工具。 </description>
     </item>
     
     <item>
@@ -33,8 +33,8 @@
       <pubDate>Sat, 16 Jun 2018 00:00:56 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/config/</guid>
-      <description>看一下hugo的配置  当初觉得为什么hugo可以比beego那么多star,现在可以理解了。
- 因为用go开发web的人，没有使用hugo创建自己博客的多。
+      <description>看一下hugo的配置 当初觉得为什么hugo可以比beego那么多star,现在可以理解了。
+因为用go开发web的人，没有使用hugo创建自己博客的多。
 来一个图片的例子：</description>
     </item>
     
@@ -44,8 +44,8 @@
       <pubDate>Fri, 15 Jun 2018 23:50:17 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/one/</guid>
-      <description>测试为什么图像没有  原来都有的，现在没有？
- 我觉得就是哪里配置的问题。
+      <description>测试为什么图像没有 原来都有的，现在没有？
+我觉得就是哪里配置的问题。
 ** 粗体 **</description>
     </item>
     
@@ -64,8 +64,7 @@
       <pubDate>Fri, 15 Jun 2018 23:31:47 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/post/test/</guid>
-      <description>Test my blog  new day will come,wzry go away!
- </description>
+      <description>Test my blog new day will come,wzry go away!</description>
     </item>
     
     <item>

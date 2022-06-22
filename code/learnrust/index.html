@@ -9,22 +9,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Rust 学习笔记  自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
- 前言 系统级别的语言，可以和C/C&#43;&#43;抗衡？目标就是为了取代C&#43;&#43;。
+<meta name="description" content="Rust 学习笔记 自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
+前言 系统级别的语言，可以和C/C&#43;&#43;抗衡？目标就是为了取代C&#43;&#43;。
 介绍 Rust语言能够编写速度更快，更加可靠的软件。
 学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～
-0x01 开始 1.目标  安装 写个输出hello world的程序 使用cargo工具来构建系统  2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
+0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
 所以，使用Rust的安装方式，最佳。
 $ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
 Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
 2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.">
 
 <meta property="og:title" content="LearnRust" />
-<meta property="og:description" content="Rust 学习笔记  自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
- 前言 系统级别的语言，可以和C/C&#43;&#43;抗衡？目标就是为了取代C&#43;&#43;。
+<meta property="og:description" content="Rust 学习笔记 自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
+前言 系统级别的语言，可以和C/C&#43;&#43;抗衡？目标就是为了取代C&#43;&#43;。
 介绍 Rust语言能够编写速度更快，更加可靠的软件。
 学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～
-0x01 开始 1.目标  安装 写个输出hello world的程序 使用cargo工具来构建系统  2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
+0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
 所以，使用Rust的安装方式，最佳。
 $ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
 Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
@@ -50,7 +50,9 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
 
 
 
@@ -60,11 +62,11 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2021-10-27%2021%3a37%3a27.901649%20%2b0800%20CST%20m%3d%2b4.113143255">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2021-10-27%2021%3a37%3a27.901649%20%2b0800%20CST%20m%3d%2b4.113143255">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2021-10-27%2021%3a37%3a27.901649%20%2b0800%20CST%20m%3d%2b4.113143255">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-06-22%2011%3a29%3a32.109005%20%2b0800%20CST%20m%3d%2b3.344113363">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-06-22%2011%3a29%3a32.109005%20%2b0800%20CST%20m%3d%2b3.344113363">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-06-22%2011%3a29%3a32.109005%20%2b0800%20CST%20m%3d%2b3.344113363">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2021-10-27%2021%3a37%3a27.901649%20%2b0800%20CST%20m%3d%2b4.113143255">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-06-22%2011%3a29%3a32.109005%20%2b0800%20CST%20m%3d%2b3.344113363">
     
 
 
@@ -75,6 +77,8 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
     href="https://guobingyi.github.io/img/leaf.ico"
 
 >
+
+
 
 
 
@@ -177,22 +181,31 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
             <nav>
                 <ul>
                     
+                        
                         <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
                     
+                        
                         <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
                     
+                        
                         <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
                     
+                        
                         <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
                     
+                        
                         <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
                     
+                        
                         <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
                     
+                        
                         <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
                     
+                        
                         <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
                     
+                        
                         <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
                     
                 </ul>
@@ -229,9 +242,13 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
         
 
         
+
+        
             <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
         
 
+        
+        
         
 
         
@@ -270,7 +287,7 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
 <h4 id="21-安装">2.1 安装</h4>
 <p>其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊</p>
 <p>所以，使用Rust的安装方式，最佳。</p>
-<pre tabindex="0"><code>$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+<pre tabindex="0"><code>$ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh
 </code></pre><p>安装成功后，将在命令端输出：</p>
 <pre tabindex="0"><code>Rust is installed now. Great!
 </code></pre><h4 id="22-更新">2.2 更新</h4>
@@ -291,7 +308,7 @@ $ cd hello_world
 </code></pre><h4 id="32-编写和运行rust程序">3.2 编写和运行Rust程序</h4>
 <p>创建main.rs文件，编写以下代码：</p>
 <pre tabindex="0"><code>fn main() {
-    println!(&quot;Hello, world!&quot;);
+    println!(&#34;Hello, world!&#34;);
 }
 </code></pre><p>编译和运行代码：</p>
 <pre tabindex="0"><code>$ rustc main.rs
@@ -324,28 +341,28 @@ $ cd guessing_game
 <pre tabindex="0"><code>use std::io;
 
 fn main() {
-    println!(&quot;Guess the number!&quot;);
+    println!(&#34;Guess the number!&#34;);
 
-    println!(&quot;Please input your guess.&quot;);
+    println!(&#34;Please input your guess.&#34;);
 
     let mut guess = String::new();
 
     io::stdin()
         .read_line(&amp;mut guess)
-        .expect(&quot;Failed to read line&quot;);
+        .expect(&#34;Failed to read line&#34;);
 
-    println!(&quot;You guessed: {}&quot;, guess);
+    println!(&#34;You guessed: {}&#34;, guess);
 }
 </code></pre><h4 id="53-数值存储">5.3 数值存储</h4>
 <pre tabindex="0"><code>let mut guess = String::new();
 </code></pre><h4 id="54-处理异常">5.4 处理异常</h4>
-<pre tabindex="0"><code> .expect(&quot;Failed to read line&quot;);
+<pre tabindex="0"><code> .expect(&#34;Failed to read line&#34;);
 </code></pre><h4 id="55-使用println函数打印">5.5 使用println!函数打印</h4>
-<pre tabindex="0"><code> println!(&quot;You guessed: {}&quot;, guess);
+<pre tabindex="0"><code> println!(&#34;You guessed: {}&#34;, guess);
 </code></pre><h4 id="56-添加依赖项">5.6 添加依赖项</h4>
 <p>在文件Cargo.toml中添加：</p>
 <pre tabindex="0"><code>[dependencies]
-rand = &quot;0.8.3&quot;
+rand = &#34;0.8.3&#34;
 </code></pre><h4 id="57-更新项目">5.7 更新项目</h4>
 <pre tabindex="0"><code>$ cargo build
 </code></pre><h4 id="58-更新依赖项版本">5.8 更新依赖项版本</h4>
@@ -355,29 +372,28 @@ rand = &quot;0.8.3&quot;
 </code></pre><p>此时rand版本更新支最新。</p>
 <p>或者直接打开 Cargo.toml，修改版本。</p>
 <pre tabindex="0"><code>[dependencies]
-rand = &quot;0.9.0&quot;
+rand = &#34;0.9.0&#34;
 </code></pre><h4 id="59--创建一个随机数">5.9  创建一个随机数</h4>
 <pre tabindex="0"><code>use std::io;
 use rand::Rng;
 
 fn main() {
-    println!(&quot;Guess the number!&quot;);
+    println!(&#34;Guess the number!&#34;);
 
     let secret_number = rand::thread_rng().gen_range(1..101);
 
-    println!(&quot;The secret number is: {}&quot;, secret_number);
+    println!(&#34;The secret number is: {}&#34;, secret_number);
 
-    println!(&quot;Please input your guess.&quot;);
+    println!(&#34;Please input your guess.&#34;);
 
     let mut guess = String::new();
 
     io::stdin()
         .read_line(&amp;mut guess)
-        .expect(&quot;Failed to read line&quot;);
+        .expect(&#34;Failed to read line&#34;);
 
-    println!(&quot;You guessed: {}&quot;, guess);
+    println!(&#34;You guessed: {}&#34;, guess);
 }
-
 </code></pre><h4 id="510-比较大小">5.10 比较大小</h4>
 <pre tabindex="0"><code>use rand::Rng;
 use std::cmp::Ordering;
@@ -386,32 +402,32 @@ use std::io;
 fn main() {
     // --snip--
 
-    println!(&quot;You guessed: {}&quot;, guess);
+    println!(&#34;You guessed: {}&#34;, guess);
 
     match guess.cmp(&amp;secret_number) {
-        Ordering::Less =&gt; println!(&quot;Too small!&quot;),
-        Ordering::Greater =&gt; println!(&quot;Too big!&quot;),
-        Ordering::Equal =&gt; println!(&quot;You win!&quot;),
+        Ordering::Less =&gt; println!(&#34;Too small!&#34;),
+        Ordering::Greater =&gt; println!(&#34;Too big!&#34;),
+        Ordering::Equal =&gt; println!(&#34;You win!&#34;),
     }
 }
 </code></pre><h4 id="511-添加循环">5.11 添加循环</h4>
 <pre tabindex="0"><code>loop {
-        println!(&quot;Please input your guess.&quot;);
+        println!(&#34;Please input your guess.&#34;);
 
         // --snip--
 
         match guess.cmp(&amp;secret_number) {
-            Ordering::Less =&gt; println!(&quot;Too small!&quot;),
-            Ordering::Greater =&gt; println!(&quot;Too big!&quot;),
-            Ordering::Equal =&gt; println!(&quot;You win!&quot;),
+            Ordering::Less =&gt; println!(&#34;Too small!&#34;),
+            Ordering::Greater =&gt; println!(&#34;Too big!&#34;),
+            Ordering::Equal =&gt; println!(&#34;You win!&#34;),
         }
     }
 </code></pre><h4 id="512-跳出循环">5.12 跳出循环</h4>
 <pre tabindex="0"><code>match guess.cmp(&amp;secret_number) {
-            Ordering::Less =&gt; println!(&quot;Too small!&quot;),
-            Ordering::Greater =&gt; println!(&quot;Too big!&quot;),
+            Ordering::Less =&gt; println!(&#34;Too small!&#34;),
+            Ordering::Greater =&gt; println!(&#34;Too big!&#34;),
             Ordering::Equal =&gt; {
-                println!(&quot;You win!&quot;);
+                println!(&#34;You win!&#34;);
                 break;
             }
         }
@@ -420,14 +436,14 @@ fn main() {
 
         io::stdin()
             .read_line(&amp;mut guess)
-            .expect(&quot;Failed to read line&quot;);
+            .expect(&#34;Failed to read line&#34;);
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) =&gt; num,
             Err(_) =&gt; continue,
         };
 
-        println!(&quot;You guessed: {}&quot;, guess);
+        println!(&#34;You guessed: {}&#34;, guess);
 
 // --snip--
 </code></pre><h3 id="6-常见编程概念">6. 常见编程概念</h3>
@@ -437,26 +453,26 @@ let mut x =6; //x能被赋值
 </code></pre><h4 id="62-变量与常量的差异">6.2 变量与常量的差异</h4>
 <pre tabindex="0"><code>const MAX_POINTS: u32 = 100_000;
 </code></pre><h4 id="63-阴影效果">6.3 阴影效果</h4>
-<pre tabindex="0"><code>let spaces = &quot;   &quot;;
+<pre tabindex="0"><code>let spaces = &#34;   &#34;;
 let spaces = spaces.len();
 </code></pre><p>let 再次使用关键字时，重新创建了一个新变量。</p>
 <p>但是以下的定义为错误：</p>
-<pre tabindex="0"><code> let mut spaces = &quot;   &quot;;
+<pre tabindex="0"><code> let mut spaces = &#34;   &#34;;
  spaces = spaces.len();
 </code></pre><p>此时spaces将变改变为整型，而非原来的字符型。</p>
 <h4 id="64-数据类型">6.4 数据类型</h4>
 <p>Rust是静态类型语言，编译时需要知道变量的类型。</p>
 <p>例如：</p>
-<pre tabindex="0"><code>let guess: u32 = &quot;42&quot;.parse().expect(&quot;Not a number!&quot;);
+<pre tabindex="0"><code>let guess: u32 = &#34;42&#34;.parse().expect(&#34;Not a number!&#34;);
 </code></pre><p>如果没有类型注释，如下所示：</p>
-<pre tabindex="0"><code>let guess = &quot;42&quot;.parse().expect(&quot;Not a number!&quot;);
+<pre tabindex="0"><code>let guess = &#34;42&#34;.parse().expect(&#34;Not a number!&#34;);
 </code></pre><p>编译将出现错误。</p>
 <pre tabindex="0"><code>$ cargo build
    Compiling no_type_annotations v0.1.0 (file:///projects/no_type_annotations)
 error[E0282]: type annotations needed
  --&gt; src/main.rs:2:9
   |
-2 |     let guess = &quot;42&quot;.parse().expect(&quot;Not a number!&quot;);
+2 |     let guess = &#34;42&#34;.parse().expect(&#34;Not a number!&#34;);
   |         ^^^^^ consider giving `guess` a type
 
 error: aborting due to previous error
@@ -580,9 +596,9 @@ To learn more, run the command again with --verbose.
 </ul>
 <p>Rust 的char类型大小为四个字节，表示一个 Unicode 标量值，这意味着它可以表示的不仅仅是 ASCII。</p>
 <pre tabindex="0"><code>fn main() {
-    let c = 'z';
-    let z = 'ℤ';
-    let heart_eyed_cat = '😻';
+    let c = &#39;z&#39;;
+    let z = &#39;ℤ&#39;;
+    let heart_eyed_cat = &#39;😻&#39;;
 }
 </code></pre><ul>
 <li>6.复合类型</li>
@@ -599,7 +615,7 @@ To learn more, run the command again with --verbose.
 
     let (x, y, z) = tup;
 
-    println!(&quot;The value of y is: {}&quot;, y);
+    println!(&#34;The value of y is: {}&#34;, y);
 }
 </code></pre><p>除了通过模式匹配进行解构之外，我们还可以通过使用句点 ( .) 后跟我们想要访问的值的索引来直接访问元组元素。例如：</p>
 <pre tabindex="0"><code>fn main() {
@@ -620,8 +636,8 @@ To learn more, run the command again with --verbose.
     let a = [1, 2, 3, 4, 5];
 }
 </code></pre><p>在需要知道一年中月份名称的程序中，您可能想要使用数组而不是向量的示例。这样的程序不太可能需要添加或删除月份，因此您可以使用数组，因为您知道它始终包含 12 个元素：</p>
-<pre tabindex="0"><code>let months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;,
-              &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;];
+<pre tabindex="0"><code>let months = [&#34;January&#34;, &#34;February&#34;, &#34;March&#34;, &#34;April&#34;, &#34;May&#34;, &#34;June&#34;, &#34;July&#34;,
+              &#34;August&#34;, &#34;September&#34;, &#34;October&#34;, &#34;November&#34;, &#34;December&#34;];
 </code></pre><p>您可以使用方括号编写数组的类型，方括号内包含每个元素的类型、分号，然后是数组中的元素数，如下所示：</p>
 <pre tabindex="0"><code>let a: [i32; 5] = [1, 2, 3, 4, 5];
 </code></pre><p>这里，i32是每个元素的类型。分号后的数字5 表示数组包含五个元素。</p>
@@ -640,13 +656,13 @@ To learn more, run the command again with --verbose.
 <p>函数在 Rust 代码中无处不在。您已经看到了该语言中最重要的函数之一：main函数，它是许多程序的入口点。您还看到了fn关键字，它允许您声明新函数。</p>
 <p>Rust 代码使用蛇形大小写作为函数和变量名称的常规样式。在蛇的情况下，所有字母都是小写的，并用下划线分隔单词。这是一个包含示例函数定义的程序：</p>
 <pre tabindex="0"><code>fn main() {
-    println!(&quot;Hello, world!&quot;);
+    println!(&#34;Hello, world!&#34;);
 
     another_function();
 }
 
 fn another_function() {
-    println!(&quot;Another function.&quot;);
+    println!(&#34;Another function.&#34;);
 }
 </code></pre><p>Rust 中的函数定义以fn函数名开头，并在函数名后有一组括号。大括号告诉编译器函数体的开始和结束位置。</p>
 <p>Rust 不关心你在哪里定义你的函数，只关心它们是在某处定义的。</p>
@@ -658,7 +674,7 @@ fn another_function() {
 }
 
 fn another_function(x: i32) {
-    println!(&quot;The value of x is: {}&quot;, x);
+    println!(&#34;The value of x is: {}&#34;, x);
 }
 </code></pre><p>一个函数有多个参数时，用逗号分隔参数声明，像这样：</p>
 <pre tabindex="0"><code>fn main() {
@@ -666,8 +682,8 @@ fn another_function(x: i32) {
 }
 
 fn another_function(x: i32, y: i32) {
-    println!(&quot;The value of x is: {}&quot;, x);
-    println!(&quot;The value of y is: {}&quot;, y);
+    println!(&#34;The value of x is: {}&#34;, x);
+    println!(&#34;The value of y is: {}&#34;, y);
 }
 </code></pre><p>创建新作用域的块{}是一个表达式，例如：</p>
 <pre tabindex="0"><code>n main() {
@@ -678,7 +694,7 @@ fn another_function(x: i32, y: i32) {
         x + 1
     };
 
-    println!(&quot;The value of y is: {}&quot;, y);
+    println!(&#34;The value of y is: {}&#34;, y);
 }
 </code></pre><ul>
 <li>2.具有返回值的函数</li>
@@ -691,14 +707,13 @@ fn another_function(x: i32, y: i32) {
 fn main() {
     let x = five();
 
-    println!(&quot;The value of x is: {}&quot;, x);
+    println!(&#34;The value of x is: {}&#34;, x);
 }
 </code></pre><h4 id="66-注释">6.6 注释</h4>
 <p>在 Rust 中，惯用的注释样式以两个斜杠开始注释，并且注释一直持续到行尾。对于超出单行的注释，您需要//在每一行中包含，如下所示：</p>
 <pre tabindex="0"><code>// So we’re doing something complicated here, long enough that we need
 // multiple lines of comments to do it! Whew! Hopefully, this comment will
 // explain what’s going on.
-
 </code></pre><p>注释也可以放在包含代码的行的末尾：</p>
 <pre tabindex="0"><code>fn main() {
     let lucky_number = 7; // I’m feeling lucky today
@@ -717,9 +732,9 @@ fn main() {
     let number = 3;
 
     if number &lt; 5 {
-        println!(&quot;condition was true&quot;);
+        println!(&#34;condition was true&#34;);
     } else {
-        println!(&quot;condition was false&quot;);
+        println!(&#34;condition was false&#34;);
     }
 }
 </code></pre><p>必须明确并始终提供 if布尔值作为其条件。</p>
@@ -727,7 +742,7 @@ fn main() {
     let number = 3;
 
     if number != 0 {
-        println!(&quot;number was something other than zero&quot;);
+        println!(&#34;number was something other than zero&#34;);
     }
 }
 </code></pre><ul>
@@ -737,13 +752,13 @@ fn main() {
     let number = 6;
 
     if number % 4 == 0 {
-        println!(&quot;number is divisible by 4&quot;);
+        println!(&#34;number is divisible by 4&#34;);
     } else if number % 3 == 0 {
-        println!(&quot;number is divisible by 3&quot;);
+        println!(&#34;number is divisible by 3&#34;);
     } else if number % 2 == 0 {
-        println!(&quot;number is divisible by 2&quot;);
+        println!(&#34;number is divisible by 2&#34;);
     } else {
-        println!(&quot;number is not divisible by 4, 3, or 2&quot;);
+        println!(&#34;number is not divisible by 4, 3, or 2&#34;);
     }
 }
 </code></pre><ul>
@@ -753,7 +768,7 @@ fn main() {
     let condition = true;
     let number = if condition { 5 } else { 6 };
 
-    println!(&quot;The value of number is: {}&quot;, number);
+    println!(&#34;The value of number is: {}&#34;, number);
 }
 </code></pre><ul>
 <li>4.循环重复</li>
@@ -763,7 +778,7 @@ fn main() {
 <p>该loop关键字告诉Rust永远比执行的代码块一遍又一遍，或者直到你明确告诉它停止。</p>
 <pre tabindex="0"><code>fn main() {
     loop {
-        println!(&quot;again!&quot;);
+        println!(&#34;again!&#34;);
     }
 }
 </code></pre><p>从循环返回值</p>
@@ -778,20 +793,19 @@ fn main() {
         }
     };
 
-    println!(&quot;The result is {}&quot;, result);
+    println!(&#34;The result is {}&#34;, result);
 }
-
 </code></pre><p>(2)条件循环 while</p>
 <pre tabindex="0"><code>fn main() {
     let mut number = 3;
 
     while number != 0 {
-        println!(&quot;{}!&quot;, number);
+        println!(&#34;{}!&#34;, number);
 
         number -= 1;
     }
 
-    println!(&quot;LIFTOFF!!!&quot;);
+    println!(&#34;LIFTOFF!!!&#34;);
 }
 </code></pre><p>(3)循环遍历集合 for</p>
 <p>while方式：</p>
@@ -800,18 +814,17 @@ fn main() {
     let mut index = 0;
 
     while index &lt; 5 {
-        println!(&quot;the value is: {}&quot;, a[index]);
+        println!(&#34;the value is: {}&#34;, a[index]);
 
         index += 1;
     }
 }
-
 </code></pre><p>for 方式：</p>
 <pre tabindex="0"><code>fn main() {
     let a = [10, 20, 30, 40, 50];
 
     for element in a.iter() {
-        println!(&quot;the value is: {}&quot;, element);
+        println!(&#34;the value is: {}&#34;, element);
     }
 }
 </code></pre><h3 id="7-所有权">7. 所有权</h3>
@@ -832,8 +845,8 @@ fn main() {
     active: bool,
 }
 </code></pre><pre tabindex="0"><code>let user1 = User {
-        email: String::from(&quot;someone@example.com&quot;),
-        username: String::from(&quot;someusername123&quot;),
+        email: String::from(&#34;someone@example.com&#34;),
+        username: String::from(&#34;someusername123&#34;),
         active: true,
         sign_in_count: 1,
     };
@@ -857,11 +870,10 @@ fn main() {
     };
 
     println!(
-        &quot;The area of the rectangle is {} square pixels.&quot;,
+        &#34;The area of the rectangle is {} square pixels.&#34;,
         rect1.area()
     );
 }
-
 </code></pre><h3 id="9枚举和模式匹配">9.枚举和模式匹配</h3>
 <h4 id="91-定义枚举">9.1 定义枚举</h4>
 <pre tabindex="0"><code>enum IpAddrKind {
@@ -884,12 +896,12 @@ let six = IpAddrKind::V6;
 
     let home = IpAddr {
         kind: IpAddrKind::V4,
-        address: String::from(&quot;127.0.0.1&quot;),
+        address: String::from(&#34;127.0.0.1&#34;),
     };
 
     let loopback = IpAddr {
         kind: IpAddrKind::V6,
-        address: String::from(&quot;::1&quot;),
+        address: String::from(&#34;::1&#34;),
     };
 </code></pre><h4 id="93-匹配控制流程操作符">9.3 匹配控制流程操作符</h4>
 <pre tabindex="0"><code>enum Coin {
@@ -911,16 +923,16 @@ fn value_in_cents(coin: Coin) -&gt; u8 {
 <p>该_模式将匹配任何值。</p>
 <pre tabindex="0"><code> let some_u8_value = 0u8;
     match some_u8_value {
-        1 =&gt; println!(&quot;one&quot;),
-        3 =&gt; println!(&quot;three&quot;),
-        5 =&gt; println!(&quot;five&quot;),
-        7 =&gt; println!(&quot;seven&quot;),
+        1 =&gt; println!(&#34;one&#34;),
+        3 =&gt; println!(&#34;three&#34;),
+        5 =&gt; println!(&#34;five&#34;),
+        7 =&gt; println!(&#34;seven&#34;),
         _ =&gt; (),
     }
 </code></pre><h4 id="95-if-let">9.5 if let</h4>
 <pre tabindex="0"><code> let some_u8_value = Some(0u8);
    match some_u8_value {
-       Some(3) =&gt; println!(&quot;three&quot;),
+       Some(3) =&gt; println!(&#34;three&#34;),
        _ =&gt; (),
    }
 </code></pre><h3 id="10管理不断增长的项目">10.管理不断增长的项目</h3>
@@ -1029,49 +1041,48 @@ pub fn eat_at_restaurant() {
     v.push(7);
     v.push(8);
 </code></pre><h4 id="112-存储utf-8字符串">11.2 存储UTF-8字符串</h4>
-<pre tabindex="0"><code>    let hello = String::from(&quot;السلام عليكم&quot;);
-    let hello = String::from(&quot;Dobrý den&quot;);
-    let hello = String::from(&quot;Hello&quot;);
-    let hello = String::from(&quot;שָׁלוֹם&quot;);
-    let hello = String::from(&quot;नमस्ते&quot;);
-    let hello = String::from(&quot;こんにちは&quot;);
-    let hello = String::from(&quot;안녕하세요&quot;);
-    let hello = String::from(&quot;你好&quot;);
-    let hello = String::from(&quot;Olá&quot;);
-    let hello = String::from(&quot;Здравствуйте&quot;);
-    let hello = String::from(&quot;Hola&quot;);
-
+<pre tabindex="0"><code>    let hello = String::from(&#34;السلام عليكم&#34;);
+    let hello = String::from(&#34;Dobrý den&#34;);
+    let hello = String::from(&#34;Hello&#34;);
+    let hello = String::from(&#34;שָׁלוֹם&#34;);
+    let hello = String::from(&#34;नमस्ते&#34;);
+    let hello = String::from(&#34;こんにちは&#34;);
+    let hello = String::from(&#34;안녕하세요&#34;);
+    let hello = String::from(&#34;你好&#34;);
+    let hello = String::from(&#34;Olá&#34;);
+    let hello = String::from(&#34;Здравствуйте&#34;);
+    let hello = String::from(&#34;Hola&#34;);
 </code></pre><ul>
 <li>1.添加字符串</li>
 </ul>
-<pre tabindex="0"><code>let mut s = String::from(&quot;lo&quot;);
-s.push('l');
+<pre tabindex="0"><code>let mut s = String::from(&#34;lo&#34;);
+s.push(&#39;l&#39;);
 </code></pre><p>使用操作符 &ldquo;+&ldquo;进行字符串操作：</p>
-<pre tabindex="0"><code>    let s1 = String::from(&quot;Hello, &quot;);
-    let s2 = String::from(&quot;world!&quot;);
+<pre tabindex="0"><code>    let s1 = String::from(&#34;Hello, &#34;);
+    let s2 = String::from(&#34;world!&#34;);
     let s3 = s1 + &amp;s2; // note s1 has been moved here and can no longer be used
 </code></pre><h4 id="113-hashmap">11.3 HashMap</h4>
 <pre tabindex="0"><code>use std::collections::HashMap;
 
 let mut scores = HashMap::new();
 
-scores.insert(String::from(&quot;Blue&quot;), 10);
-scores.insert(String::from(&quot;Yellow&quot;), 50);
+scores.insert(String::from(&#34;Blue&#34;), 10);
+scores.insert(String::from(&#34;Yellow&#34;), 50);
 
 //Accessing Values in a Hash Map
-let team_name = String::from(&quot;Blue&quot;);
+let team_name = String::from(&#34;Blue&#34;);
 let score = scores.get(&amp;team_name);
 
 for (key, value) in &amp;scores {
-        println!(&quot;{}: {}&quot;, key, value);
+        println!(&#34;{}: {}&#34;, key, value);
     }
 
 //Overwriting a Value
-scores.insert(String::from(&quot;Blue&quot;), 25);
+scores.insert(String::from(&#34;Blue&#34;), 25);
 </code></pre><h3 id="12-错误处理">12 错误处理</h3>
 <h4 id="121-panic">12.1 panic</h4>
 <pre tabindex="0"><code>fn main() {
-    panic!(&quot;crash and burn&quot;);
+    panic!(&#34;crash and burn&#34;);
 }
 </code></pre><pre tabindex="0"><code>RUST_BACKTRACE=1 cargo run
 </code></pre><p>打印错误详细信息。</p>
@@ -1079,11 +1090,11 @@ scores.insert(String::from(&quot;Blue&quot;), 25);
 <pre tabindex="0"><code>use std::fs::File;
 
 fn main() {
-    let f = File::open(&quot;hello.txt&quot;);
+    let f = File::open(&#34;hello.txt&#34;);
 
     let f = match f {
         Ok(file) =&gt; file,
-        Err(error) =&gt; panic!(&quot;Problem opening the file: {:?}&quot;, error),
+        Err(error) =&gt; panic!(&#34;Problem opening the file: {:?}&#34;, error),
     };
 }
 </code></pre><p>多错误处理：</p>
@@ -1091,17 +1102,17 @@ fn main() {
 use std::io::ErrorKind;
 
 fn main() {
-    let f = File::open(&quot;hello.txt&quot;);
+    let f = File::open(&#34;hello.txt&#34;);
 
     let f = match f {
         Ok(file) =&gt; file,
         Err(error) =&gt; match error.kind() {
-            ErrorKind::NotFound =&gt; match File::create(&quot;hello.txt&quot;) {
+            ErrorKind::NotFound =&gt; match File::create(&#34;hello.txt&#34;) {
                 Ok(fc) =&gt; fc,
-                Err(e) =&gt; panic!(&quot;Problem creating the file: {:?}&quot;, e),
+                Err(e) =&gt; panic!(&#34;Problem creating the file: {:?}&#34;, e),
             },
             other_error =&gt; {
-                panic!(&quot;Problem opening the file: {:?}&quot;, other_error)
+                panic!(&#34;Problem opening the file: {:?}&#34;, other_error)
             }
         },
     };
@@ -1114,7 +1125,7 @@ fn main() {
 impl Guess {
     pub fn new(value: i32) -&gt; Guess {
         if value &lt; 1 || value &gt; 100 {
-            panic!(&quot;Guess value must be between 1 and 100, got {}.&quot;, value);
+            panic!(&#34;Guess value must be between 1 and 100, got {}.&#34;, value);
         }
 
         Guess { value }
@@ -1137,7 +1148,7 @@ impl Guess {
         }
     }
 
-    println!(&quot;The largest number is {}&quot;, largest);
+    println!(&#34;The largest number is {}&#34;, largest);
 
     let number_list = vec![102, 34, 6000, 89, 54, 2, 43, 8];
 
@@ -1149,7 +1160,7 @@ impl Guess {
         }
     }
 
-    println!(&quot;The largest number is {}&quot;, largest);
+    println!(&#34;The largest number is {}&#34;, largest);
 }
 </code></pre><p>提取后，将转变为以下函数：</p>
 <pre tabindex="0"><code>fn largest(list: &amp;[i32]) -&gt; i32 {
@@ -1168,12 +1179,12 @@ fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest(&amp;number_list);
-    println!(&quot;The largest number is {}&quot;, result);
+    println!(&#34;The largest number is {}&#34;, result);
 
     let number_list = vec![102, 34, 6000, 89, 54, 2, 43, 8];
 
     let result = largest(&amp;number_list);
-    println!(&quot;The largest number is {}&quot;, result);
+    println!(&#34;The largest number is {}&#34;, result);
 }
 </code></pre><h4 id="131-通用数据类型">13.1 通用数据类型</h4>
 <ul>
@@ -1207,12 +1218,12 @@ fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest_i32(&amp;number_list);
-    println!(&quot;The largest number is {}&quot;, result);
+    println!(&#34;The largest number is {}&#34;, result);
 
-    let char_list = vec!['y', 'm', 'a', 'q'];
+    let char_list = vec![&#39;y&#39;, &#39;m&#39;, &#39;a&#39;, &#39;q&#39;];
 
     let result = largest_char(&amp;char_list);
-    println!(&quot;The largest char is {}&quot;, result);
+    println!(&#34;The largest char is {}&#34;, result);
 }
 </code></pre><p>将数字比较和字符比较，都使用泛型的方式：</p>
 <pre tabindex="0"><code>fn largest&lt;T&gt;(list: &amp;[T]) -&gt; T {
@@ -1231,14 +1242,13 @@ fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest(&amp;number_list);
-    println!(&quot;The largest number is {}&quot;, result);
+    println!(&#34;The largest number is {}&#34;, result);
 
-    let char_list = vec!['y', 'm', 'a', 'q'];
+    let char_list = vec![&#39;y&#39;, &#39;m&#39;, &#39;a&#39;, &#39;q&#39;];
 
     let result = largest(&amp;char_list);
-    println!(&quot;The largest char is {}&quot;, result);
+    println!(&#34;The largest char is {}&#34;, result);
 }
-
 </code></pre><ul>
 <li>2.结构定义</li>
 </ul>
@@ -1281,7 +1291,7 @@ impl&lt;T&gt; Point&lt;T&gt; {
 fn main() {
     let p = Point { x: 5, y: 10 };
 
-    println!(&quot;p.x = {}&quot;, p.x());
+    println!(&#34;p.x = {}&#34;, p.x());
 }
 </code></pre><p>一个更加复杂的例子：</p>
 <pre tabindex="0"><code>struct Point&lt;T, U&gt; {
@@ -1300,13 +1310,12 @@ impl&lt;T, U&gt; Point&lt;T, U&gt; {
 
 fn main() {
     let p1 = Point { x: 5, y: 10.4 };
-    let p2 = Point { x: &quot;Hello&quot;, y: 'c' };
+    let p2 = Point { x: &#34;Hello&#34;, y: &#39;c&#39; };
 
     let p3 = p1.mixup(p2);
 
-    println!(&quot;p3.x = {}, p3.y = {}&quot;, p3.x, p3.y);
+    println!(&#34;p3.x = {}, p3.y = {}&#34;, p3.x, p3.y);
 }
-
 </code></pre><ul>
 <li>
 <ol start="3">
@@ -1331,7 +1340,7 @@ let float = Some(5.0);
 
 impl Summary for NewsArticle {
     fn summarize(&amp;self) -&gt; String {
-        format!(&quot;{}, by {} ({})&quot;, self.headline, self.author, self.location)
+        format!(&#34;{}, by {} ({})&#34;, self.headline, self.author, self.location)
     }
 }
 
@@ -1344,7 +1353,7 @@ pub struct Tweet {
 
 impl Summary for Tweet {
     fn summarize(&amp;self) -&gt; String {
-        format!(&quot;{}: {}&quot;, self.username, self.content)
+        format!(&#34;{}: {}&#34;, self.username, self.content)
     }
 }
 </code></pre><p>函数中使用特性：</p>
@@ -1364,54 +1373,54 @@ fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest(&amp;number_list);
-    println!(&quot;The largest number is {}&quot;, result);
+    println!(&#34;The largest number is {}&#34;, result);
 
-    let char_list = vec!['y', 'm', 'a', 'q'];
+    let char_list = vec![&#39;y&#39;, &#39;m&#39;, &#39;a&#39;, &#39;q&#39;];
 
     let result = largest(&amp;char_list);
-    println!(&quot;The largest char is {}&quot;, result);
+    println!(&#34;The largest char is {}&#34;, result);
 }
 </code></pre><h4 id="133-引用生命周期">13.3 引用生命周期</h4>
 <ul>
 <li>1.函数中的生命周期</li>
 </ul>
 <pre tabindex="0"><code>fn main() {
-    let string1 = String::from(&quot;abcd&quot;);
-    let string2 = &quot;xyz&quot;;
+    let string1 = String::from(&#34;abcd&#34;);
+    let string2 = &#34;xyz&#34;;
 
     let result = longest(string1.as_str(), string2);
-    println!(&quot;The longest string is {}&quot;, result);
+    println!(&#34;The longest string is {}&#34;, result);
 }
 </code></pre><ul>
 <li>2.生命周期注释语法</li>
 </ul>
 <pre tabindex="0"><code>&amp;i32        // a reference
-&amp;'a i32     // a reference with an explicit lifetime
-&amp;'a mut i32 // a mutable reference with an explicit lifetime
+&amp;&#39;a i32     // a reference with an explicit lifetime
+&amp;&#39;a mut i32 // a mutable reference with an explicit lifetime
 </code></pre><ul>
 <li>3.函数中的生命周期注释</li>
 </ul>
-<pre tabindex="0"><code>fn longest&lt;'a&gt;(x: &amp;'a str, y: &amp;str) -&gt; &amp;'a str {
+<pre tabindex="0"><code>fn longest&lt;&#39;a&gt;(x: &amp;&#39;a str, y: &amp;str) -&gt; &amp;&#39;a str {
     x
 }
 </code></pre><ul>
 <li>4.静态生命周期</li>
 </ul>
-<pre tabindex="0"><code>let s: &amp;'static str = &quot;I have a static lifetime.&quot;;
+<pre tabindex="0"><code>let s: &amp;&#39;static str = &#34;I have a static lifetime.&#34;;
 </code></pre><ul>
 <li>5.通用类型参数、特征边界和生命周期</li>
 </ul>
 <pre tabindex="0"><code>use std::fmt::Display;
 
-fn longest_with_an_announcement&lt;'a, T&gt;(
-    x: &amp;'a str,
-    y: &amp;'a str,
+fn longest_with_an_announcement&lt;&#39;a, T&gt;(
+    x: &amp;&#39;a str,
+    y: &amp;&#39;a str,
     ann: T,
-) -&gt; &amp;'a str
+) -&gt; &amp;&#39;a str
 where
     T: Display,
 {
-    println!(&quot;Announcement! {}&quot;, ann);
+    println!(&#34;Announcement! {}&#34;, ann);
     if x.len() &gt; y.len() {
         x
     } else {
@@ -1433,10 +1442,9 @@ mod tests {
 
     #[test]
     fn another() {
-        panic!(&quot;Make this test fail&quot;);
+        panic!(&#34;Make this test fail&#34;);
     }
 }
-
 </code></pre><h4 id="142">14.2</h4>
 <p>并行测试</p>
 <pre tabindex="0"><code>$ cargo test -- --test-threads=1
@@ -1466,7 +1474,6 @@ mod tests {
         assert_eq!(102, add_two(100));
     }
 }
-
 </code></pre><pre tabindex="0"><code>cargo test one_hundred
 </code></pre><p>匹配函数名称进行测试，所有的add开头都会被测试：</p>
 <pre tabindex="0"><code>cargo test add
@@ -1523,7 +1530,7 @@ mod tests {
 
 fn main() {
     let args: Vec&lt;String&gt; = env::args().collect();
-    println!(&quot;{:?}&quot;, args);
+    println!(&#34;{:?}&#34;, args);
 }
 </code></pre><ul>
 <li>2.存储参数</li>
@@ -1536,8 +1543,8 @@ fn main() {
     let query = &amp;args[1];
     let filename = &amp;args[2];
 
-    println!(&quot;Searching for {}&quot;, query);
-    println!(&quot;In file {}&quot;, filename);
+    println!(&#34;Searching for {}&#34;, query);
+    println!(&#34;In file {}&#34;, filename);
 }
 </code></pre><h4 id="152-读取文件">15.2 读取文件</h4>
 <pre tabindex="0"><code>use std::env;
@@ -1548,15 +1555,14 @@ fn main() {
     let query = &amp;args[1];
     let filename = &amp;args[2];
 
-    println!(&quot;Searching for {}&quot;, query);
-    println!(&quot;In file {}&quot;, filename);
+    println!(&#34;Searching for {}&#34;, query);
+    println!(&#34;In file {}&#34;, filename);
 
     let contents = fs::read_to_string(filename)
-        .expect(&quot;Something went wrong reading the file&quot;);
+        .expect(&#34;Something went wrong reading the file&#34;);
 
-    println!(&quot;With text:\n{}&quot;, contents);
+    println!(&#34;With text:\n{}&#34;, contents);
 }
-
 </code></pre><h4 id="153-提高模块化和错误处理">15.3 提高模块化和错误处理</h4>
 <p>lib.rs</p>
 <pre tabindex="0"><code>use std::error::Error;
@@ -1570,7 +1576,7 @@ pub struct Config {
 impl Config {
     pub fn new(args: &amp;[String]) -&gt; Result&lt;Config, &amp;str&gt; {
         if args.len() &lt; 3 {
-            panic!(&quot;not enough arguments&quot;);
+            panic!(&#34;not enough arguments&#34;);
         }
         let query = args[1].clone();
         let filename = args[2].clone();
@@ -1582,7 +1588,7 @@ impl Config {
 pub fn run(config: Config) -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
     let contents = fs::read_to_string(config.filename)?;
 
-    println!(&quot;With text:\n{}&quot;, contents);
+    println!(&#34;With text:\n{}&#34;, contents);
 
     Ok(())
 }
@@ -1597,20 +1603,19 @@ fn main() {
     let args: Vec&lt;String&gt; = env::args().collect();
 
     let config = Config::new(&amp;args).unwrap_or_else(|err| {
-        println!(&quot;Problem parsing arguments: {}&quot;, err);
+        println!(&#34;Problem parsing arguments: {}&#34;, err);
         process::exit(1);
     });
 
-    println!(&quot;Searching for {}&quot;, config.query);
-    println!(&quot;In file {}&quot;, config.filename);
+    println!(&#34;Searching for {}&#34;, config.query);
+    println!(&#34;In file {}&#34;, config.filename);
 
     if let Err(e) = minigrep::run(config) {
-        println!(&quot;Application error: {}&quot;, e);
+        println!(&#34;Application error: {}&#34;, e);
 
         process::exit(1);
     }
 }
-
 </code></pre><h4 id="154-使用测试驱动开发开发库的功能">15.4 使用测试驱动开发开发库的功能</h4>
 <pre tabindex="0"><code>#[cfg(test)]
 mod tests {
@@ -1618,13 +1623,13 @@ mod tests {
 
     #[test]
     fn one_result() {
-        let query = &quot;duct&quot;;
-        let contents = &quot;\
+        let query = &#34;duct&#34;;
+        let contents = &#34;\
 Rust:
 safe, fast, productive.
-Pick three.&quot;;
+Pick three.&#34;;
 
-        assert_eq!(vec![&quot;safe, fast, productive.&quot;], search(query, contents));
+        assert_eq!(vec![&#34;safe, fast, productive.&#34;], search(query, contents));
     }
 }
 </code></pre><h4 id="155-使用环境变量">15.5 使用环境变量</h4>
@@ -1638,7 +1643,7 @@ Pick three.&quot;;
 use std::time::Duration;
 
 fn simulated_expensive_calculation(intensity: u32) -&gt; u32 {
-    println!(&quot;calculating slowly...&quot;);
+    println!(&#34;calculating slowly...&#34;);
     thread::sleep(Duration::from_secs(2));
     intensity
 }
@@ -1648,25 +1653,24 @@ fn simulated_expensive_calculation(intensity: u32) -&gt; u32 {
     let v1_iter = v1.iter();
 
     for val in v1_iter {
-        println!(&quot;Got: {}&quot;, val);
+        println!(&#34;Got: {}&#34;, val);
     }
-
 </code></pre><h4 id="163-改进io项目">16.3 改进I/O项目</h4>
 <pre tabindex="0"><code>impl Config {
-    pub fn new(mut args: env::Args) -&gt; Result&lt;Config, &amp;'static str&gt; {
+    pub fn new(mut args: env::Args) -&gt; Result&lt;Config, &amp;&#39;static str&gt; {
         args.next();
 
         let query = match args.next() {
             Some(arg) =&gt; arg,
-            None =&gt; return Err(&quot;Didn't get a query string&quot;),
+            None =&gt; return Err(&#34;Didn&#39;t get a query string&#34;),
         };
 
         let filename = match args.next() {
             Some(arg) =&gt; arg,
-            None =&gt; return Err(&quot;Didn't get a file name&quot;),
+            None =&gt; return Err(&#34;Didn&#39;t get a file name&#34;),
         };
 
-        let case_sensitive = env::var(&quot;CASE_INSENSITIVE&quot;).is_err();
+        let case_sensitive = env::var(&#34;CASE_INSENSITIVE&#34;).is_err();
 
         Ok(Config {
             query,
@@ -1675,7 +1679,7 @@ fn simulated_expensive_calculation(intensity: u32) -&gt; u32 {
         })
     }
 }
-</code></pre><pre tabindex="0"><code>pub fn search&lt;'a&gt;(query: &amp;str, contents: &amp;'a str) -&gt; Vec&lt;&amp;'a str&gt; {
+</code></pre><pre tabindex="0"><code>pub fn search&lt;&#39;a&gt;(query: &amp;str, contents: &amp;&#39;a str) -&gt; Vec&lt;&amp;&#39;a str&gt; {
     contents
         .lines()
         .filter(|line| line.contains(query))
@@ -1746,12 +1750,12 @@ pub fn add_one(x: i32) -&gt; i32 {
 </ul>
 <p>文件名：Cargo.toml</p>
 <pre tabindex="0"><code>[package]
-name = &quot;guessing_game&quot;
-version = &quot;0.1.0&quot;
-authors = [&quot;Your Name &lt;you@example.com&gt;&quot;]
-edition = &quot;2018&quot;
-description = &quot;A fun game where you guess what number the computer has chosen.&quot;
-license = &quot;MIT OR Apache-2.0&quot;
+name = &#34;guessing_game&#34;
+version = &#34;0.1.0&#34;
+authors = [&#34;Your Name &lt;you@example.com&gt;&#34;]
+edition = &#34;2018&#34;
+description = &#34;A fun game where you guess what number the computer has chosen.&#34;
+license = &#34;MIT OR Apache-2.0&#34;
 </code></pre><pre tabindex="0"><code>$ cargo publish
 </code></pre><ul>
 <li>
@@ -1791,7 +1795,7 @@ $ cd add
 </code></pre><pre tabindex="0"><code>[workspace]
 
 members = [
-    &quot;adder&quot;,
+    &#34;adder&#34;,
 ]
 </code></pre><pre tabindex="0"><code>$ cargo new adder
      Created binary (application) `adder` package     
@@ -1813,8 +1817,8 @@ members = [
 <pre tabindex="0"><code>[workspace]
 
 members = [
-    &quot;adder&quot;,
-    &quot;add-one&quot;,
+    &#34;adder&#34;,
+    &#34;add-one&#34;,
 ]
 </code></pre><pre tabindex="0"><code>$ cargo new add-one --lib
      Created library `add-one` package
@@ -1837,7 +1841,7 @@ members = [
 </li>
 </ul>
 <pre tabindex="0"><code>[dependencies]
-rand = &quot;0.8.3&quot;
+rand = &#34;0.8.3&#34;
 </code></pre><ul>
 <li>
 <ol start="4">
@@ -1876,11 +1880,11 @@ mod tests {
 <h4 id="181-使用bt指向堆栈数据">18.1 使用B<!-- raw HTML omitted -->指向堆栈数据</h4>
 <pre tabindex="0"><code>fn main() {
     let b = Box::new(5);
-    println!(&quot;b = {}&quot;, b);
+    println!(&#34;b = {}&#34;, b);
 }
 </code></pre><h4 id="182-将智能指针视为具有dereftrait-的常规引用">18.2 将智能指针视为具有Dereftrait 的常规引用</h4>
 <pre tabindex="0"><code>fn main() {
-    let m = MyBox::new(String::from(&quot;Rust&quot;));
+    let m = MyBox::new(String::from(&#34;Rust&#34;));
     hello(&amp;m);
 }
 </code></pre><h4 id="183-使用drop特征在清理时运行代码">18.3 使用Drop特征在清理时运行代码</h4>
@@ -1890,41 +1894,40 @@ mod tests {
 
 impl Drop for CustomSmartPointer {
     fn drop(&amp;mut self) {
-        println!(&quot;Dropping CustomSmartPointer with data `{}`!&quot;, self.data);
+        println!(&#34;Dropping CustomSmartPointer with data `{}`!&#34;, self.data);
     }
 }
 
 fn main() {
     let c = CustomSmartPointer {
-        data: String::from(&quot;my stuff&quot;),
+        data: String::from(&#34;my stuff&#34;),
     };
     let d = CustomSmartPointer {
-        data: String::from(&quot;other stuff&quot;),
+        data: String::from(&#34;other stuff&#34;),
     };
-    println!(&quot;CustomSmartPointers created.&quot;);
+    println!(&#34;CustomSmartPointers created.&#34;);
 }
 </code></pre><p>尽早删除一个值 std::mem::drop。</p>
 <pre tabindex="0"><code>fn main() {
     let c = CustomSmartPointer {
-        data: String::from(&quot;some data&quot;),
+        data: String::from(&#34;some data&#34;),
     };
-    println!(&quot;CustomSmartPointer created.&quot;);
+    println!(&#34;CustomSmartPointer created.&#34;);
     drop(c);
-    println!(&quot;CustomSmartPointer dropped before the end of main.&quot;);
+    println!(&#34;CustomSmartPointer dropped before the end of main.&#34;);
 }
 </code></pre><h4 id="184-使用rt进行智能指针计数">18.4 使用R<!-- raw HTML omitted -->进行智能指针计数</h4>
 <pre tabindex="0"><code>fn main() {
     let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
-    println!(&quot;count after creating a = {}&quot;, Rc::strong_count(&amp;a));
+    println!(&#34;count after creating a = {}&#34;, Rc::strong_count(&amp;a));
     let b = Cons(3, Rc::clone(&amp;a));
-    println!(&quot;count after creating b = {}&quot;, Rc::strong_count(&amp;a));
+    println!(&#34;count after creating b = {}&#34;, Rc::strong_count(&amp;a));
     {
         let c = Cons(4, Rc::clone(&amp;a));
-        println!(&quot;count after creating c = {}&quot;, Rc::strong_count(&amp;a));
+        println!(&#34;count after creating c = {}&#34;, Rc::strong_count(&amp;a));
     }
-    println!(&quot;count after c goes out of scope = {}&quot;, Rc::strong_count(&amp;a));
+    println!(&#34;count after c goes out of scope = {}&#34;, Rc::strong_count(&amp;a));
 }
-
 </code></pre><h4 id="185-refcellt-和内部可变性模式">18.5 RefCell<!-- raw HTML omitted --> 和内部可变性模式</h4>
 <pre tabindex="0"><code>#[derive(Debug)]
 enum List {
@@ -1946,9 +1949,9 @@ fn main() {
 
     *value.borrow_mut() += 10;
 
-    println!(&quot;a after = {:?}&quot;, a);
-    println!(&quot;b after = {:?}&quot;, b);
-    println!(&quot;c after = {:?}&quot;, c);
+    println!(&#34;a after = {:?}&#34;, a);
+    println!(&#34;b after = {:?}&#34;, b);
+    println!(&#34;c after = {:?}&#34;, c);
 }
 </code></pre><h4 id="186-引用可引发内存溢出">18.6 引用可引发内存溢出</h4>
 <pre tabindex="0"><code>n main() {
@@ -1959,7 +1962,7 @@ fn main() {
     });
 
     println!(
-        &quot;leaf strong = {}, weak = {}&quot;,
+        &#34;leaf strong = {}, weak = {}&#34;,
         Rc::strong_count(&amp;leaf),
         Rc::weak_count(&amp;leaf),
     );
@@ -1974,21 +1977,21 @@ fn main() {
         *leaf.parent.borrow_mut() = Rc::downgrade(&amp;branch);
 
         println!(
-            &quot;branch strong = {}, weak = {}&quot;,
+            &#34;branch strong = {}, weak = {}&#34;,
             Rc::strong_count(&amp;branch),
             Rc::weak_count(&amp;branch),
         );
 
         println!(
-            &quot;leaf strong = {}, weak = {}&quot;,
+            &#34;leaf strong = {}, weak = {}&#34;,
             Rc::strong_count(&amp;leaf),
             Rc::weak_count(&amp;leaf),
         );
     }
 
-    println!(&quot;leaf parent = {:?}&quot;, leaf.parent.borrow().upgrade());
+    println!(&#34;leaf parent = {:?}&#34;, leaf.parent.borrow().upgrade());
     println!(
-        &quot;leaf strong = {}, weak = {}&quot;,
+        &#34;leaf strong = {}, weak = {}&#34;,
         Rc::strong_count(&amp;leaf),
         Rc::weak_count(&amp;leaf),
     );
@@ -2010,13 +2013,13 @@ use std::time::Duration;
 fn main() {
     thread::spawn(|| {
         for i in 1..10 {
-            println!(&quot;hi number {} from the spawned thread!&quot;, i);
+            println!(&#34;hi number {} from the spawned thread!&#34;, i);
             thread::sleep(Duration::from_millis(1));
         }
     });
 
     for i in 1..5 {
-        println!(&quot;hi number {} from the main thread!&quot;, i);
+        println!(&#34;hi number {} from the main thread!&#34;, i);
         thread::sleep(Duration::from_millis(1));
     }
 }
@@ -2029,13 +2032,13 @@ use std::time::Duration;
 fn main() {
     let handle = thread::spawn(|| {
         for i in 1..10 {
-            println!(&quot;hi number {} from the spawned thread!&quot;, i);
+            println!(&#34;hi number {} from the spawned thread!&#34;, i);
             thread::sleep(Duration::from_millis(1));
         }
     });
 
     for i in 1..5 {
-        println!(&quot;hi number {} from the main thread!&quot;, i);
+        println!(&#34;hi number {} from the main thread!&#34;, i);
         thread::sleep(Duration::from_millis(1));
     }
 
@@ -2048,7 +2051,7 @@ use std::time::Duration;
 fn main() {
     let handle = thread::spawn(|| {
         for i in 1..10 {
-            println!(&quot;hi number {} from the spawned thread!&quot;, i);
+            println!(&#34;hi number {} from the spawned thread!&#34;, i);
             thread::sleep(Duration::from_millis(1));
         }
     });
@@ -2056,7 +2059,7 @@ fn main() {
     handle.join().unwrap();
 
     for i in 1..5 {
-        println!(&quot;hi number {} from the main thread!&quot;, i);
+        println!(&#34;hi number {} from the main thread!&#34;, i);
         thread::sleep(Duration::from_millis(1));
     }
 }
@@ -2073,7 +2076,7 @@ fn main() {
     let v = vec![1, 2, 3];
 
     let handle = thread::spawn(move || {
-        println!(&quot;Here's a vector: {:?}&quot;, v);
+        println!(&#34;Here&#39;s a vector: {:?}&#34;, v);
     });
 
     handle.join().unwrap();
@@ -2086,12 +2089,12 @@ fn main() {
     let (tx, rx) = mpsc::channel();
 
     thread::spawn(move || {
-        let val = String::from(&quot;hi&quot;);
+        let val = String::from(&#34;hi&#34;);
         tx.send(val).unwrap();
     });
 
     let received = rx.recv().unwrap();
-    println!(&quot;Got: {}&quot;, received);
+    println!(&#34;Got: {}&#34;, received);
 }
 </code></pre><p>管道和所有权转移</p>
 <pre tabindex="0"><code>use std::sync::mpsc;
@@ -2103,10 +2106,10 @@ fn main() {
 
     thread::spawn(move || {
         let vals = vec![
-            String::from(&quot;hi&quot;),
-            String::from(&quot;from&quot;),
-            String::from(&quot;the&quot;),
-            String::from(&quot;thread&quot;),
+            String::from(&#34;hi&#34;),
+            String::from(&#34;from&#34;),
+            String::from(&#34;the&#34;),
+            String::from(&#34;thread&#34;),
         ];
 
         for val in vals {
@@ -2116,7 +2119,7 @@ fn main() {
     });
 
     for received in rx {
-        println!(&quot;Got: {}&quot;, received);
+        println!(&#34;Got: {}&#34;, received);
     }
 }
 </code></pre><h4 id="193-共享状态并发">19.3 共享状态并发</h4>
@@ -2141,7 +2144,7 @@ fn main() {
         handle.join().unwrap();
     }
 
-    println!(&quot;Result: {}&quot;, *counter.lock().unwrap());
+    println!(&#34;Result: {}&#34;, *counter.lock().unwrap());
 }
 </code></pre><h4 id="194-具有sync和send特征的可扩展并发">19.4 具有Sync和Send特征的可扩展并发</h4>
 <p>所述Send标记物性状表示实施类型的值的所有权 Send可以在线程之间转移。几乎所有的 Rust 类型都是Send，但也有一些例外，包括Rc<!-- raw HTML omitted -->：这不可能是Send因为如果你克隆了一个Rc<!-- raw HTML omitted -->值并试图将克隆的所有权转移到另一个线程，两个线程可能会同时更新引用计数。出于这个原因，Rc<!-- raw HTML omitted -->实现用于单线程情况，在这种情况下，您不想支付线程安全的性能损失。</p>
@@ -2231,7 +2234,6 @@ impl Draw for SelectBox {
         // code to actually draw a select box
     }
 }
-
 </code></pre><pre tabindex="0"><code>use gui::{Button, Screen};
 
 fn main() {
@@ -2241,15 +2243,15 @@ fn main() {
                 width: 75,
                 height: 10,
                 options: vec![
-                    String::from(&quot;Yes&quot;),
-                    String::from(&quot;Maybe&quot;),
-                    String::from(&quot;No&quot;),
+                    String::from(&#34;Yes&#34;),
+                    String::from(&#34;Maybe&#34;),
+                    String::from(&#34;No&#34;),
                 ],
             }),
             Box::new(Button {
                 width: 50,
                 height: 10,
-                label: String::from(&quot;OK&quot;),
+                label: String::from(&#34;OK&#34;),
             }),
         ],
     };
@@ -2307,20 +2309,20 @@ impl State for Draft {}
 <pre tabindex="0"><code>fn main() {
     let favorite_color: Option&lt;&amp;str&gt; = None;
     let is_tuesday = false;
-    let age: Result&lt;u8, _&gt; = &quot;34&quot;.parse();
+    let age: Result&lt;u8, _&gt; = &#34;34&#34;.parse();
 
     if let Some(color) = favorite_color {
-        println!(&quot;Using your favorite color, {}, as the background&quot;, color);
+        println!(&#34;Using your favorite color, {}, as the background&#34;, color);
     } else if is_tuesday {
-        println!(&quot;Tuesday is green day!&quot;);
+        println!(&#34;Tuesday is green day!&#34;);
     } else if let Ok(age) = age {
         if age &gt; 30 {
-            println!(&quot;Using purple as the background color&quot;);
+            println!(&#34;Using purple as the background color&#34;);
         } else {
-            println!(&quot;Using orange as the background color&quot;);
+            println!(&#34;Using orange as the background color&#34;);
         }
     } else {
-        println!(&quot;Using blue as the background color&quot;);
+        println!(&#34;Using blue as the background color&#34;);
     }
 }
 </code></pre><ul>
@@ -2337,7 +2339,7 @@ impl State for Draft {}
     stack.push(3);
 
     while let Some(top) = stack.pop() {
-        println!(&quot;{}&quot;, top);
+        println!(&#34;{}&#34;, top);
     }
 </code></pre><ul>
 <li>
@@ -2346,10 +2348,10 @@ impl State for Draft {}
 </ol>
 </li>
 </ul>
-<pre tabindex="0"><code>    let v = vec!['a', 'b', 'c'];
+<pre tabindex="0"><code>    let v = vec![&#39;a&#39;, &#39;b&#39;, &#39;c&#39;];
 
     for (index, value) in v.iter().enumerate() {
-        println!(&quot;{} is at index {}&quot;, value, index);
+        println!(&#34;{} is at index {}&#34;, value, index);
     }
 </code></pre><ul>
 <li>
@@ -2373,10 +2375,10 @@ impl State for Draft {}
 }
 </code></pre><h4 id="212-匹配和不匹配">21.2 匹配和不匹配</h4>
 <pre tabindex="0"><code>if let Some(x) = some_option_value {
-        println!(&quot;{}&quot;, x);
+        println!(&#34;{}&#34;, x);
     }
 </code></pre><pre tabindex="0"><code>if let x = 5 {
-        println!(&quot;{}&quot;, x);
+        println!(&#34;{}&#34;, x);
     };
 </code></pre><h4 id="203-模式语法">20.3 模式语法</h4>
 <ul>
@@ -2389,10 +2391,10 @@ impl State for Draft {}
 <pre tabindex="0"><code> let x = 1;
 
     match x {
-        1 =&gt; println!(&quot;one&quot;),
-        2 =&gt; println!(&quot;two&quot;),
-        3 =&gt; println!(&quot;three&quot;),
-        _ =&gt; println!(&quot;anything&quot;),
+        1 =&gt; println!(&#34;one&#34;),
+        2 =&gt; println!(&#34;two&#34;),
+        3 =&gt; println!(&#34;three&#34;),
+        _ =&gt; println!(&#34;anything&#34;),
     }
 </code></pre><ul>
 <li>
@@ -2405,12 +2407,12 @@ impl State for Draft {}
     let y = 10;
 
     match x {
-        Some(50) =&gt; println!(&quot;Got 50&quot;),
-        Some(y) =&gt; println!(&quot;Matched, y = {:?}&quot;, y),
-        _ =&gt; println!(&quot;Default case, x = {:?}&quot;, x),
+        Some(50) =&gt; println!(&#34;Got 50&#34;),
+        Some(y) =&gt; println!(&#34;Matched, y = {:?}&#34;, y),
+        _ =&gt; println!(&#34;Default case, x = {:?}&#34;, x),
     }
 
-    println!(&quot;at the end: x = {:?}, y = {:?}&quot;, x, y);
+    println!(&#34;at the end: x = {:?}, y = {:?}&#34;, x, y);
 </code></pre><ul>
 <li>
 <ol start="3">
@@ -2421,9 +2423,9 @@ impl State for Draft {}
 <pre tabindex="0"><code>let x = 1;
 
     match x {
-        1 | 2 =&gt; println!(&quot;one or two&quot;),
-        3 =&gt; println!(&quot;three&quot;),
-        _ =&gt; println!(&quot;anything&quot;),
+        1 | 2 =&gt; println!(&#34;one or two&#34;),
+        3 =&gt; println!(&#34;three&#34;),
+        _ =&gt; println!(&#34;anything&#34;),
     }
 </code></pre><ul>
 <li>
@@ -2436,16 +2438,16 @@ impl State for Draft {}
 <pre tabindex="0"><code>    let x = 5;
 
     match x {
-        1..=5 =&gt; println!(&quot;one through five&quot;),
-        _ =&gt; println!(&quot;something else&quot;),
+        1..=5 =&gt; println!(&#34;one through five&#34;),
+        _ =&gt; println!(&#34;something else&#34;),
     }
 </code></pre><p>字符：</p>
-<pre tabindex="0"><code>    let x = 'c';
+<pre tabindex="0"><code>    let x = &#39;c&#39;;
 
     match x {
-        'a'..='j' =&gt; println!(&quot;early ASCII letter&quot;),
-        'k'..='z' =&gt; println!(&quot;late ASCII letter&quot;),
-        _ =&gt; println!(&quot;something else&quot;),
+        &#39;a&#39;..=&#39;j&#39; =&gt; println!(&#34;early ASCII letter&#34;),
+        &#39;k&#39;..=&#39;z&#39; =&gt; println!(&#34;late ASCII letter&#34;),
+        _ =&gt; println!(&#34;something else&#34;),
     }
 </code></pre><ul>
 <li>
@@ -2470,9 +2472,9 @@ fn main() {
     let p = Point { x: 0, y: 7 };
 
     match p {
-        Point { x, y: 0 } =&gt; println!(&quot;On the x axis at {}&quot;, x),
-        Point { x: 0, y } =&gt; println!(&quot;On the y axis at {}&quot;, y),
-        Point { x, y } =&gt; println!(&quot;On neither axis: ({}, {})&quot;, x, y),
+        Point { x, y: 0 } =&gt; println!(&#34;On the x axis at {}&#34;, x),
+        Point { x: 0, y } =&gt; println!(&#34;On the y axis at {}&#34;, y),
+        Point { x, y } =&gt; println!(&#34;On neither axis: ({}, {})&#34;, x, y),
     }
 }
 </code></pre><p>解构枚举:</p>
@@ -2488,17 +2490,17 @@ fn main() {
 
     match msg {
         Message::Quit =&gt; {
-            println!(&quot;The Quit variant has no data to destructure.&quot;)
+            println!(&#34;The Quit variant has no data to destructure.&#34;)
         }
         Message::Move { x, y } =&gt; {
             println!(
-                &quot;Move in the x direction {} and in the y direction {}&quot;,
+                &#34;Move in the x direction {} and in the y direction {}&#34;,
                 x, y
             );
         }
-        Message::Write(text) =&gt; println!(&quot;Text message: {}&quot;, text),
+        Message::Write(text) =&gt; println!(&#34;Text message: {}&#34;, text),
         Message::ChangeColor(r, g, b) =&gt; println!(
-            &quot;Change the color to red {}, green {}, and blue {}&quot;,
+            &#34;Change the color to red {}, green {}, and blue {}&#34;,
             r, g, b
         ),
     }
@@ -2521,11 +2523,11 @@ fn main() {
 
     match msg {
         Message::ChangeColor(Color::Rgb(r, g, b)) =&gt; println!(
-            &quot;Change the color to red {}, green {}, and blue {}&quot;,
+            &#34;Change the color to red {}, green {}, and blue {}&#34;,
             r, g, b
         ),
         Message::ChangeColor(Color::Hsv(h, s, v)) =&gt; println!(
-            &quot;Change the color to hue {}, saturation {}, and value {}&quot;,
+            &#34;Change the color to hue {}, saturation {}, and value {}&#34;,
             h, s, v
         ),
         _ =&gt; (),
@@ -2542,7 +2544,7 @@ fn main() {
 </ul>
 <p>忽略整个值 _</p>
 <pre tabindex="0"><code>fn foo(_: i32, y: i32) {
-    println!(&quot;This code only uses the y parameter: {}&quot;, y);
+    println!(&#34;This code only uses the y parameter: {}&#34;, y);
 }
 
 fn main() {
@@ -2554,19 +2556,19 @@ fn main() {
 
     match (setting_value, new_setting_value) {
         (Some(_), Some(_)) =&gt; {
-            println!(&quot;Can't overwrite an existing customized value&quot;);
+            println!(&#34;Can&#39;t overwrite an existing customized value&#34;);
         }
         _ =&gt; {
             setting_value = new_setting_value;
         }
     }
 
-    println!(&quot;setting is {:?}&quot;, setting_value);
+    println!(&#34;setting is {:?}&#34;, setting_value);
 </code></pre><pre tabindex="0"><code>let numbers = (2, 4, 8, 16, 32);
 
     match numbers {
         (first, _, third, _, fifth) =&gt; {
-            println!(&quot;Some numbers: {}, {}, {}&quot;, first, third, fifth)
+            println!(&#34;Some numbers: {}, {}, {}&#34;, first, third, fifth)
         }
     }
 </code></pre><p>忽略一个未使用的变量，以它的名字开头 _</p>
@@ -2584,7 +2586,7 @@ fn main() {
     let origin = Point { x: 0, y: 0, z: 0 };
 
     match origin {
-        Point { x, .. } =&gt; println!(&quot;x is {}&quot;, x),
+        Point { x, .. } =&gt; println!(&#34;x is {}&#34;, x),
     }
 </code></pre><p>如何使用..元组</p>
 <pre tabindex="0"><code>fn main() {
@@ -2592,7 +2594,7 @@ fn main() {
 
     match numbers {
         (first, .., last) =&gt; {
-            println!(&quot;Some numbers: {}, {}&quot;, first, last);
+            println!(&#34;Some numbers: {}, {}&#34;, first, last);
         }
     }
 }
@@ -2602,7 +2604,7 @@ fn main() {
 
     match numbers {
         (.., second, ..) =&gt; {
-            println!(&quot;Some numbers: {}&quot;, second)
+            println!(&#34;Some numbers: {}&#34;, second)
         },
     }
 }
@@ -2610,8 +2612,8 @@ fn main() {
 <pre tabindex="0"><code>    let num = Some(4);
 
     match num {
-        Some(x) if x &lt; 5 =&gt; println!(&quot;less than five: {}&quot;, x),
-        Some(x) =&gt; println!(&quot;{}&quot;, x),
+        Some(x) if x &lt; 5 =&gt; println!(&#34;less than five: {}&#34;, x),
+        Some(x) =&gt; println!(&#34;{}&#34;, x),
         None =&gt; (),
     }
 </code></pre><p>@ 绑定</p>
@@ -2624,11 +2626,11 @@ fn main() {
     match msg {
         Message::Hello {
             id: id_variable @ 3..=7,
-        } =&gt; println!(&quot;Found an id in range: {}&quot;, id_variable),
+        } =&gt; println!(&#34;Found an id in range: {}&#34;, id_variable),
         Message::Hello { id: 10..=12 } =&gt; {
-            println!(&quot;Found an id in another range&quot;)
+            println!(&#34;Found an id in another range&#34;)
         }
-        Message::Hello { id } =&gt; println!(&quot;Found some other id: {}&quot;, id),
+        Message::Hello { id } =&gt; println!(&#34;Found some other id: {}&#34;, id),
     }
 </code></pre><h3 id="22-高级功能">22 高级功能</h3>
 <ul>
@@ -2655,13 +2657,13 @@ struct Wrapper(Vec&lt;String&gt;);
 
 impl fmt::Display for Wrapper {
     fn fmt(&amp;self, f: &amp;mut fmt::Formatter) -&gt; fmt::Result {
-        write!(f, &quot;[{}]&quot;, self.0.join(&quot;, &quot;))
+        write!(f, &#34;[{}]&#34;, self.0.join(&#34;, &#34;))
     }
 }
 
 fn main() {
-    let w = Wrapper(vec![String::from(&quot;hello&quot;), String::from(&quot;world&quot;)]);
-    println!(&quot;w = {}&quot;, w);
+    let w = Wrapper(vec![String::from(&#34;hello&#34;), String::from(&#34;world&#34;)]);
+    println!(&#34;w = {}&#34;, w);
 }
 </code></pre><h4 id="223-高级类型">22.3 高级类型</h4>
 <ul>
@@ -2676,7 +2678,7 @@ fn main() {
     let x: i32 = 5;
     let y: Kilometers = 5;
 
-    println!(&quot;x + y = {}&quot;, x + y);
+    println!(&#34;x + y = {}&#34;, x + y);
 </code></pre><ul>
 <li>
 <ol start="2">
@@ -2688,7 +2690,7 @@ fn main() {
     pub fn unwrap(self) -&gt; T {
         match self {
             Some(val) =&gt; val,
-            None =&gt; panic!(&quot;called `Option::unwrap()` on a `None` value&quot;),
+            None =&gt; panic!(&#34;called `Option::unwrap()` on a `None` value&#34;),
         }
     }
 }
@@ -2704,7 +2706,7 @@ fn do_twice(f: fn(i32) -&gt; i32, arg: i32) -&gt; i32 {
 fn main() {
     let answer = do_twice(add_one, 5);
 
-    println!(&quot;The answer is: {}&quot;, answer);
+    println!(&#34;The answer is: {}&#34;, answer);
 }
 </code></pre><pre tabindex="0"><code>fn returns_closure() -&gt; Box&lt;dyn Fn(i32) -&gt; i32&gt; {
     Box::new(|x| x + 1)
@@ -2745,12 +2747,12 @@ macro_rules! vec {
 <pre tabindex="0"><code>use std::net::TcpListener;
 
 fn main() {
-    let listener = TcpListener::bind(&quot;127.0.0.1:7878&quot;).unwrap();
+    let listener = TcpListener::bind(&#34;127.0.0.1:7878&#34;).unwrap();
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
 
-        println!(&quot;Connection established!&quot;);
+        println!(&#34;Connection established!&#34;);
     }
 }
 </code></pre><h4 id="232-将单线程转变为多线程">23.2 将单线程转变为多线程</h4>
@@ -2762,21 +2764,20 @@ use std::time::Duration;
 fn handle_connection(mut stream: TcpStream) {
     // --snip--
 
-    let get = b&quot;GET / HTTP/1.1\r\n&quot;;
-    let sleep = b&quot;GET /sleep HTTP/1.1\r\n&quot;;
+    let get = b&#34;GET / HTTP/1.1\r\n&#34;;
+    let sleep = b&#34;GET /sleep HTTP/1.1\r\n&#34;;
 
     let (status_line, filename) = if buffer.starts_with(get) {
-        (&quot;HTTP/1.1 200 OK&quot;, &quot;hello.html&quot;)
+        (&#34;HTTP/1.1 200 OK&#34;, &#34;hello.html&#34;)
     } else if buffer.starts_with(sleep) {
         thread::sleep(Duration::from_secs(5));
-        (&quot;HTTP/1.1 200 OK&quot;, &quot;hello.html&quot;)
+        (&#34;HTTP/1.1 200 OK&#34;, &#34;hello.html&#34;)
     } else {
-        (&quot;HTTP/1.1 404 NOT FOUND&quot;, &quot;404.html&quot;)
+        (&#34;HTTP/1.1 404 NOT FOUND&#34;, &#34;404.html&#34;)
     };
 
     // --snip--
 }
-
 </code></pre><p>创建线程池对象：</p>
 <pre tabindex="0"><code>use std::thread;
 
@@ -2827,7 +2828,7 @@ impl Worker {
 <pre tabindex="0"><code>impl Drop for ThreadPool {
     fn drop(&amp;mut self) {
         for worker in &amp;mut self.workers {
-            println!(&quot;Shutting down worker {}&quot;, worker.id);
+            println!(&#34;Shutting down worker {}&#34;, worker.id);
 
             if let Some(thread) = worker.thread.take() {
                 thread.join().unwrap();
@@ -2860,9 +2861,10 @@ if (!doNotTrack) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>
