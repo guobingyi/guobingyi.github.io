@@ -6,7 +6,41 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Jun 2022 21:33:34 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 14:20:30 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1day</title>
+      <link>https://guobingyi.github.io/100day/1day/</link>
+      <pubDate>Sat, 20 Aug 2022 14:20:30 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/100day/1day/</guid>
+      <description>第一天 开始了，就不要放弃！</description>
+    </item>
+    
+    <item>
+      <title>Become_an_iOS_developer_in_2022</title>
+      <link>https://guobingyi.github.io/blog/become_an_ios_developer_in_2022/</link>
+      <pubDate>Sat, 20 Aug 2022 11:18:06 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/become_an_ios_developer_in_2022/</guid>
+      <description>在2022年成为一个苹果开发人员 一切都不是空穴来风，我已经蓄谋已久。
+缘起 因为一切都是那么自然，我糊里糊涂的上了计算机的大学。为了曾经的梦想，我选择了做一名程序员。在这个行业里待了许久，曾经的梦想也被现实打败，我不得不为了生活，而做出选择。
+调整了一段时间，做出了一个选择，生了二胎，上天的恩赐，双胞胎。在疫情期间，我不断的问自己，我的梦想是什么？
+老婆经常问我，我到底想干什么？我不知道，直到最近，我想清楚了，我到底要干什么？
+想做一个自由职业者，那么最近的目标是什么？我想，是做一名苹果开发者。
+学习，生活，带来给我的是开发技能的不断提升，有了1万小时的学习，我知道，我对我目前所掌握的技能有信心。
+可是，原来是为了生活不得不把时间放在工作上，而工作上的技能却又让我知道，我得花时间来学习苹果开发。终于在最后的一份工作中，可以使用了苹果电脑。那个时候，是幸福的，因为离自己的梦想越来越近。
+后来，生活又让我不得不离开，我的生活中没有了电脑。那个时候，我也错误的觉得，我是幸福的。
+最后，我从梦中醒来，我知道我需要什么。
+开始 从拥有了苹果笔记本后，到现在7年的时间，断断续续的学习，都没有今天那么透彻的领悟。
+刚刚开始，被苹果的文档搞的非常崩溃，因为没有对比就没有伤害。和微软的文档对比起来，真的是，让我这么看呢？
+原来一直以为微软，Oracle，Google更新的非常快，现在看看苹果，我真是好天真。这货一年两次的速度，是恒定不变的呀。从我认识swift开始，到现在的swiftUI，我都经历了什么？
+开始使用的拖拉方式编程，到现在的定义编程，真的，越来越方便多了。
+一直在看白胡子老师的课程,到现在都没有听完🤦‍♂️。
+至今都没有写出个可以拿的出手的东西，android起码还写了个动物的叫声给宝贝玩一下。
+现在，有了自己的时间，并且swiftUI的到来，是时候学习起来了。
+读完如何在2021成为一个苹果开发者这篇文章让我信心大增，读完之后对作者非常崇拜，目前就跟随他学习，希望在100天之后，技能有所精进。我也会开一个栏目，专门来记录这100天的成果。</description>
+    </item>
+    
     <item>
       <title>少儿编程</title>
       <link>https://guobingyi.github.io/blog/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/</link>
@@ -154,7 +188,7 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
       <pubDate>Sat, 01 May 2021 09:56:21 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/mac/downloadtools/</guid>
-      <description>macOx下的下载工具 问君能有几多愁,恰似一江春水向东流。
+      <description>macOS下的下载工具 问君能有几多愁,恰似一江春水向东流。
 我也不知道最近我都干了什么，为什么会这样干？
 我喜欢看电影，特别喜欢下载电影观看，但是问题来了，迅雷的对版权问题的态度（应版权方要求,文件无法下载），我无法搞定，毕竟迅雷是我的首先下载工具，那么怎么办呢？运气好呢，找到了新的资源，没有被迅雷查询到；要不就是等，等到可以下载。
 我曾经在网上查询，如何替代迅雷，尝试了FDM，Aria2。FDM下载一般的速度真的不可直视，不断使用不断放弃，根本没有成功下载过一个资源，所以，再也不用了。Aria2自己编译后，尝试过下载，因为下载一直没有速度，果断放弃了，根本玩不转。
