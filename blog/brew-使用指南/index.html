@@ -58,11 +58,11 @@ brew cask uninstall name 0x06 总结常用命令 1. 安装源码 brew install wg
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-08-20%2014%3a22%3a38.972133%20%2b0800%20CST%20m%3d%2b3.442397672">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-08-20%2014%3a22%3a38.972133%20%2b0800%20CST%20m%3d%2b3.442397672">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-08-20%2014%3a22%3a38.972133%20%2b0800%20CST%20m%3d%2b3.442397672">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-09-22%2021%3a42%3a58.882956%20%2b0800%20CST%20m%3d%2b2.855975793">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-09-22%2021%3a42%3a58.882956%20%2b0800%20CST%20m%3d%2b2.855975793">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-09-22%2021%3a42%3a58.882956%20%2b0800%20CST%20m%3d%2b2.855975793">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-08-20%2014%3a22%3a38.972133%20%2b0800%20CST%20m%3d%2b3.442397672">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-09-22%2021%3a42%3a58.882956%20%2b0800%20CST%20m%3d%2b2.855975793">
     
 
 
@@ -278,7 +278,7 @@ brew cask uninstall name 0x06 总结常用命令 1. 安装源码 brew install wg
                     <div class="date" title='Thu Nov 8 2018 11:22:28 CST'>Nov 8, 2018</div>
                     
                     
-		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
                     
                 </div>
             </div>
@@ -362,6 +362,53 @@ brew cask uninstall name 0x06 总结常用命令 1. 安装源码 brew install wg
 <pre tabindex="0"><code>brew tap beeftornado/rmtree
 </code></pre><pre tabindex="0"><code>brew rmtree node
 brew cleanup
+</code></pre><h5 id="15-macos下离线安装dmgpkg">15. macOS下离线安装dmg/pkg</h5>
+<ul>
+<li>由于自身的下载速度太慢，所以使用下载的本地文件来安装。</li>
+</ul>
+<pre tabindex="0"><code>brew install calibre --cask
+</code></pre><ul>
+<li>brew文件所在的位置：</li>
+</ul>
+<pre tabindex="0"><code>/Users/xxx/Library/Caches/Homebrew/downloads/39b42d009ba0f4cc3cacb32d45116e580a0df9c312c85591eaebcedc40bc3fd8--calibre-6.5.0.dmg
+</code></pre><ul>
+<li>
+<p>下载好的calibre-6.5.0.dmg需要改名为39b42d009ba0f4cc3cacb32d45116e580a0df9c312c85591eaebcedc40bc3fd8&ndash;calibre-6.5.0.dmg</p>
+</li>
+<li>
+<p>先下载，brew会创建一个类似39b42d009ba0f4cc3cacb32d45116e580a0df9c312c85591eaebcedc40bc3fd8&ndash;前缀的文件，修改后就可以直接本地安装了。</p>
+</li>
+<li>
+<p>成功后会直接进行安装</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Already downloaded: /Users/guoby/Library/Caches/Homebrew/downloads/39b42d009ba0f4cc3cacb32d45116e580a0df9c312c85591eaebcedc40bc3fd8--calibre-6.5.0.dmg
+</code></pre><ul>
+<li>为什么要用brew安装？因为自己拉到应用里环境变量没有被配置。</li>
+</ul>
+<pre tabindex="0"><code>==&gt; Installing Cask calibre
+==&gt; Moving App &#39;calibre.app&#39; to &#39;/Applications/calibre.app&#39;
+==&gt; Linking Binary &#39;calibre&#39; to &#39;/usr/local/bin/calibre&#39;
+==&gt; Linking Binary &#39;calibre-complete&#39; to &#39;/usr/local/bin/calibre-complete&#39;
+==&gt; Linking Binary &#39;calibre-customize&#39; to &#39;/usr/local/bin/calibre-customize&#39;
+==&gt; Linking Binary &#39;calibre-debug&#39; to &#39;/usr/local/bin/calibre-debug&#39;
+==&gt; Linking Binary &#39;calibre-parallel&#39; to &#39;/usr/local/bin/calibre-parallel&#39;
+==&gt; Linking Binary &#39;calibre-server&#39; to &#39;/usr/local/bin/calibre-server&#39;
+==&gt; Linking Binary &#39;calibre-smtp&#39; to &#39;/usr/local/bin/calibre-smtp&#39;
+==&gt; Linking Binary &#39;calibredb&#39; to &#39;/usr/local/bin/calibredb&#39;
+==&gt; Linking Binary &#39;ebook-convert&#39; to &#39;/usr/local/bin/ebook-convert&#39;
+==&gt; Linking Binary &#39;ebook-device&#39; to &#39;/usr/local/bin/ebook-device&#39;
+==&gt; Linking Binary &#39;ebook-meta&#39; to &#39;/usr/local/bin/ebook-meta&#39;
+==&gt; Linking Binary &#39;ebook-polish&#39; to &#39;/usr/local/bin/ebook-polish&#39;
+==&gt; Linking Binary &#39;ebook-viewer&#39; to &#39;/usr/local/bin/ebook-viewer&#39;
+==&gt; Linking Binary &#39;fetch-ebook-metadata&#39; to &#39;/usr/local/bin/fetch-ebook-metadata&#39;
+==&gt; Linking Binary &#39;lrf2lrs&#39; to &#39;/usr/local/bin/lrf2lrs&#39;
+==&gt; Linking Binary &#39;lrfviewer&#39; to &#39;/usr/local/bin/lrfviewer&#39;
+==&gt; Linking Binary &#39;lrs2lrf&#39; to &#39;/usr/local/bin/lrs2lrf&#39;
+==&gt; Linking Binary &#39;markdown-calibre&#39; to &#39;/usr/local/bin/markdown-calibre&#39;
+==&gt; Linking Binary &#39;web2disk&#39; to &#39;/usr/local/bin/web2disk&#39;
+==&gt; Linking Binary &#39;ebook-edit&#39; to &#39;/usr/local/bin/ebook-edit&#39;
+🍺  calibre was successfully installed!
 </code></pre>
                 <br>
                 

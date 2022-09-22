@@ -13,7 +13,11 @@
       <pubDate>Sat, 20 Aug 2022 14:20:30 +0800</pubDate>
       
       <guid>https://guobingyi.github.io/100day/1day/</guid>
-      <description>第一天 开始了，就不要放弃！</description>
+      <description>第一天 “Programming is an art. Don&amp;rsquo;t spend all your time sharpening your pencil when you should be drawing.” PAUL HUDSON
+开始的速度还不错，或许是因为学过编程的缘故，也或许原来就一直想学习，有过铺垫。一般按照实际一天5节的速度，所以先把基础部分学完，在此做一个标记，将前14天的内容补充如下：
+Day 1 to Day 14 code here Day15 从这天开始，已实际的项目介绍SwiftUI。
+SwiftUI控件不能超过10个，超过后用Group来避免这个限制。 Day16 不知道什么情况，从刚刚开始学习后，发现需要补充一些知识，而这些知识都源自于苹果的官网文档。
+The Objective-C Programming Language 语言参考 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html#//apple_ref/doc/uid/TP30001163 Cocoa Fundamentals Guide https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html#//apple_ref/doc/uid/TP40002974 Apple 设计资源 https://developer.apple.com/cn/design/resources/ Mac App Programming Guide 苹果MacOS app 编程参考 https://developer.apple.com/library/archive/documentation/General/Conceptual/MOSXAppProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010543-CH1-SW1 Window Programming Guide https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1 Day 23 Day 32 2022-09-01 </description>
     </item>
     
     <item>
