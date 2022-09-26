@@ -500,7 +500,7 @@ It is time say goodbye!
 0x02 我的断舍离 虽然自己也认为，多学点技术没有什么坏处，所谓技多不压身。但是这个知识爆炸的时代，关注的过多，也会让自己迷失。所以，在断舍离的时候，想到的是，在自己横行发展差不多的时候，来一次纵向的发展，把关注点聚焦一下。
 当然，还有的原因就是自己的手机已经是iPhone了，没有模拟器。
 我相信自己，如果能用xcode编写出app后，用android studio也同样能编写出来，前提是这个点子得好，为过多人服务。
-0x03 删除 1.卸载Android Studio rm -Rf /Applications/Android\ Studio.app rm -Rf ~/Library/Preferences/AndroidStudio* rm ~/Library/Preferences/com.google.android.studio.plist rm -Rf ~/Library/Application\ Support/AndroidStudio* rm -Rf ~/Library/Logs/AndroidStudio* rm -Rf ~/Library/Caches/AndroidStudio* 2. 删除Projects rm -Rf ~/AndroidStudioProjects 3. 删除gradle rm -Rf ~/.gradle 4. 卸载Android Virtual Devices(AVDs) and *.keystore rm -Rf ~/.android 5. 删除Android SDK Tools rm -Rf ~/Library/Android* </description>
+0x03 删除 1.卸载Android Studio rm -Rf /Applications/Android\ Studio.app rm -Rf ~/Library/Preferences/AndroidStudio* rm ~/Library/Preferences/com.google.android.studio.plist rm -Rf ~/Library/Application\ Support/AndroidStudio* rm -Rf ~/Library/Logs/AndroidStudio* rm -Rf ~/Library/Caches/AndroidStudio* 2. 删除Projects rm -Rf ~/AndroidStudioProjects 3. 删除gradle rm -Rf ~/.gradle 4. 卸载Android Virtual Devices(AVDs) and *.keystore rm -Rf ~/.android 5. 删除Android SDK Tools rm -Rf ~/Library/Android* ps.</description>
     </item>
     
     <item>
