@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="再次遇到你 Delphi 第一份工作，最喜欢的IDE
+最近在回忆些事情，同时也在学习python语言，但是就在这个时候，我在寻找一个省电的文本编辑器的时候，无意间发现了Delphi的替代工具lazarus。lazarus,源自《圣经》中耶稣让已死去的拉撒路复活的故事。lazarus官网有非常详细的资料，对于我来说，真的是太高兴了。
+原本，一直都期望在换了苹果笔记本后，可以继续写一写原来的代码，可以不为了工作而去写一写代码。现在，这些愿望都快要实现了，感谢大牛们的持续努力。微软的dotnet跨平台后，C#语言在macOS下也可以编译执行，现在连Delphi也可以玩一玩了，真开心，像极了黑暗破坏神的重制版。当然了，pascal语言一直都在，只不过我没有关注了。现在，可以在macOS下写一写pascal语言，而且和当初使用Delphi的感觉是那么相似。
+曾经在怀念的时候，去过Delphi的官网看过，但是由于需要授权，被成功劝退了。现在突然有这样的一个工具，我非常欣喜，可以在macOS下写和Delphi一样的语言，倍感亲切。第一时间下载下来，满怀期待。
+在下载中发现sourceforge.net下载很慢，我第一时间想到迅雷，可是最近的迅雷都要会员才能加速。无奈之下问了问百度，有网友说在下载的时候重新选择一下镜像，结果速度飞快。非常不喜欢被迅雷玩弄的感觉，但是却不能自己写一个？我想或许可以考虑一下了。
+下载有三个文件：
+fpc-3.2.2.intelarm64-macosx.dmg fpc-src-3.2.2-20210709-macosx.dmg Lazarus-2.2.4-0-x86_64-macosx.pkg 安装顺序和上面的顺序一致，即可。也可以参阅官网文档。
+因为使用gdb进行调试，而苹果电脑却不给普通用户使用，可以加sudo来操作，可是lazarus没有地方调试，所以呢去问百度，最后找到了gdb签名的办法，可是我这里行不通，在最后关头，想到了官网查询文档，结果还真有。官网的做法是使用lldb替代gdb。详细说明在这里。
+最终如愿以偿，在macOS上运行了lazarus。当然了，现在还有其他的工作要做，先把python学习一下，我这个跳来跳去的也不是个办法，先一个一个解决吧！在看到lazarus之前，我居然把多年前用到的netbean下载下来，看到可以拖拉的Swing控件，我笑了，原来Java也可以这样操作～～。">
+
+<meta property="og:title" content="See you again Delphi" />
+<meta property="og:description" content="再次遇到你 Delphi 第一份工作，最喜欢的IDE
+最近在回忆些事情，同时也在学习python语言，但是就在这个时候，我在寻找一个省电的文本编辑器的时候，无意间发现了Delphi的替代工具lazarus。lazarus,源自《圣经》中耶稣让已死去的拉撒路复活的故事。lazarus官网有非常详细的资料，对于我来说，真的是太高兴了。
+原本，一直都期望在换了苹果笔记本后，可以继续写一写原来的代码，可以不为了工作而去写一写代码。现在，这些愿望都快要实现了，感谢大牛们的持续努力。微软的dotnet跨平台后，C#语言在macOS下也可以编译执行，现在连Delphi也可以玩一玩了，真开心，像极了黑暗破坏神的重制版。当然了，pascal语言一直都在，只不过我没有关注了。现在，可以在macOS下写一写pascal语言，而且和当初使用Delphi的感觉是那么相似。
+曾经在怀念的时候，去过Delphi的官网看过，但是由于需要授权，被成功劝退了。现在突然有这样的一个工具，我非常欣喜，可以在macOS下写和Delphi一样的语言，倍感亲切。第一时间下载下来，满怀期待。
+在下载中发现sourceforge.net下载很慢，我第一时间想到迅雷，可是最近的迅雷都要会员才能加速。无奈之下问了问百度，有网友说在下载的时候重新选择一下镜像，结果速度飞快。非常不喜欢被迅雷玩弄的感觉，但是却不能自己写一个？我想或许可以考虑一下了。
+下载有三个文件：
+fpc-3.2.2.intelarm64-macosx.dmg fpc-src-3.2.2-20210709-macosx.dmg Lazarus-2.2.4-0-x86_64-macosx.pkg 安装顺序和上面的顺序一致，即可。也可以参阅官网文档。
+因为使用gdb进行调试，而苹果电脑却不给普通用户使用，可以加sudo来操作，可是lazarus没有地方调试，所以呢去问百度，最后找到了gdb签名的办法，可是我这里行不通，在最后关头，想到了官网查询文档，结果还真有。官网的做法是使用lldb替代gdb。详细说明在这里。
+最终如愿以偿，在macOS上运行了lazarus。当然了，现在还有其他的工作要做，先把python学习一下，我这个跳来跳去的也不是个办法，先一个一个解决吧！在看到lazarus之前，我居然把多年前用到的netbean下载下来，看到可以拖拉的Swing控件，我笑了，原来Java也可以这样操作～～。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/see-you-again-delphi/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-11-09T10:38:42+08:00" />
+<meta property="article:modified_time" content="2022-11-09T10:38:42+08:00" />
+
+
+
+<title>
+
+
+     See you again Delphi 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/blog/see-you-again-delphi/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-11-09%2022%3a08%3a30.317688%20%2b0800%20CST%20m%3d%2b4.210651649">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-11-09%2022%3a08%3a30.317688%20%2b0800%20CST%20m%3d%2b4.210651649">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-11-09%2022%3a08%3a30.317688%20%2b0800%20CST%20m%3d%2b4.210651649">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-11-09%2022%3a08%3a30.317688%20%2b0800%20CST%20m%3d%2b4.210651649">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    See you again Delphi
+
+</div>
+
+                    <div class="initials"><a href="https://guobingyi.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Wed Nov 9 2022 10:38:42 CST'>Nov 9, 2022</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <h1 id="再次遇到你-delphi">再次遇到你 Delphi</h1>
+<blockquote>
+<p>第一份工作，最喜欢的IDE</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>最近在回忆些事情，同时也在学习python语言，但是就在这个时候，我在寻找一个省电的文本编辑器的时候，无意间发现了Delphi的替代工具lazarus。lazarus,源自《圣经》中耶稣让已死去的拉撒路复活的故事。<a href="https://www.lazarus-ide.org/">lazarus官网</a>有非常详细的资料，对于我来说，真的是太高兴了。</p>
+<p>原本，一直都期望在换了苹果笔记本后，可以继续写一写原来的代码，可以不为了工作而去写一写代码。现在，这些愿望都快要实现了，感谢大牛们的持续努力。微软的dotnet跨平台后，C#语言在macOS下也可以编译执行，现在连Delphi也可以玩一玩了，真开心，像极了黑暗破坏神的重制版。当然了，pascal语言一直都在，只不过我没有关注了。现在，可以在macOS下写一写pascal语言，而且和当初使用Delphi的感觉是那么相似。</p>
+<p>曾经在怀念的时候，去过Delphi的官网看过，但是由于需要授权，被成功劝退了。现在突然有这样的一个工具，我非常欣喜，可以在macOS下写和Delphi一样的语言，倍感亲切。第一时间下载下来，满怀期待。</p>
+<p>在下载中发现sourceforge.net下载很慢，我第一时间想到迅雷，可是最近的迅雷都要会员才能加速。无奈之下问了问百度，有网友说在下载的时候重新选择一下镜像，结果速度飞快。非常不喜欢被迅雷玩弄的感觉，但是却不能自己写一个？我想或许可以考虑一下了。</p>
+<p>下载有三个文件：</p>
+<pre tabindex="0"><code>fpc-3.2.2.intelarm64-macosx.dmg
+fpc-src-3.2.2-20210709-macosx.dmg
+Lazarus-2.2.4-0-x86_64-macosx.pkg
+</code></pre><p>安装顺序和上面的顺序一致，即可。也可以参阅<a href="https://wiki.freepascal.org/Installing_Lazarus/zh_CN#.E5.9C.A8Mac_OS_X.E4.B8.8B.E5.AE.89.E8.A3.85_Lazarus">官网文档</a>。</p>
+<p>因为使用gdb进行调试，而苹果电脑却不给普通用户使用，可以加sudo来操作，可是lazarus没有地方调试，所以呢去问百度，最后找到了gdb签名的办法，可是我这里行不通，在最后关头，想到了官网查询文档，结果还真有。官网的做法是使用lldb替代gdb。详细说明在<a href="https://wiki.freepascal.org/GDB_Debugger_Tips#macOS">这里</a>。</p>
+<p>最终如愿以偿，在macOS上运行了lazarus。当然了，现在还有其他的工作要做，先把python学习一下，我这个跳来跳去的也不是个办法，先一个一个解决吧！在看到lazarus之前，我居然把多年前用到的netbean下载下来，看到可以拖拉的Swing控件，我笑了，原来Java也可以这样操作～～。</p>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

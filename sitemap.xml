@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://guobingyi.github.io/blog/</loc>
+    <lastmod>2022-11-09T10:38:42+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/</loc>
+    <lastmod>2022-11-09T10:38:42+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/blog/see-you-again-delphi/</loc>
+    <lastmod>2022-11-09T10:38:42+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/blog/quitsomking/</loc>
+    <lastmod>2022-10-08T21:56:37+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/code/autotest/</loc>
+    <lastmod>2022-10-03T15:12:08+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/code/</loc>
+    <lastmod>2022-10-03T15:12:08+08:00</lastmod>
+  </url><url>
     <loc>https://guobingyi.github.io/100day/</loc>
     <lastmod>2022-08-20T14:20:30+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/100day/1day/</loc>
     <lastmod>2022-08-20T14:20:30+08:00</lastmod>
   </url><url>
-    <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2022-08-20T14:20:30+08:00</lastmod>
-  </url><url>
     <loc>https://guobingyi.github.io/blog/become_an_ios_developer_in_2022/</loc>
-    <lastmod>2022-08-20T11:18:06+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/blog/</loc>
     <lastmod>2022-08-20T11:18:06+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/</loc>
@@ -24,9 +36,6 @@
     <lastmod>2022-06-21T17:45:08+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/code/arduino/</loc>
-    <lastmod>2021-10-27T16:39:15+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/code/</loc>
     <lastmod>2021-10-27T16:39:15+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/otheridea/</loc>

@@ -6,7 +6,36 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Aug 2022 11:18:06 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 10:38:42 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>See you again Delphi</title>
+      <link>https://guobingyi.github.io/blog/see-you-again-delphi/</link>
+      <pubDate>Wed, 09 Nov 2022 10:38:42 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/see-you-again-delphi/</guid>
+      <description>再次遇到你 Delphi 第一份工作，最喜欢的IDE
+最近在回忆些事情，同时也在学习python语言，但是就在这个时候，我在寻找一个省电的文本编辑器的时候，无意间发现了Delphi的替代工具lazarus。lazarus,源自《圣经》中耶稣让已死去的拉撒路复活的故事。lazarus官网有非常详细的资料，对于我来说，真的是太高兴了。
+原本，一直都期望在换了苹果笔记本后，可以继续写一写原来的代码，可以不为了工作而去写一写代码。现在，这些愿望都快要实现了，感谢大牛们的持续努力。微软的dotnet跨平台后，C#语言在macOS下也可以编译执行，现在连Delphi也可以玩一玩了，真开心，像极了黑暗破坏神的重制版。当然了，pascal语言一直都在，只不过我没有关注了。现在，可以在macOS下写一写pascal语言，而且和当初使用Delphi的感觉是那么相似。
+曾经在怀念的时候，去过Delphi的官网看过，但是由于需要授权，被成功劝退了。现在突然有这样的一个工具，我非常欣喜，可以在macOS下写和Delphi一样的语言，倍感亲切。第一时间下载下来，满怀期待。
+在下载中发现sourceforge.net下载很慢，我第一时间想到迅雷，可是最近的迅雷都要会员才能加速。无奈之下问了问百度，有网友说在下载的时候重新选择一下镜像，结果速度飞快。非常不喜欢被迅雷玩弄的感觉，但是却不能自己写一个？我想或许可以考虑一下了。
+下载有三个文件：
+fpc-3.2.2.intelarm64-macosx.dmg fpc-src-3.2.2-20210709-macosx.dmg Lazarus-2.2.4-0-x86_64-macosx.pkg 安装顺序和上面的顺序一致，即可。也可以参阅官网文档。
+因为使用gdb进行调试，而苹果电脑却不给普通用户使用，可以加sudo来操作，可是lazarus没有地方调试，所以呢去问百度，最后找到了gdb签名的办法，可是我这里行不通，在最后关头，想到了官网查询文档，结果还真有。官网的做法是使用lldb替代gdb。详细说明在这里。
+最终如愿以偿，在macOS上运行了lazarus。当然了，现在还有其他的工作要做，先把python学习一下，我这个跳来跳去的也不是个办法，先一个一个解决吧！在看到lazarus之前，我居然把多年前用到的netbean下载下来，看到可以拖拉的Swing控件，我笑了，原来Java也可以这样操作～～。</description>
+    </item>
+    
+    <item>
+      <title>Quitsomking</title>
+      <link>https://guobingyi.github.io/blog/quitsomking/</link>
+      <pubDate>Sat, 08 Oct 2022 21:56:37 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/quitsomking/</guid>
+      <description>戒烟 海象说：“是时候改变了！”
+不知道自己戒烟了多少次，每次都有理由重新吸起来。难道烟就真的那么有吸引力吗？我想不是。而是自己为吸而找的理由，最多的理由是她陪伴自己的时间比较多，也是自己的时间。那么，现在是什么理由让我戒掉呢？我想，是身体告诉我的。最近的一次身体不适是肾结石中的石头自己掉下来，在疼痛的那个晚上，我想到了人在生病的时候是没有尊严的。毕竟，疼的时候只有自己知道，也只有自己知道舒服的时候是什么样的状态，那个时候不想抽烟，即使抽了，身体也诚实的告诉你，她并不能为你改变什么，甚至让你更加难受～～。
+慢慢的，我开始去感受身体给我信号，我才发现身体已经不像以前那样，逐渐的开始走下坡路。抽烟对于我来说是一种习惯，当开心的时候来一只，当难过的时候来一只。每次抽烟的时候好像都有一种解脱的感觉，每次都被赋予了不一样的使命。逐渐的，抽烟并不是为了摄取尼古丁，而是变成了神圣的使命一样。
+我开始讨厌这种感觉，但是又离不开这种感觉。因为，生活上的改变让自己一下子无法适应，也让自己无法安心。</description>
+    </item>
+    
     <item>
       <title>Become_an_iOS_developer_in_2022</title>
       <link>https://guobingyi.github.io/blog/become_an_ios_developer_in_2022/</link>
