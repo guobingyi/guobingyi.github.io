@@ -6,7 +6,27 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Oct 2022 15:12:08 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 21:13:48 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ada</title>
+      <link>https://guobingyi.github.io/code/ada/</link>
+      <pubDate>Thu, 17 Nov 2022 21:13:48 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/ada/</guid>
+      <description>Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
+要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C++的。要想彻底的搞清楚，最终还是逃脱不了C和C++，宿命吧～～
+话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。
+或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。
+我选择的是AdaCore，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择下载。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。
+默认安装路径为：
+/opt/GNAT/2020 安装之后需要手工加入路径：
+export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：
+with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &amp;#34;Hello, World!&amp;#34; to the screen Put_Line (&amp;#34;Hello, World!&amp;#34;); Put_Line (&amp;#34;你好，世界!*2&amp;#34;); Put_Line(&amp;#34;ok?&amp;#34;) end Greet; 编译：
+gnatmake greet.adb 运行：
+./greet.adb 查看标准库，有一个文件的写入代码：
+with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &amp;#34;simple.txt&amp;#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &amp;#34;Hello World #1&amp;#34;); Put_Line (F, &amp;#34;Hello World #2&amp;#34;); Put_Line (F, &amp;#34;Hello World #3&amp;#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：</description>
+    </item>
+    
     <item>
       <title>Autotest</title>
       <link>https://guobingyi.github.io/code/autotest/</link>

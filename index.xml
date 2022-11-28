@@ -6,7 +6,67 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Nov 2022 10:38:42 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Nov 2022 14:39:47 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Helix</title>
+      <link>https://guobingyi.github.io/blog/helix/</link>
+      <pubDate>Mon, 28 Nov 2022 14:39:47 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/helix/</guid>
+      <description>Helix 任何的IDE都不如自己用起来舒服重要。
+认识Helix是在找一款vala语言好用的IDE，找到了GNOME Builder，发现macOS不能使用，但是在工具发现一款叫Helid的IDE，没有见过，所以好奇点开了。官网地址是：https://helix-editor.com。居然是Rust写的，在github有16.6k,所以直接下载编译。
+git clone https://github.com/helix-editor/helix cd helix cargo install --path helix-term 编译过程中还是出现了很多问题，但是最终编译通过了。这个是值得庆幸的，因为很多都编译不过去，直接被我pass了。
+因为，磁盘空间问题😓，所以在拷贝的时候用了短拷贝。
+ln -s $PWD/runtime ~/.config/helix/runtime 不要偷懒把$PWD去掉，因为ln使用的是全路径，去掉后找不到。
+这样结果编译，安装，配置后，hx可以使用了。
+当然了，作为苹果用户可以直接用brew进行安装，但是如果你不喜欢用Rust那么,brew作为编译项也会把Rust给你安装了。
+brew install helix 官网支持的语言很多，但是目前想用来写一写vala，发现还是没有代码提示，这样就尴尬了。不过，go语言的代码提示就很好，终不能像vscode一样包罗万象。但是，最近使用vscode发现，在输入中文的时候老会给我加几个字母或者输入有问题，卡顿吗？还是其他的缘故，暂时不知道。这样就让我更加激发了要自己定义自己的IDE了，emacs将会是最好的选择。为了保障打字的时候不卡顿，或者说卡顿就直接用emacs代替好了。
+就是写个markdown的文档，都会出现vs code使用了大量能耗。
+vs code你到底做了什么？让我那么卡？
+跑题了，Helix总的来说，还是让人眼前一亮的，毕竟在控制端使用，蛮方便的，hx 文件名就可以直接使用了，而且语法高亮，类vim的快捷键。但是，或许还年轻有许多可以加强的地方。在此买个坑，以后在有机会学习一下吧。
+话说，那么多的IDE，习惯了一种模式就继续下去，因为都可以有很多的替代方案，就目前要解决的问题最重要，不要为了IDE而写代码，也不要为了代码而找IDE，解决问题的关键时刻不要忘记，不然会迷失在无数的IDE和无数的语言中。最终，什么都会个Hello,World!</description>
+    </item>
+    
+    <item>
+      <title>Restart</title>
+      <link>https://guobingyi.github.io/emacs/restart/</link>
+      <pubDate>Thu, 24 Nov 2022 23:13:50 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/emacs/restart/</guid>
+      <description>重新开始Emacs之旅 变化真的很快
+0x00 为什么还是要选择Emacs 原本以为会放弃这个IDE，因为真的不好学呀。不好学的原因在于用惯了vscode的模式，简单方便，各种插件容易安装，最最重要的是各种问题不会那么难解决，而且有非常多的资源。可，emacs却真的不一样，一个准备的开始都那么复杂。melpa.org的资源无法访问到，导致下载的Spacemacs下载插件卡死，这种感觉就想换电脑，不要受电池不足的这个鸟气，可是，电脑其他都很好，而且没有钱😊。所以耐住性子，继续折腾，毕竟自己也喜欢折腾嘛~~。开始查阅资料，为什么会卡？结论就是melpa.org在国内访问有问题，那如何解决呢？
+使用代理服务器。 emacs自己设置代理。 我选择了第二种，在init.el中加入代理配置：
+(setq url-proxy-services &amp;#39;((&amp;#34;no_proxy&amp;#34; . &amp;#34;^\\(localhost\\|10.*\\)&amp;#34;) (&amp;#34;http&amp;#34; . &amp;#34;192.168.1.6:2020&amp;#34;) (&amp;#34;https&amp;#34; . &amp;#34;192.168.1.6:2020&amp;#34;))) 这样把emacs又重新复活了。看到熟悉的界面，和哪些C-c C-f的组合键。幸好，Spacemacs的默认不是vim mode。因为我还是不习惯vim，有时间在看看吧。先把emacs弄清楚，虽然原来清楚了，现在又不清楚了。但是，没有关系，重新学又会有新的认识。
+对了，居然没有回答为什么又重新选择emacs这个IDE，是因为我的电脑最近都是移动使用，电池消化很快，如果用vscode和pycharm的话，基本上就是一个多小时就30%了，这样基本上啥也做不了什么，所以想用使用省电的IDE来使用，这样就可以多做点啥～～。
+通过使用sublime text整个体验都非常好，而且可以使用好久的时间，但是，软件是收费的，而且目前我还没有意向去购买这个软件，所以选择一个免费的软件来使用，并且可以满足自己的折腾欲。贱啊～～。
+在说一下sublime的使用情况，不知道是不是我的问题，在使用的期间，没有完成付费会弹出用户注册的提示，这个完全可以接受，毕竟作者需要吃饭，但是很多功能用不了，这个就尴尬了。比如我在使用python插件的时候，不能进行代码提示，不能进行代码跳转，这个时候sublime的功能就是一个简单的文本编辑器，和TextMate一样，这个没有发挥功效。在网上找了一个注册码后，所有功能正常了，我就无语了。为了，支持作者，所以我选择了不用破解的版本，选择了emacs来代替。
+使用vscode完全毫无压力就完成了大部分功能，插件非常好用，终端调用也非常方便，有许多的主题可以使用，或许就是因为太简单，导致自己又会想折腾其他的IDE去了。没有毛病，就是费电，用不了多久，但是对初学者非常友好，第一推荐，五星🌟🌟🌟🌟🌟。
+使用PyCharm的社区版也同样好用，各种功能齐全，还使用了最受欢迎的IDE的主要功能。Markdown的插件非常好用，在写代码的时候，写一下记录的问题，非常好用。缺点就是社区版，功能有限，但是对于熟悉的开发人员来说，不是问题。不出钱就可以使用IDEA的产品，非常棒！但是非常耗内存，同样就耗电很高。第二推荐，四星🌟🌟🌟🌟。
+使用Sublime text的免费版，不推荐，没有代码提示。注册版非常棒！小巧，插件好用，各种提示和vscode有得一拼，但是出现问题也需要找好久的解决方案。处理好后，各种好用。不耗电，不占内存，缺点是收费，不差钱没有毛病。第三推荐，四星🌟🌟🌟🌟。
+使用emacs就不一样了，需要有一定的编程基础，会经常放弃。但是，熟悉之后会发现不一样的天空。上面推荐的IDE的问题都没有，而且还会学会一门新语言lisp。就看你能不能坚持下来，使用Spacemas配置后，整个IDE像变了一样，在正常访问melpa后，可以使用各种好用的mode。内置org-mode，让IDE的功能强大了许多，项目管理，时间管理，非常方便。如果想一辈子都不那么无聊，选择emacs是对的。初学者不推荐，老鸟非常推荐去试一试。推荐零星。Emacs是神之编译器？所以要耐着性子去用，不要逃避，遇到问题就打开顺手的IDE，害怕出现问题？还是去用，卖油翁，唯独，熟也。
+2022-11-27 使用感受 emacs那么多的组合键，在使用中文的时候，忘记了切换会是那么尴尬～～ emacs创建文件就是 C x C f然后输入文件就创建了，和查找目录下的文件查看是一样的。 buffer 暂时可以理解为窗口 C c b 显示目前打开的buffer. C n 下一行 C p 上一行 C a 当前行一个字符 C e 当前行最后一个字符 C x C f 查找文件查看或者创建(输入创建的文件名) C x 0 关闭当前buffer C x 1 保留当前的buffer，关闭其他buffer C x 2 创建一个水平的窗口 C x 3 创建一个垂直的窗口 Alt x 调用系统命令 C g 关闭调用命令窗口 C v 向下翻页 Alt v 向上翻页 调用命令shell最好用multi-term，不要用term，为啥？因为快速选择窗口Alt + 数字键不可以用~~ Alt m f t调用出文件导航窗口 在此使用退出 也可以使用Alt + x 调用treemacs。 大胆的去使用，不要受到挫折就去打开其他的IDE，对比或者找错还是可以使用一下的。 **为了关注自己目前使用的情况，暂时使用Spacemacs的默认配置，所有记录的内容都基于Specemacs来进行的。** 0x01 Markdown的使用 官网</description>
+    </item>
+    
+    <item>
+      <title>Ada</title>
+      <link>https://guobingyi.github.io/code/ada/</link>
+      <pubDate>Thu, 17 Nov 2022 21:13:48 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/ada/</guid>
+      <description>Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
+要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C++的。要想彻底的搞清楚，最终还是逃脱不了C和C++，宿命吧～～
+话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。
+或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。
+我选择的是AdaCore，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择下载。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。
+默认安装路径为：
+/opt/GNAT/2020 安装之后需要手工加入路径：
+export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：
+with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &amp;#34;Hello, World!&amp;#34; to the screen Put_Line (&amp;#34;Hello, World!&amp;#34;); Put_Line (&amp;#34;你好，世界!*2&amp;#34;); Put_Line(&amp;#34;ok?&amp;#34;) end Greet; 编译：
+gnatmake greet.adb 运行：
+./greet.adb 查看标准库，有一个文件的写入代码：
+with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &amp;#34;simple.txt&amp;#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &amp;#34;Hello World #1&amp;#34;); Put_Line (F, &amp;#34;Hello World #2&amp;#34;); Put_Line (F, &amp;#34;Hello World #3&amp;#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：</description>
+    </item>
+    
     <item>
       <title>See you again Delphi</title>
       <link>https://guobingyi.github.io/blog/see-you-again-delphi/</link>

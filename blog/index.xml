@@ -6,7 +6,27 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Nov 2022 10:38:42 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Nov 2022 14:39:47 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Helix</title>
+      <link>https://guobingyi.github.io/blog/helix/</link>
+      <pubDate>Mon, 28 Nov 2022 14:39:47 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/helix/</guid>
+      <description>Helix 任何的IDE都不如自己用起来舒服重要。
+认识Helix是在找一款vala语言好用的IDE，找到了GNOME Builder，发现macOS不能使用，但是在工具发现一款叫Helid的IDE，没有见过，所以好奇点开了。官网地址是：https://helix-editor.com。居然是Rust写的，在github有16.6k,所以直接下载编译。
+git clone https://github.com/helix-editor/helix cd helix cargo install --path helix-term 编译过程中还是出现了很多问题，但是最终编译通过了。这个是值得庆幸的，因为很多都编译不过去，直接被我pass了。
+因为，磁盘空间问题😓，所以在拷贝的时候用了短拷贝。
+ln -s $PWD/runtime ~/.config/helix/runtime 不要偷懒把$PWD去掉，因为ln使用的是全路径，去掉后找不到。
+这样结果编译，安装，配置后，hx可以使用了。
+当然了，作为苹果用户可以直接用brew进行安装，但是如果你不喜欢用Rust那么,brew作为编译项也会把Rust给你安装了。
+brew install helix 官网支持的语言很多，但是目前想用来写一写vala，发现还是没有代码提示，这样就尴尬了。不过，go语言的代码提示就很好，终不能像vscode一样包罗万象。但是，最近使用vscode发现，在输入中文的时候老会给我加几个字母或者输入有问题，卡顿吗？还是其他的缘故，暂时不知道。这样就让我更加激发了要自己定义自己的IDE了，emacs将会是最好的选择。为了保障打字的时候不卡顿，或者说卡顿就直接用emacs代替好了。
+就是写个markdown的文档，都会出现vs code使用了大量能耗。
+vs code你到底做了什么？让我那么卡？
+跑题了，Helix总的来说，还是让人眼前一亮的，毕竟在控制端使用，蛮方便的，hx 文件名就可以直接使用了，而且语法高亮，类vim的快捷键。但是，或许还年轻有许多可以加强的地方。在此买个坑，以后在有机会学习一下吧。
+话说，那么多的IDE，习惯了一种模式就继续下去，因为都可以有很多的替代方案，就目前要解决的问题最重要，不要为了IDE而写代码，也不要为了代码而找IDE，解决问题的关键时刻不要忘记，不然会迷失在无数的IDE和无数的语言中。最终，什么都会个Hello,World!</description>
+    </item>
+    
     <item>
       <title>See you again Delphi</title>
       <link>https://guobingyi.github.io/blog/see-you-again-delphi/</link>

@@ -6,7 +6,27 @@
     <description>Recent content in Emacs on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 13 Jan 2019 10:49:09 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 23:13:50 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Restart</title>
+      <link>https://guobingyi.github.io/emacs/restart/</link>
+      <pubDate>Thu, 24 Nov 2022 23:13:50 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/emacs/restart/</guid>
+      <description>重新开始Emacs之旅 变化真的很快
+0x00 为什么还是要选择Emacs 原本以为会放弃这个IDE，因为真的不好学呀。不好学的原因在于用惯了vscode的模式，简单方便，各种插件容易安装，最最重要的是各种问题不会那么难解决，而且有非常多的资源。可，emacs却真的不一样，一个准备的开始都那么复杂。melpa.org的资源无法访问到，导致下载的Spacemacs下载插件卡死，这种感觉就想换电脑，不要受电池不足的这个鸟气，可是，电脑其他都很好，而且没有钱😊。所以耐住性子，继续折腾，毕竟自己也喜欢折腾嘛~~。开始查阅资料，为什么会卡？结论就是melpa.org在国内访问有问题，那如何解决呢？
+使用代理服务器。 emacs自己设置代理。 我选择了第二种，在init.el中加入代理配置：
+(setq url-proxy-services &amp;#39;((&amp;#34;no_proxy&amp;#34; . &amp;#34;^\\(localhost\\|10.*\\)&amp;#34;) (&amp;#34;http&amp;#34; . &amp;#34;192.168.1.6:2020&amp;#34;) (&amp;#34;https&amp;#34; . &amp;#34;192.168.1.6:2020&amp;#34;))) 这样把emacs又重新复活了。看到熟悉的界面，和哪些C-c C-f的组合键。幸好，Spacemacs的默认不是vim mode。因为我还是不习惯vim，有时间在看看吧。先把emacs弄清楚，虽然原来清楚了，现在又不清楚了。但是，没有关系，重新学又会有新的认识。
+对了，居然没有回答为什么又重新选择emacs这个IDE，是因为我的电脑最近都是移动使用，电池消化很快，如果用vscode和pycharm的话，基本上就是一个多小时就30%了，这样基本上啥也做不了什么，所以想用使用省电的IDE来使用，这样就可以多做点啥～～。
+通过使用sublime text整个体验都非常好，而且可以使用好久的时间，但是，软件是收费的，而且目前我还没有意向去购买这个软件，所以选择一个免费的软件来使用，并且可以满足自己的折腾欲。贱啊～～。
+在说一下sublime的使用情况，不知道是不是我的问题，在使用的期间，没有完成付费会弹出用户注册的提示，这个完全可以接受，毕竟作者需要吃饭，但是很多功能用不了，这个就尴尬了。比如我在使用python插件的时候，不能进行代码提示，不能进行代码跳转，这个时候sublime的功能就是一个简单的文本编辑器，和TextMate一样，这个没有发挥功效。在网上找了一个注册码后，所有功能正常了，我就无语了。为了，支持作者，所以我选择了不用破解的版本，选择了emacs来代替。
+使用vscode完全毫无压力就完成了大部分功能，插件非常好用，终端调用也非常方便，有许多的主题可以使用，或许就是因为太简单，导致自己又会想折腾其他的IDE去了。没有毛病，就是费电，用不了多久，但是对初学者非常友好，第一推荐，五星🌟🌟🌟🌟🌟。
+使用PyCharm的社区版也同样好用，各种功能齐全，还使用了最受欢迎的IDE的主要功能。Markdown的插件非常好用，在写代码的时候，写一下记录的问题，非常好用。缺点就是社区版，功能有限，但是对于熟悉的开发人员来说，不是问题。不出钱就可以使用IDEA的产品，非常棒！但是非常耗内存，同样就耗电很高。第二推荐，四星🌟🌟🌟🌟。
+使用Sublime text的免费版，不推荐，没有代码提示。注册版非常棒！小巧，插件好用，各种提示和vscode有得一拼，但是出现问题也需要找好久的解决方案。处理好后，各种好用。不耗电，不占内存，缺点是收费，不差钱没有毛病。第三推荐，四星🌟🌟🌟🌟。
+使用emacs就不一样了，需要有一定的编程基础，会经常放弃。但是，熟悉之后会发现不一样的天空。上面推荐的IDE的问题都没有，而且还会学会一门新语言lisp。就看你能不能坚持下来，使用Spacemas配置后，整个IDE像变了一样，在正常访问melpa后，可以使用各种好用的mode。内置org-mode，让IDE的功能强大了许多，项目管理，时间管理，非常方便。如果想一辈子都不那么无聊，选择emacs是对的。初学者不推荐，老鸟非常推荐去试一试。推荐零星。Emacs是神之编译器？所以要耐着性子去用，不要逃避，遇到问题就打开顺手的IDE，害怕出现问题？还是去用，卖油翁，唯独，熟也。
+2022-11-27 使用感受 emacs那么多的组合键，在使用中文的时候，忘记了切换会是那么尴尬～～ emacs创建文件就是 C x C f然后输入文件就创建了，和查找目录下的文件查看是一样的。 buffer 暂时可以理解为窗口 C c b 显示目前打开的buffer. C n 下一行 C p 上一行 C a 当前行一个字符 C e 当前行最后一个字符 C x C f 查找文件查看或者创建(输入创建的文件名) C x 0 关闭当前buffer C x 1 保留当前的buffer，关闭其他buffer C x 2 创建一个水平的窗口 C x 3 创建一个垂直的窗口 Alt x 调用系统命令 C g 关闭调用命令窗口 C v 向下翻页 Alt v 向上翻页 调用命令shell最好用multi-term，不要用term，为啥？因为快速选择窗口Alt + 数字键不可以用~~ Alt m f t调用出文件导航窗口 在此使用退出 也可以使用Alt + x 调用treemacs。 大胆的去使用，不要受到挫折就去打开其他的IDE，对比或者找错还是可以使用一下的。 **为了关注自己目前使用的情况，暂时使用Spacemacs的默认配置，所有记录的内容都基于Specemacs来进行的。** 0x01 Markdown的使用 官网</description>
+    </item>
+    
     <item>
       <title>Learn Emacs</title>
       <link>https://guobingyi.github.io/emacs/learn/</link>

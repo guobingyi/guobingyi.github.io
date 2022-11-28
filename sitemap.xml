@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://guobingyi.github.io/blog/</loc>
-    <lastmod>2022-11-09T10:38:42+08:00</lastmod>
+    <lastmod>2022-11-28T14:39:47+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/blog/helix/</loc>
+    <lastmod>2022-11-28T14:39:47+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2022-11-09T10:38:42+08:00</lastmod>
+    <lastmod>2022-11-28T14:39:47+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/emacs/</loc>
+    <lastmod>2022-11-24T23:13:50+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/emacs/restart/</loc>
+    <lastmod>2022-11-24T23:13:50+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/code/ada/</loc>
+    <lastmod>2022-11-17T21:13:48+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/code/</loc>
+    <lastmod>2022-11-17T21:13:48+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/see-you-again-delphi/</loc>
     <lastmod>2022-11-09T10:38:42+08:00</lastmod>
@@ -15,9 +30,6 @@
     <lastmod>2022-10-08T21:56:37+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/code/autotest/</loc>
-    <lastmod>2022-10-03T15:12:08+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/code/</loc>
     <lastmod>2022-10-03T15:12:08+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/100day/</loc>
@@ -211,9 +223,6 @@
   </url><url>
     <loc>https://guobingyi.github.io/mac/tools/</loc>
     <lastmod>2019-01-15T14:37:52+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/emacs/</loc>
-    <lastmod>2019-01-13T10:49:09+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/emacs/learn/</loc>
     <lastmod>2019-01-13T10:49:09+08:00</lastmod>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
+要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C&#43;&#43;的。要想彻底的搞清楚，最终还是逃脱不了C和C&#43;&#43;，宿命吧～～
+话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。
+或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。
+我选择的是AdaCore，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择下载。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。
+默认安装路径为：
+/opt/GNAT/2020 安装之后需要手工加入路径：
+export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：
+with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &#34;Hello, World!&#34; to the screen Put_Line (&#34;Hello, World!&#34;); Put_Line (&#34;你好，世界!*2&#34;); Put_Line(&#34;ok?&#34;) end Greet; 编译：
+gnatmake greet.adb 运行：
+./greet.adb 查看标准库，有一个文件的写入代码：
+with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &#34;simple.txt&#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &#34;Hello World #1&#34;); Put_Line (F, &#34;Hello World #2&#34;); Put_Line (F, &#34;Hello World #3&#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：">
+
+<meta property="og:title" content="Ada" />
+<meta property="og:description" content="Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
+要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C&#43;&#43;的。要想彻底的搞清楚，最终还是逃脱不了C和C&#43;&#43;，宿命吧～～
+话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。
+或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。
+我选择的是AdaCore，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择下载。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。
+默认安装路径为：
+/opt/GNAT/2020 安装之后需要手工加入路径：
+export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：
+with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &#34;Hello, World!&#34; to the screen Put_Line (&#34;Hello, World!&#34;); Put_Line (&#34;你好，世界!*2&#34;); Put_Line(&#34;ok?&#34;) end Greet; 编译：
+gnatmake greet.adb 运行：
+./greet.adb 查看标准库，有一个文件的写入代码：
+with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &#34;simple.txt&#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &#34;Hello World #1&#34;); Put_Line (F, &#34;Hello World #2&#34;); Put_Line (F, &#34;Hello World #3&#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/ada/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-11-17T21:13:48+08:00" />
+<meta property="article:modified_time" content="2022-11-17T21:13:48+08:00" />
+
+
+
+<title>
+
+
+     Ada 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/ada/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-11-28%2016%3a29%3a01.959533%20%2b0800%20CST%20m%3d%2b5.074102693">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-11-28%2016%3a29%3a01.959533%20%2b0800%20CST%20m%3d%2b5.074102693">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-11-28%2016%3a29%3a01.959533%20%2b0800%20CST%20m%3d%2b5.074102693">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-11-28%2016%3a29%3a01.959533%20%2b0800%20CST%20m%3d%2b5.074102693">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Ada
+
+</div>
+
+            <div class="markdown">
+                <h1 id="ada">Ada</h1>
+<p><img src="https://guobingyi.github.io/img/code/ada.png" alt="ada"></p>
+<p>被Ada的名字所吸引，来到了Ada Programming的世界。在<a href="https://en.wikibooks.org/wiki/Ada_Programming">wiki</a>上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。</p>
+<p>要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C++的。要想彻底的搞清楚，最终还是逃脱不了C和C++，宿命吧～～</p>
+<p>话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。</p>
+<p>或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。</p>
+<p>我选择的是<a href="https://www.adacore.com/">AdaCore</a>，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择<a href="https://community.download.adacore.com/v1/aefa0616b9476874823a7974d3dd969ac13dfe3a?filename=gnat-2020-20200818-x86_64-darwin-bin.dmg&amp;rand=787">下载</a>。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。</p>
+<p>默认安装路径为：</p>
+<pre tabindex="0"><code>/opt/GNAT/2020
+</code></pre><p>安装之后需要手工加入路径：</p>
+<pre tabindex="0"><code>export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin
+</code></pre><p>开始编写第一个ada程序：</p>
+<pre tabindex="0"><code>with Ada.Text_IO;
+use Ada.Text_IO;
+procedure Greet is
+begin
+    -- Print &#34;Hello, World!&#34; to the screen
+    Put_Line (&#34;Hello, World!&#34;);
+    Put_Line (&#34;你好，世界!*2&#34;);
+    Put_Line(&#34;ok?&#34;)
+end Greet;
+</code></pre><p>编译：</p>
+<pre tabindex="0"><code>gnatmake greet.adb
+</code></pre><p>运行：</p>
+<pre tabindex="0"><code>./greet.adb
+</code></pre><p>查看标准库，有一个文件的写入代码：</p>
+<pre tabindex="0"><code>with Ada.Text_IO; use Ada.Text_IO;
+
+procedure Show_Simple_Text_File_IO is
+   F         : File_Type;
+   File_Name : constant String := &#34;simple.txt&#34;;
+begin
+   Create (F, Out_File, File_Name);
+   Put_Line (F, &#34;Hello World #1&#34;);
+   Put_Line (F, &#34;Hello World #2&#34;);
+   Put_Line (F, &#34;Hello World #3&#34;);
+   Close (F);
+
+   Open (F, In_File, File_Name);
+   while not End_Of_File (F) loop
+      Put_Line (Get_Line (F));
+   end loop;
+   Close (F);
+end Show_Simple_Text_File_IO;
+</code></pre><p>因为太像c代码的编译，所以直接写了个Makefile文件：</p>
+<pre tabindex="0"><code>clean:
+	@echo &#34;clean build&#34;
+	@echo &#34;delete file sample_file_io&#34;
+	@rm -rf sample_file_io
+	@echo &#34;delete file sample_file_io.ali&#34;
+	@rm -rf sample_file_io.ali
+	@echo &#34;delete file sample_file_io.o&#34;
+	@rm -rf sample_file_io.o
+	@echo &#34;delete simple.txt&#34;
+	@rm -rf simple.txt
+build:
+	@echo &#34;run command gnatmake sample_file.adb&#34;
+	@gnatmake sample_file_io.adb
+run:
+	@echo &#34;run command ./sample_file_io&#34;
+	@./sample_file_io
+</code></pre><p>好啦，纠结的地方来啦，为什么还要这样折腾呢？难道有不一样的库或者代码？所以找到了aws这个框架。<a href="https://docs.adacore.com/live/wave/aws/html/aws_ug/index.html">The Ada Web Server</a>。</p>
+<p>看到一个例子，非常激动的拷贝下来，想写一下玩一玩，可惜掉坑了。</p>
+<pre tabindex="0"><code>with AWS.Response;
+with AWS.Server;
+with AWS.Status;
+
+procedure Hello_World is
+
+  WS : AWS.Server.HTTP;
+
+  function HW_CB (Request : in AWS.Status.Data)
+    return AWS.Response.Data
+  is
+     URI : constant String := AWS.Status.URI (Request);
+  begin
+     if URI = &#34;/hello&#34; then
+        return AWS.Response.Build (&#34;text/html&#34;, &#34;&lt;p&gt;Hello world !&#34;);
+     else
+        return AWS.Response.Build (&#34;text/html&#34;, &#34;&lt;p&gt;Hum...&#34;);
+     end if;
+  end HW_CB;
+
+begin
+   AWS.Server.Start
+     (WS, &#34;Hello World&#34;, Callback =&gt; HW_CB&#39;Unrestricted_Access);
+   delay 30.0;
+end Hello_World;
+</code></pre><p>根据套路，使用原来的编译，怎么都编译不过，即使看文档都没有搞定。最终在<a href="https://stackoverflow.com/questions/8063468/installation-issue-with-aws-for-ada">stackoverflow</a>找到了答案。原来ada的项目是.gpr为后缀的文件，告诉编译器怎么编译它，如何找到项目的依赖项。所以，添加.gpr文件：</p>
+<pre tabindex="0"><code>with &#34;aws&#34;;
+project Hello is
+   for Main use (&#34;hello_aws.adb&#34;);
+end Hello;
+</code></pre><p>编译：</p>
+<pre tabindex="0"><code>gprbuild -P hello_aws.gpr
+</code></pre><p>成功！</p>
+<p>结论：如果想好了学习就应该一步一步来，一口想吃掉一个胖子是要吃亏的。但是，文档的确很详细，而且提供了很多书可以查阅，有时间还是可以深入的学习的，这个排到Delphi之后。😊</p>
+<p>收获：</p>
+<ol>
+<li>找到了斯坦福的<a href="https://sites.radford.edu/~nokie/classes/320/">一个课程</a>.</li>
+<li>找到了一个用Java编写的IDE <a href="https://www.jgrasp.org/index.html">jGRASP</a>.</li>
+<li>AdaCore在github的<a href="https://github.com/AdaCore">官网</a>.</li>
+<li></li>
+</ol>
+<p>为了给系统腾出空间，还是把opt下的GNAT挪到了项目中。</p>
+<pre tabindex="0"><code>/Volumes/Transcend/Project/ada_code/GNAT/2020
+</code></pre><p>测试通过，迁移成功！</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
