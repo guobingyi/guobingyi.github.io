@@ -6,7 +6,28 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 Nov 2022 14:39:47 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Nov 2022 17:01:05 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visual_studio_code</title>
+      <link>https://guobingyi.github.io/blog/visual_studio_code/</link>
+      <pubDate>Mon, 28 Nov 2022 17:01:05 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/blog/visual_studio_code/</guid>
+      <description>Visual Studio Code 优化记录 因为Visual Studio Code以及成为了我电脑上的主力IDE，所有的语都能很好的支持，所有我提升了她的地位。
+但是，在中文输入的时候总会出现卡顿的情况，今天查阅了资料，在最后的时候还是调整的很好。
+最主要的体验就是书写中文的时候不会卡出英文字母了，现在就把优化的步骤记录一下：
+更新Visual studio code 升级到最新版本的vs code 。这个我的版本就是最新的，所以这个对我无效。
+检查插件 把不常用，质量不高(20+以下)插件删除。
+检查启动时的插件
+Command + Shift + P 键入：
+Developer: Show Running Extensions 查看耗时的插件，然后根据自己的情况进行删除或者禁用。
+注意：如果耗时超过1000毫秒，那么需要好好检查一下。
+主题插件 最好把所有的主题插件删除，如果有必要的话。
+重装 这个建议，我觉得应该好使，毕竟多年的Windows用户经验告诉我，重装可以解决很多未知的问题，问题是苹果上删除可不那么简单，不是在应用里删除就结束的，还有许多文件需要删除，这个埋个坑，因为经过上面的优化后，我的没有出现问题了。
+苹果下的vs code 相关路径：
+~/.code /Users/guoby/Library/Caches/vscode-cpptools /Users/guoby/Library/Application Support/Code 目前就只找到这些路径，不知道哪些地方还会有,等实在卡的慌，就直接删除吧～～</description>
+    </item>
+    
     <item>
       <title>Helix</title>
       <link>https://guobingyi.github.io/blog/helix/</link>

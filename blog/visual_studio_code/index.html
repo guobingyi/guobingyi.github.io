@@ -9,24 +9,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="新的开始，新的征途 谁知能活多少天，舒服一天是一天。">
+<meta name="description" content="Visual Studio Code 优化记录 因为Visual Studio Code以及成为了我电脑上的主力IDE，所有的语都能很好的支持，所有我提升了她的地位。
+但是，在中文输入的时候总会出现卡顿的情况，今天查阅了资料，在最后的时候还是调整的很好。
+最主要的体验就是书写中文的时候不会卡出英文字母了，现在就把优化的步骤记录一下：
+更新Visual studio code 升级到最新版本的vs code 。这个我的版本就是最新的，所以这个对我无效。
+检查插件 把不常用，质量不高(20&#43;以下)插件删除。
+检查启动时的插件
+Command &#43; Shift &#43; P 键入：
+Developer: Show Running Extensions 查看耗时的插件，然后根据自己的情况进行删除或者禁用。
+注意：如果耗时超过1000毫秒，那么需要好好检查一下。
+主题插件 最好把所有的主题插件删除，如果有必要的话。
+重装 这个建议，我觉得应该好使，毕竟多年的Windows用户经验告诉我，重装可以解决很多未知的问题，问题是苹果上删除可不那么简单，不是在应用里删除就结束的，还有许多文件需要删除，这个埋个坑，因为经过上面的优化后，我的没有出现问题了。
+苹果下的vs code 相关路径：
+~/.code /Users/guoby/Library/Caches/vscode-cpptools /Users/guoby/Library/Application Support/Code 目前就只找到这些路径，不知道哪些地方还会有,等实在卡的慌，就直接删除吧～～">
 
-<meta property="og:title" content="new start life" />
-<meta property="og:description" content="新的开始，新的征途 谁知能活多少天，舒服一天是一天。" />
+<meta property="og:title" content="Visual_studio_code" />
+<meta property="og:description" content="Visual Studio Code 优化记录 因为Visual Studio Code以及成为了我电脑上的主力IDE，所有的语都能很好的支持，所有我提升了她的地位。
+但是，在中文输入的时候总会出现卡顿的情况，今天查阅了资料，在最后的时候还是调整的很好。
+最主要的体验就是书写中文的时候不会卡出英文字母了，现在就把优化的步骤记录一下：
+更新Visual studio code 升级到最新版本的vs code 。这个我的版本就是最新的，所以这个对我无效。
+检查插件 把不常用，质量不高(20&#43;以下)插件删除。
+检查启动时的插件
+Command &#43; Shift &#43; P 键入：
+Developer: Show Running Extensions 查看耗时的插件，然后根据自己的情况进行删除或者禁用。
+注意：如果耗时超过1000毫秒，那么需要好好检查一下。
+主题插件 最好把所有的主题插件删除，如果有必要的话。
+重装 这个建议，我觉得应该好使，毕竟多年的Windows用户经验告诉我，重装可以解决很多未知的问题，问题是苹果上删除可不那么简单，不是在应用里删除就结束的，还有许多文件需要删除，这个埋个坑，因为经过上面的优化后，我的没有出现问题了。
+苹果下的vs code 相关路径：
+~/.code /Users/guoby/Library/Caches/vscode-cpptools /Users/guoby/Library/Application Support/Code 目前就只找到这些路径，不知道哪些地方还会有,等实在卡的慌，就直接删除吧～～" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/blog/new-start-life/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-11-24T17:05:59+08:00" />
-<meta property="article:modified_time" content="2020-11-24T17:05:59+08:00" />
+<meta property="og:url" content="https://guobingyi.github.io/blog/visual_studio_code/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-11-28T17:01:05+08:00" />
+<meta property="article:modified_time" content="2022-11-28T17:01:05+08:00" />
 
 
 
 <title>
 
 
-     new start life 
+     Visual_studio_code 
 
 </title>
-<link rel="canonical" href="https://guobingyi.github.io/blog/new-start-life/">
+<link rel="canonical" href="https://guobingyi.github.io/blog/visual_studio_code/">
 
 
 
@@ -46,11 +70,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-11-29%2009%3a46%3a43.452978%20%2b0800%20CST%20m%3d%2b4.209520870">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-11-29%2009%3a46%3a43.452978%20%2b0800%20CST%20m%3d%2b4.209520870">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-11-29%2009%3a46%3a43.452978%20%2b0800%20CST%20m%3d%2b4.209520870">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2022-11-29%2009%3a46%3a44.023226%20%2b0800%20CST%20m%3d%2b4.779698655">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2022-11-29%2009%3a46%3a44.023226%20%2b0800%20CST%20m%3d%2b4.779698655">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2022-11-29%2009%3a46%3a44.023226%20%2b0800%20CST%20m%3d%2b4.779698655">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-11-29%2009%3a46%3a43.452978%20%2b0800%20CST%20m%3d%2b4.209520870">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2022-11-29%2009%3a46%3a44.023226%20%2b0800%20CST%20m%3d%2b4.779698655">
     
 
 
@@ -259,7 +283,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    new start life
+    Visual_studio_code
 
 </div>
 
@@ -267,7 +291,7 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Tue Nov 24 2020 17:05:59 CST'>Nov 24, 2020</div>
+                    <div class="date" title='Mon Nov 28 2022 17:01:05 CST'>Nov 28, 2022</div>
                     
                     
 		    <div class="reading-time"><div class="middot"></div>One minute read</div>
@@ -275,11 +299,37 @@
                 </div>
             </div>
             <div class="markdown">
-                <h2 id="新的开始新的征途">新的开始，新的征途</h2>
-<blockquote>
-<p>谁知能活多少天，舒服一天是一天。</p>
-</blockquote>
-<p><img src="https://guobingyi.github.io/img/movie/ad-astra.webp" alt="星际探索"></p>
+                <h1 id="visual-studio-code-优化记录">Visual Studio Code 优化记录</h1>
+<p>因为Visual Studio Code以及成为了我电脑上的主力IDE，所有的语都能很好的支持，所有我提升了她的地位。</p>
+<p>但是，在中文输入的时候总会出现卡顿的情况，今天查阅了资料，在最后的时候还是调整的很好。</p>
+<p>最主要的体验就是书写中文的时候不会卡出英文字母了，现在就把优化的步骤记录一下：</p>
+<ol>
+<li>更新Visual studio code</li>
+</ol>
+<p>升级到最新版本的vs code 。这个我的版本就是最新的，所以这个对我无效。</p>
+<ol start="2">
+<li>检查插件</li>
+</ol>
+<p>把不常用，质量不高(20+以下)插件删除。</p>
+<p>检查启动时的插件</p>
+<pre tabindex="0"><code>Command + Shift + P 
+</code></pre><p>键入：</p>
+<pre tabindex="0"><code>Developer: Show Running Extensions
+</code></pre><p>查看耗时的插件，然后根据自己的情况进行删除或者禁用。</p>
+<p>注意：如果耗时超过1000毫秒，那么需要好好检查一下。</p>
+<ol start="3">
+<li>主题插件</li>
+</ol>
+<p>最好把所有的主题插件删除，如果有必要的话。</p>
+<ol start="4">
+<li>重装</li>
+</ol>
+<p>这个建议，我觉得应该好使，毕竟多年的Windows用户经验告诉我，重装可以解决很多未知的问题，问题是苹果上删除可不那么简单，不是在应用里删除就结束的，还有许多文件需要删除，这个埋个坑，因为经过上面的优化后，我的没有出现问题了。</p>
+<p>苹果下的vs code 相关路径：</p>
+<pre tabindex="0"><code>~/.code
+/Users/guoby/Library/Caches/vscode-cpptools
+/Users/guoby/Library/Application Support/Code
+</code></pre><p>目前就只找到这些路径，不知道哪些地方还会有,等实在卡的慌，就直接删除吧～～</p>
 
                 <br>
                 
