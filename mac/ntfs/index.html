@@ -9,27 +9,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="photoshop 学习记录 1. mac如何禁止adobe creative cloud开机自启? 打开终端，禁止开机自启：
-launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 恢复自启：
-launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 2. 常用快捷键 Command &#43; D 取消选择模块 [ （右括号）用来改变大小，变小，如画笔的大小 ]（左括号）用来改变大小，变大，如画笔的大小 option 键用来改变相对的作用，如放大，缩小等。 F12 图像恢复，所有的更改都变为zero ">
+<meta name="description" content="Mac下挂载Windows下的硬盘 变化，变化。
+电脑已经8年了。
+而自己使用时间的越来约来少，或许三个宝让自己慢慢的认清了现实。
+突然使用电脑的时候，发现Mounty已经不能实现挂载硬盘了。提示需要NTFS-3G，而自己离开地球很久了。思路变成了去百度问一问，却忘记了原来的思路是去官网看看。哎，退化了。
+根据官网的提示，很快就解决了问题，但是自己却用百度去寻找问题，最终根据很难的样子，其实只要找到根源，问题就解决了。
+我使用了brew来安装mac上的软件，免费比什么都重要。
+1.安装macFUSE
+brew install --cask macfuse 2.安装 ntfs-3g-mac
+brew install ntfs-3g-mac 3.重启电脑后，设置安全性与隐私，允许签名为：“Benjamin Fleischer”的App。
+挂载移动硬盘后成功，并且可以删除原来在Mounty上不能删除的软件。（原来使用Mounty的时候，可以增加文件，却不可以删除，删除会死机重启😓）">
 
-<meta property="og:title" content="Photoshop" />
-<meta property="og:description" content="photoshop 学习记录 1. mac如何禁止adobe creative cloud开机自启? 打开终端，禁止开机自启：
-launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 恢复自启：
-launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 2. 常用快捷键 Command &#43; D 取消选择模块 [ （右括号）用来改变大小，变小，如画笔的大小 ]（左括号）用来改变大小，变大，如画笔的大小 option 键用来改变相对的作用，如放大，缩小等。 F12 图像恢复，所有的更改都变为zero " />
+<meta property="og:title" content="Ntfs" />
+<meta property="og:description" content="Mac下挂载Windows下的硬盘 变化，变化。
+电脑已经8年了。
+而自己使用时间的越来约来少，或许三个宝让自己慢慢的认清了现实。
+突然使用电脑的时候，发现Mounty已经不能实现挂载硬盘了。提示需要NTFS-3G，而自己离开地球很久了。思路变成了去百度问一问，却忘记了原来的思路是去官网看看。哎，退化了。
+根据官网的提示，很快就解决了问题，但是自己却用百度去寻找问题，最终根据很难的样子，其实只要找到根源，问题就解决了。
+我使用了brew来安装mac上的软件，免费比什么都重要。
+1.安装macFUSE
+brew install --cask macfuse 2.安装 ntfs-3g-mac
+brew install ntfs-3g-mac 3.重启电脑后，设置安全性与隐私，允许签名为：“Benjamin Fleischer”的App。
+挂载移动硬盘后成功，并且可以删除原来在Mounty上不能删除的软件。（原来使用Mounty的时候，可以增加文件，却不可以删除，删除会死机重启😓）" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/blog/photoshop/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-03-09T08:45:40+08:00" />
-<meta property="article:modified_time" content="2021-03-09T08:45:40+08:00" />
+<meta property="og:url" content="https://guobingyi.github.io/mac/ntfs/" /><meta property="article:section" content="mac" />
+<meta property="article:published_time" content="2023-07-12T17:10:51+08:00" />
+<meta property="article:modified_time" content="2023-07-12T17:10:51+08:00" />
 
 
 <title>
 
 
-     Photoshop 
+     Ntfs 
 
 </title>
-<link rel="canonical" href="https://guobingyi.github.io/blog/photoshop/">
+<link rel="canonical" href="https://guobingyi.github.io/mac/ntfs/">
 
 
 
@@ -49,11 +63,11 @@ launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 2. �
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-09-24%2013%3a21%3a43.226575%20%2b0800%20CST%20m%3d%2b3.736741417">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-09-24%2013%3a21%3a43.226575%20%2b0800%20CST%20m%3d%2b3.736741417">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-09-24%2013%3a21%3a43.226575%20%2b0800%20CST%20m%3d%2b3.736741417">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-09-24%2013%3a21%3a44.972599%20%2b0800%20CST%20m%3d%2b5.482765185">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-09-24%2013%3a21%3a44.972599%20%2b0800%20CST%20m%3d%2b5.482765185">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-09-24%2013%3a21%3a44.972599%20%2b0800%20CST%20m%3d%2b5.482765185">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-09-24%2013%3a21%3a43.226575%20%2b0800%20CST%20m%3d%2b3.736741417">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-09-24%2013%3a21%3a44.972599%20%2b0800%20CST%20m%3d%2b5.482765185">
     
 
 
@@ -254,56 +268,36 @@ launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist 2. �
     </div>
 </section>
 
-
-<section class="main post non-narrow zero-top-spacing">
+<section class="main">
     <div class="container">
         <div class="content">
-            <div class="front-matter">
-                <div class="title-container">
-                    <div class="page-heading">
+            <div class="page-heading">
 
-    Photoshop
+    Ntfs
 
 </div>
 
-                    <div class="initials"><a href="https://guobingyi.github.io/">ad</a></div>
-                </div>
-                <div class="meta">
-                    
-                    <div class="date" title='Tue Mar 9 2021 08:45:40 CST'>Mar 9, 2021</div>
-                    
-                    
-		    <div class="reading-time"><div class="middot"></div>One minute read</div>
-                    
-                </div>
-            </div>
             <div class="markdown">
-                <h2 id="photoshop-学习记录">photoshop 学习记录</h2>
-<h3 id="1-mac如何禁止adobe-creative-cloud开机自启">1. mac如何禁止adobe creative cloud开机自启?</h3>
-<p>打开终端，禁止开机自启：</p>
-<pre tabindex="0"><code>launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist
-</code></pre><p>恢复自启：</p>
-<pre tabindex="0"><code>launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist
-</code></pre><h3 id="2-常用快捷键">2. 常用快捷键</h3>
-<pre tabindex="0"><code>Command + D 取消选择模块
-</code></pre><pre tabindex="0"><code>[ （右括号）用来改变大小，变小，如画笔的大小
-</code></pre><pre tabindex="0"><code>]（左括号）用来改变大小，变大，如画笔的大小
-</code></pre><pre tabindex="0"><code>option 键用来改变相对的作用，如放大，缩小等。
-</code></pre><pre tabindex="0"><code>F12 图像恢复，所有的更改都变为zero
-</code></pre>
-                <br>
-                
-                <p class="back-to-posts"><a href="https://guobingyi.github.io/blog">Back to posts</a></p>
+                <h1 id="mac下挂载windows下的硬盘">Mac下挂载Windows下的硬盘</h1>
+<blockquote>
+<p>变化，变化。</p>
+</blockquote>
+<p>电脑已经8年了。</p>
+<p>而自己使用时间的越来约来少，或许三个宝让自己慢慢的认清了现实。</p>
+<p>突然使用电脑的时候，发现<a href="https://mounty.app">Mounty</a>已经不能实现挂载硬盘了。提示需要NTFS-3G，而自己离开地球很久了。思路变成了去百度问一问，却忘记了原来的思路是去官网看看。哎，退化了。</p>
+<p>根据官网的提示，很快就解决了问题，但是自己却用百度去寻找问题，最终根据很难的样子，其实只要找到根源，问题就解决了。</p>
+<p>我使用了<a href="https://brew.sh/">brew</a>来安装mac上的软件，免费比什么都重要。</p>
+<p>1.安装macFUSE</p>
+<pre tabindex="0"><code>brew install --cask macfuse
+</code></pre><p>2.安装 ntfs-3g-mac</p>
+<pre tabindex="0"><code>brew install ntfs-3g-mac
+</code></pre><p>3.重启电脑后，设置安全性与隐私，允许签名为：“Benjamin Fleischer”的App。</p>
+<p>挂载移动硬盘后成功，并且可以删除原来在Mounty上不能删除的软件。（原来使用Mounty的时候，可以增加文件，却不可以删除，删除会死机重启😓）</p>
+
             </div>
-            <br>
-            <div class="disqus">
-                
-            </div>
-            
         </div>
     </div>
 </section>
-
 
 
 <script type="application/javascript">

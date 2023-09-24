@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="最好的编程语言 海象说是时候谈谈了。
+0x00 缘起 最初第一次认识电脑，是同学带自己去玩游戏，那个时候街机已经不流行了，流行的是电脑游戏。看到电脑的样子感觉很高级，不知道这个东西到底能做什么，只知道可以玩好玩的游戏。😳
+慢慢的，不知道是天意还是命运，被没有填报志愿的计算机学院录取。第一天就被系主任的话迷住，用c语言来改变世界。自从认识了c语言后就开始鄙视任何语言，php/python/js/html是第一批被鄙视的语言，因为那个时候觉得这样的语言就是给非计算机人是用的。开始喜欢那种有Power的语言，所以第一c语言，第二c&#43;&#43;语言。可是，那个时候，除了从书本上学习到知识外都很少从互联网学习知识，看到书本上的语法，例子，真的是无聊到极点。那个时候比较流行做管理系统，所以看到了Delphi的身影。可惜，Delphi的语法和c的语法有点不同，相对c#的语法要好些。所以，更多的学习了c#，可是怎么用呢？还是没有一个明确的思路。直到买了一本Visual Becial.net的书，按照书中的例子来写点小例子，如记事本。后来，在图书馆里看到了Java语言，书中说这个语言要改变世界，因为编译一次，到处运行。还不知道什么叫夸平台，因为只知道世界上只有Windows。
+凭借着对程序的热爱，开始找工作，到处都是Java程序员的招聘，而自己的文凭又不是那么强势，所以只能硬着头皮考了Java程序员认证。也凭着一点点运气被一家公司录取，开始了程序员之旅。第一家公司使用vb6和Delphi进行系统开发，那个时候还是比较开心的，因为是自己喜欢的语言，开发比较有动力。后来，互联网强势来袭，C#的asp.net和Java的Sevlet开始抗争。平台开始转移到Linux下，C#的优势没有了，全部都Java的天下。最后到移动端，也是Java的天下，微软的势力被缩减。
+原来工作的时候，是公司使用什么技术，你就得用什么技术，或者说你选择技术，来为公司谋利。那么在技术选型上就得考虑许多问题，比如平台，Windons的服务器比Linxu的服务器贵，而且技术单一。比如语言，go语言可以和Java语言一样高效，可是没有Java的生态圈好。python语言可以很快开发出原型，可是性能问题让大家都放弃。而且开发人员的层次不一样，所以不能使用上手慢的语言，比如rust。
+后来，没有工作的限制，自己当成爱好来写代码的时候，就不一样了。什么简单，就什么来。慢慢明白了python的格言，“人生苦短，我用python。”
+最近，突发奇想，把自己写的下载视频python代码，用不同语言来实现一遍，看看自己以前的语言还熟悉吗？
+0x01 go语言 go语言是工作后最喜欢的语言，没有之一。为什么呢？
+第一，简单，高效 go语言的语法非常简单，几句语言就可以开发一个文件服务器。在使用的过程中，除了老忘记语句结束不需要;外，基本都能很平顺的写出代码。
+第二，跨平台编译 可以在macOS上编译成在Windows或者Linux上的程序，你说开心不？
+第三，Google出品 一般大厂出品的东西，安全/性能都非常出色，并且保证了持续的发展。
+结论 如果在追求性能，快速实现的基础上go是非常好的选择，但是和python相比，少了许多库和非常好的生态圈。
+0x02 rust语言 和go语言相比，rust语言的确学习起来要难些。但是它的用途却是提供高性能，无垃圾回收，所以对比而言，这个用来做核心功能应该不错。目前，还是没有学通。
+0x03 C# 曾经最喜欢的语言之一，跨平台后一直都舍不得uninstall。
+0x04 Java 吃饭的语言，自从学会了后，一直都用Java在公司进行开发，你说它的作用大不大？
+0x05 python 在工作中碰到几次，没有上心。没有工作后，特别喜欢使用。
+0x06 开始 最近使用自己写的python脚本下载m3u8格式的视频，基本上做点事情回来视频便下载好了，非常方便。在魔兽世界里，有句话说：“我的朋友，时间就是金钱！”。使用python脚本的时候，就觉得速度上是不是可以提速一点，所以想用go语言来改写一下，Cursor也用上了，不得不说gpt的确帮了许多忙。
+python语言 python语言简单，第三方的库比较丰富。想到就可以做到的语言，恐怕只有python吧~~。
+下载同一文件耗时:30.98s。
+go语言的改写 使用go语言改写，一共花了两个晚上的时间，大约8个小时。
+测试次数 测试时间 备注 第1次测试 47.76s｜使用命令 go run . ，并且没有控制线程数量 第2次测试 17.50s｜编译成可执行文件，线程控制20个。 第3次测试 18.34s｜使用命令 go run .，线程控制20个。 结论：
+线程数量要控制。 能编译运行速度还是有所提升的。 go语言开发是真的快，基础库完全满足了需求。 如果想要速度和简单，go语言是最佳的选择。 测试非常给力，go test ^methodname 就可以直接测试测试函数，印象很深。 如何控制不好代码，结果连python都不如，所以并不是代码的问题，人的问题也很重要。 rust改写 即使加入了gpt的帮忙也未能实现，所以我提早退出了，毕竟知道自己的能力还不足，也不错！">
+
+<meta property="og:title" content="The_best_language" />
+<meta property="og:description" content="最好的编程语言 海象说是时候谈谈了。
+0x00 缘起 最初第一次认识电脑，是同学带自己去玩游戏，那个时候街机已经不流行了，流行的是电脑游戏。看到电脑的样子感觉很高级，不知道这个东西到底能做什么，只知道可以玩好玩的游戏。😳
+慢慢的，不知道是天意还是命运，被没有填报志愿的计算机学院录取。第一天就被系主任的话迷住，用c语言来改变世界。自从认识了c语言后就开始鄙视任何语言，php/python/js/html是第一批被鄙视的语言，因为那个时候觉得这样的语言就是给非计算机人是用的。开始喜欢那种有Power的语言，所以第一c语言，第二c&#43;&#43;语言。可是，那个时候，除了从书本上学习到知识外都很少从互联网学习知识，看到书本上的语法，例子，真的是无聊到极点。那个时候比较流行做管理系统，所以看到了Delphi的身影。可惜，Delphi的语法和c的语法有点不同，相对c#的语法要好些。所以，更多的学习了c#，可是怎么用呢？还是没有一个明确的思路。直到买了一本Visual Becial.net的书，按照书中的例子来写点小例子，如记事本。后来，在图书馆里看到了Java语言，书中说这个语言要改变世界，因为编译一次，到处运行。还不知道什么叫夸平台，因为只知道世界上只有Windows。
+凭借着对程序的热爱，开始找工作，到处都是Java程序员的招聘，而自己的文凭又不是那么强势，所以只能硬着头皮考了Java程序员认证。也凭着一点点运气被一家公司录取，开始了程序员之旅。第一家公司使用vb6和Delphi进行系统开发，那个时候还是比较开心的，因为是自己喜欢的语言，开发比较有动力。后来，互联网强势来袭，C#的asp.net和Java的Sevlet开始抗争。平台开始转移到Linux下，C#的优势没有了，全部都Java的天下。最后到移动端，也是Java的天下，微软的势力被缩减。
+原来工作的时候，是公司使用什么技术，你就得用什么技术，或者说你选择技术，来为公司谋利。那么在技术选型上就得考虑许多问题，比如平台，Windons的服务器比Linxu的服务器贵，而且技术单一。比如语言，go语言可以和Java语言一样高效，可是没有Java的生态圈好。python语言可以很快开发出原型，可是性能问题让大家都放弃。而且开发人员的层次不一样，所以不能使用上手慢的语言，比如rust。
+后来，没有工作的限制，自己当成爱好来写代码的时候，就不一样了。什么简单，就什么来。慢慢明白了python的格言，“人生苦短，我用python。”
+最近，突发奇想，把自己写的下载视频python代码，用不同语言来实现一遍，看看自己以前的语言还熟悉吗？
+0x01 go语言 go语言是工作后最喜欢的语言，没有之一。为什么呢？
+第一，简单，高效 go语言的语法非常简单，几句语言就可以开发一个文件服务器。在使用的过程中，除了老忘记语句结束不需要;外，基本都能很平顺的写出代码。
+第二，跨平台编译 可以在macOS上编译成在Windows或者Linux上的程序，你说开心不？
+第三，Google出品 一般大厂出品的东西，安全/性能都非常出色，并且保证了持续的发展。
+结论 如果在追求性能，快速实现的基础上go是非常好的选择，但是和python相比，少了许多库和非常好的生态圈。
+0x02 rust语言 和go语言相比，rust语言的确学习起来要难些。但是它的用途却是提供高性能，无垃圾回收，所以对比而言，这个用来做核心功能应该不错。目前，还是没有学通。
+0x03 C# 曾经最喜欢的语言之一，跨平台后一直都舍不得uninstall。
+0x04 Java 吃饭的语言，自从学会了后，一直都用Java在公司进行开发，你说它的作用大不大？
+0x05 python 在工作中碰到几次，没有上心。没有工作后，特别喜欢使用。
+0x06 开始 最近使用自己写的python脚本下载m3u8格式的视频，基本上做点事情回来视频便下载好了，非常方便。在魔兽世界里，有句话说：“我的朋友，时间就是金钱！”。使用python脚本的时候，就觉得速度上是不是可以提速一点，所以想用go语言来改写一下，Cursor也用上了，不得不说gpt的确帮了许多忙。
+python语言 python语言简单，第三方的库比较丰富。想到就可以做到的语言，恐怕只有python吧~~。
+下载同一文件耗时:30.98s。
+go语言的改写 使用go语言改写，一共花了两个晚上的时间，大约8个小时。
+测试次数 测试时间 备注 第1次测试 47.76s｜使用命令 go run . ，并且没有控制线程数量 第2次测试 17.50s｜编译成可执行文件，线程控制20个。 第3次测试 18.34s｜使用命令 go run .，线程控制20个。 结论：
+线程数量要控制。 能编译运行速度还是有所提升的。 go语言开发是真的快，基础库完全满足了需求。 如果想要速度和简单，go语言是最佳的选择。 测试非常给力，go test ^methodname 就可以直接测试测试函数，印象很深。 如何控制不好代码，结果连python都不如，所以并不是代码的问题，人的问题也很重要。 rust改写 即使加入了gpt的帮忙也未能实现，所以我提早退出了，毕竟知道自己的能力还不足，也不错！" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/the_best_language/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2023-08-24T12:42:21+08:00" />
+<meta property="article:modified_time" content="2023-08-24T12:42:21+08:00" />
+
+
+<title>
+
+
+     The_best_language 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/the_best_language/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-09-24%2013%3a21%3a44.399838%20%2b0800%20CST%20m%3d%2b4.910004237">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-09-24%2013%3a21%3a44.399838%20%2b0800%20CST%20m%3d%2b4.910004237">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-09-24%2013%3a21%3a44.399838%20%2b0800%20CST%20m%3d%2b4.910004237">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-09-24%2013%3a21%3a44.399838%20%2b0800%20CST%20m%3d%2b4.910004237">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    The_best_language
+
+</div>
+
+            <div class="markdown">
+                <h1 id="最好的编程语言">最好的编程语言</h1>
+<blockquote>
+<p>海象说是时候谈谈了。</p>
+</blockquote>
+<h2 id="0x00-缘起">0x00 缘起</h2>
+<p>最初第一次认识电脑，是同学带自己去玩游戏，那个时候街机已经不流行了，流行的是电脑游戏。看到电脑的样子感觉很高级，不知道这个东西到底能做什么，只知道可以玩好玩的游戏。😳</p>
+<p>慢慢的，不知道是天意还是命运，被没有填报志愿的计算机学院录取。第一天就被系主任的话迷住，用c语言来改变世界。自从认识了c语言后就开始鄙视任何语言，php/python/js/html是第一批被鄙视的语言，因为那个时候觉得这样的语言就是给非计算机人是用的。开始喜欢那种有Power的语言，所以第一c语言，第二c++语言。可是，那个时候，除了从书本上学习到知识外都很少从互联网学习知识，看到书本上的语法，例子，真的是无聊到极点。那个时候比较流行做管理系统，所以看到了Delphi的身影。可惜，Delphi的语法和c的语法有点不同，相对c#的语法要好些。所以，更多的学习了c#，可是怎么用呢？还是没有一个明确的思路。直到买了一本Visual Becial.net的书，按照书中的例子来写点小例子，如记事本。后来，在图书馆里看到了Java语言，书中说这个语言要改变世界，因为编译一次，到处运行。还不知道什么叫夸平台，因为只知道世界上只有Windows。</p>
+<p>凭借着对程序的热爱，开始找工作，到处都是Java程序员的招聘，而自己的文凭又不是那么强势，所以只能硬着头皮考了Java程序员认证。也凭着一点点运气被一家公司录取，开始了程序员之旅。第一家公司使用vb6和Delphi进行系统开发，那个时候还是比较开心的，因为是自己喜欢的语言，开发比较有动力。后来，互联网强势来袭，C#的asp.net和Java的Sevlet开始抗争。平台开始转移到Linux下，C#的优势没有了，全部都Java的天下。最后到移动端，也是Java的天下，微软的势力被缩减。</p>
+<p>原来工作的时候，是公司使用什么技术，你就得用什么技术，或者说你选择技术，来为公司谋利。那么在技术选型上就得考虑许多问题，比如平台，Windons的服务器比Linxu的服务器贵，而且技术单一。比如语言，go语言可以和Java语言一样高效，可是没有Java的生态圈好。python语言可以很快开发出原型，可是性能问题让大家都放弃。而且开发人员的层次不一样，所以不能使用上手慢的语言，比如rust。</p>
+<p>后来，没有工作的限制，自己当成爱好来写代码的时候，就不一样了。什么简单，就什么来。慢慢明白了python的格言，“人生苦短，我用python。”</p>
+<p>最近，突发奇想，把自己写的下载视频python代码，用不同语言来实现一遍，看看自己以前的语言还熟悉吗？</p>
+<h2 id="0x01-go语言">0x01 go语言</h2>
+<p>go语言是工作后最喜欢的语言，没有之一。为什么呢？</p>
+<h3 id="第一简单高效">第一，简单，高效</h3>
+<p>go语言的语法非常简单，几句语言就可以开发一个文件服务器。在使用的过程中，除了老忘记语句结束不需要;外，基本都能很平顺的写出代码。</p>
+<h3 id="第二跨平台编译">第二，跨平台编译</h3>
+<p>可以在macOS上编译成在Windows或者Linux上的程序，你说开心不？</p>
+<h3 id="第三google出品">第三，Google出品</h3>
+<p>一般大厂出品的东西，安全/性能都非常出色，并且保证了持续的发展。</p>
+<h3 id="结论">结论</h3>
+<p>如果在追求性能，快速实现的基础上go是非常好的选择，但是和python相比，少了许多库和非常好的生态圈。</p>
+<h2 id="0x02-rust语言">0x02 rust语言</h2>
+<p>和go语言相比，rust语言的确学习起来要难些。但是它的用途却是提供高性能，无垃圾回收，所以对比而言，这个用来做核心功能应该不错。目前，还是没有学通。</p>
+<h2 id="0x03-c">0x03 C#</h2>
+<p>曾经最喜欢的语言之一，跨平台后一直都舍不得uninstall。</p>
+<h2 id="0x04-java">0x04 Java</h2>
+<p>吃饭的语言，自从学会了后，一直都用Java在公司进行开发，你说它的作用大不大？</p>
+<h2 id="0x05-python">0x05 python</h2>
+<p>在工作中碰到几次，没有上心。没有工作后，特别喜欢使用。</p>
+<h2 id="0x06-开始">0x06 开始</h2>
+<p>最近使用自己写的python脚本下载m3u8格式的视频，基本上做点事情回来视频便下载好了，非常方便。在魔兽世界里，有句话说：“我的朋友，时间就是金钱！”。使用python脚本的时候，就觉得速度上是不是可以提速一点，所以想用go语言来改写一下，Cursor也用上了，不得不说gpt的确帮了许多忙。</p>
+<h3 id="python语言">python语言</h3>
+<p>python语言简单，第三方的库比较丰富。想到就可以做到的语言，恐怕只有python吧~~。</p>
+<p>下载同一文件耗时:30.98s。</p>
+<h3 id="go语言的改写">go语言的改写</h3>
+<p>使用go语言改写，一共花了两个晚上的时间，大约8个小时。</p>
+<table>
+<thead>
+<tr>
+<th>测试次数</th>
+<th>测试时间</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1次测试</td>
+<td>47.76s｜使用命令 <strong>go run .</strong> ，并且没有控制线程数量</td>
+<td></td>
+</tr>
+<tr>
+<td>第2次测试</td>
+<td>17.50s｜编译成可执行文件，线程控制20个。</td>
+<td></td>
+</tr>
+<tr>
+<td>第3次测试</td>
+<td>18.34s｜使用命令 <strong>go run .</strong>，线程控制20个。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>结论：</p>
+<ol>
+<li><strong>线程数量要控制</strong>。</li>
+<li><strong>能编译运行速度还是有所提升的</strong>。</li>
+<li><strong>go语言开发是真的快，基础库完全满足了需求。</strong></li>
+<li><strong>如果想要速度和简单，go语言是最佳的选择。</strong></li>
+<li><strong>测试非常给力，go test ^methodname 就可以直接测试测试函数，印象很深。</strong></li>
+<li><strong>如何控制不好代码，结果连python都不如，所以并不是代码的问题，人的问题也很重要。</strong></li>
+</ol>
+</li>
+</ul>
+<h3 id="rust改写">rust改写</h3>
+<p>即使加入了gpt的帮忙也未能实现，所以我提早退出了，毕竟知道自己的能力还不足，也不错！</p>
+<ul>
+<li>结论：
+<ol>
+<li><strong>不要使用自己不熟悉的语言，这个痛苦只有自己知道，&amp;str 和 Option&lt;Vec<!-- raw HTML omitted -->&gt;这些东西还没有搞定就要写代码，呵呵</strong></li>
+<li><strong>rust语言在vscode上的插件rust-analyzer真心不好用啊，本来cargo check就慢，写点代码就来一次check，这的太影响心情了。但是错误的提示居然还有提升，并且给出修改方法也是醉了🤣。</strong></li>
+<li><strong>Result的返回和match的处理非常好用！</strong></li>
+<li><strong>测试和go语言如出一辙，cargo test method_name,但是就是速度慢。</strong></li>
+<li><strong>如果犯贱，可以继续学习下去，毕竟这个语言非常有前途。</strong></li>
+<li><strong>第三方的包也非常丰富。</strong></li>
+</ol>
+</li>
+</ul>
+<h3 id="c改写">C#改写</h3>
+<p>使用C#语言改写，一共花了一个晚上的时间，大约4个小时。</p>
+<table>
+<thead>
+<tr>
+<th>测试次数</th>
+<th>测试时间</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1次测试</td>
+<td>21.682059s</td>
+<td>dotnet run</td>
+</tr>
+</tbody>
+</table>
+<p>惊喜不，的确非常惊喜，C#的性能达到了这个成绩，我非常满意。</p>
+<ul>
+<li>结论：
+<ol>
+<li><strong>找对方法很重要，所有的迷信只能靠自己去实践。</strong></li>
+<li><strong>C#已经开源并且跨平台，少一份偏见，多一份宽容吧！</strong></li>
+<li><strong>在go/rust兄弟决战的时候，C#默默的点了支烟。</strong></li>
+<li><strong>我爱C#并不是因为Delphi的作者，你信吗？</strong></li>
+<li><strong>测试要新建项目我也是醉了，难道为了让解决方案更加整洁些吗？感觉一下子团队作战的感觉？</strong></li>
+<li><strong>用着别人的东西，就别叽叽歪歪了。</strong></li>
+</ol>
+</li>
+</ul>
+<h3 id="java-改写">Java 改写</h3>
+<p>还是没有完成，因为发现还有许多的事情要做，就放弃了。不过我觉得这个难度不大，但是性能就可想而知了。</p>
+<h2 id="0x09-缘灭">0x09 缘灭</h2>
+<p>知道了自己需要什么比什么都重要？在学习的路上可以遇到不一样的风景，看你如何选择？也看你自己在路的什么位置。
+编程的语言那么多，随便都有几十种，都学习了是不是会累昏了。</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="如何读取照片中的条码信息 最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。
+服务器端使用 C# 和 Python 来使用验证上传的图片。
+Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
+1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
+2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!">
+
+<meta property="og:title" content="Howtousebarcode" />
+<meta property="og:description" content="如何读取照片中的条码信息 最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。
+服务器端使用 C# 和 Python 来使用验证上传的图片。
+Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
+1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
+2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/howtousebarcode/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2023-07-29T16:18:49+08:00" />
+<meta property="article:modified_time" content="2023-07-29T16:18:49+08:00" />
+
+
+<title>
+
+
+     Howtousebarcode 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/howtousebarcode/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-09-24%2013%3a21%3a43.665655%20%2b0800%20CST%20m%3d%2b4.175821284">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-09-24%2013%3a21%3a43.665655%20%2b0800%20CST%20m%3d%2b4.175821284">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-09-24%2013%3a21%3a43.665655%20%2b0800%20CST%20m%3d%2b4.175821284">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-09-24%2013%3a21%3a43.665655%20%2b0800%20CST%20m%3d%2b4.175821284">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Howtousebarcode
+
+</div>
+
+            <div class="markdown">
+                <h1 id="如何读取照片中的条码信息">如何读取照片中的条码信息</h1>
+<p>最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。</p>
+<p>服务器端使用 C# 和 Python 来使用验证上传的图片。</p>
+<h2 id="choice1python-获取条码信息">Choice1：Python 获取条码信息</h2>
+<p>相对而言 Python 的库比较多，使用起来比较方便。</p>
+<h3 id="1-安装-zbar">1. 安装 zbar</h3>
+<pre tabindex="0"><code>brew install zbar
+</code></pre><p>依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick</p>
+<h3 id="2-安装-pyzbar">2. 安装 pyzbar</h3>
+<pre tabindex="0"><code>pip install pyzbar
+</code></pre><h3 id="3-安装-pillow">3. 安装 Pillow</h3>
+<pre tabindex="0"><code>pip install pillow
+</code></pre><h3 id="4-test-code">4. Test Code</h3>
+<pre tabindex="0"><code>from pyzbar.pyzbar import decode
+from PIL import Image
+
+bar_result = decode(Image.open(&#39;book1.jpg&#39;))
+
+if len(barresult) &gt; 0 :
+    print(&#34;find barcode:&#34; + barresult[0].data.decode())
+else:
+    print(&#34;can&#39;t find barcode!&#34;)
+</code></pre><h2 id="choice2--c-获取条码信息">Choice2：  C# 获取条码信息</h2>
+<h3 id="1-nuget-安装-barcode">1. NuGet 安装 BarCode</h3>
+<h3 id="2-test-code">2. Test Code</h3>
+<pre tabindex="0"><code>using IronBarCode;
+var resultFromFile = BarcodeReader.Read(@&#34;book1.jpg&#34;);
+foreach(var PageReslut in resultFromFile)
+{
+    Console.WriteLine(&#34;find barcode is:&#34; + PageReslut.Text);
+}
+</code></pre><h2 id="choice3安卓使用相机读取条码">Choice3：安卓使用相机读取条码</h2>
+<h3 id="1-在buildgradle文件中添加zxing库的依赖">1. 在build.gradle文件中添加ZXing库的依赖</h3>
+<pre tabindex="0"><code>dependencies {
+    implementation &#39;com.journeyapps:zxing-android-embedded:4.1.0&#39;
+}
+</code></pre><h3 id="2test-code">2.Test Code</h3>
+<pre tabindex="0"><code>package com.guobingyi.barcodedemo
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import com.google.zxing.integration.android.IntentIntegrator
+import com.google.zxing.integration.android.IntentResult
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val scanBtn = findViewById&lt;Button&gt;(R.id.scanBarCodeBtn)
+        scanBtn.setOnClickListener( View.OnClickListener {
+            val scanner = IntentIntegrator(this)
+            scanner.initiateScan()
+        })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val result: IntentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+        if (result.contents != null) {
+            // 扫描成功，可以在这里处理结果
+            val barcode = result.contents
+            val barCodeTxt = findViewById&lt;TextView&gt;(R.id.barCodeTxt)
+            barCodeTxt.setText(barcode)
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+}
+</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

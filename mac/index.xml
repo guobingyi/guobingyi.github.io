@@ -6,7 +6,25 @@
     <description>Recent content in Mac on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 May 2021 09:56:21 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/mac/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jul 2023 17:10:51 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ntfs</title>
+      <link>https://guobingyi.github.io/mac/ntfs/</link>
+      <pubDate>Wed, 12 Jul 2023 17:10:51 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/mac/ntfs/</guid>
+      <description>Mac下挂载Windows下的硬盘 变化，变化。
+电脑已经8年了。
+而自己使用时间的越来约来少，或许三个宝让自己慢慢的认清了现实。
+突然使用电脑的时候，发现Mounty已经不能实现挂载硬盘了。提示需要NTFS-3G，而自己离开地球很久了。思路变成了去百度问一问，却忘记了原来的思路是去官网看看。哎，退化了。
+根据官网的提示，很快就解决了问题，但是自己却用百度去寻找问题，最终根据很难的样子，其实只要找到根源，问题就解决了。
+我使用了brew来安装mac上的软件，免费比什么都重要。
+1.安装macFUSE
+brew install --cask macfuse 2.安装 ntfs-3g-mac
+brew install ntfs-3g-mac 3.重启电脑后，设置安全性与隐私，允许签名为：“Benjamin Fleischer”的App。
+挂载移动硬盘后成功，并且可以删除原来在Mounty上不能删除的软件。（原来使用Mounty的时候，可以增加文件，却不可以删除，删除会死机重启😓）</description>
+    </item>
+    
     <item>
       <title>Downloadtools</title>
       <link>https://guobingyi.github.io/mac/downloadtools/</link>

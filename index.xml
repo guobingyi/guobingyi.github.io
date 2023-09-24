@@ -6,7 +6,68 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 05 Apr 2023 15:23:27 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 12:42:21 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The_best_language</title>
+      <link>https://guobingyi.github.io/code/the_best_language/</link>
+      <pubDate>Thu, 24 Aug 2023 12:42:21 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/the_best_language/</guid>
+      <description>最好的编程语言 海象说是时候谈谈了。
+0x00 缘起 最初第一次认识电脑，是同学带自己去玩游戏，那个时候街机已经不流行了，流行的是电脑游戏。看到电脑的样子感觉很高级，不知道这个东西到底能做什么，只知道可以玩好玩的游戏。😳
+慢慢的，不知道是天意还是命运，被没有填报志愿的计算机学院录取。第一天就被系主任的话迷住，用c语言来改变世界。自从认识了c语言后就开始鄙视任何语言，php/python/js/html是第一批被鄙视的语言，因为那个时候觉得这样的语言就是给非计算机人是用的。开始喜欢那种有Power的语言，所以第一c语言，第二c++语言。可是，那个时候，除了从书本上学习到知识外都很少从互联网学习知识，看到书本上的语法，例子，真的是无聊到极点。那个时候比较流行做管理系统，所以看到了Delphi的身影。可惜，Delphi的语法和c的语法有点不同，相对c#的语法要好些。所以，更多的学习了c#，可是怎么用呢？还是没有一个明确的思路。直到买了一本Visual Becial.net的书，按照书中的例子来写点小例子，如记事本。后来，在图书馆里看到了Java语言，书中说这个语言要改变世界，因为编译一次，到处运行。还不知道什么叫夸平台，因为只知道世界上只有Windows。
+凭借着对程序的热爱，开始找工作，到处都是Java程序员的招聘，而自己的文凭又不是那么强势，所以只能硬着头皮考了Java程序员认证。也凭着一点点运气被一家公司录取，开始了程序员之旅。第一家公司使用vb6和Delphi进行系统开发，那个时候还是比较开心的，因为是自己喜欢的语言，开发比较有动力。后来，互联网强势来袭，C#的asp.net和Java的Sevlet开始抗争。平台开始转移到Linux下，C#的优势没有了，全部都Java的天下。最后到移动端，也是Java的天下，微软的势力被缩减。
+原来工作的时候，是公司使用什么技术，你就得用什么技术，或者说你选择技术，来为公司谋利。那么在技术选型上就得考虑许多问题，比如平台，Windons的服务器比Linxu的服务器贵，而且技术单一。比如语言，go语言可以和Java语言一样高效，可是没有Java的生态圈好。python语言可以很快开发出原型，可是性能问题让大家都放弃。而且开发人员的层次不一样，所以不能使用上手慢的语言，比如rust。
+后来，没有工作的限制，自己当成爱好来写代码的时候，就不一样了。什么简单，就什么来。慢慢明白了python的格言，“人生苦短，我用python。”
+最近，突发奇想，把自己写的下载视频python代码，用不同语言来实现一遍，看看自己以前的语言还熟悉吗？
+0x01 go语言 go语言是工作后最喜欢的语言，没有之一。为什么呢？
+第一，简单，高效 go语言的语法非常简单，几句语言就可以开发一个文件服务器。在使用的过程中，除了老忘记语句结束不需要;外，基本都能很平顺的写出代码。
+第二，跨平台编译 可以在macOS上编译成在Windows或者Linux上的程序，你说开心不？
+第三，Google出品 一般大厂出品的东西，安全/性能都非常出色，并且保证了持续的发展。
+结论 如果在追求性能，快速实现的基础上go是非常好的选择，但是和python相比，少了许多库和非常好的生态圈。
+0x02 rust语言 和go语言相比，rust语言的确学习起来要难些。但是它的用途却是提供高性能，无垃圾回收，所以对比而言，这个用来做核心功能应该不错。目前，还是没有学通。
+0x03 C# 曾经最喜欢的语言之一，跨平台后一直都舍不得uninstall。
+0x04 Java 吃饭的语言，自从学会了后，一直都用Java在公司进行开发，你说它的作用大不大？
+0x05 python 在工作中碰到几次，没有上心。没有工作后，特别喜欢使用。
+0x06 开始 最近使用自己写的python脚本下载m3u8格式的视频，基本上做点事情回来视频便下载好了，非常方便。在魔兽世界里，有句话说：“我的朋友，时间就是金钱！”。使用python脚本的时候，就觉得速度上是不是可以提速一点，所以想用go语言来改写一下，Cursor也用上了，不得不说gpt的确帮了许多忙。
+python语言 python语言简单，第三方的库比较丰富。想到就可以做到的语言，恐怕只有python吧~~。
+下载同一文件耗时:30.98s。
+go语言的改写 使用go语言改写，一共花了两个晚上的时间，大约8个小时。
+测试次数 测试时间 备注 第1次测试 47.76s｜使用命令 go run . ，并且没有控制线程数量 第2次测试 17.50s｜编译成可执行文件，线程控制20个。 第3次测试 18.34s｜使用命令 go run .，线程控制20个。 结论：
+线程数量要控制。 能编译运行速度还是有所提升的。 go语言开发是真的快，基础库完全满足了需求。 如果想要速度和简单，go语言是最佳的选择。 测试非常给力，go test ^methodname 就可以直接测试测试函数，印象很深。 如何控制不好代码，结果连python都不如，所以并不是代码的问题，人的问题也很重要。 rust改写 即使加入了gpt的帮忙也未能实现，所以我提早退出了，毕竟知道自己的能力还不足，也不错！</description>
+    </item>
+    
+    <item>
+      <title>Howtousebarcode</title>
+      <link>https://guobingyi.github.io/code/howtousebarcode/</link>
+      <pubDate>Sat, 29 Jul 2023 16:18:49 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/howtousebarcode/</guid>
+      <description>如何读取照片中的条码信息 最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。
+服务器端使用 C# 和 Python 来使用验证上传的图片。
+Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
+1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
+2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&amp;#39;book1.jpg&amp;#39;)) if len(barresult) &amp;gt; 0 : print(&amp;#34;find barcode:&amp;#34; + barresult[0].data.decode()) else: print(&amp;#34;can&amp;#39;t find barcode!</description>
+    </item>
+    
+    <item>
+      <title>Ntfs</title>
+      <link>https://guobingyi.github.io/mac/ntfs/</link>
+      <pubDate>Wed, 12 Jul 2023 17:10:51 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/mac/ntfs/</guid>
+      <description>Mac下挂载Windows下的硬盘 变化，变化。
+电脑已经8年了。
+而自己使用时间的越来约来少，或许三个宝让自己慢慢的认清了现实。
+突然使用电脑的时候，发现Mounty已经不能实现挂载硬盘了。提示需要NTFS-3G，而自己离开地球很久了。思路变成了去百度问一问，却忘记了原来的思路是去官网看看。哎，退化了。
+根据官网的提示，很快就解决了问题，但是自己却用百度去寻找问题，最终根据很难的样子，其实只要找到根源，问题就解决了。
+我使用了brew来安装mac上的软件，免费比什么都重要。
+1.安装macFUSE
+brew install --cask macfuse 2.安装 ntfs-3g-mac
+brew install ntfs-3g-mac 3.重启电脑后，设置安全性与隐私，允许签名为：“Benjamin Fleischer”的App。
+挂载移动硬盘后成功，并且可以删除原来在Mounty上不能删除的软件。（原来使用Mounty的时候，可以增加文件，却不可以删除，删除会死机重启😓）</description>
+    </item>
+    
     <item>
       <title>TheLastOfUS</title>
       <link>https://guobingyi.github.io/movie/thelastofus/</link>
@@ -137,7 +198,10 @@ with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : Fil
 下载有三个文件：
 fpc-3.2.2.intelarm64-macosx.dmg fpc-src-3.2.2-20210709-macosx.dmg Lazarus-2.2.4-0-x86_64-macosx.pkg 安装顺序和上面的顺序一致，即可。也可以参阅官网文档。
 因为使用gdb进行调试，而苹果电脑却不给普通用户使用，可以加sudo来操作，可是lazarus没有地方调试，所以呢去问百度，最后找到了gdb签名的办法，可是我这里行不通，在最后关头，想到了官网查询文档，结果还真有。官网的做法是使用lldb替代gdb。详细说明在这里。
-最终如愿以偿，在macOS上运行了lazarus。当然了，现在还有其他的工作要做，先把python学习一下，我这个跳来跳去的也不是个办法，先一个一个解决吧！在看到lazarus之前，我居然把多年前用到的netbean下载下来，看到可以拖拉的Swing控件，我笑了，原来Java也可以这样操作～～。</description>
+最终如愿以偿，在macOS上运行了lazarus。当然了，现在还有其他的工作要做，先把python学习一下，我这个跳来跳去的也不是个办法，先一个一个解决吧！在看到lazarus之前，我居然把多年前用到的netbean下载下来，看到可以拖拉的Swing控件，我笑了，原来Java也可以这样操作～～。
+ps.2023-07-04
+玩转了一段时间，发现毕竟还是老了，现在的软件开发越来越便捷，更多的库和开发模式，都已经不在适应原来的模式，而自己也在不断的断舍离，python和java已经足够解决自己的问题，而在不断的学习新语言中也发现自己现在真正喜欢的语言。如果有开发需要，也会安装上需要的语言，所以，暂时删除了。
+删除地址,按照删除脚本完全可以删除。</description>
     </item>
     
     <item>
