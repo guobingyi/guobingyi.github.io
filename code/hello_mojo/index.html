@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Hello,mojo 尽信书，不如无书！
+最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。
+第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～
+2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。
+1. 安装podman 1.1 macOS上的神器 brew brew install podman 1.2 初始化podman podman machine init 1.3 启动podman podman machine start 1.4 查找Ubuntu podman search docker.io/ubuntu 1.5 安装启动Ubuntu podman run -it docker.io/library/ubuntu 1.6 进入到podman虚拟机 podman machine ssh 更多详细操作请查看podman官网。
+2 安装mojo 进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。
+2.1 安装curl apt update &amp;&amp; apt install curl 2.2 安装modular 有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。
+curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。
+2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。">
+
+<meta property="og:title" content="Hello_mojo" />
+<meta property="og:description" content="Hello,mojo 尽信书，不如无书！
+最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。
+第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～
+2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。
+1. 安装podman 1.1 macOS上的神器 brew brew install podman 1.2 初始化podman podman machine init 1.3 启动podman podman machine start 1.4 查找Ubuntu podman search docker.io/ubuntu 1.5 安装启动Ubuntu podman run -it docker.io/library/ubuntu 1.6 进入到podman虚拟机 podman machine ssh 更多详细操作请查看podman官网。
+2 安装mojo 进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。
+2.1 安装curl apt update &amp;&amp; apt install curl 2.2 安装modular 有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。
+curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。
+2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/hello_mojo/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2023-09-24T13:39:14+08:00" />
+<meta property="article:modified_time" content="2023-09-24T13:39:14+08:00" />
+
+
+<title>
+
+
+     Hello_mojo 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/hello_mojo/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Hello_mojo
+
+</div>
+
+            <div class="markdown">
+                <h1 id="hellomojo">Hello,mojo</h1>
+<blockquote>
+<p>尽信书，不如无书！</p>
+</blockquote>
+<p><img src="https://guobingyi.github.io/img/code/mojo-dev.jpg" alt="mojo in code"></p>
+<p>最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。</p>
+<p>第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～</p>
+<p>2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。</p>
+<h2 id="1-安装podman">1. 安装podman</h2>
+<h3 id="11-macos上的神器-brew">1.1 macOS上的神器 brew</h3>
+<pre tabindex="0"><code>brew install podman
+</code></pre><h3 id="12-初始化podman">1.2 初始化podman</h3>
+<pre tabindex="0"><code>podman machine init
+</code></pre><h3 id="13-启动podman">1.3 启动podman</h3>
+<pre tabindex="0"><code>podman machine start
+</code></pre><h3 id="14-查找ubuntu">1.4 查找Ubuntu</h3>
+<pre tabindex="0"><code>podman search docker.io/ubuntu
+</code></pre><h3 id="15-安装启动ubuntu">1.5 安装启动Ubuntu</h3>
+<pre tabindex="0"><code>podman run -it docker.io/library/ubuntu
+</code></pre><h3 id="16-进入到podman虚拟机">1.6 进入到podman虚拟机</h3>
+<pre tabindex="0"><code>podman machine ssh
+</code></pre><p>更多详细操作请查看<a href="https://docs.podman.io/">podman官网</a>。</p>
+<h2 id="2-安装mojo">2 安装mojo</h2>
+<p>进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。</p>
+<h3 id="21-安装curl">2.1 安装curl</h3>
+<pre tabindex="0"><code>apt update &amp;&amp; apt install curl
+</code></pre><h3 id="22-安装modular">2.2 安装modular</h3>
+<p>有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。</p>
+<pre tabindex="0"><code>curl https://get.modular.com | \
+  MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \
+  sh -
+</code></pre><p>安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。</p>
+<h3 id="23--安装mojo">2.3  安装mojo</h3>
+<pre tabindex="0"><code>modular install mojo
+</code></pre><p>我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去<a href="https://docs.modular.com/mojo/roadmap.html#mojo-sdk-known-issues">known-issues</a>看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。</p>
+<p>让我难以忘怀的命令是这个：</p>
+<pre tabindex="0"><code>modular: error: failure detected - please run `modular clean` and try again
+</code></pre><p>看到try again了吧，好不容易用VPN把一些东西下载下来，因为某几个没有下载好，那就再来一次呗。</p>
+<p>让我们看看这个报了哪些错误：</p>
+<pre tabindex="0"><code>==========================
+Failure Information:
+	- http error: failed to reach URL https://cas.modular.com/0/bMhzPD9Lch93-cq37AFHNKVX1jLZsPC4GyvDS94CLoY with cURL error Failure when receiving data from the peer - Looking for bMhzPD9Lch93-cq37AFHNKVX1jLZsPC4GyvDS94CLoY
+	- http error: failed to reach URL https://cas.modular.com/0/BJQxbJ7r1e1hCtY-5drp4KPW-MeoBkBY3LmSRHBhMek with cURL error Failure when receiving data from the peer - Looking for BJQxbJ7r1e1hCtY-5drp4KPW-MeoBkBY3LmSRHBhMek
+	- http error: failed to reach URL https://cas.modular.com/0/r7Uh_7YudP025MOQM_uMTbA5iOdIlKqnoXgfywB20_Y with cURL error Failure when receiving data from the peer - Looking for r7Uh_7YudP025MOQM_uMTbA5iOdIlKqnoXgfywB20_Y
+==========================
+</code></pre><p>这个错误还是可以理解的，怪自己的VPN不稳定，是吧！</p>
+<pre tabindex="0"><code>==========================
+Failure Information:
+	- http error: failed to reach URL https://cas.modular.com/0/bMhzPD9Lch93-cq37AFHNKVX1jLZsPC4GyvDS94CLoY with cURL error Failure when receiving data from the peer - Looking for bMhzPD9Lch93-cq37AFHNKVX1jLZsPC4GyvDS94CLoY
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/liblldb.so.18.0.0git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/liblldb.so failed: File exists
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/libMojoJupyter.so.18git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/libMojoJupyter.so failed: File exists
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/liblldb.so.18.0.0git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/liblldb.so.18git failed: File exists
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/libKGENCompilerRTShared.so.18git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/libKGENCompilerRTShared.so failed: File exists
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/libMojoLLDB.so.18git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/libMojoLLDB.so failed: File exists
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/libLLCLRuntimeGlobals.so.18git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/libLLCLRuntimeGlobals.so failed: File exists
+	- Creating symlink for /root/.modular/pkg/packages.modular.com_mojo/lib/libMSupportGlobals.so.18git -&gt; /root/.modular/pkg/packages.modular.com_mojo/lib/libMSupportGlobals.so failed: File exists
+	- http error: failed to reach URL https://cas.modular.com/0/r7Uh_7YudP025MOQM_uMTbA5iOdIlKqnoXgfywB20_Y with cURL error Failure when receiving data from the peer - Looking for r7Uh_7YudP025MOQM_uMTbA5iOdIlKqnoXgfywB20_Y
+==========================
+</code></pre><p>下载了那么久你告诉我没有使用 modular clean是吧，每次都要从头开始是吧？</p>
+<pre tabindex="0"><code>== stderr ==
+/root/.modular/pkg/packages.modular.com_mojo/bin/lldb: error while loading shared libraries: libedit.so.2: cannot open shared object file: No such file or directory
+
+TEST: `mojo repl`... ERROR
+Traceback (most recent call last):
+  File &#34;/root/.modular/pkg/packages.modular.com_mojo/scripts/post-install/self-test.py&#34;, line 378, in &lt;module&gt;
+    main()
+  File &#34;/root/.modular/pkg/packages.modular.com_mojo/scripts/post-install/self-test.py&#34;, line 374, in main
+    tester.test(args.test_jupyter)
+  File &#34;/root/.modular/pkg/packages.modular.com_mojo/scripts/post-install/self-test.py&#34;, line 311, in test
+    self.test_mojo_repl()
+  File &#34;/root/.modular/pkg/packages.modular.com_mojo/scripts/post-install/self-test.py&#34;, line 195, in test_mojo_repl
+    assert False
+AssertionError
+modular: error: failed to run python:
+</code></pre><p>到这里已经让我欣喜若狂啦，因为就是已经提示了大部分的mojo已经可以用啦</p>
+<pre tabindex="0"><code>Testing `MODULAR_HOME=/root/.modular`
+* `/root/.modular/pkg/packages.modular.com_mojo/bin/mojo`...
+TEST: `mojo --help`... OK
+TEST: `mojo run --help`... OK
+TEST: `mojo build test_mandelbrot.mojo`... OK
+TEST: `mojo build test_python.mojo`... OK
+TEST: `mojo demangle`... OK
+TEST: `mojo format`... OK
+TEST: `mojo package`... OK
+TEST: `mojo test_mandelbrot.mojo`... OK
+TEST: `mojo test_python.mojo`... OK
+</code></pre><p>这个错误是啥呢？是Ubuntu没有libedit2，这个好解决，绝对不modular clean了，毕竟太耗时，耗精力了。</p>
+<pre tabindex="0"><code>apt install libedit2
+</code></pre><p>问题搞定，然后尝试使用mojo的时候发现还有个配置要设置：</p>
+<pre tabindex="0"><code>echo &#39;export MODULAR_HOME=&#34;$HOME/.modular&#34;&#39; &gt;&gt; ~/.bashrc
+
+echo &#39;export PATH=&#34;$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH&#34;&#39; &gt;&gt; ~/.bashrc
+
+source ~/.bashrc
+</code></pre><p>好啦，可以开心的玩一会啦，毕竟还要设置镜像的ssh登录到vscode上。</p>
+<h3 id="3-配置mojo到vscode">3. 配置mojo到vscode</h3>
+<p>podman和docker的区别在于podman还需要自己创建一个容器，我们就称为根容器吧。网络配置上需要进行一定的转换，才可以真正的使用Ubuntu容器。</p>
+<h4 id="31-在ubuntu中安装ssh">3.1 在Ubuntu中安装ssh</h4>
+<h5 id="1-安装ssh服务器">1. 安装ssh服务器</h5>
+<pre tabindex="0"><code>apt install openssh-server
+</code></pre><h5 id="2-启动服务">2. 启动服务</h5>
+<pre tabindex="0"><code>service ssh start
+</code></pre><h5 id="3-查看服务状态">3. 查看服务状态</h5>
+<pre tabindex="0"><code>
+service ssh status
+</code></pre><h5 id="4-查看端口状态">4. 查看端口状态</h5>
+<pre tabindex="0"><code>netstat -tuln|grep 22
+</code></pre><h4 id="32-在ubuntu中安装网络配置工具">3.2 在Ubuntu中安装网络配置工具</h4>
+<pre tabindex="0"><code>apt-get install -y net-tools
+</code></pre><h4 id="33-安装iptables">3.3 安装iptables</h4>
+<pre tabindex="0"><code>apt install iptables
+</code></pre><p><strong>注意：安装的时候启动容器一定要加入&ndash;cap-add=NET_ADMIN选项，不然会报错</strong></p>
+<pre tabindex="0"><code>iptables v1.8.7 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+</code></pre><p>添加让ssh通行规则：</p>
+<pre tabindex="0"><code>iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+</code></pre><h4 id="34-安装vim">3.4 安装vim</h4>
+<pre tabindex="0"><code>apt install vim
+</code></pre><p>安装vim的目的主要就是为了修改ssh配置。</p>
+<pre tabindex="0"><code>vim /etc/ssh/sshd_config
+</code></pre><p>添加一行让root可以登录的信息</p>
+<pre tabindex="0"><code>PermitRootLogin yes
+</code></pre><p>至此，容器配置完成，可以进行提交啦。</p>
+<pre tabindex="0"><code>podman commit containerID
+</code></pre><h4 id="32-启动容器">3.2 启动容器</h4>
+<pre tabindex="0"><code> podman run -itd --name=mojo-dev --cap-add=NET_ADMIN -p 5000:22 5a4d4ff6c70a /bin/bash
+</code></pre><h4 id="33-配置路由">3.3 配置路由</h4>
+<p>这个操作在本机中执行，目的就是让本机可以正常的使用ssh访问到容器中。</p>
+<pre tabindex="0"><code>sudo route add -net 10.88.0.0 -netmask 255.255.255.0 192.168.127.1
+</code></pre><h4 id="4-vscode远程连接">4. vscode远程连接</h4>
+<p>点击vscode左下脚的Open a Remote Window，选择Connect to Host&hellip;，添加一个 Add New SSH Host&hellip;，输入：</p>
+<pre tabindex="0"><code>ssh root@localhost -p 5000
+</code></pre><p>然后，就可以开心的code mojo啦～～</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

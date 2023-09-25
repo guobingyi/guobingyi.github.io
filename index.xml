@@ -6,7 +6,24 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Aug 2023 12:42:21 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Sep 2023 13:39:14 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello_mojo</title>
+      <link>https://guobingyi.github.io/code/hello_mojo/</link>
+      <pubDate>Sun, 24 Sep 2023 13:39:14 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/hello_mojo/</guid>
+      <description>Hello,mojo 尽信书，不如无书！
+最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。
+第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～
+2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。
+1. 安装podman 1.1 macOS上的神器 brew brew install podman 1.2 初始化podman podman machine init 1.3 启动podman podman machine start 1.4 查找Ubuntu podman search docker.io/ubuntu 1.5 安装启动Ubuntu podman run -it docker.io/library/ubuntu 1.6 进入到podman虚拟机 podman machine ssh 更多详细操作请查看podman官网。
+2 安装mojo 进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。
+2.1 安装curl apt update &amp;amp;&amp;amp; apt install curl 2.2 安装modular 有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。
+curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。
+2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。</description>
+    </item>
+    
     <item>
       <title>The_best_language</title>
       <link>https://guobingyi.github.io/code/the_best_language/</link>
