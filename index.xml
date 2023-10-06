@@ -6,7 +6,27 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 24 Sep 2023 13:39:14 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Oct 2023 21:34:43 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update_python</title>
+      <link>https://guobingyi.github.io/code/update_python/</link>
+      <pubDate>Wed, 04 Oct 2023 21:34:43 +0800</pubDate>
+      
+      <guid>https://guobingyi.github.io/code/update_python/</guid>
+      <description>Python更新记录 知之为知之，不知为不知。
+从python3.10.0到3.12.0已经更新了许多版本，我原来的习惯都是用venv的模式加pyenv来进行开发的。现在，更新至3.12突然发现自己每次使用一个项目就要创建一个venv的模式有点占用空间了。没有转变过来，如果开发新项目或者项目彼此之间没有太多连接的情况下，或许venv的模式是不错的选择，可是，对于个人项目而言，又过于太严谨化了。什么都要和自己匹配才是最好的呢？
+由于自己的项目过多的使用venv模式，导致每使用一个项目就要切换到不同的venv中，所以速度慢，而且需要记住的东西较多，反而把自己搞累了。现在想把项目统一到一个地方，这样就不那么累了，启动项目，开始工作。
+迁移的第一步从将pyenv迁移到扩展卡，毕竟128G的主力盘不能浪费。
+注：扩展卡就780M，感觉可以先把电影看掉一些在搞这个工作了。
+开始搞起，因为macOS下没有Command + x，那么就使用mv命名吧。 mv .pyenv /Volumes/Transcend/Project/python_code/pyenv_home 加入配置命令： export PYENV_ROOT=/Volumes/Transcend/Project/python_code/pyenv_home/.pyenv Done. 安装python3.12.0报错：
+pyenv install 3.12.0 报错原因：
+BUILD FAILED (OS X 12.7 using python-build 20180424) 解决步骤：
+1.删除老的CommandLineTools
+sudo rm -rf /Library/Developer/CommandLineTools 2.重新安装Xcode Command line tools
+xcode-select --install 3.重新安装python3.12.0
+pyenv install 3.12.0 </description>
+    </item>
+    
     <item>
       <title>Hello_mojo</title>
       <link>https://guobingyi.github.io/code/hello_mojo/</link>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Python更新记录 知之为知之，不知为不知。
+从python3.10.0到3.12.0已经更新了许多版本，我原来的习惯都是用venv的模式加pyenv来进行开发的。现在，更新至3.12突然发现自己每次使用一个项目就要创建一个venv的模式有点占用空间了。没有转变过来，如果开发新项目或者项目彼此之间没有太多连接的情况下，或许venv的模式是不错的选择，可是，对于个人项目而言，又过于太严谨化了。什么都要和自己匹配才是最好的呢？
+由于自己的项目过多的使用venv模式，导致每使用一个项目就要切换到不同的venv中，所以速度慢，而且需要记住的东西较多，反而把自己搞累了。现在想把项目统一到一个地方，这样就不那么累了，启动项目，开始工作。
+迁移的第一步从将pyenv迁移到扩展卡，毕竟128G的主力盘不能浪费。
+注：扩展卡就780M，感觉可以先把电影看掉一些在搞这个工作了。
+开始搞起，因为macOS下没有Command &#43; x，那么就使用mv命名吧。 mv .pyenv /Volumes/Transcend/Project/python_code/pyenv_home 加入配置命令： export PYENV_ROOT=/Volumes/Transcend/Project/python_code/pyenv_home/.pyenv Done. 安装python3.12.0报错：
+pyenv install 3.12.0 报错原因：
+BUILD FAILED (OS X 12.7 using python-build 20180424) 解决步骤：
+1.删除老的CommandLineTools
+sudo rm -rf /Library/Developer/CommandLineTools 2.重新安装Xcode Command line tools
+xcode-select --install 3.重新安装python3.12.0
+pyenv install 3.12.0 ">
+
+<meta property="og:title" content="Update_python" />
+<meta property="og:description" content="Python更新记录 知之为知之，不知为不知。
+从python3.10.0到3.12.0已经更新了许多版本，我原来的习惯都是用venv的模式加pyenv来进行开发的。现在，更新至3.12突然发现自己每次使用一个项目就要创建一个venv的模式有点占用空间了。没有转变过来，如果开发新项目或者项目彼此之间没有太多连接的情况下，或许venv的模式是不错的选择，可是，对于个人项目而言，又过于太严谨化了。什么都要和自己匹配才是最好的呢？
+由于自己的项目过多的使用venv模式，导致每使用一个项目就要切换到不同的venv中，所以速度慢，而且需要记住的东西较多，反而把自己搞累了。现在想把项目统一到一个地方，这样就不那么累了，启动项目，开始工作。
+迁移的第一步从将pyenv迁移到扩展卡，毕竟128G的主力盘不能浪费。
+注：扩展卡就780M，感觉可以先把电影看掉一些在搞这个工作了。
+开始搞起，因为macOS下没有Command &#43; x，那么就使用mv命名吧。 mv .pyenv /Volumes/Transcend/Project/python_code/pyenv_home 加入配置命令： export PYENV_ROOT=/Volumes/Transcend/Project/python_code/pyenv_home/.pyenv Done. 安装python3.12.0报错：
+pyenv install 3.12.0 报错原因：
+BUILD FAILED (OS X 12.7 using python-build 20180424) 解决步骤：
+1.删除老的CommandLineTools
+sudo rm -rf /Library/Developer/CommandLineTools 2.重新安装Xcode Command line tools
+xcode-select --install 3.重新安装python3.12.0
+pyenv install 3.12.0 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/update_python/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2023-10-04T21:34:43+08:00" />
+<meta property="article:modified_time" content="2023-10-04T21:34:43+08:00" />
+
+
+<title>
+
+
+     Update_python 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/update_python/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-10-06%2021%3a14%3a32.386372%20%2b0800%20CST%20m%3d%2b5.428930311">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-10-06%2021%3a14%3a32.386372%20%2b0800%20CST%20m%3d%2b5.428930311">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-10-06%2021%3a14%3a32.386372%20%2b0800%20CST%20m%3d%2b5.428930311">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-10-06%2021%3a14%3a32.386372%20%2b0800%20CST%20m%3d%2b5.428930311">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Update_python
+
+</div>
+
+            <div class="markdown">
+                <h2 id="python更新记录">Python更新记录</h2>
+<blockquote>
+<p>知之为知之，不知为不知。</p>
+</blockquote>
+<p>从python3.10.0到3.12.0已经更新了许多版本，我原来的习惯都是用venv的模式加pyenv来进行开发的。现在，更新至3.12突然发现自己每次使用一个项目就要创建一个venv的模式有点占用空间了。没有转变过来，如果开发新项目或者项目彼此之间没有太多连接的情况下，或许venv的模式是不错的选择，可是，对于个人项目而言，又过于太严谨化了。什么都要和自己匹配才是最好的呢？</p>
+<p>由于自己的项目过多的使用venv模式，导致每使用一个项目就要切换到不同的venv中，所以速度慢，而且需要记住的东西较多，反而把自己搞累了。现在想把项目统一到一个地方，这样就不那么累了，启动项目，开始工作。</p>
+<p>迁移的第一步从将pyenv迁移到扩展卡，毕竟128G的主力盘不能浪费。</p>
+<p><strong>注：扩展卡就780M，感觉可以先把电影看掉一些在搞这个工作了。</strong></p>
+<ol>
+<li>开始搞起，因为macOS下没有Command + x，那么就使用mv命名吧。</li>
+</ol>
+<pre tabindex="0"><code>mv .pyenv /Volumes/Transcend/Project/python_code/pyenv_home
+</code></pre><ol start="2">
+<li>加入配置命令：</li>
+</ol>
+<pre tabindex="0"><code>export PYENV_ROOT=/Volumes/Transcend/Project/python_code/pyenv_home/.pyenv
+</code></pre><ol start="3">
+<li>Done.</li>
+</ol>
+<p>安装python3.12.0报错：</p>
+<pre tabindex="0"><code>pyenv install 3.12.0
+</code></pre><p>报错原因：</p>
+<pre tabindex="0"><code>BUILD FAILED (OS X 12.7 using python-build 20180424)
+</code></pre><p>解决步骤：</p>
+<p>1.删除老的CommandLineTools</p>
+<pre tabindex="0"><code>sudo rm -rf /Library/Developer/CommandLineTools
+</code></pre><p>2.重新安装Xcode Command line tools</p>
+<pre tabindex="0"><code>xcode-select --install
+</code></pre><p>3.重新安装python3.12.0</p>
+<pre tabindex="0"><code>pyenv install 3.12.0
+</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

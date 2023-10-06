@@ -61,11 +61,11 @@ curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee3713
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2023-10-06%2021%3a14%3a31.889879%20%2b0800%20CST%20m%3d%2b4.932435895">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2023-10-06%2021%3a14%3a31.889879%20%2b0800%20CST%20m%3d%2b4.932435895">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2023-10-06%2021%3a14%3a31.889879%20%2b0800%20CST%20m%3d%2b4.932435895">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-09-25%2013%3a13%3a58.458445%20%2b0800%20CST%20m%3d%2b5.601971174">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2023-10-06%2021%3a14%3a31.889879%20%2b0800%20CST%20m%3d%2b4.932435895">
     
 
 
@@ -408,6 +408,10 @@ service ssh status
 <p>点击vscode左下脚的Open a Remote Window，选择Connect to Host&hellip;，添加一个 Add New SSH Host&hellip;，输入：</p>
 <pre tabindex="0"><code>ssh root@localhost -p 5000
 </code></pre><p>然后，就可以开心的code mojo啦～～</p>
+<p>还是因为电脑的问题，不得不重新配置podman的qcow2文件路径，毕竟随便一用就达到了10G，所以呢就想把qcow2文件挪一下位置。</p>
+<p>1.编辑
+~/.config/containers/podman-machine-default.json中包含qcow2的位置。</p>
+<p>2.修改为需要挪动的位置。</p>
 
             </div>
         </div>
