@@ -6,391 +6,168 @@
     <description>Recent content in Code on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Oct 2023 21:34:43 +0800</lastBuildDate><atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Oct 2023 21:34:43 +0800</lastBuildDate>
+    <atom:link href="https://guobingyi.github.io/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Update_python</title>
       <link>https://guobingyi.github.io/code/update_python/</link>
       <pubDate>Wed, 04 Oct 2023 21:34:43 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/update_python/</guid>
-      <description>Python更新记录 知之为知之，不知为不知。
-从python3.10.0到3.12.0已经更新了许多版本，我原来的习惯都是用venv的模式加pyenv来进行开发的。现在，更新至3.12突然发现自己每次使用一个项目就要创建一个venv的模式有点占用空间了。没有转变过来，如果开发新项目或者项目彼此之间没有太多连接的情况下，或许venv的模式是不错的选择，可是，对于个人项目而言，又过于太严谨化了。什么都要和自己匹配才是最好的呢？
-由于自己的项目过多的使用venv模式，导致每使用一个项目就要切换到不同的venv中，所以速度慢，而且需要记住的东西较多，反而把自己搞累了。现在想把项目统一到一个地方，这样就不那么累了，启动项目，开始工作。
-迁移的第一步从将pyenv迁移到扩展卡，毕竟128G的主力盘不能浪费。
-注：扩展卡就780M，感觉可以先把电影看掉一些在搞这个工作了。
-开始搞起，因为macOS下没有Command + x，那么就使用mv命名吧。 mv .pyenv /Volumes/Transcend/Project/python_code/pyenv_home 加入配置命令： export PYENV_ROOT=/Volumes/Transcend/Project/python_code/pyenv_home/.pyenv Done. 安装python3.12.0报错：
-pyenv install 3.12.0 报错原因：
-BUILD FAILED (OS X 12.7 using python-build 20180424) 解决步骤：
-1.删除老的CommandLineTools
-sudo rm -rf /Library/Developer/CommandLineTools 2.重新安装Xcode Command line tools
-xcode-select --install 3.重新安装python3.12.0
-pyenv install 3.12.0 </description>
+      <description>Python更新记录 知之为知之，不知为不知。&#xA;从python3.10.0到3.12.0已经更新了许多版本，我原来的习惯都是用venv的模式加pyenv来进行开发的。现在，更新至3.12突然发现自己每次使用一个项目就要创建一个venv的模式有点占用空间了。没有转变过来，如果开发新项目或者项目彼此之间没有太多连接的情况下，或许venv的模式是不错的选择，可是，对于个人项目而言，又过于太严谨化了。什么都要和自己匹配才是最好的呢？&#xA;由于自己的项目过多的使用venv模式，导致每使用一个项目就要切换到不同的venv中，所以速度慢，而且需要记住的东西较多，反而把自己搞累了。现在想把项目统一到一个地方，这样就不那么累了，启动项目，开始工作。&#xA;迁移的第一步从将pyenv迁移到扩展卡，毕竟128G的主力盘不能浪费。&#xA;注：扩展卡就780M，感觉可以先把电影看掉一些在搞这个工作了。&#xA;开始搞起，因为macOS下没有Command + x，那么就使用mv命名吧。 mv .pyenv /Volumes/Transcend/Project/python_code/pyenv_home 加入配置命令： export PYENV_ROOT=/Volumes/Transcend/Project/python_code/pyenv_home/.pyenv Done. 安装python3.12.0报错：&#xA;pyenv install 3.12.0 报错原因：&#xA;BUILD FAILED (OS X 12.7 using python-build 20180424) 解决步骤：&#xA;1.删除老的CommandLineTools&#xA;sudo rm -rf /Library/Developer/CommandLineTools 2.重新安装Xcode Command line tools&#xA;xcode-select --install 3.重新安装python3.12.0&#xA;pyenv install 3.12.0 </description>
     </item>
-    
     <item>
       <title>Hello_mojo</title>
       <link>https://guobingyi.github.io/code/hello_mojo/</link>
       <pubDate>Sun, 24 Sep 2023 13:39:14 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/hello_mojo/</guid>
-      <description>Hello,mojo 尽信书，不如无书！
-最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。
-第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～
-2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。
-1. 安装podman 1.1 macOS上的神器 brew brew install podman 1.2 初始化podman podman machine init 1.3 启动podman podman machine start 1.4 查找Ubuntu podman search docker.io/ubuntu 1.5 安装启动Ubuntu podman run -it docker.io/library/ubuntu 1.6 进入到podman虚拟机 podman machine ssh 更多详细操作请查看podman官网。
-2 安装mojo 进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。
-2.1 安装curl apt update &amp;amp;&amp;amp; apt install curl 2.2 安装modular 有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。
-curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。
-2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。</description>
+      <description>Hello,mojo 尽信书，不如无书！&#xA;最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。&#xA;第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～&#xA;2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。&#xA;1. 安装podman 1.1 macOS上的神器 brew brew install podman 1.2 初始化podman podman machine init 1.3 启动podman podman machine start 1.4 查找Ubuntu podman search docker.io/ubuntu 1.5 安装启动Ubuntu podman run -it docker.io/library/ubuntu 1.6 进入到podman虚拟机 podman machine ssh 更多详细操作请查看podman官网。&#xA;2 安装mojo 进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。&#xA;2.1 安装curl apt update &amp;amp;&amp;amp; apt install curl 2.2 安装modular 有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。&#xA;curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。&#xA;2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。</description>
     </item>
-    
     <item>
       <title>The_best_language</title>
       <link>https://guobingyi.github.io/code/the_best_language/</link>
       <pubDate>Thu, 24 Aug 2023 12:42:21 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/the_best_language/</guid>
-      <description>最好的编程语言 海象说是时候谈谈了。
-0x00 缘起 最初第一次认识电脑，是同学带自己去玩游戏，那个时候街机已经不流行了，流行的是电脑游戏。看到电脑的样子感觉很高级，不知道这个东西到底能做什么，只知道可以玩好玩的游戏。😳
-慢慢的，不知道是天意还是命运，被没有填报志愿的计算机学院录取。第一天就被系主任的话迷住，用c语言来改变世界。自从认识了c语言后就开始鄙视任何语言，php/python/js/html是第一批被鄙视的语言，因为那个时候觉得这样的语言就是给非计算机人是用的。开始喜欢那种有Power的语言，所以第一c语言，第二c++语言。可是，那个时候，除了从书本上学习到知识外都很少从互联网学习知识，看到书本上的语法，例子，真的是无聊到极点。那个时候比较流行做管理系统，所以看到了Delphi的身影。可惜，Delphi的语法和c的语法有点不同，相对c#的语法要好些。所以，更多的学习了c#，可是怎么用呢？还是没有一个明确的思路。直到买了一本Visual Becial.net的书，按照书中的例子来写点小例子，如记事本。后来，在图书馆里看到了Java语言，书中说这个语言要改变世界，因为编译一次，到处运行。还不知道什么叫夸平台，因为只知道世界上只有Windows。
-凭借着对程序的热爱，开始找工作，到处都是Java程序员的招聘，而自己的文凭又不是那么强势，所以只能硬着头皮考了Java程序员认证。也凭着一点点运气被一家公司录取，开始了程序员之旅。第一家公司使用vb6和Delphi进行系统开发，那个时候还是比较开心的，因为是自己喜欢的语言，开发比较有动力。后来，互联网强势来袭，C#的asp.net和Java的Sevlet开始抗争。平台开始转移到Linux下，C#的优势没有了，全部都Java的天下。最后到移动端，也是Java的天下，微软的势力被缩减。
-原来工作的时候，是公司使用什么技术，你就得用什么技术，或者说你选择技术，来为公司谋利。那么在技术选型上就得考虑许多问题，比如平台，Windons的服务器比Linxu的服务器贵，而且技术单一。比如语言，go语言可以和Java语言一样高效，可是没有Java的生态圈好。python语言可以很快开发出原型，可是性能问题让大家都放弃。而且开发人员的层次不一样，所以不能使用上手慢的语言，比如rust。
-后来，没有工作的限制，自己当成爱好来写代码的时候，就不一样了。什么简单，就什么来。慢慢明白了python的格言，“人生苦短，我用python。”
-最近，突发奇想，把自己写的下载视频python代码，用不同语言来实现一遍，看看自己以前的语言还熟悉吗？
-0x01 go语言 go语言是工作后最喜欢的语言，没有之一。为什么呢？
-第一，简单，高效 go语言的语法非常简单，几句语言就可以开发一个文件服务器。在使用的过程中，除了老忘记语句结束不需要;外，基本都能很平顺的写出代码。
-第二，跨平台编译 可以在macOS上编译成在Windows或者Linux上的程序，你说开心不？
-第三，Google出品 一般大厂出品的东西，安全/性能都非常出色，并且保证了持续的发展。
-结论 如果在追求性能，快速实现的基础上go是非常好的选择，但是和python相比，少了许多库和非常好的生态圈。
-0x02 rust语言 和go语言相比，rust语言的确学习起来要难些。但是它的用途却是提供高性能，无垃圾回收，所以对比而言，这个用来做核心功能应该不错。目前，还是没有学通。
-0x03 C# 曾经最喜欢的语言之一，跨平台后一直都舍不得uninstall。
-0x04 Java 吃饭的语言，自从学会了后，一直都用Java在公司进行开发，你说它的作用大不大？
-0x05 python 在工作中碰到几次，没有上心。没有工作后，特别喜欢使用。
-0x06 开始 最近使用自己写的python脚本下载m3u8格式的视频，基本上做点事情回来视频便下载好了，非常方便。在魔兽世界里，有句话说：“我的朋友，时间就是金钱！”。使用python脚本的时候，就觉得速度上是不是可以提速一点，所以想用go语言来改写一下，Cursor也用上了，不得不说gpt的确帮了许多忙。
-python语言 python语言简单，第三方的库比较丰富。想到就可以做到的语言，恐怕只有python吧~~。
-下载同一文件耗时:30.98s。
-go语言的改写 使用go语言改写，一共花了两个晚上的时间，大约8个小时。
-测试次数 测试时间 备注 第1次测试 47.76s｜使用命令 go run . ，并且没有控制线程数量 第2次测试 17.50s｜编译成可执行文件，线程控制20个。 第3次测试 18.34s｜使用命令 go run .，线程控制20个。 结论：
-线程数量要控制。 能编译运行速度还是有所提升的。 go语言开发是真的快，基础库完全满足了需求。 如果想要速度和简单，go语言是最佳的选择。 测试非常给力，go test ^methodname 就可以直接测试测试函数，印象很深。 如何控制不好代码，结果连python都不如，所以并不是代码的问题，人的问题也很重要。 rust改写 即使加入了gpt的帮忙也未能实现，所以我提早退出了，毕竟知道自己的能力还不足，也不错！</description>
+      <description>最好的编程语言 海象说是时候谈谈了。&#xA;0x00 缘起 最初第一次认识电脑，是同学带自己去玩游戏，那个时候街机已经不流行了，流行的是电脑游戏。看到电脑的样子感觉很高级，不知道这个东西到底能做什么，只知道可以玩好玩的游戏。😳&#xA;慢慢的，不知道是天意还是命运，被没有填报志愿的计算机学院录取。第一天就被系主任的话迷住，用c语言来改变世界。自从认识了c语言后就开始鄙视任何语言，php/python/js/html是第一批被鄙视的语言，因为那个时候觉得这样的语言就是给非计算机人是用的。开始喜欢那种有Power的语言，所以第一c语言，第二c++语言。可是，那个时候，除了从书本上学习到知识外都很少从互联网学习知识，看到书本上的语法，例子，真的是无聊到极点。那个时候比较流行做管理系统，所以看到了Delphi的身影。可惜，Delphi的语法和c的语法有点不同，相对c#的语法要好些。所以，更多的学习了c#，可是怎么用呢？还是没有一个明确的思路。直到买了一本Visual Becial.net的书，按照书中的例子来写点小例子，如记事本。后来，在图书馆里看到了Java语言，书中说这个语言要改变世界，因为编译一次，到处运行。还不知道什么叫夸平台，因为只知道世界上只有Windows。&#xA;凭借着对程序的热爱，开始找工作，到处都是Java程序员的招聘，而自己的文凭又不是那么强势，所以只能硬着头皮考了Java程序员认证。也凭着一点点运气被一家公司录取，开始了程序员之旅。第一家公司使用vb6和Delphi进行系统开发，那个时候还是比较开心的，因为是自己喜欢的语言，开发比较有动力。后来，互联网强势来袭，C#的asp.net和Java的Sevlet开始抗争。平台开始转移到Linux下，C#的优势没有了，全部都Java的天下。最后到移动端，也是Java的天下，微软的势力被缩减。&#xA;原来工作的时候，是公司使用什么技术，你就得用什么技术，或者说你选择技术，来为公司谋利。那么在技术选型上就得考虑许多问题，比如平台，Windons的服务器比Linxu的服务器贵，而且技术单一。比如语言，go语言可以和Java语言一样高效，可是没有Java的生态圈好。python语言可以很快开发出原型，可是性能问题让大家都放弃。而且开发人员的层次不一样，所以不能使用上手慢的语言，比如rust。&#xA;后来，没有工作的限制，自己当成爱好来写代码的时候，就不一样了。什么简单，就什么来。慢慢明白了python的格言，“人生苦短，我用python。”&#xA;最近，突发奇想，把自己写的下载视频python代码，用不同语言来实现一遍，看看自己以前的语言还熟悉吗？&#xA;0x01 go语言 go语言是工作后最喜欢的语言，没有之一。为什么呢？&#xA;第一，简单，高效 go语言的语法非常简单，几句语言就可以开发一个文件服务器。在使用的过程中，除了老忘记语句结束不需要;外，基本都能很平顺的写出代码。&#xA;第二，跨平台编译 可以在macOS上编译成在Windows或者Linux上的程序，你说开心不？&#xA;第三，Google出品 一般大厂出品的东西，安全/性能都非常出色，并且保证了持续的发展。&#xA;结论 如果在追求性能，快速实现的基础上go是非常好的选择，但是和python相比，少了许多库和非常好的生态圈。&#xA;0x02 rust语言 和go语言相比，rust语言的确学习起来要难些。但是它的用途却是提供高性能，无垃圾回收，所以对比而言，这个用来做核心功能应该不错。目前，还是没有学通。&#xA;0x03 C# 曾经最喜欢的语言之一，跨平台后一直都舍不得uninstall。&#xA;0x04 Java 吃饭的语言，自从学会了后，一直都用Java在公司进行开发，你说它的作用大不大？&#xA;0x05 python 在工作中碰到几次，没有上心。没有工作后，特别喜欢使用。&#xA;0x06 开始 最近使用自己写的python脚本下载m3u8格式的视频，基本上做点事情回来视频便下载好了，非常方便。在魔兽世界里，有句话说：“我的朋友，时间就是金钱！”。使用python脚本的时候，就觉得速度上是不是可以提速一点，所以想用go语言来改写一下，Cursor也用上了，不得不说gpt的确帮了许多忙。&#xA;python语言 python语言简单，第三方的库比较丰富。想到就可以做到的语言，恐怕只有python吧~~。&#xA;下载同一文件耗时:30.98s。&#xA;go语言的改写 使用go语言改写，一共花了两个晚上的时间，大约8个小时。&#xA;测试次数 测试时间 备注 第1次测试 47.76s｜使用命令 go run . ，并且没有控制线程数量 第2次测试 17.50s｜编译成可执行文件，线程控制20个。 第3次测试 18.34s｜使用命令 go run .，线程控制20个。 结论：&#xA;线程数量要控制。 能编译运行速度还是有所提升的。 go语言开发是真的快，基础库完全满足了需求。 如果想要速度和简单，go语言是最佳的选择。 测试非常给力，go test ^methodname 就可以直接测试测试函数，印象很深。 如何控制不好代码，结果连python都不如，所以并不是代码的问题，人的问题也很重要。 rust改写 即使加入了gpt的帮忙也未能实现，所以我提早退出了，毕竟知道自己的能力还不足，也不错！</description>
     </item>
-    
     <item>
       <title>Howtousebarcode</title>
       <link>https://guobingyi.github.io/code/howtousebarcode/</link>
       <pubDate>Sat, 29 Jul 2023 16:18:49 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/howtousebarcode/</guid>
-      <description>如何读取照片中的条码信息 最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。
-服务器端使用 C# 和 Python 来使用验证上传的图片。
-Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
-1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
-2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&amp;#39;book1.jpg&amp;#39;)) if len(barresult) &amp;gt; 0 : print(&amp;#34;find barcode:&amp;#34; + barresult[0].data.decode()) else: print(&amp;#34;can&amp;#39;t find barcode!</description>
+      <description>如何读取照片中的条码信息 最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。&#xA;服务器端使用 C# 和 Python 来使用验证上传的图片。&#xA;Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。&#xA;1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick&#xA;2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&amp;#39;book1.jpg&amp;#39;)) if len(barresult) &amp;gt; 0 : print(&amp;#34;find barcode:&amp;#34; + barresult[0].data.decode()) else: print(&amp;#34;can&amp;#39;t find barcode!</description>
     </item>
-    
     <item>
       <title>Ada</title>
       <link>https://guobingyi.github.io/code/ada/</link>
       <pubDate>Thu, 17 Nov 2022 21:13:48 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/ada/</guid>
-      <description>Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
-要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C++的。要想彻底的搞清楚，最终还是逃脱不了C和C++，宿命吧～～
-话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。
-或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。
-我选择的是AdaCore，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择下载。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。
-默认安装路径为：
-/opt/GNAT/2020 安装之后需要手工加入路径：
-export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：
-with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &amp;#34;Hello, World!&amp;#34; to the screen Put_Line (&amp;#34;Hello, World!&amp;#34;); Put_Line (&amp;#34;你好，世界!*2&amp;#34;); Put_Line(&amp;#34;ok?&amp;#34;) end Greet; 编译：
-gnatmake greet.adb 运行：
-./greet.adb 查看标准库，有一个文件的写入代码：
-with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &amp;#34;simple.txt&amp;#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &amp;#34;Hello World #1&amp;#34;); Put_Line (F, &amp;#34;Hello World #2&amp;#34;); Put_Line (F, &amp;#34;Hello World #3&amp;#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：</description>
+      <description>Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。&#xA;要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C++的。要想彻底的搞清楚，最终还是逃脱不了C和C++，宿命吧～～&#xA;话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。&#xA;或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。&#xA;我选择的是AdaCore，说SPARK可以和Rust一样编写可靠的代码，广告害人呢！到官网下载，只能选择GNAT Community，软件版本许可的问题。也可以想到为什么使用的人少了，毕竟选择的太多啦。苹果电脑只支持到2020，只能选择下载。下载之后，说好的IDE也没有包括，导致自己纠结好久要不要自己编译一下。可是想到自己的128G的硬盘，想算啦。命令行不是也可以吗？想不到后面也是坑加坑。&#xA;默认安装路径为：&#xA;/opt/GNAT/2020 安装之后需要手工加入路径：&#xA;export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：&#xA;with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &amp;#34;Hello, World!&amp;#34; to the screen Put_Line (&amp;#34;Hello, World!&amp;#34;); Put_Line (&amp;#34;你好，世界!*2&amp;#34;); Put_Line(&amp;#34;ok?&amp;#34;) end Greet; 编译：&#xA;gnatmake greet.adb 运行：&#xA;./greet.adb 查看标准库，有一个文件的写入代码：&#xA;with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &amp;#34;simple.txt&amp;#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &amp;#34;Hello World #1&amp;#34;); Put_Line (F, &amp;#34;Hello World #2&amp;#34;); Put_Line (F, &amp;#34;Hello World #3&amp;#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：</description>
     </item>
-    
     <item>
       <title>Autotest</title>
       <link>https://guobingyi.github.io/code/autotest/</link>
       <pubDate>Mon, 03 Oct 2022 15:12:08 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/autotest/</guid>
       <description>自动化测试 </description>
     </item>
-    
     <item>
       <title>Arduino</title>
       <link>https://guobingyi.github.io/code/arduino/</link>
       <pubDate>Wed, 27 Oct 2021 16:39:15 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/arduino/</guid>
-      <description>0x00 初识Arduino 原来的梦想就是能自己DIY做些东西。 原来看的电影里总是老外在地下室捣鼓一下，就发明了各种个样的东西! 后来自己学了计算机，终于可以大展身手的时候，才发现，自己能做的仅仅数据的处理工作，输入，输出，太没劲～～
-我自己比较喜欢倒腾，但是就是会受限与自己熟悉的方面。比如，我特别喜欢去看一些编程语言，然后用它们来对比，如何快速的完成项目。python,ruby,go,java,dotnet core等等。当然了，我所谓的项目就是自己熟悉的领域，Web编程或者命令行，桌面等等。
-由于关注dotnet core的跨平台，所以去了解了一下asp.net的现状，发现这货现在的开发效率是真的高太多了，几个命令行就可以做出一个基本的原型。抱着兴奋的态度想要推荐给周围的人的时候，发现别人说在玩单片机，反而给我搞蒙了，啥，这么牛，推荐来看看～～
-Arduino第一次映入眼帘，是个什么东西呀？幸好有Mac版本的，不然让我用那台Thinkpad x230的话，我还是比较不爽的，速度太慢，Windows的操作感受真不想回去。
-我的想法还是比较保守的，先百度，当然了能google更好。再去B站看看视频，当然了youtube上的资源更全些。刚开始发现，Arduino的IDE还不错，毕竟还是有点样子的。更何况，操作起来也挺方便～～。听了一会，发现需要个什么开发板，我去，还需要点硬件的投资嘛，好，按照视频的推荐，去买了一个。然后，小白告诉我有很多东西的，推荐了许多来看看，发现有个套装，219的价格，我去，忍了，买。（当然了，买了之后，有后悔，但是也有庆幸～～，后面聊）
-板子是三天后到的，在这个空档期，把asp.net的开发教程走了一遍，毕竟都学习了嘛～～
-拿到板子开始学习了，很兴奋，可以学习了。发现，板子就可以用个LED的的闪烁，完了。:(
-还好有了套装，按照套装做了个双色的LED实验，老师在介绍的时候，忘记说为什么要这样接，好像是书上有，当时是硬着头皮直接和老师的一样接，OK，成功了～～ 但是一点也不喜悦，因为那些线为什么要这样接，不知道，对，真的一点都知道？！@@#@#@，整个人都不好了，难道每个线都这样记，那没有乐趣嘛。这个时候，还好听了一个台湾老师的讲课，才明白～～，面包版的线路，为什么要这样接，正负，信号，插脚。这样兴趣才提高了一点点。
-开始对Arduino重新有了一个认识，就是可以通过编程的方式，把代码写入开发版中，让代码控制信号。而信号可以在不同的模块中使用，如射线的接收与发射，在通过Wi-Fi模块进行控制，便成了物联网。真的是这样的吗？
-小白送来了Wi-Fi模块和射线的接收发送模块，而我为了验证一下学习成果，买了门禁卡的模块，想自己试试，从而让自己不需要每年都找物管刷卡，或者买卡。
-其实，最让人兴奋的是看着这些小小的模块，把曾经的想法一一实现了，那就是最大的乐趣。看到电子产品或者有电子模块的东西，都是由最简陋的电子模块实现的，现在看什么都是模块的组装～～
-0x01 该从哪里入手呢？ 其实，我自己都不知道怎么入手的。
-但是，入手前问问自己喜不喜欢就可以了。喜欢，就投入，不喜欢，还说什么～～
-提前准备的是看一看Arduino的介绍，可以用来干什么，有没有Get到自己的兴趣所在，如果有，那么继续&amp;hellip;&amp;hellip;
-虽然说买个套装贼贵，但是没人指导，这个是最好的选择。为什么这样说呢？套装中有个开发版，有几个模块，面包版，电线，LED灯，电阻等等，为你做实验提供了基本的条件。照着提供的视频学习，基本上不会出现怪异的问题，提高学习兴趣。没有指导，又特别想学，推荐买个套装，贵就贵吧，毕竟入门了是吧～～
-但是，如果有人指导，当然是要什么买什么，价格便宜。适合资金紧张，又想学的人。
-当然了，无论哪种选择，都能学到东西。难道，不是吗？最合适的比喻就是组装台式机和品牌台式机的差别。（苹果电脑除外）
-手里有了硬件上的支持，就可以开始动手。
-Let&amp;rsquo;s go!
-0x02 下载 Arduino IDE 官网下载Arduino的IDE。如果不知道去那里下载，那么在点Software下载。还不知道怎么弄，那么还得去B站去看看基础课程吧。毕竟，学习还是要多看看，是吧？
-0x03 你好，Arduino！ 我记得，任何一门语言都会对着世界说，你好！可惜，如果在Arduino上使用的话，你还得买个显示屏模块，算了，我们用LED对世界说你好吧～～
-void setup() { //定义输出 pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); delay(2000); digitalWrite(LED_BUILTIN, LOW); delay(2000); } 这个代码是内置示例里的，怎么样，把这个例子编译，上传试试效果～～ 你会发现开发版上的一个LED灯2秒亮，2秒熄。
-恭喜你，成功入门了！
-例子有很多，而且在官网上还提供了链接图，这个太好了！
-0x04 如何继续呢？ 这回买套件的就占便宜了，把套件中的所有实验都做一遍，了解一下Arduino可以做的东西，然后便可以脑洞大开，做自己想做的事情。比如我，就去折腾一下门禁卡。把想法用代码实现了，这个就是Arduino带来的乐趣，当然还有电子器件给我们的动手能力。
-继续就需要我们自己动手，去实现心中的想法了。
-0x05 总结一下 原来以为就是写代码，现在还需要自己组电路了。总的来说，Arduino还是蛮有意思的，可以有无限的想象空间。
-技多不压身，最后，还是，学以致用！
-0x001 IDE还可以用Visual Studio Code 在Visual Studio Code安装Arduino插件，可以解决代码查看，格式化代码等官方IDE没有的功能哦～～</description>
+      <description>0x00 初识Arduino 原来的梦想就是能自己DIY做些东西。 原来看的电影里总是老外在地下室捣鼓一下，就发明了各种个样的东西! 后来自己学了计算机，终于可以大展身手的时候，才发现，自己能做的仅仅数据的处理工作，输入，输出，太没劲～～&#xA;我自己比较喜欢倒腾，但是就是会受限与自己熟悉的方面。比如，我特别喜欢去看一些编程语言，然后用它们来对比，如何快速的完成项目。python,ruby,go,java,dotnet core等等。当然了，我所谓的项目就是自己熟悉的领域，Web编程或者命令行，桌面等等。&#xA;由于关注dotnet core的跨平台，所以去了解了一下asp.net的现状，发现这货现在的开发效率是真的高太多了，几个命令行就可以做出一个基本的原型。抱着兴奋的态度想要推荐给周围的人的时候，发现别人说在玩单片机，反而给我搞蒙了，啥，这么牛，推荐来看看～～&#xA;Arduino第一次映入眼帘，是个什么东西呀？幸好有Mac版本的，不然让我用那台Thinkpad x230的话，我还是比较不爽的，速度太慢，Windows的操作感受真不想回去。&#xA;我的想法还是比较保守的，先百度，当然了能google更好。再去B站看看视频，当然了youtube上的资源更全些。刚开始发现，Arduino的IDE还不错，毕竟还是有点样子的。更何况，操作起来也挺方便～～。听了一会，发现需要个什么开发板，我去，还需要点硬件的投资嘛，好，按照视频的推荐，去买了一个。然后，小白告诉我有很多东西的，推荐了许多来看看，发现有个套装，219的价格，我去，忍了，买。（当然了，买了之后，有后悔，但是也有庆幸～～，后面聊）&#xA;板子是三天后到的，在这个空档期，把asp.net的开发教程走了一遍，毕竟都学习了嘛～～&#xA;拿到板子开始学习了，很兴奋，可以学习了。发现，板子就可以用个LED的的闪烁，完了。:(&#xA;还好有了套装，按照套装做了个双色的LED实验，老师在介绍的时候，忘记说为什么要这样接，好像是书上有，当时是硬着头皮直接和老师的一样接，OK，成功了～～ 但是一点也不喜悦，因为那些线为什么要这样接，不知道，对，真的一点都知道？！@@#@#@，整个人都不好了，难道每个线都这样记，那没有乐趣嘛。这个时候，还好听了一个台湾老师的讲课，才明白～～，面包版的线路，为什么要这样接，正负，信号，插脚。这样兴趣才提高了一点点。&#xA;开始对Arduino重新有了一个认识，就是可以通过编程的方式，把代码写入开发版中，让代码控制信号。而信号可以在不同的模块中使用，如射线的接收与发射，在通过Wi-Fi模块进行控制，便成了物联网。真的是这样的吗？&#xA;小白送来了Wi-Fi模块和射线的接收发送模块，而我为了验证一下学习成果，买了门禁卡的模块，想自己试试，从而让自己不需要每年都找物管刷卡，或者买卡。&#xA;其实，最让人兴奋的是看着这些小小的模块，把曾经的想法一一实现了，那就是最大的乐趣。看到电子产品或者有电子模块的东西，都是由最简陋的电子模块实现的，现在看什么都是模块的组装～～&#xA;0x01 该从哪里入手呢？ 其实，我自己都不知道怎么入手的。&#xA;但是，入手前问问自己喜不喜欢就可以了。喜欢，就投入，不喜欢，还说什么～～&#xA;提前准备的是看一看Arduino的介绍，可以用来干什么，有没有Get到自己的兴趣所在，如果有，那么继续&amp;hellip;&amp;hellip;&#xA;虽然说买个套装贼贵，但是没人指导，这个是最好的选择。为什么这样说呢？套装中有个开发版，有几个模块，面包版，电线，LED灯，电阻等等，为你做实验提供了基本的条件。照着提供的视频学习，基本上不会出现怪异的问题，提高学习兴趣。没有指导，又特别想学，推荐买个套装，贵就贵吧，毕竟入门了是吧～～&#xA;但是，如果有人指导，当然是要什么买什么，价格便宜。适合资金紧张，又想学的人。&#xA;当然了，无论哪种选择，都能学到东西。难道，不是吗？最合适的比喻就是组装台式机和品牌台式机的差别。（苹果电脑除外）&#xA;手里有了硬件上的支持，就可以开始动手。&#xA;Let&amp;rsquo;s go!&#xA;0x02 下载 Arduino IDE 官网下载Arduino的IDE。如果不知道去那里下载，那么在点Software下载。还不知道怎么弄，那么还得去B站去看看基础课程吧。毕竟，学习还是要多看看，是吧？&#xA;0x03 你好，Arduino！ 我记得，任何一门语言都会对着世界说，你好！可惜，如果在Arduino上使用的话，你还得买个显示屏模块，算了，我们用LED对世界说你好吧～～&#xA;void setup() { //定义输出 pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); delay(2000); digitalWrite(LED_BUILTIN, LOW); delay(2000); } 这个代码是内置示例里的，怎么样，把这个例子编译，上传试试效果～～ 你会发现开发版上的一个LED灯2秒亮，2秒熄。&#xA;恭喜你，成功入门了！&#xA;例子有很多，而且在官网上还提供了链接图，这个太好了！&#xA;0x04 如何继续呢？ 这回买套件的就占便宜了，把套件中的所有实验都做一遍，了解一下Arduino可以做的东西，然后便可以脑洞大开，做自己想做的事情。比如我，就去折腾一下门禁卡。把想法用代码实现了，这个就是Arduino带来的乐趣，当然还有电子器件给我们的动手能力。&#xA;继续就需要我们自己动手，去实现心中的想法了。&#xA;0x05 总结一下 原来以为就是写代码，现在还需要自己组电路了。总的来说，Arduino还是蛮有意思的，可以有无限的想象空间。&#xA;技多不压身，最后，还是，学以致用！&#xA;0x001 IDE还可以用Visual Studio Code 在Visual Studio Code安装Arduino插件，可以解决代码查看，格式化代码等官方IDE没有的功能哦～～</description>
     </item>
-    
     <item>
       <title>Rust by Example</title>
       <link>https://guobingyi.github.io/code/rustbyexample/</link>
       <pubDate>Tue, 15 Jun 2021 17:48:43 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/rustbyexample/</guid>
       <description> </description>
     </item>
-    
     <item>
       <title>LearnRust</title>
       <link>https://guobingyi.github.io/code/learnrust/</link>
       <pubDate>Sat, 29 May 2021 11:20:30 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/learnrust/</guid>
-      <description>Rust 学习笔记 自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
-前言 系统级别的语言，可以和C/C++抗衡？目标就是为了取代C++。
-介绍 Rust语言能够编写速度更快，更加可靠的软件。
-学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～
-0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
-所以，使用Rust的安装方式，最佳。
-$ curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
-Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
-2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.</description>
+      <description>Rust 学习笔记 自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。&#xA;前言 系统级别的语言，可以和C/C++抗衡？目标就是为了取代C++。&#xA;介绍 Rust语言能够编写速度更快，更加可靠的软件。&#xA;学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～&#xA;0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊&#xA;所以，使用Rust的安装方式，最佳。&#xA;$ curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：&#xA;Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。&#xA;2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.</description>
     </item>
-    
     <item>
       <title>Learn Asp.net Core</title>
       <link>https://guobingyi.github.io/code/learnasp.net/</link>
       <pubDate>Tue, 26 Jan 2021 09:34:14 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/learnasp.net/</guid>
-      <description>学习Asp.net Core 开始了，就不要放弃。
-每次想去学习一点程序设计的知识，都被老婆叫停，说我已经不需要通过写代码来改变生活了。可惜，我就是喜欢程序代码，骨子里已经埋藏了许久，现在终于可以按照自己的想法来写点东西，或者可以想怎么玩就怎么玩了。工作期间，除了要去完成工作上的事宜，其他的时间还要对新技术进行预演，了解每个语言的特性。每次都是对一门语言有了认识后，就没机会深入了。</description>
+      <description>学习Asp.net Core 开始了，就不要放弃。&#xA;每次想去学习一点程序设计的知识，都被老婆叫停，说我已经不需要通过写代码来改变生活了。可惜，我就是喜欢程序代码，骨子里已经埋藏了许久，现在终于可以按照自己的想法来写点东西，或者可以想怎么玩就怎么玩了。工作期间，除了要去完成工作上的事宜，其他的时间还要对新技术进行预演，了解每个语言的特性。每次都是对一门语言有了认识后，就没机会深入了。</description>
     </item>
-    
     <item>
       <title>Cppdirdemo</title>
       <link>https://guobingyi.github.io/code/cppdirdemo/</link>
       <pubDate>Sat, 29 Feb 2020 17:23:06 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/cppdirdemo/</guid>
-      <description>Make构建C++项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C++。
-1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
-class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;#34;point.h&amp;#34; void point::print(){ std::cout&amp;lt;&amp;lt;&amp;#34;x=&amp;#34;&amp;lt;&amp;lt;this-&amp;gt;x&amp;lt;&amp;lt;&amp;#34;,y=&amp;#34;&amp;lt;&amp;lt;this-&amp;gt;y&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } 4.创建main文件 vim main.cpp 内容如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;#34;point.h&amp;#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&amp;lt;point&amp;gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&amp;lt;v.</description>
+      <description>Make构建C++项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C++。&#xA;1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：&#xA;class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：&#xA;#include &amp;lt;iostream&amp;gt; #include &amp;#34;point.h&amp;#34; void point::print(){ std::cout&amp;lt;&amp;lt;&amp;#34;x=&amp;#34;&amp;lt;&amp;lt;this-&amp;gt;x&amp;lt;&amp;lt;&amp;#34;,y=&amp;#34;&amp;lt;&amp;lt;this-&amp;gt;y&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } 4.创建main文件 vim main.cpp 内容如下：&#xA;#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;#34;point.h&amp;#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&amp;lt;point&amp;gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&amp;lt;v.</description>
     </item>
-    
     <item>
       <title>程序目录结构</title>
       <link>https://guobingyi.github.io/code/programdir/</link>
       <pubDate>Sat, 29 Feb 2020 16:10:22 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/programdir/</guid>
-      <description>软件项目的目录结构和文件结构 孙悟空对师傅说，“我想要学72变！”。
-graph LR 程序目录结构--&amp;gt;Include 程序目录结构--&amp;gt;Source 程序目录结构--&amp;gt;Resource 程序目录结构--&amp;gt;Shared 程序目录结构--&amp;gt;Debug 程序目录结构--&amp;gt;Release 程序目录结构--&amp;gt;Bin Include Include目录下用于存放应用程序的头文件集合，也就是.h文件集合，在这个目录下面还可以根据需要划分子目录。
-Source Source目录用于存放应用程序的源代码文件集合，也就是.c或者.cpp文件集合，在这个目录下也可以根据需要进行划分子目录。
-Resource Resource目录用于存放应用程序的一些资源文件，比如图片、视频、音频、对话框、图标以及光标等等，同样也可以划分几个子目录，便于管理。
-Shared Shared目录用于存放应用程序的一些共享文件。
-Debug Debug目录用于存放应用程序进行调试时的调试版本产生的中间文件。
-Release Release目录用于存放应用程序进行发布时的发布版本产生的中间文件。
-Bin Bin目录用于存放自己创建的lib文件或dll文件。
-注意绝对路径和相对路径的概念以及使用； 注意区分编译时的相对路径和运行时的相对路径的概念。 </description>
+      <description>软件项目的目录结构和文件结构 孙悟空对师傅说，“我想要学72变！”。&#xA;graph LR 程序目录结构--&amp;gt;Include 程序目录结构--&amp;gt;Source 程序目录结构--&amp;gt;Resource 程序目录结构--&amp;gt;Shared 程序目录结构--&amp;gt;Debug 程序目录结构--&amp;gt;Release 程序目录结构--&amp;gt;Bin Include Include目录下用于存放应用程序的头文件集合，也就是.h文件集合，在这个目录下面还可以根据需要划分子目录。&#xA;Source Source目录用于存放应用程序的源代码文件集合，也就是.c或者.cpp文件集合，在这个目录下也可以根据需要进行划分子目录。&#xA;Resource Resource目录用于存放应用程序的一些资源文件，比如图片、视频、音频、对话框、图标以及光标等等，同样也可以划分几个子目录，便于管理。&#xA;Shared Shared目录用于存放应用程序的一些共享文件。&#xA;Debug Debug目录用于存放应用程序进行调试时的调试版本产生的中间文件。&#xA;Release Release目录用于存放应用程序进行发布时的发布版本产生的中间文件。&#xA;Bin Bin目录用于存放自己创建的lib文件或dll文件。&#xA;注意绝对路径和相对路径的概念以及使用； 注意区分编译时的相对路径和运行时的相对路径的概念。 </description>
     </item>
-    
     <item>
       <title>生成CA证书</title>
       <link>https://guobingyi.github.io/code/createca/</link>
       <pubDate>Thu, 27 Feb 2020 17:08:12 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/createca/</guid>
-      <description>生成CA证书 https的数据传输加密已经正是成为了标准。
-在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
-ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
-1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.</description>
+      <description>生成CA证书 https的数据传输加密已经正是成为了标准。&#xA;在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。&#xA;ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？&#xA;1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.</description>
     </item>
-    
     <item>
       <title>Csharp</title>
       <link>https://guobingyi.github.io/code/csharp/</link>
       <pubDate>Thu, 06 Feb 2020 19:37:59 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/csharp/</guid>
-      <description>C# C#的学习有太多的情怀，比如pascal。
-一直都在不断的换语言来学习，来弥补学习上的懒惰。
-不知道是什么原因，我突然对每种语言都热衷起来，对我原来写的那篇博客打脸，或者说也不能算是打脸，而是不同时期的不同思考罢了。 😊
-第一份工作是冲着Java的Sun认证去的，发现是vb和Delphi开发的项目。而在此之前，大学毕业的时候看到老九用C#写代码，老高就让我好好学习一下，而我的那台老电脑还存着第一本书是介绍C#的。说明在最早的时候，我认识到的是C#，而不是Java。
-刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。
-学习语言的目的是什么？我想就是用该语言快速的完成任务。更好听的是实现自己的思想。生活在这个时代太幸福了，不需要一来就学习汇编语言，有非常多的高级语言供我们选择。现阶段我比较喜欢的go，打动我的是真正的跨平台。python，ruby吧，你要装运行环境，Java呢，虚拟机要装，C#要安装dotnet-sdk。Rust准备看一下。扯远了，学习的目的还是有所需求。比如，公司的项目就是该语言开发的，你要继续开发；公司的项目需要重新搭建，你需要进行评估。总之，学习带着目的来和不带目的来，学习的效果是不一样的。
-最近，突发奇想，把所学的语言都重新认真的看一遍，因为不是有时间嘛，把时间浪费在有意义的事情上，多好。而最先被看到的是C#，那种熟悉的感觉依稀记得。所以直接安装了。
-brew cask install dotnet-sdk 安装完看了一下版本，都3.1.101了，发展速度，好快。
-快速的搭建了一个hello world项目。
-dotnet new console --name Hello ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。
-执行项目。
-cd Hello dotnet run 这样一个hello,world就打印在终端了，嗯，是非常速度的。
-接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。
-code -r Hello 最小的完整代码片段：
-using System; namespace Hello { class Program { static void Main(string[] args) { Console.WriteLine(&amp;#34;Hello World!&amp;#34;); } } } 怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。
-在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是时间和实践。
-在看完了将近2000多页的C#文档，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。
-下面是一些非常重要的部分：
-C# 教程 官方的例子，手把手教你。
-C# 编码约定 这部分内容可以说是精华部分，一门语言最应该熟读的部分。展示C# 最佳做法。</description>
+      <description>C# C#的学习有太多的情怀，比如pascal。&#xA;一直都在不断的换语言来学习，来弥补学习上的懒惰。&#xA;不知道是什么原因，我突然对每种语言都热衷起来，对我原来写的那篇博客打脸，或者说也不能算是打脸，而是不同时期的不同思考罢了。 😊&#xA;第一份工作是冲着Java的Sun认证去的，发现是vb和Delphi开发的项目。而在此之前，大学毕业的时候看到老九用C#写代码，老高就让我好好学习一下，而我的那台老电脑还存着第一本书是介绍C#的。说明在最早的时候，我认识到的是C#，而不是Java。&#xA;刚刚毕业的时候，学习一门技术的时候，都是去书店里找书。或者准确的说，互联网的发展没有像现在一样。需要学习什么，都需要从书本上去看，然后在实践。现在不同了，需要什么样的知识，直接到官网看文档。不能说是能力提升了，还是知识的获取变得更轻松了。也难怪最近几年的技术类书几乎都没有买了，因为官网上的文档已经非常全面，而且都非常规范。原来的模式是买书，实践，向师傅请教，然后思考，最后才到看文档。现在的模式是文档，实践，文档，google就基本能完成了。现在的模式拉锯了师傅之间的距离，师傅层面上知道的是经验问题，而经验也会由于技术的发展而落后，或者失效。所以，从这个层面上来说，如果不学习，那么很快就会被超越。&#xA;学习语言的目的是什么？我想就是用该语言快速的完成任务。更好听的是实现自己的思想。生活在这个时代太幸福了，不需要一来就学习汇编语言，有非常多的高级语言供我们选择。现阶段我比较喜欢的go，打动我的是真正的跨平台。python，ruby吧，你要装运行环境，Java呢，虚拟机要装，C#要安装dotnet-sdk。Rust准备看一下。扯远了，学习的目的还是有所需求。比如，公司的项目就是该语言开发的，你要继续开发；公司的项目需要重新搭建，你需要进行评估。总之，学习带着目的来和不带目的来，学习的效果是不一样的。&#xA;最近，突发奇想，把所学的语言都重新认真的看一遍，因为不是有时间嘛，把时间浪费在有意义的事情上，多好。而最先被看到的是C#，那种熟悉的感觉依稀记得。所以直接安装了。&#xA;brew cask install dotnet-sdk 安装完看了一下版本，都3.1.101了，发展速度，好快。&#xA;快速的搭建了一个hello world项目。&#xA;dotnet new console --name Hello ps. 创建项目很快就Restore succeeded. 但是为什么终端还是需要等1分钟左右，我怀疑还在下载什么东西，怪我网速慢咯。&#xA;执行项目。&#xA;cd Hello dotnet run 这样一个hello,world就打印在终端了，嗯，是非常速度的。&#xA;接着就可以用你喜欢的IDE打开项目，开始慢慢品味了。&#xA;code -r Hello 最小的完整代码片段：&#xA;using System; namespace Hello { class Program { static void Main(string[] args) { Console.WriteLine(&amp;#34;Hello World!&amp;#34;); } } } 怎么样，C#的开发已经够简单了吧，如果是原来，第一得先下个dotnet runtime，还有visual studio 200X的IDE，那么你才能进行C#的开发，当然也有免费的IDE，但是和visual studio比较起来就逊色多了。现在有免费的Visual studio Code可以用，可以说越来越对开发人员友好了，也可以说选择越来越多了。&#xA;在学习任何一门语言的时候，最重要的事情就是集中关注概念，不要迷失在语言的技术细节中。学习语言的目的是成为一个更好的程序员；也就是说，使自己在设计和实现新系统时，以及在维护老系统时，能够工作得更有效。为此，对与程序设计和设计技术的理解远比对细节的理解更重要，而这种理解的根本是时间和实践。&#xA;在看完了将近2000多页的C#文档，对C#有了新的认识，当然最重要的是学习到了C#可以运用的地方，什么时候用，什么地方用。在大脑里有一个认识，比如在简析XML文件的时候，LINQ的运用太棒了，比如异步调用的方式等。所有的这些内容都可以提供在以后的设计过程中的一个参考，一个衡量。最终，决定用什么最有效，最快速的完成任务。&#xA;下面是一些非常重要的部分：&#xA;C# 教程 官方的例子，手把手教你。&#xA;C# 编码约定 这部分内容可以说是精华部分，一门语言最应该熟读的部分。展示C# 最佳做法。</description>
     </item>
-    
     <item>
       <title>ProxySet</title>
       <link>https://guobingyi.github.io/code/proxyset/</link>
       <pubDate>Thu, 30 Jan 2020 11:05:10 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/proxyset/</guid>
-      <description>Mac下代理设置 采菊东篱下，悠然见南山。
-一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
-在终端下访问系统代理 scutil命令管理系统配置参数，通过 &amp;ndash;proxy参数来显示系统代理信息。
-未配置代理情况：
-$ scutil --proxy &amp;lt;dictionary&amp;gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
-$ scutil --proxy &amp;lt;dictionary&amp;gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：</description>
+      <description>Mac下代理设置 采菊东篱下，悠然见南山。&#xA;一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。&#xA;在终端下访问系统代理 scutil命令管理系统配置参数，通过 &amp;ndash;proxy参数来显示系统代理信息。&#xA;未配置代理情况：&#xA;$ scutil --proxy &amp;lt;dictionary&amp;gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：&#xA;$ scutil --proxy &amp;lt;dictionary&amp;gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：</description>
     </item>
-    
     <item>
       <title>Git</title>
       <link>https://guobingyi.github.io/code/git/</link>
       <pubDate>Fri, 30 Aug 2019 07:03:51 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/git/</guid>
-      <description>Git 常用命令 1.初始化仓库信息
-git init 增加文件信息到库 git add -A 提交代码 git commit -m &amp;#34;first commit&amp;#34; 同步到远程库 git push -u origin master 将远程库信息同步到本地 git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作 git commit --amend 重新更新git服务器信息 git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件 8.1 删除单个文件
-git rm ._ddd.file 8.2 删除多个文件
-find . -name &amp;#34;._*&amp;#34; -delete git add -A git commit -m &amp;#39;delete others file&amp;#39; 强制覆盖本地文件 git fetch --all git reset --hard origin/master git pull </description>
+      <description>Git 常用命令 1.初始化仓库信息&#xA;git init 增加文件信息到库 git add -A 提交代码 git commit -m &amp;#34;first commit&amp;#34; 同步到远程库 git push -u origin master 将远程库信息同步到本地 git clone http://192.168.100.226:3000/guoby/wzry.git 撤销提交操作 git commit --amend 重新更新git服务器信息 git remote rm origin git remote add origin http://192.168.100.201:3000/guoby/wzry.git git push -u origin master 删除文件 8.1 删除单个文件&#xA;git rm ._ddd.file 8.2 删除多个文件&#xA;find . -name &amp;#34;._*&amp;#34; -delete git add -A git commit -m &amp;#39;delete others file&amp;#39; 强制覆盖本地文件 git fetch --all git reset --hard origin/master git pull </description>
     </item>
-    
     <item>
       <title>Go Beego</title>
       <link>https://guobingyi.github.io/code/go-beego/</link>
       <pubDate>Fri, 14 Dec 2018 10:16:03 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/go-beego/</guid>
-      <description>beego tutorial 无他， 但手熟尔。
-0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
-2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
-3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。
-4. beego 项目结构 一般的 beego 项目的目录如下所示：
-├── conf │ └── app.</description>
+      <description>beego tutorial 无他， 但手熟尔。&#xA;0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。&#xA;2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。&#xA;3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。&#xA;4. beego 项目结构 一般的 beego 项目的目录如下所示：&#xA;├── conf │ └── app.</description>
     </item>
-    
     <item>
       <title>Go Tutorial</title>
       <link>https://guobingyi.github.io/code/go-tutorial/</link>
       <pubDate>Thu, 13 Dec 2018 14:28:45 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/go-tutorial/</guid>
-      <description>Go Tutorial 学习一门语言最好的方式，就是熟读其文档。
-0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。
-Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。
-0x01 Hello,world! package main import ( &amp;#34;fmt&amp;#34; ) // Print Hello,world! func main() { fmt.Printf(&amp;#34;Hello,World!&amp;#34;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门 文档介绍如何安装 http://localhost:6060/doc/install 如何编写go语言 http://localhost:6060/doc/code.html 如何高效的编写go语言 http://localhost:6060/doc/code.html 熟悉go语言的api http://localhost:6060/pkg/ 0x03 深入 已beego框架学习如何编写web项目 https://beego.me 关注go语言的Top项目 https://github.com/topics/go 学习go语言框架提供的第三方包 https://github.com/avelino/awesome-go </description>
+      <description>Go Tutorial 学习一门语言最好的方式，就是熟读其文档。&#xA;0x00 安装 安装go语言是件轻松的事情，如果安装都非常困难，那么还有什么好说的。&#xA;Mac下安装 brew install go Windows下安装 推荐使用MSI installer方式安装，一直Next下去就可以了。&#xA;0x01 Hello,world! package main import ( &amp;#34;fmt&amp;#34; ) // Print Hello,world! func main() { fmt.Printf(&amp;#34;Hello,World!&amp;#34;) } 0x01 文档查阅 godoc -http=:6060 0x02 入门 文档介绍如何安装 http://localhost:6060/doc/install 如何编写go语言 http://localhost:6060/doc/code.html 如何高效的编写go语言 http://localhost:6060/doc/code.html 熟悉go语言的api http://localhost:6060/pkg/ 0x03 深入 已beego框架学习如何编写web项目 https://beego.me 关注go语言的Top项目 https://github.com/topics/go 学习go语言框架提供的第三方包 https://github.com/avelino/awesome-go </description>
     </item>
-    
     <item>
       <title>Visual Studio Code</title>
       <link>https://guobingyi.github.io/code/vscode/</link>
       <pubDate>Fri, 24 Aug 2018 16:10:52 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/vscode/</guid>
-      <description>Visual Studio Code 插件 近来对Visual Studio Code的使用频率越来越高，也同时对微软出的这款免费IDE越来越喜欢。
-1.Settings Sync 对于使用不同电脑进行开发的人，最喜欢的就是同一个IDE，相同的配置。所以Settings Sync可以解决这个问题。详细的使用还是参考帮助文档，对了，前提是你得注册了一个github账号。
-2. Project Manager 其实这个功能就是为了在不同的项目中快速切换。恩，好用。
-3. REST Client REST 客户端允许你直接发送 HTTP 请求并在 Visual Studio Code 中查看响应。比PostMan简单，但是可以在IDE中直接使用也不错。
-4. Todo Tree 写惯了TODO，用这个就可以由个想eclipse的效果，感觉还不错。
-5. Night Owl 晚上编码的时候可以用一下这个皮肤效果，不错。
-6. markdownlint 使用hugo编写博客的时候，用到最多的插件，因为可以边写边看效果。
-7. GO/C#/Ruby/Python/C/C++ 语言插件，根据自己使用来进行安装，但是像我这样，什么都想弄一下的，都装了。
-8. Git History git项目提交后，git历史信息。
-9.GitLens git项目提交信息和提交时间点信息。
-10. minify 将javascript文件变为min格式，好用。原来都是在eclipse中使用相应的插件，现在visual studio code 也有了。
-11. Org Model 原本这个应该是emacs才有的，而且功能比较强大。
-12. SVN svn的可视化版本，虽然现在我都用命令行。
-13. TODO Highling TODO:高亮显示，挺醒目滴。
-14. vscode-icons 图标根据语言进行变化，对视角比较看重的同学可以试试。
-15. XML Format 就是对xml文件内容进行格式化，让人能清晰的看懂。</description>
+      <description>Visual Studio Code 插件 近来对Visual Studio Code的使用频率越来越高，也同时对微软出的这款免费IDE越来越喜欢。&#xA;1.Settings Sync 对于使用不同电脑进行开发的人，最喜欢的就是同一个IDE，相同的配置。所以Settings Sync可以解决这个问题。详细的使用还是参考帮助文档，对了，前提是你得注册了一个github账号。&#xA;2. Project Manager 其实这个功能就是为了在不同的项目中快速切换。恩，好用。&#xA;3. REST Client REST 客户端允许你直接发送 HTTP 请求并在 Visual Studio Code 中查看响应。比PostMan简单，但是可以在IDE中直接使用也不错。&#xA;4. Todo Tree 写惯了TODO，用这个就可以由个想eclipse的效果，感觉还不错。&#xA;5. Night Owl 晚上编码的时候可以用一下这个皮肤效果，不错。&#xA;6. markdownlint 使用hugo编写博客的时候，用到最多的插件，因为可以边写边看效果。&#xA;7. GO/C#/Ruby/Python/C/C++ 语言插件，根据自己使用来进行安装，但是像我这样，什么都想弄一下的，都装了。&#xA;8. Git History git项目提交后，git历史信息。&#xA;9.GitLens git项目提交信息和提交时间点信息。&#xA;10. minify 将javascript文件变为min格式，好用。原来都是在eclipse中使用相应的插件，现在visual studio code 也有了。&#xA;11. Org Model 原本这个应该是emacs才有的，而且功能比较强大。&#xA;12. SVN svn的可视化版本，虽然现在我都用命令行。&#xA;13. TODO Highling TODO:高亮显示，挺醒目滴。&#xA;14. vscode-icons 图标根据语言进行变化，对视角比较看重的同学可以试试。&#xA;15. XML Format 就是对xml文件内容进行格式化，让人能清晰的看懂。</description>
     </item>
-    
     <item>
       <title>Others</title>
       <link>https://guobingyi.github.io/code/others/</link>
       <pubDate>Thu, 09 Aug 2018 11:39:34 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/others/</guid>
-      <description>Don&amp;rsquo;t be evil
-记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
-bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;#34;&amp;lt;input&amp;gt;&amp;#34;, line 1, in &amp;lt;module&amp;gt; File &amp;#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;#34;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;#34;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
-If you&amp;#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;#34;python@2&amp;#34; appears in that list, and Python 2.</description>
+      <description>Don&amp;rsquo;t be evil&#xA;记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：&#xA;bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &amp;#34;&amp;lt;input&amp;gt;&amp;#34;, line 1, in &amp;lt;module&amp;gt; File &amp;#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&amp;#34;, line 52, in &amp;lt;module&amp;gt; import weakref File &amp;#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&amp;#34;, line 14, in &amp;lt;module&amp;gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。&#xA;If you&amp;#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &amp;#34;python@2&amp;#34; appears in that list, and Python 2.</description>
     </item>
-    
     <item>
       <title>Test-driven development with Go</title>
       <link>https://guobingyi.github.io/code/test-drivendevelopmentwithgo/</link>
       <pubDate>Tue, 07 Aug 2018 17:48:14 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/test-drivendevelopmentwithgo/</guid>
-      <description>介绍 使用Go语言进行驱动开发。
-讲什么 本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。
-二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：
-在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。
-预期读者 本书的读者需要有一定的编程基础，如果没有学习过Go,请点击此处进行学习。
-要求 在阅读本书前，你需要准备以下工具：
-Go Go语言环境是本书中的唯一要求。你可以从其官网进行下载安装。如果你的操作系统是OS X，可以使用Homebrew进行安装。 大多数的Linux都已经在包管理器中加入了Go。
-一个终端 使用Go语言的最佳途径就是使用终端。大多数的Linux系统使用其自动的终端shell，苹果用户可以使用Terminal.app；而 windows用户可以使用Cygwin或Git Bash。
-一个编辑器 最终，你将使用一个编辑器来进行编码。编辑器有非常多的选择，然而Sublime Text看起来非常流行。默认的 Go配置插件，Emasc和Vim都有提供。
-翻译者：推荐Visual Studio Code，好用，免费。
-代码实例 Go代码 本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。
-fragment.go
-17 func (r *Receiver) MyFunc() err { 18 print(&amp;#34;Anything&amp;#34;) 19 print(&amp;#34;Even more&amp;#34;) 20 } 17
-关于第17行的一些有趣信息。
-17 - 20
-关于从第17行到第20行的整个代码块的一些有趣信息。
-有时代码样本缺少行号 - 在这种情况下，代码实际上并不包含在源代码中，而是意味着要点。
-go fmt 高亮显示运算符优先级
-func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
+      <description>介绍 使用Go语言进行驱动开发。&#xA;讲什么 本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。&#xA;二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：&#xA;在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。&#xA;预期读者 本书的读者需要有一定的编程基础，如果没有学习过Go,请点击此处进行学习。&#xA;要求 在阅读本书前，你需要准备以下工具：&#xA;Go Go语言环境是本书中的唯一要求。你可以从其官网进行下载安装。如果你的操作系统是OS X，可以使用Homebrew进行安装。 大多数的Linux都已经在包管理器中加入了Go。&#xA;一个终端 使用Go语言的最佳途径就是使用终端。大多数的Linux系统使用其自动的终端shell，苹果用户可以使用Terminal.app；而 windows用户可以使用Cygwin或Git Bash。&#xA;一个编辑器 最终，你将使用一个编辑器来进行编码。编辑器有非常多的选择，然而Sublime Text看起来非常流行。默认的 Go配置插件，Emasc和Vim都有提供。&#xA;翻译者：推荐Visual Studio Code，好用，免费。&#xA;代码实例 Go代码 本书包含大量代码示例。 Go代码是最突出的，这样的代码总是用文件名和行号注释; 这些数字不一定从1开始，但在写入时请参考文件中的位置。 每个片段都包含文件名作为其标题，通常后面跟着一些纯文本注释。&#xA;fragment.go&#xA;17 func (r *Receiver) MyFunc() err { 18 print(&amp;#34;Anything&amp;#34;) 19 print(&amp;#34;Even more&amp;#34;) 20 } 17&#xA;关于第17行的一些有趣信息。&#xA;17 - 20&#xA;关于从第17行到第20行的整个代码块的一些有趣信息。&#xA;有时代码样本缺少行号 - 在这种情况下，代码实际上并不包含在源代码中，而是意味着要点。&#xA;go fmt 高亮显示运算符优先级&#xA;func Hypothetical(a b c int) int { return 4*a*a + (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：</description>
     </item>
-    
     <item>
       <title>Ruby</title>
       <link>https://guobingyi.github.io/code/ruby/</link>
       <pubDate>Wed, 04 Jul 2018 23:21:56 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/ruby/</guid>
       <description>Ruby 学习笔记 </description>
     </item>
-    
     <item>
       <title>Go</title>
       <link>https://guobingyi.github.io/code/go/</link>
       <pubDate>Wed, 04 Jul 2018 23:21:20 +0800</pubDate>
-      
       <guid>https://guobingyi.github.io/code/go/</guid>
       <description>go语言学习笔记 </description>
     </item>
-    
   </channel>
 </rss>
