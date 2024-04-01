@@ -6,8 +6,22 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Jan 2024 20:50:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 09:52:16 +0800</lastBuildDate>
     <atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exe_sigle_file</title>
+      <link>https://guobingyi.github.io/blog/exe_sigle_file/</link>
+      <pubDate>Mon, 01 Apr 2024 09:52:16 +0800</pubDate>
+      <guid>https://guobingyi.github.io/blog/exe_sigle_file/</guid>
+      <description>单文件部署 你能改变的就是你自己。&#xA;对于Java和C#最让我感觉到比go最没有可比性的一点就是，go直接就编译成本地二进制文件了，少了保护代码而需要做的混淆操作。但是，现在Java和C#都可以了。当然，如果用mojo后，python也可以了。&#xA;01.Java编译成可执行二进制文件 Java编译成二进制的模式来源于GraalVM的操作。&#xA;例子来源于GraalVM官网。&#xA;一个HelloWorld的例子。&#xA;public class HelloWorld { public static void main(String[] args) { System.out.println(&amp;#34;Hello, World!&amp;#34;); } } 首先，编译java文件。&#xA;javac HelloWorld.java 其次，编程成本地二进制可执行程序。&#xA;native-image HelloWorld 最后，运行。&#xA;./helloworld Hello, World! 02.C#编译成可执行二进制 C#现在越来越流行，假以时日，或许可以和Java完全抗衡。&#xA;(单从语音本身来说，c#已经超越了java,可是社区却还有很远的路要走)&#xA;单文件部署对C#来说也很简单。&#xA;首先，在修改项目文件csproj。&#xA;&amp;lt;Project Sdk=&amp;#34;Microsoft.NET.Sdk.Web&amp;#34;&amp;gt; &amp;lt;PropertyGroup&amp;gt; &amp;lt;RuntimeIdentifiers&amp;gt;osx-x64&amp;lt;/RuntimeIdentifiers&amp;gt; &amp;lt;PublishSingleFile&amp;gt;true&amp;lt;/PublishSingleFile&amp;gt; &amp;lt;SelfContained&amp;gt;true&amp;lt;/SelfContained&amp;gt; &amp;lt;OutputType&amp;gt;Exe&amp;lt;/OutputType&amp;gt; &amp;lt;/PropertyGroup&amp;gt; &amp;lt;/Project&amp;gt; 加入输出类型Exe,平台osx-x64，发布单文件PublishSingleFile,自包含SelfContained。&#xA;其次，发布。&#xA;dotnet publish 在publish文件中找到文件，创建链接文件。(这个步骤可以不用，我主要是创建了一个将发布后的文件链接到执行目录,方便直接运行)&#xA;ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publish/web web </description>
+    </item>
+    <item>
+      <title>Ollama</title>
+      <link>https://guobingyi.github.io/blog/ollama/</link>
+      <pubDate>Sun, 24 Mar 2024 21:58:27 +0800</pubDate>
+      <guid>https://guobingyi.github.io/blog/ollama/</guid>
+      <description>Ollama ia is so close!&#xA;第一次接触chatGPT的时候，被注册劝退了。朋友推荐了Cursor，感觉也还不错，但是就是每月都会有所限制，并且代码质量也不很高。&#xA;现在，用文心一言，感觉还不错，毕竟国产的，理解起来比较好，所以一直都在用，目前没有出现什么问题。&#xA;昨天，看到了Ollama的微信号推荐，就下载来玩了玩。&#xA;下载Ollama相当的简单，直接冲官网下载。&#xA;https://ollama.com/ 因为电脑比较老，所以就只能下载了一个最小的model。&#xA;ollama pull codellama:7b-code 启动服务。&#xA;ollama serve 测试服务。&#xA;ollama run codellama:7b-code &amp;#39;You are an expert programmer that writes simple, concise code and explanations. Write a python function to generate the nth fibonacci number.&amp;#39; 感觉很不错，可惜不能使用中文，哈哈，是自己想多了。如果不是自己的电脑怒吼的话，或许可以玩一玩，所以再次删除了。&#xA;rm -rf ~/.ollama 程序里将ollama.app移除。&#xA;今天，又听说有个叫llamafile的东西，不错，可惜，最近太忙了，或许有时间，下载来玩玩。&#xA;https://github.com/Mozilla-Ocho/llamafile 接受不了诱惑，还是下载了，但是由于在终端中使用命令，报错，所以使用了网上推荐的命令。&#xA;sh -c ./llava-v1.5-7b-q4.llamafile 结论就是电脑太老了，根本跑不起来。比Ollama的运行速度还慢，再等等吧。&#xA;不过，这次使用了Cody就是非常好用。</description>
+    </item>
     <item>
       <title>switch 更新</title>
       <link>https://guobingyi.github.io/blog/switch-%E6%9B%B4%E6%96%B0/</link>
@@ -62,7 +76,7 @@
       <link>https://guobingyi.github.io/blog/quitsomking/</link>
       <pubDate>Sat, 08 Oct 2022 21:56:37 +0800</pubDate>
       <guid>https://guobingyi.github.io/blog/quitsomking/</guid>
-      <description>戒烟 海象说：“是时候改变了！”&#xA;不知道自己戒烟了多少次，每次都有理由重新吸起来。难道烟就真的那么有吸引力吗？我想不是。而是自己为吸而找的理由，最多的理由是她陪伴自己的时间比较多，也是自己的时间。那么，现在是什么理由让我戒掉呢？我想，是身体告诉我的。最近的一次身体不适是肾结石中的石头自己掉下来，在疼痛的那个晚上，我想到了人在生病的时候是没有尊严的。毕竟，疼的时候只有自己知道，也只有自己知道舒服的时候是什么样的状态，那个时候不想抽烟，即使抽了，身体也诚实的告诉你，她并不能为你改变什么，甚至让你更加难受～～。&#xA;慢慢的，我开始去感受身体给我信号，我才发现身体已经不像以前那样，逐渐的开始走下坡路。抽烟对于我来说是一种习惯，当开心的时候来一只，当难过的时候来一只。每次抽烟的时候好像都有一种解脱的感觉，每次都被赋予了不一样的使命。逐渐的，抽烟并不是为了摄取尼古丁，而是变成了神圣的使命一样。&#xA;我开始讨厌这种感觉，但是又离不开这种感觉。因为，生活上的改变让自己一下子无法适应，也让自己无法安心。</description>
+      <description>戒烟 海象说：“是时候改变了！”&#xA;不知道自己戒烟了多少次，每次都有理由重新吸起来。难道烟就真的那么有吸引力吗？我想不是。而是自己为吸而找的理由，最多的理由是她陪伴自己的时间比较多，也是自己的时间。那么，现在是什么理由让我戒掉呢？我想，是身体告诉我的。最近的一次身体不适是肾结石中的石头自己掉下来，在疼痛的那个晚上，我想到了人在生病的时候是没有尊严的。毕竟，疼的时候只有自己知道，也只有自己知道舒服的时候是什么样的状态，那个时候不想抽烟，即使抽了，身体也诚实的告诉你，她并不能为你改变什么，甚至让你更加难受～～。&#xA;慢慢的，我开始去感受身体给我信号，我才发现身体已经不像以前那样，逐渐的开始走下坡路。抽烟对于我来说是一种习惯，当开心的时候来一只，当难过的时候来一只。每次抽烟的时候好像都有一种解脱的感觉，每次都被赋予了不一样的使命。逐渐 我开始讨厌这种感觉，但是又离不开这种感觉。因为，生活上的改变让自己一下子无法适应，也让自己无法安心。</description>
     </item>
     <item>
       <title>Become_an_iOS_developer_in_2022</title>
