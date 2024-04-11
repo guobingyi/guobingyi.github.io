@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="使用moviepy进行电影剪辑 退一步，海阔天空！
+有个执念，总想比一下到底谁最快，python/c#/go/rust/java。但是，现实告诉我，谁能快速的解决问题，就够了。
+最近，老婆的工作要进行视频剪辑，老师推荐了剪影，可是呢？有水印，要充VIP，我一看，就答应了帮老婆来干这个事情。满怀信心的打开PR，发现自己已经不会用了。🤣这可咋办呢？问了一下文心一言，在chatGPT3.5还没有免费的时候，文心一言还是比较好用的。文心一言告诉我有个moviepy的库，好的用一下。
+以下是文心一言给的代码，蛮不错。
+from moviepy.editor import VideoFileClip # 加载视频文件 clip = VideoFileClip(&#34;my_video.mp4&#34;) # 剪辑视频，从第10秒到第20秒 subclip = clip.subclip(10, 20) # 写入剪辑后的视频文件 subclip.write_videofile(&#34;my_subclip.mp4&#34;) 用下来，每次都要自己算一下时间，所以自己又写了一个。
+from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileClip(&#34;demo.mp4&#34;) # 剪辑视频，设置开始和结束时间（单位为秒） # 这里假设我们想要剪辑从第5秒到第15秒的部分 # 16:40 ~ 21:21 # 24:30 ~ 26:00 # 33:00 ~ 33:47 # 39:00~ 43:00 # 47:30 ~ 57:00 # 58:10 ~ 1:00:02 # 1:04:40 ~ 1:07:10 # 1:13:00 ~ 1:18:42 # 1:19:18 ~ 1:23:40 s_h = 1 s_min = 19 s_sec = 18 e_h = 1 e_min = 23 e_sec = 40 start_time = s_h * 60 * 60 &#43; s_min * 60 &#43; s_sec end_time = e_h * 60 * 60 &#43; e_min * 60 &#43; e_sec #print( &#39;Start time :&#39;,start_time) #print( &#39;End time :&#39;,end_time) subclip = video.">
+
+<meta property="og:title" content="使用moviepy进行电影剪辑" />
+<meta property="og:description" content="使用moviepy进行电影剪辑 退一步，海阔天空！
+有个执念，总想比一下到底谁最快，python/c#/go/rust/java。但是，现实告诉我，谁能快速的解决问题，就够了。
+最近，老婆的工作要进行视频剪辑，老师推荐了剪影，可是呢？有水印，要充VIP，我一看，就答应了帮老婆来干这个事情。满怀信心的打开PR，发现自己已经不会用了。🤣这可咋办呢？问了一下文心一言，在chatGPT3.5还没有免费的时候，文心一言还是比较好用的。文心一言告诉我有个moviepy的库，好的用一下。
+以下是文心一言给的代码，蛮不错。
+from moviepy.editor import VideoFileClip # 加载视频文件 clip = VideoFileClip(&#34;my_video.mp4&#34;) # 剪辑视频，从第10秒到第20秒 subclip = clip.subclip(10, 20) # 写入剪辑后的视频文件 subclip.write_videofile(&#34;my_subclip.mp4&#34;) 用下来，每次都要自己算一下时间，所以自己又写了一个。
+from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileClip(&#34;demo.mp4&#34;) # 剪辑视频，设置开始和结束时间（单位为秒） # 这里假设我们想要剪辑从第5秒到第15秒的部分 # 16:40 ~ 21:21 # 24:30 ~ 26:00 # 33:00 ~ 33:47 # 39:00~ 43:00 # 47:30 ~ 57:00 # 58:10 ~ 1:00:02 # 1:04:40 ~ 1:07:10 # 1:13:00 ~ 1:18:42 # 1:19:18 ~ 1:23:40 s_h = 1 s_min = 19 s_sec = 18 e_h = 1 e_min = 23 e_sec = 40 start_time = s_h * 60 * 60 &#43; s_min * 60 &#43; s_sec end_time = e_h * 60 * 60 &#43; e_min * 60 &#43; e_sec #print( &#39;Start time :&#39;,start_time) #print( &#39;End time :&#39;,end_time) subclip = video." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guobingyi.github.io/code/moviepy/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2024-04-11T18:53:53+08:00" />
+<meta property="article:modified_time" content="2024-04-11T18:53:53+08:00" />
+
+
+<title>
+
+
+     使用moviepy进行电影剪辑 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/moviepy/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a21%3a12.586593%20%2b0800%20CST%20m%3d%2b4.153094662">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a21%3a12.586593%20%2b0800%20CST%20m%3d%2b4.153094662">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a21%3a12.586593%20%2b0800%20CST%20m%3d%2b4.153094662">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a21%3a12.586593%20%2b0800%20CST%20m%3d%2b4.153094662">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    使用moviepy进行电影剪辑
+
+</div>
+
+            <div class="markdown">
+                <h1 id="使用moviepy进行电影剪辑">使用moviepy进行电影剪辑</h1>
+<blockquote>
+<p>退一步，海阔天空！</p>
+</blockquote>
+<p>有个执念，总想比一下到底谁最快，python/c#/go/rust/java。但是，现实告诉我，谁能快速的解决问题，就够了。</p>
+<p>最近，老婆的工作要进行视频剪辑，老师推荐了剪影，可是呢？有水印，要充VIP，我一看，就答应了帮老婆来干这个事情。满怀信心的打开PR，发现自己已经不会用了。🤣这可咋办呢？问了一下文心一言，在chatGPT3.5还没有免费的时候，文心一言还是比较好用的。文心一言告诉我有个moviepy的库，好的用一下。</p>
+<p>以下是文心一言给的代码，蛮不错。</p>
+<pre tabindex="0"><code>from moviepy.editor import VideoFileClip  
+  
+# 加载视频文件  
+clip = VideoFileClip(&#34;my_video.mp4&#34;)  
+  
+# 剪辑视频，从第10秒到第20秒  
+subclip = clip.subclip(10, 20)  
+  
+# 写入剪辑后的视频文件  
+subclip.write_videofile(&#34;my_subclip.mp4&#34;)
+</code></pre><p>用下来，每次都要自己算一下时间，所以自己又写了一个。</p>
+<pre tabindex="0"><code>from moviepy.editor import VideoFileClip  
+  
+# 加载视频文件  
+video = VideoFileClip(&#34;demo.mp4&#34;)  
+  
+# 剪辑视频，设置开始和结束时间（单位为秒）  
+# 这里假设我们想要剪辑从第5秒到第15秒的部分
+# 16:40 ~ 21:21 
+# 24:30 ~ 26:00
+# 33:00 ~ 33:47
+# 39:00~ 43:00
+# 47:30 ~ 57:00
+# 58:10 ~ 1:00:02
+# 1:04:40 ~ 1:07:10
+# 1:13:00 ~ 1:18:42
+# 1:19:18 ~ 1:23:40
+s_h = 1
+s_min = 19
+s_sec = 18
+
+e_h = 1
+e_min = 23
+e_sec = 40
+
+start_time = s_h * 60 * 60 + s_min * 60 + s_sec
+end_time = e_h * 60 * 60 + e_min * 60 + e_sec
+#print( &#39;Start time :&#39;,start_time)
+#print( &#39;End time :&#39;,end_time)
+subclip = video.subclip(start_time, end_time)  
+  
+# 写入剪辑后的视频到新的文件  
+subclip.write_videofile(&#34;output_08.mp4&#34;, codec=&#39;libx264&#39;)
+</code></pre><p>基本上可以和视频时间一致，可是呢？转化的过程中电脑在怒吼，电池下降很快，最主要的就是慢。但是，可用，而且满足需求，在没有时间的情况下，勉强完成工作。</p>
+<p>今天“闲来无事”，去moviepy的<a href="https://zulko.github.io/moviepy/index.html">官网</a>看了一下,发现有许多的功能可以用哦。但是，也告诉我，如果只是剪辑视频的话，还是推荐ffmpeg使用。好奇的我，尝试了一下昨天的视频，发现的确很快，而且电脑很安静。</p>
+<p>使用c#代码调用，chatGPT提供。</p>
+<pre tabindex="0"><code>using System;
+using System.Diagnostics;
+
+// 输入视频文件路径和输出视频文件路径
+string inputVideoPath = &#34;/Volumes/Transcend/download/bobi.mp4&#34;;
+string outputVideoPath = &#34;output_video.mp4&#34;;
+
+// 剪辑的起始时间和结束时间（单位：秒）
+
+int s_hour = 1;
+int s_min = 19;
+int s_sec = 18;
+
+int e_hour = 1;
+int e_min = 23;
+int e_sec = 40;
+
+
+int startTime = s_hour * 60 * 60 + s_min * 60 + s_sec;
+int endTime = e_hour * 60 * 60 + e_min * 60 + e_sec;
+
+// 构造FFmpeg命令
+string ffmpegArgs = $&#34;-i \&#34;{inputVideoPath}\&#34; -ss {startTime} -to {endTime} -c copy \&#34;{outputVideoPath}\&#34;&#34;;
+
+// 调用FFmpeg命令
+Process ffmpegProcess = new Process();
+ffmpegProcess.StartInfo.FileName = &#34;ffmpeg&#34;;
+ffmpegProcess.StartInfo.Arguments = ffmpegArgs;
+ffmpegProcess.StartInfo.UseShellExecute = false;
+ffmpegProcess.StartInfo.RedirectStandardOutput = true;
+ffmpegProcess.StartInfo.RedirectStandardError = true;
+
+ffmpegProcess.Start();
+ffmpegProcess.WaitForExit();
+
+// 输出FFmpeg命令的输出和错误信息
+string output = ffmpegProcess.StandardOutput.ReadToEnd();
+string error = ffmpegProcess.StandardError.ReadToEnd();
+
+Console.WriteLine(&#34;Output:&#34;);
+Console.WriteLine(output);
+Console.WriteLine(&#34;Error:&#34;);
+Console.WriteLine(error); 
+</code></pre><pre tabindex="0"><code>time dotnet run
+</code></pre><pre tabindex="0"><code>dotnet run  8.92s user 4.18s system 43% cpu 29.978 total
+</code></pre><p>我使用了原来的moviepy的代码，速度如下：</p>
+<pre tabindex="0"><code>time python cute_test.py
+</code></pre><pre tabindex="0"><code>python cute_test.py  480.43s user 19.80s system 248% cpu 3:21.37 total
+</code></pre><p>我原本想用go/rust/java都写一遍的时候，在发现我其实不就是调用一下ffmpeg嘛，核心都是ffmpeg。所以我放弃了，我用python再使用了一遍。</p>
+<pre tabindex="0"><code>import subprocess
+
+def clip_video(input_file, output_file, start_time, end_time):
+    # 构造FFmpeg命令
+    ffmpeg_args = [
+        &#39;ffmpeg&#39;, 
+        &#39;-i&#39;, input_file, 
+        &#39;-ss&#39;, start_time, 
+        &#39;-to&#39;, end_time, 
+        &#39;-c&#39;, &#39;copy&#39;, 
+        output_file
+    ]
+
+    # 调用FFmpeg命令
+    subprocess.run(ffmpeg_args)
+
+# 输入视频文件路径和输出视频文件路径
+input_video_path = &#34;/Volumes/Transcend/download/bobi.mp4&#34;
+output_video_path = &#34;output_video.mp4&#34;
+
+# 剪辑的起始时间和结束时间（单位：秒）
+start_time = &#34;01:19:18&#34;  # 从第10秒开始剪辑
+end_time = &#34;02:23:40&#34;    # 剪辑到第30秒结束
+
+# 执行视频剪辑操作
+clip_video(input_video_path, output_video_path, start_time, end_time)
+
+print(&#34;视频剪辑完成！&#34;)
+</code></pre><pre tabindex="0"><code>time python cut_call_ffmepg.py
+</code></pre><pre tabindex="0"><code>python cut_call_ffmepg.py  6.69s user 4.12s system 30% cpu 35.530 total
+</code></pre><p>速度上已经没有什么优势了，前提是用moviepy，还是ffmepg。</p>
+<p>所以，好比数学题一样，有多种解法，已先完成作业为主，后续在多思考一下，就可以得出一个最优解。</p>
+<p>真的是，学海无涯苦作舟。</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    
+  
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

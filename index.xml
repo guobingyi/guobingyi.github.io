@@ -6,8 +6,15 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2024 09:52:16 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Apr 2024 18:53:53 +0800</lastBuildDate>
     <atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用moviepy进行电影剪辑</title>
+      <link>https://guobingyi.github.io/code/moviepy/</link>
+      <pubDate>Thu, 11 Apr 2024 18:53:53 +0800</pubDate>
+      <guid>https://guobingyi.github.io/code/moviepy/</guid>
+      <description>使用moviepy进行电影剪辑 退一步，海阔天空！&#xA;有个执念，总想比一下到底谁最快，python/c#/go/rust/java。但是，现实告诉我，谁能快速的解决问题，就够了。&#xA;最近，老婆的工作要进行视频剪辑，老师推荐了剪影，可是呢？有水印，要充VIP，我一看，就答应了帮老婆来干这个事情。满怀信心的打开PR，发现自己已经不会用了。🤣这可咋办呢？问了一下文心一言，在chatGPT3.5还没有免费的时候，文心一言还是比较好用的。文心一言告诉我有个moviepy的库，好的用一下。&#xA;以下是文心一言给的代码，蛮不错。&#xA;from moviepy.editor import VideoFileClip # 加载视频文件 clip = VideoFileClip(&amp;#34;my_video.mp4&amp;#34;) # 剪辑视频，从第10秒到第20秒 subclip = clip.subclip(10, 20) # 写入剪辑后的视频文件 subclip.write_videofile(&amp;#34;my_subclip.mp4&amp;#34;) 用下来，每次都要自己算一下时间，所以自己又写了一个。&#xA;from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileClip(&amp;#34;demo.mp4&amp;#34;) # 剪辑视频，设置开始和结束时间（单位为秒） # 这里假设我们想要剪辑从第5秒到第15秒的部分 # 16:40 ~ 21:21 # 24:30 ~ 26:00 # 33:00 ~ 33:47 # 39:00~ 43:00 # 47:30 ~ 57:00 # 58:10 ~ 1:00:02 # 1:04:40 ~ 1:07:10 # 1:13:00 ~ 1:18:42 # 1:19:18 ~ 1:23:40 s_h = 1 s_min = 19 s_sec = 18 e_h = 1 e_min = 23 e_sec = 40 start_time = s_h * 60 * 60 + s_min * 60 + s_sec end_time = e_h * 60 * 60 + e_min * 60 + e_sec #print( &amp;#39;Start time :&amp;#39;,start_time) #print( &amp;#39;End time :&amp;#39;,end_time) subclip = video.</description>
+    </item>
     <item>
       <title>Exe_sigle_file</title>
       <link>https://guobingyi.github.io/blog/exe_sigle_file/</link>

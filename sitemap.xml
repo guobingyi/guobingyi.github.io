@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://guobingyi.github.io/code/</loc>
+    <lastmod>2024-04-11T18:53:53+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/</loc>
+    <lastmod>2024-04-11T18:53:53+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/code/moviepy/</loc>
+    <lastmod>2024-04-11T18:53:53+08:00</lastmod>
+  </url><url>
     <loc>https://guobingyi.github.io/blog/</loc>
     <lastmod>2024-04-01T09:52:16+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/exe_sigle_file/</loc>
-    <lastmod>2024-04-01T09:52:16+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/</loc>
     <lastmod>2024-04-01T09:52:16+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/ollama/</loc>
@@ -22,9 +28,6 @@
   </url><url>
     <loc>https://guobingyi.github.io/blog/2023%E7%9A%84%E6%80%9D%E8%80%83/</loc>
     <lastmod>2023-11-14T09:38:08+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/code/</loc>
-    <lastmod>2023-10-04T21:34:43+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/code/update_python/</loc>
     <lastmod>2023-10-04T21:34:43+08:00</lastmod>
