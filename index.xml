@@ -4,10 +4,17 @@
     <title>Just Do it on guobingyi</title>
     <link>https://guobingyi.github.io/</link>
     <description>Recent content in Just Do it on guobingyi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 Apr 2024 18:53:53 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2024 19:46:50 +0800</lastBuildDate>
     <atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>飞驰人生2</title>
+      <link>https://guobingyi.github.io/movie/fcrs2/</link>
+      <pubDate>Sun, 02 Jun 2024 19:46:50 +0800</pubDate>
+      <guid>https://guobingyi.github.io/movie/fcrs2/</guid>
+      <description>飞驰人生2 韩寒作品。&#xA;电影给我的最大感受就是，不要留有遗憾。&#xA;最近，总喜欢去做一些原来不做的事情。这样导致我总会有不一样的体验和感受。看到电脑的空间有点尴尬，所以想清理一下磁盘，可是好像没有什么可以删除的，只能删电影，准备将电脑中原来下的电影删除一些，发现都没有看过，找到了《飞驰人生2》，我以为韩寒在电影中出演，所以想看一看。&#xA;电影中，没有爱情，没有太多的儿女情长，更多的是对自己的救赎。叶经理可以在比赛中持续拿奖，除了积聚了大量的优秀车手，还对比赛的举办方有着联系。对于我们普通人来说，想要成功是真的不可能的。所以，就有英雄的出现。这个社会需要英雄。&#xA;电影中有几个地方给我印象深刻，第一是，当跌落神坛的张弛，和普通人一样，都是为了碎银几两。但是，当心底最初的梦想被唤醒，就不要留有遗憾。第二是，刘显德，驾照考不了，但是确实一名很棒的导航员。第三是小海，试车员，虽然父亲是厂长，但是他凭借自己的努力，实现了自己的梦想。第四是，孙宇强和记星，他们是张弛的铁三角，或许人生就是得一二知己，足以。&#xA;最后，还是想说，不要留有遗憾。为国产电影点赞，这些年，越来越好看了！</description>
+    </item>
     <item>
       <title>使用moviepy进行电影剪辑</title>
       <link>https://guobingyi.github.io/code/moviepy/</link>

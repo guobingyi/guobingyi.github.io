@@ -22,8 +22,10 @@ yum remove vsftpd 卸载后需要注意以下问题：
 usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。
 FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：">
 
-<meta property="og:title" content="Centos7搭建ftp服务" />
-<meta property="og:description" content="Centos7 搭建ftp服务 其实，我需求的很简单，你别讲的那么复杂。
+<meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Centos7搭建ftp服务">
+  <meta property="og:description" content="Centos7 搭建ftp服务 其实，我需求的很简单，你别讲的那么复杂。
 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
 0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
 yum install vsftpd 如果安装了，那么就直接卸载了。
@@ -34,11 +36,12 @@ yum remove vsftpd 卸载后需要注意以下问题：
 /etc/vsftpd/vsftpd.conf 一般对照配置修改以下内容：
 #禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户 创建ftp用户 useradd jack 设置用户密码 echo &#34;jack_pass_word&#34; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
 usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。
-FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2018-07-27T09:42:51+08:00" />
-<meta property="article:modified_time" content="2018-07-27T09:42:51+08:00" />
+FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2018-07-27T09:42:51+08:00">
+    <meta property="article:modified_time" content="2018-07-27T09:42:51+08:00">
 
 
 <title>
@@ -67,11 +70,11 @@ FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的I
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a04.397516%20%2b0800%20CST%20m%3d%2b1.774327786">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a04.397516%20%2b0800%20CST%20m%3d%2b1.774327786">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a04.397516%20%2b0800%20CST%20m%3d%2b1.774327786">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a04.397516%20%2b0800%20CST%20m%3d%2b1.774327786">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
     
 
 
@@ -187,7 +190,7 @@ FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的I
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -241,7 +244,7 @@ FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的I
 
         
 
-	
+        
 
         
 
@@ -364,31 +367,6 @@ local_root=/ftpserver/flowdata
         </div>
     </div>
 </section>
-
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
 
 
 

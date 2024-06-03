@@ -26,8 +26,10 @@ native-image HelloWorld 最后，运行。
 dotnet publish 在publish文件中找到文件，创建链接文件。(这个步骤可以不用，我主要是创建了一个将发布后的文件链接到执行目录,方便直接运行)
 ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publish/web web ">
 
-<meta property="og:title" content="Exe_sigle_file" />
-<meta property="og:description" content="单文件部署 你能改变的就是你自己。
+<meta property="og:url" content="https://guobingyi.github.io/blog/exe_sigle_file/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Exe_sigle_file">
+  <meta property="og:description" content="单文件部署 你能改变的就是你自己。
 对于Java和C#最让我感觉到比go最没有可比性的一点就是，go直接就编译成本地二进制文件了，少了保护代码而需要做的混淆操作。但是，现在Java和C#都可以了。当然，如果用mojo后，python也可以了。
 01.Java编译成可执行二进制文件 Java编译成二进制的模式来源于GraalVM的操作。
 例子来源于GraalVM官网。
@@ -42,11 +44,12 @@ native-image HelloWorld 最后，运行。
 &lt;Project Sdk=&#34;Microsoft.NET.Sdk.Web&#34;&gt; &lt;PropertyGroup&gt; &lt;RuntimeIdentifiers&gt;osx-x64&lt;/RuntimeIdentifiers&gt; &lt;PublishSingleFile&gt;true&lt;/PublishSingleFile&gt; &lt;SelfContained&gt;true&lt;/SelfContained&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;/PropertyGroup&gt; &lt;/Project&gt; 加入输出类型Exe,平台osx-x64，发布单文件PublishSingleFile,自包含SelfContained。
 其次，发布。
 dotnet publish 在publish文件中找到文件，创建链接文件。(这个步骤可以不用，我主要是创建了一个将发布后的文件链接到执行目录,方便直接运行)
-ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publish/web web " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/blog/exe_sigle_file/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2024-04-01T09:52:16+08:00" />
-<meta property="article:modified_time" content="2024-04-01T09:52:16+08:00" />
+ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publish/web web ">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-04-01T09:52:16+08:00">
+    <meta property="article:modified_time" content="2024-04-01T09:52:16+08:00">
 
 
 <title>
@@ -75,11 +78,11 @@ ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publ
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a04.915617%20%2b0800%20CST%20m%3d%2b2.292423365">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a04.915617%20%2b0800%20CST%20m%3d%2b2.292423365">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a04.915617%20%2b0800%20CST%20m%3d%2b2.292423365">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a04.915617%20%2b0800%20CST%20m%3d%2b2.292423365">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
     
 
 
@@ -195,7 +198,7 @@ ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publ
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -249,7 +252,7 @@ ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publ
 
         
 
-	
+        
 
         
 
@@ -356,31 +359,6 @@ Hello, World!
         </div>
     </div>
 </section>
-
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
 
 
 

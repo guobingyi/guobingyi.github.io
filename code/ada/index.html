@@ -22,8 +22,10 @@ gnatmake greet.adb 运行：
 ./greet.adb 查看标准库，有一个文件的写入代码：
 with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &#34;simple.txt&#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &#34;Hello World #1&#34;); Put_Line (F, &#34;Hello World #2&#34;); Put_Line (F, &#34;Hello World #3&#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：">
 
-<meta property="og:title" content="Ada" />
-<meta property="og:description" content="Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
+<meta property="og:url" content="https://guobingyi.github.io/code/ada/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Ada">
+  <meta property="og:description" content="Ada 被Ada的名字所吸引，来到了Ada Programming的世界。在wiki上描述，Ada是一种适合所有程序员使用的语言。但是，我查阅资料后，发现Ada最开始是美国军方为了整理在军队中使用太多的语言而创建的一种语言。知乎上对此提及的也很少，说在波音飞机中使用到该语言，而我从学习Python的过程中了解了次语言便开始一路逛奔过来。
 要怪就得怪我太发散了，什么东西都喜欢弄个清楚，搞个明白。最终，才逐渐明白，很多语言都是基于C或者C&#43;&#43;的。要想彻底的搞清楚，最终还是逃脱不了C和C&#43;&#43;，宿命吧～～
 话说Python中所说的：“人生苦短，我用Python。”可是，对与我来说就是想学习一些不一样的东西，我就喜欢在程序的世界里。所以，写代码的目的不是为了逃避，而是为了满足自己。
 或许是年龄的问题，记忆的东西已经不如从前了，在此就记录一下自己跟进的进度，等再次要学习的时候而不是抓狂，再次从头开始。
@@ -34,11 +36,12 @@ export ADA_PATH=/Users/guoby/opt/GNAT/2020/bin 开始编写第一个ada程序：
 with Ada.Text_IO; use Ada.Text_IO; procedure Greet is begin -- Print &#34;Hello, World!&#34; to the screen Put_Line (&#34;Hello, World!&#34;); Put_Line (&#34;你好，世界!*2&#34;); Put_Line(&#34;ok?&#34;) end Greet; 编译：
 gnatmake greet.adb 运行：
 ./greet.adb 查看标准库，有一个文件的写入代码：
-with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &#34;simple.txt&#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &#34;Hello World #1&#34;); Put_Line (F, &#34;Hello World #2&#34;); Put_Line (F, &#34;Hello World #3&#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/code/ada/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-11-17T21:13:48+08:00" />
-<meta property="article:modified_time" content="2022-11-17T21:13:48+08:00" />
+with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : File_Type; File_Name : constant String := &#34;simple.txt&#34;; begin Create (F, Out_File, File_Name); Put_Line (F, &#34;Hello World #1&#34;); Put_Line (F, &#34;Hello World #2&#34;); Put_Line (F, &#34;Hello World #3&#34;); Close (F); Open (F, In_File, File_Name); while not End_Of_File (F) loop Put_Line (Get_Line (F)); end loop; Close (F); end Show_Simple_Text_File_IO; 因为太像c代码的编译，所以直接写了个Makefile文件：">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2022-11-17T21:13:48+08:00">
+    <meta property="article:modified_time" content="2022-11-17T21:13:48+08:00">
 
 
 <title>
@@ -67,11 +70,11 @@ with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : Fil
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a06.88611%20%2b0800%20CST%20m%3d%2b4.262891830">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a06.88611%20%2b0800%20CST%20m%3d%2b4.262891830">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a06.88611%20%2b0800%20CST%20m%3d%2b4.262891830">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a25.871019%20%2b0800%20CST%20m%3d%2b2.940495703">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a25.871019%20%2b0800%20CST%20m%3d%2b2.940495703">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a25.871019%20%2b0800%20CST%20m%3d%2b2.940495703">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a06.88611%20%2b0800%20CST%20m%3d%2b4.262891830">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a25.871019%20%2b0800%20CST%20m%3d%2b2.940495703">
     
 
 
@@ -187,7 +190,7 @@ with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : Fil
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -241,7 +244,7 @@ with Ada.Text_IO; use Ada.Text_IO; procedure Show_Simple_Text_File_IO is F : Fil
 
         
 
-	
+        
 
         
 
@@ -394,31 +397,6 @@ end Hello;
         </div>
     </div>
 </section>
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
-
 
 
 </body>

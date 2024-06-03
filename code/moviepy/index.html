@@ -16,17 +16,20 @@
 from moviepy.editor import VideoFileClip # 加载视频文件 clip = VideoFileClip(&#34;my_video.mp4&#34;) # 剪辑视频，从第10秒到第20秒 subclip = clip.subclip(10, 20) # 写入剪辑后的视频文件 subclip.write_videofile(&#34;my_subclip.mp4&#34;) 用下来，每次都要自己算一下时间，所以自己又写了一个。
 from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileClip(&#34;demo.mp4&#34;) # 剪辑视频，设置开始和结束时间（单位为秒） # 这里假设我们想要剪辑从第5秒到第15秒的部分 # 16:40 ~ 21:21 # 24:30 ~ 26:00 # 33:00 ~ 33:47 # 39:00~ 43:00 # 47:30 ~ 57:00 # 58:10 ~ 1:00:02 # 1:04:40 ~ 1:07:10 # 1:13:00 ~ 1:18:42 # 1:19:18 ~ 1:23:40 s_h = 1 s_min = 19 s_sec = 18 e_h = 1 e_min = 23 e_sec = 40 start_time = s_h * 60 * 60 &#43; s_min * 60 &#43; s_sec end_time = e_h * 60 * 60 &#43; e_min * 60 &#43; e_sec #print( &#39;Start time :&#39;,start_time) #print( &#39;End time :&#39;,end_time) subclip = video.">
 
-<meta property="og:title" content="使用moviepy进行电影剪辑" />
-<meta property="og:description" content="使用moviepy进行电影剪辑 退一步，海阔天空！
+<meta property="og:url" content="https://guobingyi.github.io/code/moviepy/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="使用moviepy进行电影剪辑">
+  <meta property="og:description" content="使用moviepy进行电影剪辑 退一步，海阔天空！
 有个执念，总想比一下到底谁最快，python/c#/go/rust/java。但是，现实告诉我，谁能快速的解决问题，就够了。
 最近，老婆的工作要进行视频剪辑，老师推荐了剪影，可是呢？有水印，要充VIP，我一看，就答应了帮老婆来干这个事情。满怀信心的打开PR，发现自己已经不会用了。🤣这可咋办呢？问了一下文心一言，在chatGPT3.5还没有免费的时候，文心一言还是比较好用的。文心一言告诉我有个moviepy的库，好的用一下。
 以下是文心一言给的代码，蛮不错。
 from moviepy.editor import VideoFileClip # 加载视频文件 clip = VideoFileClip(&#34;my_video.mp4&#34;) # 剪辑视频，从第10秒到第20秒 subclip = clip.subclip(10, 20) # 写入剪辑后的视频文件 subclip.write_videofile(&#34;my_subclip.mp4&#34;) 用下来，每次都要自己算一下时间，所以自己又写了一个。
-from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileClip(&#34;demo.mp4&#34;) # 剪辑视频，设置开始和结束时间（单位为秒） # 这里假设我们想要剪辑从第5秒到第15秒的部分 # 16:40 ~ 21:21 # 24:30 ~ 26:00 # 33:00 ~ 33:47 # 39:00~ 43:00 # 47:30 ~ 57:00 # 58:10 ~ 1:00:02 # 1:04:40 ~ 1:07:10 # 1:13:00 ~ 1:18:42 # 1:19:18 ~ 1:23:40 s_h = 1 s_min = 19 s_sec = 18 e_h = 1 e_min = 23 e_sec = 40 start_time = s_h * 60 * 60 &#43; s_min * 60 &#43; s_sec end_time = e_h * 60 * 60 &#43; e_min * 60 &#43; e_sec #print( &#39;Start time :&#39;,start_time) #print( &#39;End time :&#39;,end_time) subclip = video." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/code/moviepy/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2024-04-11T18:53:53+08:00" />
-<meta property="article:modified_time" content="2024-04-11T18:53:53+08:00" />
+from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileClip(&#34;demo.mp4&#34;) # 剪辑视频，设置开始和结束时间（单位为秒） # 这里假设我们想要剪辑从第5秒到第15秒的部分 # 16:40 ~ 21:21 # 24:30 ~ 26:00 # 33:00 ~ 33:47 # 39:00~ 43:00 # 47:30 ~ 57:00 # 58:10 ~ 1:00:02 # 1:04:40 ~ 1:07:10 # 1:13:00 ~ 1:18:42 # 1:19:18 ~ 1:23:40 s_h = 1 s_min = 19 s_sec = 18 e_h = 1 e_min = 23 e_sec = 40 start_time = s_h * 60 * 60 &#43; s_min * 60 &#43; s_sec end_time = e_h * 60 * 60 &#43; e_min * 60 &#43; e_sec #print( &#39;Start time :&#39;,start_time) #print( &#39;End time :&#39;,end_time) subclip = video.">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2024-04-11T18:53:53+08:00">
+    <meta property="article:modified_time" content="2024-04-11T18:53:53+08:00">
 
 
 <title>
@@ -55,11 +58,11 @@ from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileC
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a07.276831%20%2b0800%20CST%20m%3d%2b4.653607473">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a07.276831%20%2b0800%20CST%20m%3d%2b4.653607473">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a07.276831%20%2b0800%20CST%20m%3d%2b4.653607473">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.147993%20%2b0800%20CST%20m%3d%2b3.217471091">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.147993%20%2b0800%20CST%20m%3d%2b3.217471091">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.147993%20%2b0800%20CST%20m%3d%2b3.217471091">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a07.276831%20%2b0800%20CST%20m%3d%2b4.653607473">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.147993%20%2b0800%20CST%20m%3d%2b3.217471091">
     
 
 
@@ -175,7 +178,7 @@ from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileC
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -229,7 +232,7 @@ from moviepy.editor import VideoFileClip # 加载视频文件 video = VideoFileC
 
         
 
-	
+        
 
         
 
@@ -410,31 +413,6 @@ print(&#34;视频剪辑完成！&#34;)
         </div>
     </div>
 </section>
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
-
 
 
 </body>

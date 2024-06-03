@@ -13,14 +13,17 @@
 在Mac pro下安装gitbook非常简单，前提是安装了brew。
 0x00 安装node brew install node 0x01 安装gitbook npm install gitbook-cli -g 0x02 简单使用 1.创建项目名称 mkdir goodtime 2.初始化项目 cd goodtime gitbook init 3. 编译项目 gitbook build 4. 启动项目 gitbook serve 5. 导出pdf/epub/mobi (1).安装插件 gitbook install (2).安装电子书插件 brew cask install calibre (3).导出pdf gitbook pdf . goodtime.pdf (4).导出epub gitbook epub . goodtime.epub (5).导出mobi gitbook mobi . goodtime.mobi 0x03 总结 自从使用了hugo后，对写书的兴趣就下降了。原来也用过gitbook写过点书，哈哈～～，准确的说是想学着写书。感觉非常不错，但是由于工作的原因也是断断续续的。或许，有时间应该深入学习一下，毕竟，写点东西还是蛮有意思的。">
 
-<meta property="og:title" content="Gitbook" />
-<meta property="og:description" content="GitBook 初探 gitbook 是一个基于Node.js的工具。
+<meta property="og:url" content="https://guobingyi.github.io/blog/gitbook/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Gitbook">
+  <meta property="og:description" content="GitBook 初探 gitbook 是一个基于Node.js的工具。
 在Mac pro下安装gitbook非常简单，前提是安装了brew。
-0x00 安装node brew install node 0x01 安装gitbook npm install gitbook-cli -g 0x02 简单使用 1.创建项目名称 mkdir goodtime 2.初始化项目 cd goodtime gitbook init 3. 编译项目 gitbook build 4. 启动项目 gitbook serve 5. 导出pdf/epub/mobi (1).安装插件 gitbook install (2).安装电子书插件 brew cask install calibre (3).导出pdf gitbook pdf . goodtime.pdf (4).导出epub gitbook epub . goodtime.epub (5).导出mobi gitbook mobi . goodtime.mobi 0x03 总结 自从使用了hugo后，对写书的兴趣就下降了。原来也用过gitbook写过点书，哈哈～～，准确的说是想学着写书。感觉非常不错，但是由于工作的原因也是断断续续的。或许，有时间应该深入学习一下，毕竟，写点东西还是蛮有意思的。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/blog/gitbook/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2019-03-06T10:29:40+08:00" />
-<meta property="article:modified_time" content="2019-03-06T10:29:40+08:00" />
+0x00 安装node brew install node 0x01 安装gitbook npm install gitbook-cli -g 0x02 简单使用 1.创建项目名称 mkdir goodtime 2.初始化项目 cd goodtime gitbook init 3. 编译项目 gitbook build 4. 启动项目 gitbook serve 5. 导出pdf/epub/mobi (1).安装插件 gitbook install (2).安装电子书插件 brew cask install calibre (3).导出pdf gitbook pdf . goodtime.pdf (4).导出epub gitbook epub . goodtime.epub (5).导出mobi gitbook mobi . goodtime.mobi 0x03 总结 自从使用了hugo后，对写书的兴趣就下降了。原来也用过gitbook写过点书，哈哈～～，准确的说是想学着写书。感觉非常不错，但是由于工作的原因也是断断续续的。或许，有时间应该深入学习一下，毕竟，写点东西还是蛮有意思的。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-03-06T10:29:40+08:00">
+    <meta property="article:modified_time" content="2019-03-06T10:29:40+08:00">
 
 
 <title>
@@ -49,11 +52,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a05.114192%20%2b0800%20CST%20m%3d%2b2.490995123">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a05.114192%20%2b0800%20CST%20m%3d%2b2.490995123">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a05.114192%20%2b0800%20CST%20m%3d%2b2.490995123">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a24.698128%20%2b0800%20CST%20m%3d%2b1.767599831">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a24.698128%20%2b0800%20CST%20m%3d%2b1.767599831">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a24.698128%20%2b0800%20CST%20m%3d%2b1.767599831">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a05.114192%20%2b0800%20CST%20m%3d%2b2.490995123">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a24.698128%20%2b0800%20CST%20m%3d%2b1.767599831">
     
 
 
@@ -169,7 +172,7 @@
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -223,7 +226,7 @@
 
         
 
-	
+        
 
         
 
@@ -323,31 +326,6 @@
         </div>
     </div>
 </section>
-
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
 
 
 

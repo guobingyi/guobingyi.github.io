@@ -29,8 +29,10 @@ fragment.go
 go fmt 高亮显示运算符优先级
 func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：">
 
-<meta property="og:title" content="Test-driven development with Go" />
-<meta property="og:description" content="介绍 使用Go语言进行驱动开发。
+<meta property="og:url" content="https://guobingyi.github.io/code/test-drivendevelopmentwithgo/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Test-driven development with Go">
+  <meta property="og:description" content="介绍 使用Go语言进行驱动开发。
 讲什么 本书将讲解如何使用一个在线服务创建二维码，仅仅使用Go自带的框架。
 二维条形码可以编写各种信息。许多智能手机都用扫描二维码的应用程序，你可能以前看见过，如果没有，下面就是典型的二维码信息：
 在本书的结尾将由一个完整的例子，使用http服务来创建二维码。在此过程中，你讲学习到Go语言的一些特性和其标准库用法以及测试驱动开发。
@@ -48,11 +50,12 @@ fragment.go
 关于从第17行到第20行的整个代码块的一些有趣信息。
 有时代码样本缺少行号 - 在这种情况下，代码实际上并不包含在源代码中，而是意味着要点。
 go fmt 高亮显示运算符优先级
-func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/code/test-drivendevelopmentwithgo/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2018-08-07T17:48:14+08:00" />
-<meta property="article:modified_time" content="2018-08-07T17:48:14+08:00" />
+func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 软件开发是编辑器和命令行之间的相互作用。相关命令行会话也包含在本书中，并呈现如下：">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2018-08-07T17:48:14+08:00">
+    <meta property="article:modified_time" content="2018-08-07T17:48:14+08:00">
 
 
 <title>
@@ -81,11 +84,11 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a07.436976%20%2b0800%20CST%20m%3d%2b4.813750971">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a07.436976%20%2b0800%20CST%20m%3d%2b4.813750971">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a07.436976%20%2b0800%20CST%20m%3d%2b4.813750971">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.426495%20%2b0800%20CST%20m%3d%2b3.495973527">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.426495%20%2b0800%20CST%20m%3d%2b3.495973527">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.426495%20%2b0800%20CST%20m%3d%2b3.495973527">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a07.436976%20%2b0800%20CST%20m%3d%2b4.813750971">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.426495%20%2b0800%20CST%20m%3d%2b3.495973527">
     
 
 
@@ -201,7 +204,7 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -255,7 +258,7 @@ func Hypothetical(a b c int) int { return 4*a*a &#43; (b*c)/2 } 命令行会话 
 
         
 
-	
+        
 
         
 
@@ -1005,31 +1008,6 @@ Go中没有。</li>
         </div>
     </div>
 </section>
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
-
 
 
 </body>

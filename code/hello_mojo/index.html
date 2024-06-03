@@ -19,8 +19,10 @@
 curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。
 2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。">
 
-<meta property="og:title" content="Hello_mojo" />
-<meta property="og:description" content="Hello,mojo 尽信书，不如无书！
+<meta property="og:url" content="https://guobingyi.github.io/code/hello_mojo/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Hello_mojo">
+  <meta property="og:description" content="Hello,mojo 尽信书，不如无书！
 最近mojo进入我的视眼，因为官网宣传比python快68000倍。我抱着怀疑的态度，想尝试一下，毕竟最近领悟了“人生苦短，我用python”的理念。
 第一时间订阅了mojo SDK的下载通知，在2023年9月7日迎来了第一版本的SDK下载，非常兴奋的去下载页面，都没有来得及仔细阅读，就把下载命令拷贝在终端，像rust语言一样的简单，可是报错了，发现这个版本的SDK只支持在Ubuntu上运行，被搞得难受极了，心了有了无数匹马在奔腾。好吧，既然这样就仔细遇到阅读了安装手册，说可以使用docker来弥补现在的这个版本，好吧，既然这样就安装docker了。可是，万万没有想到，docker居然会出现那么严重的问题，我的主盘128G空间剩余20G，连个docker都安装不了，赶紧腾出了30G的趋势卡来安装，docker这个混蛋居然把所有空间占满了，还启动报错，F**K。连续安装了几次后，果断放弃了。看着mojo的文档说马上会推出macOS的SDK，心想就这样吧～～
 2023年9月21日，mojo推出了v0.3.0版本，我认真仔细的读了变更日志，没有推出macOS的SDK，心里不爽，不是说coming soon吗？好吧，我等不了了，既然docker用不了，那有没有替代品呢？找到了podman。我是来安装mojo的，想不到吧？我去安装了podman来安装Ubuntu了，呵呵。看了podman的介绍，还好和docker比较相似，用法上没有太多的难点。
@@ -28,11 +30,12 @@ curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee3713
 2 安装mojo 进入到podman的镜像中，ubuntu是最精简版连个curl命令都木有，所以直接用文档命令是会报错的，第一步应该是安装curl。
 2.1 安装curl apt update &amp;&amp; apt install curl 2.2 安装modular 有个认证信息是在用自己的邮箱登录modular.com是匹配的，下载SDK需要进行验证，或许是为了看看有多少人来用，也或者就是个噱头。
 curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee37131e \ sh - 安装modular还算好，一次安装成功，记住这里的一次，后面有惊喜。
-2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://guobingyi.github.io/code/hello_mojo/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2023-09-24T13:39:14+08:00" />
-<meta property="article:modified_time" content="2023-09-24T13:39:14+08:00" />
+2.3 安装mojo modular install mojo 我花了一天的时间来允许这个命令，尝试次数不低于20次，F**K。终于受不了，去known-issues看看到底是啥情况呀，一看不知道，看了吓一跳，出现各种问题的不至我一个，他们都在try and try again。我无语了，我可以忍受我的电脑在低声咆哮，毕竟老啦，但是我即使使用Rust编译，Idea的编译器都是咆哮一会就好，好吧，你给我一直咆哮也就算啦，还报啦许多错误。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2023-09-24T13:39:14+08:00">
+    <meta property="article:modified_time" content="2023-09-24T13:39:14+08:00">
 
 
 <title>
@@ -61,11 +64,11 @@ curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee3713
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-04-11%2019%3a22%3a07.098352%20%2b0800%20CST%20m%3d%2b4.475130870">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-04-11%2019%3a22%3a07.098352%20%2b0800%20CST%20m%3d%2b4.475130870">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-04-11%2019%3a22%3a07.098352%20%2b0800%20CST%20m%3d%2b4.475130870">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.055317%20%2b0800%20CST%20m%3d%2b3.124794374">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.055317%20%2b0800%20CST%20m%3d%2b3.124794374">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.055317%20%2b0800%20CST%20m%3d%2b3.124794374">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-04-11%2019%3a22%3a07.098352%20%2b0800%20CST%20m%3d%2b4.475130870">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.055317%20%2b0800%20CST%20m%3d%2b3.124794374">
     
 
 
@@ -181,7 +184,7 @@ curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee3713
                     
                 
                 
-                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
             
             <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
             
@@ -235,7 +238,7 @@ curl https://get.modular.com | \ MODULAR_AUTH=mut_00273df6e12046e2827eec99ee3713
 
         
 
-	
+        
 
         
 
@@ -417,31 +420,6 @@ service ssh status
         </div>
     </div>
 </section>
-
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    
-  
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
-
-
-
 
 
 </body>
