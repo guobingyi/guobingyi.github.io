@@ -9,10 +9,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="生成CA证书 https的数据传输加密已经正是成为了标准。
+<meta name="description" content="生成CA证书
+
+https的数据传输加密已经正是成为了标准。
+
 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
 ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
-1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.">
+1. 创建根证书密钥文件root.key
+openssl genrsa -des3 -out root.key
+2. 创建根证书的申请文件root.csr
+openssl req -new -key root.key -out root.csr
+3. 创建一个自当前日期起为期十年的根证书root.crt
+openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt
+4. 创建服务器证书密钥server.key
+openssl genrsa –des3 -out server.key 2048
+5. 创建服务器证书的申请文件server.csr
+openssl req -new -key server.key -out server.csr
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/createca/">
   <meta property="og:site_name" content="guobingyi">
@@ -20,7 +33,7 @@ ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就�
   <meta property="og:description" content="生成CA证书 https的数据传输加密已经正是成为了标准。
 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
 ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
-1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.">
+1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -54,11 +67,11 @@ ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a25.907904%20%2b0800%20CST%20m%3d%2b2.977380420">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a25.907904%20%2b0800%20CST%20m%3d%2b2.977380420">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a25.907904%20%2b0800%20CST%20m%3d%2b2.977380420">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a28.357102%20%2b0800%20CST%20m%3d%2b4.632197737">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a28.357102%20%2b0800%20CST%20m%3d%2b4.632197737">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a28.357102%20%2b0800%20CST%20m%3d%2b4.632197737">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a25.907904%20%2b0800%20CST%20m%3d%2b2.977380420">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a28.357102%20%2b0800%20CST%20m%3d%2b4.632197737">
     
 
 

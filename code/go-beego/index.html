@@ -9,12 +9,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="beego tutorial 无他， 但手熟尔。
-0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
-2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
-3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。
-4. beego 项目结构 一般的 beego 项目的目录如下所示：
-├── conf │ └── app.">
+<meta name="description" content="beego tutorial
+
+无他， 但手熟尔。
+
+0x00 介绍
+1. beego 简介
+beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
+2. beego 的架构
+beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
+3. beego 的执行逻辑
+既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/go-beego/">
   <meta property="og:site_name" content="guobingyi">
@@ -22,9 +27,7 @@
   <meta property="og:description" content="beego tutorial 无他， 但手熟尔。
 0x00 介绍 1. beego 简介 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架，主要设计灵感来源于 tornado、sinatra 和 flask 这三个框架，但是结合了 Go 本身的一些特性（interface、struct 嵌入等）而设计的一个框架。
 2. beego 的架构 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档逐一介绍。
-3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。
-4. beego 项目结构 一般的 beego 项目的目录如下所示：
-├── conf │ └── app.">
+3. beego 的执行逻辑 既然 beego 是基于这些模块构建的，那么它的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -58,11 +61,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.015391%20%2b0800%20CST%20m%3d%2b3.084867785">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.015391%20%2b0800%20CST%20m%3d%2b3.084867785">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.015391%20%2b0800%20CST%20m%3d%2b3.084867785">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a28.572895%20%2b0800%20CST%20m%3d%2b4.847990721">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a28.572895%20%2b0800%20CST%20m%3d%2b4.847990721">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a28.572895%20%2b0800%20CST%20m%3d%2b4.847990721">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.015391%20%2b0800%20CST%20m%3d%2b3.084867785">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a28.572895%20%2b0800%20CST%20m%3d%2b4.847990721">
     
 
 
@@ -325,82 +328,82 @@
 </code></pre><h4 id="2-后台数据库">2. 后台数据库</h4>
 <p>用户表 TB_User</p>
 <table>
-<thead>
-<tr>
-<th>序号</th>
-<th>字段名称</th>
-<th>字段类型</th>
-<th>字段长度</th>
-<th>字段说明</th>
-<th>可空</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>id</td>
-<td>int(16)</td>
-<td>16</td>
-<td>用户id</td>
-<td>N</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>2</td>
-<td>user_name</td>
-<td>varchar(64)</td>
-<td>64</td>
-<td>用户名称</td>
-<td>N</td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
-<td>sex</td>
-<td>int(1)</td>
-<td>1</td>
-<td>用户性别</td>
-<td>N</td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td>age</td>
-<td>int(3)</td>
-<td>3</td>
-<td>用户年龄</td>
-<td>Y</td>
-<td></td>
-</tr>
-<tr>
-<td>5</td>
-<td>phone</td>
-<td>varchar(16)</td>
-<td>16</td>
-<td>电话</td>
-<td>Y</td>
-<td></td>
-</tr>
-<tr>
-<td>6</td>
-<td>email</td>
-<td>varchar(32)</td>
-<td>32</td>
-<td>邮件</td>
-<td>Y</td>
-<td></td>
-</tr>
-<tr>
-<td>7</td>
-<td>del_flag</td>
-<td>int(1)</td>
-<td>1</td>
-<td>删除标记</td>
-<td>Y</td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">序号</th>
+          <th style="text-align: left">字段名称</th>
+          <th style="text-align: left">字段类型</th>
+          <th style="text-align: left">字段长度</th>
+          <th style="text-align: left">字段说明</th>
+          <th style="text-align: left">可空</th>
+          <th style="text-align: left">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">id</td>
+          <td style="text-align: left">int(16)</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">用户id</td>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">主键</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">user_name</td>
+          <td style="text-align: left">varchar(64)</td>
+          <td style="text-align: left">64</td>
+          <td style="text-align: left">用户名称</td>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">sex</td>
+          <td style="text-align: left">int(1)</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">用户性别</td>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">age</td>
+          <td style="text-align: left">int(3)</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">用户年龄</td>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">phone</td>
+          <td style="text-align: left">varchar(16)</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">电话</td>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">email</td>
+          <td style="text-align: left">varchar(32)</td>
+          <td style="text-align: left">32</td>
+          <td style="text-align: left">邮件</td>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">del_flag</td>
+          <td style="text-align: left">int(1)</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">删除标记</td>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
 </table>
 <p>执行SQL</p>
 <pre tabindex="0"><code>CREATE TABLE TB_User

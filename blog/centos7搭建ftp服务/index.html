@@ -9,18 +9,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Centos7 搭建ftp服务 其实，我需求的很简单，你别讲的那么复杂。
+<meta name="description" content="Centos7 搭建ftp服务
+
+其实，我需求的很简单，你别讲的那么复杂。
+
 第一次在centos7下搭建ftp服务，原来在redhat下搭建过，但是忘记了怎么搭建了。尴尬了，所以就重头开始。我的需求很简单，就是一个ftp服务，去掉匿名登录后，有个用户和密码，能将文件放到上面就完了。好了，需求有了，我用百度搜了“centos7 ftp服务搭建”，一大堆网页跑出了，我选择了一些常用的地方，比如csdn,博客园，红黑联盟。但是非常失望，没有一个地方可以很清楚的讲解清楚，如果照着页面上的做，那么可能会进入一个死结，但是文章中又没有提到该怎么解，反正人家是成功的，你的就不成功。郁闷！这就陷入另外的一个处境，你不得不尝试其他文章的方法，这样一折腾，一个早上，或者一天就结束了。希望我能在这里将我遇到的坑，和怎么解决的方法告诉大家，避免走弯路。
-0x00 安装vsftpd 如果centos下没有安装vsftpd，那么就你就直接安装:
-yum install vsftpd 如果安装了，那么就直接卸载了。
-yum remove vsftpd 卸载后需要注意以下问题：
-查看线程是否存在 ps auxf | grep vsftpd 如果线程存在则直接 kill -9 .
-如果/etc/vsftpd文件夹存在，先删除在重新安装。 即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
-0x01 配置信息 ftp服务的配置信息路径为：
-/etc/vsftpd/vsftpd.conf 一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户 创建ftp用户 useradd jack 设置用户密码 echo &#34;jack_pass_word&#34; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
-usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。
-FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：">
+0x00 安装vsftpd
+如果centos下没有安装vsftpd，那么就你就直接安装:
+yum install vsftpd
+如果安装了，那么就直接卸载了。
+yum remove vsftpd
+卸载后需要注意以下问题：
+
+查看线程是否存在
+
+ps auxf | grep vsftpd
+如果线程存在则直接 kill -9 .
+
+如果/etc/vsftpd文件夹存在，先删除在重新安装。
+
+即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
+0x01 配置信息
+ftp服务的配置信息路径为：
+/etc/vsftpd/vsftpd.conf
+一般对照配置修改以下内容：
+#禁用匿名用户登录
+anonymous_enable=NO
+#是否允许本地用户登录
+chroot_local_user=YES
+#ftp根目录
+local_root=/ftpserver/flowdata
+0x02 创建本地用户
+
+创建ftp用户
+
+useradd jack
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/centos7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1/">
   <meta property="og:site_name" content="guobingyi">
@@ -34,9 +58,7 @@ yum remove vsftpd 卸载后需要注意以下问题：
 如果/etc/vsftpd文件夹存在，先删除在重新安装。 即：在重新安装前，全部vsftpd的线程不存在，文件夹为最新。
 0x01 配置信息 ftp服务的配置信息路径为：
 /etc/vsftpd/vsftpd.conf 一般对照配置修改以下内容：
-#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户 创建ftp用户 useradd jack 设置用户密码 echo &#34;jack_pass_word&#34; | passwd jack --stdin 3.限制该用户仅能通过 FTP 访问
-usermod -s /sbin/nologin jack 0x03 启动ftp服务 systemctl start vsftpd 0x04 验证ftp服务 在浏览器中如输入以下地址，如果能正常访问，则部署成功；如果没有，从0开始。
-FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的Ip，如果这个都不知道替换的话，算了，别弄了，不要为难自己。 0x05 解决vsftp登录后but failed to open directory的问题 关闭SELinux的方法：">
+#禁用匿名用户登录 anonymous_enable=NO #是否允许本地用户登录 chroot_local_user=YES #ftp根目录 local_root=/ftpserver/flowdata 0x02 创建本地用户 创建ftp用户 useradd jack ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -70,11 +92,11 @@ FTP://jack:jack_pass_word@192.168.100.175:21/ 192.168.100.175是我服务器的I
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a25.528103%20%2b0800%20CST%20m%3d%2b1.803207258">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a25.528103%20%2b0800%20CST%20m%3d%2b1.803207258">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a25.528103%20%2b0800%20CST%20m%3d%2b1.803207258">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a24.28902%20%2b0800%20CST%20m%3d%2b1.358490181">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a25.528103%20%2b0800%20CST%20m%3d%2b1.803207258">
     
 
 

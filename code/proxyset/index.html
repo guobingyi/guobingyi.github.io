@@ -9,12 +9,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Mac下代理设置 采菊东篱下，悠然见南山。
+<meta name="description" content="Mac下代理设置
+
+采菊东篱下，悠然见南山。
+
 一直都在网络上找Mac下的代理设置，因为使用了VPN。但是，查找的资料一直都没有能说清楚，直到昨天，终于看到了这篇文章，把我近几个月来的烦恼都解决了。不知道能不能查阅到，所以我贴了大部分内容。
-在终端下访问系统代理 scutil命令管理系统配置参数，通过 &ndash;proxy参数来显示系统代理信息。
+在终端下访问系统代理
+scutil命令管理系统配置参数，通过 &ndash;proxy参数来显示系统代理信息。
 未配置代理情况：
-$ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
-$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：">
+$ scutil --proxy
+&lt;dictionary&gt; {
+  FTPPassive : 1
+  HTTPEnable : 0
+  HTTPSEnable : 0
+}
+配置代理的情况：
+$ scutil --proxy
+&lt;dictionary&gt; {
+  ExcludeSimpleHostnames : 1
+  FTPEnable : 0
+  FTPPassive : 1
+  GopherEnable : 0
+  HTTPEnable : 1
+  HTTPPort : 49199
+  HTTPProxy : localhost
+  HTTPSEnable : 1
+  HTTPSPort : 49199
+  HTTPSProxy : localhost
+  ProxyAutoConfigEnable : 0
+  ProxyAutoDiscoveryEnable : 0
+  RTSPEnable : 0
+  SOCKSEnable : 0
+}
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/proxyset/">
   <meta property="og:site_name" content="guobingyi">
@@ -24,7 +51,7 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
 在终端下访问系统代理 scutil命令管理系统配置参数，通过 –proxy参数来显示系统代理信息。
 未配置代理情况：
 $ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
-$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：">
+$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -58,11 +85,11 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.293376%20%2b0800%20CST%20m%3d%2b3.362854593">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.293376%20%2b0800%20CST%20m%3d%2b3.362854593">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.293376%20%2b0800%20CST%20m%3d%2b3.362854593">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a28.999904%20%2b0800%20CST%20m%3d%2b5.274998532">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a28.999904%20%2b0800%20CST%20m%3d%2b5.274998532">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a28.999904%20%2b0800%20CST%20m%3d%2b5.274998532">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.293376%20%2b0800%20CST%20m%3d%2b3.362854593">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a28.999904%20%2b0800%20CST%20m%3d%2b5.274998532">
     
 
 

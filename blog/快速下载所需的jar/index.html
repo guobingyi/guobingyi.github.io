@@ -9,14 +9,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="使用maven下载jar到本地 原来使用Java进行项目开发的时候，都是使用浏览器一个一个jar进行下载，放到lib目录中使用。 最近，发现使用maven的效率更高，所以，使用该方法。
-1.创建一个pom.xml文件。 &lt;?xml version=&#34;1.0&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;com.bingyi&lt;/groupId&gt; &lt;artifactId&gt;test&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;repositories&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;central-repos2&lt;/id&gt;&lt;name&gt;Central Repository 2&lt;/name&gt;&lt;url&gt;http://repo.spring.io/plugins-release&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;maven.net.cn&lt;/id&gt;&lt;name&gt;oneof the central mirrors in china&lt;/name&gt;&lt;url&gt;http://maven.net.cn/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;repository&gt; &lt;id&gt;oschina-repos&lt;/id&gt; &lt;name&gt;Oschina Releases&lt;/name&gt; &lt;url&gt;http://maven.oschina.net/content/groups/public&lt;/url&gt; &lt;/repository&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;alimaven&lt;/id&gt;&lt;name&gt;aliyun maven&lt;/name&gt;&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;central&lt;/id&gt;&lt;name&gt;Maven Repository Switchboard&lt;/name&gt;&lt;url&gt;http://repo1.maven.org/maven2/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;/repositories&gt; &lt;dependencies&gt; &lt;!-- TODO: add you need jar --&gt; &lt;dependency&gt; &lt;groupId&gt;org.jasypt&lt;/groupId&gt; &lt;artifactId&gt;jasypt&lt;/artifactId&gt; &lt;version&gt;1.8&lt;/version&gt; &lt;exclusions&gt; &lt;exclusion&gt; &lt;groupId&gt;org.slf4j&lt;/groupId&gt; &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;/exclusions&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2.创建执行脚本 downloadjar.bat call mvn -f pom.">
+<meta name="description" content="使用maven下载jar到本地
+原来使用Java进行项目开发的时候，都是使用浏览器一个一个jar进行下载，放到lib目录中使用。
+最近，发现使用maven的效率更高，所以，使用该方法。
+1.创建一个pom.xml文件。
+&lt;?xml version=&#34;1.0&#34;?&gt;
+&lt;project
+    xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34;
+    xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.bingyi&lt;/groupId&gt;
+    &lt;artifactId&gt;test&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;repositories&gt;
+        &lt;!-- &lt;repository&gt;&lt;id&gt;central-repos2&lt;/id&gt;&lt;name&gt;Central Repository 2&lt;/name&gt;&lt;url&gt;http://repo.spring.io/plugins-release&lt;/url&gt;&lt;/repository&gt; --&gt;
+        &lt;!-- &lt;repository&gt;&lt;id&gt;maven.net.cn&lt;/id&gt;&lt;name&gt;oneof the central mirrors in china&lt;/name&gt;&lt;url&gt;http://maven.net.cn/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt;
+       
+        &lt;repository&gt;
+            &lt;id&gt;oschina-repos&lt;/id&gt;
+            &lt;name&gt;Oschina Releases&lt;/name&gt;
+            &lt;url&gt;http://maven.oschina.net/content/groups/public&lt;/url&gt;
+        &lt;/repository&gt;
+        &lt;!-- &lt;repository&gt;&lt;id&gt;alimaven&lt;/id&gt;&lt;name&gt;aliyun maven&lt;/name&gt;&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt;
+        &lt;!-- &lt;repository&gt;&lt;id&gt;central&lt;/id&gt;&lt;name&gt;Maven Repository Switchboard&lt;/name&gt;&lt;url&gt;http://repo1.maven.org/maven2/&lt;/url&gt;&lt;/repository&gt; --&gt;
+    &lt;/repositories&gt;
+    &lt;dependencies&gt;
+        &lt;!-- TODO: add you need jar --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.jasypt&lt;/groupId&gt;
+            &lt;artifactId&gt;jasypt&lt;/artifactId&gt;
+            &lt;version&gt;1.8&lt;/version&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+                    &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%89%80%E9%9C%80%E7%9A%84jar/">
   <meta property="og:site_name" content="guobingyi">
   <meta property="og:title" content="快速下载所需的Jar">
   <meta property="og:description" content="使用maven下载jar到本地 原来使用Java进行项目开发的时候，都是使用浏览器一个一个jar进行下载，放到lib目录中使用。 最近，发现使用maven的效率更高，所以，使用该方法。
-1.创建一个pom.xml文件。 &lt;?xml version=&#34;1.0&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;com.bingyi&lt;/groupId&gt; &lt;artifactId&gt;test&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;repositories&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;central-repos2&lt;/id&gt;&lt;name&gt;Central Repository 2&lt;/name&gt;&lt;url&gt;http://repo.spring.io/plugins-release&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;maven.net.cn&lt;/id&gt;&lt;name&gt;oneof the central mirrors in china&lt;/name&gt;&lt;url&gt;http://maven.net.cn/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;repository&gt; &lt;id&gt;oschina-repos&lt;/id&gt; &lt;name&gt;Oschina Releases&lt;/name&gt; &lt;url&gt;http://maven.oschina.net/content/groups/public&lt;/url&gt; &lt;/repository&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;alimaven&lt;/id&gt;&lt;name&gt;aliyun maven&lt;/name&gt;&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;central&lt;/id&gt;&lt;name&gt;Maven Repository Switchboard&lt;/name&gt;&lt;url&gt;http://repo1.maven.org/maven2/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;/repositories&gt; &lt;dependencies&gt; &lt;!-- TODO: add you need jar --&gt; &lt;dependency&gt; &lt;groupId&gt;org.jasypt&lt;/groupId&gt; &lt;artifactId&gt;jasypt&lt;/artifactId&gt; &lt;version&gt;1.8&lt;/version&gt; &lt;exclusions&gt; &lt;exclusion&gt; &lt;groupId&gt;org.slf4j&lt;/groupId&gt; &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;/exclusions&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2.创建执行脚本 downloadjar.bat call mvn -f pom.">
+1.创建一个pom.xml文件。 &lt;?xml version=&#34;1.0&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;com.bingyi&lt;/groupId&gt; &lt;artifactId&gt;test&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;repositories&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;central-repos2&lt;/id&gt;&lt;name&gt;Central Repository 2&lt;/name&gt;&lt;url&gt;http://repo.spring.io/plugins-release&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;maven.net.cn&lt;/id&gt;&lt;name&gt;oneof the central mirrors in china&lt;/name&gt;&lt;url&gt;http://maven.net.cn/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;repository&gt; &lt;id&gt;oschina-repos&lt;/id&gt; &lt;name&gt;Oschina Releases&lt;/name&gt; &lt;url&gt;http://maven.oschina.net/content/groups/public&lt;/url&gt; &lt;/repository&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;alimaven&lt;/id&gt;&lt;name&gt;aliyun maven&lt;/name&gt;&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;!-- &lt;repository&gt;&lt;id&gt;central&lt;/id&gt;&lt;name&gt;Maven Repository Switchboard&lt;/name&gt;&lt;url&gt;http://repo1.maven.org/maven2/&lt;/url&gt;&lt;/repository&gt; --&gt; &lt;/repositories&gt; &lt;dependencies&gt; &lt;!-- TODO: add you need jar --&gt; &lt;dependency&gt; &lt;groupId&gt;org.jasypt&lt;/groupId&gt; &lt;artifactId&gt;jasypt&lt;/artifactId&gt; &lt;version&gt;1.8&lt;/version&gt; &lt;exclusions&gt; &lt;exclusion&gt; &lt;groupId&gt;org.slf4j&lt;/groupId&gt; &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;/exclusions&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -50,11 +88,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a24.49857%20%2b0800%20CST%20m%3d%2b1.568040569">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a24.49857%20%2b0800%20CST%20m%3d%2b1.568040569">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a24.49857%20%2b0800%20CST%20m%3d%2b1.568040569">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a25.838937%20%2b0800%20CST%20m%3d%2b2.114040706">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a25.838937%20%2b0800%20CST%20m%3d%2b2.114040706">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a25.838937%20%2b0800%20CST%20m%3d%2b2.114040706">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a24.49857%20%2b0800%20CST%20m%3d%2b1.568040569">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a25.838937%20%2b0800%20CST%20m%3d%2b2.114040706">
     
 
 

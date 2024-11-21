@@ -9,22 +9,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="单文件部署 你能改变的就是你自己。
+<meta name="description" content="单文件部署
+
+你能改变的就是你自己。
+
 对于Java和C#最让我感觉到比go最没有可比性的一点就是，go直接就编译成本地二进制文件了，少了保护代码而需要做的混淆操作。但是，现在Java和C#都可以了。当然，如果用mojo后，python也可以了。
-01.Java编译成可执行二进制文件 Java编译成二进制的模式来源于GraalVM的操作。
+01.Java编译成可执行二进制文件
+Java编译成二进制的模式来源于GraalVM的操作。
 例子来源于GraalVM官网。
 一个HelloWorld的例子。
-public class HelloWorld { public static void main(String[] args) { System.out.println(&#34;Hello, World!&#34;); } } 首先，编译java文件。
-javac HelloWorld.java 其次，编程成本地二进制可执行程序。
-native-image HelloWorld 最后，运行。
-./helloworld Hello, World! 02.C#编译成可执行二进制 C#现在越来越流行，假以时日，或许可以和Java完全抗衡。
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println(&#34;Hello, World!&#34;);
+  }
+}
+首先，编译java文件。
+javac HelloWorld.java
+其次，编程成本地二进制可执行程序。
+native-image HelloWorld
+最后，运行。
+./helloworld
+Hello, World!
+02.C#编译成可执行二进制
+C#现在越来越流行，假以时日，或许可以和Java完全抗衡。
 (单从语音本身来说，c#已经超越了java,可是社区却还有很远的路要走)
 单文件部署对C#来说也很简单。
 首先，在修改项目文件csproj。
-&lt;Project Sdk=&#34;Microsoft.NET.Sdk.Web&#34;&gt; &lt;PropertyGroup&gt; &lt;RuntimeIdentifiers&gt;osx-x64&lt;/RuntimeIdentifiers&gt; &lt;PublishSingleFile&gt;true&lt;/PublishSingleFile&gt; &lt;SelfContained&gt;true&lt;/SelfContained&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;/PropertyGroup&gt; &lt;/Project&gt; 加入输出类型Exe,平台osx-x64，发布单文件PublishSingleFile,自包含SelfContained。
-其次，发布。
-dotnet publish 在publish文件中找到文件，创建链接文件。(这个步骤可以不用，我主要是创建了一个将发布后的文件链接到执行目录,方便直接运行)
-ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publish/web web ">
+&lt;Project Sdk=&#34;Microsoft.NET.Sdk.Web&#34;&gt;
+  &lt;PropertyGroup&gt;
+    &lt;RuntimeIdentifiers&gt;osx-x64&lt;/RuntimeIdentifiers&gt;
+    &lt;PublishSingleFile&gt;true&lt;/PublishSingleFile&gt;
+    &lt;SelfContained&gt;true&lt;/SelfContained&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+  &lt;/PropertyGroup&gt;
+&lt;/Project&gt;
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/exe_sigle_file/">
   <meta property="og:site_name" content="guobingyi">
@@ -41,10 +60,7 @@ native-image HelloWorld 最后，运行。
 (单从语音本身来说，c#已经超越了java,可是社区却还有很远的路要走)
 单文件部署对C#来说也很简单。
 首先，在修改项目文件csproj。
-&lt;Project Sdk=&#34;Microsoft.NET.Sdk.Web&#34;&gt; &lt;PropertyGroup&gt; &lt;RuntimeIdentifiers&gt;osx-x64&lt;/RuntimeIdentifiers&gt; &lt;PublishSingleFile&gt;true&lt;/PublishSingleFile&gt; &lt;SelfContained&gt;true&lt;/SelfContained&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;/PropertyGroup&gt; &lt;/Project&gt; 加入输出类型Exe,平台osx-x64，发布单文件PublishSingleFile,自包含SelfContained。
-其次，发布。
-dotnet publish 在publish文件中找到文件，创建链接文件。(这个步骤可以不用，我主要是创建了一个将发布后的文件链接到执行目录,方便直接运行)
-ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publish/web web ">
+&lt;Project Sdk=&#34;Microsoft.NET.Sdk.Web&#34;&gt; &lt;PropertyGroup&gt; &lt;RuntimeIdentifiers&gt;osx-x64&lt;/RuntimeIdentifiers&gt; &lt;PublishSingleFile&gt;true&lt;/PublishSingleFile&gt; &lt;SelfContained&gt;true&lt;/SelfContained&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;/PropertyGroup&gt; &lt;/Project&gt; ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -78,11 +94,11 @@ ln -s /Volumes/Transcend/Project/dotnet_core/web/bin/Release/net8.0/osx-x64/publ
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a25.958339%20%2b0800%20CST%20m%3d%2b2.233441821">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a25.958339%20%2b0800%20CST%20m%3d%2b2.233441821">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a25.958339%20%2b0800%20CST%20m%3d%2b2.233441821">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a24.599678%20%2b0800%20CST%20m%3d%2b1.669149451">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a25.958339%20%2b0800%20CST%20m%3d%2b2.233441821">
     
 
 

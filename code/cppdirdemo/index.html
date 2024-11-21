@@ -9,20 +9,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Make构建C&#43;&#43;项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
-1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
-class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
-#include &lt;iostream&gt; #include &#34;point.h&#34; void point::print(){ std::cout&lt;&lt;&#34;x=&#34;&lt;&lt;this-&gt;x&lt;&lt;&#34;,y=&#34;&lt;&lt;this-&gt;y&lt;&lt;&#34;\n&#34;; } 4.创建main文件 vim main.cpp 内容如下：
-#include &lt;iostream&gt; #include &lt;vector&gt; #include &#34;point.h&#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&lt;point&gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&lt;v.">
+<meta name="description" content="Make构建C&#43;&#43;项目
+
+使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator.  Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
+
+1.创建目录Point
+mkdir Point
+2. 创建头文件point.h
+vim point.h
+内容如下：
+class point{
+private:
+        int x;
+        int y;
+public:
+        point(int a,int b):x(a),y(b){}
+        void print();
+        ~point(){}
+};
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/cppdirdemo/">
   <meta property="og:site_name" content="guobingyi">
   <meta property="og:title" content="Cppdirdemo">
   <meta property="og:description" content="Make构建C&#43;&#43;项目 使用VS Code编写代码的时候，总报错“Makefile:4: *** missing separator. Stop.”，换成Emacs后就搞定了，发现Tab的格式有问题，或许emacs才是最好的选择，写C&#43;&#43;。
 1.创建目录Point mkdir Point 2. 创建头文件point.h vim point.h 内容如下：
-class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; 3. 创建文件point.cpp vim point.cpp 内容如下：
-#include &lt;iostream&gt; #include &#34;point.h&#34; void point::print(){ std::cout&lt;&lt;&#34;x=&#34;&lt;&lt;this-&gt;x&lt;&lt;&#34;,y=&#34;&lt;&lt;this-&gt;y&lt;&lt;&#34;\n&#34;; } 4.创建main文件 vim main.cpp 内容如下：
-#include &lt;iostream&gt; #include &lt;vector&gt; #include &#34;point.h&#34; using namespace std; int main(){ point p0(3,4);//创建三个point对象 point p1(1,2); point p2(5,8); vector&lt;point&gt; v;//创建一个存储point对象的容器 v.push_back(p0); v.push_back(p1); v.push_back(p2); for(int i=0;i&lt;v.">
+class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void print(); ~point(){} }; ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -56,11 +68,11 @@ class point{ private: int x; int y; public: point(int a,int b):x(a),y(b){} void 
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a25.869674%20%2b0800%20CST%20m%3d%2b2.939150011">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a25.869674%20%2b0800%20CST%20m%3d%2b2.939150011">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a25.869674%20%2b0800%20CST%20m%3d%2b2.939150011">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a28.356371%20%2b0800%20CST%20m%3d%2b4.631466731">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a28.356371%20%2b0800%20CST%20m%3d%2b4.631466731">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a28.356371%20%2b0800%20CST%20m%3d%2b4.631466731">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a25.869674%20%2b0800%20CST%20m%3d%2b2.939150011">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a28.356371%20%2b0800%20CST%20m%3d%2b4.631466731">
     
 
 

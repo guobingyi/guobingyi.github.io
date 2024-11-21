@@ -9,15 +9,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Rust 学习笔记 自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
-前言 系统级别的语言，可以和C/C&#43;&#43;抗衡？目标就是为了取代C&#43;&#43;。
-介绍 Rust语言能够编写速度更快，更加可靠的软件。
-学习笔记为1.52.1版本，如果你来晚了，最好参考 最新文档 来进行学习。你懂的～～
-0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
+<meta name="description" content="Rust 学习笔记
+
+自从在工作是使用了Go语言后，就不断的打破原来的模式，想什么都用Go来实现，可惜有些东西，特别是Windows下的窗口程序，就无能为力了，其他的好像都可以试一试。因为关注Go，所以Node的作者想重新写Node的时候，选择了Go，最后居然换成了Rust。这不得不让我对这门语言有了新的看法，特别是微软和Google都要推Rust的时候，我放弃了我原来对这门语言的偏见，重新、认真的学习一遍，让我看看到底是什么让它受到那么多人的关注。
+
+前言
+系统级别的语言，可以和C/C&#43;&#43;抗衡？目标就是为了取代C&#43;&#43;。
+介绍
+Rust语言能够编写速度更快，更加可靠的软件。
+学习笔记为1.52.1版本，如果你来晚了，最好参考
+最新文档 来进行学习。你懂的～～
+0x01 开始
+1.目标
+
+安装
+写个输出hello world的程序
+使用cargo工具来构建系统
+
+2 安装
+2.1 安装
+其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
 所以，使用Rust的安装方式，最佳。
-$ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
-Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
-2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.">
+$ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh
+安装成功后，将在命令端输出：
+Rust is installed now. Great!
+2.2 更新
+$ rustup update
+2.3 删除
+$ rustup self uninstall
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/learnrust/">
   <meta property="og:site_name" content="guobingyi">
@@ -29,8 +49,7 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
 0x01 开始 1.目标 安装 写个输出hello world的程序 使用cargo工具来构建系统 2 安装 2.1 安装 其实在苹果电脑上，能用brew安装的，我一般都会使用。可惜，Rust推荐的最佳方式，并不是。😊
 所以，使用Rust的安装方式，最佳。
 $ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh 安装成功后，将在命令端输出：
-Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall 使用了许多语言后，这个是发现最贴心的。
-2.4 版本查看 $ rustc --version 2.5 阅读本地文档 rustup doc 3. Hello,World! 3.1 创建项目路径 $ mkdir ~/projects $ cd ~/projects $ mkdir hello_world $ cd hello_world 3.">
+Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup self uninstall ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -64,11 +83,11 @@ Rust is installed now. Great! 2.2 更新 $ rustup update 2.3 删除 $ rustup sel
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.15746%20%2b0800%20CST%20m%3d%2b3.226937433">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.15746%20%2b0800%20CST%20m%3d%2b3.226937433">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.15746%20%2b0800%20CST%20m%3d%2b3.226937433">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a28.801478%20%2b0800%20CST%20m%3d%2b5.076572713">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a28.801478%20%2b0800%20CST%20m%3d%2b5.076572713">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a28.801478%20%2b0800%20CST%20m%3d%2b5.076572713">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.15746%20%2b0800%20CST%20m%3d%2b3.226937433">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a28.801478%20%2b0800%20CST%20m%3d%2b5.076572713">
     
 
 
@@ -500,70 +519,70 @@ To learn more, run the command again with --verbose.
 <li>1.整数类型</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>Length</th>
-<th>Signed</th>
-<th>Unsigned</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8-bit</td>
-<td>i8</td>
-<td>u8</td>
-</tr>
-<tr>
-<td>16-bit</td>
-<td>i16</td>
-<td>u16</td>
-</tr>
-<tr>
-<td>32-bit</td>
-<td>i32</td>
-<td>u32</td>
-</tr>
-<tr>
-<td>128-bit</td>
-<td>i128</td>
-<td>u128</td>
-</tr>
-<tr>
-<td>arch</td>
-<td>isize</td>
-<td>usize</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Length</th>
+          <th style="text-align: left">Signed</th>
+          <th style="text-align: left">Unsigned</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">8-bit</td>
+          <td style="text-align: left">i8</td>
+          <td style="text-align: left">u8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">16-bit</td>
+          <td style="text-align: left">i16</td>
+          <td style="text-align: left">u16</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">32-bit</td>
+          <td style="text-align: left">i32</td>
+          <td style="text-align: left">u32</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">128-bit</td>
+          <td style="text-align: left">i128</td>
+          <td style="text-align: left">u128</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">arch</td>
+          <td style="text-align: left">isize</td>
+          <td style="text-align: left">usize</td>
+      </tr>
+  </tbody>
 </table>
 <table>
-<thead>
-<tr>
-<th>Number literals</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Decimal</td>
-<td>98_222</td>
-</tr>
-<tr>
-<td>Hex</td>
-<td>0xff</td>
-</tr>
-<tr>
-<td>Octal</td>
-<td>0o77</td>
-</tr>
-<tr>
-<td>Binary</td>
-<td>0b1111_0000</td>
-</tr>
-<tr>
-<td>Byte</td>
-<td>(u8 only)	b&rsquo;A'</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Number literals</th>
+          <th style="text-align: left">Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">98_222</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hex</td>
+          <td style="text-align: left">0xff</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Octal</td>
+          <td style="text-align: left">0o77</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Binary</td>
+          <td style="text-align: left">0b1111_0000</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Byte</td>
+          <td style="text-align: left">(u8 only)	b&rsquo;A'</td>
+      </tr>
+  </tbody>
 </table>
 <ul>
 <li>2.浮点类型</li>

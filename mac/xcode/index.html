@@ -9,13 +9,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="Xcode 对于自己不熟悉的东西，永远都不要装的很明白。
+<meta name="description" content="Xcode
+
+对于自己不熟悉的东西，永远都不要装的很明白。
+
 Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode来做一个自由职业者，可惜，都没有勇气去好好学习，因为对苹果的开发，实在无法体会。
 最近迷恋上了adobe的软件，发现Xcode已经占用了17GB的空间了，对于我这个128G的电脑的确是一个很大的挑战。原来删除过，发现会报错。
-usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1 xcrun: error: active developer path (&#34;/Applications/Xcode.app/Contents/Developer&#34;) does not exist Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools. See `man xcode-select` for more details. 因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
+usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1
+xcrun: error: active developer path (&#34;/Applications/Xcode.app/Contents/Developer&#34;) does not exist
+Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools.
+See `man xcode-select` for more details.
+因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
 (ps.好好对我使用HHKB键盘的声音有很大意见，所以键盘声音也成为了以后的一个考察对象了，静音才行哦。而且，我发现我最近买的鼠标M336，虽然是蓝牙的，说明书上也说静音，可以我感觉还是有声音。)
-sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p OK，完全解决了问题，还是因为对问题的描述没有看清，导致留下了那么长的时间，当然了，如果以后真的要开发，只能删除其他的东西了。
-以后的电脑或手机，最好买个中间位置的，低配对自己要求太高了，随时都要进行清理。">
+sudo xcode-select -r
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+xcode-select -p
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/mac/xcode/">
   <meta property="og:site_name" content="guobingyi">
@@ -25,8 +34,7 @@ Xcode已经在电脑里好长一段时间了，因为曾经想通过编写Xcode�
 最近迷恋上了adobe的软件，发现Xcode已经占用了17GB的空间了，对于我这个128G的电脑的确是一个很大的挑战。原来删除过，发现会报错。
 usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64/link: running clang failed: exit status 1 xcrun: error: active developer path (&#34;/Applications/Xcode.app/Contents/Developer&#34;) does not exist Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools. See `man xcode-select` for more details. 因为go语言是最后的留念，所以在没有看清错误代码之后，直接就又安装回去了，这次不同，对空间的要求有点高。所以，想看一下是否真的离开不了Xcode。使用以下的代码进行修改。
 (ps.好好对我使用HHKB键盘的声音有很大意见，所以键盘声音也成为了以后的一个考察对象了，静音才行哦。而且，我发现我最近买的鼠标M336，虽然是蓝牙的，说明书上也说静音，可以我感觉还是有声音。)
-sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p OK，完全解决了问题，还是因为对问题的描述没有看清，导致留下了那么长的时间，当然了，如果以后真的要开发，只能删除其他的东西了。
-以后的电脑或手机，最好买个中间位置的，低配对自己要求太高了，随时都要进行清理。">
+sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTools xcode-select -p ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="mac">
@@ -60,11 +68,11 @@ sudo xcode-select -r sudo xcode-select --switch /Library/Developer/CommandLineTo
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.900312%20%2b0800%20CST%20m%3d%2b3.969792565">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.900312%20%2b0800%20CST%20m%3d%2b3.969792565">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.900312%20%2b0800%20CST%20m%3d%2b3.969792565">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a29.805781%20%2b0800%20CST%20m%3d%2b6.080873073">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a29.805781%20%2b0800%20CST%20m%3d%2b6.080873073">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a29.805781%20%2b0800%20CST%20m%3d%2b6.080873073">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.900312%20%2b0800%20CST%20m%3d%2b3.969792565">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a29.805781%20%2b0800%20CST%20m%3d%2b6.080873073">
     
 
 

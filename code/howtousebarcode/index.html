@@ -9,11 +9,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Arthur Dent">
-<meta name="description" content="如何读取照片中的条码信息 最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。
+<meta name="description" content="如何读取照片中的条码信息
+最近考虑到如何输入图书信息到系统中，发现了条码信息的重要性，所以想使用手机自带的功能来使用。
 服务器端使用 C# 和 Python 来使用验证上传的图片。
-Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
-1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
-2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!">
+Choice1：Python 获取条码信息
+相对而言 Python 的库比较多，使用起来比较方便。
+1. 安装 zbar
+brew install zbar
+依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
+2. 安装 pyzbar
+pip install pyzbar
+3. 安装 Pillow
+pip install pillow
+4. Test Code
+from pyzbar.pyzbar import decode
+from PIL import Image
+
+bar_result = decode(Image.open(&#39;book1.jpg&#39;))
+
+if len(barresult) &gt; 0 :
+    print(&#34;find barcode:&#34; &#43; barresult[0].data.decode())
+else:
+    print(&#34;can&#39;t find barcode!&#34;)
+">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/howtousebarcode/">
   <meta property="og:site_name" content="guobingyi">
@@ -22,7 +40,7 @@ Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用
 服务器端使用 C# 和 Python 来使用验证上传的图片。
 Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
 1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
-2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!">
+2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!&#34;) ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -56,11 +74,11 @@ Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-06-03%2018%3a31%3a26.147842%20%2b0800%20CST%20m%3d%2b3.217319351">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-06-03%2018%3a31%3a26.147842%20%2b0800%20CST%20m%3d%2b3.217319351">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-06-03%2018%3a31%3a26.147842%20%2b0800%20CST%20m%3d%2b3.217319351">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2024-11-21%2022%3a31%3a28.772945%20%2b0800%20CST%20m%3d%2b5.048039976">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2024-11-21%2022%3a31%3a28.772945%20%2b0800%20CST%20m%3d%2b5.048039976">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2024-11-21%2022%3a31%3a28.772945%20%2b0800%20CST%20m%3d%2b5.048039976">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-06-03%2018%3a31%3a26.147842%20%2b0800%20CST%20m%3d%2b3.217319351">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2024-11-21%2022%3a31%3a28.772945%20%2b0800%20CST%20m%3d%2b5.048039976">
     
 
 
