@@ -21,7 +21,8 @@
 接到云舒的电话，让帮忙看一下主流后端开发框架对比：芋道（魔改牛氓）、若依、Jeesite、JeecgBoot与SmartAdmin。就这样开始了。
 在此之前，因为 VPN 的问题， github.com 也不可以访问了，所以自己的博客也没有继续更新了。但是，问了 trae 后，说把 DNS解析变成 8.8.8.8，噢耶，居然可以了。感谢，不封之恩。
 首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。
-">
+
+其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/backtowork/">
   <meta property="og:site_name" content="guobingyi">
@@ -34,7 +35,7 @@
 我曾经以为我的代码水平会直线的下降，对未知感到无力感，比如说，最近的一次使用了 brew 进行升级 ffmpeg 软件，由于自己的电脑是 2015年 9 月份购买的，所以已经有许多软件都不进行支持了，可我依然那么喜欢最新的软件版本。brew 已经提示了，可我依然我行我素，导致 ffmpeg 卸载了，重新安装一个插件的时候，居然报错了，而且需要代理才能更新，我的 VPN 已经过期了。无奈啊，lux 下载小朋友们要看的视频需要 ffmpeg 合并视频，老婆有时需要分割视频，这些都不能做了。我思考了许久，正当要考虑购买 VPN 的时候，发现 ffmpeg 居然有编译好的，直接下载下来就可以用。这个想法来自于 nodejs 项目，因为我的电脑已经老到不能使用 brew 进行更新了，所以抱着试试的态度。直接使用安装包下载，安装成功后，我就开始考虑是不是ffmpeg 也可以呢。
 接到云舒的电话，让帮忙看一下主流后端开发框架对比：芋道（魔改牛氓）、若依、Jeesite、JeecgBoot与SmartAdmin。就这样开始了。
 在此之前，因为 VPN 的问题， github.com 也不可以访问了，所以自己的博客也没有继续更新了。但是，问了 trae 后，说把 DNS解析变成 8.8.8.8，噢耶，居然可以了。感谢，不封之恩。
-首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。 ">
+首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。 其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -68,11 +69,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-06-03%2020%3a29%3a32.497376%20%2b0800%20CST%20m%3d%2b1.778020564">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-06-03%2020%3a29%3a32.497376%20%2b0800%20CST%20m%3d%2b1.778020564">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-06-03%2020%3a29%3a32.497376%20%2b0800%20CST%20m%3d%2b1.778020564">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-06-03%2020%3a52%3a50.552791%20%2b0800%20CST%20m%3d%2b2.602774882">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-06-03%2020%3a52%3a50.552791%20%2b0800%20CST%20m%3d%2b2.602774882">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-06-03%2020%3a52%3a50.552791%20%2b0800%20CST%20m%3d%2b2.602774882">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-06-03%2020%3a29%3a32.497376%20%2b0800%20CST%20m%3d%2b1.778020564">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-06-03%2020%3a52%3a50.552791%20%2b0800%20CST%20m%3d%2b2.602774882">
     
 
 
@@ -312,6 +313,36 @@
 <p>在此之前，因为 VPN 的问题， github.com 也不可以访问了，所以自己的博客也没有继续更新了。但是，问了 trae 后，说把 DNS解析变成 8.8.8.8，噢耶，居然可以了。感谢，不封之恩。</p>
 <p>首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。
 <img src="https://guobingyi.github.io/img/code/eclipse.png" alt="eclipse"></p>
+<p>其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。</p>
+<pre tabindex="0"><code>export MYSQL_PATH=/Volumes/Transcend/Project/MYSQL/mysql-9.3.0-macos15-x86_64/bin
+</code></pre><p>然后就忘记怎么初次启动修改密码了😅，所以又问了 trae 。</p>
+<p>1.初始化数据目录 （仅首次安装需要执行）：</p>
+<pre tabindex="0"><code># 执行初始化（会生成临时密码）
+./mysqld --initialize --console
+# 记录输出的临时密码，格式如：A temporary password is generated for root@localhost: 5E&gt;gRjoR4UQJ
+</code></pre><p>2.启动MySQL服务 ：</p>
+<pre tabindex="0"><code># 启动服务（保持终端窗口开启）
+./mysqld --console
+</code></pre><p>3.使用临时密码登录 （新开终端窗口）：</p>
+<pre tabindex="0"><code># 使用生成的临时密码登录
+./mysql -u root -p
+</code></pre><p>4.修改root密码 ：</p>
+<pre tabindex="0"><code>-- 修改密码（替换your_new_password）
+ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;your_new_password&#39;;
+FLUSH PRIVILEGES;
+</code></pre><p>5.命令行导入数据</p>
+<pre tabindex="0"><code>mysql -u root -p your_database &lt; /path/to/database.sql
+</code></pre><p>最后，就是 JDK 了。我下载了的是 Oracle 官网上JDK，没有下载 OpenJDK，因为当时想谁下载快就用谁吧，反正相互替换也快，而且自己也没有用于商业用途，学习一下。</p>
+<pre tabindex="0"><code>export JAVA_HOME=/Volumes/Transcend/Project/java_code/jdk/jdk-24.0.1.jdk/Contents/Home
+</code></pre><p>使用 java &ndash;version 验证时，居然报错了。</p>
+<pre tabindex="0"><code>“jdk-24.0.1.jdk”已损坏，无法打开。 您应该将它移到废纸篓。
+</code></pre><p>继续 trae，不得不说，挺好用的🤣。</p>
+<ol>
+<li>解除安全限制</li>
+</ol>
+<pre tabindex="0"><code>sudo xattr -r -d com.apple.quarantine /Library/Java/JavaVirtualMachines/jdk-24.0.1.jdk
+</code></pre><p>额外的就是连接数据库软件了，DBeaver。</p>
+<p><img src="https://guobingyi.github.io/img/code/DBeaver.png" alt="DBeaver"></p>
 
                 <br>
                 
