@@ -6,8 +6,22 @@
     <description>Recent content in Blog on guobingyi</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2024 09:52:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 17:21:13 +0800</lastBuildDate>
     <atom:link href="https://guobingyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backtowork</title>
+      <link>https://guobingyi.github.io/blog/backtowork/</link>
+      <pubDate>Tue, 03 Jun 2025 17:21:13 +0800</pubDate>
+      <guid>https://guobingyi.github.io/blog/backtowork/</guid>
+      <description>&lt;h1 id=&#34;重回工作&#34;&gt;重回工作&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;是时候开始下半场了&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;一直都没有想过会有这样的人生，套用一个广告词就是，“已经开始了吗？已经结束了。”&lt;/p&gt;&#xA;&lt;p&gt;孩子们 9 月份要上幼儿园了，面临着自己要重新回到工作岗位上。可是，自己的年龄已经到了找不到工作的时期。&lt;/p&gt;&#xA;&lt;p&gt;该做点什么呢？&lt;/p&gt;&#xA;&lt;p&gt;我有时会不断的问自己？我的后半场，该如何演绎？我是否会继续写代码？我是不是像别人一样去开网约车？当然了，有无数种可能。&lt;/p&gt;&#xA;&lt;p&gt;我曾经以为我的代码水平会直线的下降，对未知感到无力感，比如说，最近的一次使用了 brew 进行升级 ffmpeg 软件，由于自己的电脑是 2015年 9 月份购买的，所以已经有许多软件都不进行支持了，可我依然那么喜欢最新的软件版本。brew 已经提示了，可我依然我行我素，导致 ffmpeg 卸载了，重新安装一个插件的时候，居然报错了，而且需要代理才能更新，我的 VPN 已经过期了。无奈啊，lux 下载小朋友们要看的视频需要 ffmpeg 合并视频，老婆有时需要分割视频，这些都不能做了。我思考了许久，正当要考虑购买 VPN 的时候，发现 ffmpeg 居然有编译好的，直接下载下来就可以用。这个想法来自于 nodejs 项目，因为我的电脑已经老到不能使用 brew 进行更新了，所以抱着试试的态度。直接使用安装包下载，安装成功后，我就开始考虑是不是ffmpeg 也可以呢。&lt;/p&gt;&#xA;&lt;p&gt;接到云舒的电话，让帮忙看一下主流后端开发框架对比：芋道（魔改牛氓）、若依、Jeesite、JeecgBoot与SmartAdmin。就这样开始了。&lt;/p&gt;&#xA;&lt;p&gt;在此之前，因为 VPN 的问题， github.com 也不可以访问了，所以自己的博客也没有继续更新了。但是，问了 trae 后，说把 DNS解析变成 8.8.8.8，噢耶，居然可以了。感谢，不封之恩。&lt;/p&gt;&#xA;&lt;p&gt;首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。&#xA;&lt;img src=&#34;https://guobingyi.github.io/img/code/eclipse.png&#34; alt=&#34;eclipse&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New_live</title>
+      <link>https://guobingyi.github.io/blog/new_live/</link>
+      <pubDate>Thu, 01 May 2025 23:00:56 +0800</pubDate>
+      <guid>https://guobingyi.github.io/blog/new_live/</guid>
+      <description>&lt;h1 id=&#34;新的居住地&#34;&gt;新的居住地&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;即使一切都已经发生，我也习惯，不再流泪。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://guobingyi.github.io/img/xi_an.jpeg&#34; alt=&#34;西安&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;最近搬家了。其实很无奈的，自己的生活变成了如此。感到很无力。&lt;/p&gt;&#xA;&lt;p&gt;新的家是老婆一手装修的。我在忙着寻找一条新的出路，就是股票。我想通过股票来改变自己的生活状态，虽然没有想到要一夜暴富，但是也曾表现出来了贪婪，但是想到周星驰演的《上海滩赌神》上，对丁力说的，“我的最后一个愿望，就是要三个愿望“。所以，贪婪，是人类的进步力。&lt;/p&gt;&#xA;&lt;p&gt;新的家有新的家的好处，也有坏处。但是，生活变的如此，也只能欣然的面对。&lt;/p&gt;&#xA;&lt;p&gt;问题是，现在的情况已经很原来有很多不同的地方。&lt;/p&gt;&#xA;&lt;p&gt;我很想对老婆说声谢谢，可惜所有的一切都那么的无力。我们许久没有能静静的谈一下，我们的所有谈话，都会指责对方，特别老婆所说的恨。恨我没有能帮助她，没有能按照她说想的帮助她，和她一起为这个家做点什么。我甚至都不知道如何去帮助她，我还在沉迷于自己的世界？不，不，不，我没有。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Exe_sigle_file</title>
       <link>https://guobingyi.github.io/blog/exe_sigle_file/</link>
@@ -37,10 +51,10 @@
       <description>&lt;h1 id=&#34;why-2024-why-today&#34;&gt;Why 2024 Why today?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;42 year old!&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;今天是自己42岁的生日，没有鲜花，没有掌声！&lt;/p&gt;&#xA;&lt;p&gt;碌碌无为的这几年，让人感到窒息！&lt;/p&gt;&#xA;&lt;p&gt;原本想撒娇的时候，才发现自己也生为人父。&lt;/p&gt;&#xA;&lt;p&gt;总感慨时间如此快的时候，才发现时间如此珍贵！&lt;/p&gt;&#xA;&lt;p&gt;总之，现在开始发现，需要重新面对。&lt;/p&gt;&#xA;&lt;p&gt;不知道从什么时候开始，我都不知道该写点什么？该如何写？&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2023的思考</title>
-      <link>https://guobingyi.github.io/blog/2023%E7%9A%84%E6%80%9D%E8%80%83/</link>
+      <title>think2023</title>
+      <link>https://guobingyi.github.io/blog/think2023/</link>
       <pubDate>Tue, 14 Nov 2023 09:38:08 +0800</pubDate>
-      <guid>https://guobingyi.github.io/blog/2023%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+      <guid>https://guobingyi.github.io/blog/think2023/</guid>
       <description>&lt;h2 id=&#34;2023的思考&#34;&gt;2023的思考&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;当你口袋里没有你想要的，那么你的想法就是错误的？&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;最近老喜欢看些不同观点的视频，也或许是被大数据所害。chatGPT的影响力越来越大，搞的写代码都感觉有点没有动力，不如就再等等。&lt;/p&gt;&#xA;&lt;p&gt;家里添置了model Y，原本是件非常开心的事情，可是自己的思维模式总是让自己感到困扰。我现在来一一记录：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;购买的历程&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;老婆和我都有过纠结，到底是7座的车还是5座的车。原因是7座的车可以带着全家到处去旅游，而5座的车就必须开两辆车。就目前而言，特斯拉没有7座的车，而且电车也不想考虑7座的。老人们其实都已经老了，在一次谈话中，他们其实都不想和我们做出出去外，毕竟太折腾了。思前想后，我提议就买model Y吧，这样即使全家出游，就两辆车，而且更多的时候可以带着娃多玩一玩。老婆的想法和我绝然不通，她觉得她已经放弃了房车，应该买一辆GL8的7座车，这样空间大，出行方便些。可是，随着油价的增长，房子依旧在跌，我们都在改变我们的想法。我再次和前三年的特斯拉销售联系，我们去试驾了，可是情况是只试驾了model 3，老婆对model 3的驾驶体验非常喜欢。可是对model Y的外观依旧很吐槽。为了买到自己心仪的车，我们参加了2023年上半年的车展。在车展上看了塞纳和格瑞维亚，对丰田的车真的很喜欢，可是就是价格太贵。为了真正的认识到塞纳，我们去试驾了。老婆对塞纳的空调非常吐槽，因为声音太大了，而我却很喜欢塞纳的驾驶体验，因为塞纳曾经是一个美国主播（老公是中国的，有两个宝宝）推荐的，我喜欢塞纳的空间，可是价格太贵，最低配的需要33W，落地也是35W。而且还需要进行再次进行加装，所以放弃了。而GL8的价格却是很香，25W的裸车，28W落地。唯一的缺点就是油耗比较高，并且停车也不方便。买车的事情再次被搁浅，因为房子的事情一直都没有着落。&lt;/p&gt;&#xA;&lt;p&gt;9月份的时候，房子的事情已经基本上确认了。特拉斯的销售也在逼单，而自己也非常喜欢model Y。就这样的情况下，我再次和老婆商量，老婆还是被我说服了，因为40多的人，想买就买吧～～趁着还有精力，我下单了。大姐的宝马X3，其实我也很心动，可是就是觉得油车不应该再买了，喜欢和生活，最终还得选择生活。最终订了model Y。原本按照预定时间是9月份提车，可惜钱没有到位，推迟了一个月，而刚好这个月model Y推出了小改款，将性能从6.9秒的百米加速提升到5.9。&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;提车&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;提车比较搞笑，我和老婆完全没有像大家一样，去拍照，一点仪式感都没有。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;因为离家有点远，而且特斯拉的销售预约了时间，我和老婆也提前做好了准备，可是依然无法隐藏不了自己的兴奋之情，看来还是年轻了。&lt;/p&gt;&#xA;&lt;p&gt;打了一辆网约车，一路上老婆都在打电话，而我看着窗外，想着今天就可以看到自己喜欢了三年的车，心中非常欢喜。&lt;/p&gt;&#xA;&lt;p&gt;我们提前到的，我以为会等一会，想不到直接就可以提车了，而且好像已经提了好多辆了，心中有点不爽，本来就和销售说过，要早点提车，这样就可以做点其他事情，特别是还要带娃。交了身份证，就让“员工”带着我去办理了。第一个通道是进行保险确认，我在他说了app上提前购买了，就走一走流程，给了点礼包。第二站便是打印临时牌照，不知道为什么？这个员工说他们代理办牌照的人很快，自己办理很麻烦，给人的感觉就是不交待办费，我们是做不了的，我心情有点不爽。“员工”开始给我们推销车膜，我这个时候就知道了这个员工是3M膜的推销人员，我不想贴，因为我买了白色的车就是想啥都不弄，这样比较环保。可是，老婆这时说为什么不贴呢？我没有反驳，我知道是我没有提前和她说一些事项，还是我们沟通不对。我提出了先看车，车是那么帅，哈哈～～，“员工”上车给我讲解操作，我有点蒙。这时特斯拉的员工终于到啦，他示意他来讲解的时候我就知道了，简单的介绍，然后将手机绑定，然后告诉我们可以出发啦～～老婆看时间又点晚，让他们让我们充一下电，我们吃个早饭，销售不让，结果3M膜的推销人员让了。让我非常感激，可是我真的不想贴膜。&lt;/p&gt;&#xA;&lt;p&gt;吃完饭，我们去提车，结果在旁边提车的人把我的车门给打开了，我很郁闷。我们开车准备出发的时候，我老婆又被3M膜的销售去洗脑了，我解决不贴，上了个厕所，拿了瓶水走人。但是，老婆心里就一直想贴膜了。太想一天搞定了，原本还看了那里可以上牌，但是想390元可以搞定上牌，我和老婆还是纠结了一会。导航到上牌的地方，发现没有人，而且发现好像自己搞不定一样，老婆心想自己弄，但是我却一直想今天搞定，所以妥协了，让人家代办了。说实话，如果不是想一天搞定，其实自己办妥妥的可以省下270元的。但是，毕竟孩子小，没有那么多时间耗。能用钱来节省时间，那还是不错的。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;大致说一下上牌的流程，就是一个代办点，特斯拉的人员进行帮你操作12123，进行选牌，拍车身照，然后等代办点打印行车证，然后车牌邮寄。&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我和老婆因为要去接孩子，所以催促了几次，原本以为要结束了，想不到代办点的网络出现了问题，无法打印，结果只能等，等我特斯拉的代办人员居然忘记给我身份证，害我回到车，又重新跑一趟，想到好事多磨，也就算了，毕竟车的事情搞定了！&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;&amp;ldquo;装修&amp;quot;车&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;说特斯拉是毛坯房，我想说，一点没错，特别是脚垫都没有。虽然特斯拉Model Y 送了脚垫，但是像没有送一样。幸好我买了，这一点是真的值。以下是我买的配件：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;脚垫 161.00元&lt;/p&gt;&#xA;&lt;p&gt;必须。原厂赠送的没法用，必须加一个。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;车窗膜和车衣 6980.00元&lt;/p&gt;&#xA;&lt;p&gt;我可以说是智商税吗？原厂的漆除了黑色，其他的都不错。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;座椅下风口包含和后排空调保护罩 25.00元&lt;/p&gt;</description>
     </item>
     <item>
