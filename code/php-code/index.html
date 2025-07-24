@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="PHP 语言
+
+PHP，即 PHP: Hypertext Preprocessor，是一种被广泛应用的开源通用脚本语言，尤其适用于 Web 开发并可嵌入 HTML 中去。它的语法利用了 C、Java 和 Perl，易于学习。该语言的主要目标是允许 web 开发人员快速编写动态生成的 web 页面，但 PHP 的用途远不只于此。
+
+如果你觉得我是在记录学习 PHP 语言，那么你错了。
+我喜欢各种语言倒腾，兴趣索然。
+在一段时间之后，我觉得我需要安装 php 语言来玩一下，结果在安装的过程中出现了很多问题，出钱就可以搞定的，可是在代码方面，我的信仰就是 free is better!那么，就开始说说，为什么那么难。
+我使用苹果电脑，但是系统是 12 的，所以连 brew 都发出了警告。
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report Tier 3 unrelated issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+">
+
+<meta property="og:url" content="https://guobingyi.github.io/code/php-code/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Php Code">
+  <meta property="og:description" content="PHP 语言 PHP，即 PHP: Hypertext Preprocessor，是一种被广泛应用的开源通用脚本语言，尤其适用于 Web 开发并可嵌入 HTML 中去。它的语法利用了 C、Java 和 Perl，易于学习。该语言的主要目标是允许 web 开发人员快速编写动态生成的 web 页面，但 PHP 的用途远不只于此。
+如果你觉得我是在记录学习 PHP 语言，那么你错了。
+我喜欢各种语言倒腾，兴趣索然。
+在一段时间之后，我觉得我需要安装 php 语言来玩一下，结果在安装的过程中出现了很多问题，出钱就可以搞定的，可是在代码方面，我的信仰就是 free is better!那么，就开始说说，为什么那么难。
+我使用苹果电脑，但是系统是 12 的，所以连 brew 都发出了警告。
+Warning: You are using macOS 12. We (and Apple) do not provide support for this old version. This is a Tier 3 configuration: https://docs.brew.sh/Support-Tiers#tier-3 You can report Tier 3 unrelated issues to Homebrew/* repositories! Read the above document instead before opening any issues or PRs. ">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2025-07-24T20:13:23+08:00">
+    <meta property="article:modified_time" content="2025-07-24T20:13:23+08:00">
+
+
+<title>
+
+
+     Php Code 
+
+</title>
+<link rel="canonical" href="https://guobingyi.github.io/code/php-code/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-24%2020%3a56%3a02.425096%20%2b0800%20CST%20m%3d%2b4.798724532">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-24%2020%3a56%3a02.425096%20%2b0800%20CST%20m%3d%2b4.798724532">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-24%2020%3a56%3a02.425096%20%2b0800%20CST%20m%3d%2b4.798724532">
+    
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-24%2020%3a56%3a02.425096%20%2b0800%20CST%20m%3d%2b4.798724532">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://guobingyi.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://guobingyi.github.io/"><img class="avatar" src="https://guobingyi.github.io/img/profile.png" alt="avatar" srcset="https://guobingyi.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://guobingyi.github.io/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="https://guobingyi.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="https://guobingyi.github.io/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="https://guobingyi.github.io/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="https://guobingyi.github.io/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="https://guobingyi.github.io/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="https://guobingyi.github.io/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="https://guobingyi.github.io/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="https://guobingyi.github.io/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="https://guobingyi.github.io/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="https://guobingyi.github.io/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="https://guobingyi.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="https://guobingyi.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Php Code
+
+</div>
+
+            <div class="markdown">
+                <h1 id="php-语言">PHP 语言</h1>
+<blockquote>
+<p>PHP，即 PHP: Hypertext Preprocessor，是一种被广泛应用的开源通用脚本语言，尤其适用于 Web 开发并可嵌入 HTML 中去。它的语法利用了 C、Java 和 Perl，易于学习。该语言的主要目标是允许 web 开发人员快速编写动态生成的 web 页面，但 PHP 的用途远不只于此。</p>
+</blockquote>
+<p>如果你觉得我是在记录学习 PHP 语言，那么你错了。</p>
+<p>我喜欢各种语言倒腾，兴趣索然。</p>
+<p>在一段时间之后，我觉得我需要安装 php 语言来玩一下，结果在安装的过程中出现了很多问题，出钱就可以搞定的，可是在代码方面，我的信仰就是 free is better!那么，就开始说说，为什么那么难。</p>
+<p>我使用苹果电脑，但是系统是 12 的，所以连 brew 都发出了警告。</p>
+<pre tabindex="0"><code>Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+
+This is a Tier 3 configuration:
+  https://docs.brew.sh/Support-Tiers#tier-3
+You can report Tier 3 unrelated issues to Homebrew/* repositories!
+Read the above document instead before opening any issues or PRs.
+</code></pre><p>我也没有管那么多，就直接使用了，最简单的安装模式。</p>
+<pre tabindex="0"><code>brew install php
+</code></pre><p>结果 aom 这个组件下载出现了问题。</p>
+<pre tabindex="0"><code>==&gt; Fetching downloads for: aom
+==&gt; Fetching aom
+==&gt; Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/1a1b9d75324468d64c8fb4cdcad0a1b7b1dfdd77/Formula/a/a
+Already downloaded: /Users/guoby/Library/Caches/Homebrew/downloads/a1b767bed2aca5ec4c557cbe0201bfce5c0437929c77c98e67bda2f502642518--aom.rb
+==&gt; Cloning https://aomedia.googlesource.com/aom.git
+Cloning into &#39;/Users/guoby/Library/Caches/Homebrew/aom--git&#39;...
+fatal: unable to access &#39;https://aomedia.googlesource.com/aom.git/&#39;: Failed to connect to aomedia.googlesource.com port 443 after 75123 ms: Couldn&#39;t connect to server
+Error: aom: Failed to download resource &#34;aom&#34;
+Failure while executing; `/usr/bin/env git clone --branch v3.12.1 --config advice.detachedHead=false --config core.fsmonitor=false https://aomedia.googlesource.com/aom.git /Users/guoby/Library/Caches/Homebrew/aom--git` exited with 128. Here&#39;s the output:
+Cloning into &#39;/Users/guoby/Library/Caches/Homebrew/aom--git&#39;...
+fatal: unable to access &#39;https://aomedia.googlesource.com/aom.git/&#39;: Failed to connect to aomedia.googlesource.com port 443 after 75123 ms: Couldn&#39;t connect to server
+</code></pre><p>问题很明显，需要科学上网才能搞定，我想，要不，我想想其他的办法，就咨询了豆包。</p>
+<p>豆包给出了几个解决方案，我试了都不行后，最后使用了她给的一种解决办法，也是我觉得比较靠谱的，就是绕过 brew 的安装，自己本地编译。</p>
+<p>豆包给的 aom 的地址已经不可以用了，所以我又自行找来了一个地址，感谢码云，感谢作者。</p>
+<pre tabindex="0"><code>https://gitee.com/sjh8130/aom
+</code></pre><p>这个比较靠谱，有 3.12.1版本，比我之前找的要好，我把我走的坑就省略了，直接说正确的发生。</p>
+<p>下载之后，迁出 3.12.1版本。</p>
+<pre tabindex="0"><code>git checkout v3.12.1
+</code></pre><p>如果报错，说明版本有问题，要看看是否有该版本。</p>
+<pre tabindex="0"><code>&gt; $ git checkout v3.12.1                                                                                           [±main ✓]
+错误：路径规格 &#39;v3.12.1&#39; 未匹配任何 git 已知文件
+</code></pre><p>查看版本信息：</p>
+<pre tabindex="0"><code>git tag -l
+</code></pre><p>迁出正确版本后，开始进入编译。</p>
+<pre tabindex="0"><code>cd build
+</code></pre><p>如果按照豆包给出的这个编译项，那么完了，从开始就放弃，或许是最好的选择。</p>
+<pre tabindex="0"><code> cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_SHARED_LIBS=ON
+</code></pre><p>正确的应该是这样的：</p>
+<pre tabindex="0"><code>cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local/Cellar/aom/3.12.1 -DBUILD_SHARED_LIBS=ON
+</code></pre><p>要问为什么，就是在 brew link 的时候，它是在 Cellar 下创建了 aom 文件夹，文件夹后是版本信息 3.12.1。</p>
+<p>不然报这个错误：</p>
+<pre tabindex="0"><code>&gt; $ brew link aom                                                                                            [±10aece4157 ●]
+Error: No such keg: /usr/local/Cellar/aom
+</code></pre><p>接上面的，开始编译：</p>
+<pre tabindex="0"><code> make -j$(nproc)
+</code></pre><p>编译完成后，安装。(如果有权限问题，加个 sudo)</p>
+<pre tabindex="0"><code>make install
+</code></pre><p>完成后，让 brew 直接链接，告诉 brew 不要再安装 aom 了。</p>
+<pre tabindex="0"><code>&gt; $ brew link --force aom                                                                                    [±10aece4157 ●]
+Linking /usr/local/Cellar/aom/3.12.1... 8 symlinks created.
+</code></pre><p>那么，终于回归主题，安装 php。</p>
+<pre tabindex="0"><code>brew install php
+</code></pre><p>可以想象一下，电脑的性能。</p>
+<pre tabindex="0"><code>==&gt; Summary
+🍺  /usr/local/Cellar/php/8.4.10: 523 files, 107.2MB, built in 22 minutes 28 seconds
+</code></pre><p>最后，hello, world.</p>
+<h4 id="1-创建indexphp页面">1. 创建index.php页面</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-index.php" data-lang="index.php"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Example</span><span class="o">&lt;/</span><span class="nx">title</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="nx">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Hi, I&#39;m a PHP script!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">        &lt;?php phpinfo(); ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;/body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/html&gt;
+</span></span></span></code></pre></div><h4 id="2-运行php">2. 运行php</h4>
+<pre tabindex="0"><code>php -S localhost:8080 index.php
+</code></pre><p>结束了吗？已经结束了。</p>
+<p><strong>总结，在使用豆包的时候，豆包可以快速的给出解决方案，但是还是需要甄别，思考，不然，真的从入门到放弃了。</strong></p>
+<p>不管怎么说，php 在艰难的情况安装了，不学习一下怪对不起自己一天的努力的。或许，在某一天，好好的记录一下学习过程。我的学习思路是，看官方文档。</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+

@@ -6,8 +6,15 @@
     <description>Recent content in Just Do it on guobingyi</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 Jul 2025 19:50:35 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jul 2025 20:13:23 +0800</lastBuildDate>
     <atom:link href="https://guobingyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Php Code</title>
+      <link>https://guobingyi.github.io/code/php-code/</link>
+      <pubDate>Thu, 24 Jul 2025 20:13:23 +0800</pubDate>
+      <guid>https://guobingyi.github.io/code/php-code/</guid>
+      <description>&lt;h1 id=&#34;php-语言&#34;&gt;PHP 语言&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;PHP，即 PHP: Hypertext Preprocessor，是一种被广泛应用的开源通用脚本语言，尤其适用于 Web 开发并可嵌入 HTML 中去。它的语法利用了 C、Java 和 Perl，易于学习。该语言的主要目标是允许 web 开发人员快速编写动态生成的 web 页面，但 PHP 的用途远不只于此。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;如果你觉得我是在记录学习 PHP 语言，那么你错了。&lt;/p&gt;&#xA;&lt;p&gt;我喜欢各种语言倒腾，兴趣索然。&lt;/p&gt;&#xA;&lt;p&gt;在一段时间之后，我觉得我需要安装 php 语言来玩一下，结果在安装的过程中出现了很多问题，出钱就可以搞定的，可是在代码方面，我的信仰就是 free is better!那么，就开始说说，为什么那么难。&lt;/p&gt;&#xA;&lt;p&gt;我使用苹果电脑，但是系统是 12 的，所以连 brew 都发出了警告。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Warning: You are using macOS 12.&#xA;We (and Apple) do not provide support for this old version.&#xA;&#xA;This is a Tier 3 configuration:&#xA;  https://docs.brew.sh/Support-Tiers#tier-3&#xA;You can report Tier 3 unrelated issues to Homebrew/* repositories!&#xA;Read the above document instead before opening any issues or PRs.&#xA;&lt;/code&gt;&lt;/pr</description>
+    </item>
     <item>
       <title>极速追杀:芭蕾杀姬</title>
       <link>https://guobingyi.github.io/movie/jszsblsj/</link>
