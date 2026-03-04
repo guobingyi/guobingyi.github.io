@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Rust
+
+开启Rust之旅
+
+每每开始学习一门语言，我都会从官网的文档开始。因为，语言的文档是非常关键的，她告诉你什么是需要注意的，什么是重点，当然最重要的是她能做什么。
+0x00 Rust，我为什么选择你
+
+一门赋予每个人构建可靠且高效软件能力的语言。
+
+高性能
+Rust速度惊人且内存利用率极高。由于没有运行时和垃圾回收，它能够胜任对性能要求特别高的服务，可以在嵌入式设备上运行，还能轻松和其他语言集成。
+
+高性能如何来看待，我觉得还是要看在运算的过程中，快速的完成任务。
+
+可靠性
+Rust丰富的类型系统和所有权模型保证了内存安全和线程安全，让您在编译期就能够消除各种各样的错误。
+
+可靠性？就是你在使用Rust的时候bug少点，能及时发现你写的代码问题，当然规避一些错误。
+
+生产力
+Rust 拥有出色的文档、友好的编译器和清晰的错误提示信息， 还集成了一流的工具 —— 包管理器和构建工具， 智能地自动补全和类型检验的多编辑器支持， 以及自动格式化代码等等。
+
+生产力我理解的就是文档全面，有什么困难都能在文档中找到文档，构建工具方便。
+
+0x01 环境准备
+
+一切从文档开始,中文的文档也好，英文的文档也好，主要得把该将的说明白。
+
+安装
+我一直都喜欢用brew来安装，但是发现Rust安装后会有些问题，所以推荐使用官方的方式，就是在命令行安装。因为官方安装后就可以直接使用cargo了。
+curl https://sh.rustup.rs -sSf | sh
+安装过程比较快，是我最近安装dotnet-SDK和OpenJDK中最快的，或许本身语言比较年轻吧。
+安装成功后，会显示以下信息：
+Rust is installed now. Great!
+当前终端Rust环境不会直接起效，所以需要手工进行处理：
+source $HOME/.cargo/env
+当然，你也可以重启终端。在配置文件~/.bash_profile下，发现了在最后行加入了以下的信息：
+export PATH=&#34;$HOME/.cargo/bin:$PATH&#34;
+我比较喜欢的是，文档中居然把如何自我更新和删除放到了一块，就好比进入去买鱼，去了酱油店一样，说：“哦，不好意思我走错了！”。让你有充分的选择，喜欢吗？哦，不喜欢，那欢迎下次光临。
+更新
+rustup update
+删除
+rustp self remove
+验证安装
+rustc --version
+0x02 Hello,World!
+我感觉和世界问好已经成为了一种标准，还是习惯，大家都这样写了。
+创建项目目录
+mkdir project
+创建文件main.rs,添加以下内容：
+fn main() {
+    println!(&#34;Hello, world!&#34;);
+}
+文件名称可以随意，不影响，不像go的主文件必须是main.go。
+编译
+rustc main.rs
+运行
+./main
+结果输出：
+Hello, world!
+看似简单的一步完成了，如果没有编程经验的人会非常兴奋，毕竟入门了；对于有编程经验的人来说，开始入坑。
+在Rust的安装，编译的过程都非常顺利，比较害怕的是弄个环境都可以搞一天的。
+0x03 Hello,Cargo!
+Cargo是Rust语言的包管理工具，非常棒的工具，我觉得go可以学习一下。">
+
+<meta property="og:url" content="//localhost:1313/code/rust/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Rust">
+  <meta property="og:description" content="Rust 开启Rust之旅
+每每开始学习一门语言，我都会从官网的文档开始。因为，语言的文档是非常关键的，她告诉你什么是需要注意的，什么是重点，当然最重要的是她能做什么。
+0x00 Rust，我为什么选择你 一门赋予每个人构建可靠且高效软件能力的语言。
+高性能 Rust速度惊人且内存利用率极高。由于没有运行时和垃圾回收，它能够胜任对性能要求特别高的服务，可以在嵌入式设备上运行，还能轻松和其他语言集成。
+高性能如何来看待，我觉得还是要看在运算的过程中，快速的完成任务。 可靠性 Rust丰富的类型系统和所有权模型保证了内存安全和线程安全，让您在编译期就能够消除各种各样的错误。
+可靠性？就是你在使用Rust的时候bug少点，能及时发现你写的代码问题，当然规避一些错误。 生产力 Rust 拥有出色的文档、友好的编译器和清晰的错误提示信息， 还集成了一流的工具 —— 包管理器和构建工具， 智能地自动补全和类型检验的多编辑器支持， 以及自动格式化代码等等。
+生产力我理解的就是文档全面，有什么困难都能在文档中找到文档，构建工具方便。 0x01 环境准备 一切从文档开始,中文的文档也好，英文的文档也好，主要得把该将的说明白。
+安装 我一直都喜欢用brew来安装，但是发现Rust安装后会有些问题，所以推荐使用官方的方式，就是在命令行安装。因为官方安装后就可以直接使用cargo了。
+curl https://sh.rustup.rs -sSf | sh 安装过程比较快，是我最近安装dotnet-SDK和OpenJDK中最快的，或许本身语言比较年轻吧。
+安装成功后，会显示以下信息：
+Rust is installed now. Great! 当前终端Rust环境不会直接起效，所以需要手工进行处理：
+source $HOME/.cargo/env 当然，你也可以重启终端。在配置文件~/.bash_profile下，发现了在最后行加入了以下的信息：
+export PATH=&#34;$HOME/.cargo/bin:$PATH&#34; 我比较喜欢的是，文档中居然把如何自我更新和删除放到了一块，就好比进入去买鱼，去了酱油店一样，说：“哦，不好意思我走错了！”。让你有充分的选择，喜欢吗？哦，不喜欢，那欢迎下次光临。
+更新 rustup update 删除 rustp self remove 验证安装 rustc --version 0x02 Hello,World! 我感觉和世界问好已经成为了一种标准，还是习惯，大家都这样写了。
+创建项目目录 mkdir project 创建文件main.rs,添加以下内容： fn main() { println!(&#34;Hello, world!&#34;); } 文件名称可以随意，不影响，不像go的主文件必须是main.go。
+编译 rustc main.rs 运行 ./main 结果输出：
+Hello, world! 看似简单的一步完成了，如果没有编程经验的人会非常兴奋，毕竟入门了；对于有编程经验的人来说，开始入坑。
+在Rust的安装，编译的过程都非常顺利，比较害怕的是弄个环境都可以搞一天的。
+0x03 Hello,Cargo! Cargo是Rust语言的包管理工具，非常棒的工具，我觉得go可以学习一下。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2020-02-13T13:08:35+08:00">
+    <meta property="article:modified_time" content="2020-02-13T13:08:35+08:00">
+
+
+<title>
+
+
+     Rust 
+
+</title>
+<link rel="canonical" href="//localhost:1313/code/rust/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="//localhost:1313/css/reset.css?t=2026-03-03%2021%3a08%3a43.324322%20%2b0800%20CST%20m%3d%2b43.971685876">
+    <link rel="stylesheet" href="//localhost:1313/css/pygments.css?t=2026-03-03%2021%3a08%3a43.324322%20%2b0800%20CST%20m%3d%2b43.971685876">
+    <link rel="stylesheet" href="//localhost:1313/css/main.css?t=2026-03-03%2021%3a08%3a43.324322%20%2b0800%20CST%20m%3d%2b43.971685876">
+    
+        <link rel="stylesheet" href="//localhost:1313/css/override.css?t=2026-03-03%2021%3a08%3a43.324322%20%2b0800%20CST%20m%3d%2b43.971685876">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="//localhost:1313/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="//localhost:1313/"><img class="avatar" src="//localhost:1313/img/profile.png" alt="avatar" srcset="//localhost:1313/img/profile.png 1x"></a>
+            
+            <a href="//localhost:1313/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="//localhost:1313/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="//localhost:1313/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="//localhost:1313/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="//localhost:1313/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="//localhost:1313/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="//localhost:1313/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="//localhost:1313/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="//localhost:1313/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="//localhost:1313/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="//localhost:1313/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="//localhost:1313/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="//localhost:1313/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Rust
+
+</div>
+
+            <div class="markdown">
+                <h2 id="rust">Rust</h2>
+<blockquote>
+<p>开启Rust之旅</p>
+</blockquote>
+<p>每每开始学习一门语言，我都会从<a href="https://www.rust-lang.org/zh-CN/">官网</a>的文档开始。因为，语言的文档是非常关键的，她告诉你什么是需要注意的，什么是重点，当然最重要的是她能做什么。</p>
+<h3 id="0x00-rust我为什么选择你">0x00 Rust，我为什么选择你</h3>
+<blockquote>
+<p>一门赋予每个人构建可靠且高效软件能力的语言。</p>
+</blockquote>
+<h4 id="高性能">高性能</h4>
+<p>Rust速度惊人且内存利用率极高。由于没有运行时和垃圾回收，它能够胜任对性能要求特别高的服务，可以在嵌入式设备上运行，还能轻松和其他语言集成。</p>
+<ul>
+<li>高性能如何来看待，我觉得还是要看在运算的过程中，快速的完成任务。</li>
+</ul>
+<h4 id="可靠性">可靠性</h4>
+<p>Rust丰富的类型系统和所有权模型保证了内存安全和线程安全，让您在编译期就能够消除各种各样的错误。</p>
+<ul>
+<li>可靠性？就是你在使用Rust的时候bug少点，能及时发现你写的代码问题，当然规避一些错误。</li>
+</ul>
+<h4 id="生产力">生产力</h4>
+<p>Rust 拥有出色的文档、友好的编译器和清晰的错误提示信息， 还集成了一流的工具 —— 包管理器和构建工具， 智能地自动补全和类型检验的多编辑器支持， 以及自动格式化代码等等。</p>
+<ul>
+<li>生产力我理解的就是文档全面，有什么困难都能在文档中找到文档，构建工具方便。</li>
+</ul>
+<h3 id="0x01-环境准备">0x01 环境准备</h3>
+<blockquote>
+<p>一切从文档开始,中文的文档也好，英文的文档也好，主要得把该将的说明白。</p>
+</blockquote>
+<h4 id="安装">安装</h4>
+<p>我一直都喜欢用brew来安装，但是发现Rust安装后会有些问题，所以推荐使用官方的方式，就是在命令行安装。因为官方安装后就可以直接使用cargo了。</p>
+<pre tabindex="0"><code>curl https://sh.rustup.rs -sSf | sh
+</code></pre><p>安装过程比较快，是我最近安装dotnet-SDK和OpenJDK中最快的，或许本身语言比较年轻吧。</p>
+<p>安装成功后，会显示以下信息：</p>
+<pre tabindex="0"><code>Rust is installed now. Great!
+</code></pre><p>当前终端Rust环境不会直接起效，所以需要手工进行处理：</p>
+<pre tabindex="0"><code>source $HOME/.cargo/env
+</code></pre><p>当然，你也可以重启终端。在配置文件~/.bash_profile下，发现了在最后行加入了以下的信息：</p>
+<pre tabindex="0"><code>export PATH=&#34;$HOME/.cargo/bin:$PATH&#34;
+</code></pre><p>我比较喜欢的是，文档中居然把如何自我更新和删除放到了一块，就好比进入去买鱼，去了酱油店一样，说：“哦，不好意思我走错了！”。让你有充分的选择，喜欢吗？哦，不喜欢，那欢迎下次光临。</p>
+<h4 id="更新">更新</h4>
+<pre tabindex="0"><code>rustup update
+</code></pre><h4 id="删除">删除</h4>
+<pre tabindex="0"><code>rustp self remove
+</code></pre><h4 id="验证安装">验证安装</h4>
+<pre tabindex="0"><code>rustc --version
+</code></pre><h3 id="0x02-helloworld">0x02 Hello,World!</h3>
+<p>我感觉和世界问好已经成为了一种标准，还是习惯，大家都这样写了。</p>
+<h4 id="创建项目目录">创建项目目录</h4>
+<pre tabindex="0"><code>mkdir project
+</code></pre><h4 id="创建文件mainrs添加以下内容">创建文件main.rs,添加以下内容：</h4>
+<pre tabindex="0"><code>fn main() {
+    println!(&#34;Hello, world!&#34;);
+}
+</code></pre><p>文件名称可以随意，不影响，不像go的主文件必须是main.go。</p>
+<h4 id="编译">编译</h4>
+<pre tabindex="0"><code>rustc main.rs
+</code></pre><h4 id="运行">运行</h4>
+<pre tabindex="0"><code>./main
+</code></pre><p>结果输出：</p>
+<pre tabindex="0"><code>Hello, world!
+</code></pre><p>看似简单的一步完成了，如果没有编程经验的人会非常兴奋，毕竟入门了；对于有编程经验的人来说，开始入坑。</p>
+<p>在Rust的安装，编译的过程都非常顺利，比较害怕的是弄个环境都可以搞一天的。</p>
+<h3 id="0x03-hellocargo">0x03 Hello,Cargo!</h3>
+<p>Cargo是Rust语言的包管理工具，非常棒的工具，我觉得go可以学习一下。</p>
+<h4 id="创建项目">创建项目</h4>
+<pre tabindex="0"><code>cargo new hello_cargo
+</code></pre><h4 id="编译项目">编译项目</h4>
+<pre tabindex="0"><code>cargo build
+</code></pre><h4 id="运行项目">运行项目</h4>
+<pre tabindex="0"><code>cargo run
+</code></pre><h4 id="cargotoml">Cargo.toml</h4>
+<p>包管理配置文件，不是json不是xml。</p>
+<pre tabindex="0"><code>[package]
+name = &#34;hello_cargo&#34;
+version = &#34;0.1.0&#34;
+authors = [&#34;Your Name &lt;you@example.com&gt;&#34;]
+edition = &#34;2018&#34;
+
+[dependencies]
+</code></pre><p>和make的配置文件相似，非常有亲切感。</p>
+<h3 id="0x04-猜谜游戏">0x04 猜谜游戏</h3>
+<p>这是hello的升级版，项目还是得使用cargo，毕竟需要些第三方的包呀，不能重复造轮子。</p>
+<h4 id="创建一个新项目guessing_game">创建一个新项目guessing_game</h4>
+<pre tabindex="0"><code>cargo new guessing_game
+</code></pre><p>创建后，加入以下内容：</p>
+<pre tabindex="0"><code>use std::io;
+
+fn main() {
+    println!(&#34;Guess the number!&#34;);
+
+    println!(&#34;Please input your guess.&#34;);
+
+    let mut guess = String::new();
+
+    io::stdin().read_line(&amp;mut guess)
+        .expect(&#34;Failed to read line&#34;);
+
+    println!(&#34;You guessed: {}&#34;, guess);
+}
+</code></pre><p>代码包括了非常多的信息，我们来一行一行的解释：</p>
+<h5 id="引入io包">引入io包</h5>
+<pre tabindex="0"><code>use std::io;
+</code></pre><p>我们需要io包中的输入/输出功能。</p>
+<h5 id="存储信息">存储信息</h5>
+<pre tabindex="0"><code>let mut guess = String::new();
+</code></pre><h5 id="引入第三方包">引入第三方包</h5>
+<pre tabindex="0"><code>[dependencies]
+rand = &#34;0.5.5&#34;
+</code></pre><p>第三方的包版本控制需要手动进行修改，使用cargo update仅仅显示当前的最新版本，而不会进行替换。如果需要最新版本，需要手工进行配置Cargo.toml文件。</p>
+<pre tabindex="0"><code>[dependencies]
+rand = &#34;0.6.0&#34;
+</code></pre><p>需不需要新功能，还是你说了算！</p>
+<p>这里顺便提一下，我使用了vs code的rust插件后，使用cargo build的时候会出现以下问题：</p>
+<pre tabindex="0"><code>Blocking waiting for file lock on package cache
+</code></pre><p>两个线程在打架了，而vs code下的插件不能显示具体的下载过程，所以只能删除了，等出正是版本再说了。</p>
+<p>解决该问题，可以删除.cargo文件夹下的.package_cache文件。</p>
+<h5 id="创建随机数">创建随机数</h5>
+<pre tabindex="0"><code>let secret_number = rand::thread_rng().gen_range(1, 101);
+</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+

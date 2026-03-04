@@ -26,7 +26,11 @@ INFO: (che start): Use: http://localhost:8080
 INFO: (che start): API: http://localhost:8080/swagger
 在浏览器上输入：http://localhost:8080 就可以使用Eclipse Che了。
 3.疑难杂症
-遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。">
+遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。
+Don&rsquo;t worry,it will be solved.
+常见问题：
+Failed to start workspace with Server &lsquo;wsagent/http&rsquo; in machine &lsquo;dev-machine&rsquo; not available.
+Cause: Server &lsquo;wsagent/http&rsquo; in machine &lsquo;dev-machine&rsquo; not available">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/eclipse-che-%E5%9C%A8mac%E4%B8%8B%E5%AE%89%E8%A3%85/">
   <meta property="og:site_name" content="guobingyi">
@@ -37,7 +41,11 @@ INFO: (che start): API: http://localhost:8080/swagger
 1. 添加IP别名 IP=$(docker run --rm --net host eclipse/che-ip:nightly) &amp;&amp; sudo ifconfig en0 alias $IP 注：在国外的网站上用的是lo0,而我的电脑是en0。如果不能启动使用ifconfig命令查看自己的网卡信息。
 2. 安装 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v /Users/guoby/mywork/code/che-data:/data eclipse/che start 正常启动后，显示以下内容：
 INFO: (che start): Use: http://localhost:8080 INFO: (che start): API: http://localhost:8080/swagger 在浏览器上输入：http://localhost:8080 就可以使用Eclipse Che了。
-3.疑难杂症 遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。">
+3.疑难杂症 遇到的问题可能千奇百怪，但是都已经被前人踩到坑了。多搜索找到问题，但是最好的问题解决地方在项目的issues。
+Don’t worry,it will be solved.
+常见问题：
+Failed to start workspace with Server ‘wsagent/http’ in machine ‘dev-machine’ not available.
+Cause: Server ‘wsagent/http’ in machine ‘dev-machine’ not available">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -71,11 +79,11 @@ INFO: (che start): Use: http://localhost:8080 INFO: (che start): API: http://loc
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-25%2020%3a00%3a15.529499%20%2b0800%20CST%20m%3d%2b2.380928633">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-25%2020%3a00%3a15.529499%20%2b0800%20CST%20m%3d%2b2.380928633">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-25%2020%3a00%3a15.529499%20%2b0800%20CST%20m%3d%2b2.380928633">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-03-04%2022%3a16%3a02.624508%20%2b0800%20CST%20m%3d%2b2.908804793">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-03-04%2022%3a16%3a02.624508%20%2b0800%20CST%20m%3d%2b2.908804793">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-03-04%2022%3a16%3a02.624508%20%2b0800%20CST%20m%3d%2b2.908804793">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-25%2020%3a00%3a15.529499%20%2b0800%20CST%20m%3d%2b2.380928633">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-03-04%2022%3a16%3a02.624508%20%2b0800%20CST%20m%3d%2b2.908804793">
     
 
 

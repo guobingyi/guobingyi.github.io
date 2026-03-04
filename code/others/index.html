@@ -24,14 +24,17 @@ Traceback (most recent call last):
     from _weakref import (
 ImportError: cannot import name _remove_dead_weakref
 Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance.
-">
+很长时间没有解决，在使用了google后，最终找到了解决方案。
+If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &#34;python@2&#34; appears in that list, and Python 2.7 is your system Python, you can remove the brew installed package with brew remove python@2 --ignore-dependencies
+使用brew list后，发现有python@2，然后使用命令：">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/others/">
   <meta property="og:site_name" content="guobingyi">
   <meta property="og:title" content="Others">
-  <meta property="og:description" content=" Don’t be evil
+  <meta property="og:description" content="Don’t be evil
 记录一些奇怪的错误 0x00 swift控制端启动错误 每次在控制台输入swift的时候，都会报这个错：
-bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &#34;&lt;input&gt;&#34;, line 1, in &lt;module&gt; File &#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&#34;, line 52, in &lt;module&gt; import weakref File &#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&#34;, line 14, in &lt;module&gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. ">
+bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &#34;&lt;input&gt;&#34;, line 1, in &lt;module&gt; File &#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py&#34;, line 52, in &lt;module&gt; import weakref File &#34;/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py&#34;, line 14, in &lt;module&gt; from _weakref import ( ImportError: cannot import name _remove_dead_weakref Welcome to Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2). Type :help for assistance. 很长时间没有解决，在使用了google后，最终找到了解决方案。
+If you&#39;re on OSX and are using homebrew, check your packages installed with brew by running brew list, and if &#34;python@2&#34; appears in that list, and Python 2.7 is your system Python, you can remove the brew installed package with brew remove python@2 --ignore-dependencies 使用brew list后，发现有python@2，然后使用命令：">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -65,11 +68,11 @@ bingyideMacBook-Pro:~ guoby$ swift Traceback (most recent call last): File &#34;
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-25%2020%3a00%3a18.313784%20%2b0800%20CST%20m%3d%2b5.165130238">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-25%2020%3a00%3a18.313784%20%2b0800%20CST%20m%3d%2b5.165130238">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-25%2020%3a00%3a18.313784%20%2b0800%20CST%20m%3d%2b5.165130238">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-03-04%2022%3a16%3a12.739535%20%2b0800%20CST%20m%3d%2b13.023886543">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-03-04%2022%3a16%3a12.739535%20%2b0800%20CST%20m%3d%2b13.023886543">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-03-04%2022%3a16%3a12.739535%20%2b0800%20CST%20m%3d%2b13.023886543">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-25%2020%3a00%3a18.313784%20%2b0800%20CST%20m%3d%2b5.165130238">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-03-04%2022%3a16%3a12.739535%20%2b0800%20CST%20m%3d%2b13.023886543">
     
 
 

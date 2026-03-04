@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="寻人
+
+我们不是有缘，而是命中注定！
+爱的迫降
+Do not be evil
+
+0x00 前言
+最近看《爱的迫降》电视剧的时候，发现男猪脚找到女主角的办法是用了一个定位软件，让我联想到我原来三姑爹的事，虽然三姑爹已经去世，但是他的事情让我觉得作为一个开发者应该有责任去做一些事，所以引发了这个项目的启动，原本我还在想弄蓝牙进行连接聊天的项目，为了解决在特殊时期的情况下，如果进行蓝牙进行通讯，我还取了个项目名称为“私语者”的想法，但是这个找老人或者特殊人群的事情让我感觉更有意义，也需要优先去弄这个事情。或许，也受到老婆的影响吧，去关注需要关注的人，她让我去三爹的敬老院进行做义工的事，让我真的想了许多。
+&ldquo;私语者&quot;的参考文档：
+https://github.com/xiaoyaoyou1212/BluetoothChat
+https://github.com/CoolkeWang/BleLibTest
+https://github.com/xiaoyaoyou1212/XSnow
+https://github.com/huang1988519/U-And-M
+然后想到为什么google的公司口号是Do not be evil，是因为有太多的信息可以利用，而这个也是自己要做这个项目需要对自己说的，因为有太多的信息，必须做到Do not be evil。
+0x01 需求
+为什么会有这样的想法？目前的软件就是定位手表，让小孩子带着，而有一些特殊人群是需要特殊照顾的，比如老人。目前给老人配上手表的也有，但是能解决的问题毕竟有限，而现在手机的用途越来越多，而且功能发挥也越来越大，比如可以在极端的情况下打开摄像头，录音等功能来进行辅助。
+目前大致的思路是手机进行周期性定位信息发送，而服务器进行记录信息。
+实施的思路是在服务器进行登记，登记后通过一个许可码如46331250的号码，进入到下载app页面，输入正确许可码后进行下载。下载后的app需要进行一次简单的验证，也是提供这个许可码，进行服务器信息绑定，此时需要上传一些手机信息如手机唯一标示和服务器上的登记信息匹配。然后基础信息开始采集，如通话记录，短信信息，定位信息。
+此时手机进行定时的周期性工作，就是定期将位置信息发送到服务器。还有一个服务是更新，这里的更新有两个事情要做，第一是app的上传服务地址是否变更，如果变更需要进行变更；第二是是否有调度命令需要执行，如上传短信，通话记录，打开摄像头采集图片，打开录音采集录音文件等，后面有新的思路进行补充(TODO:)。
+服务器端进行寻人的登记，和相关的指令下发。
+用户登记后，进行与客户端进行绑定，定期采取数据信息，并对一天未更新位置的用户进行下线状态处理，此时需要联系登记人员，沟通情况，了解为什么下线？如果客户未进行任何操作，说明客户端存在bug，需要进行处理；如果客户发现未寻到人，此时需要进行将此客户的信息进行关联，提供给客户进行寻找，并采取指令下发等功能，看是否能寻人成功；如果客户取消业务，则进行客户信息变更为取消业务。
+用户在采取寻人功能需求后，将此时的用户信息进行地图标示，使用最新的位置信息进行定位，可以使用百度/腾讯/高德的地图提供商进行对比，有效的帮助用户。也可以对用户的最新位置进行线路规划提供信息。采取下发指令的功能进行收集最新的图片，声音，通话记录，消息记录提供分析。
+
+我在这里强调一点的是为什么要通话记录和短信信息，这些信息是敏感的，当然也是重要的。在失去联系，这些信息都可以救命，但是这些信息也是致命的，个人的隐私都在这里，所以google说的“Do not be evil”是有原因的。
+
+通过手机的功能，现在网络的优化，可以进行以下的需求：
+1. 客户端功能
+
+目前好像只能先解决android手机，因为苹果的生态圈导致。
+
+定位可以通过手机的GPS和网络进行定位，这样准确度高，也能及时反应用户所在的位置。后台服务必须能持续运行反应用户的移动位置，不管用户是否启动运用和关机的情况下，能进行调度执行。 或许，这个是一个关键点。
+[ ] 获取手机的定位信息
+使用手机自带的GPS或者网络进行定位。
+[ ] 定时调度
+
+
+应用在第一次运行后，持续在后台运行。
+
+
+执行位置信息上传服务器。
+
+
+监听服务器下发指令。
+
+
+(1) 变更定位信息调度频率；
+(2) 开启摄像头功能；
+(3) 开启录用功能；
+(4) 上传图片信息；
+(5) 上传录音文件；
+(6) 上传通话记录；
+(7) 上传短信信息；
+(8) 上传手机信息；
+(9) 变更服务器接收地址信息
+2. 定时传输信息到服务器
+服务必须能及时记录好用户的信息，能进行处理用户的需求。">
+
+<meta property="og:url" content="//localhost:1313/code/findlostman/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="FindLostman">
+  <meta property="og:description" content="寻人 我们不是有缘，而是命中注定！ 爱的迫降 Do not be evil
+0x00 前言 最近看《爱的迫降》电视剧的时候，发现男猪脚找到女主角的办法是用了一个定位软件，让我联想到我原来三姑爹的事，虽然三姑爹已经去世，但是他的事情让我觉得作为一个开发者应该有责任去做一些事，所以引发了这个项目的启动，原本我还在想弄蓝牙进行连接聊天的项目，为了解决在特殊时期的情况下，如果进行蓝牙进行通讯，我还取了个项目名称为“私语者”的想法，但是这个找老人或者特殊人群的事情让我感觉更有意义，也需要优先去弄这个事情。或许，也受到老婆的影响吧，去关注需要关注的人，她让我去三爹的敬老院进行做义工的事，让我真的想了许多。
+“私语者&#34;的参考文档：
+https://github.com/xiaoyaoyou1212/BluetoothChat
+https://github.com/CoolkeWang/BleLibTest
+https://github.com/xiaoyaoyou1212/XSnow
+https://github.com/huang1988519/U-And-M
+然后想到为什么google的公司口号是Do not be evil，是因为有太多的信息可以利用，而这个也是自己要做这个项目需要对自己说的，因为有太多的信息，必须做到Do not be evil。
+0x01 需求 为什么会有这样的想法？目前的软件就是定位手表，让小孩子带着，而有一些特殊人群是需要特殊照顾的，比如老人。目前给老人配上手表的也有，但是能解决的问题毕竟有限，而现在手机的用途越来越多，而且功能发挥也越来越大，比如可以在极端的情况下打开摄像头，录音等功能来进行辅助。
+目前大致的思路是手机进行周期性定位信息发送，而服务器进行记录信息。
+实施的思路是在服务器进行登记，登记后通过一个许可码如46331250的号码，进入到下载app页面，输入正确许可码后进行下载。下载后的app需要进行一次简单的验证，也是提供这个许可码，进行服务器信息绑定，此时需要上传一些手机信息如手机唯一标示和服务器上的登记信息匹配。然后基础信息开始采集，如通话记录，短信信息，定位信息。
+此时手机进行定时的周期性工作，就是定期将位置信息发送到服务器。还有一个服务是更新，这里的更新有两个事情要做，第一是app的上传服务地址是否变更，如果变更需要进行变更；第二是是否有调度命令需要执行，如上传短信，通话记录，打开摄像头采集图片，打开录音采集录音文件等，后面有新的思路进行补充(TODO:)。
+服务器端进行寻人的登记，和相关的指令下发。
+用户登记后，进行与客户端进行绑定，定期采取数据信息，并对一天未更新位置的用户进行下线状态处理，此时需要联系登记人员，沟通情况，了解为什么下线？如果客户未进行任何操作，说明客户端存在bug，需要进行处理；如果客户发现未寻到人，此时需要进行将此客户的信息进行关联，提供给客户进行寻找，并采取指令下发等功能，看是否能寻人成功；如果客户取消业务，则进行客户信息变更为取消业务。
+用户在采取寻人功能需求后，将此时的用户信息进行地图标示，使用最新的位置信息进行定位，可以使用百度/腾讯/高德的地图提供商进行对比，有效的帮助用户。也可以对用户的最新位置进行线路规划提供信息。采取下发指令的功能进行收集最新的图片，声音，通话记录，消息记录提供分析。
+我在这里强调一点的是为什么要通话记录和短信信息，这些信息是敏感的，当然也是重要的。在失去联系，这些信息都可以救命，但是这些信息也是致命的，个人的隐私都在这里，所以google说的“Do not be evil”是有原因的。
+通过手机的功能，现在网络的优化，可以进行以下的需求：
+1. 客户端功能 目前好像只能先解决android手机，因为苹果的生态圈导致。
+定位可以通过手机的GPS和网络进行定位，这样准确度高，也能及时反应用户所在的位置。后台服务必须能持续运行反应用户的移动位置，不管用户是否启动运用和关机的情况下，能进行调度执行。 或许，这个是一个关键点。
+[ ] 获取手机的定位信息
+使用手机自带的GPS或者网络进行定位。
+[ ] 定时调度
+应用在第一次运行后，持续在后台运行。
+执行位置信息上传服务器。
+监听服务器下发指令。
+(1) 变更定位信息调度频率；
+(2) 开启摄像头功能；
+(3) 开启录用功能；
+(4) 上传图片信息；
+(5) 上传录音文件；
+(6) 上传通话记录；
+(7) 上传短信信息；
+(8) 上传手机信息；
+(9) 变更服务器接收地址信息
+2. 定时传输信息到服务器 服务必须能及时记录好用户的信息，能进行处理用户的需求。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2020-02-15T16:18:36+08:00">
+    <meta property="article:modified_time" content="2020-02-15T16:18:36+08:00">
+
+
+<title>
+
+
+     FindLostman 
+
+</title>
+<link rel="canonical" href="//localhost:1313/code/findlostman/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="//localhost:1313/css/reset.css?t=2026-03-03%2021%3a08%3a38.951909%20%2b0800%20CST%20m%3d%2b39.599261376">
+    <link rel="stylesheet" href="//localhost:1313/css/pygments.css?t=2026-03-03%2021%3a08%3a38.951909%20%2b0800%20CST%20m%3d%2b39.599261376">
+    <link rel="stylesheet" href="//localhost:1313/css/main.css?t=2026-03-03%2021%3a08%3a38.951909%20%2b0800%20CST%20m%3d%2b39.599261376">
+    
+        <link rel="stylesheet" href="//localhost:1313/css/override.css?t=2026-03-03%2021%3a08%3a38.951909%20%2b0800%20CST%20m%3d%2b39.599261376">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="//localhost:1313/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="//localhost:1313/"><img class="avatar" src="//localhost:1313/img/profile.png" alt="avatar" srcset="//localhost:1313/img/profile.png 1x"></a>
+            
+            <a href="//localhost:1313/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="//localhost:1313/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="//localhost:1313/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="//localhost:1313/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="//localhost:1313/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="//localhost:1313/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="//localhost:1313/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="//localhost:1313/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="//localhost:1313/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="//localhost:1313/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="//localhost:1313/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="//localhost:1313/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="//localhost:1313/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    FindLostman
+
+</div>
+
+            <div class="markdown">
+                <h2 id="寻人">寻人</h2>
+<blockquote>
+<p>我们不是有缘，而是命中注定！
+爱的迫降
+Do not be evil</p>
+</blockquote>
+<h3 id="0x00-前言">0x00 前言</h3>
+<p>最近看《爱的迫降》电视剧的时候，发现男猪脚找到女主角的办法是用了一个定位软件，让我联想到我原来三姑爹的事，虽然三姑爹已经去世，但是他的事情让我觉得作为一个开发者应该有责任去做一些事，所以引发了这个项目的启动，原本我还在想弄蓝牙进行连接聊天的项目，为了解决在特殊时期的情况下，如果进行蓝牙进行通讯，我还取了个项目名称为“私语者”的想法，但是这个找老人或者特殊人群的事情让我感觉更有意义，也需要优先去弄这个事情。或许，也受到老婆的影响吧，去关注需要关注的人，她让我去三爹的敬老院进行做义工的事，让我真的想了许多。</p>
+<p>&ldquo;私语者&quot;的参考文档：</p>
+<p><a href="https://github.com/xiaoyaoyou1212/BluetoothChat">https://github.com/xiaoyaoyou1212/BluetoothChat</a></p>
+<p><a href="https://github.com/CoolkeWang/BleLibTest">https://github.com/CoolkeWang/BleLibTest</a></p>
+<p><a href="https://github.com/xiaoyaoyou1212/XSnow">https://github.com/xiaoyaoyou1212/XSnow</a></p>
+<p><a href="https://github.com/huang1988519/U-And-M">https://github.com/huang1988519/U-And-M</a></p>
+<p>然后想到为什么google的公司口号是Do not be evil，是因为有太多的信息可以利用，而这个也是自己要做这个项目需要对自己说的，因为有太多的信息，必须做到Do not be evil。</p>
+<h3 id="0x01-需求">0x01 需求</h3>
+<p>为什么会有这样的想法？目前的软件就是定位手表，让小孩子带着，而有一些特殊人群是需要特殊照顾的，比如老人。目前给老人配上手表的也有，但是能解决的问题毕竟有限，而现在手机的用途越来越多，而且功能发挥也越来越大，比如可以在极端的情况下打开摄像头，录音等功能来进行辅助。</p>
+<p>目前大致的思路是手机进行周期性定位信息发送，而服务器进行记录信息。</p>
+<p>实施的思路是在服务器进行登记，登记后通过一个许可码如46331250的号码，进入到下载app页面，输入正确许可码后进行下载。下载后的app需要进行一次简单的验证，也是提供这个许可码，进行服务器信息绑定，此时需要上传一些手机信息如手机唯一标示和服务器上的登记信息匹配。然后基础信息开始采集，如通话记录，短信信息，定位信息。</p>
+<p>此时手机进行定时的周期性工作，就是定期将位置信息发送到服务器。还有一个服务是更新，这里的更新有两个事情要做，第一是app的上传服务地址是否变更，如果变更需要进行变更；第二是是否有调度命令需要执行，如上传短信，通话记录，打开摄像头采集图片，打开录音采集录音文件等，后面有新的思路进行补充(TODO:)。</p>
+<p>服务器端进行寻人的登记，和相关的指令下发。</p>
+<p>用户登记后，进行与客户端进行绑定，定期采取数据信息，并对一天未更新位置的用户进行下线状态处理，此时需要联系登记人员，沟通情况，了解为什么下线？如果客户未进行任何操作，说明客户端存在bug，需要进行处理；如果客户发现未寻到人，此时需要进行将此客户的信息进行关联，提供给客户进行寻找，并采取指令下发等功能，看是否能寻人成功；如果客户取消业务，则进行客户信息变更为取消业务。</p>
+<p>用户在采取寻人功能需求后，将此时的用户信息进行地图标示，使用最新的位置信息进行定位，可以使用百度/腾讯/高德的地图提供商进行对比，有效的帮助用户。也可以对用户的最新位置进行线路规划提供信息。采取下发指令的功能进行收集最新的图片，声音，通话记录，消息记录提供分析。</p>
+<blockquote>
+<p>我在这里强调一点的是为什么要通话记录和短信信息，这些信息是敏感的，当然也是重要的。在失去联系，这些信息都可以救命，但是这些信息也是致命的，个人的隐私都在这里，所以google说的“Do not be evil”是有原因的。</p>
+</blockquote>
+<p>通过手机的功能，现在网络的优化，可以进行以下的需求：</p>
+<h4 id="1-客户端功能">1. 客户端功能</h4>
+<blockquote>
+<p>目前好像只能先解决android手机，因为苹果的生态圈导致。</p>
+</blockquote>
+<p>定位可以通过手机的GPS和网络进行定位，这样准确度高，也能及时反应用户所在的位置。<strong>后台服务必须能持续运行反应用户的移动位置，不管用户是否启动运用和关机的情况下，能进行调度执行。</strong> 或许，这个是一个关键点。</p>
+<p>[ ] 获取手机的定位信息</p>
+<p>使用手机自带的GPS或者网络进行定位。</p>
+<p>[ ] 定时调度</p>
+<ul>
+<li>
+<p>应用在第一次运行后，持续在后台运行。</p>
+</li>
+<li>
+<p>执行位置信息上传服务器。</p>
+</li>
+<li>
+<p>监听服务器下发指令。</p>
+</li>
+</ul>
+<p>(1) 变更定位信息调度频率；</p>
+<p>(2) 开启摄像头功能；</p>
+<p>(3) 开启录用功能；</p>
+<p>(4) 上传图片信息；</p>
+<p>(5) 上传录音文件；</p>
+<p>(6) 上传通话记录；</p>
+<p>(7) 上传短信信息；</p>
+<p>(8) 上传手机信息；</p>
+<p>(9) 变更服务器接收地址信息</p>
+<h4 id="2-定时传输信息到服务器">2. 定时传输信息到服务器</h4>
+<p>服务必须能及时记录好用户的信息，能进行处理用户的需求。</p>
+<p>[ ] 接收用户定位信息</p>
+<p>[ ] 接收图片信息</p>
+<p>[ ] 接收录音文件</p>
+<p>[ ] 接收通话记录</p>
+<p>[ ] 接收短信记录</p>
+<p>[ ] 接收手机信息</p>
+<p>[ ] 下发服务器接收地址信息</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+

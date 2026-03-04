@@ -41,7 +41,8 @@ $ scutil --proxy
   RTSPEnable : 0
   SOCKSEnable : 0
 }
-">
+解析scutil输出
+我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/proxyset/">
   <meta property="og:site_name" content="guobingyi">
@@ -51,7 +52,7 @@ $ scutil --proxy
 在终端下访问系统代理 scutil命令管理系统配置参数，通过 –proxy参数来显示系统代理信息。
 未配置代理情况：
 $ scutil --proxy &lt;dictionary&gt; { FTPPassive : 1 HTTPEnable : 0 HTTPSEnable : 0 } 配置代理的情况：
-$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } ">
+$ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 FTPPassive : 1 GopherEnable : 0 HTTPEnable : 1 HTTPPort : 49199 HTTPProxy : localhost HTTPSEnable : 1 HTTPSPort : 49199 HTTPSProxy : localhost ProxyAutoConfigEnable : 0 ProxyAutoDiscoveryEnable : 0 RTSPEnable : 0 SOCKSEnable : 0 } 解析scutil输出 我们可以使用awk解析scutil的输出并提取代理配置。 以下代码片段可以解决问题：">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -85,11 +86,11 @@ $ scutil --proxy &lt;dictionary&gt; { ExcludeSimpleHostnames : 1 FTPEnable : 0 F
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-25%2020%3a00%3a18.427273%20%2b0800%20CST%20m%3d%2b5.278615433">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-25%2020%3a00%3a18.427273%20%2b0800%20CST%20m%3d%2b5.278615433">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-25%2020%3a00%3a18.427273%20%2b0800%20CST%20m%3d%2b5.278615433">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-03-04%2022%3a16%3a12.747404%20%2b0800%20CST%20m%3d%2b13.031755751">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-03-04%2022%3a16%3a12.747404%20%2b0800%20CST%20m%3d%2b13.031755751">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-03-04%2022%3a16%3a12.747404%20%2b0800%20CST%20m%3d%2b13.031755751">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-25%2020%3a00%3a18.427273%20%2b0800%20CST%20m%3d%2b5.278615433">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-03-04%2022%3a16%3a12.747404%20%2b0800%20CST%20m%3d%2b13.031755751">
     
 
 

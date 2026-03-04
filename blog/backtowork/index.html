@@ -22,7 +22,14 @@
 在此之前，因为 VPN 的问题， github.com 也不可以访问了，所以自己的博客也没有继续更新了。但是，问了 trae 后，说把 DNS解析变成 8.8.8.8，噢耶，居然可以了。感谢，不封之恩。
 首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。
 
-其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。">
+其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。
+export MYSQL_PATH=/Volumes/Transcend/Project/MYSQL/mysql-9.3.0-macos15-x86_64/bin
+然后就忘记怎么初次启动修改密码了😅，所以又问了 trae 。
+1.初始化数据目录 （仅首次安装需要执行）：
+# 执行初始化（会生成临时密码）
+./mysqld --initialize --console
+# 记录输出的临时密码，格式如：A temporary password is generated for root@localhost: 5E&gt;gRjoR4UQJ
+2.启动MySQL服务 ：">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/backtowork/">
   <meta property="og:site_name" content="guobingyi">
@@ -35,7 +42,10 @@
 我曾经以为我的代码水平会直线的下降，对未知感到无力感，比如说，最近的一次使用了 brew 进行升级 ffmpeg 软件，由于自己的电脑是 2015年 9 月份购买的，所以已经有许多软件都不进行支持了，可我依然那么喜欢最新的软件版本。brew 已经提示了，可我依然我行我素，导致 ffmpeg 卸载了，重新安装一个插件的时候，居然报错了，而且需要代理才能更新，我的 VPN 已经过期了。无奈啊，lux 下载小朋友们要看的视频需要 ffmpeg 合并视频，老婆有时需要分割视频，这些都不能做了。我思考了许久，正当要考虑购买 VPN 的时候，发现 ffmpeg 居然有编译好的，直接下载下来就可以用。这个想法来自于 nodejs 项目，因为我的电脑已经老到不能使用 brew 进行更新了，所以抱着试试的态度。直接使用安装包下载，安装成功后，我就开始考虑是不是ffmpeg 也可以呢。
 接到云舒的电话，让帮忙看一下主流后端开发框架对比：芋道（魔改牛氓）、若依、Jeesite、JeecgBoot与SmartAdmin。就这样开始了。
 在此之前，因为 VPN 的问题， github.com 也不可以访问了，所以自己的博客也没有继续更新了。但是，问了 trae 后，说把 DNS解析变成 8.8.8.8，噢耶，居然可以了。感谢，不封之恩。
-首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。 其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。">
+首先，既然是 java 项目，那么就下载 eclipse，像 Jetbrain 这样的IDE，电脑使用起来卡顿，所以就放弃了。eclipse 是走入 Java 殿堂的首款 IDE。工作许多年来，一直都在用，唯独有偶，熟悉。 其次，都是 mysql 的项目，已经不能在使用 sqlite 了。下载了mysql-9.3.0-macos15-x86_64.tar.gz的版本，加入了系统变量。
+export MYSQL_PATH=/Volumes/Transcend/Project/MYSQL/mysql-9.3.0-macos15-x86_64/bin 然后就忘记怎么初次启动修改密码了😅，所以又问了 trae 。
+1.初始化数据目录 （仅首次安装需要执行）：
+# 执行初始化（会生成临时密码） ./mysqld --initialize --console # 记录输出的临时密码，格式如：A temporary password is generated for root@localhost: 5E&gt;gRjoR4UQJ 2.启动MySQL服务 ：">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -69,11 +79,11 @@
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-25%2020%3a00%3a15.001086%20%2b0800%20CST%20m%3d%2b1.852531085">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-25%2020%3a00%3a15.001086%20%2b0800%20CST%20m%3d%2b1.852531085">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-25%2020%3a00%3a15.001086%20%2b0800%20CST%20m%3d%2b1.852531085">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-03-04%2022%3a16%3a01.419476%20%2b0800%20CST%20m%3d%2b1.703766918">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-03-04%2022%3a16%3a01.419476%20%2b0800%20CST%20m%3d%2b1.703766918">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-03-04%2022%3a16%3a01.419476%20%2b0800%20CST%20m%3d%2b1.703766918">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-25%2020%3a00%3a15.001086%20%2b0800%20CST%20m%3d%2b1.852531085">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-03-04%2022%3a16%3a01.419476%20%2b0800%20CST%20m%3d%2b1.703766918">
     
 
 

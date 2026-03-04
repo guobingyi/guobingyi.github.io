@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://guobingyi.github.io/blog/2026year/</loc>
+    <lastmod>2026-03-03T22:21:35+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/blog/</loc>
+    <lastmod>2026-03-03T22:21:35+08:00</lastmod>
+  </url><url>
     <loc>https://guobingyi.github.io/</loc>
-    <lastmod>2025-07-25T19:33:23+08:00</lastmod>
+    <lastmod>2026-03-03T22:21:35+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/movie/</loc>
     <lastmod>2025-07-25T19:33:23+08:00</lastmod>
@@ -24,9 +30,6 @@
     <lastmod>2025-06-05T21:45:22+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/backtowork/</loc>
-    <lastmod>2025-06-03T17:21:13+08:00</lastmod>
-  </url><url>
-    <loc>https://guobingyi.github.io/blog/</loc>
     <lastmod>2025-06-03T17:21:13+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/new_live/</loc>
@@ -281,9 +284,6 @@
     <loc>https://guobingyi.github.io/movie/thebalkline/</loc>
     <lastmod>2019-07-18T10:06:12+08:00</lastmod>
   </url><url>
-    <loc>https://guobingyi.github.io/life/</loc>
-    <lastmod>2019-06-28T17:12:51+08:00</lastmod>
-  </url><url>
     <loc>https://guobingyi.github.io/blog/gitbook/</loc>
     <lastmod>2019-03-06T10:29:40+08:00</lastmod>
   </url><url>
@@ -327,6 +327,9 @@
     <lastmod>2018-10-23T10:52:14+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/life/12year/</loc>
+    <lastmod>2018-10-05T16:05:26+08:00</lastmod>
+  </url><url>
+    <loc>https://guobingyi.github.io/life/</loc>
     <lastmod>2018-10-05T16:05:26+08:00</lastmod>
   </url><url>
     <loc>https://guobingyi.github.io/blog/upgrade/</loc>

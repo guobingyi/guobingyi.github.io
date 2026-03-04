@@ -31,6 +31,55 @@ if len(barresult) &gt; 0 :
     print(&#34;find barcode:&#34; &#43; barresult[0].data.decode())
 else:
     print(&#34;can&#39;t find barcode!&#34;)
+Choice2：  C# 获取条码信息
+1. NuGet 安装 BarCode
+2. Test Code
+using IronBarCode;
+var resultFromFile = BarcodeReader.Read(@&#34;book1.jpg&#34;);
+foreach(var PageReslut in resultFromFile)
+{
+    Console.WriteLine(&#34;find barcode is:&#34; &#43; PageReslut.Text);
+}
+Choice3：安卓使用相机读取条码
+1. 在build.gradle文件中添加ZXing库的依赖
+dependencies {
+    implementation &#39;com.journeyapps:zxing-android-embedded:4.1.0&#39;
+}
+2.Test Code
+package com.guobingyi.barcodedemo
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import com.google.zxing.integration.android.IntentIntegrator
+import com.google.zxing.integration.android.IntentResult
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val scanBtn = findViewById&lt;Button&gt;(R.id.scanBarCodeBtn)
+        scanBtn.setOnClickListener( View.OnClickListener {
+            val scanner = IntentIntegrator(this)
+            scanner.initiateScan()
+        })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val result: IntentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+        if (result.contents != null) {
+            // 扫描成功，可以在这里处理结果
+            val barcode = result.contents
+            val barCodeTxt = findViewById&lt;TextView&gt;(R.id.barCodeTxt)
+            barCodeTxt.setText(barcode)
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+}
 ">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/howtousebarcode/">
@@ -40,7 +89,7 @@ else:
 服务器端使用 C# 和 Python 来使用验证上传的图片。
 Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用起来比较方便。
 1. 安装 zbar brew install zbar 依赖性：Fetching dependencies for zbar: jbig2dec, libidn, ghostscript, libde265, shared-mime-info, libheif, liblqr, libomp, libraw and imagemagick
-2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!&#34;) ">
+2. 安装 pyzbar pip install pyzbar 3. 安装 Pillow pip install pillow 4. Test Code from pyzbar.pyzbar import decode from PIL import Image bar_result = decode(Image.open(&#39;book1.jpg&#39;)) if len(barresult) &gt; 0 : print(&#34;find barcode:&#34; &#43; barresult[0].data.decode()) else: print(&#34;can&#39;t find barcode!&#34;) Choice2： C# 获取条码信息 1. NuGet 安装 BarCode 2. Test Code using IronBarCode; var resultFromFile = BarcodeReader.Read(@&#34;book1.jpg&#34;); foreach(var PageReslut in resultFromFile) { Console.WriteLine(&#34;find barcode is:&#34; &#43; PageReslut.Text); } Choice3：安卓使用相机读取条码 1. 在build.gradle文件中添加ZXing库的依赖 dependencies { implementation &#39;com.journeyapps:zxing-android-embedded:4.1.0&#39; } 2.Test Code package com.guobingyi.barcodedemo import android.content.Intent import androidx.appcompat.app.AppCompatActivity import android.os.Bundle import android.view.View import android.widget.Button import android.widget.TextView import com.google.zxing.integration.android.IntentIntegrator import com.google.zxing.integration.android.IntentResult class MainActivity : AppCompatActivity() { override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) setContentView(R.layout.activity_main) val scanBtn = findViewById&lt;Button&gt;(R.id.scanBarCodeBtn) scanBtn.setOnClickListener( View.OnClickListener { val scanner = IntentIntegrator(this) scanner.initiateScan() }) } override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) { val result: IntentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data) if (result.contents != null) { // 扫描成功，可以在这里处理结果 val barcode = result.contents val barCodeTxt = findViewById&lt;TextView&gt;(R.id.barCodeTxt) barCodeTxt.setText(barcode) } else { super.onActivityResult(requestCode, resultCode, data) } } }">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="code">
@@ -74,11 +123,11 @@ Choice1：Python 获取条码信息 相对而言 Python 的库比较多，使用
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-25%2020%3a00%3a17.942235%20%2b0800%20CST%20m%3d%2b4.793591519">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-25%2020%3a00%3a17.942235%20%2b0800%20CST%20m%3d%2b4.793591519">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-25%2020%3a00%3a17.942235%20%2b0800%20CST%20m%3d%2b4.793591519">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-03-04%2022%3a16%3a12.735658%20%2b0800%20CST%20m%3d%2b13.020009418">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-03-04%2022%3a16%3a12.735658%20%2b0800%20CST%20m%3d%2b13.020009418">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-03-04%2022%3a16%3a12.735658%20%2b0800%20CST%20m%3d%2b13.020009418">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-25%2020%3a00%3a17.942235%20%2b0800%20CST%20m%3d%2b4.793591519">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-03-04%2022%3a16%3a12.735658%20%2b0800%20CST%20m%3d%2b13.020009418">
     
 
 

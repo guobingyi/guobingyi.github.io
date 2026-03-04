@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="重装系统
+
+明知山有虎，偏向虎山行。
+
+
+已经好久没有装系统了，特别是Windows系统，安装一次怕一次。为什么呢？并不是说Windows系统不好，而是，要安装的机子太老，需要注意的地方特别多。就拿最近一次和朋友安装系统一样，他的电脑是2010年的，并且安装的时候发现主板有问题了，导致以失败告终！从那以后，我想我不在去做这样的事情了～～
+但是，鼓吹的苹果系统也有各种问题，这次就遇上了。
+大姐拿来了小马的Mac Air笔记本，2017年的。凭借自己的经验，直接使用Command &#43; R安装系统。前提是大姐让我帮她安装软件，开机后一个图标加问号，所以只能装机。而自己的电脑也装过一次，就是使用苹果的服务安装的，所以非常信赖苹果，如同原来的感受一样。Command &#43; R一个命令可以搞定的。发现安装不了，报2013f错误。那么就使用了Command &#43; Option &#43; R来弄，发现到安装的时候报安装信息被破坏，来会弄了好几次，因为看到了有网友说他安装了好几次成功了，说重启路由等等。
+后来，终于忍不住用安装盘来搞定了。苹果官网的解决方案。
+简单来说的步骤如下：
+
+
+一个USB内存大于14G，用苹果自带的硬盘工具格式化成Mac OS 扩展格式。
+
+
+安装最新的操作系统，使用App Store下载。
+
+
+使用命令创建启动盘
+
+
+sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+
+
+开机时按住Option键，进入到引导盘。
+
+
+Done.
+
+
+就这样成功了！
+结论就是，尝试不通的方法，不行就睡一觉再说。
+结果这次也发现苹果的产品也不那么人性化的，对于新的产品支持会比较好，但是老产品就得自己摸索了。">
+
+<meta property="og:url" content="//localhost:1313/blog/reinstallos/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Reinstallos">
+  <meta property="og:description" content="重装系统 明知山有虎，偏向虎山行。
+已经好久没有装系统了，特别是Windows系统，安装一次怕一次。为什么呢？并不是说Windows系统不好，而是，要安装的机子太老，需要注意的地方特别多。就拿最近一次和朋友安装系统一样，他的电脑是2010年的，并且安装的时候发现主板有问题了，导致以失败告终！从那以后，我想我不在去做这样的事情了～～
+但是，鼓吹的苹果系统也有各种问题，这次就遇上了。
+大姐拿来了小马的Mac Air笔记本，2017年的。凭借自己的经验，直接使用Command &#43; R安装系统。前提是大姐让我帮她安装软件，开机后一个图标加问号，所以只能装机。而自己的电脑也装过一次，就是使用苹果的服务安装的，所以非常信赖苹果，如同原来的感受一样。Command &#43; R一个命令可以搞定的。发现安装不了，报2013f错误。那么就使用了Command &#43; Option &#43; R来弄，发现到安装的时候报安装信息被破坏，来会弄了好几次，因为看到了有网友说他安装了好几次成功了，说重启路由等等。
+后来，终于忍不住用安装盘来搞定了。苹果官网的解决方案。
+简单来说的步骤如下：
+一个USB内存大于14G，用苹果自带的硬盘工具格式化成Mac OS 扩展格式。
+安装最新的操作系统，使用App Store下载。
+使用命令创建启动盘
+sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume 开机时按住Option键，进入到引导盘。
+Done.
+就这样成功了！
+结论就是，尝试不通的方法，不行就睡一觉再说。
+结果这次也发现苹果的产品也不那么人性化的，对于新的产品支持会比较好，但是老产品就得自己摸索了。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2022-10-09T21:04:42+08:00">
+    <meta property="article:modified_time" content="2022-10-09T21:04:42+08:00">
+
+
+<title>
+
+
+     Reinstallos 
+
+</title>
+<link rel="canonical" href="//localhost:1313/blog/reinstallos/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="//localhost:1313/css/reset.css?t=2026-03-03%2021%3a08%3a29.065098%20%2b0800%20CST%20m%3d%2b29.712422834">
+    <link rel="stylesheet" href="//localhost:1313/css/pygments.css?t=2026-03-03%2021%3a08%3a29.065098%20%2b0800%20CST%20m%3d%2b29.712422834">
+    <link rel="stylesheet" href="//localhost:1313/css/main.css?t=2026-03-03%2021%3a08%3a29.065098%20%2b0800%20CST%20m%3d%2b29.712422834">
+    
+        <link rel="stylesheet" href="//localhost:1313/css/override.css?t=2026-03-03%2021%3a08%3a29.065098%20%2b0800%20CST%20m%3d%2b29.712422834">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="//localhost:1313/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="//localhost:1313/"><img class="avatar" src="//localhost:1313/img/profile.png" alt="avatar" srcset="//localhost:1313/img/profile.png 1x"></a>
+            
+            <a href="//localhost:1313/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="//localhost:1313/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="//localhost:1313/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="//localhost:1313/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="//localhost:1313/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="//localhost:1313/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="//localhost:1313/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="//localhost:1313/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="//localhost:1313/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="//localhost:1313/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="//localhost:1313/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="//localhost:1313/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="//localhost:1313/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Reinstallos
+
+</div>
+
+                    <div class="initials"><a href="//localhost:1313/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sun Oct 9 2022 21:04:42 CST'>Oct 9, 2022</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <h2 id="重装系统">重装系统</h2>
+<blockquote>
+<p>明知山有虎，偏向虎山行。</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>已经好久没有装系统了，特别是Windows系统，安装一次怕一次。为什么呢？并不是说Windows系统不好，而是，要安装的机子太老，需要注意的地方特别多。就拿最近一次和朋友安装系统一样，他的电脑是2010年的，并且安装的时候发现主板有问题了，导致以失败告终！从那以后，我想我不在去做这样的事情了～～</p>
+<p>但是，鼓吹的苹果系统也有各种问题，这次就遇上了。</p>
+<p>大姐拿来了小马的Mac Air笔记本，2017年的。凭借自己的经验，直接使用Command + R安装系统。前提是大姐让我帮她安装软件，开机后一个图标加问号，所以只能装机。而自己的电脑也装过一次，就是使用苹果的服务安装的，所以非常信赖苹果，如同原来的感受一样。Command + R一个命令可以搞定的。发现安装不了，报2013f错误。那么就使用了Command + Option + R来弄，发现到安装的时候报安装信息被破坏，来会弄了好几次，因为看到了有网友说他安装了好几次成功了，说重启路由等等。</p>
+<p>后来，终于忍不住用安装盘来搞定了。<a href="https://support.apple.com/zh-cn/HT201372">苹果官网的解决方案</a>。</p>
+<p>简单来说的步骤如下：</p>
+<ol>
+<li>
+<p>一个USB内存大于14G，用苹果自带的硬盘工具格式化成Mac OS 扩展格式。</p>
+</li>
+<li>
+<p>安装最新的操作系统，使用App Store下载。</p>
+</li>
+<li>
+<p>使用命令创建启动盘</p>
+</li>
+</ol>
+<pre tabindex="0"><code>sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+</code></pre><ol start="4">
+<li>
+<p>开机时按住Option键，进入到引导盘。</p>
+</li>
+<li>
+<p>Done.</p>
+</li>
+</ol>
+<p>就这样成功了！</p>
+<p>结论就是，尝试不通的方法，不行就睡一觉再说。</p>
+<p>结果这次也发现苹果的产品也不那么人性化的，对于新的产品支持会比较好，但是老产品就得自己摸索了。</p>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="//localhost:1313/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
+

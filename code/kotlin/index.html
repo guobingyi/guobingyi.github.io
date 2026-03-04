@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Arthur Dent">
+<meta name="description" content="Kotlin
+
+我选择对你严厉，而不希望你在生活中痛苦。
+
+1. 基础语法
+1.1 if-else的常规形式：
+if (condition-is-true) {
+
+execute-this-code
+
+} else if (condition-is-true) {
+
+execute-this-code
+
+} else {
+
+execute-this-code
+
+}
+1.2 when语句
+when (variable) {
+
+matches-value -&gt; execute-this-code
+
+matches-value -&gt; execute-this-code
+
+...
+
+}
+1.3 数组
+
+可读列表
+
+val numbers: List&lt;Int&gt; = listOf(1, 2, 3, 4, 5, 6)
+or easy
+val numbers = listOf(1, 2, 3, 4, 5, 6)
+请注意，在字符串中添加 $，表示后面的内容是一个表达式，该表达式将被求值，然后再将结果添加到此字符串中。
+代码还可以编写为 println(&ldquo;List: &quot; &#43; numbers)。
+使用 numbers.size 属性检索列表的大小。
+列表中位于索引 0 处的首个元素。可以使用所需的索引调用 get() 函数（如 numbers.get(0)）；或者，也可以使用简写语法，用方括号将索引括起来（如 numbers[0].）">
+
+<meta property="og:url" content="//localhost:1313/code/kotlin/">
+  <meta property="og:site_name" content="guobingyi">
+  <meta property="og:title" content="Kotlin">
+  <meta property="og:description" content="Kotlin 我选择对你严厉，而不希望你在生活中痛苦。
+1. 基础语法 1.1 if-else的常规形式： if (condition-is-true) { execute-this-code } else if (condition-is-true) { execute-this-code } else { execute-this-code } 1.2 when语句 when (variable) { matches-value -&gt; execute-this-code matches-value -&gt; execute-this-code ... } 1.3 数组 可读列表 val numbers: List&lt;Int&gt; = listOf(1, 2, 3, 4, 5, 6) or easy
+val numbers = listOf(1, 2, 3, 4, 5, 6) 请注意，在字符串中添加 $，表示后面的内容是一个表达式，该表达式将被求值，然后再将结果添加到此字符串中。 代码还可以编写为 println(“List: &#34; &#43; numbers)。
+使用 numbers.size 属性检索列表的大小。
+列表中位于索引 0 处的首个元素。可以使用所需的索引调用 get() 函数（如 numbers.get(0)）；或者，也可以使用简写语法，用方括号将索引括起来（如 numbers[0].）">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2021-07-02T17:27:01+08:00">
+    <meta property="article:modified_time" content="2021-07-02T17:27:01+08:00">
+
+
+<title>
+
+
+     Kotlin 
+
+</title>
+<link rel="canonical" href="//localhost:1313/code/kotlin/">
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="//localhost:1313/css/reset.css?t=2026-03-03%2021%3a08%3a40.645697%20%2b0800%20CST%20m%3d%2b41.293053251">
+    <link rel="stylesheet" href="//localhost:1313/css/pygments.css?t=2026-03-03%2021%3a08%3a40.645697%20%2b0800%20CST%20m%3d%2b41.293053251">
+    <link rel="stylesheet" href="//localhost:1313/css/main.css?t=2026-03-03%2021%3a08%3a40.645697%20%2b0800%20CST%20m%3d%2b41.293053251">
+    
+        <link rel="stylesheet" href="//localhost:1313/css/override.css?t=2026-03-03%2021%3a08%3a40.645697%20%2b0800%20CST%20m%3d%2b41.293053251">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="//localhost:1313/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="zh-cn">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="//localhost:1313/"><img class="avatar" src="//localhost:1313/img/profile.png" alt="avatar" srcset="//localhost:1313/img/profile.png 1x"></a>
+            
+            <a href="//localhost:1313/"><div class="name">Arthur Dent</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        
+                        <li class="nav-blog"><a href="//localhost:1313/blog/"><span>Blog</span></a></li>
+                    
+                        
+                        <li class="nav-movie"><a href="//localhost:1313/movie/"><span>Movie</span></a></li>
+                    
+                        
+                        <li class="nav-code"><a href="//localhost:1313/code/"><span>Code</span></a></li>
+                    
+                        
+                        <li class="nav-life"><a href="//localhost:1313/life/"><span>Life</span></a></li>
+                    
+                        
+                        <li class="nav-opensource"><a href="//localhost:1313/opensource/"><span>OpenSource</span></a></li>
+                    
+                        
+                        <li class="nav-emacs"><a href="//localhost:1313/emacs/"><span>Emacs</span></a></li>
+                    
+                        
+                        <li class="nav-mac"><a href="//localhost:1313/mac/"><span>Mac</span></a></li>
+                    
+                        
+                        <li class="nav-book"><a href="//localhost:1313/book/"><span>Book</span></a></li>
+                    
+                        
+                        <li class="nav-100day"><a href="//localhost:1313/100day/"><span>100day</span></a></li>
+                    
+                        
+                        <li class="nav-about"><a href="//localhost:1313/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/guobingyi" target="_blank" rel="noopener"><img class="icon" src="//localhost:1313/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:likemi7@126.com"><img class="icon" src="//localhost:1313/img/email.svg" alt="email" /></a>
+        
+
+        
+        
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Kotlin
+
+</div>
+
+            <div class="markdown">
+                <h2 id="kotlin">Kotlin</h2>
+<blockquote>
+<p>我选择对你严厉，而不希望你在生活中痛苦。</p>
+</blockquote>
+<h3 id="1-基础语法">1. 基础语法</h3>
+<h4 id="11-if-else的常规形式">1.1 if-else的常规形式：</h4>
+<pre tabindex="0"><code>if (condition-is-true) {
+
+execute-this-code
+
+} else if (condition-is-true) {
+
+execute-this-code
+
+} else {
+
+execute-this-code
+
+}
+</code></pre><h4 id="12-when语句">1.2 when语句</h4>
+<pre tabindex="0"><code>when (variable) {
+
+matches-value -&gt; execute-this-code
+
+matches-value -&gt; execute-this-code
+
+...
+
+}
+</code></pre><h4 id="13-数组">1.3 数组</h4>
+<ul>
+<li>可读列表</li>
+</ul>
+<pre tabindex="0"><code>val numbers: List&lt;Int&gt; = listOf(1, 2, 3, 4, 5, 6)
+</code></pre><p>or easy</p>
+<pre tabindex="0"><code>val numbers = listOf(1, 2, 3, 4, 5, 6)
+</code></pre><p>请注意，在字符串中添加 $，表示后面的内容是一个表达式，该表达式将被求值，然后再将结果添加到此字符串中。
+代码还可以编写为 println(&ldquo;List: &quot; + numbers)。</p>
+<p>使用 numbers.size 属性检索列表的大小。</p>
+<p>列表中位于索引 0 处的首个元素。可以使用所需的索引调用 get() 函数（如 numbers.get(0)）；或者，也可以使用简写语法，用方括号将索引括起来（如 numbers[0].）</p>
+<p>Kotlin 还支持对列表执行 first() 和 last() 操作。</p>
+<pre tabindex="0"><code>println(&#34;First: ${numbers.first()}&#34;)
+println(&#34;Last: ${numbers.last()}&#34;)
+</code></pre><p>另一个实用的列表操作是 contains() 方法，它可以查明指定的元素是否在列表中。</p>
+<p><strong>列表是只读的</strong></p>
+<p>使用 sorted() 函数返回按照升序排列的 List.</p>
+<p>无法更改只读列表,reversed() 和 sorted() 就是其中的两个操作。reversed() 函数会返回元素按照倒序排列的新列表；而 sorted() 函数则会返回元素按照升序排列的新列表。</p>
+<ul>
+<li>可变列表</li>
+</ul>
+<p>可变列表的类型为MutableList,通过调用 mutableListOf() 来创建此类列表。</p>
+<pre tabindex="0"><code>val entrees = mutableListOf&lt;String&gt;()
+</code></pre><p>或者</p>
+<pre tabindex="0"><code>val entrees: MutableList&lt;String&gt; = mutableListOf()
+</code></pre><p>向列表中添加元素</p>
+<pre tabindex="0"><code>entrees.add(&#34;noodles&#34;)
+</code></pre><p>使用 addAll() 一次添加多个元素，并将其传递到列表中。</p>
+<pre tabindex="0"><code>val moreItems = listOf(&#34;ravioli&#34;, &#34;lasagna&#34;, &#34;fettuccine&#34;)
+
+entrees.addAll(moreItems)
+</code></pre><p>从列表中移除元素</p>
+<pre tabindex="0"><code>entrees.remove(&#34;spaghetti&#34;)
+</code></pre><p>使用 removeAt() 移除位于索引 0 处的项</p>
+<pre tabindex="0"><code>entrees.removeAt(0)
+</code></pre><p>如果要清除整个列表，您可以调用 clear()。</p>
+<pre tabindex="0"><code>entrees.clear()
+</code></pre><p>Kotlin 提供了 isEmpty() 函数来检查列表是否为空。</p>
+<pre tabindex="0"><code>println(&#34;Empty? ${entrees.isEmpty()}&#34;)
+</code></pre><pre tabindex="0"><code>Empty? true
+</code></pre><p>完整示例代码：</p>
+<pre tabindex="0"><code>fun main() {
+    val entrees = mutableListOf&lt;String&gt;()
+    println(&#34;Entrees: $entrees&#34;)
+
+    // Add individual items using add()
+    println(&#34;Add noodles: ${entrees.add(&#34;noodles&#34;)}&#34;)
+    println(&#34;Entrees: $entrees&#34;)
+    println(&#34;Add spaghetti: ${entrees.add(&#34;spaghetti&#34;)}&#34;)
+    println(&#34;Entrees: $entrees&#34;)
+
+    // Add a list of items using addAll()
+    val moreItems = listOf(&#34;ravioli&#34;, &#34;lasagna&#34;, &#34;fettuccine&#34;)
+    println(&#34;Add list: ${entrees.addAll(moreItems)}&#34;)
+    println(&#34;Entrees: $entrees&#34;)
+
+    // Remove an item using remove()
+    println(&#34;Remove spaghetti: ${entrees.remove(&#34;spaghetti&#34;)}&#34;)
+    println(&#34;Entrees: $entrees&#34;)
+    println(&#34;Remove item that doesn&#39;t exist: ${entrees.remove(&#34;rice&#34;)}&#34;)
+    println(&#34;Entrees: $entrees&#34;)
+
+    // Remove an item using removeAt() with an index
+    println(&#34;Remove first element: ${entrees.removeAt(0)}&#34;)
+    println(&#34;Entrees: $entrees&#34;)
+
+    // Clear out the list
+    entrees.clear()
+    println(&#34;Entrees: $entrees&#34;)
+
+    // Check if the list is empty
+    println(&#34;Empty? ${entrees.isEmpty()}&#34;)
+}
+</code></pre><h4 id="14-循环">1.4 循环</h4>
+<ul>
+<li>while循环</li>
+</ul>
+<pre tabindex="0"><code>val guestsPerFamily = listOf(2, 4, 1, 3)
+var totalGuests = 0
+var index = 0
+while (index &lt; guestsPerFamily.size) {
+    totalGuests += guestsPerFamily[index]
+    index++
+}
+println(&#34;Total Guest Count: $totalGuests&#34;)
+</code></pre><ul>
+<li>for 循环</li>
+</ul>
+<pre tabindex="0"><code>for (item in list) print(item) // Iterate over items in a list
+
+for (item in &#39;b&#39;..&#39;g&#39;) print(item) // Range of characters in an alphabet
+
+for (item in 1..5) print(item) // Range of numbers
+
+for (item in 5 downTo 1) print(item) // Going backward
+
+for (item in 3..6 step 2) print(item) // Prints: 35
+</code></pre><h4 id="15-集合">1.5 集合</h4>
+<p>集合是一组相关项，例如一系列字词或一组员工记录。集合中包含的项可以有序也可以无序，可以具有唯一性也可以不具唯一性。已经学过一种类型的集合，那就是列表。列表项是有序的，但不必是唯一的。</p>
+<p>与列表一样，Kotlin 也会区分可变集合和不可变集合。Kotlin 提供了许多函数，用于添加或删除项以及查看和操控集合。</p>
+<ul>
+<li>创建列表</li>
+</ul>
+<pre tabindex="0"><code>val numbers = listOf(0, 3, 8, 4, 0, 5, 5, 8, 9, 2)
+</code></pre><pre tabindex="0"><code>val setOfNumbers = numbers.toSet()
+</code></pre><p>即使一个集可变一个集不可变，而且两个集中的项顺序不同，这两个集也被视为相等，因为它们包含完全相同的一组项。</p>
+<pre tabindex="0"><code>[1, 2, 3] == [3, 2, 1]: true
+</code></pre><p>可能会对集执行的一项主要操作是使用 contains() 函数检查某个特定项是否包含在集中。</p>
+<p>以下这行代码添加到程序中，用于输出 7 是否包含在集中：</p>
+<pre tabindex="0"><code>println(&#34;contains 7: ${setOfNumbers.contains(7)}&#34;)
+</code></pre><p>所有代码如下：</p>
+<pre tabindex="0"><code>fun main() {
+    val numbers = listOf(0, 3, 8, 4, 0, 5, 5, 8, 9, 2)
+    println(&#34;list:   ${numbers}&#34;)
+    println(&#34;sorted: ${numbers.sorted()}&#34;)
+    val setOfNumbers = numbers.toSet()
+    println(&#34;set:    ${setOfNumbers}&#34;)
+    val set1 = setOf(1,2,3)
+    val set2 = mutableSetOf(3,2,1)
+    println(&#34;$set1 == $set2: ${set1 == set2}&#34;)
+    println(&#34;contains 7: ${setOfNumbers.contains(7)}&#34;)
+}
+</code></pre><p>与数学中的集一样，在 Kotlin 中，也可以使用 intersect() 或 union() 执行求两个集的交集 (∩) 或并集 (∪) 等运算。</p>
+<ul>
+<li>映射</li>
+</ul>
+<pre tabindex="0"><code>fun main() {
+    val peopleAges = mutableMapOf&lt;String, Int&gt;(
+        &#34;Fred&#34; to 30,
+        &#34;Ann&#34; to 23
+    )
+    peopleAges.put(&#34;Barbara&#34;, 42)
+    peopleAges[&#34;Joe&#34;] = 51
+    println(peopleAges)
+}
+</code></pre><ul>
+<li>使用集合</li>
+</ul>
+<p>虽然不同类型的集合具有不同的特性，但它们有许多相同的行为。如果是可变集合，那么可以添加或移除项。可以枚举所有项、查找特定项，有时还可以将一种类型的集合转换为另一种类型。先前就进行过这样的转换，使用 toSet() 将 List 转换为 Set。以下是使用集合时可以用到的一些实用函数。</p>
+<ol>
+<li>forEach</li>
+</ol>
+<pre tabindex="0"><code>peopleAges.forEach { print(&#34;${it.key} is ${it.value}, &#34;) }
+</code></pre><p>它与 for 循环类似，但更简洁一点。forEach 使用特殊标识符 it，而不是由您为当前项指定变量。</p>
+<p>请注意，调用 forEach() 方法时不需要添加圆括号，只需将代码传入花括号 {} 即可。</p>
+<ol start="2">
+<li>map</li>
+</ol>
+<p>map() 函数（不应与上面的映射或字典集合混淆）对集合中的每个项应用转换。</p>
+<p>(1) 在程序中，将 forEach 语句替换为以下这行代码：</p>
+<pre tabindex="0"><code>println(peopleAges.map { &#34;${it.key} is ${it.value}&#34; }.joinToString(&#34;, &#34;) )
+</code></pre><ol start="3">
+<li>filter</li>
+</ol>
+<p>集合的另一项常见操作是查找符合特定条件的项。filter() 函数根据表达式返回集合中的匹配项。</p>
+<pre tabindex="0"><code>val filteredNames = peopleAges.filter { it.key.length &lt; 4 }
+println(filteredNames)
+</code></pre><ol start="4">
+<li>lambda</li>
+</ol>
+<p>Kotlin 以有效的方式与函数交互。您可以将函数存储在变量和类中，将函数作为参数传递，甚至可以返回函数。您可以像处理 Int 或 String 等其他类型的变量那样处理它们。</p>
+<p>(1)函数类型</p>
+<p>函数类型示例：(Int) -&gt; Int</p>
+<pre tabindex="0"><code>fun main() {
+    val triple: (Int) -&gt; Int = { a: Int -&gt; a * 3 }
+    println(triple(5))
+}
+</code></pre><p>(2)高阶函数</p>
+<p>这个概念就是指将一个函数（在本例中为 lambda）传递给另一个函数，或从另一个函数返回一个函数。</p>
+<pre tabindex="0"><code>println(peopleNames.sortedWith { str1: String, str2: String -&gt; str1.length - str2.length })
+</code></pre><p>请注意，lambda 中的最后一个表达式是返回值。</p>
+<p>在本例中，它将返回第一个字符串的长度与第二个字符串的长度之间的差（是一个 Int）。这与排序需要返回的值一致：如果 str1 的长度小于 str2，将返回一个小于 0 的值。如果 str1 和 str2 长度相同，将返回 0。如果 str1 的长度大于 str2，将返回一个大于 0 的值。通过一系列比较（一次比较两个 Strings），sortedWith() 函数会输出一个列表，其中的名称按长度递增的顺序排列。</p>
+<h3 id="2-使用技巧">2. 使用技巧</h3>
+<h4 id="21-使用一个全局变量">2.1 使用一个全局变量</h4>
+<pre tabindex="0"><code>private lateinit var binding: ActivityMainBinding
+</code></pre><p>在onCreate的时候进行赋值</p>
+<pre tabindex="0"><code> binding = ActivityMainBinding.inflate(layoutInflater)
+ setContentView(binding.root)
+
+ binding.calculateButton.setOnClickListener { calculateTip() }
+</code></pre><p>这样，所有的一个Activity都可以进行使用。</p>
+<h4 id="22-使用numberformat">2.2 使用NumberFormat</h4>
+<p>使用 NumberFormat.getCurrencyInstance() 获取用于将数字格式设置为货币的格式设置工具。</p>
+<pre tabindex="0"><code> val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+</code></pre><h4 id="23-使用-s-等字符串参数来创建动态字符串">2.3 使用 %s 等字符串参数来创建动态字符串</h4>
+<pre tabindex="0"><code>binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+</code></pre><p>修改strings.xml</p>
+<pre tabindex="0"><code>&lt;string name=&#34;tip_amount&#34;&gt;Tip Amount: %s&lt;/string&gt;
+</code></pre><p>修改 activity_main.xml</p>
+<pre tabindex="0"><code>...
+
+&lt;TextView
+   android:id=&#34;@+id/tip_result&#34;
+   ...
+   tools:text=&#34;Tip Amount: $10&#34; /&gt;
+
+...
+</code></pre><p>修改应用模块的 build.gradle</p>
+<pre tabindex="0"><code>android {
+    ...
+
+    buildFeatures {
+        viewBinding = true
+    }
+    ...
+}
+</code></pre><h4 id="24-系统深色背景">2.4 系统深色背景</h4>
+<p>colors.xml</p>
+<pre tabindex="0"><code>&lt;color name=&#34;blue_dark&#34;&gt;#005B9F&lt;/color&gt;
+&lt;color name=&#34;blue_light&#34;&gt;#81D4FA&lt;/color&gt;
+</code></pre><p>themes.xml</p>
+<pre tabindex="0"><code>&lt;item name=&#34;android:statusBarColor&#34; tools:targetApi=&#34;l&#34;&gt;?attr/colorPrimaryVariant&lt;/item&gt;
+</code></pre><h4 id="25-样式和主题">2.5 样式和主题</h4>
+<p>修改 themes.xml 文件</p>
+<pre tabindex="0"><code>&lt;item name=&#34;textInputStyle&#34;&gt;@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox&lt;/item&gt;
+&lt;item name=&#34;radioButtonStyle&#34;&gt;@style/Widget.TipTime.CompoundButton.RadioButton&lt;/item&gt;
+&lt;item name=&#34;switchStyle&#34;&gt;@style/Widget.TipTime.CompoundButton.Switch&lt;/item&gt;
+</code></pre><h4 id="26-键盘监听事件">2.6 键盘监听事件</h4>
+<p>MainActivity.kt</p>
+<pre tabindex="0"><code>private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+   if (keyCode == KeyEvent.KEYCODE_ENTER) {
+       // Hide the keyboard
+       val inputMethodManager =
+           getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+       inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+       return true
+   }
+   return false
+}
+</code></pre><p>handleKeyEvent() 是一个私有辅助函数，用于在 keyCode 输入参数等于 KeyEvent.KEYCODE_ENTER 时隐藏屏幕键盘。InputMethodManager 用于控制是显示还是隐藏软键盘，并且允许用户选择显示哪一个软键盘。如果键事件处理成功，此方法会返回 true，否则返回 false。</p>
+<p>MainActivity.kt</p>
+<pre tabindex="0"><code>override fun onCreate(savedInstanceState: Bundle?) {
+   ...
+
+   setContentView(binding.root)
+
+   binding.calculateButton.setOnClickListener { calculateTip() }
+
+   binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -&gt; handleKeyEvent(view, keyCode)
+   }
+}
+</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+

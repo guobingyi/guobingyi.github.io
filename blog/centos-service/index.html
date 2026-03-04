@@ -32,6 +32,36 @@ PrivateTmp=true                        #分配临时空间
 
 [Install] 
 WantedBy=multi-user.target             #多用户
+服务定义可以参考：
+systemd.service — Service unit configuration
+0x01 编写运行命令 start.sh
+#!/bin/sh
+#start web
+sh /opt/apache-tomcat-8.0.32/bin/startup.sh
+ps. 千万要写 &ldquo;#!/bin/sh&rdquo;，不写有可能执行不了sh脚本。
+0x02 编写运行命令 stop.sh
+#!/bin/sh
+killPid=`ps -ef|grep start.jar|grep -v &#34;grep&#34;|awk &#39;{print $2}&#39;`
+
+if [ &#34;$killPid&#34; != &#34;&#34; ]; then
+    echo killing start.jar process.
+    kill -9 $killPid
+    echo killing start.jar file end.
+fi
+
+echo kill tomcat process.
+sh /opt/apache-tomcat-8.0.32/bin/shutdown.sh
+echo kill tomcat process end. 
+0x03 部署服务
+cp myservice.service /etc/systemd/system
+0x04 设置服务为开机启动
+systemctl enable myservice.service
+0x05 启动服务
+systemctl start myservice
+0x06停止服务
+systemctl stop myservice
+0x07 查看服务状态
+systemctl status myservice
 ">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/centos-service/">
@@ -39,7 +69,10 @@ WantedBy=multi-user.target             #多用户
   <meta property="og:title" content="Centos Service">
   <meta property="og:description" content="Centos7 创建服务 用多了Windows后，才发现其实还是有很多选择的。
 在Centos下使用服务，还是因为公司有几个项目每次都需要手动去启动，麻烦。所以充分发挥程序员的懒惰。 原来在Windows下用过服务，觉得还是用的挺方便的。但是用得了Centos下的服务后，才发现什么叫做方便， 好用。
-0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户 ">
+0x00 编写服务 myservice.service # auto start [Unit] Description=Start MyService #服务描述 After=mysql.service #字面翻译就是等mysql服务器启动后，再启动 [Service] Type=forking #后台运行 TimeoutSec=0 #设置永不超时 ExecStart=/opt/server-shell/start.sh #服务运行命令 ExecStop=/opt/server-shell/stop.sh #服务停止命令 PrivateTmp=true #分配临时空间 [Install] WantedBy=multi-user.target #多用户 服务定义可以参考：
+systemd.service — Service unit configuration
+0x01 编写运行命令 start.sh #!/bin/sh #start web sh /opt/apache-tomcat-8.0.32/bin/startup.sh ps. 千万要写 “#!/bin/sh”，不写有可能执行不了sh脚本。
+0x02 编写运行命令 stop.sh #!/bin/sh killPid=`ps -ef|grep start.jar|grep -v &#34;grep&#34;|awk &#39;{print $2}&#39;` if [ &#34;$killPid&#34; != &#34;&#34; ]; then echo killing start.jar process. kill -9 $killPid echo killing start.jar file end. fi echo kill tomcat process. sh /opt/apache-tomcat-8.0.32/bin/shutdown.sh echo kill tomcat process end. 0x03 部署服务 cp myservice.service /etc/systemd/system 0x04 设置服务为开机启动 systemctl enable myservice.service 0x05 启动服务 systemctl start myservice 0x06停止服务 systemctl stop myservice 0x07 查看服务状态 systemctl status myservice">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -73,11 +106,11 @@ WantedBy=multi-user.target             #多用户
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2025-07-25%2020%3a00%3a15.229063%20%2b0800%20CST%20m%3d%2b2.080501011">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2025-07-25%2020%3a00%3a15.229063%20%2b0800%20CST%20m%3d%2b2.080501011">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2025-07-25%2020%3a00%3a15.229063%20%2b0800%20CST%20m%3d%2b2.080501011">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-03-04%2022%3a16%3a01.70859%20%2b0800%20CST%20m%3d%2b1.992882251">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-03-04%2022%3a16%3a01.70859%20%2b0800%20CST%20m%3d%2b1.992882251">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-03-04%2022%3a16%3a01.70859%20%2b0800%20CST%20m%3d%2b1.992882251">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2025-07-25%2020%3a00%3a15.229063%20%2b0800%20CST%20m%3d%2b2.080501011">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-03-04%2022%3a16%3a01.70859%20%2b0800%20CST%20m%3d%2b1.992882251">
     
 
 
