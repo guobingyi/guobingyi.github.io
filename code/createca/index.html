@@ -39,17 +39,17 @@ openssl pkcs12 -export -in client.crt -inkey client.key -out client.pfx
 .crt文件和.key可以合到一个文件里面，把2个文件合成了一个.pem文件（直接拷贝过去就行了）">
 
 <meta property="og:url" content="https://guobingyi.github.io/code/createca/">
-  <meta property="og:site_name" content="guobingyi">
-  <meta property="og:title" content="生成CA证书">
-  <meta property="og:description" content="生成CA证书 https的数据传输加密已经正是成为了标准。
+	<meta property="og:site_name" content="guobingyi">
+	<meta property="og:title" content="生成CA证书">
+	<meta property="og:description" content="生成CA证书 https的数据传输加密已经正是成为了标准。
 在使用Web运用的时候，为了避免明文传输，加入https协议是比较明智的，毕竟投入量也是最小的。
 ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就成功，为什么？怀疑iTerm2在保存密码吗？
 1. 创建根证书密钥文件root.key openssl genrsa -des3 -out root.key 2. 创建根证书的申请文件root.csr openssl req -new -key root.key -out root.csr 3. 创建一个自当前日期起为期十年的根证书root.crt openssl x509 -req -days 3650 -sha1 -extensions v3_ca -signkey root.key -in root.req -out root.crt 4. 创建服务器证书密钥server.key openssl genrsa –des3 -out server.key 2048 5. 创建服务器证书的申请文件server.csr openssl req -new -key server.key -out server.csr 6. 创建自当前日期起有效期为期两年的服务器证书server.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in server.csr -out server.crt 7. 创建客户端证书密钥文件client.key openssl genrsa -des3 -out client.key 2048 8. 创建客户端证书的申请文件client.csr openssl req -new -key client.key -out client.csr 9. 创建一个自当前日期起有效期为两年的客户端证书client.crt openssl x509 -req -days 730 -sha1 -extensions v3_req -CA root.crt -CAkey root.key -CAserial root.srl -CAcreateserial -in client.csr -out client.crt 10. 将客户端证书文件client.crt和客户端证书密钥文件client.key合并成客户端证书安装包client.pfx openssl pkcs12 -export -in client.crt -inkey client.key -out client.pfx 保存生成的文件备用，其中server.crt和server.key是配置单向SSL时需要使用的证书文件，client.crt是配置双向SSL时需要使用的证书文件，client.pfx是配置双向SSL时需要客户端安装的证书文件 .crt文件和.key可以合到一个文件里面，把2个文件合成了一个.pem文件（直接拷贝过去就行了）">
-  <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="code">
-    <meta property="article:published_time" content="2020-02-27T17:08:12+08:00">
-    <meta property="article:modified_time" content="2020-02-27T17:08:12+08:00">
+	<meta property="og:locale" content="zh_cn">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="code">
+		<meta property="article:published_time" content="2020-02-27T17:08:12+08:00">
+		<meta property="article:modified_time" content="2020-02-27T17:08:12+08:00">
 
 
 <title>
@@ -78,11 +78,11 @@ ps.使用iTerm2的时候，输入密码报错，而使用mac自带的终端就�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-05-10%2022%3a03%3a16.396582%20%2b0800%20CST%20m%3d%2b6.361385459">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-05-10%2022%3a03%3a16.396582%20%2b0800%20CST%20m%3d%2b6.361385459">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-05-10%2022%3a03%3a16.396582%20%2b0800%20CST%20m%3d%2b6.361385459">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-07-25%2022%3a56%3a47.85806%20%2b0800%20CST%20m%3d%2b8.953055251">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-07-25%2022%3a56%3a47.85806%20%2b0800%20CST%20m%3d%2b8.953055251">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-07-25%2022%3a56%3a47.85806%20%2b0800%20CST%20m%3d%2b8.953055251">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-05-10%2022%3a03%3a16.396582%20%2b0800%20CST%20m%3d%2b6.361385459">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-07-25%2022%3a56%3a47.85806%20%2b0800%20CST%20m%3d%2b8.953055251">
     
 
 

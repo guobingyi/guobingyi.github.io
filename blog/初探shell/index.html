@@ -83,9 +83,9 @@ echo `expr index &#34;$someone&#34; is` #output 2
 shell支持数组，但是不支持多维数组。">
 
 <meta property="og:url" content="https://guobingyi.github.io/blog/%E5%88%9D%E6%8E%A2shell/">
-  <meta property="og:site_name" content="guobingyi">
-  <meta property="og:title" content="初探Shell">
-  <meta property="og:description" content="You got to put the past behind you before you can move on.
+	<meta property="og:site_name" content="guobingyi">
+	<meta property="og:title" content="初探Shell">
+	<meta property="og:description" content="You got to put the past behind you before you can move on.
 由于项目上的需要开始接触shell，其实shell早就有过接触，只不过这次接触了，深入的思考了。
 0x00 为什么用shell? 原来学习一门语言的时候都会这样问自己？但是大多数的答案都是：项目上需要。没有思考的余地，也就没有深入的思考。
 现在开始用到，也学习了python,ruby,swift,javascript后发现，shell有她自身更好的发挥余地。比如我们经常会使用的命令cd,hugo server,git add -A等。别小看这些命令，一个一个来，还是要输入一会的。程序员不就图个安逸，一个shell脚本搞定的事情，为什么要多来输入几次呢？在举个例子，如果终端只有一个，那么要看tomcat的日志，还要更新类，那么就会来回的路径下切换，如果不用文本记录下来，光敲路径就花费很长的时间，so，用个shell脚本就可以解决了。当然，这个例子也不能说明shell的强大之处，那么这个例子就是shell的重要用途了。在零部署的时候，需要安装一些组件，数据库，初始化数据库脚本，注册服务，启动服务，关机。整个流程可以说一气呵成，但是如果是人工的话，那么想想工作量也是吓人的，这还不包括部署多台服务器呢。
@@ -106,11 +106,11 @@ someone = &#34;Lee&#34; #Eroor 为什么会有这个错误，因为写代码的�
 使用变量 $someone $(some_two) 只读变量 readonly someone 删除变量 unset someone 0x03 字符串 单引号 someone=&#39;Lee&#39; 单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；
 单引号字串中不能出现单引号（对单引号使用转义符后也不行）。
 双引号 someone=&#34;Lee,$some_two&#34; 拼接字符串 someone=&#34;World&#34; sometwo=&#34;hello,&#34;$someone&#34;!&#34; somethree=&#34;hello,${someone}!&#34; echo sometwo somethree 获取字符串长度 someone=&#34;hello&#34; echo ${#someone} #输出5 提取子字符串 someone=&#34;some one like you!&#34; echo ${someone:1:3} #输出ome,所以字符串的长度也是从0开始 查找字符串 someone=&#34;some one like you!&#34; echo `expr index &#34;$someone&#34; is` #output 2 0x04 Shell数组 shell支持数组，但是不支持多维数组。">
-  <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2018-07-04T19:54:52+08:00">
-    <meta property="article:modified_time" content="2018-07-04T19:54:52+08:00">
+	<meta property="og:locale" content="zh_cn">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2018-07-04T19:54:52+08:00">
+		<meta property="article:modified_time" content="2018-07-04T19:54:52+08:00">
 
 
 <title>
@@ -139,11 +139,11 @@ someone = &#34;Lee&#34; #Eroor 为什么会有这个错误，因为写代码的�
 
 
     
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-05-10%2022%3a03%3a14.819722%20%2b0800%20CST%20m%3d%2b4.784501459">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-05-10%2022%3a03%3a14.819722%20%2b0800%20CST%20m%3d%2b4.784501459">
-    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-05-10%2022%3a03%3a14.819722%20%2b0800%20CST%20m%3d%2b4.784501459">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/reset.css?t=2026-07-25%2022%3a56%3a47.022706%20%2b0800%20CST%20m%3d%2b8.117693210">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/pygments.css?t=2026-07-25%2022%3a56%3a47.022706%20%2b0800%20CST%20m%3d%2b8.117693210">
+    <link rel="stylesheet" href="https://guobingyi.github.io/css/main.css?t=2026-07-25%2022%3a56%3a47.022706%20%2b0800%20CST%20m%3d%2b8.117693210">
     
-        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-05-10%2022%3a03%3a14.819722%20%2b0800%20CST%20m%3d%2b4.784501459">
+        <link rel="stylesheet" href="https://guobingyi.github.io/css/override.css?t=2026-07-25%2022%3a56%3a47.022706%20%2b0800%20CST%20m%3d%2b8.117693210">
     
 
 
@@ -526,42 +526,42 @@ comment~~
 </ul>
 <p>更多参数如下表:</p>
 <table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>$#</td>
-          <td>参数个数</td>
-      </tr>
-      <tr>
-          <td>$*</td>
-          <td>参数数组</td>
-      </tr>
-      <tr>
-          <td>$$</td>
-          <td>脚本运行进程ID号</td>
-      </tr>
-      <tr>
-          <td>$!</td>
-          <td>后台运行的最后一个进程ID号</td>
-      </tr>
-      <tr>
-          <td>$@</td>
-          <td>参数数组，使用双引号包含内容</td>
-      </tr>
-      <tr>
-          <td>$-</td>
-          <td>当前选项</td>
-      </tr>
-      <tr>
-          <td>$?</td>
-          <td>退出状态，0表示正常退出。</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>参数</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>$#</td>
+					<td>参数个数</td>
+			</tr>
+			<tr>
+					<td>$*</td>
+					<td>参数数组</td>
+			</tr>
+			<tr>
+					<td>$$</td>
+					<td>脚本运行进程ID号</td>
+			</tr>
+			<tr>
+					<td>$!</td>
+					<td>后台运行的最后一个进程ID号</td>
+			</tr>
+			<tr>
+					<td>$@</td>
+					<td>参数数组，使用双引号包含内容</td>
+			</tr>
+			<tr>
+					<td>$-</td>
+					<td>当前选项</td>
+			</tr>
+			<tr>
+					<td>$?</td>
+					<td>退出状态，0表示正常退出。</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="0x07-shell基本运算符">0x07 shell基本运算符</h2>
 <blockquote>
@@ -571,185 +571,185 @@ comment~~
 <p>shell中使用expr来进行算术运算</p>
 <pre tabindex="0"><code>add=`expr $((3+4))` #7
 </code></pre><table>
-  <thead>
-      <tr>
-          <th>运算符</th>
-          <th>说明</th>
-          <th>举例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>+</td>
-          <td>加法</td>
-          <td><code>expr $a+$b</code></td>
-      </tr>
-      <tr>
-          <td>-</td>
-          <td>减法</td>
-          <td><code>expr $a-$b</code></td>
-      </tr>
-      <tr>
-          <td>*</td>
-          <td>乘法</td>
-          <td><code>expr $a\*$b</code></td>
-      </tr>
-      <tr>
-          <td>/</td>
-          <td>除法</td>
-          <td><code>expr $a/$b</code></td>
-      </tr>
-      <tr>
-          <td>%</td>
-          <td>取余</td>
-          <td><code>expr $b%$a</code></td>
-      </tr>
-      <tr>
-          <td>=</td>
-          <td>赋值</td>
-          <td>a=$b</td>
-      </tr>
-      <tr>
-          <td>==</td>
-          <td>相等</td>
-          <td>[ $a==$b ]</td>
-      </tr>
-      <tr>
-          <td>!=</td>
-          <td>不相等</td>
-          <td>[ $a!=$b ]</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>运算符</th>
+					<th>说明</th>
+					<th>举例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>+</td>
+					<td>加法</td>
+					<td><code>expr $a+$b</code></td>
+			</tr>
+			<tr>
+					<td>-</td>
+					<td>减法</td>
+					<td><code>expr $a-$b</code></td>
+			</tr>
+			<tr>
+					<td>*</td>
+					<td>乘法</td>
+					<td><code>expr $a\*$b</code></td>
+			</tr>
+			<tr>
+					<td>/</td>
+					<td>除法</td>
+					<td><code>expr $a/$b</code></td>
+			</tr>
+			<tr>
+					<td>%</td>
+					<td>取余</td>
+					<td><code>expr $b%$a</code></td>
+			</tr>
+			<tr>
+					<td>=</td>
+					<td>赋值</td>
+					<td>a=$b</td>
+			</tr>
+			<tr>
+					<td>==</td>
+					<td>相等</td>
+					<td>[ $a==$b ]</td>
+			</tr>
+			<tr>
+					<td>!=</td>
+					<td>不相等</td>
+					<td>[ $a!=$b ]</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="关系运算符">关系运算符</h3>
 <pre tabindex="0"><code>a=1
 b=2
 </code></pre><table>
-  <thead>
-      <tr>
-          <th>运算符</th>
-          <th>说明</th>
-          <th>举例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>-eq</td>
-          <td>检查两个数是否相等，相等返回true</td>
-          <td>[ $a -eq $b ] 返回false</td>
-      </tr>
-      <tr>
-          <td>-ne</td>
-          <td>检测两个数是否不相等，不相等返回 true</td>
-          <td>[ $a -ne $b ] 返回 true</td>
-      </tr>
-      <tr>
-          <td>-gt</td>
-          <td>检测左边的数是否大于右边的，如果是，则返回 true</td>
-          <td>[ $a -gt $b ] 返回 false</td>
-      </tr>
-      <tr>
-          <td>-lt</td>
-          <td>检测左边的数是否小于右边的，如果是，则返回 true</td>
-          <td>[ $a -lt $b ] 返回 true</td>
-      </tr>
-      <tr>
-          <td>-ge</td>
-          <td>检测左边的数是否大于等于右边的，如果是，则返回 true</td>
-          <td>[ $a -ge $b ] 返回 false</td>
-      </tr>
-      <tr>
-          <td>-le</td>
-          <td>检测左边的数是否小于等于右边的，如果是，则返回 true</td>
-          <td>[ $a -le $b ] 返回 true</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>运算符</th>
+					<th>说明</th>
+					<th>举例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>-eq</td>
+					<td>检查两个数是否相等，相等返回true</td>
+					<td>[ $a -eq $b ] 返回false</td>
+			</tr>
+			<tr>
+					<td>-ne</td>
+					<td>检测两个数是否不相等，不相等返回 true</td>
+					<td>[ $a -ne $b ] 返回 true</td>
+			</tr>
+			<tr>
+					<td>-gt</td>
+					<td>检测左边的数是否大于右边的，如果是，则返回 true</td>
+					<td>[ $a -gt $b ] 返回 false</td>
+			</tr>
+			<tr>
+					<td>-lt</td>
+					<td>检测左边的数是否小于右边的，如果是，则返回 true</td>
+					<td>[ $a -lt $b ] 返回 true</td>
+			</tr>
+			<tr>
+					<td>-ge</td>
+					<td>检测左边的数是否大于等于右边的，如果是，则返回 true</td>
+					<td>[ $a -ge $b ] 返回 false</td>
+			</tr>
+			<tr>
+					<td>-le</td>
+					<td>检测左边的数是否小于等于右边的，如果是，则返回 true</td>
+					<td>[ $a -le $b ] 返回 true</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="布尔运算符">布尔运算符</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">运算符</th>
-          <th style="text-align: center">说明</th>
-          <th style="text-align: right">举例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">!</td>
-          <td style="text-align: center">非运算，表达式为 true 则返回 false，否则返回 true</td>
-          <td style="text-align: right">[ ! false ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-o</td>
-          <td style="text-align: center">或运算，有一个表达式为 true 则返回 true</td>
-          <td style="text-align: right">[ $a -lt 20 -o $b -gt 100 ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-a</td>
-          <td style="text-align: center">与运算，两个表达式都为 true 才返回 true</td>
-          <td style="text-align: right">[ $a -lt 20 -a $b -gt 100 ] 返回 false</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">运算符</th>
+					<th style="text-align: center">说明</th>
+					<th style="text-align: right">举例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">!</td>
+					<td style="text-align: center">非运算，表达式为 true 则返回 false，否则返回 true</td>
+					<td style="text-align: right">[ ! false ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-o</td>
+					<td style="text-align: center">或运算，有一个表达式为 true 则返回 true</td>
+					<td style="text-align: right">[ $a -lt 20 -o $b -gt 100 ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-a</td>
+					<td style="text-align: center">与运算，两个表达式都为 true 才返回 true</td>
+					<td style="text-align: right">[ $a -lt 20 -a $b -gt 100 ] 返回 false</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="逻辑运算符">逻辑运算符</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">运算符</th>
-          <th style="text-align: left">说明</th>
-          <th style="text-align: left">举例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">&amp;&amp;</td>
-          <td style="text-align: left">逻辑的 AND</td>
-          <td style="text-align: left">[[ $a -lt 100 &amp;&amp; $b -gt 100 ]] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">||</td>
-          <td style="text-align: left">逻辑的 OR</td>
-          <td style="text-align: left">[[ $a -lt 100  || $b -gt 100 ]] 返回 true</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">运算符</th>
+					<th style="text-align: left">说明</th>
+					<th style="text-align: left">举例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">&amp;&amp;</td>
+					<td style="text-align: left">逻辑的 AND</td>
+					<td style="text-align: left">[[ $a -lt 100 &amp;&amp; $b -gt 100 ]] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">||</td>
+					<td style="text-align: left">逻辑的 OR</td>
+					<td style="text-align: left">[[ $a -lt 100  || $b -gt 100 ]] 返回 true</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="字符串运算符">字符串运算符</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">运算符</th>
-          <th style="text-align: left">说明</th>
-          <th style="text-align: left">举例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">=</td>
-          <td style="text-align: left">检测两个字符串是否相等，相等返回 true</td>
-          <td style="text-align: left">[ $a = $b ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">!=</td>
-          <td style="text-align: left">检测两个字符串是否相等，不相等返回 true</td>
-          <td style="text-align: left">[ $a != $b ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-z</td>
-          <td style="text-align: left">检测字符串长度是否为0，为0返回 true</td>
-          <td style="text-align: left">[ -n &ldquo;$a&rdquo; ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-n</td>
-          <td style="text-align: left">检测字符串长度是否为0，不为0返回 true</td>
-          <td style="text-align: left">[ -n &ldquo;$a&rdquo; ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">str</td>
-          <td style="text-align: left">检测字符串是否为空，不为空返回 true</td>
-          <td style="text-align: left">[ $a ] 返回 true</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">运算符</th>
+					<th style="text-align: left">说明</th>
+					<th style="text-align: left">举例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">=</td>
+					<td style="text-align: left">检测两个字符串是否相等，相等返回 true</td>
+					<td style="text-align: left">[ $a = $b ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">!=</td>
+					<td style="text-align: left">检测两个字符串是否相等，不相等返回 true</td>
+					<td style="text-align: left">[ $a != $b ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-z</td>
+					<td style="text-align: left">检测字符串长度是否为0，为0返回 true</td>
+					<td style="text-align: left">[ -n &ldquo;$a&rdquo; ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-n</td>
+					<td style="text-align: left">检测字符串长度是否为0，不为0返回 true</td>
+					<td style="text-align: left">[ -n &ldquo;$a&rdquo; ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">str</td>
+					<td style="text-align: left">检测字符串是否为空，不为空返回 true</td>
+					<td style="text-align: left">[ $a ] 返回 true</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="文件测试运算符">文件测试运算符</h3>
 <blockquote>
@@ -757,80 +757,80 @@ b=2
 </blockquote>
 <pre tabindex="0"><code>file=&#34;~/test.sh&#34;
 </code></pre><table>
-  <thead>
-      <tr>
-          <th style="text-align: left">运算符</th>
-          <th style="text-align: left">说明</th>
-          <th style="text-align: left">举例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">-b file</td>
-          <td style="text-align: left">检测文件是否是块设备文件，如果是，则返回 true</td>
-          <td style="text-align: left">[ -b $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-c file</td>
-          <td style="text-align: left">检测文件是否是字符设备文件，如果是，则返回 true</td>
-          <td style="text-align: left">[ -c $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-d file</td>
-          <td style="text-align: left">检测文件是否是目录，如果是，则返回 true</td>
-          <td style="text-align: left">[ -d $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-f file</td>
-          <td style="text-align: left">检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true</td>
-          <td style="text-align: left">[ -f $file ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-g file</td>
-          <td style="text-align: left">检测文件是否设置了 SGID 位，如果是，则返回 true</td>
-          <td style="text-align: left">[ -g $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-k file</td>
-          <td style="text-align: left">检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true</td>
-          <td style="text-align: left">[ -k $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-p file</td>
-          <td style="text-align: left">检测文件是否是有名管道，如果是，则返回 true</td>
-          <td style="text-align: left">[ -p $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-u file</td>
-          <td style="text-align: left">检测文件是否设置了 SUID 位，如果是，则返回 true</td>
-          <td style="text-align: left">[ -u $file ] 返回 false</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-r file</td>
-          <td style="text-align: left">检测文件是否可读，如果是，则返回 true</td>
-          <td style="text-align: left">[ -r $file ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-w file</td>
-          <td style="text-align: left">检测文件是否可写，如果是，则返回 true</td>
-          <td style="text-align: left">[ -w $file ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-x file</td>
-          <td style="text-align: left">检测文件是否可执行，如果是，则返回 true</td>
-          <td style="text-align: left">[ -x $file ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-s file</td>
-          <td style="text-align: left">检测文件是否为空（文件大小是否大于0），不为空返回 true</td>
-          <td style="text-align: left">[ -s $file ] 返回 true</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-e file</td>
-          <td style="text-align: left">检测文件（包括目录）是否存在，如果是，则返回 true</td>
-          <td style="text-align: left">[ -e $file ] 返回 true</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">运算符</th>
+					<th style="text-align: left">说明</th>
+					<th style="text-align: left">举例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">-b file</td>
+					<td style="text-align: left">检测文件是否是块设备文件，如果是，则返回 true</td>
+					<td style="text-align: left">[ -b $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-c file</td>
+					<td style="text-align: left">检测文件是否是字符设备文件，如果是，则返回 true</td>
+					<td style="text-align: left">[ -c $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-d file</td>
+					<td style="text-align: left">检测文件是否是目录，如果是，则返回 true</td>
+					<td style="text-align: left">[ -d $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-f file</td>
+					<td style="text-align: left">检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true</td>
+					<td style="text-align: left">[ -f $file ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-g file</td>
+					<td style="text-align: left">检测文件是否设置了 SGID 位，如果是，则返回 true</td>
+					<td style="text-align: left">[ -g $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-k file</td>
+					<td style="text-align: left">检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true</td>
+					<td style="text-align: left">[ -k $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-p file</td>
+					<td style="text-align: left">检测文件是否是有名管道，如果是，则返回 true</td>
+					<td style="text-align: left">[ -p $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-u file</td>
+					<td style="text-align: left">检测文件是否设置了 SUID 位，如果是，则返回 true</td>
+					<td style="text-align: left">[ -u $file ] 返回 false</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-r file</td>
+					<td style="text-align: left">检测文件是否可读，如果是，则返回 true</td>
+					<td style="text-align: left">[ -r $file ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-w file</td>
+					<td style="text-align: left">检测文件是否可写，如果是，则返回 true</td>
+					<td style="text-align: left">[ -w $file ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-x file</td>
+					<td style="text-align: left">检测文件是否可执行，如果是，则返回 true</td>
+					<td style="text-align: left">[ -x $file ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-s file</td>
+					<td style="text-align: left">检测文件是否为空（文件大小是否大于0），不为空返回 true</td>
+					<td style="text-align: left">[ -s $file ] 返回 true</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-e file</td>
+					<td style="text-align: left">检测文件（包括目录）是否存在，如果是，则返回 true</td>
+					<td style="text-align: left">[ -e $file ] 返回 true</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="0x08-shell-echo-command">0x08 shell echo command</h2>
 <h3 id="显示普通字符串">显示普通字符串</h3>
@@ -876,58 +876,58 @@ printf &#34;%-10s %-8s %-4.2f\n&#34; 杨玉环 女 48.872
 杨玉环 女       48.88
 </code></pre><h3 id="转义序列">转义序列</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">序列</th>
-          <th style="text-align: left">说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">\a</td>
-          <td style="text-align: left">警告字符，通常为ASCII的BEL字符</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\b</td>
-          <td style="text-align: left">后退</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\c</td>
-          <td style="text-align: left">抑制（不显示）输出结果中任何结尾的换行字符</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\f</td>
-          <td style="text-align: left">换页（formfeed）</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\n</td>
-          <td style="text-align: left">换行</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\r</td>
-          <td style="text-align: left">回车</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\t</td>
-          <td style="text-align: left">水平制表符</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\v</td>
-          <td style="text-align: left">垂直制表符</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\</td>
-          <td style="text-align: left">反斜杠字符</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\ddd</td>
-          <td style="text-align: left">表示1到3位数八进制值的字符。仅在格式字符串中有效</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">\0ddd</td>
-          <td style="text-align: left">表示1到3位的八进制值字符</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">序列</th>
+					<th style="text-align: left">说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">\a</td>
+					<td style="text-align: left">警告字符，通常为ASCII的BEL字符</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\b</td>
+					<td style="text-align: left">后退</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\c</td>
+					<td style="text-align: left">抑制（不显示）输出结果中任何结尾的换行字符</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\f</td>
+					<td style="text-align: left">换页（formfeed）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\n</td>
+					<td style="text-align: left">换行</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\r</td>
+					<td style="text-align: left">回车</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\t</td>
+					<td style="text-align: left">水平制表符</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\v</td>
+					<td style="text-align: left">垂直制表符</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\</td>
+					<td style="text-align: left">反斜杠字符</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\ddd</td>
+					<td style="text-align: left">表示1到3位数八进制值的字符。仅在格式字符串中有效</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">\0ddd</td>
+					<td style="text-align: left">表示1到3位的八进制值字符</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="0x10-shell-test-command">0x10 shell test command</h2>
 <blockquote>
@@ -935,38 +935,38 @@ printf &#34;%-10s %-8s %-4.2f\n&#34; 杨玉环 女 48.872
 </blockquote>
 <h3 id="数值测试">数值测试</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">参数</th>
-          <th style="text-align: left">说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">-eq</td>
-          <td style="text-align: left">等于则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-ne</td>
-          <td style="text-align: left">不等则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-gt</td>
-          <td style="text-align: left">大于则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-ge</td>
-          <td style="text-align: left">大于等于则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-lt</td>
-          <td style="text-align: left">小于则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-le</td>
-          <td style="text-align: left">小于等于则为真</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">参数</th>
+					<th style="text-align: left">说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">-eq</td>
+					<td style="text-align: left">等于则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-ne</td>
+					<td style="text-align: left">不等则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-gt</td>
+					<td style="text-align: left">大于则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-ge</td>
+					<td style="text-align: left">大于等于则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-lt</td>
+					<td style="text-align: left">小于则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-le</td>
+					<td style="text-align: left">小于等于则为真</td>
+			</tr>
+	</tbody>
 </table>
 <pre tabindex="0"><code>zs_age=28
 ls_age=29
@@ -979,30 +979,30 @@ else
 fi 
 </code></pre><h3 id="字符串测试">字符串测试</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">参数</th>
-          <th style="text-align: left">说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">=</td>
-          <td style="text-align: left">等于则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">!=</td>
-          <td style="text-align: left">不等于则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-z字符串</td>
-          <td style="text-align: left">字符串的长度为零则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-n字符串</td>
-          <td style="text-align: left">字符串长度不为零则为真</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">参数</th>
+					<th style="text-align: left">说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">=</td>
+					<td style="text-align: left">等于则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">!=</td>
+					<td style="text-align: left">不等于则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-z字符串</td>
+					<td style="text-align: left">字符串的长度为零则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-n字符串</td>
+					<td style="text-align: left">字符串长度不为零则为真</td>
+			</tr>
+	</tbody>
 </table>
 <pre tabindex="0"><code>zs_name=&#34;张三&#34;
 ls_name=&#34;李四&#34;
@@ -1015,50 +1015,50 @@ else
 fi 
 </code></pre><h3 id="文件测试">文件测试</h3>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">参数</th>
-          <th style="text-align: left">说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">-e文件名</td>
-          <td style="text-align: left">如果文件存在则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-r文件名</td>
-          <td style="text-align: left">如果文件存在且可读则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-w文件名</td>
-          <td style="text-align: left">如果文件存在且可写则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-x文件名</td>
-          <td style="text-align: left">如果文件存在且可执行则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-s文件名</td>
-          <td style="text-align: left">如果文件存在且至少有一个字符则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-d文件名</td>
-          <td style="text-align: left">如果文件存在且为目录则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-f文件名</td>
-          <td style="text-align: left">如果文件存在且为普通文件则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-c文件名</td>
-          <td style="text-align: left">如果文件存在且为字符型特殊文件则为真</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">-b文件名</td>
-          <td style="text-align: left">如果文件存在且为块特殊文件则为真</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">参数</th>
+					<th style="text-align: left">说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">-e文件名</td>
+					<td style="text-align: left">如果文件存在则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-r文件名</td>
+					<td style="text-align: left">如果文件存在且可读则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-w文件名</td>
+					<td style="text-align: left">如果文件存在且可写则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-x文件名</td>
+					<td style="text-align: left">如果文件存在且可执行则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-s文件名</td>
+					<td style="text-align: left">如果文件存在且至少有一个字符则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-d文件名</td>
+					<td style="text-align: left">如果文件存在且为目录则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-f文件名</td>
+					<td style="text-align: left">如果文件存在且为普通文件则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-c文件名</td>
+					<td style="text-align: left">如果文件存在且为字符型特殊文件则为真</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">-b文件名</td>
+					<td style="text-align: left">如果文件存在且为块特殊文件则为真</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="0x11-shell-控制流量">0x11 shell 控制流量</h2>
 <h3 id="if-else">if else</h3>
@@ -1147,46 +1147,46 @@ esac
 <h2 id="0x13-输入输出重定向">0x13 输入输出重定向</h2>
 <p>重定向命令列表如下：</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">命令</th>
-          <th style="text-align: left">说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">command &gt; file</td>
-          <td style="text-align: left">将输出重定向到 file</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">command &lt; file</td>
-          <td style="text-align: left">将输入重定向到 file</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">command &raquo; file</td>
-          <td style="text-align: left">将输出以追加的方式重定向到 file</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">n &gt; file</td>
-          <td style="text-align: left">将文件描述符为 n 的文件重定向到 file</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">n &raquo; file</td>
-          <td style="text-align: left">将文件描述符为 n 的文件以追加的方式重定向到 file</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">n &gt;&amp; m</td>
-          <td style="text-align: left">将输出文件 m 和 n 合并</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">n &lt;&amp; m</td>
-          <td style="text-align: left">将输入文件 m 和 n 合并</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">&laquo; tag</td>
-          <td style="text-align: left">将开始标记 tag 和结束标记 tag 之间的内容作为输入</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">命令</th>
+					<th style="text-align: left">说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">command &gt; file</td>
+					<td style="text-align: left">将输出重定向到 file</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">command &lt; file</td>
+					<td style="text-align: left">将输入重定向到 file</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">command &raquo; file</td>
+					<td style="text-align: left">将输出以追加的方式重定向到 file</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">n &gt; file</td>
+					<td style="text-align: left">将文件描述符为 n 的文件重定向到 file</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">n &raquo; file</td>
+					<td style="text-align: left">将文件描述符为 n 的文件以追加的方式重定向到 file</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">n &gt;&amp; m</td>
+					<td style="text-align: left">将输出文件 m 和 n 合并</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">n &lt;&amp; m</td>
+					<td style="text-align: left">将输入文件 m 和 n 合并</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">&laquo; tag</td>
+					<td style="text-align: left">将开始标记 tag 和结束标记 tag 之间的内容作为输入</td>
+			</tr>
+	</tbody>
 </table>
 <blockquote>
 <p>需要注意的是文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。</p>
